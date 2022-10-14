@@ -1,0 +1,2 @@
+[content.production.environment]
+HUGO_VERSION = "0.80.0"
