@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://velvety-travesseiro-afc53e.netlify.app/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Sysadmin Administracja, bezpieczeństwo oraz hardening Linuxa"
 theme = "ananke"
