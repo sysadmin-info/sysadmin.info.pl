@@ -29,6 +29,8 @@ Opiszę rozwiązanie, które wdrożyłem u siebie na dwóch laptopach, które pe
   
 Dotarłeś do tego miejsca? Świetnie! Zaczynajmy.
 
+### Konfiguracja WordPress do połączenia ze zdalną bazą danych
+
   1. Serwer bazy danych &#8211; CentOS 7.6
   2. Serwer www &#8211; Debian 9.8.0 , ewentualnie Red Hat, CentOS, Fedora. 
 
@@ -336,10 +338,17 @@ sudo openssl genrsa 4096 > ca-key.pem
 sudo openssl req -new -x509 -nodes -days 36500 -key ca-key.pem -out cacert.pem
 ```
 
-Common Name ustaw na MariaDB
+Common Name ustaw na 
+
+```
+MariaDB
+```
 
 Utwórz certyfikat serwera i zapisz klucz RSA. Nazwa zwykła (common name) powinna być nazwą FQDN lub adresem IP twojego serwera WWW. W tym przypadku  
+
+```
 190.100.100.90 
+```
 
 ``` bash
 sudo openssl req -newkey rsa:4096 -days 36500 -nodes -keyout server-key.pem -out server-req.pem

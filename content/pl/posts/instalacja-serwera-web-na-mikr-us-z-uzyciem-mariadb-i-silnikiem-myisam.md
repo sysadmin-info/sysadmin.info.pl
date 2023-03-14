@@ -22,25 +22,25 @@ Cześć,
 
 Trafiła się okazja jak ślepej kurze ziarno dawno temu i upolowałem domenę za darmo sysadmin.info.pl. Pierwotnie zamysł był taki, aby użyć jej do pracy inżynierskiej i tak też się stało. Trzy miesiące później znów nadarzyła się okazja, której nie mogłem przegapić. Tym razem wirtualna maszyna na OpenVZ za śmieszne wręcz pieniądze. Zainteresowanych odsyłam do <a rel="noreferrer noopener" aria-label=" (otwiera się na nowej zakładce)" href="https://mikr.us/?r=a101" target="_blank">https://mikr.us</a>. Po kliknięciu w link dostaniesz 5% zniżki na serwer na rok.
 
-<!--more-->
-
 Tym sposobem stało się możliwe posiadanie wersji live własnej strony, której konfigurację opiszę poniżej krok po kroku. Przy okazji pokażę jak to można wszystko dobrze zabezpieczyć i udowodnić, że domyślna konfiguracja 128 MB RAM i 128 MB swap w zupełności wystarcza, aby posiadać stronę opartą o a jakże popularny CMS WordPress, który jest najczęściej atakowanym CMS-em na świecie. Ale o tym może w innym wpisie. Hardening Linux był tematem mojej pracy inżynierskiej, więc przy okazji podzielę się paroma uwagami związanymi z tą tematyką, jak i też pokażę, co na mikrusie można, a czego nie można. 
 
 Poprosiłem o zmianę domyślnego Ubuntu 16:04 na CentOS 7 i dostałem wersję 7.6. No bomba, to mi się podoba. Po małych problemach udało mi się w końcu przywrócić moją stronę do żywych i przy okazji odświeżyć sobie wiedzę z zakresu stawiania serwera web na CentOS. A więc zaczynamy. 
 
-#### Założenie konta na cloudflare.com i ustawienie domeny
+### Założenie konta na cloudflare.com i ustawienie domeny
 
 Załóż darmowe konto (free basic) na <a rel="noreferrer noopener" aria-label="https://www.cloudflare.com/ (otwiera się na nowej zakładce)" href="https://www.cloudflare.com/" target="_blank">https://www.cloudflare.com/</a>
 
 Potwierdź maila i przejdź do konfiguracji domeny tam, gdzie masz panel od domeny. Zmień tam serwery DNS (ns1 oraz ns2) na:
 
-<pre class="wp-block-preformatted">aragorn.ns.cloudflare.com
-vida.ns.cloudflare.com</pre>
+> aragorn.ns.cloudflare.com
+> vida.ns.cloudflare.com
 
 Zaloguj się do cloudflare. Dodaj domenę (add domain).  
 Ustaw rekord AAAA , jako name nazwę domeny i jako adres IPv6 adres w wersji IPv6. Znajdziesz ten adres wpisując w terminalu polecenie:
 
-<pre class="wp-block-code"><code>sudo ip a</code></pre>
+``` bash
+sudo ip a
+```
 
 Będzie on podany w tej postaci: 2001: &#8230;. 
 
@@ -48,17 +48,23 @@ Skopiuj go sobie, albo spisz bez ostatnich elementów: /128
 
 Wklej go w pole content. Zapisz zmianę.
 
-Kliknij w ikonę SSL/TLS i ustaw jak na obrazku poniżej:<figure class="wp-block-image">
+Kliknij w ikonę SSL/TLS i ustaw jak na obrazku poniżej:
 
-<img decoding="async" loading="lazy" width="1024" height="675" src="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Web_Performance_and_Security-1024x675.png" alt="" class="wp-image-169" srcset="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Web_Performance_and_Security-1024x675.png 1024w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Web_Performance_and_Security-300x198.png 300w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Web_Performance_and_Security-768x506.png 768w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Web_Performance_and_Security.png 1044w" sizes="(max-width: 1024px) 100vw, 1024px" /> </figure> 
+![Cloudflare Web Performance and Security](/images/2019/Cloudflare-Web_Performance_and_Security.png "Cloudflare Web Performance and Security")
+<figcaption>Cloudflare Web Performance and Security</figcaption>
 
-Kliknij w Edge Certificates i ustaw:<figure class="wp-block-image">
+Kliknij w Edge Certificates i ustaw:
 
-<img decoding="async" loading="lazy" width="1024" height="859" src="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Edge_Certificates-1024x859.png" alt="" class="wp-image-171" srcset="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Edge_Certificates-1024x859.png 1024w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Edge_Certificates-300x252.png 300w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Edge_Certificates-768x645.png 768w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-Edge_Certificates.png 1045w" sizes="(max-width: 1024px) 100vw, 1024px" /> </figure> 
+![Cloudflare Edge Certificates](/images/2019/Cloudflare-Edge_Certificates.png "Cloudflare Edge Certificates")
+<figcaption>Cloudflare Edge Certificates</figcaption>
 
 Poniżej będą opcje, które powinny być włączone:<figure class="wp-block-image">
 
-<img decoding="async" loading="lazy" width="1024" height="884" src="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings1-1024x884.png" alt="" class="wp-image-172" srcset="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings1-1024x884.png 1024w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings1-300x259.png 300w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings1-768x663.png 768w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings1.png 1045w" sizes="(max-width: 1024px) 100vw, 1024px" /> </figure> <figure class="wp-block-image"><img decoding="async" loading="lazy" width="1024" height="845" src="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings2-1024x845.png" alt="" class="wp-image-173" srcset="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings2-1024x845.png 1024w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings2-300x248.png 300w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings2-768x634.png 768w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/Cloudflare-settings2.png 1042w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
+![Cloudflare Settings](/images/2019/Cloudflare-settings1.png)
+<figcaption>Cloudflare Settings</figcaption>
+
+![Cloudflare Settings](/images/2019/Cloudflare-settings2.png)
+<figcaption>Cloudflare Settings</figcaption>
 
 Następnie kliknij w Page rules i dodaj regułę klikając w Create Page Rule.
 
@@ -68,120 +74,182 @@ Kliknij save and deploy.
 
 W razie pytań o inne ustawienia, napisz w komentarzu, co Ciebie nurtuje.
 
-#### Logowanie ssh oraz jego zabezpieczenie.
+### Logowanie ssh oraz jego zabezpieczenie.
 
 Dostęp do wirtualnej maszyny jest możliwy tylko i wyłącznie po ssh.  
 W pierwszej kolejności należy dla bezpieczeństwa zmienić hasło root, ponieważ dostajemy tymczasowe hasło do logowania, adres serwera i możemy użyć do pierwszego logowania tylko i wyłącznie konta root, co samo w sobie bezpieczne nie jest.
 
-<pre class="wp-block-code"><code>passwd root</code></pre>
+``` bash
+passwd root
+```
 
 Po ustawieniu hasła, musimy dodać sobie użytkownika, którego będziemy używać do logowania się po ssh i w zastępstwie za root, ze względów bezpieczeństwa, Aby jednak móc w razie potrzeby wykonać czasem polecenia na prawach roota, dodamy użytkownika do grupy sudoers.
 
-<pre class="wp-block-code"><code>useradd user
+``` bash
+useradd user
 passwd user
 usermod -aG wheel user
-systemctl daemon reload</code></pre>
+systemctl daemon reload
+```
 
 W następnej kolejności należy zablokować użytkownika root dla połączeń ssh. W tym celu trzeba edytować plik sshd_config.
 
-<pre class="wp-block-code"><code>vi /etc/ssh/sshd_config</code></pre>
+``` bash
+vi /etc/ssh/sshd_config
+```
 
 Znajdujemy wpis i ustawiamy go w ten sposób: `PermitRootLogin no` Aby móc edytować , wciskamy insert, zmieniamy wartość z yes na no. W następnej kolejności wciskamy Esc, wpisujemy :wq i naciskamy Enter. W ten sposób zapisaliśmy zmiany. Teraz pozostaje jeszcze restart demona ssh.
 
-<pre class="wp-block-code"><code>systemctl restart sshd</code></pre>
+``` bash
+systemctl restart sshd
+```
 
 Zakładam, że każdy wie, jak się łączyć do serwera przy pomocy terminala czy putty. Poniżej opiszę dwie metody generowania pary kluczy (prywatnego i publicznego) zarówno w putty, jak i w terminalu. Otwórz PuTTYgen.exe, naciśnij przycisk Generate, porusz myszą, w celu wygenerowania losowo pary kluczy z wykorzystaniem algorytmu RSA. Po wygenerowaniu kluczy wpisz hasło (passphrase) (wybierz „trudne do odgadnięcia”). Zapisz klucz publiczny. Zapisz klucz prywatny. 2048 bitów w zupełności wystarczy, lecz jeśli ktoś chce zwiększyć poziom bezpieczeństwa, może ustawić 4096 bitów w oknie.<figure class="wp-block-image">
 
-<img decoding="async" loading="lazy" width="475" height="468" src="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/PuTTYgen.png" alt="" class="wp-image-76" srcset="http://wp.docker.localhost:8000/wp-content/uploads/2019/09/PuTTYgen.png 475w, http://wp.docker.localhost:8000/wp-content/uploads/2019/09/PuTTYgen-300x296.png 300w" sizes="(max-width: 475px) 100vw, 475px" /> </figure> 
+![PuTTYgen](/images/2019/PuTTYgen.png)
+<figcaption>PuTTYgen</figcaption>
 
 Następnie po zalogowaniu się przy pomocy ssh i swojego konta użytkownika, w naszym przypadku będzie to user, wykonaj poniższe polecenia.
 
-<pre class="wp-block-code"><code>cd /home/user
+``` bash
+cd /home/user
 sudo mkdir .ssh
 sudo chmod 700 .ssh
 cd .ssh
-sudo vi authorized_keys</code></pre>
+sudo vi authorized_keys
+```
 
 Kopiujemy z pola od ssh-rsa do końca wszystko, przechodzimy do zalogowanej sesji, wciskamy insert, wklejamy prawym myszki całość, następnie wciskamy Esc, wpisujemy :wq i naciskamy Enter. Potem ustawiamy plik tylko do odczytu poleceniem:
 
-<pre class="wp-block-code"><code>sudo chmod 600 authorized_keys</code></pre>
+``` bash
+sudo chmod 600 authorized_keys
+```
 
 W następnej kolejności edytjemy plik /etc/ssh/sshd_config, jak wyżej. Zmieniamy wartości na: RSAAuthentication yes oraz PubkeyAuthentication yes, a także PermitEmptyPasswords no oraz PasswordAuthentication no. Zapisujemy plik analogicznie, jak wyżej to opisałem. (zakładam, że używanie vi już zostało zrozumiane). Restartujemy ssh poleceniem:
 
-<pre class="wp-block-code"><code>sudo systemctl restart sshd</code></pre>
+``` bash
+sudo systemctl restart sshd
+```
 
 W połączeniu w putty lub w terminalu musimy wskazać plik klucza prywatnego do autoryzacji. Lub w przypadku putty kliknąć dwa razy na plik prywatny, podać hasło i program pageant.exe powinien załadować klucz prywatny do pamięci. Jeśli nie mamy pageant, to serwer zapyta nas o hasło do klucza prywatnego (passphrase), który został ustawiony po wygenerowaniu klucza (to zwiększa poziom bezpieczeństwa, ponieważ nawet w sytuacji, gdy ktoś zdoła przechwycić klucz, nie zna do niego hasła). 
 
 W przypadku, gdy korzystasz z terminala, generujesz na swoim komputerze klucz z poziomu terminala poleceniem:
 
-<pre class="wp-block-code"><code>ssh-keygen -t rsa -b 4096 -C "twojanazwa@mikr.us"</code></pre>
+``` bash
+ssh-keygen -t rsa -b 4096 -C "twojanazwa@mikr.us"
+```
 
 Następnie kopiujesz klucz do serwera poleceniem:
 
-<pre class="wp-block-code"><code>ssh-copy-id root@nazwa.mikr.us -p 12345 </code></pre>
+``` bash
+ssh-copy-id root@nazwa.mikr.us -p 12345 
+```
 
 Numer portu 12345 zmieniasz na ten, który dostałeś w mailu, a nazwę analogicznie, jak numer portu. Powyżej opisałem, jak zablokować dostęp do ssh dla użytkownika root. Teraz wystarczy tylko zrestartować demona ssh.
 
-<pre class="wp-block-code"><code>systemctl restart sshd</code></pre>
+``` bash
+systemctl restart sshd
+```
 
-Rozłączyć się poleceniem exit i połączyć ponownie za pomocą ssh root@root@nazwa.mikr.us -p 12345 
+Rozłączyć się poleceniem 
+
+``` bash
+exit
+```
+
+ i połączyć ponownie za pomocą 
+
+``` bash
+ssh root@root@nazwa.mikr.us -p 12345 
+```
 
 Zwiększenie poziomu zabezpieczeń można jeszcze uzyskać poprzez dodanie grupy do logowania ssh i dodanie do tej grupy użytkownika. 
 
-<pre class="wp-block-code"><code>sudo groupadd grupassh
-sudo gpasswd -a &lt;user> grupassh
+``` bash
+sudo groupadd grupassh
+sudo gpasswd -a <user> grupassh
 groups user
+```
+
 Wyświetli się: user : user sudo grupassh lub user : user wheel grupassh
+
+``` bash
 sudo vi /etc/ssh/sshd_config
-Dodaj: AllowGroups grupassh
-sudo systemctl restart sshd</code></pre>
+```
+
+Dodaj: 
+
+```
+AllowGroups grupassh
+```
+
+``` bash
+sudo systemctl restart sshd
+```
 
 Dla bezpieczeństwa użytkowników Ubuntu/Debian polecam zainstalować policies.
 
-<pre class="wp-block-code"><code>sudo apt-get install libpam-cracklib</code></pre>
+``` bash
+sudo apt-get install libpam-cracklib
+```
 
 Określają one długość hasła, ile razu użytkownik może się zalogować, ile razy można używać tych samych znaków w haśle, określa kompleksowość hasła, jego siłę, liczbę cyfr, małych, dużych liter oraz znaków specjalnych. 
 
-#### Instalacja serwera web/www z użyciem Apache
+### Instalacja serwera web/www z użyciem Apache
 
 W pierwszej kolejności wyczyść managera pobierania. W CentOS używany jest yum, natomiast w Debian/Ubuntu apt-getm w nowszcy distro apt.
 
-<pre class="wp-block-code"><code>sudo yum clean all
-sudo apt-get autoremove && sudo apt-get clean</code></pre>
+``` bash
+sudo yum clean all
+sudo apt-get autoremove && sudo apt-get clean
+```
 
 Zainstaluj wszystkie aktualizacje:
 
-<pre class="wp-block-code"><code>sudo yum -y update
-sudo apt-get update && sudo apt-get upgrade</code></pre>
+``` bash
+sudo yum -y update
+sudo apt-get update && sudo apt-get upgrade
+```
 
 W następnej kolejności zainstaluj Apache (httpd w CentOS, apache2 w Debian/Ubuntu)
 
-<pre class="wp-block-code"><code>sudo yum -y install httpd
-sudo apt-get install apache2</code></pre>
+``` bash
+sudo yum -y install httpd
+sudo apt-get install apache2
+```
 
 Włącz Apache2 przy starcie systemui uruchom usługę.
 
-<pre class="wp-block-code"><code>sudo systemctl enable httpd
+``` bash
+sudo systemctl enable httpd
 sudo systemctl enable apache2
 sudo systemctl start httpd
-sudo systemctl start apache2</code></pre>
+sudo systemctl start apache2
+```
 
 Status usługi możesz sprawdzić:
 
-<pre class="wp-block-code"><code>sudo systemctl status httpd
-sudo systemctl status apache2</code></pre>
+``` bash
+sudo systemctl status httpd
+sudo systemctl status apache2
+```
 
-#### Konfiguracja wirtualnego hosta
+### Konfiguracja wirtualnego hosta
 
 W przypadku CentOS tworzymy plik wirtualnego hosta dla http (port 80) za pomocą poniższego polecenia:
 
-<pre class="wp-block-code"><code>sudo vi /etc/httpd/conf.d/strona.com.pl.conf</code></pre>
+``` bash
+sudo vi /etc/httpd/conf.d/strona.com.pl.conf
+```
 
 Natomiast w przypadku Debian/Ubuntu
 
-<pre class="wp-block-code"><code>sudo vi /etc/apache2/sites-available/strona.com.pl.conf</code></pre>
+``` bash
+sudo vi /etc/apache2/sites-available/strona.com.pl.conf
+```
 
-<pre class="wp-block-preformatted">&lt;VirtualHost *:80&gt;
+```
+<VirtualHost *:80>
    ServerName strona.com.pl
    ServerAlias www.strona.com.pl
    DocumentRoot /var/www/html/strona.com.pl/public_html
@@ -193,71 +261,97 @@ Natomiast w przypadku Debian/Ubuntu
 
    LogLevel info warn
 
- <code>  &lt;FilesMatch "^\.ht"&gt;     </code>
-       <code>Require all denied</code>
-   <code>&lt;/FilesMatch&gt;</code>
+   <FilesMatch "^\.ht">     
+       Require all denied
+   </FilesMatch>
 
-   <code>&lt;files readme.html&gt;</code>
-       <code>order allow,deny</code>
-       <code>deny from all</code>
-   <code>&lt;/files&gt;</code>
-&lt;/VirtualHost&gt;</pre>
+   <files readme.html>
+       order allow,deny
+       deny from all
+   </files>
+</VirtualHost>
+```
 
 Dla Debian/Apache musimy jeszcze włączyć stronę
 
-<pre class="wp-block-code"><code>sudo a2ensite strona.com.pl.conf</code></pre>
+``` bash
+sudo a2ensite strona.com.pl.conf
+```
 
 Co spowoduje stworzenie dowiązania symbolicznego w katalogu /etc/apache2/sites-enabled.
 
-#### Tworzenie fizycznej struktury i wgranie WordPress na serwer.
+### Tworzenie fizycznej struktury i wgranie WordPress na serwer.
 
 Teraz należy stworzyć katalog dla strony w katalogu /var/www/html
 
-<pre class="wp-block-code"><code>sudo -i
+``` bash
+sudo -i
+```
+
 (wpisz hasło użytkownika, którego utworzyłeś na samym początku)
+
+``` bash
 cd /var/www/html
-sudo mkdir strona.com.pl</code></pre>
+sudo mkdir strona.com.pl
+```
 
 Utwórz katalog o nazwie src w katalogu swojej witryny, aby przechowywać nowe kopie plików źródłowych WordPress. W tym przewodniku jako przykład wykorzystano katalog domowy /var/www/html/strona.com.pl/. Przejdź do tego nowego katalogu:
 
-<pre class="wp-block-code"><code>sudo mkdir -p /var/www/html/strona.com.pl/src/
-cd /var/www/html/strona.com.pl/src/</code></pre>
+``` bash
+sudo mkdir -p /var/www/html/strona.com.pl/src/
+cd /var/www/html/strona.com.pl/src/
+```
 
-<pre class="wp-block-preformatted">Ustaw użytkownika serwera WWW, <em><strong>www-data</strong></em>, jako właściciela katalogu domowego swojej witryny. <em><strong>www-data</strong></em> jest grupą. W przypadku CentOS będzie to grupa <em><strong>apache</strong></em>.</pre>
+Ustaw użytkownika serwera WWW, <em><strong>www-data</strong></em>, jako właściciela katalogu domowego swojej witryny. <em><strong>www-data</strong></em> jest grupą. W przypadku CentOS będzie to grupa <em><strong>apache</strong></em>.
 
-<pre class="wp-block-code"><code>sudo chown -R apache:apache /var/www/html/strona.com.pl/
-sudo chown -R www-data:www-data /var/www/html/strona.com.pl/</code></pre>
+``` bash
+sudo chown -R apache:apache /var/www/html/strona.com.pl/
+sudo chown -R www-data:www-data /var/www/html/strona.com.pl/
+```
 
 Zainstaluj najnowszą wersję WordPress i wypakuj ją używając odpowiedniej nazwy w zależności od używanego systemu: 
 
-<pre class="wp-block-code"><code>sudo wget http://wordpress.org/latest.tar.gz
+``` bash
+sudo wget http://wordpress.org/latest.tar.gz
 sudo -u www-data tar -xvf latest.tar.gz
-sudo -u apache tar -xvf latest.tar.gz</code></pre>
+sudo -u apache tar -xvf latest.tar.gz
+```
 
 Zmień nazwę pliku latest.tar.gz na wordpress, a następnie ustaw datę przechowywania kopii zapasowej oryginalnych plików źródłowych. Będzie to przydatne, jeśli zainstalujesz nowe wersje w przyszłości i będzie potrzeba powrócić do poprzedniej wersji: 
 
-<pre class="wp-block-code"><code>sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz</code></pre>
+``` bash
+sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
+```
 
 Utwórz katalog public\_html, który będzie katalogiem głównym WordPress. Przenieś pliki WordPress do folderu public\_html:
 
-<pre class="wp-block-code"><code>sudo mkdir -p /var/www/html/strona.com.pl/public_html/
-sudo mv wordpress/* ../public_html/</code></pre>
+``` bash
+sudo mkdir -p /var/www/html/strona.com.pl/public_html/
+sudo mv wordpress/* ../public_html/
+```
 
 Nadaj folderowi public_html uprawnienia dla grupy www-data lub apache:
 
-<pre class="wp-block-code"><code>sudo chown -R www-data:www-data /var/www/html/strona.com.pl/public_html
-sudo chown -R apache:apache /var/www/html/strona.com.pl/public_html</code></pre>
+``` bash
+sudo chown -R www-data:www-data /var/www/html/strona.com.pl/public_html
+sudo chown -R apache:apache /var/www/html/strona.com.pl/public_html
+```
 
 Przejdź do katalogu, do którego wyodrębniono WordPress, skopiuj przykładową konfigurację i ustaw ją tak, aby korzystała ze zdalnej bazy danych:
 
-<pre class="wp-block-code"><code>cd /var/www/html/strona.com.pl/public_html
-sudo cp wp-config-sample.php wp-config.php</code></pre>
+``` bash
+cd /var/www/html/strona.com.pl/public_html
+sudo cp wp-config-sample.php wp-config.php
+```
 
 Zmień zmienne logowania tak, aby pasowały do bazy danych i użytkownika. Edytuj plik: 
 
-<pre class="wp-block-code"><code>sudo vi /var/www/html/strona.com.pl/public_html/wp-config.php </code></pre>
+``` bash
+sudo vi /var/www/html/strona.com.pl/public_html/wp-config.php 
+```
 
-<pre class="wp-block-code"><code>/** The name of the database for WordPress */
+```
+/** The name of the database for WordPress */
 define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
@@ -267,12 +361,14 @@ define('DB_USER', 'user');
 define('DB_PASSWORD', 'haslo_użytkownika_bazy_danych');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');</code></pre>
+define('DB_HOST', 'localhost');
+```
 
 Dodaj klucze bezpieczeństwa, aby zabezpieczyć wp-admin.  
 Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="noreferrer noopener" aria-label="Generatora kluczy bezpieczeństwa WordPress (otwiera się na nowej zakładce)">Generatora kluczy bezpieczeństwa WordPress</a>, aby utworzyć losowe, skomplikowane hashe, których WordPress użyje do zaszyfrowania danych logowania. Skopiuj wynik i zastąp odpowiednią sekcję w pliku wp-config.php:
 
-<pre class="wp-block-preformatted">/**#@+
+```
+/**#@+
  * Authentication Unique Keys and Salts.
  *
  * Change these to different unique phrases!
@@ -289,32 +385,41 @@ define('AUTH_SALT',        'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
-/**#@-*/</pre>
+/**#@-*/
+```
 
-#### Instalacja i konfiguracja Maria DB 10.4 w CentOS 7.6.
+### Instalacja i konfiguracja Maria DB 10.4 w CentOS 7.6.
 
-<pre class="wp-block-code"><code>sudo tee /etc/yum.repos.d/MariaDB.repo&lt;&lt;EOF 
+``` bash
+sudo tee /etc/yum.repos.d/MariaDB.repo<<EOF 
 [mariadb]
 name = MariaDB
 baseurl = http://yum.mariadb.org/10.4/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
-EOF</code></pre>
+EOF
+```
 
-<pre class="wp-block-code"><code>sudo yum makecache fast
+``` bash
+sudo yum makecache fast
 sudo yum -y install MariaDB-server MariaDB-client
-sudo systemctl enable mariadb</code></pre>
+sudo systemctl enable mariadb
+```
 
 Podczas konfiguracji potwierdź y puste hasło root w MariaDB, a w następnym kroku ustaw hasło roota (tego od MariaDB). To hasło powinno być inne, niż hasło roota, które dostałeś w mailu po założeniu serwera na mikr.us.
 
-<pre class="wp-block-preformatted">$ mysql_secure_installation
- NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
-       SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
- In order to log into MariaDB to secure it, we'll need the current
- password for the root user.  If you've just installed MariaDB, and
- you haven't set the root password yet, the password will be blank,
- so you should just press enter here.
- <strong>Enter current password for root (enter for none): </strong>
+``` bash
+mysql_secure_installation
+```
+
+```
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+      In order to log into MariaDB to secure it, we'll need the current
+      password for the root user.  If you've just installed MariaDB, and
+      you haven't set the root password yet, the password will be blank,
+      so you should just press enter here.
+      <strong>Enter current password for root (enter for none): </strong>
  OK, successfully used password, moving on…
  Setting the root password ensures that nobody can log into the MariaDB
  root user without the proper authorisation.
@@ -350,63 +455,89 @@ Podczas konfiguracji potwierdź y puste hasło root w MariaDB, a w następnym kr
  Cleaning up…
  All done!  If you've completed all of the above steps, your MariaDB
  installation should now be secure.
- Thanks for using MariaDB!</pre>
+ Thanks for using MariaDB!
+```
 
-<pre class="wp-block-code"><code>sudo systemctl start mariadb
-mysql -u root -p</code></pre>
+``` bash
+sudo systemctl start mariadb
+mysql -u root -p
+```
 
 #### Po zalogowaniu się do bazy danych utwórz bazę danych i przypisz ją do użytkownika.
 
-<pre class="wp-block-code"><code>CREATE DATABASE wordpress;
+```
+CREATE DATABASE wordpress;
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'haslo_użytkownika_bazy_danych';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 exit
-Enter
-mysql -u user -p Enter
-wpisz hasło użytkownika user, którego właśnie stworzyłeś
+```
+
+``` bash
+mysql -u user -p 
+```
+
+Wpisz hasło użytkownika user, którego właśnie stworzyłeś
+
+```
 status;
+```
+
 Jeśli wyświetli się wersja MariaDB, to znaczy, że wszystko działa.
+
+```
 exit
-Enter</code></pre>
+```
 
 Zrestartuj serwer baz danych oraz web poleceniami:
 
-<pre class="wp-block-code"><code>sudo systemctl restart mariadb && sudo systemctl restart httpd</code></pre>
+``` bash
+sudo systemctl restart mariadb && sudo systemctl restart httpd
+```
 
-#### Instalacja i konfiguracja Maria DB 10.3 w Ubuntu 16.04 LTS
+### Instalacja i konfiguracja Maria DB 10.3 w Ubuntu 16.04 LTS
 
 Aby zainstalować MariaDB 10.3 na Ubuntu 16.04, musisz dodać repozytorium MariaDB do systemu. Uruchom następujące polecenia, aby zaimportować klucz PGP repozytorium MariaDB i dodać repozytorium. 
 
-<pre class="wp-block-code"><code>sudo apt -y install software-properties-common dirmngr
+``` bash
+sudo apt -y install software-properties-common dirmngr
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
-sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/10.3/ubuntu xenial main'</code></pre>
+sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/10.3/ubuntu xenial main'
+```
 
 Zaktualizuj listę pakietów systemowych i zainstaluj MariaDB.
 
-<pre class="wp-block-code"><code>sudo apt update
-sudo apt -y install mariadb-server mariadb-client</code></pre>
+``` bash
+sudo apt update
+sudo apt -y install mariadb-server mariadb-client
+```
 
 Zostaniesz poproszony o podanie hasła roota MariaDB. Musisz podać je dwukrotnie. Zatwierdź zmianę hasła. Możesz potwierdzić zainstalowaną wersję MariaDB, logując się jako użytkownik root. 
 
-<pre class="wp-block-code"><code>mysql -u root -p</code></pre>
+``` bash
+mysql -u root -p
+```
 
 Po zalogowaniu się wpisz status; (pamiętaj o średnikach w składni SQL). Następnie wpisz exit.
 
 Zalecam przeprowadzenie dokładnie tej samej procedury, co w przypadku instalacji na CentOS. Powyżej widać, jakie kroki po kolei muszą zostać podjęte.
 
-<pre class="wp-block-code"><code>mysql_secure_installation</code></pre>
+``` bash
+mysql_secure_installation
+```
 
 Następnie należy wykonać poniższe polecenia:
 
-<pre class="wp-block-code"><code>sudo systemctl enable mariadb
+``` bash
+sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo systemctl status mariadb
-sudo systemctl restart mariadb</code></pre>
+sudo systemctl restart mariadb
+```
 
 Bazę użytkownika utwórz identycznie, jak w przypadku tworzenia bazy w CentOS.
 
-#### Instalacja i konfiguracja certyfikatu SSL za pomocą Let&#8217;s Encrypt.
+### Instalacja i konfiguracja certyfikatu SSL za pomocą Let&#8217;s Encrypt.
 
 Wykorzystamy do tego stronę <https://certbot.eff.org>
 
@@ -414,13 +545,15 @@ Z rozwijanej listy Software wybieramy Apache, system operacyjny, to albo Ubuntu 
 
 Dla Ubuntu 16:04
 
-<pre class="wp-block-code"><code>sudo apt-get update
+``` bash
+sudo apt-get update
 sudo apt-get install software-properties-common
 sudo add-apt-repository universe
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 sudo apt-get install certbot python-certbot-apache
-sudo certbot --apache</code></pre>
+sudo certbot --apache
+```
 
 Wybierz stronę bez www, lub z www, jak tobie pasuje, ponieważ certbot nam rozpozna wirtualny host dla http, który utworzony został wcześniej. 
 
@@ -428,20 +561,29 @@ Nie włączaj przekierowania z http na https, ponieważ to zrobisz po stronie Cl
 
 Certbot zainstaluje automatycznie certyfikat, utworzy plik wirtualnego hosta. Teraz tylko trzeba wejść do katalogu:
 
-<pre class="wp-block-code"><code>sudo -i
+``` bash
+sudo -i
 cd /etc/apache2/sites-available
 ls -al
-a2ensite strona.com.pl-le-ssl.conf</code></pre>
+a2ensite strona.com.pl-le-ssl.conf
+```
 
 Polecam zmodyfikować plik wirtualnego hosta dla https, aby ostatecznie wyglądał tak:
 
-<pre class="wp-block-code"><code>sudo vi /etc/apache2/sites-available/strona.com.pl-le-ssl.conf
-lub
-sudo vi /etc/httpd/conf.d/strona.com.pl-le-ssl.conf</code></pre>
+``` bash
+sudo vi /etc/apache2/sites-available/strona.com.pl-le-ssl.conf
+```
 
-<pre class="wp-block-preformatted">&lt;IfModule mod_ssl.c&gt;
+lub
+
+``` bash
+sudo vi /etc/httpd/conf.d/strona.com.pl-le-ssl.conf
+```
+
+```
+<IfModule mod_ssl.c>
  SSLStaplingCache shmcb:/run/httpd/ssl_stapling(32768)
-  &lt;VirtualHost *:443&gt;
+  <VirtualHost *:443>
    Header always set Strict-Transport-Security "max-age=15768000"
    SSLEngine on
    ServerName strona.com.pl
@@ -451,48 +593,57 @@ sudo vi /etc/httpd/conf.d/strona.com.pl-le-ssl.conf</code></pre>
    ErrorLog /var/log/httpd/error.log
    CustomLog /var/log/httpd/access.log combined
 
- <code>   &lt;Directory /var/www/html/strona.com.pl/public_html&gt;</code>
-     <code>Options Indexes FollowSymLinks Includes IncludesNOEXEC SymLinksIfOwnerMatch                     </code>
-     <code>AllowOverride All</code>
-     <code>Require all granted</code>
-     <code>DirectoryIndex index.php</code>
-     <code>RewriteEngine On</code>
-    <code>&lt;/Directory&gt;</code>
+    <Directory /var/www/html/strona.com.pl/public_html>
+     Options Indexes FollowSymLinks Includes IncludesNOEXEC SymLinksIfOwnerMatch                     
+     AllowOverride All
+     Require all granted
+     DirectoryIndex index.php
+     RewriteEngine On
+    </Directory>
 
-<code>Include /etc/letsencrypt/options-ssl-apache.conf</code>
-<code>SSLUseStapling on</code>
-<code>SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1</code>
-<code>SSLCipherSuite HIGH:!aNULL:!MD5</code>
-<code>SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AE$</code>
-<code>SSLHonorCipherOrder on</code>
-<code>SSLCompression off</code>
-<code>SSLSessionTickets off</code>
+Include /etc/letsencrypt/options-ssl-apache.conf
+SSLUseStapling on
+SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+SSLCipherSuite HIGH:!aNULL:!MD5
+SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AE$
+SSLHonorCipherOrder on
+SSLCompression off
+SSLSessionTickets off
 
-    <code>&lt;FilesMatch "^\.ht"&gt;</code>
-       <code>Require all denied</code>
-    <code>&lt;/FilesMatch&gt;</code>
+    <FilesMatch "^\.ht">
+       Require all denied
+    </FilesMatch>
 
-    <code>&lt;files readme.html&gt;</code>
-       <code>order allow,deny</code>
-       <code>deny from all</code>
-    <code>&lt;/files&gt;</code>
+    <files readme.html>
+       order allow,deny
+       deny from all
+    </files>
 
 SSLCertificateFile /etc/letsencrypt/live/strona.com.pl/cert.pem
 SSLCertificateKeyFile /etc/letsencrypt/live/strona.com.pl/privkey.pem
 SSLCertificateChainFile /etc/letsencrypt/live/strona.com.pl/chain.pem
 
- &lt;/VirtualHost&gt;
-&lt;/IfModule&gt;</pre>
+ </VirtualHost>
+</IfModule>
+```
 
-#### Konfiguracja silnika MyISAM w MariaDB zamiast InnoDB.
+### Konfiguracja silnika MyISAM w MariaDB zamiast InnoDB.
+
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS 7.6 section
 
 W CentOS edytujemy plik my.cnf
 
-<pre class="wp-block-code"><code>sudo vi /etc/my.cnf</code></pre>
+``` bash
+sudo vi /etc/my.cnf
+```
 
 Teraz w zasadzie wystarczy zastąpić ten plik tym, co poniżej:
 
-<pre class="wp-block-preformatted"># This group is read both both by the client and the server use it for options that affect everything
+```
+# This group is read both both by the client and the server use it for options that affect everything
  [mysqld]
  MyISAM Settings
  skip-innodb
@@ -528,42 +679,50 @@ Teraz w zasadzie wystarczy zastąpić ten plik tym, co poniżej:
  [mysqld_safe]
  log-error=/var/log/mariadb/error.log
  # include all files from the config directory
- !includedir /etc/my.cnf.d</pre>
+ !includedir /etc/my.cnf.d
+```
 
 Zapisać zmiany, zrestartować httpd/apache2 oraz mariadb
 
-<pre class="wp-block-code"><code>sudo systemctl restart mariadb httpd</code></pre>
+``` bash
+sudo systemctl restart mariadb httpd
+```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu 16.04 section
 
 W przypadku Ubuntu 16.04 lokalizacja pliku jest nieco inna.
 
-<pre class="wp-block-code"><code>sudo vi /etc/mysql/my.cnf</code></pre>
+``` bash
+sudo vi /etc/mysql/my.cnf
+```
 
-Wystarczy wkleić w ten plik to, co jest w sekcji [mysqld] powyżej. Aczkolwiek zalecam włączenie logowania błędów do mariadb i ustawić w my.cnf logowanie błędów, jak powyżej jest to widoczne.
+Wystarczy wkleić w ten plik to, co jest w sekcji [mysqld] powyżej. Aczkolwiek zalecam włączenie logowania błędów do mariadb i ustawić w my.cnf logowanie błędów, jak poniżej jest to widoczne.
 
-<pre class="wp-block-code"><code>sudo -i
+``` bash
+sudo -i
 cd /var/log/
 mkdir mariadb
 cd mariadb
-touch error.log</code></pre>
+touch error.log
+```
 
-#### Instalacja PHP 7.3 &#8211; Ubuntu 16.04
+  {{< /tab >}}
+{{< /tabs >}}
 
-<pre class="wp-block-code"><code>sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
-sudo apt update
-sudo apt install php7.3 php7.3-cli php7.3-common
-sudo php -v
-sudo apt-cache search php7.3
-sudo apt install php-pear php7.3-curl php7.3-dev php7.3-gd php7.3-mbstring php7.3-zip php7.3-mysql php7.3-xml php7.3-fpm libapache2-mod-php7.3 php7.3-imagick php7.3-recode php7.3-tidy php7.3-xmlrpc php7.3-intl
-sudo update-alternatives --set php /usr/bin/php7.3
-sudo a2dismod php7.0
-sudo a2enmod php7.3
-sudo systemctl restart apache2</code></pre>
+### Instalacja PHP 7.3
 
-#### Instalacja PHP 7.3 &#8211; CentOS 7.6
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS 7.6 section
 
 Założenie jest takie, że istnieje użytkownik dodany do grupy wheel (sudoers) na samym początku tutoriala. Po sudo -i podaje się hasło użytkownika, nie roota.
 
-<pre class="wp-block-code"><code>sudo -i
+``` bash
+sudo -i
 cd /tmp
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm
@@ -573,92 +732,186 @@ yum-config-manager --disable remi-php54
 yum-config-manager --enable remi-php73
 yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-mysql php-mysqlnd
 yum update
-php -v</code></pre>
+php -v
+```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu 16.04 section
+
+  ```bash
+  sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php7.3 php7.3-cli php7.3-common
+sudo php -v
+sudo apt-cache search php7.3
+sudo apt install php-pear php7.3-curl php7.3-dev php7.3-gd php7.3-mbstring php7.3-zip php7.3-mysql php7.3-xml php7.3-fpm libapache2-mod-php7.3 php7.3-imagick php7.3-recode php7.3-tidy php7.3-xmlrpc php7.3-intl
+sudo update-alternatives --set php /usr/bin/php7.3
+sudo a2dismod php7.0
+sudo a2enmod php7.3
+sudo systemctl restart apache2
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 #### Ustawienie limitu pamięci w PHP
 
-<pre class="wp-block-code"><code>sudo find / -iname "php.ini"
-Dla CentOS 7.6: sudo vi /etc/php.ini 
-Dla Ubuntu 16.04: sudo vi /etc/php/7.3/apache2/php.ini
+``` bash
+sudo find / -iname "php.ini"
+```
+
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS 7.6 section
+
+  ```bash
+  sudo vi /etc/php.ini
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu 16.04 section
+  
+  ```bash
+  sudo vi /etc/php/7.3/apache2/php.ini
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+
 Ustaw:
-memory_limit = 10M</code></pre>
 
-#### Optymalizacja Apache
+```
+memory_limit = 10M
+```
 
-<pre class="wp-block-code"><code>sudo vi /etc/apache2/mods-enabled/mpm_prefork.conf # Ubuntu 
-sudo vi /etc/httpd/conf/httpd.conf</code></pre>
+### Optymalizacja Apache
+
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS 7.6 section
+
+  ```bash
+  sudo vi /etc/httpd/conf/httpd.conf
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu 16.04 section
+
+  ```bash
+  sudo vi /etc/apache2/mods-enabled/mpm_prefork.conf
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Na końcu tego pliku dodaj to:
 
-<pre class="wp-block-preformatted">HostnameLookups Off
+```
+HostnameLookups Off
 MaxKeepAliveRequests 500
 KeepAliveTimeout 5
 KeepAlive Off
-&lt;IfModule prefork.c&gt;
+<IfModule prefork.c>
     StartServers        2    
     MinSpareServers     2
     MaxSpareServers     2
     MaxClients          50
     MaxRequestsPerChild 100
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-#### Instalacja i konfiguracja iptables w CentOS 7.6
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS 7.6 section
+
+### Instalacja i konfiguracja iptables w CentOS 7.6
 
 Wyłącz firewalld:
 
-<pre class="wp-block-code"><code>sudo systemctl stop firewalld
+```bash
+sudo systemctl stop firewalld
 sudo systemctl disable firewalld
-sudo systemctl mask firewalld</code></pre>
+sudo systemctl mask firewalld
+```
 
 Zainstaluj iptables i włącz.
 
-<pre class="wp-block-code"><code>sudo yum install iptables-services
+```bash
+sudo yum install iptables-services
 sudo systemctl start iptables
 sudo systemctl start iptables6
 sudo systemctl enable iptables
-sudo systemctl enable iptables6</code></pre>
+sudo systemctl enable iptables6
+```
 
 Sprawdź status iptables oraz reguły
 
-<pre class="wp-block-code"><code>sudo systemctl status iptables
+```bash
+sudo systemctl status iptables
 sudo systemctl status iptables6
 sudo iptables -nvL
-sudo iptables6 -nvL</code></pre>
+sudo iptables6 -nvL
+```
 
 Dodaj reguły dla iptables
 
-<pre class="wp-block-code"><code>sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+```bash
+sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT</code></pre>
+sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+```
 
 Zapisz zmiany
 
-<pre class="wp-block-code"><code>sudo service iptables save
+```bash
+sudo service iptables save
 sudo service ip6tables save
 sudo systemctl restart iptables
-sudo systemctl restart ip6tables</code></pre>
+sudo systemctl restart ip6tables
+```
 
-#### Instalacja i konfiguracja iptables w Ubuntu 16.04
+  {{< /tab >}}
+  {{< tab >}}
 
-<pre class="wp-block-code"><code>sudo apt-get install iptables-persistent</code></pre>
+  ### Ubuntu 16.04 section
 
-Podczas instalacji zapyta czy zachować bieżące reguły oraz czy chcesz używać zarówno IPv4, jaki IPv6. Na wszystkie te pytania odpowiedz twierdząco. 
+### Instalacja i konfiguracja iptables w Ubuntu 16.04
 
-<pre class="wp-block-code"><code>sudo systemctl start iptables
+```bash
+sudo apt-get install iptables-persistent
+```
+
+Podczas instalacji zapyta czy zachować bieżące reguły oraz czy chcesz używać zarówno IPv4, jaki IPv6. Na wszystkie te pytania odpowiedz twierdząco.
+
+```bash
+sudo systemctl start iptables
 sudo systemctl start iptables6
 sudo systemctl enable iptables
-sudo systemctl enable iptables6</code></pre>
-
+sudo systemctl enable iptables6
+  ```
 Dodaj porty:
 
-<pre class="wp-block-code"><code>sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+```bash
+sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
-sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT</code></pre>
+sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+```
 
 Zapisz zmiany i przeładuj usługę:
 
-<pre class="wp-block-code"><code>service netfilter-persistent save
-service netfilter-persistent reload</code></pre>
+```bash
+service netfilter-persistent save
+service netfilter-persistent reload
+```
+
+  {{< /tab >}}
+{{< /tabs >}}
 
 Przejdź teraz po adres https://strona.com.pl i zainstaluj WordPress.
 
