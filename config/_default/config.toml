@@ -1,5 +1,5 @@
-baseURL = "https://sysadmin.info.pl"
-title = ""
+baseURL = "https://sysadmin-info.netlify.app/"
+title = "Administration, security and hardening of Linux"
 theme = "zzo"
 
 viewportSize = "normal"
