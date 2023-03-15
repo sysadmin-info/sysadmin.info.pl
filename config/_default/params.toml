@@ -61,7 +61,7 @@ typeIcon = "🎯"
 
 # whoami
 myname = "sysadmin"
-email = "admin@sysadmin.info.pl"
+email = "adrian.ambroziak@gmail.com"
 whoami = "QA & Linux Specialist"
 bioImageUrl = ""
 useGravatar = false
@@ -161,7 +161,7 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "mailto:admin@sysadmin.info.pl"
+  email = "mailto:adrian.ambroziak@gmail.com"
   phone = ""
   facebook = "https://www.facebook.com/sysadmininfo"
   twitter = ""
