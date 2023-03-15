@@ -1,10 +1,22 @@
-+++
-title = "Privacy policy"
-description = "Privacy policy"
-type = "privacy"
-date = "2019-11-07T08:13:36+00:00"
-featured_image = "images/2019/09/mainframe.jpg"
-+++
+---
+title: "Privacy policy"
+date: 2019-11-07T08:13:36+00:00 
+description: "Privacy policy"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+author: sysadmin
+authorEmoji: 🐧
+pinned: true
+tags:
+- privacy
+series:
+-
+categories:
+- general
+image: images/2019/privacy.png
+---
 
 #### Privacy Policy
 

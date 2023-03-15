@@ -1,10 +1,23 @@
-+++
-title = "Polityka prywatności"
-description = "Polityka prywatności"
-type = "privacy"
-date = "2019-09-21T19:24:59+00:00"
-featured_image = "images/2019/09/mainframe.jpg"
-+++
+---
+title: "Polityka prywatności"
+date: 2019-09-21T19:24:59+00:00 
+description: "Polityka prywatności"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+author: sysadmin
+authorEmoji: 🐧
+pinned: true
+tags:
+- privacy
+series:
+-
+categories:
+- general
+image: images/2019/privacy.png
+---
+
 #### Polityka prywatności
 
 Portal sysadmin.info.pl nie przetwarza, nie udostępnia ani nie wykorzystuje w&nbsp;celach marketingowych danych przekazywanych przez Użytkowników portalu. Możecie być pewni że&nbsp;w&nbsp;przyszłości także nie będziemy przetwarzać, udostępniać ani wykorzystywać waszych danych w&nbsp;jakichkolwiek innych celach, niż zwykłe zbieranie statystyk.
