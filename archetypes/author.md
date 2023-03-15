@@ -14,7 +14,7 @@ authorImage: "/images/whoami/avatar.png"
 authorImageUrl: ""
 authorDesc: 
 socialOptions:
-  email: "adrian.ambroziak@gmail.com" 
+  email: "admin@sysadmin.info.pl" 
   phone: ""
   facebook: "https://www.facebook.com/sysadmininfo"
   twitter: ""
