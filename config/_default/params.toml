@@ -202,7 +202,7 @@ commento = false
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "pocket", "feedly", "hatena", "pinterest", "delicious", "google"]
 [[share]]
   name = "facebook"
-  username = ""
+  username = "dorge1981"
 [[share]]
   name = "twitter"
 

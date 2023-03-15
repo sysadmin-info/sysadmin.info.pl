@@ -15,3 +15,9 @@
   name = "Contact"
   url = "contact"
   weight = 3
+
+[[main]]
+  identifier = "privacy"
+  name = "Privacy policy"
+  url = "privacy"
+  weight = 4

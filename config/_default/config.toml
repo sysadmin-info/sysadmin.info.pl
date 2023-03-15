@@ -1,5 +1,5 @@
-baseURL = "http://example.org"
-title = "Hugo Zzo Theme"
+baseURL = "https://sysadmin.info.pl"
+title = ""
 theme = "zzo"
 
 viewportSize = "normal"
@@ -11,7 +11,7 @@ hasCJKLanguage = true
 summaryLength = 70
 buildFuture = true
 
-copyright = "&copy;{year}, All Rights Reserved"
+copyright = "&copy;{year}, [sysadmin](https://sysadmin.info.pl/) - All rights reserved"
 timeout = 10000
 enableEmoji = true
 paginate = 13
