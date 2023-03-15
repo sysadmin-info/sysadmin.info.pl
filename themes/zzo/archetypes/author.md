@@ -10,19 +10,19 @@ categories:
 -
 author:
 authorEmoji: 🤖
-authorImage: "/images/whoami/avatar.jpg"
+authorImage: "/images/whoami/avatar.png"
 authorImageUrl: ""
 authorDesc: 
 socialOptions:
-  email: ""
+  email: "admin@sysadmin.info.pl
   phone: ""
-  facebook: ""
+  facebook: "https://www.facebook.com/sysadmininfo"
   twitter: ""
-  github: ""
+  github: "https://github.com/sysadmin-info"
   stack-overflow: ""
   instagram: ""
   google-plus: ""
-  youtube: ""
+  youtube: "https://www.youtube.com/@sysadmin-info"
   medium: ""
   tumblr: ""
   linkedin: ""

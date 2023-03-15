@@ -2,61 +2,61 @@
 other = "Szukaj"
 
 [summary-dateformat]
-other = "Jan 2, 2006"
+other = "Sty 2, 2006"
 
 [reading-time]
 other = "min read"
 
 [tags]
-other = "Tags"
+other = "Tagi"
 
 [categories]
-other = "Categories"
+other = "Kategorie"
 
 [series]
-other = "Series"
+other = "Serie"
 
 [archive-dateformat]
-other = "Jan 2"
+other = "Sty 2"
 
 [talks-dateformat]
-other = "Jan 2"
+other = "Sty 2"
 
 [single-dateformat]
-other = "Jan 2, 2006"
+other = "Sty 2, 2006"
 
 [pub-dateformat]
 other = "2006-01-02"
 
 [resume-dateformat]
-other = "Jan, 2006"
+other = "Sty, 2006"
 
 [single-related]
-other = "See Also"
+other = "Zobacz także"
 
 [single-writtenBy]
-other = "WRITTEN BY"
+other = "UTWORZONE PRZEZ"
 
 [toc-label]
-other = "What's on this Page"
+other = "Co jest na tej stronie"
 
 [counter-site-pv]
-other = "Total views"
+other = "Całkowita liczba odwiedzin"
 
 [counter-site-uv]
-other = "Total visitors"
+other = "Całkowita liczba odwiedzających"
 
 [counter-page-pv]
-other = "views"
+other = "odsłony"
 
 [donate-message]
-other = "Support the author with"
+other = "Wesprzyj autora"
 
 [share-message]
-other = "Share on"
+other = "Podziel się"
 
 [contact-name]
-other = "Name"
+other = "Imię"
 
 [contact-email]
 other = "Email"
@@ -65,46 +65,46 @@ other = "Email"
 other = "Tel"
 
 [contact-file]
-other = "File"
+other = "Plik"
 
 [contact-message]
-other = "Message"
+other = "Wiadomość"
 
 [contact-send]
-other = "Send"
+other = "Wyślij"
 
 [contact-browse]
-other = "Browse"
+other = "Przeglądaj"
 
 [tooltip-home]
-other = "Home"
+other = "Strona główna"
 
 [tooltip-written]
-other = "Written At"
+other = "Napisane o godz."
 
 [tooltip-modified]
-other = "Modified At"
+other = "Zmodyfikowane o godz."
 
 [tooltip-reading-time]
-other = "Reading Time"
+other = "Przeczytasz w ciągu"
 
 [showcase-overview]
-other = "Overview"
+other = "Przegląd"
 
 [showcase-pinned]
-other = "Pinned"
+other = "Przypięte"
 
 [nojs-message]
-other = "This page looks best with JavaScript enabled"
+other = "Ta strona wygląda najlepiej z włączoną obsługą JavaScript"
 
 [posts-by-order]
-other = "TOP POSTS"
+other = "NAJLEPSZE WPISY"
 
 [skin-dark]
-other = "dark"
+other = "ciemny"
 
 [skin-light]
-other = "light"
+other = "jasny"
 
 [skin-hacker]
 other = "hacker"
@@ -116,4 +116,4 @@ other = "solarized"
 other = "kimbie"
 
 [no-contents]
-other = "Nothing to Display"
+other = "Brak danych do pokazania"

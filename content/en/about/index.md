@@ -1,27 +1,21 @@
 +++
-title = "About"
-description = "Hugo, the world’s fastest framework for building websites"
+title = "About me"
+description = "Administration, security and hardening of Linux"
 type = "about"
-date = "2019-02-28"
+date = "2019-10-23T19:09:45+00:00"
+featured_image = "wp-content/uploads/2019/09/mainframe.jpg"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+<figure>
+  <img class="about-photo" alt="Me" src="/images/whoami/avatar.png" />
+</figure>
 
-Hugo makes use of a variety of open source projects including:
+My name is Adrian. I have been working in the IT industry since 2002. Currently I work for Fujitsu as Quality Assurance Specialist in Research and Development, as the Linux specialist.
 
-* https://github.com/russross/blackfriday
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+I&#8217;m interested in many issues from the broadly understood IT industry, but also amateurishly try to explore quantum physics, astronomy, cosmology and astronautics.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+I love science fiction and absorb everything that is related to it.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+If you want, you can buy me a coffee that I love. I can recommend the Brazilian yellow bourbon from Single Origin.
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
-
-
-
+<a href="https://www.buymeacoffee.com/sysadmininfo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>

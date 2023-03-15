@@ -2,6 +2,8 @@ baseURL = "http://example.org"
 title = "Hugo Zzo Theme"
 theme = "zzo"
 
+viewportSize = "normal"
+
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 hasCJKLanguage = true

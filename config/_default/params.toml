@@ -1,13 +1,13 @@
-logoText = "Zzo"
+logoText = "Sysadmin"
 logoType = "short" # long, short
-description = "The Zzo theme for Hugo example site."
-custom_css = []
+description = "Administration, security and hardening of Linux"
+custom_css = ["css/custom.css"]
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = ""
 themecolor = ""
 
-themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
+themeOptions = ["light", "dark"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
@@ -24,7 +24,7 @@ enableAppbarSearchIcon = false
 enableAppbarLangIcon = false
 
 # header
-homeHeaderType = "text" # text, img, slide, typewriter
+homeHeaderType = "img" # text, img, slide, typewriter
 hideHomeHeaderWhenMobile = false
 
 # menu
@@ -60,14 +60,14 @@ publicationIcon = "📚"
 typeIcon = "🎯"
 
 # whoami
-myname = "zzossig"
-email = "zzossig@gmail.com"
-whoami = "Web Developer"
+myname = "sysadmin"
+email = "admin@sysadmin.info.pl"
+whoami = "QA & Linux Specialist"
 bioImageUrl = ""
 useGravatar = false
-location = "Seoul, Korea"
-organization = "Hugo"
-link = "https://zzossig.io/ko"
+location = "Łódź, Poland"
+organization = "Fujitsu Technology Solutions"
+link = "https://sysadmin.info.pl/"
 
 # sidebar
 enableBio = true
@@ -89,7 +89,7 @@ tocLevels = ["h2", "h3", "h4"]
 enableSidebarPostsByOrder = false
 
 # footer
-showPoweredBy = true
+showPoweredBy = false
 showFeedLinks = true
 showSocialLinks = true
 enableLangChange = true
@@ -161,20 +161,20 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "mailto:your@email.com"
+  email = "mailto:admin@sysadmin.info.pl"
   phone = ""
-  facebook = "http://example.org/"
-  twitter = "http://example.org/"
-  github = "https://github.com/zzossig/hugo-theme-zzo"
+  facebook = "https://www.facebook.com/sysadmininfo"
+  twitter = ""
+  github = "https://github.com/sysadmin-info"
   stack-overflow = ""
   instagram = ""
   google-plus = ""
-  youtube = ""
+  youtube = "https://www.youtube.com/@sysadmin-info"
   medium = ""
   tumblr = ""
-  linkedin = ""
+  linkedin = "https://www.linkedin.com/in/adrian-ambroziak/"
   pinterest = ""
-  stack-exchange = ""
+  stack-exchange = "https://stackexchange.com/users/2291922/sysadmin"
   telegram = ""
   steam = ""
   weibo = ""
