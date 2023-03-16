@@ -13,21 +13,12 @@
       <input type="email" name="email" class="contact__input" aria-label="{{ i18n "contact-email" }}">
     </div>
   </div>
-  <div class="contact__input--container">
-    <div class="contact__input--wrapper">
-      <label class="contact__label">
-        {{ i18n "contact-tel" }}
-      </label>
-      <input type="text" name="tel" class="contact__input" aria-label="{{ i18n "contact-tel" }}">
-    </div>
-    <div class="contact__input--wrapper">
-      <label class="contact__label">
-        {{ i18n "contact-file" }}
-      </label>
-      <input type="file" id="upload" name="file" style="display: none;">
-      <input type="button" id="uploadBtn" value="{{ i18n "contact-browse" | default "Browse..." }}" class="contact__input" aria-label="{{ i18n "contact-file" }}"/>
-    </div>
-  </div>
+	  <div class="contact__message--wrapper">
+		  <label class="contact__label">
+			  {{ i18n "contact-message" }}
+		  </label>
+		  <textarea name="message" class="contact__message" aria-label="{{ i18n "contact-message" }}"></textarea>
+	  </div>
   <input type="submit" value="{{ i18n "contact-send" }}" class="contact__send">
 </form>
 
