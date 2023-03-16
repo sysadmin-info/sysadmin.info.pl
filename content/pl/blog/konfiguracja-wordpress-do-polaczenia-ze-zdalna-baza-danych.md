@@ -15,6 +15,7 @@ series:
 -
 categories:
 - IT Security
+- WordPress
 image: images/2019-thumbs/wp.png
 ---
 Cześć,
@@ -44,7 +45,7 @@ Dotarłeś do tego miejsca? Świetnie! Zaczynajmy.
   * `example_user`: Lokalny użytkownik z prawami sudo, który nie jest rootem.
   * `190.100.100.90/example.com`: Publiczny adres serwera , lub nazwa domeny (FQDN).
 
-Zainstaluj serwer bazy danych MariaDB 10.3 na CentOS poleceniem:
+### Zainstaluj serwer bazy danych MariaDB 10.3 na CentOS poleceniem:
 
 ``` 
 sudo nano /etc/yum.repos.d/MariaDB.repo
@@ -209,7 +210,7 @@ status;
 exit
 ```
 
-Na serwerze www z Debian wykonaj następujące polecenie:
+### Na serwerze www z Debian wykonaj następujące polecenie:
 
 ``` 
 sudo apt update && sudo apt install mariadb-client php-mysql
