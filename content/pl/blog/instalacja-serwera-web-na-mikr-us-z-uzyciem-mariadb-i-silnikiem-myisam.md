@@ -243,40 +243,93 @@ Zainstaluj wszystkie aktualizacje:
 
 W następnej kolejności zainstaluj Apache (httpd w CentOS, apache2 w Debian/Ubuntu)
 
-``` 
-sudo yum -y install httpd
-sudo apt-get install apache2
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo yum -y install httpd
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo apt-get install apache2
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Włącz Apache2 przy starcie systemui uruchom usługę.
 
-``` 
-sudo systemctl enable httpd
-sudo systemctl enable apache2
-sudo systemctl start httpd
-sudo systemctl start apache2
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo systemctl enable httpd
+  sudo systemctl start httpd
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo systemctl enable apache2
+  sudo systemctl start apache2
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Status usługi możesz sprawdzić:
 
-``` 
-sudo systemctl status httpd
-sudo systemctl status apache2
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo systemctl status httpd
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo systemctl status apache2
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 ### Konfiguracja wirtualnego hosta
 
-W przypadku CentOS tworzymy plik wirtualnego hosta dla http (port 80) za pomocą poniższego polecenia:
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
 
-``` 
-sudo vi /etc/httpd/conf.d/strona.com.pl.conf
-```
+  W przypadku CentOS tworzymy plik wirtualnego hosta dla http (port 80) za pomocą poniższego polecenia:
 
-Natomiast w przypadku Debian/Ubuntu
+  ```
+  sudo vi /etc/httpd/conf.d/strona.com.pl.conf
+  ```
 
-``` 
-sudo vi /etc/apache2/sites-available/strona.com.pl.conf
-```
+  {{< /tab >}}
+  {{< tab >}}
+
+  Natomiast w przypadku Debian
+
+  ```
+  sudo vi /etc/apache2/sites-available/strona.com.pl.conf
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 ```
 <VirtualHost *:80>
@@ -334,10 +387,25 @@ cd /var/www/html/strona.com.pl/src/
 
 Ustaw użytkownika serwera WWW, <em><strong>www-data</strong></em>, jako właściciela katalogu domowego swojej witryny. <em><strong>www-data</strong></em> jest grupą. W przypadku CentOS będzie to grupa <em><strong>apache</strong></em>.
 
-``` 
-sudo chown -R apache:apache /var/www/html/strona.com.pl/
-sudo chown -R www-data:www-data /var/www/html/strona.com.pl/
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo chown -R apache:apache /var/www/html/example.com.pl/
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo chown -R www-data:www-data /var/www/html/example.com.pl/
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Zainstaluj najnowszą wersję WordPress i wypakuj ją używając odpowiedniej nazwy w zależności od używanego systemu: 
 
@@ -362,10 +430,25 @@ sudo mv wordpress/* ../public_html/
 
 Nadaj folderowi public_html uprawnienia dla grupy www-data lub apache:
 
-``` 
-sudo chown -R www-data:www-data /var/www/html/strona.com.pl/public_html
-sudo chown -R apache:apache /var/www/html/strona.com.pl/public_html
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo chown -R www-data:www-data /var/www/html/example.com.pl/public_html
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo chown -R apache:apache /var/www/html/example.com.pl/public_html
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Przejdź do katalogu, do którego wyodrębniono WordPress, skopiuj przykładową konfigurację i ustaw ją tak, aby korzystała ze zdalnej bazy danych:
 
@@ -573,18 +656,6 @@ Wykorzystamy do tego stronę <https://certbot.eff.org>
 
 Z rozwijanej listy Software wybieramy Apache, system operacyjny, to albo Ubuntu 16.04, albo Debian 9, albo CentOS/RHEL 7 i postępujemy zgodnie ze wskazówkami.
 
-Dla Ubuntu 16:04
-
-``` 
-sudo apt-get update
-sudo apt-get install software-properties-common
-sudo add-apt-repository universe
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install certbot python-certbot-apache
-sudo certbot --apache
-```
-
 Wybierz stronę bez www, lub z www, jak tobie pasuje, ponieważ certbot nam rozpozna wirtualny host dla http, który utworzony został wcześniej. 
 
 Nie włączaj przekierowania z http na https, ponieważ to zrobisz po stronie Cloudflare. Inaczej napotkasz błąd. Dlatego wybierz 1 , gdy zapyta o redirect.
@@ -600,15 +671,26 @@ a2ensite strona.com.pl-le-ssl.conf
 
 Polecam zmodyfikować plik wirtualnego hosta dla https, aby ostatecznie wyglądał tak:
 
-``` 
-sudo vi /etc/apache2/sites-available/strona.com.pl-le-ssl.conf
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
 
-lub
+  ### CentOS section
 
-``` 
-sudo vi /etc/httpd/conf.d/strona.com.pl-le-ssl.conf
-```
+  ```
+  sudo vi /etc/httpd/conf.d/strona.com.pl-le-ssl.conf
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo vi /etc/apache2/sites-available/strona.com.pl-le-ssl.conf
+  ```
+
+  {{< /tab >}}
+{{< /tabs >}}
 
 ```
 <IfModule mod_ssl.c>
@@ -712,7 +794,7 @@ Teraz w zasadzie wystarczy zastąpić ten plik tym, co poniżej:
  !includedir /etc/my.cnf.d
 ```
 
-Zapisać zmiany, zrestartować httpd/apache2 oraz mariadb
+Zapisać zmiany, zrestartować httpd oraz mariadb
 
 ``` 
 sudo systemctl restart mariadb httpd
@@ -737,6 +819,11 @@ cd /var/log/
 mkdir mariadb
 cd mariadb
 touch error.log
+```
+Zapisać zmiany, zrestartować apache2 oraz mariadb
+
+```
+sudo systemctl restart mariadb apache2
 ```
 
   {{< /tab >}}
@@ -854,6 +941,10 @@ KeepAlive Off
     MaxRequestsPerChild 100
 </IfModule>
 ```
+
+Zapisz plik i wyjdź z edycji.
+
+### Instalacja i konfiguracja iptables
 
 {{< tabs CentOS Ubuntu >}}
   {{< tab >}}

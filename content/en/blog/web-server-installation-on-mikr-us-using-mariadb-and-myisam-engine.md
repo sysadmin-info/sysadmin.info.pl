@@ -189,7 +189,7 @@ They specify the length of the password, how many times the user can log in, how
 
 First clear the download manager. CentOS uses yum, while Debian/Ubuntu uses apt-get and in the newer distro apt.
 
-{{< tabs CentOS Debian >}}
+{{< tabs CentOS Ubuntu >}}
   {{< tab >}}
 
   ### CentOS section
@@ -201,7 +201,7 @@ First clear the download manager. CentOS uses yum, while Debian/Ubuntu uses apt-
   {{< /tab >}}
   {{< tab >}}
 
-  ### Debian section
+  ### Ubuntu section
 
   ```
   sudo apt-get autoremove && sudo apt-get clean
@@ -211,7 +211,7 @@ First clear the download manager. CentOS uses yum, while Debian/Ubuntu uses apt-
 
 Install all updates:
 
-{{< tabs CentOS Debian >}}
+{{< tabs CentOS Ubuntu >}}
   {{< tab >}}
 
   ### CentOS section
@@ -223,7 +223,7 @@ Install all updates:
   {{< /tab >}}
   {{< tab >}}
 
-  ### Debian section
+  ### Ubuntu section
 
   ```
   sudo apt-get update && sudo apt-get upgrade
@@ -233,38 +233,96 @@ Install all updates:
 
 Next, install Apache (httpd in CentOS, apache2 in Debian/Ubuntu).
 
-```
-sudo yum -y install httpd
-sudo apt-get install apache2
-```
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo yum -y install httpd
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu section
+
+  ```
+  sudo apt-get install apache2
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Enable Apache at system startup and run the service.
 
-```
-sudo systemctl enable httpd
-sudo systemctl enable apache2
-sudo systemctl start httpd
-sudo systemctl start apache2
-```
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo systemctl enable httpd
+  sudo systemctl start httpd
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu section
+
+  ```
+  sudo systemctl enable apache2
+  sudo systemctl start apache2
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 You can check the status of the service:
 
-```
-sudo systemctl status httpd
-sudo systemctl status apache2
-```
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo systemctl status httpd
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu section
+
+  ```
+  sudo systemctl status apache2
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 #### Virtual host configuration
 
-In the case of CentOS we create a virtual host file for http (port 80) using the following command:
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
 
-sudo vi /etc/httpd/conf.d/example.com.pl.conf
+  In the case of CentOS we create a virtual host file for http (port 80) using the following command:
 
-In the case of Debian/Ubuntu.
+  ```
+  sudo vi /etc/httpd/conf.d/example.com.pl.conf
+  ```
 
-sudo vi /etc/apache2/sites-available/example.com.pl.conf
+  {{< /tab >}}
+  {{< tab >}}
 
-<pre class="wp-block-preformatted">&lt;VirtualHost *:80&gt;
+  In the case of Ubuntu
+
+  ```
+  sudo vi /etc/apache2/sites-available/example.com.pl.conf
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+
+```
+<VirtualHost *:80>
    ServerName example.com.pl
    ServerAlias www.example.com.pl
    DocumentRoot /var/www/html/example.com.pl/public_html
@@ -276,19 +334,22 @@ sudo vi /etc/apache2/sites-available/example.com.pl.conf
 
    LogLevel info warn
 
- <code>  &lt;FilesMatch "^\.ht"&gt;     </code>
-       <code>Require all denied</code>
-   <code>&lt;/FilesMatch&gt;</code>
+   <FilesMatch "^\.ht">
+       Require all denied
+   </FilesMatch>
 
-   <code>&lt;files readme.html&gt;</code>
-       <code>order allow,deny</code>
-       <code>deny from all</code>
-   <code>&lt;/files&gt;</code>
-&lt;/VirtualHost&gt;</pre>
+   <files readme.html>
+       order allow,deny
+       deny from all
+   </files>
+</VirtualHost>
+```
 
 For Debian/Apache we still have to turn on the page.
 
+```
 sudo a2ensite example.com.pl.conf
+```
 
 This will create a symbolic link in the /etc/apache2/sites-enabled directory.
 
@@ -296,48 +357,98 @@ This will create a symbolic link in the /etc/apache2/sites-enabled directory.
 
 Now you need to create a directory for the page in /var/www/html directory.
 
+```
 sudo -i
+```
 (enter the password of the user you created at the beginning)
+
+```
 cd /var/www/html
 sudo mkdir example.com.pl
+```
 
 Create a directory named src in your site directory to store new copies of WordPress source files. This guide uses the home directory /var/www/html/example.com.pl/ as an example. Go to this new directory:
 
+```
 sudo mkdir -p /var/www/html/example.com.pl/src/
 cd /var/www/html/example.com.pl/src/
+```
 
-<pre class="wp-block-preformatted">Set the web server user, <em><strong>www-data</strong></em>, as the owner of the home directory of your site. <em><strong>www-data</strong></em> is a group. In the case of CentOS it will be an <em><strong>apache</strong></em> group.</pre>
+Set the web server user, <em><strong>www-data</strong></em>, as the owner of the home directory of your site. <em><strong>www-data</strong></em> is a group. In the case of CentOS it will be an <em><strong>apache</strong></em> group.
 
-sudo chown -R apache:apache /var/www/html/example.com.pl/
-sudo chown -R www-data:www-data /var/www/html/example.com.pl/
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo chown -R apache:apache /var/www/html/example.com.pl/
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu section
+
+  ```
+  sudo chown -R www-data:www-data /var/www/html/example.com.pl/
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Install the latest version of WordPress and extract it using the appropriate name depending on the system you are using:
 
+```
 sudo wget http://wordpress.org/latest.tar.gz
 sudo -u www-data tar -xvf latest.tar.gz
 sudo -u apache tar -xvf latest.tar.gz
+```
 
 Rename the latest.tar.gz file to wordpress, then set the backup date for the original source files. This will be useful if you install new versions in the future and need to return to the previous version:
 
+```
 sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
+```
 
-Create the public\_html directory, which will be the WordPress root directory. Move the WordPress files to the public\_html folder:
+Create the public_html directory, which will be the WordPress root directory. Move the WordPress files to the public_html folder:
 
-sudo mkdir -p /var/www/html/example.com.pl/public_html/
+```
+sudo mkdir -p /var/www/html/strona.com.pl/public_html/
 sudo mv wordpress/* ../public_html/
+```
 
 Give the public_html folder permissions for the www-data or apache group:
 
-sudo chown -R www-data:www-data /var/www/html/example.com.pl/public_html
-sudo chown -R apache:apache /var/www/html/example.com.pl/public_html
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo chown -R www-data:www-data /var/www/html/example.com.pl/public_html
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu section
+
+  ```
+  sudo chown -R apache:apache /var/www/html/example.com.pl/public_html
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Go to the directory where WordPress was extracted, copy the sample configuration and set it to use the remote database:
 
+```
 cd /var/www/html/example.com.pl/public_html
 sudo cp wp-config-sample.php wp-config.php
+```
 
 Change the login variables to match the database and the user. Edit the file:
 
+```
 sudo vi /var/www/html/example.com.pl/public_html/wp-config.php 
 
 /** The name of the database for WordPress */
@@ -351,11 +462,13 @@ define('DB_PASSWORD', 'db_user_password');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
+```
 
 Add security keys to protect wp-admin.  
 Use <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="noreferrer noopener">Security Key Generator WordPress</a> to create random, complex hashes that WordPress will use to encrypt your login data. Copy the result and replace the corresponding section in the file wp-config.php:
 
-<pre class="wp-block-preformatted">/**#@+
+```
+/**#@+
  * Authentication Unique Keys and Salts.
  *
  * Change these to different unique phrases!
@@ -372,25 +485,37 @@ define('AUTH_SALT',        'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
-/**#@-*/</pre>
+/**#@-*/
+```
 
-#### Installation and configuration of Maria DB 10.4 in CentOS 7.6.
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
 
-sudo tee /etc/yum.repos.d/MariaDB.repo&lt;&lt;EOF 
+  ### Installation and configuration of Maria DB 10.4 in CentOS 7.6.
+
+  ```
+sudo tee /etc/yum.repos.d/MariaDB.repo&lt;&lt;EOF
 [mariadb]
 name = MariaDB
 baseurl = http://yum.mariadb.org/10.4/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 EOF
+```
 
+```
 sudo yum makecache fast
 sudo yum -y install MariaDB-server MariaDB-client
 sudo systemctl enable mariadb
+```
 
 When configuring, confirm the empty root password in MariaDB, and in the next step set the root password (the one from MariaDB). This password should be different from the root password you got in the email after setting up the server on mikr.us.
 
-<pre class="wp-block-preformatted">$ mysql_secure_installation
+```
+mysql_secure_installation
+```
+
+```
  NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
        SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
  In order to log into MariaDB to secure it, we'll need the current
@@ -402,7 +527,7 @@ When configuring, confirm the empty root password in MariaDB, and in the next st
  Setting the root password ensures that nobody can log into the MariaDB
  root user without the proper authorisation.
  <strong>Set root password? [Y/n] y
- New password: 
+ New password:
  Re-enter new password: </strong>
  Password updated successfully!
  Reloading privilege tables..
@@ -425,7 +550,7 @@ When configuring, confirm the empty root password in MariaDB, and in the next st
  Dropping test database…
  … Success!
  Removing privileges on test database…
- … Success! 
+ … Success!
  Reloading the privilege tables will ensure that all changes made so far
  will take effect immediately.
  Reload privilege tables now? [Y/n] y
@@ -433,61 +558,97 @@ When configuring, confirm the empty root password in MariaDB, and in the next st
  Cleaning up…
  All done!  If you've completed all of the above steps, your MariaDB
  installation should now be secure.
- Thanks for using MariaDB!</pre>
+ Thanks for using MariaDB!
+```
 
+```
 sudo systemctl start mariadb
 mysql -u root -p
+```
 
 #### After logging in to the database, create a database and assign it to the user.
 
+```
 CREATE DATABASE wordpress;
-CREATE USER 'user'@'localhost' IDENTIFIED BY 'haslo_użytkownika_bazy_danych';
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'database_user_password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 exit
+```
+
 Enter
+
+```
 mysql -u user -p Enter
-wpisz hasło użytkownika user, którego właśnie stworzyłeś
+```
+
+enter the password of the user you just created
+
+```
 status;
-Jeśli wyświetli się wersja MariaDB, to znaczy, że wszystko działa.
+```
+
+If it shows the MariaDB version, everything is working.
+
+```
 exit
+```
+
 Enter
 
 Restart the database server and web commands:
 
+```
 sudo systemctl restart mariadb && sudo systemctl restart httpd
+```
 
-#### Installation and configuration of Maria DB 10.3 in Ubuntu 16.04 LTS
+  {{< /tab >}}
+  {{< tab >}}
+
+### Installation and configuration of Maria DB 10.3 in Ubuntu/Debian
 
 To install MariaDB 10.3 on Ubuntu 16.04, you need to add the MariaDB repository to your system. Run the following commands to import the PGP key of the MariaDB repository and add the repository.
 
+```
 sudo apt -y install software-properties-common dirmngr
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/10.3/ubuntu xenial main'
+```
 
 Update the list of system packages and install MariaDB.
 
+```
 sudo apt update
 sudo apt -y install mariadb-server mariadb-client
+```
 
 You will be asked to enter the password of the MariaDB root. You will have to enter it twice. Confirm the change of password. You can confirm the installed version of MariaDB by logging in as root user.
 
+```
 mysql -u root -p
+```
 
 After logging in, enter the status; (remember about semicolons in SQL syntax). Then type exit.
 
 I recommend performing exactly the same procedure as for CentOS installation. Above you can see what steps need to be taken.
 
+```
 mysql_secure_installation
+```
 
-Then follow the instructions below:
+Then follow the instructions from CentOS installation:
 
+
+```
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo systemctl status mariadb
 sudo systemctl restart mariadb
+```
 
 Create a user database in the same way as creating a database in CentOS.
+  {{< /tab >}}
+{{< /tabs >}}
 
 #### Installation and configuration of SSL certificate using Let&#8217;s Encrypt.
 
@@ -495,36 +656,46 @@ We will use the <https://certbot.eff.org> website to do this.
 
 From the Software drop-down list, select Apache, the operating system, either Ubuntu 16.04, Debian 9, or CentOS/RHEL 7 and follow the instructions.
 
-For Ubuntu 16.04
-
-sudo apt-get update
-sudo apt-get install software-properties-common
-sudo add-apt-repository universe
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install certbot python-certbot-apache
-sudo certbot --apache
-
 Choose a web page without a www or with a www as you like, because certbot will recognize the virtual host for http that was created earlier.
 
 Do not enable redirection from http to https, as you will do so on the Cloudflare side. Otherwise you will encounter an error. So choose 1 when it asks for redirect.
 
 Certbot will automatically install the certificate, create a virtual host file. Now all you have to do is go to the directory:
 
+```
 sudo -i
 cd /etc/apache2/sites-available
 ls -al
 a2ensite example.com.pl-le-ssl.conf
+```
 
 I recommend to modify the virtual host file for https to make it look like this:
 
-sudo vi /etc/apache2/sites-available/example.com.pl-le-ssl.conf
-or
-sudo vi /etc/httpd/conf.d/example.com.pl-le-ssl.conf
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
 
-<pre class="wp-block-preformatted">&lt;IfModule mod_ssl.c&gt;
+  ### CentOS section
+
+  ```
+  sudo vi /etc/httpd/conf.d/example.com.pl-le-ssl.conf
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu section
+
+  ```
+  sudo vi /etc/apache2/sites-available/example.com.pl-le-ssl.conf
+  ```
+
+  {{< /tab >}}
+{{< /tabs >}}
+
+```
+<IfModule mod_ssl.c>
  SSLStaplingCache shmcb:/run/httpd/ssl_stapling(32768)
-  &lt;VirtualHost *:443&gt;
+  <VirtualHost *:443>
    Header always set Strict-Transport-Security "max-age=15768000"
    SSLEngine on
    ServerName example.com.pl
@@ -534,47 +705,56 @@ sudo vi /etc/httpd/conf.d/example.com.pl-le-ssl.conf
    ErrorLog /var/log/httpd/error.log
    CustomLog /var/log/httpd/access.log combined
 
- <code>   &lt;Directory /var/www/html/example.com.pl/public_html&gt;</code>
-     <code>Options Indexes FollowSymLinks Includes IncludesNOEXEC SymLinksIfOwnerMatch                     </code>
-     <code>AllowOverride All</code>
-     <code>Require all granted</code>
-     <code>DirectoryIndex index.php</code>
-     <code>RewriteEngine On</code>
-    <code>&lt;/Directory&gt;</code>
+    <Directory /var/www/html/example.com.pl/public_html>
+     Options Indexes FollowSymLinks Includes IncludesNOEXEC SymLinksIfOwnerMatch
+     AllowOverride All
+     Require all granted
+     DirectoryIndex index.php
+     RewriteEngine On
+    </Directory>
 
-<code>Include /etc/letsencrypt/options-ssl-apache.conf</code>
-<code>SSLUseStapling on</code>
-<code>SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1</code>
-<code>SSLCipherSuite HIGH:!aNULL:!MD5</code>
-<code>SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AE$</code>
-<code>SSLHonorCipherOrder on</code>
-<code>SSLCompression off</code>
-<code>SSLSessionTickets off</code>
+Include /etc/letsencrypt/options-ssl-apache.conf
+SSLUseStapling on
+SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+SSLCipherSuite HIGH:!aNULL:!MD5
+SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AE$
+SSLHonorCipherOrder on
+SSLCompression off
+SSLSessionTickets off
 
-    <code>&lt;FilesMatch "^\.ht"&gt;</code>
-       <code>Require all denied</code>
-    <code>&lt;/FilesMatch&gt;</code>
+    <FilesMatch "^\.ht">
+       Require all denied
+    </FilesMatch>
 
-    <code>&lt;files readme.html&gt;</code>
-       <code>order allow,deny</code>
-       <code>deny from all</code>
-    <code>&lt;/files&gt;</code>
+    <files readme.html>
+       order allow,deny
+       deny from all
+    </files>
 
 SSLCertificateFile /etc/letsencrypt/live/example.com.pl/cert.pem
 SSLCertificateKeyFile /etc/letsencrypt/live/example.com.pl/privkey.pem
 SSLCertificateChainFile /etc/letsencrypt/live/example.com.pl/chain.pem
 
- &lt;/VirtualHost&gt;
-&lt;/IfModule&gt;</pre>
+ </VirtualHost>
+</IfModule>
+```
 
-#### Configuration of MyISAM engine in MariaDB instead of InnoDB.
+### Configuration of MyISAM engine in MariaDB instead of InnoDB.
+
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS 7.6 section
 
 In CentOS we edit the my.cnf file.
 
+```
 sudo vi /etc/my.cnf
+```
 
 Now basically it is enough to replace this file with what is shown below:
 
+```
 # This group is read both both by the client and the server use it for options that affect everything
  [mysqld]
  MyISAM Settings
@@ -610,42 +790,53 @@ Now basically it is enough to replace this file with what is shown below:
  [client-server]
  [mysqld_safe]
  log-error=/var/log/mariadb/error.log
- # include all files from the config directory
+  # include all files from the config directory
  !includedir /etc/my.cnf.d
+```
 
-Save changes, restart httpd/apache2 and mariadb.
+Save changes, restart httpd and mariadb.
 
+```
 sudo systemctl restart mariadb httpd
+```
+  {{< /tab >}}
+  {{< tab >}}
 
-In the case of Ubuntu 16.04, the location of the file is slightly different.
+  ### Ubuntu
+  In the case of Ubuntu 16.04, the location of the file is slightly different.
 
+```
 sudo vi /etc/mysql/my.cnf
+```
 
 Just paste into this file what is in the [mysqld] section above. However, I recommend that you enable error logging to mariadb and set the error logging in my.cnf, as above it is visible.
 
+```
 sudo -i
 cd /var/log/
 mkdir mariadb
 cd mariadb
 touch error.log
+```
 
-#### PHP 7.3 installation &#8211; Ubuntu 16.04
+Save changes, restart apache2 and mariadb.
 
-sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
-sudo apt update
-sudo apt install php7.3 php7.3-cli php7.3-common
-sudo php -v
-sudo apt-cache search php7.3
-sudo apt install php-pear php7.3-curl php7.3-dev php7.3-gd php7.3-mbstring php7.3-zip php7.3-mysql php7.3-xml php7.3-fpm libapache2-mod-php7.3 php7.3-imagick php7.3-recode php7.3-tidy php7.3-xmlrpc php7.3-intl
-sudo update-alternatives --set php /usr/bin/php7.3
-sudo a2dismod php7.0
-sudo a2enmod php7.3
-sudo systemctl restart apache2
+```
+sudo systemctl restart mariadb apache2
+```
+  {{< /tab >}}
+{{< /tabs >}}
 
+### PHP 7.3 installation
+
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+  ### CentOS
 #### PHP 7.3 installation &#8211; CentOS 7.6
 
 The assumption is that there is a user added to the wheel group (sudoers) at the very beginning of the tutorial. After sudo -i the user password is given, not root.
 
+```
 sudo -i
 cd /tmp
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -657,93 +848,178 @@ yum-config-manager --enable remi-php73
 yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-mysql php-mysqlnd
 yum update
 php -v
+```
+  {{< /tab >}}
+  {{< tab >}}
+  ### Debian/Ubuntu
+  #### PHP 7.3 installation &#8211; Ubuntu 16.04
+```
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+sudo apt update
+sudo apt install php7.3 php7.3-cli php7.3-common
+sudo php -v
+sudo apt-cache search php7.3
+sudo apt install php-pear php7.3-curl php7.3-dev php7.3-gd php7.3-mbstring php7.3-zip php7.3-mysql php7.3-xml php7.3-fpm libapache2-mod-php7.3 php7.3-imagick php7.3-recode php7.3-tidy php7.3-xmlrpc php7.3-intl
+sudo update-alternatives --set php /usr/bin/php7.3
+sudo a2dismod php7.0
+sudo a2enmod php7.3
+sudo systemctl restart apache2
+```
+  {{< /tab >}}
+{{< /tabs >}}
 
 #### Setting the memory limit in PHP
 
+```
 sudo find / -iname "php.ini"
-For CentOS 7.6: sudo vi /etc/php.ini 
-For Ubuntu 16.04: sudo vi /etc/php/7.3/apache2/php.ini
+```
+
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+
+  ### CentOS 7.6 section
+
+  ```
+  sudo vi /etc/php.ini
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Ubuntu 16.04 section
+
+  ```
+  sudo vi /etc/php/7.3/apache2/php.ini
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+
 Set:
+
+```
 memory_limit = 10M
+```
 
-#### Apache optimization
+### Apache optimization
 
-sudo vi /etc/apache2/mods-enabled/mpm_prefork.conf # Ubuntu 
-sudo vi /etc/httpd/conf/httpd.conf
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+  ### CentOS
+  ```
+  sudo vi /etc/httpd/conf/httpd.conf
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ### Debian/Ubuntu
+  ```
+  sudo vi /etc/apache2/mods-enabled/mpm_prefork.conf
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Add this at the end of this file:
 
-<pre class="wp-block-preformatted">HostnameLookups Off
+```
+HostnameLookups Off
 MaxKeepAliveRequests 500
 KeepAliveTimeout 5
 KeepAlive Off
-&lt;IfModule prefork.c&gt;
-    StartServers        2    
+<IfModule prefork.c>
+    StartServers        2
     MinSpareServers     2
     MaxSpareServers     2
     MaxClients          50
     MaxRequestsPerChild 100
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
 Save the file and exit.
 
-#### Installation and configuration of iptables in CentOS 7.6
+### Installation and configuration of iptables
+
+{{< tabs CentOS Ubuntu >}}
+  {{< tab >}}
+  ### CentOS
+  #### Installation and configuration of iptables in CentOS 7.6
 
 Turn off the firewalld:
 
+```
 sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 sudo systemctl mask firewalld
+```
 
 Install iptables and turn it on.
 
+```
 sudo yum install iptables-services
 sudo systemctl start iptables
 sudo systemctl start iptables6
 sudo systemctl enable iptables
 sudo systemctl enable iptables6
+```
 
 Check the status of the iptables and the rules.
 
+```
 sudo systemctl status iptables
 sudo systemctl status iptables6
 sudo iptables -nvL
 sudo iptables6 -nvL
+```
 
 Add rules for iptables.
 
+```
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+```
 
 Save changes.
 
+```
 sudo service iptables save
 sudo service ip6tables save
 sudo systemctl restart iptables
 sudo systemctl restart ip6tables
+```
 
-#### Installation and configuration of iptables in Ubuntu 16.04
+  {{< /tab >}}
+  {{< tab >}}
+  ### Debian/Ubuntu
+  #### Installation and configuration of iptables in Ubuntu 16.04
 
+```
 sudo apt-get install iptables-persistent
+```
 
 During installation, it will ask you whether you want to keep the current rules and whether you want to use both IPv4 and IPv6. All these questions will be answered in the affirmative.
 
+```
 sudo systemctl start iptables
 sudo systemctl start iptables6
 sudo systemctl enable iptables
 sudo systemctl enable iptables6
+```
 
 Add ports.
 
+```
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+```
 
 Save changes and reload the service:
 
+```
 service netfilter-persistent save
 service netfilter-persistent reload
+```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Now go to https://example.com.pl and install WordPress.
 

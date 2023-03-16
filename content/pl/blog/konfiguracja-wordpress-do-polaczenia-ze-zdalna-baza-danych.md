@@ -46,13 +46,13 @@ Dotarłeś do tego miejsca? Świetnie! Zaczynajmy.
 
 Zainstaluj serwer bazy danych MariaDB 10.3 na CentOS poleceniem:
 
-``` bash
+``` 
 sudo nano /etc/yum.repos.d/MariaDB.repo
 ```
 
 Jeśli nie masz nano, to zainstaluj je poleceniem. Używanie jest łatwiejsze, niż vi.
 
-``` bash
+``` 
 sudo yum install nano
 ```
 
@@ -72,31 +72,31 @@ Wciśnij ctrl+o , aby zapisać. Wciśnij ctrl+x , aby wyjść z nano.
 
 Zainstaluj serwer MariaDB oraz klienta:
 
-``` bash
+``` 
 sudo yum install MariaDB-server MariaDB-client
 ```
 
 Wystartuj MariaDB serwer
 
-``` bash
+``` 
 sudo systemctl start mariadb
 ```
 
 Włącz na stałe serwer MariaDB
 
-``` bash
+``` 
 sudo systemctl enable mariadb
 ```
 
 Sprawdź status usługi MariaDB 
 
-``` bash
+``` 
 sudo systemctl enable mariadb
 ```
 
 Uruchom obsługę MariaDB poleceniem, ponieważ nie masz nadanego hasła użytkownika root bazy danych.
 
-``` bash
+``` 
 sudo mysql -u root
 ```
 
@@ -110,7 +110,7 @@ exit
 
 Zaloguj się do MariaDB wcześniej ustalonym hasłem:
 
-``` bash
+``` 
 mysql -u root -p
 ```
 
@@ -123,7 +123,7 @@ exit
 
 Wykonaj poniższe polecenie:
 
-``` bash
+``` 
 mysql_secure_installation
 ```
 
@@ -134,38 +134,38 @@ Wyświetli się poniższe okno, w którym na pytanie o zmianę hasła root odpow
 
 W CentOS firewall jest zainstalowany domyślnie. Sprawdź, czy jest włączony.
 
-``` bash
+``` 
 firewall-cmd --state
 ```
 
 Listowanie portów i serwisów firewall
 
-``` bash
+``` 
 firewall-cmd --list-all
 ```
 
 Dodaj usługę mysql
 
-```bash
+```
 firewall-cmd --permanent --add-service=mysql
 ```
 
 Zrestartuj firewall
 
-``` bash
+``` 
 firewall-cmd --reload
 ```
 
 Usunięcie usługi lub portu. Nie jest to potrzebne w tym momencie, ale może się przydać kiedyś. Z portu 3360 korzysta MariaDB oraz MySQL. Jeśi chcesz dodać ten port zamiast usługi, co czasem może być rozwiązaniem problemu, to zastąp remove słowem add. 
 
-``` bash
+``` 
 firewall-cmd --permanent --remove-port=3306/tcp
 firewall-cmd --permanent --remove-service=mysql
 ```
 
 Zaloguj się do MariaDB
 
-``` bash
+``` 
 sudo mysql -u root -p
 ```
 
@@ -211,13 +211,13 @@ exit
 
 Na serwerze www z Debian wykonaj następujące polecenie:
 
-``` bash
+``` 
 sudo apt update && sudo apt install mariadb-client php-mysql
 ```
 
 Sprawdź, czy możesz się zalogować przy pomocy poniższego polecenia:
 
-``` bash
+``` 
 mysql -u user -h 192.168.0.11 -p
 ```
 
@@ -237,46 +237,46 @@ exit
 
 Utwórz katalog o nazwie src w katalogu swojej witryny, aby przechowywać nowe kopie plików źródłowych WordPress. W tym przewodniku jako przykład wykorzystano katalog domowy /var/www/html/example.com/. Przejdź do tego nowego katalogu:
 
-``` bash
+``` 
 sudo mkdir -p /var/www/html/example.com/src/
 cd /var/www/html/example.com/src/
 ```
 
 Ustaw użytkownika serwera WWW, _www-data_, jako właściciela katalogu domowego swojej witryny. www-data jest grupą.
 
-``` bash
+``` 
 sudo chown -R www-data:www-data /var/www/html/example.com/
 ```
 
 Zainstaluj najnowszą wersję WordPress i wypakuj ją:
 
-``` bash
+``` 
 sudo wget http://wordpress.org/latest.tar.gz
 sudo -u www-data tar -xvf latest.tar.gz
 ```
 
 Zmień nazwę pliku latest.tar.gz na wordpress, a następnie ustaw datę przechowywania kopii zapasowej oryginalnych plików źródłowych. Będzie to przydatne, jeśli zainstalujesz nowe wersje w przyszłości i będzie potrzeba powrócić do poprzedniej wersji: 
 
-``` bash
+``` 
 sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
 ```
 
 Utwórz katalog public\_html, który będzie katalogiem głównym WordPress. Przenieś pliki WordPress do folderu public\_html:
 
-``` bash
+``` 
 sudo mkdir -p /var/www/html/example.com/public_html/
 sudo mv wordpress/* ../public_html/
 ```
 
 Nadaj folderowi public_html uprawnienia dla grupy www-data:
 
-``` bash
+``` 
 sudo chown -R www-data:www-data /var/www/html/example.com/public_html
 ```
 
 Przejdź do katalogu, do którego wyodrębniono WordPress, skopiuj przykładową konfigurację i ustaw ją tak, aby korzystała ze zdalnej bazy danych:
 
-``` bash
+``` 
 cd /var/www/html/example.com/public_html
 sudo cp wp-config-sample.php wp-config.php
 ```
@@ -327,13 +327,13 @@ define('NONCE_SALT',       'put your unique phrase here');
 
 Domyślnie CentOS ma utworzony katalog z certyfikatami i nie trzeba żadnego katalogu tworzyć. Wejść do niego można:
 
-``` bash
+``` 
 cd /etc/pki/tls/certs/
 ```
 
 Wygeneruj klucz urzędu certyfikacji i utwórz certyfikat oraz klucz prywatny. Odpowiadaj na odpowiednie monity. Klucz w tym przykładzie wygasa za 100 lat. Zmień wartość dni-dni 36500 w tym i następnych krokach, aby ustawić certyfikaty do wygaśnięcia w razie potrzeby:
 
-``` bash
+``` 
 sudo openssl genrsa 4096 > ca-key.pem
 sudo openssl req -new -x509 -nodes -days 36500 -key ca-key.pem -out cacert.pem
 ```
@@ -350,44 +350,44 @@ Utwórz certyfikat serwera i zapisz klucz RSA. Nazwa zwykła (common name) powin
 190.100.100.90 
 ```
 
-``` bash
+``` 
 sudo openssl req -newkey rsa:4096 -days 36500 -nodes -keyout server-key.pem -out server-req.pem
 sudo openssl rsa -in server-key.pem -out server-key.pem
 ```
 
 Podpisz certyfikat:
 
-``` bash
+``` 
 sudo openssl x509 -req -in server-req.pem -days 36500 -CA cacert.pem -CAkey ca-key.pem -set_serial 01 -out server-cert.pem
 ```
 
 Przenieś klucze i certyfikat na stałe miejsce:
 
-``` bash
+``` 
 mv *.* /etc/pki/tls/certs/ && cd /etc/pki/tls/certs/
 ```
 
 Wygeneruj klucz klienta. Odpowiadaj na odpowiednie monity i ustaw wspólną nazwę na FQDN lub adres IP swojego serwera WWW: 190.100.100.90 
 
-``` bash
+``` 
 sudo openssl req -newkey rsa:2048 -days 36500 -nodes -keyout client-key.pem -out client-req.pem
 ```
 
 Zapisz jako klucz RSA
 
-``` bash
+``` 
 sudo openssl rsa -in client-key.pem -out client-key.pem
 ```
 
 Podpisz certyfikat klienta
 
-``` bash
+``` 
 sudo openssl x509 -req -in client-req.pem -days 36500 -CA cacert.pem -CAkey ca-key.pem -set_serial 01 -out client-cert.pem
 ```
 
 Zweryfikuj certyfikaty
 
-``` bash
+``` 
 openssl verify -CAfile cacert.pem server-cert.pem client-cert.pem
 ```
 
@@ -395,7 +395,7 @@ Powinien przy obu wyświetlić OK.
 
 Wyedytuj plik server.cnf na CentOS
 
-``` bash
+``` 
 sudo nano /etc/my.cnf.d/server.cnf
 ```
 
@@ -418,13 +418,13 @@ Wciśnij ctrl+o, a następnie ctrl+x
 
 Przenieś plik server-key do folderu private
 
-``` bash
+``` 
 mv /etc/pki/tls/certs/server-key.pem /etc/pki/tls/private/
 ```
 
 Zaloguj się do MariaDB i wymagaj protokołu SSL dla wszystkich logowań do bazy danych. Zastąp 192.168.0.10 prywatnym adresem IP
 
-``` bash
+``` 
 sudo mysql -u root -p
 ```
 
@@ -436,7 +436,7 @@ exit
 
 Zrestartuj serwer MariaDB:
 
-``` bash
+``` 
 sudo systemctl restart mysql
 ```
 
@@ -448,7 +448,7 @@ scp cacert.pem client-cert.pem client-key.pem example_user@192.168.0.10:~/certs
 
 Na serwerze www utwórz katalog i przenieś certyfikaty i klucz do /etc/mysql/ssl:
 
-``` bash
+``` 
 sudo mkdir /etc/mysql/ssl && sudo mv ~/certs/*.* /etc/mysql/ssl
 ```
 
@@ -456,7 +456,7 @@ Jeśli katalog /etc/mysql/ssl już istnieje, to wykonaj samo polecenie po znaczk
 
 Skonfiguruj klienta MariaDB serwera WWW do korzystania z SSL. Znajdź sekcję [mysql] w pliku 50-mysql-clients.cnf i dodaj lokalizacje dla certyfikatów i klucza:
 
-``` bash
+``` 
 sudo nano /etc/mysql/mariadb.conf.d/50-mysql-clients.cnf
 ```
 
@@ -470,7 +470,7 @@ ssl-key=/etc/mysql/ssl/client-key.pem
 
 W przypadku, gdy masz dwa serwery oparte o Red Hat, CentOS, lub Fedora, wyedytuj plik mysql-clients.cnf
 
-``` bash
+``` 
 sudo nano /etc/my.cnf.d/mysql-clients.cnf
 ```
 

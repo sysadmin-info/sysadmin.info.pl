@@ -1,6 +1,6 @@
 baseURL = "https://sysadmin-info.netlify.app/"
 title = "Administration, security and hardening of Linux"
-theme = "zzo"
+theme = ["hugo-cloak-email", "zzo"]
 
 viewportSize = "normal"
 
