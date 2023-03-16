@@ -1,7 +1,7 @@
 ---
 title: "Welcome to the Sysadmin blog"
 date: 2019-09-21T19:16:03+00:00 
-description: "Syntax highlighting test"
+description: "Welcome to the Sysadmin blog"
 draft: false
 hideToc: false
 enableToc: true

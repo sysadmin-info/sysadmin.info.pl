@@ -38,7 +38,7 @@ Potwierdź maila i przejdź do konfiguracji domeny tam, gdzie masz panel od dome
 Zaloguj się do cloudflare. Dodaj domenę (add domain).  
 Ustaw rekord AAAA , jako name nazwę domeny i jako adres IPv6 adres w wersji IPv6. Znajdziesz ten adres wpisując w terminalu polecenie:
 
-``` bash
+```
 sudo ip a
 ```
 
@@ -58,7 +58,7 @@ Kliknij w Edge Certificates i ustaw:
 ![Cloudflare Edge Certificates](/images/2019/Cloudflare-Edge_Certificates.png "Cloudflare Edge Certificates")
 <figcaption>Cloudflare Edge Certificates</figcaption>
 
-Poniżej będą opcje, które powinny być włączone:<figure class="wp-block-image">
+Poniżej będą opcje, które powinny być włączone:
 
 ![Cloudflare Settings](/images/2019/Cloudflare-settings1.png)
 <figcaption>Cloudflare Settings</figcaption>
@@ -79,13 +79,13 @@ W razie pytań o inne ustawienia, napisz w komentarzu, co Ciebie nurtuje.
 Dostęp do wirtualnej maszyny jest możliwy tylko i wyłącznie po ssh.  
 W pierwszej kolejności należy dla bezpieczeństwa zmienić hasło root, ponieważ dostajemy tymczasowe hasło do logowania, adres serwera i możemy użyć do pierwszego logowania tylko i wyłącznie konta root, co samo w sobie bezpieczne nie jest.
 
-``` bash
+``` 
 passwd root
 ```
 
 Po ustawieniu hasła, musimy dodać sobie użytkownika, którego będziemy używać do logowania się po ssh i w zastępstwie za root, ze względów bezpieczeństwa, Aby jednak móc w razie potrzeby wykonać czasem polecenia na prawach roota, dodamy użytkownika do grupy sudoers.
 
-``` bash
+```
 useradd user
 passwd user
 usermod -aG wheel user
@@ -94,13 +94,13 @@ systemctl daemon reload
 
 W następnej kolejności należy zablokować użytkownika root dla połączeń ssh. W tym celu trzeba edytować plik sshd_config.
 
-``` bash
+```
 vi /etc/ssh/sshd_config
 ```
 
 Znajdujemy wpis i ustawiamy go w ten sposób: `PermitRootLogin no` Aby móc edytować , wciskamy insert, zmieniamy wartość z yes na no. W następnej kolejności wciskamy Esc, wpisujemy :wq i naciskamy Enter. W ten sposób zapisaliśmy zmiany. Teraz pozostaje jeszcze restart demona ssh.
 
-``` bash
+```
 systemctl restart sshd
 ```
 
@@ -111,7 +111,7 @@ Zakładam, że każdy wie, jak się łączyć do serwera przy pomocy terminala c
 
 Następnie po zalogowaniu się przy pomocy ssh i swojego konta użytkownika, w naszym przypadku będzie to user, wykonaj poniższe polecenia.
 
-``` bash
+``` 
 cd /home/user
 sudo mkdir .ssh
 sudo chmod 700 .ssh
@@ -121,13 +121,13 @@ sudo vi authorized_keys
 
 Kopiujemy z pola od ssh-rsa do końca wszystko, przechodzimy do zalogowanej sesji, wciskamy insert, wklejamy prawym myszki całość, następnie wciskamy Esc, wpisujemy :wq i naciskamy Enter. Potem ustawiamy plik tylko do odczytu poleceniem:
 
-``` bash
+```
 sudo chmod 600 authorized_keys
 ```
 
 W następnej kolejności edytjemy plik /etc/ssh/sshd_config, jak wyżej. Zmieniamy wartości na: RSAAuthentication yes oraz PubkeyAuthentication yes, a także PermitEmptyPasswords no oraz PasswordAuthentication no. Zapisujemy plik analogicznie, jak wyżej to opisałem. (zakładam, że używanie vi już zostało zrozumiane). Restartujemy ssh poleceniem:
 
-``` bash
+```
 sudo systemctl restart sshd
 ```
 
@@ -135,37 +135,37 @@ W połączeniu w putty lub w terminalu musimy wskazać plik klucza prywatnego do
 
 W przypadku, gdy korzystasz z terminala, generujesz na swoim komputerze klucz z poziomu terminala poleceniem:
 
-``` bash
+```
 ssh-keygen -t rsa -b 4096 -C "twojanazwa@mikr.us"
 ```
 
 Następnie kopiujesz klucz do serwera poleceniem:
 
-``` bash
+```
 ssh-copy-id root@nazwa.mikr.us -p 12345 
 ```
 
 Numer portu 12345 zmieniasz na ten, który dostałeś w mailu, a nazwę analogicznie, jak numer portu. Powyżej opisałem, jak zablokować dostęp do ssh dla użytkownika root. Teraz wystarczy tylko zrestartować demona ssh.
 
-``` bash
+```
 systemctl restart sshd
 ```
 
 Rozłączyć się poleceniem 
 
-``` bash
+```
 exit
 ```
 
- i połączyć ponownie za pomocą 
+i połączyć ponownie za pomocą 
 
-``` bash
+```
 ssh root@root@nazwa.mikr.us -p 12345 
 ```
 
 Zwiększenie poziomu zabezpieczeń można jeszcze uzyskać poprzez dodanie grupy do logowania ssh i dodanie do tej grupy użytkownika. 
 
-``` bash
+```
 sudo groupadd grupassh
 sudo gpasswd -a <user> grupassh
 groups user
@@ -173,7 +173,7 @@ groups user
 
 Wyświetli się: user : user sudo grupassh lub user : user wheel grupassh
 
-``` bash
+``` 
 sudo vi /etc/ssh/sshd_config
 ```
 
@@ -183,13 +183,13 @@ Dodaj:
 AllowGroups grupassh
 ```
 
-``` bash
+``` 
 sudo systemctl restart sshd
 ```
 
 Dla bezpieczeństwa użytkowników Ubuntu/Debian polecam zainstalować policies.
 
-``` bash
+``` 
 sudo apt-get install libpam-cracklib
 ```
 
@@ -197,30 +197,60 @@ Określają one długość hasła, ile razu użytkownik może się zalogować, i
 
 ### Instalacja serwera web/www z użyciem Apache
 
-W pierwszej kolejności wyczyść managera pobierania. W CentOS używany jest yum, natomiast w Debian/Ubuntu apt-getm w nowszcy distro apt.
+W pierwszej kolejności wyczyść managera pobierania. W CentOS używany jest yum, natomiast w Debian/Ubuntu apt-get a w nowszych distro apt.
 
-``` bash
-sudo yum clean all
-sudo apt-get autoremove && sudo apt-get clean
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo yum clean all
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo apt-get autoremove && sudo apt-get clean
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 Zainstaluj wszystkie aktualizacje:
 
-``` bash
-sudo yum -y update
-sudo apt-get update && sudo apt-get upgrade
-```
+{{< tabs CentOS Debian >}}
+  {{< tab >}}
+
+  ### CentOS section
+
+  ```
+  sudo yum -y update
+  ```
+
+  {{< /tab >}}
+  {{< tab >}}
+
+  ### Debian section
+
+  ```
+  sudo apt-get update && sudo apt-get upgrade
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 W następnej kolejności zainstaluj Apache (httpd w CentOS, apache2 w Debian/Ubuntu)
 
-``` bash
+``` 
 sudo yum -y install httpd
 sudo apt-get install apache2
 ```
 
 Włącz Apache2 przy starcie systemui uruchom usługę.
 
-``` bash
+``` 
 sudo systemctl enable httpd
 sudo systemctl enable apache2
 sudo systemctl start httpd
@@ -229,7 +259,7 @@ sudo systemctl start apache2
 
 Status usługi możesz sprawdzić:
 
-``` bash
+``` 
 sudo systemctl status httpd
 sudo systemctl status apache2
 ```
@@ -238,13 +268,13 @@ sudo systemctl status apache2
 
 W przypadku CentOS tworzymy plik wirtualnego hosta dla http (port 80) za pomocą poniższego polecenia:
 
-``` bash
+``` 
 sudo vi /etc/httpd/conf.d/strona.com.pl.conf
 ```
 
 Natomiast w przypadku Debian/Ubuntu
 
-``` bash
+``` 
 sudo vi /etc/apache2/sites-available/strona.com.pl.conf
 ```
 
@@ -274,7 +304,7 @@ sudo vi /etc/apache2/sites-available/strona.com.pl.conf
 
 Dla Debian/Apache musimy jeszcze włączyć stronę
 
-``` bash
+``` 
 sudo a2ensite strona.com.pl.conf
 ```
 
@@ -284,34 +314,34 @@ Co spowoduje stworzenie dowiązania symbolicznego w katalogu /etc/apache2/sites-
 
 Teraz należy stworzyć katalog dla strony w katalogu /var/www/html
 
-``` bash
+``` 
 sudo -i
 ```
 
 (wpisz hasło użytkownika, którego utworzyłeś na samym początku)
 
-``` bash
+``` 
 cd /var/www/html
 sudo mkdir strona.com.pl
 ```
 
 Utwórz katalog o nazwie src w katalogu swojej witryny, aby przechowywać nowe kopie plików źródłowych WordPress. W tym przewodniku jako przykład wykorzystano katalog domowy /var/www/html/strona.com.pl/. Przejdź do tego nowego katalogu:
 
-``` bash
+``` 
 sudo mkdir -p /var/www/html/strona.com.pl/src/
 cd /var/www/html/strona.com.pl/src/
 ```
 
 Ustaw użytkownika serwera WWW, <em><strong>www-data</strong></em>, jako właściciela katalogu domowego swojej witryny. <em><strong>www-data</strong></em> jest grupą. W przypadku CentOS będzie to grupa <em><strong>apache</strong></em>.
 
-``` bash
+``` 
 sudo chown -R apache:apache /var/www/html/strona.com.pl/
 sudo chown -R www-data:www-data /var/www/html/strona.com.pl/
 ```
 
 Zainstaluj najnowszą wersję WordPress i wypakuj ją używając odpowiedniej nazwy w zależności od używanego systemu: 
 
-``` bash
+``` 
 sudo wget http://wordpress.org/latest.tar.gz
 sudo -u www-data tar -xvf latest.tar.gz
 sudo -u apache tar -xvf latest.tar.gz
@@ -319,34 +349,34 @@ sudo -u apache tar -xvf latest.tar.gz
 
 Zmień nazwę pliku latest.tar.gz na wordpress, a następnie ustaw datę przechowywania kopii zapasowej oryginalnych plików źródłowych. Będzie to przydatne, jeśli zainstalujesz nowe wersje w przyszłości i będzie potrzeba powrócić do poprzedniej wersji: 
 
-``` bash
+``` 
 sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
 ```
 
 Utwórz katalog public\_html, który będzie katalogiem głównym WordPress. Przenieś pliki WordPress do folderu public\_html:
 
-``` bash
+``` 
 sudo mkdir -p /var/www/html/strona.com.pl/public_html/
 sudo mv wordpress/* ../public_html/
 ```
 
 Nadaj folderowi public_html uprawnienia dla grupy www-data lub apache:
 
-``` bash
+``` 
 sudo chown -R www-data:www-data /var/www/html/strona.com.pl/public_html
 sudo chown -R apache:apache /var/www/html/strona.com.pl/public_html
 ```
 
 Przejdź do katalogu, do którego wyodrębniono WordPress, skopiuj przykładową konfigurację i ustaw ją tak, aby korzystała ze zdalnej bazy danych:
 
-``` bash
+``` 
 cd /var/www/html/strona.com.pl/public_html
 sudo cp wp-config-sample.php wp-config.php
 ```
 
 Zmień zmienne logowania tak, aby pasowały do bazy danych i użytkownika. Edytuj plik: 
 
-``` bash
+``` 
 sudo vi /var/www/html/strona.com.pl/public_html/wp-config.php 
 ```
 
@@ -390,7 +420,7 @@ define('NONCE_SALT',       'put your unique phrase here');
 
 ### Instalacja i konfiguracja Maria DB 10.4 w CentOS 7.6.
 
-``` bash
+``` 
 sudo tee /etc/yum.repos.d/MariaDB.repo<<EOF 
 [mariadb]
 name = MariaDB
@@ -400,7 +430,7 @@ gpgcheck=1
 EOF
 ```
 
-``` bash
+``` 
 sudo yum makecache fast
 sudo yum -y install MariaDB-server MariaDB-client
 sudo systemctl enable mariadb
@@ -408,7 +438,7 @@ sudo systemctl enable mariadb
 
 Podczas konfiguracji potwierdź y puste hasło root w MariaDB, a w następnym kroku ustaw hasło roota (tego od MariaDB). To hasło powinno być inne, niż hasło roota, które dostałeś w mailu po założeniu serwera na mikr.us.
 
-``` bash
+``` 
 mysql_secure_installation
 ```
 
@@ -458,7 +488,7 @@ NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
  Thanks for using MariaDB!
 ```
 
-``` bash
+``` 
 sudo systemctl start mariadb
 mysql -u root -p
 ```
@@ -473,7 +503,7 @@ FLUSH PRIVILEGES;
 exit
 ```
 
-``` bash
+``` 
 mysql -u user -p 
 ```
 
@@ -491,7 +521,7 @@ exit
 
 Zrestartuj serwer baz danych oraz web poleceniami:
 
-``` bash
+``` 
 sudo systemctl restart mariadb && sudo systemctl restart httpd
 ```
 
@@ -499,7 +529,7 @@ sudo systemctl restart mariadb && sudo systemctl restart httpd
 
 Aby zainstalować MariaDB 10.3 na Ubuntu 16.04, musisz dodać repozytorium MariaDB do systemu. Uruchom następujące polecenia, aby zaimportować klucz PGP repozytorium MariaDB i dodać repozytorium. 
 
-``` bash
+``` 
 sudo apt -y install software-properties-common dirmngr
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/10.3/ubuntu xenial main'
@@ -507,14 +537,14 @@ sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/1
 
 Zaktualizuj listę pakietów systemowych i zainstaluj MariaDB.
 
-``` bash
+``` 
 sudo apt update
 sudo apt -y install mariadb-server mariadb-client
 ```
 
 Zostaniesz poproszony o podanie hasła roota MariaDB. Musisz podać je dwukrotnie. Zatwierdź zmianę hasła. Możesz potwierdzić zainstalowaną wersję MariaDB, logując się jako użytkownik root. 
 
-``` bash
+``` 
 mysql -u root -p
 ```
 
@@ -522,13 +552,13 @@ Po zalogowaniu się wpisz status; (pamiętaj o średnikach w składni SQL). Nast
 
 Zalecam przeprowadzenie dokładnie tej samej procedury, co w przypadku instalacji na CentOS. Powyżej widać, jakie kroki po kolei muszą zostać podjęte.
 
-``` bash
+``` 
 mysql_secure_installation
 ```
 
 Następnie należy wykonać poniższe polecenia:
 
-``` bash
+``` 
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo systemctl status mariadb
@@ -545,7 +575,7 @@ Z rozwijanej listy Software wybieramy Apache, system operacyjny, to albo Ubuntu 
 
 Dla Ubuntu 16:04
 
-``` bash
+``` 
 sudo apt-get update
 sudo apt-get install software-properties-common
 sudo add-apt-repository universe
@@ -561,7 +591,7 @@ Nie włączaj przekierowania z http na https, ponieważ to zrobisz po stronie Cl
 
 Certbot zainstaluje automatycznie certyfikat, utworzy plik wirtualnego hosta. Teraz tylko trzeba wejść do katalogu:
 
-``` bash
+``` 
 sudo -i
 cd /etc/apache2/sites-available
 ls -al
@@ -570,13 +600,13 @@ a2ensite strona.com.pl-le-ssl.conf
 
 Polecam zmodyfikować plik wirtualnego hosta dla https, aby ostatecznie wyglądał tak:
 
-``` bash
+``` 
 sudo vi /etc/apache2/sites-available/strona.com.pl-le-ssl.conf
 ```
 
 lub
 
-``` bash
+``` 
 sudo vi /etc/httpd/conf.d/strona.com.pl-le-ssl.conf
 ```
 
@@ -636,7 +666,7 @@ SSLCertificateChainFile /etc/letsencrypt/live/strona.com.pl/chain.pem
 
 W CentOS edytujemy plik my.cnf
 
-``` bash
+``` 
 sudo vi /etc/my.cnf
 ```
 
@@ -684,7 +714,7 @@ Teraz w zasadzie wystarczy zastąpić ten plik tym, co poniżej:
 
 Zapisać zmiany, zrestartować httpd/apache2 oraz mariadb
 
-``` bash
+``` 
 sudo systemctl restart mariadb httpd
 ```
 
@@ -695,13 +725,13 @@ sudo systemctl restart mariadb httpd
 
 W przypadku Ubuntu 16.04 lokalizacja pliku jest nieco inna.
 
-``` bash
+``` 
 sudo vi /etc/mysql/my.cnf
 ```
 
 Wystarczy wkleić w ten plik to, co jest w sekcji [mysqld] powyżej. Aczkolwiek zalecam włączenie logowania błędów do mariadb i ustawić w my.cnf logowanie błędów, jak poniżej jest to widoczne.
 
-``` bash
+``` 
 sudo -i
 cd /var/log/
 mkdir mariadb
@@ -721,7 +751,7 @@ touch error.log
 
 Założenie jest takie, że istnieje użytkownik dodany do grupy wheel (sudoers) na samym początku tutoriala. Po sudo -i podaje się hasło użytkownika, nie roota.
 
-``` bash
+``` 
 sudo -i
 cd /tmp
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -740,7 +770,7 @@ php -v
 
   ### Ubuntu 16.04 section
 
-  ```bash
+  ```
   sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt install php7.3 php7.3-cli php7.3-common
@@ -757,7 +787,7 @@ sudo systemctl restart apache2
 
 #### Ustawienie limitu pamięci w PHP
 
-``` bash
+``` 
 sudo find / -iname "php.ini"
 ```
 
@@ -766,7 +796,7 @@ sudo find / -iname "php.ini"
 
   ### CentOS 7.6 section
 
-  ```bash
+  ```
   sudo vi /etc/php.ini
   ```
 
@@ -775,7 +805,7 @@ sudo find / -iname "php.ini"
 
   ### Ubuntu 16.04 section
   
-  ```bash
+  ```
   sudo vi /etc/php/7.3/apache2/php.ini
   ```
   {{< /tab >}}
@@ -794,7 +824,7 @@ memory_limit = 10M
 
   ### CentOS 7.6 section
 
-  ```bash
+  ```
   sudo vi /etc/httpd/conf/httpd.conf
   ```
 
@@ -803,7 +833,7 @@ memory_limit = 10M
 
   ### Ubuntu 16.04 section
 
-  ```bash
+  ```
   sudo vi /etc/apache2/mods-enabled/mpm_prefork.conf
   ```
   {{< /tab >}}
@@ -834,7 +864,7 @@ KeepAlive Off
 
 Wyłącz firewalld:
 
-```bash
+```
 sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 sudo systemctl mask firewalld
@@ -842,7 +872,7 @@ sudo systemctl mask firewalld
 
 Zainstaluj iptables i włącz.
 
-```bash
+```
 sudo yum install iptables-services
 sudo systemctl start iptables
 sudo systemctl start iptables6
@@ -852,7 +882,7 @@ sudo systemctl enable iptables6
 
 Sprawdź status iptables oraz reguły
 
-```bash
+```
 sudo systemctl status iptables
 sudo systemctl status iptables6
 sudo iptables -nvL
@@ -861,7 +891,7 @@ sudo iptables6 -nvL
 
 Dodaj reguły dla iptables
 
-```bash
+```
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
@@ -869,7 +899,7 @@ sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
 
 Zapisz zmiany
 
-```bash
+```
 sudo service iptables save
 sudo service ip6tables save
 sudo systemctl restart iptables
@@ -883,21 +913,21 @@ sudo systemctl restart ip6tables
 
 ### Instalacja i konfiguracja iptables w Ubuntu 16.04
 
-```bash
+```
 sudo apt-get install iptables-persistent
 ```
 
 Podczas instalacji zapyta czy zachować bieżące reguły oraz czy chcesz używać zarówno IPv4, jaki IPv6. Na wszystkie te pytania odpowiedz twierdząco.
 
-```bash
+```
 sudo systemctl start iptables
 sudo systemctl start iptables6
 sudo systemctl enable iptables
 sudo systemctl enable iptables6
-  ```
+```
 Dodaj porty:
 
-```bash
+```
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
@@ -905,7 +935,7 @@ sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
 
 Zapisz zmiany i przeładuj usługę:
 
-```bash
+```
 service netfilter-persistent save
 service netfilter-persistent reload
 ```
