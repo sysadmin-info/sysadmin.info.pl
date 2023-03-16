@@ -24,6 +24,39 @@ The sysadmin.info.pl portal does not process, share or use for marketing purpose
 
 The sysadmin.info.pl portal is not responsible for the content and opinions expressed by users in comments or descriptions. They are exclusively the property of the users from whom they originate.
 
+#### Hugo and the General Data Protection Regulation (GDPR)
+
+The sysadmin.info.pl website is generated in Hugo static generator.
+
+More information here: https://gohugo.io/about/hugo-and-gdpr/
+
+Below are all privacy settings and their default value. These settings have been put in sysadmin.info.pl site config.toml
+
+```
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = true
+    simple = true
+  [privacy.twitter]
+    disable = true
+    enableDNT = true
+    simple = true
+  [privacy.vimeo]
+    disable = true
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    disable = true
+    privacyEnhanced = true
+```
+
 #### E-mail addresses
 
 E-mail addresses provided by Users when adding comments, and registering on the forum or portal, will be used only to remind the User&#8217;s password, and to send the Newsletter &#8211; if the User expressed such a desire. Email addresses of Users are not and will not be published, processed, sold, made available for a fee &#8211; therefore, you do not have to worry about adding to any mailing lists, receiving sponsored advertising emails, or any other unwanted spam.

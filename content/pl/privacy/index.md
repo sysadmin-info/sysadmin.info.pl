@@ -24,6 +24,39 @@ Portal sysadmin.info.pl nie przetwarza, nie udostępnia ani nie wykorzystuje w&n
 
 Portal sysadmin.info.pl nie ponosi odpowiedzialności za&nbsp;treści i&nbsp;opinie wyrażane przez użytkowników w&nbsp;komentarzach lub opisach. Są one wyłącznie własnością użytkowników, od&nbsp;których pochodzą.
 
+#### Hugo a ogólne rozporządzenie o ochronie danych osobowych (GDPR)
+
+Strona sysadmin.info.pl jest generowana w generatorze statycznym Hugo.
+
+Więcej informacji tutaj: https://gohugo.io/about/hugo-and-gdpr/
+
+Poniżej znajdują się wszystkie ustawienia prywatności oraz ich domyślna wartość. Ustawienia te zostały umieszczone w pliku config.toml strony sysadmin.info.pl
+
+```
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = true
+    simple = true
+  [privacy.twitter]
+    disable = true
+    enableDNT = true
+    simple = true
+  [privacy.vimeo]
+    disable = true
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    disable = true
+    privacyEnhanced = true
+```
+
 #### Adresy E-mail
 
 Adresy E-mail podawane przez Użytkowników przy dodawaniu komentarzy, oraz&nbsp;rejestracji na&nbsp;forum lub portalu, będzie używany jedynie w&nbsp;celu przypomnienia hasła Użytkownika, oraz&nbsp;wysłania Newsletter’a – jeśli Użytkownik wyraził taką chęć. Adresy E-mail Użytkowników nie są i&nbsp;nie będą nigdzie publikowane, przetwarzane, sprzedawane, udostępniane za&nbsp;opłatą – w&nbsp;związku z&nbsp;czym nie musicie się obawiać dodawania do&nbsp;żadnych list mailingowych, otrzymywania sponsorowanych maili reklamowych, i&nbsp;wszelkiego innego niechcianego spamu.
