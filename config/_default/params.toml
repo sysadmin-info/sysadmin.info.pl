@@ -21,7 +21,7 @@ minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 
 # appbar
 enableAppbarSearchIcon = false
-enableAppbarLangIcon = false
+enableAppbarLangIcon = true
 
 # header
 homeHeaderType = "img" # text, img, slide, typewriter
