@@ -10,12 +10,12 @@ author: sysadmin
 authorEmoji: 🐧 
 pinned: true
 tags:
-- general
+- sysadmin
 series:
 -
 categories:
 - general
-image: images/feature2/color-palette.png
+image: images/2019-thumbs/sysadmin-logo.png
 ---
 This blog will be devoted to issues related to the administration of Linux servers. I focused on popular distributions such as Debian 9.8.0, CentOS 7.6, Fedora 29. Of course I won&#8217;t stop there, because I have a RHEL (Red Hat Enterprise Linux) 7.7 instance on Virtual Box. 
 

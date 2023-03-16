@@ -15,7 +15,7 @@ series:
 -
 categories:
 - mikr.us
-image: images/feature2/color-palette.png
+image: images/2019-thumbs/rclone.png
 ---
 Hello,
 

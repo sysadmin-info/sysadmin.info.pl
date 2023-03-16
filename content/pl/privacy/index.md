@@ -15,7 +15,7 @@ series:
 -
 categories:
 - general
-image: images/2019/privacy.png
+image: images/2019-thumbs/privacy.png
 ---
 
 #### Polityka prywatności

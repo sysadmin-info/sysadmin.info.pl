@@ -15,7 +15,7 @@ series:
 -
 categories:
 - mikr.us
-image: images/feature2/color-palette.png
+image: images/2019-thumbs/rclone.png
 ---
 Cześć,  
 Do wykonania kopii zapasowej użyję narzędzia rclone ze strony <a rel="noreferrer noopener" aria-label="https://rclone.org (otwiera się na nowej zakładce)" href="https://rclone.org" target="_blank">https://rclone.org</a> W tym konkretnym przypadku użyję <a rel="noreferrer noopener" aria-label="https://mega.nz (otwiera się na nowej zakładce)" href="https://mega.nz" target="_blank">https://mega.nz</a> oraz odpowiedniej konfiguracji, aby móc skopiować pliki z serwera do mega.nz. Jeśli nie masz tam konta, możesz je założyć. Na dzień dobry każdy dostaje 50 GB przestrzeni za darmo. 

@@ -10,12 +10,12 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: true
 tags:
-- hugo
+- sysadmin
 series:
 -
 categories:
 - general
-image: images/feature2/color-palette.png
+image: images/2019-thumbs/sysadmin-logo.png
 ---
 Cześć, 
 
