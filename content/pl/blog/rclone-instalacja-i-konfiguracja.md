@@ -8,7 +8,7 @@ enableToc: true
 enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
-pinned: true
+pinned: false
 tags:
 - rclone
 series:
