@@ -8,8 +8,8 @@ meta_image = ""
 themecolor = ""
 
 themeOptions = ["light", "dark"]
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHome = ["privacy", "contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeSidebar = ["privacy", "about", "archive", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
@@ -20,7 +20,7 @@ enablePinnedPosts = true
 minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 
 # appbar
-enableAppbarSearchIcon = false
+enableAppbarSearchIcon = true
 enableAppbarLangIcon = true
 
 # header
