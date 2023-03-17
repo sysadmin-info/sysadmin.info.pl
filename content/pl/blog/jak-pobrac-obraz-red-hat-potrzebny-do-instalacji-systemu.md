@@ -12,7 +12,7 @@ pinned: false
 tags:
 - RHCSA
 series:
--
+- RHCSA
 categories:
 - RHCSA
 image: images/2019-thumbs/red-hat-download.png

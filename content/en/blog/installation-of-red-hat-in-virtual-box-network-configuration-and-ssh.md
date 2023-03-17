@@ -12,7 +12,7 @@ pinned: false
 tags:
 - RHCSA
 series:
--
+- RHCSA
 categories:
 - RHCSA
 image: images/2019-thumbs/redhat-installation.png

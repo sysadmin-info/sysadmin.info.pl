@@ -10,9 +10,9 @@ author: sysadmin
 authorEmoji: 🐧 
 pinned: false
 tags:
-- rhcsa
+- RHCSA
 series:
--
+- RHCSA
 categories:
 - RHCSA
 image: images/2019-thumbs/red-hat-download.png
