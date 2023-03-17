@@ -53,8 +53,8 @@ Poniżej znajdują się wszystkie ustawienia prywatności oraz ich domyślna war
     enableDNT = true
     simple = true
   [privacy.youtube]
-    disable = true
-    privacyEnhanced = true
+    disable = false
+    privacyEnhanced = false
 ```
 
 #### Adresy E-mail
