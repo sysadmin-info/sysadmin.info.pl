@@ -17,7 +17,7 @@ header:
     paddingX: 50
     align: center
     fontSize: 44
-    fontColor: yellow
+    fontColor: white
     
   - type: text
     height: 200
@@ -28,10 +28,10 @@ header:
       - SYSADMIN
     subtitle:
       - Administration, security and hardening of Linux
-    titleColor: 
+    titleColor: white 
     titleShadow: true
     titleFontSize: 44
-    subtitleColor: 
+    subtitleColor: white 
     subtitleCursive: true
     subtitleFontSize: 18
     spaceBetweenTitleSubtitle: 16
@@ -44,15 +44,15 @@ header:
     height: 235
     paddingX: 50
     paddingY: 0
-    align: center
+    align: right
     title:
-      -
+      - SYSADMIN
     subtitle:
-      -
-    titleColor:
+      - Administration, security and hardening of Linux
+    titleColor: white 
     titleShadow: false
     titleFontSize: 44
-    subtitleColor:
+    subtitleColor: white
     subtitleCursive: false
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20
