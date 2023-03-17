@@ -58,7 +58,7 @@ wp-fail2ban-addon-gravity-forms"]
 referer: https://example.com/wp-admin/admin.php?page=wp-fail2ban-addons
 ```
 
-No i co dalej? Dość prosto. Rzuć okiem na pogrubione elementy. Edytujesz plik (jeśli go nie ma, to stwórz poleceniem touch /etc/httpd/conf.d/whitelist.conf).
+No i co dalej? Dość prosto. Spójrz na numer id wewnątrz nawiasów kwadratowych. Edytujesz plik (jeśli go nie ma, to stwórz poleceniem touch /etc/httpd/conf.d/whitelist.conf).
 
 ```
 sudo vi /etc/httpd/conf.d/whitelist.conf

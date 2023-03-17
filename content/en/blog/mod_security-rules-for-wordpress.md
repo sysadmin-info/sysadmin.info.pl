@@ -17,7 +17,7 @@ categories:
 - IT Security
 image: images/2019-thumbs/mod_security.png
 ---
-For a tutorial about mod\_security installation for apache, and maybe one day for nginx will come the time. Today I will explain how to add rules in whitelist.conf file so that mod\_security doesn&#8217;t block WordPress functionality.
+There will be time for a tutorial on how to install mod_security for apache, and perhaps someday for nginx. Today I will explain how to add rules for yourself in the whitelist.conf file so that mod_security does not block WordPress functionality.
 
 <!--more-->
 
@@ -58,7 +58,7 @@ wp-fail2ban-addon-gravity-forms"]
 referer: https://example.com/wp-admin/admin.php?page=wp-fail2ban-addons
 ```
 
-So what happens next? Quite simply. Take a look at the bold elements. You are editing a file (if there is no file, create it with touch /etc/httpd/conf.d/whitelist.conf).
+So what happens next? Quite simply. Take a look at the id number inside square brackets. You are editing a file (if there is no file, create it with touch /etc/httpd/conf.d/whitelist.conf).
 
 ```
 sudo vi /etc/httpd/conf.d/whitelist.conf
