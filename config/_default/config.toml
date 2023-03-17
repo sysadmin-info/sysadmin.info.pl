@@ -74,5 +74,5 @@ googleAnalytics = ""
     enableDNT = true
     simple = true
   [privacy.youtube]
-    disable = true
-    privacyEnhanced = true
+    disable = false
+    privacyEnhanced = false
