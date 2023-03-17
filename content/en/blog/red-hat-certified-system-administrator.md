@@ -1,7 +1,7 @@
 ---
-title: "Red Hat Certified System Administrator"
+title: "RHCSA - Red Hat Certified System Administrator"
 date: 2019-09-30T21:47:58+00:00 
-description: "Red Hat Certified System Administrator"
+description: "RHCSA - Red Hat Certified System Administrator"
 draft: false
 hideToc: false
 enableToc: true
