@@ -25,9 +25,9 @@ header:
     paddingY: 0
     align: center
     title:
-      - HUGO
+      - SYSADMIN
     subtitle:
-      - The world’s fastest framework for building websites
+      - Administracja, bezpieczeństwo oraz hardening Linuxa
     titleColor: 
     titleShadow: true
     titleFontSize: 44
@@ -44,15 +44,15 @@ header:
     height: 235
     paddingX: 50
     paddingY: 0
-    align: center
+    align: right
     title:
-      -
+      - SYSADMIN
     subtitle:
-      -
-    titleColor:
+      - Administracja, bezpieczeństwo oraz hardening Linuxa
+    titleColor: white
     titleShadow: false
     titleFontSize: 44
-    subtitleColor:
+    subtitleColor: white
     subtitleCursive: false
     subtitleFontSize: 16
     spaceBetweenTitleSubtitle: 20

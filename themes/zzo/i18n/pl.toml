@@ -2,10 +2,10 @@
 other = "Szukaj"
 
 [summary-dateformat]
-other = "Sty 2, 2006"
+other = "2006-01-02"
 
 [reading-time]
-other = "min read"
+other = "min czytania"
 
 [tags]
 other = "Tagi"
@@ -17,19 +17,19 @@ other = "Kategorie"
 other = "Serie"
 
 [archive-dateformat]
-other = "Sty 2"
+other = "2006-01-02"
 
 [talks-dateformat]
-other = "Sty 2"
+other = "2006-01-02"
 
 [single-dateformat]
-other = "Sty 2, 2006"
+other = "2006-01-02"
 
 [pub-dateformat]
 other = "2006-01-02"
 
 [resume-dateformat]
-other = "Sty, 2006"
+other = "2006-01-02"
 
 [single-related]
 other = "Zobacz także"

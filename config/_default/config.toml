@@ -1,12 +1,12 @@
 baseURL = "https://sysadmin-info.netlify.app/"
-title = "Administration, security and hardening of Linux"
+title = "SYSADMIN"
 theme = ["zzo"]
 
 viewportSize = "normal"
 
-defaultContentLanguage = "en"
+defaultContentLanguage = "pl"
 defaultContentLanguageInSubdir = true
-hasCJKLanguage = true
+hasCJKLanguage = false
 
 summaryLength = 70
 buildFuture = true
@@ -14,7 +14,7 @@ buildFuture = true
 copyright = "&copy;{year}, [sysadmin](https://sysadmin.info.pl/) - All rights reserved"
 timeout = 10000
 enableEmoji = true
-paginate = 13
+paginate = 6
 rssLimit = 100
 
 enableGitInfo = false

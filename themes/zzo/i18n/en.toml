@@ -2,7 +2,7 @@
 other = "Search"
 
 [summary-dateformat]
-other = "Jan 2, 2006"
+other = "2006-01-02"
 
 [reading-time]
 other = "min read"
@@ -17,19 +17,19 @@ other = "Categories"
 other = "Series"
 
 [archive-dateformat]
-other = "Jan 2"
+other = "2006-01-02"
 
 [talks-dateformat]
-other = "Jan 2"
+other = "2006-01-02"
 
 [single-dateformat]
-other = "Jan 2, 2006"
+other = "2006-01-02"
 
 [pub-dateformat]
 other = "2006-01-02"
 
 [resume-dateformat]
-other = "Jan, 2006"
+other = "2006-01-02"
 
 [single-related]
 other = "See Also"
