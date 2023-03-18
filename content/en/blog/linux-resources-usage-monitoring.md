@@ -70,10 +70,12 @@ With no options,the vmstat command returns a single report that contains average
 
 You can use the vmstat command with various options. You can also specify a delay in seconds that must occur before a new set of statistics is reported, and a count value to specify the number of reports that the command must generate.
 
+Syntax: 
 ```
-Syntax: vmstat &#91;options] delay count
+vmstat &#91;options] delay count
 ```
 
+Example:
 ```
 vmstat -n 2 5
 ```
