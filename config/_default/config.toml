@@ -14,7 +14,7 @@ buildFuture = true
 copyright = "&copy;{year}, [sysadmin](https://sysadmin.info.pl/) - All rights reserved"
 timeout = 10000
 enableEmoji = true
-paginate = 8
+paginate = 10
 rssLimit = 100
 
 enableGitInfo = false
