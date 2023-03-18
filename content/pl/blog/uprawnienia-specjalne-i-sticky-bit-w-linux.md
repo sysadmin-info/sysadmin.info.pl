@@ -17,5 +17,5 @@ categories:
 - RHCSA
 image: images/2019-thumbs/sysadmin-YT-thumb.png
 ---
-{{< youtube M3kCeS6oGWE >}}
+{{< youtube CtPGf4SshQo >}}
 <figcaption>Uprawnienia specjalne i sticky bit w Linux.</figcaption>

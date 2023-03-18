@@ -779,7 +779,7 @@ If you are having a different port, change your Telegraf configuration to forwar
 
 **Possible solutions**:
 
-If you are using OWASP I recommend to read this article: <https://sysadmin.info.pl/en/mod_security-rules-for-wordpress/>. Errors will be visible in /var/log/httpd/error_log and /var/log/httpd/modsec_audit. Eventually you can set in virtual host config file the value: SecRuleEngine Off instead On to disable mod_security for grafana virtual host.
+If you are using OWASP I recommend to read this article: <https://sysadmin.info.pl/en/blog/mod_security-rules-for-wordpress/>. Errors will be visible in /var/log/httpd/error_log and /var/log/httpd/modsec_audit. Eventually you can set in virtual host config file the value: SecRuleEngine Off instead On to disable mod_security for grafana virtual host.
 
 You need to also modify the mod_evasive config file located in /etc/httpd/conf.d directory and set these values mentioned below to let grafana works properly with mod_evasive enabled.
 
