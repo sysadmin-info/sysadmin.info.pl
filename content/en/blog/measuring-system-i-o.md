@@ -12,6 +12,8 @@ pinned: false
 tags:
 - Linux resources monitoring
 - Measuring system i/o
+- i/o
+- I/O
 - netstat
 - iostat
 - lsof
