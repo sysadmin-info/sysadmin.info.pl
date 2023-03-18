@@ -2,6 +2,8 @@ baseURL = "https://sysadmin.info.pl"
 title = "SYSADMIN"
 theme = ["hugo-embed-pdf-shortcode", "zzo"]
 
+enableInlineShortcodes = true
+
 viewportSize = "normal"
 
 defaultContentLanguage = "en"
