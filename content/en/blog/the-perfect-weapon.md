@@ -11,7 +11,7 @@ authorEmoji: 🐧
 pinned: false
 tags:
 - perfect weapon
-- national swecurity
+- national security
 - cyber conflicts
 - cyber attacks
 series:

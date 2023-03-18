@@ -4,7 +4,7 @@ theme = ["hugo-embed-pdf-shortcode", "zzo"]
 
 viewportSize = "normal"
 
-defaultContentLanguage = "pl"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 hasCJKLanguage = false
 
