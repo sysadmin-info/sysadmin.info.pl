@@ -10,8 +10,6 @@ author: sysadmin
 authorEmoji: 🐧 
 pinned: false
 tags:
-- Monitorowanie zasobów systemu Linux
-- Pomiar układu wejścia/wyjścia
 - i/o
 - I/O
 - netstat

@@ -10,8 +10,6 @@ author: sysadmin
 authorEmoji: 🐧 
 pinned: false
 tags:
-- Monitorowanie wykorzystania zasobów Linux
-- Planowanie wydajności systemu operacyjnego
 - top
 - ps
 - pstree

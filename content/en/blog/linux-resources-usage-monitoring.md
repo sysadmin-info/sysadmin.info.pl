@@ -10,8 +10,6 @@ author: sysadmin
 authorEmoji: 🐧 
 pinned: false
 tags:
-- Linux resources monitoring
-- System capacity planning
 - top
 - ps
 - pstree
