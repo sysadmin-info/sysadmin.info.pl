@@ -1,6 +1,6 @@
 baseURL = "https://sysadmin-info.netlify.app/"
 title = "SYSADMIN"
-theme = ["zzo"]
+theme = ["hugo-embed-pdf-shortcode", "zzo"]
 
 viewportSize = "normal"
 
