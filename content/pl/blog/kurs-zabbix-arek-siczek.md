@@ -10,11 +10,12 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 tags:
-- RHCSA
+- zabbix
+- kurs zabbix
 series:
-- RHCSA
+-
 categories:
-- RHCSA
+- Linux
 image: images/2019-thumbs/kurs-zabbix.png
 ---
 Kurs Zabbix, który startuje od poniedziałku 7 września 2020.
