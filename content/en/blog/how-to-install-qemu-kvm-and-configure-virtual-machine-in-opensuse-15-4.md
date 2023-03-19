@@ -12,7 +12,7 @@ pinned: false
 tags:
 - Qemu KVM
 series:
--
+- Qemu KVM
 categories:
 - Linux
 image: images/2022-thumbs/qemu-kvm.jpg

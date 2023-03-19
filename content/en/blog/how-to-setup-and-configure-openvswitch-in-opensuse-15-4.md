@@ -12,7 +12,7 @@ pinned: false
 tags:
 - OpenvSwitch
 series:
--
+- Qemu KVM
 categories:
 - Linux
 image: images/2022-thumbs/openvswitch.jpg
