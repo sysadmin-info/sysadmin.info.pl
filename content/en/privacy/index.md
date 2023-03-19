@@ -49,9 +49,9 @@ Below are all privacy settings and their default value. These settings have been
     enableDNT = true
     simple = true
   [privacy.vimeo]
-    disable = true
-    enableDNT = true
-    simple = true
+    disable = false
+    enableDNT = false
+    simple = false
   [privacy.youtube]
     disable = false
     privacyEnhanced = false
