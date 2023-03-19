@@ -1,4 +1,4 @@
-baseURL = "https://sysadmin.info.pl"
+baseURL = "/"
 title = "SYSADMIN"
 theme = ["hugo-embed-pdf-shortcode", "zzo"]
 
