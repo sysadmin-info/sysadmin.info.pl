@@ -1,6 +1,6 @@
 ---
 title: "Witaj na blogu Sysadmin"
-date:  2019-09-21T19:24:59+00:00
+date:  2023-03-19T22:08:59+00:00
 description: "Witaj na blogu Sysadmin"
 draft: false
 hideToc: false
