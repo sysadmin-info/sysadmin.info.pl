@@ -4,7 +4,7 @@ description = "Administration, security and hardening of Linux"
 custom_css = ["css/custom.css"]
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/
-meta_image = "https://sysadmin.info.pl/images/header/server.jpg"
+meta_image = "https://sysadmin.info.pl/images/header/sysadmin.jpg"
 themecolor = ""
 
 themeOptions = ["light", "dark"]
