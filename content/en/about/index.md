@@ -10,8 +10,6 @@ featured_image = "wp-content/uploads/2019/09/mainframe.webp"
   <img class="about-photo" alt="Me" src="/images/whoami/avatar.webp" />
 </figure>
 
-Hi,
-
 My name is Adrian. I have been working in the IT industry since 2002. Currently I work for Fujitsu as Quality Assurance Specialist in Research and Development, as the Linux specialist.
 
 I am a versatile, analytical, and hard-working IT specialist, with a practical “get the things done” approach, who always perseveres to achieve the best results. Passionate about the security of IT systems.

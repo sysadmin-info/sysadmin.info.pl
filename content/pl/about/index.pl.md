@@ -7,7 +7,6 @@ description: O mnie
 <figure>
   <img class="about-photo" alt="Me" src="/images/whoami/avatar.webp" />
 </figure>
-Cześć,
 
 Mam na imię Adrian. Od 2002 roku pracuję w branży IT. Obecnie pracuję w Fujitsu jako Quality Assurance Specialist w dziale Research and Development, jako specjalista Linux.
 
