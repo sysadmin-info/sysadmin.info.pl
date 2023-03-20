@@ -8,5 +8,4 @@
 [[headers]]
   for = "/*"
     [headers.values]
-      Content-Security-Policy = "default-src 'self';"
       Access-Control-Allow-Origin = "sysadmin.info.pl"
