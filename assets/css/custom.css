@@ -25,3 +25,9 @@
 .title a:hover{
 	color: #26a69a !important;
 }
+.theme__light a {
+	color: #344952 !important;
+}
+.theme__light a:hover{
+	color: #26a69a !important;
+}
