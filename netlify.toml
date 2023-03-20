@@ -9,4 +9,4 @@
   for = "/*"
     [headers.values]
       Access-Control-Allow-Origin = "sysadmin.info.pl"
-      Content-Security-Policy = "default-src 'self';"
+      Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline';"
