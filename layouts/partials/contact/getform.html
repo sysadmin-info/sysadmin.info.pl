@@ -21,22 +21,3 @@
 	  </div>
   <input type="submit" value="{{ i18n "contact-send" }}" class="contact__send">
 </form>
-
-<script>
-  var uploadBtn = document.querySelector('#uploadBtn');
-  uploadBtn.addEventListener('click', function(elem) {
-    var upload = document.querySelector('#upload');
-    upload.click();
-    upload.onchange = function(e) {
-      var fullPath = e.target.value;
-      if (fullPath) {
-        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-        var filename = fullPath.substring(startIndex);
-        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-          filename = filename.substring(1);
-        }
-        uploadBtn.setAttribute('value', filename);
-      }
-    }
-  });
-</script>
