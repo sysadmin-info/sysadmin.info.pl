@@ -19,3 +19,9 @@
 .single__title{
 	font-size: 1.5rem !important;
 }
+.title a{
+	color: #344952 !important;
+}
+.title a:hover{
+	color: #26a69a !important;
+}
