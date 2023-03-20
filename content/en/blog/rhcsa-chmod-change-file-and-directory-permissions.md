@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/rhcsa-chmod.png
+image: images/2019-thumbs/rhcsa-chmod.webp
 ---
 {{< youtube knejgAww4Jk >}}
 <figcaption>How to use chmod to change file and directory permissions.</figcaption>

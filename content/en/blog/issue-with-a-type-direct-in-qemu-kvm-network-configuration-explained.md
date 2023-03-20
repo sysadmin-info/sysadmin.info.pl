@@ -15,7 +15,7 @@ series:
 - Qemu KVM
 categories:
 - Linux
-image: images/2022-thumbs/qemu-kvm-network-config-explained.jpg
+image: images/2022-thumbs/qemu-kvm-network-config-explained.webp
 ---
 {{< youtube cjgOVvfKOik >}}
 <figcaption>In this video I explained the QEMU KVM network configuration issue connected with type direct.</figcaption>

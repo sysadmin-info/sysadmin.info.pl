@@ -15,7 +15,7 @@ series:
 -
 categories:
 - IT Security
-image: images/2022-thumbs/ssh.png
+image: images/2022-thumbs/ssh.webp
 ---
 In this video I described ssh configuration and how to generate RSA keys and how to put them into authorized_keys. Step by step explanation.
 

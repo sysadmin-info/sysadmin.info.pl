@@ -18,7 +18,7 @@ series:
 -
 categories:
 - Linux
-image: images/2020-thumbs/conky-full-guide.png
+image: images/2020-thumbs/conky-full-guide.webp
 ---
 {{< youtube 1uHQ1493c04 >}}
 <figcaption>Full guide for conky with themes, cava and tilda.</figcaption>

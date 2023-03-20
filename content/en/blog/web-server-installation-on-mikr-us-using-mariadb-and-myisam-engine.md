@@ -15,7 +15,7 @@ series:
 -
 categories:
 - mikr.us
-image: images/2019-thumbs/mariadb.png
+image: images/2019-thumbs/mariadb.webp
 ---
 Hi,
 
@@ -51,19 +51,19 @@ Paste it into the content field. Save the change.
 
 Click on the SSL/TLS icon and set it as shown in the picture below:
 
-![Cloudflare SSL settings](/images/2019/Cloudflare-Web_Performance_and_Security.png)
+![Cloudflare SSL settings](/images/2019/Cloudflare-Web_Performance_and_Security.webp)
 <figcaption>Cloudflare SSL settings</figcaption>
 
 Click on Edge Certificates and set it up:
 
-![Cloudflare SSL settings](/images/2019/Cloudflare-Edge_Certificates.png)
+![Cloudflare SSL settings](/images/2019/Cloudflare-Edge_Certificates.webp)
 
 Below are the options that should be enabled:
 
-![Cloudflare Settings](/images/2019/Cloudflare-settings1.png)
+![Cloudflare Settings](/images/2019/Cloudflare-settings1.webp)
 <figcaption>Cloudflare Settings</figcaption>
 
-![Cloudflare Settings](/images/2019/Cloudflare-settings2.png)
+![Cloudflare Settings](/images/2019/Cloudflare-settings2.webp)
 <figcaption>Cloudflare Settings</figcaption>
 
 Then click on Page Rules and add the rule by clicking on Create Page Rule.
@@ -106,7 +106,7 @@ systemctl restart sshd
 
 I assume that everyone knows how to connect to the server using a terminal or putty. Below I will describe two methods of generating a pair of keys (private and public) both in putty and in terminal. Open PuTTYgen.exe, press the Generate button, move the mouse to randomly generate a key pair using the RSA algorithm. After generating the keys, type in a password (passphrase) (select &#8222;hard to guess&#8221;). Save the public key. Save your private key. 2048 bits is enough, but if you want to increase the security level, you can set 4096 bits in the window.<figure class="wp-block-image">
 
-![PuTTYgen](/images/2019/PuTTYgen.png)
+![PuTTYgen](/images/2019/PuTTYgen.webp)
 <figcaption>PuTTYgen</figcaption>
 
 After logging in with ssh and your user account, in our case it will be a user, follow the instructions below.

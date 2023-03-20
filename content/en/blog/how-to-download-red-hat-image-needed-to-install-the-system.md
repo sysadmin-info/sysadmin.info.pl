@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/red-hat-download.png
+image: images/2019-thumbs/red-hat-download.webp
 ---
 {{< youtube 1cslbflHe_M >}}
 <figcaption>How to download a Red Hat 7.7 image</figcaption>

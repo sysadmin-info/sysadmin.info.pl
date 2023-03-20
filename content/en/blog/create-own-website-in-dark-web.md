@@ -17,7 +17,7 @@ series:
 -
 categories:
 - Linux
-image: images/2022-thumbs/darknet.jpg
+image: images/2022-thumbs/darknet.webp
 ---
 Hi, The below content will let you easily set up your own website in the Dark Web aka Dark Net easily. Bear in mind that this is the tutorial for the Red Hat family distros like CentOS, Red Hat, Fedora etc. For Debian family distros it is a little bit different, but not so hard to modify it. 
 

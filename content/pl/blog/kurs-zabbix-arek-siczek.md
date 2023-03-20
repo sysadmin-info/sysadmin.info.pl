@@ -16,7 +16,7 @@ series:
 -
 categories:
 - Linux
-image: images/2019-thumbs/kurs-zabbix.png
+image: images/2019-thumbs/kurs-zabbix.webp
 ---
 Kurs Zabbix, który startuje od poniedziałku 7 września 2020.
 

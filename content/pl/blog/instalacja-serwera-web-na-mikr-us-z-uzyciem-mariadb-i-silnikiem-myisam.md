@@ -15,7 +15,7 @@ series:
 -
 categories:
 - Linux
-image: images/2019-thumbs/mariadb.png
+image: images/2019-thumbs/mariadb.webp
 ---
 
 Cześć,
@@ -50,20 +50,20 @@ Wklej go w pole content. Zapisz zmianę.
 
 Kliknij w ikonę SSL/TLS i ustaw jak na obrazku poniżej:
 
-![Cloudflare Web Performance and Security](/images/2019/Cloudflare-Web_Performance_and_Security.png "Cloudflare Web Performance and Security")
+![Cloudflare Web Performance and Security](/images/2019/Cloudflare-Web_Performance_and_Security.webp "Cloudflare Web Performance and Security")
 <figcaption>Cloudflare Web Performance and Security</figcaption>
 
 Kliknij w Edge Certificates i ustaw:
 
-![Cloudflare Edge Certificates](/images/2019/Cloudflare-Edge_Certificates.png "Cloudflare Edge Certificates")
+![Cloudflare Edge Certificates](/images/2019/Cloudflare-Edge_Certificates.webp "Cloudflare Edge Certificates")
 <figcaption>Cloudflare Edge Certificates</figcaption>
 
 Poniżej będą opcje, które powinny być włączone:
 
-![Cloudflare Settings](/images/2019/Cloudflare-settings1.png)
+![Cloudflare Settings](/images/2019/Cloudflare-settings1.webp)
 <figcaption>Cloudflare Settings</figcaption>
 
-![Cloudflare Settings](/images/2019/Cloudflare-settings2.png)
+![Cloudflare Settings](/images/2019/Cloudflare-settings2.webp)
 <figcaption>Cloudflare Settings</figcaption>
 
 Następnie kliknij w Page rules i dodaj regułę klikając w Create Page Rule.
@@ -106,7 +106,7 @@ systemctl restart sshd
 
 Zakładam, że każdy wie, jak się łączyć do serwera przy pomocy terminala czy putty. Poniżej opiszę dwie metody generowania pary kluczy (prywatnego i publicznego) zarówno w putty, jak i w terminalu. Otwórz PuTTYgen.exe, naciśnij przycisk Generate, porusz myszą, w celu wygenerowania losowo pary kluczy z wykorzystaniem algorytmu RSA. Po wygenerowaniu kluczy wpisz hasło (passphrase) (wybierz „trudne do odgadnięcia”). Zapisz klucz publiczny. Zapisz klucz prywatny. 2048 bitów w zupełności wystarczy, lecz jeśli ktoś chce zwiększyć poziom bezpieczeństwa, może ustawić 4096 bitów w oknie.<figure class="wp-block-image">
 
-![PuTTYgen](/images/2019/PuTTYgen.png)
+![PuTTYgen](/images/2019/PuTTYgen.webp)
 <figcaption>PuTTYgen</figcaption>
 
 Następnie po zalogowaniu się przy pomocy ssh i swojego konta użytkownika, w naszym przypadku będzie to user, wykonaj poniższe polecenia.

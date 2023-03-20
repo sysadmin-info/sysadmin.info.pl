@@ -3,11 +3,11 @@ title = "About me"
 description = "Administration, security and hardening of Linux"
 type = "about"
 date = "2019-10-23T19:09:45+00:00"
-featured_image = "wp-content/uploads/2019/09/mainframe.jpg"
+featured_image = "wp-content/uploads/2019/09/mainframe.webp"
 +++
 
 <figure>
-  <img class="about-photo" alt="Me" src="/images/whoami/avatar.png" />
+  <img class="about-photo" alt="Me" src="/images/whoami/avatar.webp" />
 </figure>
 
 Hi,
@@ -28,4 +28,4 @@ I love science fiction and absorb everything that is related to it.
 
 If you want, you can buy me a coffee that I love. I can recommend the Brazilian yellow bourbon from Single Origin.
 
-<a href="https://www.buymeacoffee.com/sysadmininfo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/sysadmininfo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.webp" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>

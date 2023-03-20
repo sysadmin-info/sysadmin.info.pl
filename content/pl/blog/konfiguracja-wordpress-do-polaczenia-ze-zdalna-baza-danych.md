@@ -16,7 +16,7 @@ series:
 categories:
 - IT Security
 - WordPress
-image: images/2019-thumbs/wp.png
+image: images/2019-thumbs/wp.webp
 ---
 Cześć,
 
@@ -130,7 +130,7 @@ mysql_secure_installation
 
 Wyświetli się poniższe okno, w którym na pytanie o zmianę hasła root odpowiadasz literą n, ponieważ ustalone zostało wcześniej. Pozostałe pozycje potwierdzasz drukowaną literą Y.
 
-![Konfiguracja MariaDB aka dawne MySQL](/images/2019/2019-03-02-12_16_25-Start.png "Konfiguracja MariaDB aka dawne MySQL")
+![Konfiguracja MariaDB aka dawne MySQL](/images/2019/2019-03-02-12_16_25-Start.webp "Konfiguracja MariaDB aka dawne MySQL")
 <figcaption>Konfiguracja MariaDB aka dawne MySQL</figcaption>
 
 W CentOS firewall jest zainstalowany domyślnie. Sprawdź, czy jest włączony.
@@ -518,5 +518,5 @@ define('DB_HOST', '192.168.0.11');
 
 Uzyskaj dostęp do interfejsu instalacyjnego WordPress poprzez wp-admin. Użyj przeglądarki, aby przejść do example.com/wp-admin. Jeśli połączenie z bazą danych zakończy się powodzeniem, zobaczysz ekran instalacji:
 
-![Instalacja WordPress](/images/2019/remote-db-wp-installation-956x1024.png "Instalacja WordPress")
+![Instalacja WordPress](/images/2019/remote-db-wp-installation-956x1024.webp "Instalacja WordPress")
 <figcaption>Instalacja WordPress</figcaption>

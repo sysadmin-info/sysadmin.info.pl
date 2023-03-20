@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/sysadmin-YT-thumb.png
+image: images/2019-thumbs/sysadmin-YT-thumb.webp
 ---
 {{< youtube 5gQsxo04K6k >}}
 <figcaption>Jak zablokować i odblokować użytkownika w systemie Linux</figcaption>

@@ -17,7 +17,7 @@ series:
 -
 categories:
 - IT security
-image: images/2020-thumbs/firewall.jpg
+image: images/2020-thumbs/firewall.webp
 ---
 If you have any kind of server connected to the Internet, you are no doubt aware that no matter how small or unimportant it might seem, it is frequently probed, tested or subject to various attempts at abuse. These attacks come from so many malicious hosts that it is impossible to keep track by hand. So I started looking for a way to implement an automated blocklist to use with iptables and firewalld which I use on my servers.
 

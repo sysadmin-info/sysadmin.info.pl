@@ -18,7 +18,7 @@ series:
 - 
 categories:
 - mikr.us
-image: images/2020-thumbs/cloudflare.png
+image: images/2020-thumbs/cloudflare.webp
 ---
 Podstawa instalacji i konfiguracji Cloudflare opisana jest tutaj: <https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/>
 
@@ -29,17 +29,17 @@ W tym tutorial zajmiemy się konfiguracją połączenia full strict pomiędzy Tw
 Do potrzeb tego tutoriala oraz testu w pierwszej kolejności na Cloudflare należy wyłączyć tę pomarańczową chmurkę (trzeba w nią kliknąć) w sekcji DNS swojej domeny, tak aby była ona szara i zapisac zmiany za pomocą przycisku save. W ten sposób sprawdzisz, czy certyfikat Let&#8217;s Encrpt został poprawnie zainstalowany i każda przeglądarka pokazuje, że Twoja strona używa SSL i certyfikatu właśnie od Let&#8217;s Encrypt. 
 
 
-![Cloudflare DNS Management](/images/2020/Cloudflare_DNS_Management.jpg "Cloudflare DNS Management")
+![Cloudflare DNS Management](/images/2020/Cloudflare_DNS_Management.webp "Cloudflare DNS Management")
 <figcaption>Cloudflare DNS Management</figcaption>
 
 Zamiast rekordu A na ww można mieć rekord CNAME. Ja po prostu mam vhost na www, który robi redirect. Zamiast nazwy domeny można dać symbol @ w miejscu celu (target).
 
-![CNAME](/images/2020/CNAME.png "CNAME")
+![CNAME](/images/2020/CNAME.webp "CNAME")
 <figcaption>CNAME</figcaption>
 
 Trzeba kliknąć w kłódkę obok adresu strony &#8211; w pasku adresu i wybrać opcję, aby pokazało certyfikat. Tak, wiem, to są podstawy, ale w ten sposób to sprawdzisz.
 
-![Certyfikat Let's Encrypt](/images/2020/Lets_Encrypt_Certyfikat.png "Certyfikat Let's Encrypt")
+![Certyfikat Let's Encrypt](/images/2020/Lets_Encrypt_Certyfikat.webp "Certyfikat Let's Encrypt")
 <figcaption>Certyfikat Let's Encrypt</figcaption>
 
 Jeśli strona pokaże, że działa certyfikat od Let&#8217;s Encrypt, to świetnie.

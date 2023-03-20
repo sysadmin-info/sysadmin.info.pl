@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/rhcsa-adding-users.png
+image: images/2019-thumbs/rhcsa-adding-users.webp
 ---
 {{< youtube VW3rwcOEjXc >}}
 <figcaption>RHCSA &#8211; Adding users</figcaption>

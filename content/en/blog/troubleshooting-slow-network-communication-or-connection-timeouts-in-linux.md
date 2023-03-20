@@ -21,7 +21,7 @@ series:
 -
 categories:
 - Linux
-image: images/2022-thumbs/network.png
+image: images/2022-thumbs/network.webp
 ---
 {{< youtube fc8wMXoX8Lw >}}
 <figcaption>Troubleshooting slow network communication or Connection Timeouts in Linux</figcaption>

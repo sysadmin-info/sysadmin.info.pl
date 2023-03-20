@@ -21,7 +21,7 @@ series:
 -
 categories:
 - Linux
-image: images/2019-thumbs/linux-cli.png
+image: images/2019-thumbs/linux-cli.webp
 ---
 To monitor system behavior, you need to start by creating a baseline that represents normal system behavior. You can do this using a tool like the sar command. You can then use tools such as netstat, iostat, lsof, w and uptime to monitor system behavior, comparing the results to the baseline to determine whether the system is experiencing problems.
 

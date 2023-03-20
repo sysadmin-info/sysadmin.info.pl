@@ -18,11 +18,11 @@ series:
 -
 categories:
 - Filmy dokumentalne
-image: images/2020-thumbs/perfect-weapon.jpg
+image: images/2020-thumbs/perfect-weapon.webp
 ---
 Dokument oparty na bestsellerowej książce Davida E. Sangera, korespondenta ds. bezpieczeństwa narodowego New York Timesa, bada wzrost znaczenia cyberkonfliktów jako sposobu, w jaki współcześnie narody konkurują między sobą i wzajemnie się sabotują. W miarę wzrostu niepokojów związanych z wpływem cyberataków na wybory w USA w 2020, film przedstawia wywiady z czołowymi urzędnikami wojskowymi, wywiadowczymi i politykami. Nie brakuje w nim też relacji z “frontów” toczących się obecnie cyberwojen. Reżyserem dokumentu HBO jest John Maggio (serial dokumentalny Amerykańskie doświadczenia).
 
 Źródło: <a href="https://www.hbomax.com/pl/pl/feature/urn:hbo:feature:GX2pSUgq6241IugEAAACT" target="_blank" rel="noreferrer noopener">Oglądaj na HBO Max</a>
 
-![Idealna broń – film dokumentalny](/images/2020/idealna-bron.jpg "Idealna broń – film dokumentalny")
+![Idealna broń – film dokumentalny](/images/2020/idealna-bron.webp "Idealna broń – film dokumentalny")
 <figcaption>Idealna broń – film dokumentalny</figcaption>

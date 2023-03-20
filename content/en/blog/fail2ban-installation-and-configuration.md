@@ -16,7 +16,7 @@ series:
 -
 categories:
 - IT security
-image: images/2019-thumbs/fail2ban.png
+image: images/2019-thumbs/fail2ban.webp
 ---
 Note, the following tutorial is a part of my engineering work entitled &#8222;Hardening of a Linux-based network server&#8221; under the direction of Ph. D. Kordian Smolinski in the Department of Theoretical Physics WFiIS UŁ defended in June 2019.
 

@@ -20,7 +20,7 @@ series:
 -
 categories:
 - Linux
-image: images/2019-thumbs/linux-cli.png
+image: images/2019-thumbs/linux-cli.webp
 ---
 Capacity planning involves predicting what the capacity requirements for a system will be in future, and planning how to meet these requirements. Monitoring system resource use is important for capacity planning, because it establishes whether existing resource use is approaching capacity limits.
 

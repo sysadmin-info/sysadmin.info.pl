@@ -16,7 +16,7 @@ series:
 -
 categories:
 - Documentaries
-image: images/2019-thumbs/kevin-mitnick.png
+image: images/2019-thumbs/kevin-mitnick.webp
 ---
 {{< youtube iFGve5MUUnE >}}
 <figcaption>Kevin Mitnick talks about security in IT</figcaption>

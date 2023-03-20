@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/sysadmin-YT-thumb.png
+image: images/2019-thumbs/sysadmin-YT-thumb.webp
 ---
 {{< youtube vrMf-q3OXxk >}}
 <figcaption>Access Control List in Linux</figcaption>

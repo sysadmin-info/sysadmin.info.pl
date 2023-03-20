@@ -15,7 +15,7 @@ series:
 -
 categories:
 - mikr.us
-image: images/2019-thumbs/rclone.png
+image: images/2019-thumbs/rclone.webp
 ---
 Hello,
 

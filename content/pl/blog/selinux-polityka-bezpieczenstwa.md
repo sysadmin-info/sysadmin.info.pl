@@ -16,7 +16,7 @@ series:
 categories:
 - IT Security
 - Linux
-image: images/2019-thumbs/selinux.png
+image: images/2019-thumbs/selinux.webp
 ---
 Nie jestem eskpertem od SELinux, ale gdy przeczytałem wiele poradników (ang. tutorial) na ten temat i widziałem dziesiątki porad, które wszystkie jednym głosem oznajmiały: wyłącz SELinux, ponieważ sprawia problemy, uznałem, że czas podważyć tę tezę i udowodnić, że SELinux może być prosty w obsłudze. 
 

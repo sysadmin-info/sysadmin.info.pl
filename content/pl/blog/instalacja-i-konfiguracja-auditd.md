@@ -15,7 +15,7 @@ series:
 -
 categories:
 - IT security
-image: images/2021-thumbs/sysadmin-YT-thumb.png
+image: images/2021-thumbs/sysadmin-YT-thumb.webp
 ---
 {{< youtube jT2BjLGNtDo >}}
 <figcaption>Reguły w /etc/audit/rules.d/audit.rules</figcaption>

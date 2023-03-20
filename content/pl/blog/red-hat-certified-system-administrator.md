@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/rhcsa.png
+image: images/2019-thumbs/rhcsa.webp
 ---
 Zamierzam w ciągu następnych kilku tygodni zamieszczać własne szkolenia całkowicie po polsku związane z RHCSA. Tak, za darmo, bo to są takie podstawy podstaw w każdej dystrybucji Linux w zasadzie i jest to według mnie śmiesznie proste. Egzamin wymaga zrozumienia i pamiętania komend na pamięć, więc to już nie jest takie proste, ponieważ polecenia wchodzą w miarę upływu czasu, gdy codziennie się je klepie z palca.
 

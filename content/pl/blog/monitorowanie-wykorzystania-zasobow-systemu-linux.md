@@ -20,7 +20,7 @@ series:
 -
 categories:
 - Linux
-image: images/2019-thumbs/linux-cli.png
+image: images/2019-thumbs/linux-cli.webp
 ---
 Planowanie wydajności polega na przewidywaniu, jakie będą wymagania dotyczące wydajności systemu w przyszłości i planowaniu, jak te wymagania spełnić. Monitorowanie wykorzystania zasobów systemu jest ważne dla planowania wydajności, ponieważ pozwala ustalić, czy istniejące wykorzystanie zasobów zbliża się do granic wydajności serwera lub maszyny wirtualnej.
 

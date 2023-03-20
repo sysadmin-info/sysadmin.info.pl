@@ -5,7 +5,7 @@ type: "about"
 description: O mnie
 ---
 <figure>
-  <img class="about-photo" alt="Me" src="/images/whoami/avatar.png" />
+  <img class="about-photo" alt="Me" src="/images/whoami/avatar.webp" />
 </figure>
 Cześć,
 

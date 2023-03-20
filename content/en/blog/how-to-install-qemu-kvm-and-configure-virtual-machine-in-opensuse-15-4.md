@@ -15,7 +15,7 @@ series:
 - Qemu KVM
 categories:
 - Linux
-image: images/2022-thumbs/qemu-kvm.jpg
+image: images/2022-thumbs/qemu-kvm.webp
 ---
 {{< youtube fTzmy6F5Ltw >}}
 <figcaption>How to install QEMU KVM and configure virtual machine in openSUSE 15.4</figcaption>

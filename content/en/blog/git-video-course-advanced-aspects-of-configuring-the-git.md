@@ -15,7 +15,7 @@ series:
 - Git
 categories:
 - Git
-image: images/2022-thumbs/git-01.png
+image: images/2022-thumbs/git-01.webp
 ---
 <a href="https://youtu.be/zDzNrnt9Qgw?list=PL8iI5aR-61mqAr3ipK5BvmMKLqYbJgIkB" target="_blank" rel="noreferrer noopener">Watch the playlist</a>
 <figcaption>Use the next button in the video to watch lessons, or the playlist button.</figcaption>

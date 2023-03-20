@@ -16,7 +16,7 @@ series:
 -
 categories:
 - Documentaries
-image: images/2019-thumbs/linus-torvalds.png
+image: images/2019-thumbs/linus-torvalds.webp
 ---
 {{< youtube o8NPllzkFhE >}}
 <figcaption>The mind behind Linux – Linus Torvalds – TED</figcaption>

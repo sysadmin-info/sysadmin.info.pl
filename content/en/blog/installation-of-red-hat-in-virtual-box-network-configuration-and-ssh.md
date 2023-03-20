@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/redhat-installation.png
+image: images/2019-thumbs/redhat-installation.webp
 ---
 {{< youtube MAjZddgRl-U >}}
 <figcaption>Installation of Red Hat in Virtual Box &#8211; network configuration and ssh.</figcaption>

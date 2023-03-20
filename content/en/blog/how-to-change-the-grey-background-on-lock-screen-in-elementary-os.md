@@ -16,7 +16,7 @@ series:
 -
 categories:
 - Linux
-image: images/2019-thumbs/elementary-os_background.png
+image: images/2019-thumbs/elementary-os_background.webp
 ---
 {{< youtube g-7aglPhf88 >}}
 <figcaption>How to change the grey background on lock screen in Elementary OS</figcaption>

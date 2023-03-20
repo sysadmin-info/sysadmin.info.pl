@@ -16,7 +16,7 @@ series:
 - 
 categories:
 - IT Security
-image: images/2022-thumbs/hardened.jpg
+image: images/2022-thumbs/hardened.webp
 ---
 Podstawowa konfiguracja po instalacji RHEL 8.5 (minimal). Zapisałem jako skrypt.sh, nadałem uprawnienia do wykonania chmod u+x skrypt.sh i uruchomiłem jako root ./skrypt.sh, chociaż wiem, że skrypty powinno się odpalać z sudo dla bezpieczeństwa. Tyle, że ja wiem, co robię i po co. Wszystko opisane komentarzami po angielsku. User został utworzony podczas instalacji systemu, stąd zmiana. Na codzień korzystam z usera i sudo. Tu na szybko rozwiązanie. Te komendy można wykonać równie dobrze z użyciem sudo.
 

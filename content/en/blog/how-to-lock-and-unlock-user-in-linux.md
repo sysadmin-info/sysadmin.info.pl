@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/sysadmin-YT-thumb.png
+image: images/2019-thumbs/sysadmin-YT-thumb.webp
 ---
 {{< youtube 7MHv_CgFH0A >}}
 <figcaption>How to Lock and Unlock User in Linux</figcaption>

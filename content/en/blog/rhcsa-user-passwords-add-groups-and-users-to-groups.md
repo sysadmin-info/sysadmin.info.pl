@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/rhcsa-users-passwords.png
+image: images/2019-thumbs/rhcsa-users-passwords.webp
 ---
 {{< youtube yVkGUAU_qQM >}}
 <figcaption>In this episode I will show you how to change passwords for users, how to add groups, how to add users to groups, how to add users to groups and how to change the directory owner and give access to the directory for the group.</figcaption>

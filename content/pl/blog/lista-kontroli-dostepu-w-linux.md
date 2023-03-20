@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/sysadmin-YT-thumb.png
+image: images/2019-thumbs/sysadmin-YT-thumb.webp
 ---
 {{< youtube tL50Q0uCSl8 >}}
 <figcaption>Lista Kontroli Dostępu w Linux</figcaption>

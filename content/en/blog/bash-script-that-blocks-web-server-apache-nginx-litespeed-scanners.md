@@ -16,7 +16,7 @@ series:
 -
 categories:
 - IT security
-image: images/2021-thumbs/bash_script_that_blocks_web_server_scanners.png
+image: images/2021-thumbs/bash_script_that_blocks_web_server_scanners.webp
 ---
 {{< youtube zgnijChQ45E >}}
 <figcaption>Bash script that blocks web server (apache/nginx/litespeed) scanners</figcaption>

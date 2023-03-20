@@ -15,7 +15,7 @@ series:
 - Qemu KVM
 categories:
 - Linux
-image: images/2022-thumbs/vm-in-qemu-kvm.jpg
+image: images/2022-thumbs/vm-in-qemu-kvm.webp
 ---
 {{< youtube ZYafBlfFfcQ >}}
 <figcaption>In this video I explained how to properly install the QEMU KVM virtual machine. I provided two methods of installation and described in details how to make it work.</figcaption>

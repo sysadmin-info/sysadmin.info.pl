@@ -15,7 +15,7 @@ series:
 - Qemu KVM
 categories:
 - Linux
-image: images/2022-thumbs/openvswitch.jpg
+image: images/2022-thumbs/openvswitch.webp
 ---
 {{< youtube 3kh1AvI0otA >}}
 <figcaption>The video explains how to properly install openvswitch in openSUSE 15.4 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.</figcaption>

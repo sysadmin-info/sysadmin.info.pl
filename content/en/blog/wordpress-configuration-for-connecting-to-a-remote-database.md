@@ -16,7 +16,7 @@ series:
 categories:
 - IT Security
 - WordPress
-image: images/2019-thumbs/wp.png
+image: images/2019-thumbs/wp.webp
 ---
 Hello,
 
@@ -141,7 +141,7 @@ mysql_secure_installation
 
 You will see the following window in which you answer the question about changing the root password with the letter n, because it was set in advance. The remaining items are confirmed with the capital letter Y. <figure class="wp-block-image">
 
-![MariaDB aka old MySQL configuration](/images/2019/2019-03-02-12_16_25-Start.png "MariaDB aka old MySQL configuration")
+![MariaDB aka old MySQL configuration](/images/2019/2019-03-02-12_16_25-Start.webp "MariaDB aka old MySQL configuration")
 <figcaption>MariaDB aka old MySQL configuration</figcaption>
 
 
@@ -525,5 +525,5 @@ define('DB_HOST', '192.168.0.11');
 
 Access the WordPress installation interface via wp-admin. Use your browser to go to example.com/wp-admin. If the database connection is successful, you will see the installation screen: <figure class="wp-block-image">
 
-![WordPress installation](/images/2019/remote-db-wp-installation-956x1024.png "WordPress installation")
+![WordPress installation](/images/2019/remote-db-wp-installation-956x1024.webp "WordPress installation")
 <figcaption>WordPress installation</figcaption>

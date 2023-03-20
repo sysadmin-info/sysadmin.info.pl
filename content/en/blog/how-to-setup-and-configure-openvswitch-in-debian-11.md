@@ -15,7 +15,7 @@ series:
 - Qemu KVM
 categories:
 - Linux
-image: images/2022-thumbs/openvswitch-debian.jpg
+image: images/2022-thumbs/openvswitch-debian.webp
 ---
 {{< youtube ogFsgKaRk-8 >}}
 <figcaption>The video explains how to properly install openvswitch in Debian 11 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.</figcaption>

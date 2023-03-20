@@ -17,7 +17,7 @@ series:
 - 
 categories:
 - IT Security
-image: images/2020-thumbs/laptop.jpg
+image: images/2020-thumbs/laptop.webp
 ---
 Cześć,
 

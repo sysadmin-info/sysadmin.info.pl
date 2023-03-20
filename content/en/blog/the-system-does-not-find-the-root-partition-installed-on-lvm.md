@@ -16,7 +16,7 @@ series:
 - 
 categories:
 - Linux
-image: images/2020-thumbs/linux-cli.png
+image: images/2020-thumbs/linux-cli.webp
 ---
 Article shows how to solve the issue with missing swap and plymouthd sigrtmin error, when swap is not created as LVM, but as a standard swap.
 

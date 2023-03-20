@@ -18,7 +18,7 @@ series:
 -
 categories:
 - IT security
-image: images/2020-thumbs/grafana.png
+image: images/2020-thumbs/grafana.webp
 ---
 The tutorial is for Red Hat family server distributions like CentOS 7.x, Red Hat 7.x, Fedora29 or newer (current version is 32), etc.
 
@@ -41,7 +41,7 @@ InfluxDB will store data, and expose it to Grafana, which is a modern dashboardi
 In this tutorial, you will learn how to setup Telegraf, InfluxDB and Grafana. You will also learn how to secure our instances with HTTPS via secure certificates.&#8221;
 
 
-![A modern monitoring infrastructure with Telegraf, InfluxDB, Grafana](/images/2020/diagram-2.png "A modern monitoring infrastructure with Telegraf, InfluxDB, Grafana")
+![A modern monitoring infrastructure with Telegraf, InfluxDB, Grafana](/images/2020/diagram-2.webp "A modern monitoring infrastructure with Telegraf, InfluxDB, Grafana")
 <figcaption>A modern monitoring infrastructure with Telegraf, InfluxDB, Grafana</figcaption>
 
 This tutorial is going to cover steps for **Influx 1.8.x**, but I will link to the InfluxDB 2.x setup as soon as it is written.
@@ -82,7 +82,7 @@ InfluxDB should run automatically, but if this is not the case, make sure to sta
 systemctl start influxdb
 ```
 
-![InfluxDB service](/images/2020/influxdb_service.png "InfluxDB service")
+![InfluxDB service](/images/2020/influxdb_service.webp "InfluxDB service")
 <figcaption>InfluxDB service</figcaption>
 
 However, even if your service is running, it does not guarantee that it is correctly working.
@@ -93,7 +93,7 @@ To verify it, **check your journal logs**.
 journalctl -f -u influxdb.service
 ```
 
-![InfluxDB logs](/images/2020/influxdb_logs.png "InfluxDB logs")
+![InfluxDB logs](/images/2020/influxdb_logs.webp "InfluxDB logs")
 <figcaption>InfluxDB logs</figcaption>
 
 Ctrl+c will exit the logging mode.
@@ -211,7 +211,7 @@ Telegraf should run automatically, but if this is not the case, make sure to sta
 systemctl start telegraf
 ```
 
-![Telegraf service](/images/2020/telegraf_service.png "Telegraf service")
+![Telegraf service](/images/2020/telegraf_service.webp "Telegraf service")
 <figcaption>Telegraf service</figcaption>
 However, even if your service is running, it does not guarantee that it is correctly sending data to InfluxDB.
 
@@ -220,7 +220,7 @@ To verify it, **check your journal logs**.
 ```
 journalctl -f -u telegraf.service
 ```
-![Telegraf logs](/images/2020/telegraf_logs.png "Telegraf logs")
+![Telegraf logs](/images/2020/telegraf_logs.webp "Telegraf logs")
 <figcaption>Telegraf logs</figcaption>
 If you are having error messages in this section, please refer to the **troubleshooting** section at the end.
 
@@ -422,7 +422,7 @@ InfluxDB shell version: 1.8.2
 > SELECT * FROM cpu WHERE time > now() - 30s
 ```
 
-![InfluxDB metrics](/images/2020/grafana-metrics-1.png "InfluxDB metrics")
+![InfluxDB metrics](/images/2020/grafana-metrics-1.webp "InfluxDB metrics")
 <figcaption>InfluxDB metrics</figcaption>
 Great!
 
@@ -462,7 +462,7 @@ Grafana should run automatically, but if this is not the case, make sure to star
 systemctl start grafana-server
 ```
 
-![Grafana service](/images/2020/grafana_service.png "Grafana service")
+![Grafana service](/images/2020/grafana_service.webp "Grafana service")
 <figcaption>Grafana service</figcaption>
 
 Head over to /etc/grafana/grafana.ini and edit the following lines.
@@ -572,7 +572,7 @@ To verify it, **check your journal logs**.
 ```
 journalctl -f -u grafana-server.service
 ```
-![Grafana logs](/images/2020/grafana_logs.png "Grafana logs")
+![Grafana logs](/images/2020/grafana_logs.webp "Grafana logs")
 <figcaption>Grafana logs</figcaption>
 If you are having error messages in this section, please refer to the **troubleshooting** section at the end.
 
@@ -650,27 +650,27 @@ If you will have any troubles with the virtual host configuration contact me thr
 
 In the left menu, click on the **Configuration > Data sources** section.<figure class="wp-block-image size-large is-style-default">
 
-![Grafana config datasource](/images/2020/config-datasource.png "Grafana config datasource")
+![Grafana config datasource](/images/2020/config-datasource.webp "Grafana config datasource")
 <figcaption>Grafana config datasource</figcaption>
 
 In the next window, click on “**Add datasource**“.
 
-![Grafana add data source](/images/2020/add-data-source.png "Grafana add data source")
+![Grafana add data source](/images/2020/add-data-source.webp "Grafana add data source")
 <figcaption>Grafana add data source</figcaption>
 
 In the datasource selection panel, choose InfluxDB as a datasource.
 
-![InfluxDB as datasource](/images/2020/influxdb-option.png "InfluxDB as datasource")
+![InfluxDB as datasource](/images/2020/influxdb-option.webp "InfluxDB as datasource")
 <figcaption>InfluxDB as datasource</figcaption>
 
 Here is the configuration you have to match to configure InfluxDB on Grafana.
 
-![InfluxDB config](/images/2020/influxdb-config-1.png "InfluxDB config")
+![InfluxDB config](/images/2020/influxdb-config-1.webp "InfluxDB config")
 <figcaption>InfluxDB config</figcaption>
 
 Click on “Save and Test”, and make sure that you are not getting any errors.
 
-![data source is working](/images/2020/data-source-is-working-1.png "data source is working")
+![data source is working](/images/2020/data-source-is-working-1.webp "data source is working")
 <figcaption>data source is working</figcaption>
 
 > Getting a 502 Bad Gateway error? Make sure that your URL field is set to HTTPS and not HTTP.
@@ -685,21 +685,21 @@ If in the future you want to develop your own dashboard, feel free to do it.
 
 To import a Grafana dashboard, select the **Import** option in the left menu, **under the Plus icon.**
 
-![import dashboard](/images/2020/import-dashboard.png "import dashboard")
+![import dashboard](/images/2020/import-dashboard.webp "import dashboard")
 <figcaption>import dashboard</figcaption>
 
 On the next screen, import the dashboard with the **5955** ID.
 
 This is a dashboard created by <a href="https://grafana.com/orgs/jmutai" target="_blank" rel="noreferrer noopener">jmutai</a> that displays system metrics collected by Telegraf.
 
-![import dashboard created by jmutai](/images/2020/import-dashboard-5955.png "import dashboard created by jmutai")
+![import dashboard created by jmutai](/images/2020/import-dashboard-5955.webp "import dashboard created by jmutai")
 <figcaption>import dashboard created by jmutai</figcaption>
 
 From there, Grafana should automatically try to import this dashboard.
 
 Add the previous configured InfluxDB as the dashboard datasource and click on “**Import**“.
 
-![add InfluxDB as dashboard](/images/2020/import-dashboard-influxdb.png "add InfluxDB as dashboard")
+![add InfluxDB as dashboard](/images/2020/import-dashboard-influxdb.webp "add InfluxDB as dashboard")
 <figcaption>add InfluxDB as dashboard</figcaption>
 
 Great!
@@ -708,7 +708,7 @@ We now have **our first Grafana dashboard displaying Telegraf metrics.**
 
 This is what you should now see on your screen.
 
-![final Grafana dashboard](/images/2020/final-dashboard.png "final Grafana dashboard")
+![final Grafana dashboard](/images/2020/final-dashboard.webp "final Grafana dashboard")
 <figcaption>final Grafana dashboard</figcaption>
 
 #### g – Modifying InfluxQL queries in Grafana query explorer
@@ -717,17 +717,17 @@ Sometimes when designing the dashboard, the creator specifies the hostname as �
 
 To modify it, head over to the **query explorer** by hovering the panel title, and clicking on “Edit”.
 
-![edit Grafana dashboard](/images/2020/edit-dashboard.png "edit Grafana dashboard")
+![edit Grafana dashboard](/images/2020/edit-dashboard.webp "edit Grafana dashboard")
 <figcaption>edit Grafana dashboard</figcaption>
 
 In the “**queries**” panel, **change the host**, and the panel should starting displaying data.
 
-![changing host](/images/2020/changing-host.png "changing host")
+![changing host](/images/2020/changing-host.webp "changing host")
 <figcaption>changing host</figcaption>
 
 Go back to the dashboard, and this is what you should see.
 
-![CPU dashboard](/images/2020/cpu-dashboard.png "CPU dashboard")
+![CPU dashboard](/images/2020/cpu-dashboard.webp "CPU dashboard")
 <figcaption>CPU dashboard</figcaption>
 
 ### VI – Conclusion
@@ -742,7 +742,7 @@ The first thing would be to connect Telegraf to <a rel="noreferrer noopener" hre
 
 * **Error writing to output [influxdb] : could not write any address**
 
-![Telegraf output error](/images/2020/error-output-telegraf.png "Telegraf output error")
+![Telegraf output error](/images/2020/error-output-telegraf.webp "Telegraf output error")
 <figcaption>Telegraf output error</figcaption>
 
 **Possible solution**: make sure that InfluxDB is correctly running on the port 8086.

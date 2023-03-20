@@ -15,7 +15,7 @@ series:
 -
 categories:
 - general
-image: images/2019-thumbs/sysadmin-logo.png
+image: images/2019-thumbs/sysadmin-logo.webp
 ---
 Cześć, 
 

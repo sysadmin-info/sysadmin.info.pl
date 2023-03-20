@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/rhcsa.png
+image: images/2019-thumbs/rhcsa.webp
 ---
 In the next few weeks, I intend to publish my own training courses entirely in Polish related to RHCSA. Yes, free of charge, because these are the basics of any Linux distribution in principle and in my opinion it is ridiculously simple. The exam requires you to understand and remember the commands by heart, so it&#8217;s not that simple anymore, because the commands come in as time goes by when you tap them every day with your finger.
 

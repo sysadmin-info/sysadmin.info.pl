@@ -17,7 +17,7 @@ series:
 -
 categories:
 - IT security
-image: images/2020-thumbs/linux-cli.png
+image: images/2020-thumbs/linux-cli.webp
 ---
 Hello,
 

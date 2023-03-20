@@ -15,7 +15,7 @@ series:
 - RHCSA
 categories:
 - RHCSA
-image: images/2019-thumbs/rhcsa-users-passwords.png
+image: images/2019-thumbs/rhcsa-users-passwords.webp
 ---
 {{< youtube yVkGUAU_qQM >}}
 <figcaption>W tym odcinku pokażę jak zmieniać hasła użytkownikom, , w jaki sposób dodaje się grupy, jak się dodaje użytkowników do grup oraz w jaki sposób zmienia się właściciela katalogu oraz daje dostęp do katalogu dla grupy.</figcaption>

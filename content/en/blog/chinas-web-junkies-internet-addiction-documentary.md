@@ -17,7 +17,7 @@ series:
 -
 categories:
 - Documentaries
-image: images/2019-thumbs/china-web-junkies.png
+image: images/2019-thumbs/china-web-junkies.webp
 ---
 {{< youtube jqctG3NnDa0 >}}
 <figcaption>China&#8217;s Web Junkies: Internet Addiction Documentary</figcaption>

@@ -17,7 +17,7 @@ series:
 categories:
 - Raspberry Pi
 - Home Assistant
-image: images/2022-thumbs/ha.jpg
+image: images/2022-thumbs/ha.webp
 ---
 This video describes how to install Home Assistant Supervised. Home Assistant (former Hass.io) is a container-based system for managing your Home Assistant Core installation and related applications. The system is controlled via Home Assistant which communicates with the Supervisor. The Supervisor provides an API to manage the installation. This includes changing network settings or installing and updating software.
 

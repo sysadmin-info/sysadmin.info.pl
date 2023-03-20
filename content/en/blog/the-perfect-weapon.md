@@ -18,7 +18,7 @@ series:
 -
 categories:
 - Documentaries
-image: images/2020-thumbs/perfect-weapon.jpg
+image: images/2020-thumbs/perfect-weapon.webp
 ---
 Based on a best-selling book by _New York Times_ national security correspondent David E. Sanger, _The Perfect Weapon_ explores the rise of cyber conflict as the primary way nations now compete with and sabotage one another.
 
@@ -28,5 +28,5 @@ Traveling from the deserts of Iran and Las Vegas to the back alleys of Beijing a
 
 Source: <a href="https://www.hbo.com/movies/the-perfect-weapon" target="_blank" rel="noreferrer noopener">https://www.hbo.com/movies/the-perfect-weapon</a>
 
-![Perfect weapon - documentary movie](/images/2020/perfect-weapon.jpg "Perfect weapon - documentary movie")
+![Perfect weapon - documentary movie](/images/2020/perfect-weapon.webp "Perfect weapon - documentary movie")
 <figcaption>Perfect weapon - documentary movie</figcaption>
