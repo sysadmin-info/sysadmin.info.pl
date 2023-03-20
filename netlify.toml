@@ -9,4 +9,4 @@
   for = "/*"
     [headers.values]
       Access-Control-Allow-Origin = "sysadmin.info.pl"
-      Content-Security-Policy = "default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'strict-dynamic' 'sha256-0aYDHNJCU98aIpr7QTA1FPm/Ha6TVIkdowTUu2cx2Ks=' 'sha256-CJG5mNzuoX9Ni31/WJHwCg3Va2kMDT6/rUluZKAT3Z4=' 'sha256-DlH8gL38moP9pEFraWXEsuqZAagYARXD039CiDWKO+Y=' 'sha256-OeT4ggVXi2CIkxbO7xvGvBDKJ07xU8v+JVkm+OEkLPY=' 'sha256-XMzadgEgVSzUhb+Efa0YPeW7TiGXe4PVrZs5CANJquE='; connect-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src https://sysadmin.info.pl/;"
+      Content-Security-Policy = "default-src 'none'; style-src 'self' 'unsafe-inline'; script-src 'unsafe-inline' 'strict-dynamic' 'sha256-0aYDHNJCU98aIpr7QTA1FPm/Ha6TVIkdowTUu2cx2Ks=' 'sha256-CJG5mNzuoX9Ni31/WJHwCg3Va2kMDT6/rUluZKAT3Z4=' 'sha256-DlH8gL38moP9pEFraWXEsuqZAagYARXD039CiDWKO+Y=' 'sha256-OeT4ggVXi2CIkxbO7xvGvBDKJ07xU8v+JVkm+OEkLPY=' 'sha256-XMzadgEgVSzUhb+Efa0YPeW7TiGXe4PVrZs5CANJquE='; connect-src 'self'; img-src 'self' data:; font-src 'self'; manifest-src https://sysadmin.info.pl/;"
