@@ -19,5 +19,14 @@
 		  </label>
 		  <textarea name="message" class="contact__message" aria-label="{{ i18n "contact-message" }}"></textarea>
 	  </div>
+      <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
   <input type="submit" value="{{ i18n "contact-send" }}" class="contact__send">
 </form>
+<script>
+   grecaptcha.ready(function() {
+       grecaptcha.execute('6LeAS-gUAAAAAEvvkBwA7cBd78m0UCVRBV2nAQGp', {action: 'homepage'})
+       .then(function(token) {
+         document.getElementById('captchaResponse').value = token;
+       });
+     });
+</script>
