@@ -17,7 +17,7 @@ tags:
 series:
 -
 categories:
-- Documentaries
+- Filmy dokumentalne
 image: images/2022-thumbs/agents-of-chaos.webp
 ---
 {{< youtube M-OA7H8DoJM >}}
