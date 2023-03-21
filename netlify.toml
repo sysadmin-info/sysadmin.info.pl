@@ -26,9 +26,9 @@
     Cache-Control = "public, s-max-age=604800"
 
 [[redirects]]
-  from = "https://sysadmin.info.pl/en/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux"
-  to = "https://sysadmin.info.pl/en/blog/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux"
+  from = "en/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux"
+  to = "en/blog/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux"
   status = 301
-  force = true
+  force = false
   query = {path = ":path"}
-  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+  conditions = {Language = ["en"], Country = ["US"], Role = ["sysadmin"]}
