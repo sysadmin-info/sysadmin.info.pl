@@ -87,7 +87,7 @@ cat /var/lib/tor/hidden_service/hostname
 su - user
 
 #delete the content in index.html
-sudo cat /dev/null &gt; /usr/share/nginx/html/index.html
+sudo cat /dev/null > /usr/share/nginx/html/index.html
 
 #Edit the index.html 
 sudo vim /usr/share/nginx/html/index.html
@@ -96,17 +96,17 @@ sudo nano /usr/share/nginx/html/index.html
 
 #Paste the below:
 
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
-&lt;head&gt;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
 
-&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
-&lt;title&gt;Welcome to the Dark Web&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p&gt;Hello world!&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to the Dark Web</title>
+</head>
+<body>
+<p>Hello world!</p>
+</body>
+</html>
 
 # Save and exit
 
