@@ -11,9 +11,9 @@ authorEmoji: 🐧
 pinned: false
 tags:
 - Agents of chaos
-- national swecurity
-- cyber conflicts
-- cyber attacks
+- bezpieczeństwo narodowe
+- cyber konflikty
+- cyber ataki 
 series:
 -
 categories:
