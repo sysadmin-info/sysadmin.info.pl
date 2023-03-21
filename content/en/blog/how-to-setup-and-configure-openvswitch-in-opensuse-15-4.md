@@ -15,6 +15,7 @@ series:
 - Qemu KVM
 categories:
 - Linux
+- OpenvSwitch
 image: images/2022-thumbs/openvswitch.webp
 ---
 {{< youtube 3kh1AvI0otA >}}

@@ -15,6 +15,7 @@ series:
 - Qemu KVM
 categories:
 - Linux
+- Qemu KVM
 image: images/2022-thumbs/vm-in-qemu-kvm.webp
 ---
 {{< youtube ZYafBlfFfcQ >}}
