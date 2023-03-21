@@ -10,11 +10,11 @@ categories:
 -
 author:
 authorEmoji: 🤖
-authorImage: "/images/whoami/avatar.png"
+authorImage: "/images/whoami/avatar.webp"
 authorImageUrl: ""
 authorDesc: 
 socialOptions:
-  email: "{{< cloakemail "admin@sysadmin.info.pl" >}}" 
+  email: "" 
   phone: ""
   facebook: "https://www.facebook.com/sysadmininfo"
   twitter: ""
