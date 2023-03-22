@@ -10,10 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 tags:
-- network
 - ifconfig
 - netstat
-- ss
 - ip
 - ethtool
 - iperf3

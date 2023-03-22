@@ -10,8 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 tags:
-- China
-- web junkies
 - Internet Addiction
 series:
 -

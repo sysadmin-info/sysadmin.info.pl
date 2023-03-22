@@ -11,7 +11,6 @@ authorEmoji: 🐧
 pinned: false
 tags:
 - Linus Torvalds
-- TED
 series:
 -
 categories:

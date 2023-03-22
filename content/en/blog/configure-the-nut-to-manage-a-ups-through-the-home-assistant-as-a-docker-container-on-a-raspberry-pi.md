@@ -10,7 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 tags:
-- UPS GReenCell Aio 600VA
+- NUT
+- UPS
 series:
 -
 categories:

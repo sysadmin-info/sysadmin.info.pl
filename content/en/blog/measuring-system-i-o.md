@@ -10,13 +10,9 @@ author: sysadmin
 authorEmoji: 🐧 
 pinned: false
 tags:
-- i/o
-- I/O
 - netstat
 - iostat
 - lsof
-- w
-- uptime
 series:
 -
 categories:

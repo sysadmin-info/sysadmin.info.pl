@@ -13,6 +13,11 @@ tags:
 - praca inżynierska
 - Linux hardening
 - utwardzanie Linux
+- zabezpieczenie serwera poczty
+- Postfix
+- Dovecot
+- zabezpieczenie Samba
+- zabezpieczenie serwera web
 series:
 - 
 categories:

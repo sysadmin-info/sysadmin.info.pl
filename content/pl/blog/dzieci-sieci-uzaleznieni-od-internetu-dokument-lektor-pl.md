@@ -10,9 +10,7 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 tags:
-- Chiny
 - uzależnienie od Internetu
-- dzieci sieci
 series:
 -
 categories:

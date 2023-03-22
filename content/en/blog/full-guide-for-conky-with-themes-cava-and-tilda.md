@@ -12,8 +12,6 @@ pinned: false
 tags:
 - Elementary OS
 - conky
-- cava
-- tilda
 series:
 -
 categories:

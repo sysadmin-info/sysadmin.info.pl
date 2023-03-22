@@ -11,7 +11,6 @@ authorEmoji: 🐧
 pinned: false
 tags:
 - Elementary OS
-- background
 series:
 -
 categories:
