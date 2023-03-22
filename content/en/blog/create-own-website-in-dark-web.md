@@ -1,7 +1,7 @@
 ---
 title: "Create own website in Dark Web"
 date: 2022-03-03T11:59:24+00:00
-description: "Create own website in Dark Web"
+description: "The content of this article will let you easily set up your own website in the Dark Web aka Dark Net easily."
 draft: false
 hideToc: false
 enableToc: true
