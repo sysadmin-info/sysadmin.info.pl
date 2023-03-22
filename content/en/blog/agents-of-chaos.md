@@ -12,8 +12,8 @@ pinned: false
 tags:
 - Agents of chaos
 - national security
-- cyber conflicts
-- cyber attacks
+- cyberconflicts
+- cyberattacks
 series:
 -
 categories:

@@ -12,8 +12,8 @@ pinned: false
 tags:
 - perfect weapon
 - national security
-- cyber conflicts
-- cyber attacks
+- cyberconflicts
+- cyberattacks
 series:
 -
 categories:

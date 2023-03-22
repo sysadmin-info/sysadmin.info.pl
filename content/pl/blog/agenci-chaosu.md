@@ -12,8 +12,8 @@ pinned: false
 tags:
 - Agents of chaos
 - bezpieczeństwo narodowe
-- cyber konflikty
-- cyber ataki 
+- cyberkonflikty
+- cyberataki 
 series:
 -
 categories:
