@@ -1,7 +1,7 @@
 ---
 title: "Idealna broń – film dokumentalny"
 date:  2020-11-14T17:25:29+00:00
-description: "Idealna broń – film dokumentalny"
+description: "Dokument oparty na bestsellerowej książce Davida E. Sangera, korespondenta ds. bezpieczeństwa narodowego New York Timesa, bada wzrost znaczenia cyberkonfliktów jako sposobu, w jaki współcześnie narody konkurują między sobą i wzajemnie się sabotują."
 draft: false
 hideToc: false
 enableToc: true
