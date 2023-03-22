@@ -20,8 +20,6 @@ image: images/2020-thumbs/linux-cli.webp
 ---
 Article shows how to solve the issue with missing swap and plymouthd sigrtmin error, when swap is not created as LVM, but as a standard swap.
 
-<!--more-->
-
 Boot-Message:
 
 ```

@@ -25,8 +25,6 @@ I'm trying to gather the knowledge related to logwatch, but there is a lot of le
 
 I will update this post with what I find and what I will learn. So far, I will try to present what I understand so far in a simple way.
 
-<!--more-->
-
 For the analysis I will use auditd, which I described here: <https://sysadmin.info.pl/en/blog/selinux-security-policy/>
 
 ## Logwatch

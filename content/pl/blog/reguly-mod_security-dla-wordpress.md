@@ -19,8 +19,6 @@ image: images/2019-thumbs/mod_security.webp
 ---
 Na tutorial odnośnie instalacji mod\_security dla apache, a być może kiedyś dla nginx przyjdzie czas. Dzisiaj wyjaśnię, jak samodzielnie dodawać sobie reguły w pliku whitelist.conf, aby mod\_security nie blokował funkcjonalności WordPress.
 
-<!--more-->
-
 Po zalogowaniu przez ssh do serwera, wpisz komendę:
 
 ```

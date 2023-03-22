@@ -26,8 +26,6 @@ Planowanie wydajności polega na przewidywaniu, jakie będą wymagania dotycząc
 
 W Linuksie można wykorzystać szereg narzędzi do monitorowania wykorzystania zasobów systemowych. Należą do nich polecenia top, ps, pstree, vmstat, sar i free.
 
-<!--more-->
-
 **top**
 
 ```

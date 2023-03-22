@@ -24,8 +24,6 @@ The tutorial is for Red Hat family server distributions like CentOS 7.x, Red Hat
 
 For Debian family server distributions like (Debian, Ubuntu etc.) I recommend to read this article: <a rel="noreferrer noopener" href="https://devconnected.com/how-to-setup-telegraf-influxdb-and-grafana-on-linux/" target="_blank">How To Setup Telegraf InfluxDB and Grafana on Linux</a>, however it does not contain the own domain and fail2ban setup.
 
-<!--more-->
-
 I decided to copy some parts from tutorials. References are at the end of this tutorial:
 
 &#8222;From all the existing modern monitoring tools, the **TIG (Telegraf, InfluxDB and Grafana) stack** is probably one of the most popular ones.

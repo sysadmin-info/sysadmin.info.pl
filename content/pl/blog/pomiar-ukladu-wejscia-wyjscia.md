@@ -21,8 +21,6 @@ image: images/2019-thumbs/linux-cli.webp
 ---
 Aby monitorować zachowanie systemu, należy rozpocząć od utworzenia linii bazowej, która reprezentuje normalne zachowanie systemu. Możesz to zrobić za pomocą narzędzia takiego jak polecenie sar. Następnie możesz użyć takich narzędzi jak netstat, iostat, lsof, w i uptime do monitorowania zachowania systemu, porównując wyniki z poziomem bazowym w celu określenia, czy system ma problemy.
 
-<!--more-->
-
 **netstat**
 
 ```

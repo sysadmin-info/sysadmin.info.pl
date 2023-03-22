@@ -24,8 +24,6 @@ Podstawa instalacji i konfiguracji Cloudflare opisana jest tutaj: <https://sysad
 
 W tym tutorial zajmiemy się konfiguracją połączenia full strict pomiędzy Twoim serwerem a Cloudflare. 
 
-<!--more-->
-
 Do potrzeb tego tutoriala oraz testu w pierwszej kolejności na Cloudflare należy wyłączyć tę pomarańczową chmurkę (trzeba w nią kliknąć) w sekcji DNS swojej domeny, tak aby była ona szara i zapisac zmiany za pomocą przycisku save. W ten sposób sprawdzisz, czy certyfikat Let&#8217;s Encrpt został poprawnie zainstalowany i każda przeglądarka pokazuje, że Twoja strona używa SSL i certyfikatu właśnie od Let&#8217;s Encrypt. 
 
 

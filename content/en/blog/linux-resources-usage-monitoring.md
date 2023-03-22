@@ -26,8 +26,6 @@ Capacity planning involves predicting what the capacity requirements for a syste
 
 In Linux you can use a range of tools to monitor system resource use. These include the top, ps, pstree, vmstat, sar and free commands.
 
-<!--more-->
-
 **top**
 
 ```
