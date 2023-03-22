@@ -1,7 +1,7 @@
 ---
 title: "Using blocklist with iptables and firewalld"
 date: 2020-10-04T10:09:30+00:00
-description: "Using blocklist with iptables and firewalld"
+description: "If you have any kind of server connected to the Internet, you are no doubt aware that no matter how small or unimportant it might seem, it is frequently probed, tested or subject to various attempts at abuse."
 draft: false
 hideToc: false
 enableToc: true
@@ -20,8 +20,6 @@ categories:
 image: images/2020-thumbs/firewall.webp
 ---
 If you have any kind of server connected to the Internet, you are no doubt aware that no matter how small or unimportant it might seem, it is frequently probed, tested or subject to various attempts at abuse. These attacks come from so many malicious hosts that it is impossible to keep track by hand. So I started looking for a way to implement an automated blocklist to use with iptables and firewalld which I use on my servers.
-
-<!--more-->
 
 ### ipset
 
