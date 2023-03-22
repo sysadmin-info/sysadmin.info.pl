@@ -19,7 +19,6 @@ categories:
 - Home Assistant
 image: images/2022-thumbs/adguard.webp
 ---
-{{< featuredImage >}}
 This video describes how to install Adguard Home addon in Home Assistant Supervised. AdGuard Home is a network-wide, open source software for blocking ads & tracking and for gaining control over all traffic in your home network.
 
 {{< youtube qNB4ldWldmU >}}
