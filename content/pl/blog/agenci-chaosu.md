@@ -11,13 +11,13 @@ authorEmoji: 🐧
 pinned: false
 tags:
 - Agents of chaos
-- national swecurity
-- cyber conflicts
-- cyber attacks
+- bezpieczeństwo narodowe
+- cyber konflikty
+- cyber ataki 
 series:
 -
 categories:
-- Documentaries
+- Filmy dokumentalne
 image: images/2022-thumbs/agents-of-chaos.webp
 ---
 {{< youtube M-OA7H8DoJM >}}
