@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>NUT on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/tags/nut/</link>
+    <description>Recent content in NUT on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Tue, 28 Jun 2022 14:17:34 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/tags/nut/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Configure the NUT to manage a UPS through the Home Assistant as a Docker container on a Raspberry Pi</title>
+        <link>https://sysadmin.info.pl/en/blog/configure-the-nut-to-manage-a-ups-through-the-home-assistant-as-a-docker-container-on-a-raspberry-pi/</link>
+        <pubDate>Tue, 28 Jun 2022 14:17:34 +0000</pubDate>
+        
+        <atom:modified>Tue, 28 Jun 2022 14:17:34 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/configure-the-nut-to-manage-a-ups-through-the-home-assistant-as-a-docker-container-on-a-raspberry-pi/</guid>
+        <description>The primary goal of the Network UPS Tools (NUT) project is to provide support for Power Devices, such as Uninterruptible Power Supplies, Power Distribution Units, Automatic Transfer Switches, Power Supply Units and Solar Controllers. NUT provides a common protocol and set of tools to monitor and manage such devices, and to consistently name equivalent features and data points, across a vast range of vendor-specific protocols and connection media types.
+Configure the NUT to manage a UPS through the Home Assistant as a Docker container on a Raspberry PiVideo describes the NUT configuration and how to install Docker, Docker Compose and run the Home Assistant as a Docker container.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/raspberry_pi_nut.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>NUT</category>
+            
+          
+            
+              <category>UPS</category>
+            
+          
+        
+        
+          
+            
+              <category>Raspberry Pi</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

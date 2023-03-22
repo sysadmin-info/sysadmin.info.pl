@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>IT security on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/categories/it-security/</link>
+    <description>Recent content in IT security on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Thu, 03 Mar 2022 11:50:26 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/categories/it-security/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Podstawowa konfiguracja serwera po zainstalowaniu systemu RHEL 8.5 (minimalna).</title>
+        <link>https://sysadmin.info.pl/pl/blog/podstawowa-konfiguracja-serwera-po-zainstalowaniu-systemu-rhel-8-5-minimalna/</link>
+        <pubDate>Thu, 03 Mar 2022 11:50:26 +0000</pubDate>
+        
+        <atom:modified>Thu, 03 Mar 2022 11:50:26 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/podstawowa-konfiguracja-serwera-po-zainstalowaniu-systemu-rhel-8-5-minimalna/</guid>
+        <description>Podstawowa konfiguracja po instalacji RHEL 8.5 (minimal). Zapisałem jako skrypt.sh, nadałem uprawnienia do wykonania chmod u+x skrypt.sh i uruchomiłem jako root ./skrypt.sh, chociaż wiem, że skrypty powinno się odpalać z sudo dla bezpieczeństwa. Tyle, że ja wiem, co robię i po co. Wszystko opisane komentarzami po angielsku. User został utworzony podczas instalacji systemu, stąd zmiana. Na codzień korzystam z usera i sudo. Tu na szybko rozwiązanie. Te komendy można wykonać równie dobrze z użyciem sudo.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/hardened.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Bash</category>
+            
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Instalacja i konfiguracja auditd</title>
+        <link>https://sysadmin.info.pl/pl/blog/instalacja-i-konfiguracja-auditd/</link>
+        <pubDate>Sun, 14 Feb 2021 14:49:24 +0000</pubDate>
+        
+        <atom:modified>Sun, 14 Feb 2021 14:49:24 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/instalacja-i-konfiguracja-auditd/</guid>
+        <description>Reguły w /etc/audit/rules.d/audit.rules###################### This is an example configuration suitable for most systems# Before running with this configuration:# - Remove or comment items which are not applicable# - Check paths of binaries and files########################################### Remove any existing rules######################-D###################### Buffer Size# Might need to be increased, depending on the load of your system.#####################-b 8192###################### Failure Mode###################### 0=Silent# 1=printk, print failure message# 2=panic, halt system-f 1###################### Audit the audit logs.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2021-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>auditd</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Moja praca inżynierska</title>
+        <link>https://sysadmin.info.pl/pl/blog/moja-praca-inzynierska/</link>
+        <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
+        
+        <atom:modified>Sun, 04 Oct 2020 07:39:43 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/moja-praca-inzynierska/</guid>
+        <description>Cześć,
+Postanowiłem opublikować moją pracę inżynierską pt.: „Utwardzanie serwera sieciowego opartego o system Linux”. Jest to zebrana wiedza z różnych stron internetrowych oraz książek. Nie jest to w zasadzie żadne „rocket science”. Praca jest własnością Uniwersytetu Łódzkiego i obejmują ją prawa autorskie. Każda strona zawiera znak wodny. Publikacja treści bez mojej zgody jest zabroniona. Uznałem, że może się ona komuś przydać. Wszelkie pytania i uwagi mile widziane.
+&amp;lt;&amp;lt; &gt;&gt; &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/laptop.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>praca inżynierska</category>
+            
+          
+            
+              <category>Linux hardening</category>
+            
+          
+            
+              <category>utwardzanie Linux</category>
+            
+          
+            
+              <category>zabezpieczenie serwera poczty</category>
+            
+          
+            
+              <category>Postfix</category>
+            
+          
+            
+              <category>Dovecot</category>
+            
+          
+            
+              <category>zabezpieczenie Samba</category>
+            
+          
+            
+              <category>zabezpieczenie serwera web</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Reguły  mod_security dla WordPress</title>
+        <link>https://sysadmin.info.pl/pl/blog/reguly-mod_security-dla-wordpress/</link>
+        <pubDate>Wed, 23 Oct 2019 04:23:47 +0000</pubDate>
+        
+        <atom:modified>Wed, 23 Oct 2019 04:23:47 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/reguly-mod_security-dla-wordpress/</guid>
+        <description>&lt;p&gt;Na tutorial odnośnie instalacji mod_security dla apache, a być może kiedyś dla nginx przyjdzie czas. Dzisiaj wyjaśnię, jak samodzielnie dodawać sobie reguły w pliku whitelist.conf, aby mod_security nie blokował funkcjonalności WordPress.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/mod_security.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>mod_security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>fail2ban – instalacja i konfiguracja</title>
+        <link>https://sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</link>
+        <pubDate>Sat, 28 Sep 2019 07:04:56 +0000</pubDate>
+        
+        <atom:modified>Sat, 28 Sep 2019 07:04:56 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</guid>
+        <description>Uwaga, poniższy tutorial jest fragmentem mojej pracy inżynierskiej pt.: „Utwardzanie serwera sieciowego opartego o system Linux.” pod kierunkiem dr. hab. Kordiana Smolińskiego w Katedrze Fizyki Teoretycznej WFiIS UŁ obronionej w czerwcu 2019.
+CentOS Ubuntu CentOS Aby zainstalować Fail2Ban na CentOS 7.6, w pierwszej kolejności trzeba będzie zainstalować repozytorium EPEL (ang. Extra Packages for Enterprise Linux). EPEL zawiera dodatkowe pakiety dla wszystkich wersji CentOS, jednym z tych dodatkowych pakietów jest Fail2Ban.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/fail2ban.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>fail2ban</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Konfiguracja WordPress do połączenia ze zdalną bazą danych</title>
+        <link>https://sysadmin.info.pl/pl/blog/konfiguracja-wordpress-do-polaczenia-ze-zdalna-baza-danych/</link>
+        <pubDate>Sun, 22 Sep 2019 17:34:27 +0000</pubDate>
+        
+        <atom:modified>Sun, 22 Sep 2019 17:34:27 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/konfiguracja-wordpress-do-polaczenia-ze-zdalna-baza-danych/</guid>
+        <description>Cześć,
+Opiszę tutaj krok po kroku konfigurację WordPress w konfiguracji dwóch serwerów. Mogą to być serwery fizyczne, lub zainstalowane na wirtualnych maszynach, czy to za pomocą VirtualBox , czy HyperV.
+Zazwyczaj spotykamy się z tymi konfiguracjami powyżej, oczywiście są też inne rozwiązania, jak np. w przypadku usługodawcy hostingu, który ma w innym miejscu bazę danych, a w innym trzyma katalog na pliki strony internetowej, lecz ja zajmę się przypadkiem klasycznym, gdy rozróżniamy dwa różne serwery.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/wp.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+            
+              <category>WordPress</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>SELinux polityka bezpieczeństwa</title>
+        <link>https://sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</link>
+        <pubDate>Sun, 22 Sep 2019 17:26:09 +0000</pubDate>
+        
+        <atom:modified>Sun, 22 Sep 2019 17:26:09 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</guid>
+        <description>Nie jestem eskpertem od SELinux, ale gdy przeczytałem wiele poradników (ang. tutorial) na ten temat i widziałem dziesiątki porad, które wszystkie jednym głosem oznajmiały: wyłącz SELinux, ponieważ sprawia problemy, uznałem, że czas podważyć tę tezę i udowodnić, że SELinux może być prosty w obsłudze.
+W sytuacji, gdy jakaś usługa nie uruchamia się, z powodu problemów z uprawnieniami, tworząc plik ID procesu (PID), należy zaktualizować politykę SELinux w zakresie egzekwowania zasad w stosunku do aplikacji, która domyślnie nie jest uwzględniona w politykach tzw.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/selinux.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>selinux</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

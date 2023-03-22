@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Qemu KVM on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/series/qemu-kvm/</link>
+    <description>Recent content in Qemu KVM on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Tue, 25 Oct 2022 11:39:32 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/series/qemu-kvm/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>How to install properly a virtual machine in QEMU KVM</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</link>
+        <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
+        
+        <atom:modified>Tue, 25 Oct 2022 11:39:32 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</guid>
+        <description>In this video I explained how to properly install the QEMU KVM virtual machine. I provided two methods of installation and described in details how to make it work.preallocation=metadata – allocates the space required by the metadata but doesn’t allocate any space for the data. This is the quickest to provision but the slowest for guest writes. Read the article: https://www.jamescoyle.net/how-to/181&amp;amp;#8230;
+model=virtio virtualport_type=openvswitch explained here: https://www.mankier.com/1/virt-instal&amp;amp;#8230;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/vm-in-qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to fix QEMU KVM virtual machine network configuration through the xml</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</link>
+        <pubDate>Sat, 22 Oct 2022 11:36:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 22 Oct 2022 11:36:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</guid>
+        <description> In this video I explained the QEMU KVM network configuration issue connected with type direct and provided a solution by editing a configuration in xml file</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-fix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Issue with a type direct in QEMU KVM network configuration explained</title>
+        <link>https://sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</link>
+        <pubDate>Sat, 22 Oct 2022 11:31:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 22 Oct 2022 11:31:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</guid>
+        <description>In this video I explained the QEMU KVM network configuration issue connected with type direct.Manual for virt-install command:
+https://www.mankier.com/1/virt-install#Networking_Options</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-config-explained.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to install QEMU KVM and configure virtual machine in openSUSE 15.4</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</link>
+        <pubDate>Mon, 17 Oct 2022 11:33:00 +0000</pubDate>
+        
+        <atom:modified>Mon, 17 Oct 2022 11:33:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</guid>
+        <description>How to install QEMU KVM and configure virtual machine in openSUSE 15.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to setup and configure OpenvSwitch in Debian 11</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</link>
+        <pubDate>Sat, 15 Oct 2022 14:36:56 +0000</pubDate>
+        
+        <atom:modified>Sat, 15 Oct 2022 14:36:56 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</guid>
+        <description>The video explains how to properly install openvswitch in Debian 11 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https://github.com/sysadmin-info/openvswitch/blob/main/ovs-debian.sh
+Download it to the server, chmod +x ovs-debian.sh and run ./ovs-debian.sh</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch-debian.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to setup and configure OpenvSwitch in openSUSE 15.4</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</link>
+        <pubDate>Thu, 13 Oct 2022 11:00:08 +0000</pubDate>
+        
+        <atom:modified>Thu, 13 Oct 2022 11:00:08 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</guid>
+        <description>The video explains how to properly install openvswitch in openSUSE 15.4 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https://github.com/sysadmin-info/openvswitch/blob/main/ovs-suse.sh
+Download it to the server, chmod +x ovs-suse.sh and run ./ovs-suse.sh</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

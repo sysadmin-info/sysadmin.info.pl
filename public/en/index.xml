@@ -1,0 +1,1816 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/</link>
+    <description>Recent content on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Sun, 19 Mar 2023 22:05:03 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+      <item>
+        <title>Welcome to the Sysadmin blog</title>
+        <link>https://sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</link>
+        <pubDate>Sun, 19 Mar 2023 22:05:03 +0000</pubDate>
+        
+        <atom:modified>Sun, 19 Mar 2023 22:05:03 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</guid>
+        <description>Hi,
+What follows is history. More than 3 years have passed since then. Is that a lot or a little? For me it has changed a lot, as I managed to move to the third line at Fujitsu and worked more than a year in the Linux team and then moved to Research and Development, where I now work as Quality Assurance, but basically my work is still related to Linux, only that I now work with SLES and open SUSE.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>sysadmin</category>
+            
+          
+        
+        
+          
+            
+              <category>general</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to install properly a virtual machine in QEMU KVM</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</link>
+        <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
+        
+        <atom:modified>Tue, 25 Oct 2022 11:39:32 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</guid>
+        <description>In this video I explained how to properly install the QEMU KVM virtual machine. I provided two methods of installation and described in details how to make it work.preallocation=metadata – allocates the space required by the metadata but doesn’t allocate any space for the data. This is the quickest to provision but the slowest for guest writes. Read the article: https://www.jamescoyle.net/how-to/181&amp;amp;#8230;
+model=virtio virtualport_type=openvswitch explained here: https://www.mankier.com/1/virt-instal&amp;amp;#8230;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/vm-in-qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to fix QEMU KVM virtual machine network configuration through the xml</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</link>
+        <pubDate>Sat, 22 Oct 2022 11:36:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 22 Oct 2022 11:36:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</guid>
+        <description> In this video I explained the QEMU KVM network configuration issue connected with type direct and provided a solution by editing a configuration in xml file</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-fix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Issue with a type direct in QEMU KVM network configuration explained</title>
+        <link>https://sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</link>
+        <pubDate>Sat, 22 Oct 2022 11:31:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 22 Oct 2022 11:31:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</guid>
+        <description>In this video I explained the QEMU KVM network configuration issue connected with type direct.Manual for virt-install command:
+https://www.mankier.com/1/virt-install#Networking_Options</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-config-explained.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to install QEMU KVM and configure virtual machine in openSUSE 15.4</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</link>
+        <pubDate>Mon, 17 Oct 2022 11:33:00 +0000</pubDate>
+        
+        <atom:modified>Mon, 17 Oct 2022 11:33:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</guid>
+        <description>How to install QEMU KVM and configure virtual machine in openSUSE 15.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to setup and configure OpenvSwitch in Debian 11</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</link>
+        <pubDate>Sat, 15 Oct 2022 14:36:56 +0000</pubDate>
+        
+        <atom:modified>Sat, 15 Oct 2022 14:36:56 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</guid>
+        <description>The video explains how to properly install openvswitch in Debian 11 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https://github.com/sysadmin-info/openvswitch/blob/main/ovs-debian.sh
+Download it to the server, chmod +x ovs-debian.sh and run ./ovs-debian.sh</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch-debian.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to setup and configure OpenvSwitch in openSUSE 15.4</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</link>
+        <pubDate>Thu, 13 Oct 2022 11:00:08 +0000</pubDate>
+        
+        <atom:modified>Thu, 13 Oct 2022 11:00:08 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</guid>
+        <description>The video explains how to properly install openvswitch in openSUSE 15.4 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https://github.com/sysadmin-info/openvswitch/blob/main/ovs-suse.sh
+Download it to the server, chmod +x ovs-suse.sh and run ./ovs-suse.sh</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Troubleshooting slow network communication or Connection Timeouts in Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/troubleshooting-slow-network-communication-or-connection-timeouts-in-linux/</link>
+        <pubDate>Sun, 02 Oct 2022 09:43:17 +0000</pubDate>
+        
+        <atom:modified>Sun, 02 Oct 2022 09:43:17 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/troubleshooting-slow-network-communication-or-connection-timeouts-in-linux/</guid>
+        <description>Troubleshooting slow network communication or Connection Timeouts in LinuxCommands used:
+ifconfig, netstat, ss, ip, ethtool, iperf3
+Bandwidth delay product:
+https://en.wikipedia.org/wiki/Bandwidth-delay_product
+Round Trip Time:
+https://en.wikipedia.org/wiki/Round-trip_delay</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/network.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>ifconfig</category>
+            
+          
+            
+              <category>netstat</category>
+            
+          
+            
+              <category>ip</category>
+            
+          
+            
+              <category>ethtool</category>
+            
+          
+            
+              <category>iperf3</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Detailed ssh configuration with RSA keys explained.</title>
+        <link>https://sysadmin.info.pl/en/blog/detailed-ssh-configuration-with-rsa-keys-explained/</link>
+        <pubDate>Sun, 02 Oct 2022 09:41:03 +0000</pubDate>
+        
+        <atom:modified>Sun, 02 Oct 2022 09:41:03 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/detailed-ssh-configuration-with-rsa-keys-explained/</guid>
+        <description>In this video I described ssh configuration and how to generate RSA keys and how to put them into authorized_keys. Step by step explanation.
+Detailed ssh configuration with RSA keys explained.Script that is doing everything for you:
+https://github.com/sysadmin-info/sshd-configurator/blob/main/sshd-config.sh
+Genpasswd:
+https://github.com/sysadmin-info/sshd-configurator/blob/main/genpasswd</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/ssh.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>SSH</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>git video course – advanced aspects of configuring the git.</title>
+        <link>https://sysadmin.info.pl/en/blog/git-video-course-advanced-aspects-of-configuring-the-git/</link>
+        <pubDate>Thu, 22 Sep 2022 08:50:49 +0000</pubDate>
+        
+        <atom:modified>Thu, 22 Sep 2022 08:50:49 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/git-video-course-advanced-aspects-of-configuring-the-git/</guid>
+        <description>Watch the playlist
+Use the next button in the video to watch lessons, or the playlist button.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/git-01.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Git</category>
+            
+          
+        
+        
+          
+            
+              <category>Git</category>
+            
+          
+        
+        
+          
+            
+              <category>Git</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to install Adguard Home as an addon in Home Assistant Supervised</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-install-adguard-home-as-an-addon-in-home-assistant-supervised/</link>
+        <pubDate>Fri, 29 Jul 2022 10:13:13 +0000</pubDate>
+        
+        <atom:modified>Fri, 29 Jul 2022 10:13:13 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-install-adguard-home-as-an-addon-in-home-assistant-supervised/</guid>
+        <description>This video describes how to install Adguard Home addon in Home Assistant Supervised. AdGuard Home is a network-wide, open source software for blocking ads &amp;amp; tracking and for gaining control over all traffic in your home network.
+How to install Adguard Home as an addon in Home Assistant Supervised# Install AdGuard Home addon in the Settings -&amp;gt; Addons - Addons shop# Because AdGuard Home will be our resolver and we do not want to see the below warnings when we check the status:sudo systemctl status systemd-resolved.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/adguard.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Home Assistant</category>
+            
+          
+            
+              <category>Raspberry Pi</category>
+            
+          
+        
+        
+          
+            
+              <category>Raspberry Pi</category>
+            
+          
+            
+              <category>Home Assistant</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to Install Home Assistant Supervised on a Raspberry Pi 4b – the official way</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-install-home-assistant-supervised-on-a-raspberry-pi-4b-the-official-way/</link>
+        <pubDate>Fri, 29 Jul 2022 09:39:10 +0000</pubDate>
+        
+        <atom:modified>Fri, 29 Jul 2022 09:39:10 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-install-home-assistant-supervised-on-a-raspberry-pi-4b-the-official-way/</guid>
+        <description>This video describes how to install Home Assistant Supervised. Home Assistant (former Hass.io) is a container-based system for managing your Home Assistant Core installation and related applications. The system is controlled via Home Assistant which communicates with the Supervisor. The Supervisor provides an API to manage the installation. This includes changing network settings or installing and updating software.
+How to Install Home Assistant Supervised on a Raspberry Pi 4b – the official way# Check the OSsudo cat /etc/os-release# Enter your user home directorycd /home/youruser# Update the OSsudo apt update &amp;amp;&amp;amp; sudo apt upgrade -y &amp;amp;&amp;amp; sudo apt autoremove -y# Fix broken previous installations if anysudo apt --fix-broken install# Additionally installl dnsutils to be able to use dig command to any addresssudo apt install dnsutils# Install necessary tools for the Home Assistant Supervisedsudo apt install jq wget curl udisks2 libglib2.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/ha.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Home Assistant</category>
+            
+          
+            
+              <category>Raspberry Pi</category>
+            
+          
+        
+        
+          
+            
+              <category>Raspberry Pi</category>
+            
+          
+            
+              <category>Home Assistant</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Configure the NUT to manage a UPS through the Home Assistant as a Docker container on a Raspberry Pi</title>
+        <link>https://sysadmin.info.pl/en/blog/configure-the-nut-to-manage-a-ups-through-the-home-assistant-as-a-docker-container-on-a-raspberry-pi/</link>
+        <pubDate>Tue, 28 Jun 2022 14:17:34 +0000</pubDate>
+        
+        <atom:modified>Tue, 28 Jun 2022 14:17:34 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/configure-the-nut-to-manage-a-ups-through-the-home-assistant-as-a-docker-container-on-a-raspberry-pi/</guid>
+        <description>The primary goal of the Network UPS Tools (NUT) project is to provide support for Power Devices, such as Uninterruptible Power Supplies, Power Distribution Units, Automatic Transfer Switches, Power Supply Units and Solar Controllers. NUT provides a common protocol and set of tools to monitor and manage such devices, and to consistently name equivalent features and data points, across a vast range of vendor-specific protocols and connection media types.
+Configure the NUT to manage a UPS through the Home Assistant as a Docker container on a Raspberry PiVideo describes the NUT configuration and how to install Docker, Docker Compose and run the Home Assistant as a Docker container.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/raspberry_pi_nut.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>NUT</category>
+            
+          
+            
+              <category>UPS</category>
+            
+          
+        
+        
+          
+            
+              <category>Raspberry Pi</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Agents of chaos</title>
+        <link>https://sysadmin.info.pl/en/blog/agents-of-chaos/</link>
+        <pubDate>Mon, 21 Mar 2022 11:36:01 +0000</pubDate>
+        
+        <atom:modified>Mon, 21 Mar 2022 11:36:01 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/agents-of-chaos/</guid>
+        <description>Agents of chaos - trailerDespite appearances, this is not a documentary about Russian interference in the 2016 US presidential election. I would call it a revealing of the cards, showing the truth about the Russian invasion and the reasons for the war in Ukraine first in 2014 and then in 2022. It is worth noting the activities of the Russian troll farm - the IRA (Internet Research Agency), for which Ukraine was a test battlefield in cyberspace.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/agents-of-chaos.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Agents of chaos</category>
+            
+          
+            
+              <category>national security</category>
+            
+          
+            
+              <category>cyberconflicts</category>
+            
+          
+            
+              <category>cyberattacks</category>
+            
+          
+        
+        
+          
+            
+              <category>Documentaries</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Create own website in Dark Web</title>
+        <link>https://sysadmin.info.pl/en/blog/create-own-website-in-dark-web/</link>
+        <pubDate>Thu, 03 Mar 2022 11:59:24 +0000</pubDate>
+        
+        <atom:modified>Thu, 03 Mar 2022 11:59:24 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/create-own-website-in-dark-web/</guid>
+        <description>Hi, The below content will let you easily set up your own website in the Dark Web aka Dark Net easily. Bear in mind that this is the tutorial for the Red Hat family distros like CentOS, Red Hat, Fedora etc. For Debian family distros it is a little bit different, but not so hard to modify it.
+Very basic setup of your own website in Dark Web Below you have a very basic configuration that allows you to setup what is needed.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/darknet.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Dark Web</category>
+            
+          
+            
+              <category>Dark Net</category>
+            
+          
+            
+              <category>own website in Dark Web</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Server basic configuration after installing RHEL 8.5 (minimal).</title>
+        <link>https://sysadmin.info.pl/en/blog/server-basic-configuration-after-installing-rhel-8-5-minimal/</link>
+        <pubDate>Thu, 03 Mar 2022 11:48:18 +0000</pubDate>
+        
+        <atom:modified>Thu, 03 Mar 2022 11:48:18 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/server-basic-configuration-after-installing-rhel-8-5-minimal/</guid>
+        <description>I saved it as script.sh, gave it chmod u+x script.sh executable permissions and ran it as root ./script.sh, although I know that scripts should be run from sudo for security. But I know what I’m doing and why. Everything is described with comments in English. User was created during installation of the system, hence the change. I use sudo and user on a daily basis. Here it is a quick solution.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/hardened.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Bash</category>
+            
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Bash script that blocks web server (apache/nginx/litespeed) scanners.</title>
+        <link>https://sysadmin.info.pl/en/blog/bash-script-that-blocks-web-server-apache-nginx-litespeed-scanners/</link>
+        <pubDate>Mon, 22 Feb 2021 20:11:29 +0000</pubDate>
+        
+        <atom:modified>Mon, 22 Feb 2021 20:11:29 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/bash-script-that-blocks-web-server-apache-nginx-litespeed-scanners/</guid>
+        <description>Bash script that blocks web server (apache/nginx/litespeed) scannersBash script that blocks web server (apache/nginx/litespeed) scanners. It checks the 400-408 errors or any other in the log you will choose to scan and extracts IP addresses of scanners which are trying to scan a web server and adds IP addresses to the ipset which drops the connection.
+#!/bin/bash######################################################### Apache access_log ####################################################################Look for the file and if does not exist create it.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2021-thumbs/bash_script_that_blocks_web_server_scanners.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Bash</category>
+            
+          
+            
+              <category>blocking web server scanners</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>The perfect weapon</title>
+        <link>https://sysadmin.info.pl/en/blog/the-perfect-weapon/</link>
+        <pubDate>Sat, 14 Nov 2020 17:29:44 +0000</pubDate>
+        
+        <atom:modified>Sat, 14 Nov 2020 17:29:44 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/the-perfect-weapon/</guid>
+        <description>Based on a best-selling book by New York Times national security correspondent David E. Sanger, The Perfect Weapon explores the rise of cyber conflict as the primary way nations now compete with and sabotage one another.
+Directed by Emmy-winning filmmaker John Maggio (Panic: The Untold Story of the 2008 Financial Crisis) and featuring interviews with top military, intelligence, and political officials on the frontlines of cyberterrorism, the documentary brings to light the combatants and innocent victims caught in the crosshairs of a hidden war that has been going on for decades — a war that America started, but has no idea how to finish.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>perfect weapon</category>
+            
+          
+            
+              <category>national security</category>
+            
+          
+            
+              <category>cyberconflicts</category>
+            
+          
+            
+              <category>cyberattacks</category>
+            
+          
+        
+        
+          
+            
+              <category>Documentaries</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>logwatch auditd analysis</title>
+        <link>https://sysadmin.info.pl/en/blog/logwatch-auditd-analysis/</link>
+        <pubDate>Wed, 14 Oct 2020 07:13:25 +0000</pubDate>
+        
+        <atom:modified>Wed, 14 Oct 2020 07:13:25 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/logwatch-auditd-analysis/</guid>
+        <description>&lt;p&gt;Hello,&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m trying to gather the knowledge related to logwatch, but there is a lot of learning to understand kernel error codes.&lt;/p&gt;
+&lt;p&gt;I will update this post with what I find and what I will learn. So far, I will try to present what I understand so far in a simple way.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+            
+              <category>logwatch</category>
+            
+          
+            
+              <category>auditd</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Using blocklist with iptables and firewalld</title>
+        <link>https://sysadmin.info.pl/en/blog/using-blocklist-with-iptables-and-firewalld/</link>
+        <pubDate>Sun, 04 Oct 2020 10:09:30 +0000</pubDate>
+        
+        <atom:modified>Sun, 04 Oct 2020 10:09:30 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/using-blocklist-with-iptables-and-firewalld/</guid>
+        <description>&lt;p&gt;If you have any kind of server connected to the Internet, you are no doubt aware that no matter how small or unimportant it might seem, it is frequently probed, tested or subject to various attempts at abuse. These attacks come from so many malicious hosts that it is impossible to keep track by hand. So I started looking for a way to implement an automated blocklist to use with iptables and firewalld which I use on my servers.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/firewall.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+            
+              <category>firewalld</category>
+            
+          
+            
+              <category>iptables</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>The system does not find the root partition, installed on lvm</title>
+        <link>https://sysadmin.info.pl/en/blog/the-system-does-not-find-the-root-partition-installed-on-lvm/</link>
+        <pubDate>Sun, 20 Sep 2020 10:37:17 +0000</pubDate>
+        
+        <atom:modified>Sun, 20 Sep 2020 10:37:17 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/the-system-does-not-find-the-root-partition-installed-on-lvm/</guid>
+        <description>&lt;p&gt;Article shows how to solve the issue with missing swap and plymouthd sigrtmin error, when swap is not created as LVM, but as a standard swap.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>LVM</category>
+            
+          
+            
+              <category>root partition missing</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to setup and secure Telegraf, InfluxDB and Grafana on Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux/</link>
+        <pubDate>Thu, 10 Sep 2020 19:05:29 +0000</pubDate>
+        
+        <atom:modified>Thu, 10 Sep 2020 19:05:29 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux/</guid>
+        <description>&lt;p&gt;The tutorial is for Red Hat family server distributions like CentOS 7.x, Red Hat 7.x, Fedora29 or newer (current version is 32), etc.&lt;/p&gt;
+&lt;p&gt;For Debian family server distributions like (Debian, Ubuntu etc.) I recommend to read this article: &lt;a rel=&#34;noreferrer noopener&#34; href=&#34;https://devconnected.com/how-to-setup-telegraf-influxdb-and-grafana-on-linux/&#34; target=&#34;_blank&#34;&gt;How To Setup Telegraf InfluxDB and Grafana on Linux&lt;/a&gt;, however it does not contain the own domain and fail2ban setup.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/grafana.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+            
+              <category>Grafana</category>
+            
+          
+            
+              <category>Telegraf</category>
+            
+          
+            
+              <category>InfluxDB</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Full guide for conky with themes, cava and tilda.</title>
+        <link>https://sysadmin.info.pl/en/blog/full-guide-for-conky-with-themes-cava-and-tilda/</link>
+        <pubDate>Fri, 15 May 2020 17:29:15 +0000</pubDate>
+        
+        <atom:modified>Fri, 15 May 2020 17:29:15 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/full-guide-for-conky-with-themes-cava-and-tilda/</guid>
+        <description> Full guide for conky with themes, cava and tilda.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/conky-full-guide.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Elementary OS</category>
+            
+          
+            
+              <category>conky</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Measuring system i/o</title>
+        <link>https://sysadmin.info.pl/en/blog/measuring-system-i-o/</link>
+        <pubDate>Mon, 23 Dec 2019 16:59:15 +0000</pubDate>
+        
+        <atom:modified>Mon, 23 Dec 2019 16:59:15 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/measuring-system-i-o/</guid>
+        <description>&lt;p&gt;To monitor system behavior, you need to start by creating a baseline that represents normal system behavior. You can do this using a tool like the sar command. You can then use tools such as netstat, iostat, lsof, w and uptime to monitor system behavior, comparing the results to the baseline to determine whether the system is experiencing problems.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>netstat</category>
+            
+          
+            
+              <category>iostat</category>
+            
+          
+            
+              <category>lsof</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Linux Resources usage monitoring</title>
+        <link>https://sysadmin.info.pl/en/blog/linux-resources-usage-monitoring/</link>
+        <pubDate>Mon, 23 Dec 2019 16:12:49 +0000</pubDate>
+        
+        <atom:modified>Mon, 23 Dec 2019 16:12:49 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/linux-resources-usage-monitoring/</guid>
+        <description>&lt;p&gt;Capacity planning involves predicting what the capacity requirements for a system will be in future, and planning how to meet these requirements. Monitoring system resource use is important for capacity planning, because it establishes whether existing resource use is approaching capacity limits.&lt;/p&gt;
+&lt;p&gt;In Linux you can use a range of tools to monitor system resource use. These include the top, ps, pstree, vmstat, sar and free commands.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>top</category>
+            
+          
+            
+              <category>ps</category>
+            
+          
+            
+              <category>pstree</category>
+            
+          
+            
+              <category>sar</category>
+            
+          
+            
+              <category>vmstat</category>
+            
+          
+            
+              <category>free</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to change the grey background on lock screen in Elementary OS</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-change-the-grey-background-on-lock-screen-in-elementary-os/</link>
+        <pubDate>Sat, 21 Dec 2019 13:28:49 +0000</pubDate>
+        
+        <atom:modified>Sat, 21 Dec 2019 13:28:49 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-change-the-grey-background-on-lock-screen-in-elementary-os/</guid>
+        <description>How to change the grey background on lock screen in Elementary OSBelow there is a better explanation from Eric Melo. Thanks Eric for this video!</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/elementary-os_background.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Elementary OS</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Access Control List in Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/access-control-list-in-linux/</link>
+        <pubDate>Mon, 11 Nov 2019 22:05:32 +0000</pubDate>
+        
+        <atom:modified>Mon, 11 Nov 2019 22:05:32 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/access-control-list-in-linux/</guid>
+        <description>Access Control List in LinuxHow to use Access Control List in Linux terminal to set permissions.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to Lock and Unlock User in Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-lock-and-unlock-user-in-linux/</link>
+        <pubDate>Sun, 10 Nov 2019 12:54:09 +0000</pubDate>
+        
+        <atom:modified>Sun, 10 Nov 2019 12:54:09 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-lock-and-unlock-user-in-linux/</guid>
+        <description>How to Lock and Unlock User in LinuxHow do you lock a user account in Linux? Even more importantly, how do you unlock the user in Linux? Learn various ways of locking and unlocking users in Linux command line.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Privacy policy</title>
+        <link>https://sysadmin.info.pl/en/privacy/</link>
+        <pubDate>Thu, 07 Nov 2019 08:13:36 +0000</pubDate>
+        
+        <atom:modified>Thu, 07 Nov 2019 08:13:36 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/privacy/</guid>
+        <description>Privacy Policy The sysadmin.info.pl portal does not process, share or use for marketing purposes the data provided by the Users of the portal. You can be sure that in the future we will not process, share or use your data for any other purposes than the simple collection of statistics.
+The sysadmin.info.pl portal is not responsible for the content and opinions expressed by users in comments or descriptions. They are exclusively the property of the users from whom they originate.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>privacy</category>
+            
+          
+        
+        
+          
+            
+              <category>general</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Kevin Mitnick talks about security in IT</title>
+        <link>https://sysadmin.info.pl/en/blog/kevin-mitnick-talks-about-security-in-it/</link>
+        <pubDate>Tue, 05 Nov 2019 21:48:12 +0000</pubDate>
+        
+        <atom:modified>Tue, 05 Nov 2019 21:48:12 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/kevin-mitnick-talks-about-security-in-it/</guid>
+        <description> Kevin Mitnick talks about security in IT</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/kevin-mitnick.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Kevin Mitnick</category>
+            
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>Documentaries</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>The mind behind Linux – Linus Torvalds – TED</title>
+        <link>https://sysadmin.info.pl/en/blog/the-mind-behind-linux-linus-torvalds-ted/</link>
+        <pubDate>Tue, 05 Nov 2019 19:47:08 +0000</pubDate>
+        
+        <atom:modified>Tue, 05 Nov 2019 19:47:08 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/the-mind-behind-linux-linus-torvalds-ted/</guid>
+        <description> The mind behind Linux – Linus Torvalds – TED</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linus-torvalds.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Linus Torvalds</category>
+            
+          
+        
+        
+          
+            
+              <category>Documentaries</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>China’s Web Junkies: Internet Addiction Documentary</title>
+        <link>https://sysadmin.info.pl/en/blog/chinas-web-junkies-internet-addiction-documentary/</link>
+        <pubDate>Sun, 03 Nov 2019 09:43:35 +0000</pubDate>
+        
+        <atom:modified>Sun, 03 Nov 2019 09:43:35 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/chinas-web-junkies-internet-addiction-documentary/</guid>
+        <description>China&amp;#8217;s Web Junkies: Internet Addiction DocumentarySource: https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/china-web-junkies.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Internet Addiction</category>
+            
+          
+        
+        
+          
+            
+              <category>Documentaries</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Managing special permissions and sticky bit in Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/managing-special-permissions-and-sticky-bit-in-linux/</link>
+        <pubDate>Sat, 02 Nov 2019 17:15:40 +0000</pubDate>
+        
+        <atom:modified>Sat, 02 Nov 2019 17:15:40 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/managing-special-permissions-and-sticky-bit-in-linux/</guid>
+        <description>Managing special permissions and sticky bit in Linux.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Mod_security rules for WordPress</title>
+        <link>https://sysadmin.info.pl/en/blog/mod_security-rules-for-wordpress/</link>
+        <pubDate>Wed, 23 Oct 2019 04:25:36 +0000</pubDate>
+        
+        <atom:modified>Wed, 23 Oct 2019 04:25:36 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/mod_security-rules-for-wordpress/</guid>
+        <description>&lt;p&gt;There will be time for a tutorial on how to install mod_security for apache, and perhaps someday for nginx. Today I will explain how to add rules for yourself in the whitelist.conf file so that mod_security does not block WordPress functionality.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/mod_security.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>mod_security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA – chmod – change file and directory permissions</title>
+        <link>https://sysadmin.info.pl/en/blog/rhcsa-chmod-change-file-and-directory-permissions/</link>
+        <pubDate>Fri, 04 Oct 2019 00:32:44 +0000</pubDate>
+        
+        <atom:modified>Fri, 04 Oct 2019 00:32:44 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/rhcsa-chmod-change-file-and-directory-permissions/</guid>
+        <description>How to use chmod to change file and directory permissions.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-chmod.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA – User passwords. Add groups and users to groups</title>
+        <link>https://sysadmin.info.pl/en/blog/rhcsa-user-passwords-add-groups-and-users-to-groups/</link>
+        <pubDate>Thu, 03 Oct 2019 10:09:11 +0000</pubDate>
+        
+        <atom:modified>Thu, 03 Oct 2019 10:09:11 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/rhcsa-user-passwords-add-groups-and-users-to-groups/</guid>
+        <description> In this episode I will show you how to change passwords for users, how to add groups, how to add users to groups, how to add users to groups and how to change the directory owner and give access to the directory for the group.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-users-passwords.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA – Adding users</title>
+        <link>https://sysadmin.info.pl/en/blog/rhcsa-adding-users/</link>
+        <pubDate>Thu, 03 Oct 2019 07:20:37 +0000</pubDate>
+        
+        <atom:modified>Thu, 03 Oct 2019 07:20:37 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/rhcsa-adding-users/</guid>
+        <description>RHCSA &amp;#8211; Adding users Short and to the point, how to add users, as well as how to add those with a specific id and what happens after adding such a user when we add another without the -u switch.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-adding-users.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Installation of Red Hat in Virtual Box – network configuration and ssh.</title>
+        <link>https://sysadmin.info.pl/en/blog/installation-of-red-hat-in-virtual-box-network-configuration-and-ssh/</link>
+        <pubDate>Wed, 02 Oct 2019 20:55:37 +0000</pubDate>
+        
+        <atom:modified>Wed, 02 Oct 2019 20:55:37 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/installation-of-red-hat-in-virtual-box-network-configuration-and-ssh/</guid>
+        <description> Installation of Red Hat in Virtual Box &amp;#8211; network configuration and ssh. </description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/redhat-installation.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to download Red Hat image needed to install the system.</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-download-red-hat-image-needed-to-install-the-system/</link>
+        <pubDate>Wed, 02 Oct 2019 19:40:37 +0000</pubDate>
+        
+        <atom:modified>Wed, 02 Oct 2019 19:40:37 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-download-red-hat-image-needed-to-install-the-system/</guid>
+        <description> How to download a Red Hat 7.7 image </description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/red-hat-download.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA - Red Hat Certified System Administrator</title>
+        <link>https://sysadmin.info.pl/en/blog/red-hat-certified-system-administrator/</link>
+        <pubDate>Mon, 30 Sep 2019 21:47:58 +0000</pubDate>
+        
+        <atom:modified>Mon, 30 Sep 2019 21:47:58 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/red-hat-certified-system-administrator/</guid>
+        <description>In the next few weeks, I intend to publish my own training courses entirely in Polish related to RHCSA. Yes, free of charge, because these are the basics of any Linux distribution in principle and in my opinion it is ridiculously simple. The exam requires you to understand and remember the commands by heart, so it’s not that simple anymore, because the commands come in as time goes by when you tap them every day with your finger.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>fail2ban – installation and configuration</title>
+        <link>https://sysadmin.info.pl/en/blog/fail2ban-installation-and-configuration/</link>
+        <pubDate>Sat, 28 Sep 2019 07:17:32 +0000</pubDate>
+        
+        <atom:modified>Sat, 28 Sep 2019 07:17:32 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/fail2ban-installation-and-configuration/</guid>
+        <description>Note, the following tutorial is a part of my engineering work entitled „Hardening of a Linux-based network server” under the direction of Ph. D. Kordian Smolinski in the Department of Theoretical Physics WFiIS UŁ defended in June 2019.
+To install Fail2Ban on CentOS 7.6, you will first need to install the EPEL (Extra Packages for Enterprise Linux) repository. EPEL contains additional packages for all versions of CentOS, one of these additional packages is Fail2Ban.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/fail2ban.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>fail2ban</category>
+            
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>rclone – installation and configuration</title>
+        <link>https://sysadmin.info.pl/en/blog/rclone-installation-and-configuration/</link>
+        <pubDate>Thu, 26 Sep 2019 20:30:45 +0000</pubDate>
+        
+        <atom:modified>Thu, 26 Sep 2019 20:30:45 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/rclone-installation-and-configuration/</guid>
+        <description>Hello,
+I will use rclone from https://rclone to backup my backup.org In this specific case I will use https://mega.nz and the appropriate configuration to copy files from the server to mega.nz. If you don’t have an account there, you can create one. Good morning everyone gets 50 GB of space for free.
+Please note that at the moment there is a problem with 2FA for mega. Trying to compile an application from the source code by following the instructions from this page https://github.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rclone.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>rclone</category>
+            
+          
+        
+        
+          
+            
+              <category>mikr.us</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Web server installation on mikr.us using MariaDB and MyISAM engine</title>
+        <link>https://sysadmin.info.pl/en/blog/web-server-installation-on-mikr-us-using-mariadb-and-myisam-engine/</link>
+        <pubDate>Sun, 22 Sep 2019 17:40:40 +0000</pubDate>
+        
+        <atom:modified>Sun, 22 Sep 2019 17:40:40 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/web-server-installation-on-mikr-us-using-mariadb-and-myisam-engine/</guid>
+        <description>Hi,
+There was an opportunity like a blind chicken grain long ago and I hunted the domain for free sysadmin.info.pl. Originally the idea was to use it for engineering work and so it happened. Three months later again an opportunity came up, which I couldn’t miss. This time the virtual machine on OpenVZ for funny money. If you are interested, please contact https://mikr.us. After clicking on the link you will get a 5% discount on the server for the year</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/mariadb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>mikr.us</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>SELinux security policy</title>
+        <link>https://sysadmin.info.pl/en/blog/selinux-security-policy/</link>
+        <pubDate>Sun, 22 Sep 2019 17:27:50 +0000</pubDate>
+        
+        <atom:modified>Sun, 22 Sep 2019 17:27:50 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/selinux-security-policy/</guid>
+        <description>I’m not an SELinux expert, but when I read many tutorials on the subject and saw dozens of tips that all said in one voice: turn off SELinux, because it causes problems, I thought it was time to challenge this thesis and prove that SELinux could be easy to use.
+In a situation where a service does not run because of problems with permissions, creating a process ID (PID) file, you should update SELinux’s policy on enforcing the rules against the application, which by default is not included in SELinux’s Type Enforcement (TE) policies.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/selinux.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>WordPress configuration for connecting to a remote database</title>
+        <link>https://sysadmin.info.pl/en/blog/wordpress-configuration-for-connecting-to-a-remote-database/</link>
+        <pubDate>Sat, 21 Sep 2019 19:16:03 +0000</pubDate>
+        
+        <atom:modified>Sat, 21 Sep 2019 19:16:03 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/wordpress-configuration-for-connecting-to-a-remote-database/</guid>
+        <description>Hello,
+I will describe here step by step configuration of WordPress in configuration of two servers. These can be physical servers, or installed on virtual machines, either using VirtualBox or HyperV.
+Usually we encounter these configurations above, of course there are also other solutions, such as in the case of the hosting service provider, which has a database elsewhere, and in another location keeps a directory on the files of the website, but I will deal with the classic case, when we distinguish between two different servers.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/wp.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+            
+              <category>WordPress</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

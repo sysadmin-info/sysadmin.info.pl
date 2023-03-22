@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Linux on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/categories/linux/</link>
+    <description>Recent content in Linux on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Fri, 04 Sep 2020 12:01:57 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Kurs Zabbix – Arek Siczek</title>
+        <link>https://sysadmin.info.pl/pl/blog/kurs-zabbix-arek-siczek/</link>
+        <pubDate>Fri, 04 Sep 2020 12:01:57 +0000</pubDate>
+        
+        <atom:modified>Fri, 04 Sep 2020 12:01:57 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/kurs-zabbix-arek-siczek/</guid>
+        <description>Kurs Zabbix, który startuje od poniedziałku 7 września 2020.
+Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tutaj: https://asdevops.pl/kurs/</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/kurs-zabbix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>zabbix</category>
+            
+          
+            
+              <category>kurs zabbix</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Pomiar układu wejścia/wyjścia</title>
+        <link>https://sysadmin.info.pl/pl/blog/pomiar-ukladu-wejscia-wyjscia/</link>
+        <pubDate>Mon, 23 Dec 2019 16:55:46 +0000</pubDate>
+        
+        <atom:modified>Mon, 23 Dec 2019 16:55:46 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/pomiar-ukladu-wejscia-wyjscia/</guid>
+        <description>&lt;p&gt;Aby monitorować zachowanie systemu, należy rozpocząć od utworzenia linii bazowej, która reprezentuje normalne zachowanie systemu. Możesz to zrobić za pomocą narzędzia takiego jak polecenie sar. Następnie możesz użyć takich narzędzi jak netstat, iostat, lsof, w i uptime do monitorowania zachowania systemu, porównując wyniki z poziomem bazowym w celu określenia, czy system ma problemy.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>netstat</category>
+            
+          
+            
+              <category>iostat</category>
+            
+          
+            
+              <category>lsof</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Monitorowanie wykorzystania zasobów systemu Linux</title>
+        <link>https://sysadmin.info.pl/pl/blog/monitorowanie-wykorzystania-zasobow-systemu-linux/</link>
+        <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
+        
+        <atom:modified>Mon, 23 Dec 2019 16:12:05 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/monitorowanie-wykorzystania-zasobow-systemu-linux/</guid>
+        <description>&lt;p&gt;Planowanie wydajności polega na przewidywaniu, jakie będą wymagania dotyczące wydajności systemu w przyszłości i planowaniu, jak te wymagania spełnić. Monitorowanie wykorzystania zasobów systemu jest ważne dla planowania wydajności, ponieważ pozwala ustalić, czy istniejące wykorzystanie zasobów zbliża się do granic wydajności serwera lub maszyny wirtualnej.&lt;/p&gt;
+&lt;p&gt;W Linuksie można wykorzystać szereg narzędzi do monitorowania wykorzystania zasobów systemowych. Należą do nich polecenia top, ps, pstree, vmstat, sar i free.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>top</category>
+            
+          
+            
+              <category>ps</category>
+            
+          
+            
+              <category>pstree</category>
+            
+          
+            
+              <category>sar</category>
+            
+          
+            
+              <category>vmstat</category>
+            
+          
+            
+              <category>free</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Instalacja serwera web na mikr.us z użyciem MariaDB i silnikiem MyISAM</title>
+        <link>https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/</link>
+        <pubDate>Sun, 22 Sep 2019 17:38:56 +0000</pubDate>
+        
+        <atom:modified>Sun, 22 Sep 2019 17:38:56 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/</guid>
+        <description>Cześć,
+Trafiła się okazja jak ślepej kurze ziarno dawno temu i upolowałem domenę za darmo sysadmin.info.pl. Pierwotnie zamysł był taki, aby użyć jej do pracy inżynierskiej i tak też się stało. Trzy miesiące później znów nadarzyła się okazja, której nie mogłem przegapić. Tym razem wirtualna maszyna na OpenVZ za śmieszne wręcz pieniądze. Zainteresowanych odsyłam do https://mikr.us. Po kliknięciu w link dostaniesz 5% zniżki na serwer na rok.
+Tym sposobem stało się możliwe posiadanie wersji live własnej strony, której konfigurację opiszę poniżej krok po kroku.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/mariadb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>mikr.us</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>SELinux polityka bezpieczeństwa</title>
+        <link>https://sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</link>
+        <pubDate>Sun, 22 Sep 2019 17:26:09 +0000</pubDate>
+        
+        <atom:modified>Sun, 22 Sep 2019 17:26:09 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</guid>
+        <description>Nie jestem eskpertem od SELinux, ale gdy przeczytałem wiele poradników (ang. tutorial) na ten temat i widziałem dziesiątki porad, które wszystkie jednym głosem oznajmiały: wyłącz SELinux, ponieważ sprawia problemy, uznałem, że czas podważyć tę tezę i udowodnić, że SELinux może być prosty w obsłudze.
+W sytuacji, gdy jakaś usługa nie uruchamia się, z powodu problemów z uprawnieniami, tworząc plik ID procesu (PID), należy zaktualizować politykę SELinux w zakresie egzekwowania zasad w stosunku do aplikacji, która domyślnie nie jest uwzględniona w politykach tzw.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/selinux.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>selinux</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

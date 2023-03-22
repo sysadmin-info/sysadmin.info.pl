@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>SSH on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/tags/ssh/</link>
+    <description>Recent content in SSH on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Sun, 02 Oct 2022 09:41:03 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Detailed ssh configuration with RSA keys explained.</title>
+        <link>https://sysadmin.info.pl/en/blog/detailed-ssh-configuration-with-rsa-keys-explained/</link>
+        <pubDate>Sun, 02 Oct 2022 09:41:03 +0000</pubDate>
+        
+        <atom:modified>Sun, 02 Oct 2022 09:41:03 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/detailed-ssh-configuration-with-rsa-keys-explained/</guid>
+        <description>In this video I described ssh configuration and how to generate RSA keys and how to put them into authorized_keys. Step by step explanation.
+Detailed ssh configuration with RSA keys explained.Script that is doing everything for you:
+https://github.com/sysadmin-info/sshd-configurator/blob/main/sshd-config.sh
+Genpasswd:
+https://github.com/sysadmin-info/sshd-configurator/blob/main/genpasswd</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/ssh.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>SSH</category>
+            
+          
+        
+        
+          
+            
+              <category>IT Security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

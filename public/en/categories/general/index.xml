@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>general on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/categories/general/</link>
+    <description>Recent content in general on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Sun, 19 Mar 2023 22:05:03 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Welcome to the Sysadmin blog</title>
+        <link>https://sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</link>
+        <pubDate>Sun, 19 Mar 2023 22:05:03 +0000</pubDate>
+        
+        <atom:modified>Sun, 19 Mar 2023 22:05:03 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</guid>
+        <description>Hi,
+What follows is history. More than 3 years have passed since then. Is that a lot or a little? For me it has changed a lot, as I managed to move to the third line at Fujitsu and worked more than a year in the Linux team and then moved to Research and Development, where I now work as Quality Assurance, but basically my work is still related to Linux, only that I now work with SLES and open SUSE.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>sysadmin</category>
+            
+          
+        
+        
+          
+            
+              <category>general</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Privacy policy</title>
+        <link>https://sysadmin.info.pl/en/privacy/</link>
+        <pubDate>Thu, 07 Nov 2019 08:13:36 +0000</pubDate>
+        
+        <atom:modified>Thu, 07 Nov 2019 08:13:36 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/privacy/</guid>
+        <description>Privacy Policy The sysadmin.info.pl portal does not process, share or use for marketing purposes the data provided by the Users of the portal. You can be sure that in the future we will not process, share or use your data for any other purposes than the simple collection of statistics.
+The sysadmin.info.pl portal is not responsible for the content and opinions expressed by users in comments or descriptions. They are exclusively the property of the users from whom they originate.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>privacy</category>
+            
+          
+        
+        
+          
+            
+              <category>general</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

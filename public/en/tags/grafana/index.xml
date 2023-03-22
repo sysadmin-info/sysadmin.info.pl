@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Grafana on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/tags/grafana/</link>
+    <description>Recent content in Grafana on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Thu, 10 Sep 2020 19:05:29 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>How to setup and secure Telegraf, InfluxDB and Grafana on Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux/</link>
+        <pubDate>Thu, 10 Sep 2020 19:05:29 +0000</pubDate>
+        
+        <atom:modified>Thu, 10 Sep 2020 19:05:29 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-secure-telegraf-influxdb-and-grafana-on-linux/</guid>
+        <description>&lt;p&gt;The tutorial is for Red Hat family server distributions like CentOS 7.x, Red Hat 7.x, Fedora29 or newer (current version is 32), etc.&lt;/p&gt;
+&lt;p&gt;For Debian family server distributions like (Debian, Ubuntu etc.) I recommend to read this article: &lt;a rel=&#34;noreferrer noopener&#34; href=&#34;https://devconnected.com/how-to-setup-telegraf-influxdb-and-grafana-on-linux/&#34; target=&#34;_blank&#34;&gt;How To Setup Telegraf InfluxDB and Grafana on Linux&lt;/a&gt;, however it does not contain the own domain and fail2ban setup.&lt;/p&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/grafana.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>security</category>
+            
+          
+            
+              <category>Grafana</category>
+            
+          
+            
+              <category>Telegraf</category>
+            
+          
+            
+              <category>InfluxDB</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

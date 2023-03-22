@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>RHCSA on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/series/rhcsa/</link>
+    <description>Recent content in RHCSA on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Mon, 11 Nov 2019 22:05:32 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/series/rhcsa/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Access Control List in Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/access-control-list-in-linux/</link>
+        <pubDate>Mon, 11 Nov 2019 22:05:32 +0000</pubDate>
+        
+        <atom:modified>Mon, 11 Nov 2019 22:05:32 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/access-control-list-in-linux/</guid>
+        <description>Access Control List in LinuxHow to use Access Control List in Linux terminal to set permissions.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to Lock and Unlock User in Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-lock-and-unlock-user-in-linux/</link>
+        <pubDate>Sun, 10 Nov 2019 12:54:09 +0000</pubDate>
+        
+        <atom:modified>Sun, 10 Nov 2019 12:54:09 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-lock-and-unlock-user-in-linux/</guid>
+        <description>How to Lock and Unlock User in LinuxHow do you lock a user account in Linux? Even more importantly, how do you unlock the user in Linux? Learn various ways of locking and unlocking users in Linux command line.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Managing special permissions and sticky bit in Linux</title>
+        <link>https://sysadmin.info.pl/en/blog/managing-special-permissions-and-sticky-bit-in-linux/</link>
+        <pubDate>Sat, 02 Nov 2019 17:15:40 +0000</pubDate>
+        
+        <atom:modified>Sat, 02 Nov 2019 17:15:40 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/managing-special-permissions-and-sticky-bit-in-linux/</guid>
+        <description>Managing special permissions and sticky bit in Linux.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA – chmod – change file and directory permissions</title>
+        <link>https://sysadmin.info.pl/en/blog/rhcsa-chmod-change-file-and-directory-permissions/</link>
+        <pubDate>Fri, 04 Oct 2019 00:32:44 +0000</pubDate>
+        
+        <atom:modified>Fri, 04 Oct 2019 00:32:44 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/rhcsa-chmod-change-file-and-directory-permissions/</guid>
+        <description>How to use chmod to change file and directory permissions.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-chmod.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA – User passwords. Add groups and users to groups</title>
+        <link>https://sysadmin.info.pl/en/blog/rhcsa-user-passwords-add-groups-and-users-to-groups/</link>
+        <pubDate>Thu, 03 Oct 2019 10:09:11 +0000</pubDate>
+        
+        <atom:modified>Thu, 03 Oct 2019 10:09:11 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/rhcsa-user-passwords-add-groups-and-users-to-groups/</guid>
+        <description> In this episode I will show you how to change passwords for users, how to add groups, how to add users to groups, how to add users to groups and how to change the directory owner and give access to the directory for the group.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-users-passwords.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA – Adding users</title>
+        <link>https://sysadmin.info.pl/en/blog/rhcsa-adding-users/</link>
+        <pubDate>Thu, 03 Oct 2019 07:20:37 +0000</pubDate>
+        
+        <atom:modified>Thu, 03 Oct 2019 07:20:37 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/rhcsa-adding-users/</guid>
+        <description>RHCSA &amp;#8211; Adding users Short and to the point, how to add users, as well as how to add those with a specific id and what happens after adding such a user when we add another without the -u switch.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-adding-users.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Installation of Red Hat in Virtual Box – network configuration and ssh.</title>
+        <link>https://sysadmin.info.pl/en/blog/installation-of-red-hat-in-virtual-box-network-configuration-and-ssh/</link>
+        <pubDate>Wed, 02 Oct 2019 20:55:37 +0000</pubDate>
+        
+        <atom:modified>Wed, 02 Oct 2019 20:55:37 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/installation-of-red-hat-in-virtual-box-network-configuration-and-ssh/</guid>
+        <description> Installation of Red Hat in Virtual Box &amp;#8211; network configuration and ssh. </description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/redhat-installation.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>How to download Red Hat image needed to install the system.</title>
+        <link>https://sysadmin.info.pl/en/blog/how-to-download-red-hat-image-needed-to-install-the-system/</link>
+        <pubDate>Wed, 02 Oct 2019 19:40:37 +0000</pubDate>
+        
+        <atom:modified>Wed, 02 Oct 2019 19:40:37 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/how-to-download-red-hat-image-needed-to-install-the-system/</guid>
+        <description> How to download a Red Hat 7.7 image </description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/red-hat-download.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>RHCSA - Red Hat Certified System Administrator</title>
+        <link>https://sysadmin.info.pl/en/blog/red-hat-certified-system-administrator/</link>
+        <pubDate>Mon, 30 Sep 2019 21:47:58 +0000</pubDate>
+        
+        <atom:modified>Mon, 30 Sep 2019 21:47:58 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/red-hat-certified-system-administrator/</guid>
+        <description>In the next few weeks, I intend to publish my own training courses entirely in Polish related to RHCSA. Yes, free of charge, because these are the basics of any Linux distribution in principle and in my opinion it is ridiculously simple. The exam requires you to understand and remember the commands by heart, so it’s not that simple anymore, because the commands come in as time goes by when you tap them every day with your finger.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+        
+          
+            
+              <category>RHCSA</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

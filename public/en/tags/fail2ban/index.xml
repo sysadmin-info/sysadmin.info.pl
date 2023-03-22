@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>fail2ban on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/tags/fail2ban/</link>
+    <description>Recent content in fail2ban on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Sat, 28 Sep 2019 07:17:32 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/tags/fail2ban/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>fail2ban – installation and configuration</title>
+        <link>https://sysadmin.info.pl/en/blog/fail2ban-installation-and-configuration/</link>
+        <pubDate>Sat, 28 Sep 2019 07:17:32 +0000</pubDate>
+        
+        <atom:modified>Sat, 28 Sep 2019 07:17:32 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/fail2ban-installation-and-configuration/</guid>
+        <description>Note, the following tutorial is a part of my engineering work entitled „Hardening of a Linux-based network server” under the direction of Ph. D. Kordian Smolinski in the Department of Theoretical Physics WFiIS UŁ defended in June 2019.
+To install Fail2Ban on CentOS 7.6, you will first need to install the EPEL (Extra Packages for Enterprise Linux) repository. EPEL contains additional packages for all versions of CentOS, one of these additional packages is Fail2Ban.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/fail2ban.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>fail2ban</category>
+            
+          
+            
+              <category>security</category>
+            
+          
+        
+        
+          
+            
+              <category>IT security</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

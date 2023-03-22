@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>perfect weapon on Sysadmin - Linux administration, security and hardening</title>
+    <link>https://sysadmin.info.pl/en/tags/perfect-weapon/</link>
+    <description>Recent content in perfect weapon on Sysadmin - Linux administration, security and hardening</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <lastBuildDate>Sat, 14 Nov 2020 17:29:44 +0000</lastBuildDate>
+    
+        <atom:link href="https://sysadmin.info.pl/en/tags/perfect-weapon/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>The perfect weapon</title>
+        <link>https://sysadmin.info.pl/en/blog/the-perfect-weapon/</link>
+        <pubDate>Sat, 14 Nov 2020 17:29:44 +0000</pubDate>
+        
+        <atom:modified>Sat, 14 Nov 2020 17:29:44 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/the-perfect-weapon/</guid>
+        <description>Based on a best-selling book by New York Times national security correspondent David E. Sanger, The Perfect Weapon explores the rise of cyber conflict as the primary way nations now compete with and sabotage one another.
+Directed by Emmy-winning filmmaker John Maggio (Panic: The Untold Story of the 2008 Financial Crisis) and featuring interviews with top military, intelligence, and political officials on the frontlines of cyberterrorism, the documentary brings to light the combatants and innocent victims caught in the crosshairs of a hidden war that has been going on for decades — a war that America started, but has no idea how to finish.</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>perfect weapon</category>
+            
+          
+            
+              <category>national security</category>
+            
+          
+            
+              <category>cyberconflicts</category>
+            
+          
+            
+              <category>cyberattacks</category>
+            
+          
+        
+        
+          
+            
+              <category>Documentaries</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
