@@ -1,7 +1,7 @@
 ---
 title: "Agents of chaos"
 date:  2022-03-21T11:36:01+00:00
-description: "Agents of chaos - Despite appearances, this is not a documentary about Russian interference in the 2016 US presidential election. I would call it a revealing of the cards, showing the truth about the Russian invasion and the reasons for the war in Ukraine first in 2014 and then in 2022."
+description: "Despite appearances, this is not a documentary about Russian interference in the 2016 US presidential election. I would call it a revealing of the cards, showing the truth about the Russian invasion and the reasons for the war in Ukraine first in 2014 and then in 2022."
 draft: false
 hideToc: false
 enableToc: true
