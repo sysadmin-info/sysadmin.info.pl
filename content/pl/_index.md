@@ -27,7 +27,7 @@ header:
     title:
       - SYSADMIN
     subtitle:
-      - Administracja, bezpieczeństwo oraz hardening Linuxa
+      - Administracja, bezpieczeństwo oraz hardening Linuxa 
     titleColor: 
     titleShadow: true
     titleFontSize: 44

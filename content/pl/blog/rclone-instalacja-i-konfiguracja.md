@@ -46,7 +46,7 @@ Potrzebny nam curl
 W następnej kolejności należy wykonać poniższą komendę:
 
 ```
-curl https://rclone.org/install.sh | sudo bash
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
 ```
 
 Logujemy się z podwyższonymi uprawnieniami jako użytkownik sudoers.
