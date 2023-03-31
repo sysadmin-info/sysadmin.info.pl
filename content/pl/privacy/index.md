@@ -49,9 +49,9 @@ Poniżej znajdują się wszystkie ustawienia prywatności oraz ich domyślna war
     enableDNT = true
     simple = true
   [privacy.vimeo]
-    disable = false
-    enableDNT = false
-    simple = false
+    disable = true
+    enableDNT = true
+    simple = true
   [privacy.youtube]
     disable = false
     privacyEnhanced = false
