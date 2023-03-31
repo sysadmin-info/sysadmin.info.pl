@@ -29,6 +29,8 @@ hideHomeHeaderWhenMobile = false
 
 # menu
 showMobileMenuTerms = ["tags", "categories", "series"]
+enableLangChange = true
+enableThemeChange = true
 
 # search
 enableSearch = true
@@ -92,8 +94,6 @@ enableSidebarPostsByOrder = false
 showPoweredBy = false
 showFeedLinks = true
 showSocialLinks = true
-enableLangChange = true
-enableThemeChange = true
 
 # service
 googleTagManager = "" # GTM-XXXXXX
