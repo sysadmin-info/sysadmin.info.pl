@@ -62,7 +62,7 @@ other = "Name"
 other = "Email"
 
 [contact-tel]
-other = "Tel"
+other = "Phone"
 
 [contact-file]
 other = "File"
