@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description "{{ replace .Name "-" " " | description }}"
+description: "{{ replace .Name "-" " " | description }}"
 date: {{ .Date }}
 url: /{{ .Name }}/
 image: images/2023-thumbs/{{ .Name }}.jpg
