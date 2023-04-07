@@ -11,11 +11,11 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 tags:
-- P-TECH
+- SSHD
 series:
--
+- RHCSA
 categories:
-- 
+- RHCSA
 image: images/2023-thumbs/ssh.webp
 ---
 #### Exercises to complete:

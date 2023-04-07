@@ -10,11 +10,11 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 categories:
-  - 
+  - RHCSA 
 tags:
-  - P-TECH
+  - SSH
 series:
-  -
+  - RHCSA
 
 draft: false
 image: images/2023-thumbs/ssh.webp
