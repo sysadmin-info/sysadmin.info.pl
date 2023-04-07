@@ -457,7 +457,7 @@ to see the list
 I recommend to read this article:
 [Secure Configuration of Ciphers/MACs/Kex available in SSH](https://security.stackexchange.com/questions/39756/secure-configuration-of-ciphers-macs-kex-available-in-ssh "Secure Configuration of Ciphers/MACs/Kex available in SSH")
 
-Restart SSH service
+Reload SSH service
 ```
-sudo systemctl restart sshd
+sudo systemctl reload sshd
 ```

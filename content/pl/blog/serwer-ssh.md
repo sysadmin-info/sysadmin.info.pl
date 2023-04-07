@@ -456,8 +456,8 @@ to see the list
 Polecam przeczytać ten artykuł::
 [Secure Configuration of Ciphers/MACs/Kex available in SSH](https://security.stackexchange.com/questions/39756/secure-configuration-of-ciphers-macs-kex-available-in-ssh "Secure Configuration of Ciphers/MACs/Kex available in SSH")
 
-Zrestartuj usługę SSH
+Przeładuj usługę SSH
 
 ```
-sudo systemctl restart sshd
+sudo systemctl reload sshd
 ```
