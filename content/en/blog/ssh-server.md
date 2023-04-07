@@ -71,7 +71,7 @@ If OpenSSH, however, is not yet installed you can install it with the following 
   # start OpenSSH
   sudo systemctl start sshd
   # enable ufw firewall rule for ssh
-  sudo ufw allow 'SSH'
+  sudo ufw allow ssh
   ```
   {{< /tab >}}
   {{< tab >}}
@@ -192,7 +192,7 @@ By default the firewalld after installation has SSH service implemented as allow
   {{< tab >}}
   ### Debian
   ```
-  sudo ufw allow 'SSH'
+  sudo ufw allow ssh
   ```
   {{< /tab >}}
   {{< tab >}}
