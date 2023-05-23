@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>WordPress on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/categories/wordpress/</link>
+    <link>https:/sysadmin.info.pl/en/categories/wordpress/</link>
     <description>Recent content in WordPress on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Sat, 21 Sep 2019 19:16:03 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/en/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/en/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>WordPress configuration for connecting to a remote database</title>
-        <link>https://sysadmin.info.pl/en/blog/wordpress-configuration-for-connecting-to-a-remote-database/</link>
+        <link>https:/sysadmin.info.pl/en/blog/wordpress-configuration-for-connecting-to-a-remote-database/</link>
         <pubDate>Sat, 21 Sep 2019 19:16:03 +0000</pubDate>
         
         <atom:modified>Sat, 21 Sep 2019 19:16:03 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/wordpress-configuration-for-connecting-to-a-remote-database/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/wordpress-configuration-for-connecting-to-a-remote-database/</guid>
         <description>Hello,
 I will describe here step by step configuration of WordPress in configuration of two servers. These can be physical servers, or installed on virtual machines, either using VirtualBox or HyperV.
 Usually we encounter these configurations above, of course there are also other solutions, such as in the case of the hosting service provider, which has a database elsewhere, and in another location keeps a directory on the files of the website, but I will deal with the classic case, when we distinguish between two different servers.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/wp.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/wp.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

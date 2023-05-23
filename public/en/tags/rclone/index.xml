@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>rclone on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/tags/rclone/</link>
+    <link>https:/sysadmin.info.pl/en/tags/rclone/</link>
     <description>Recent content in rclone on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Thu, 26 Sep 2019 20:30:45 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/en/tags/rclone/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/en/tags/rclone/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>rclone – installation and configuration</title>
-        <link>https://sysadmin.info.pl/en/blog/rclone-installation-and-configuration/</link>
+        <link>https:/sysadmin.info.pl/en/blog/rclone-installation-and-configuration/</link>
         <pubDate>Thu, 26 Sep 2019 20:30:45 +0000</pubDate>
         
         <atom:modified>Thu, 26 Sep 2019 20:30:45 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/rclone-installation-and-configuration/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/rclone-installation-and-configuration/</guid>
         <description>Hello,
-I will use rclone from https://rclone to backup my backup.org In this specific case I will use https://mega.nz and the appropriate configuration to copy files from the server to mega.nz. If you don’t have an account there, you can create one. Good morning everyone gets 50 GB of space for free.
-Please note that at the moment there is a problem with 2FA for mega. Trying to compile an application from the source code by following the instructions from this page https://github.</description>
+I will use rclone from https:/rclone to backup my backup.org In this specific case I will use https:/mega.nz and the appropriate configuration to copy files from the server to mega.nz. If you don’t have an account there, you can create one. Good morning everyone gets 50 GB of space for free.
+Please note that at the moment there is a problem with 2FA for mega. Trying to compile an application from the source code by following the instructions from this page https:/github.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rclone.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/rclone.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

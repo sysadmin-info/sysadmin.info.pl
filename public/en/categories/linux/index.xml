@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>Linux on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/categories/linux/</link>
+    <link>https:/sysadmin.info.pl/en/categories/linux/</link>
     <description>Recent content in Linux on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Tue, 25 Oct 2022 11:39:32 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/en/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/en/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>How to install properly a virtual machine in QEMU KVM</title>
-        <link>https://sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</link>
+        <link>https:/sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</link>
         <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
         
         <atom:modified>Tue, 25 Oct 2022 11:39:32 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</guid>
-        <description>In this video I explained how to properly install the QEMU KVM virtual machine. I provided two methods of installation and described in details how to make it work.preallocation=metadata – allocates the space required by the metadata but doesn’t allocate any space for the data. This is the quickest to provision but the slowest for guest writes. Read the article: https://www.jamescoyle.net/how-to/181&amp;amp;#8230;
-model=virtio virtualport_type=openvswitch explained here: https://www.mankier.com/1/virt-instal&amp;amp;#8230;</description>
+        <guid>https:/sysadmin.info.pl/en/blog/how-to-install-properly-a-virtual-machine-in-qemu-kvm/</guid>
+        <description>In this video I explained how to properly install the QEMU KVM virtual machine. I provided two methods of installation and described in details how to make it work.preallocation=metadata – allocates the space required by the metadata but doesn’t allocate any space for the data. This is the quickest to provision but the slowest for guest writes. Read the article: https:/www.jamescoyle.net/how-to/181&amp;amp;#8230;
+model=virtio virtualport_type=openvswitch explained here: https:/www.mankier.com/1/virt-instal&amp;amp;#8230;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/vm-in-qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/vm-in-qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -61,15 +61,15 @@ model=virtio virtualport_type=openvswitch explained here: https://www.mankier.co
       
       <item>
         <title>How to fix QEMU KVM virtual machine network configuration through the xml</title>
-        <link>https://sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</link>
+        <link>https:/sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</link>
         <pubDate>Sat, 22 Oct 2022 11:36:00 +0000</pubDate>
         
         <atom:modified>Sat, 22 Oct 2022 11:36:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/how-to-fix-qemu-kvm-virtual-machine-network-configuration-through-the-xml/</guid>
         <description> In this video I explained the QEMU KVM network configuration issue connected with type direct and provided a solution by editing a configuration in xml file</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-fix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-fix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -101,16 +101,16 @@ model=virtio virtualport_type=openvswitch explained here: https://www.mankier.co
       
       <item>
         <title>Issue with a type direct in QEMU KVM network configuration explained</title>
-        <link>https://sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</link>
+        <link>https:/sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</link>
         <pubDate>Sat, 22 Oct 2022 11:31:00 +0000</pubDate>
         
         <atom:modified>Sat, 22 Oct 2022 11:31:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/issue-with-a-type-direct-in-qemu-kvm-network-configuration-explained/</guid>
         <description>In this video I explained the QEMU KVM network configuration issue connected with type direct.Manual for virt-install command:
-https://www.mankier.com/1/virt-install#Networking_Options</description>
+https:/www.mankier.com/1/virt-install#Networking_Options</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-config-explained.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-config-explained.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -142,15 +142,15 @@ https://www.mankier.com/1/virt-install#Networking_Options</description>
       
       <item>
         <title>How to install QEMU KVM and configure virtual machine in openSUSE 15.4</title>
-        <link>https://sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</link>
+        <link>https:/sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</link>
         <pubDate>Mon, 17 Oct 2022 11:33:00 +0000</pubDate>
         
         <atom:modified>Mon, 17 Oct 2022 11:33:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/how-to-install-qemu-kvm-and-configure-virtual-machine-in-opensuse-15-4/</guid>
         <description>How to install QEMU KVM and configure virtual machine in openSUSE 15.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -182,16 +182,16 @@ https://www.mankier.com/1/virt-install#Networking_Options</description>
       
       <item>
         <title>How to setup and configure OpenvSwitch in Debian 11</title>
-        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</link>
+        <link>https:/sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</link>
         <pubDate>Sat, 15 Oct 2022 14:36:56 +0000</pubDate>
         
         <atom:modified>Sat, 15 Oct 2022 14:36:56 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</guid>
-        <description>The video explains how to properly install openvswitch in Debian 11 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https://github.com/sysadmin-info/openvswitch/blob/main/ovs-debian.sh
+        <guid>https:/sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-debian-11/</guid>
+        <description>The video explains how to properly install openvswitch in Debian 11 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https:/github.com/sysadmin-info/openvswitch/blob/main/ovs-debian.sh
 Download it to the server, chmod +x ovs-debian.sh and run ./ovs-debian.sh</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch-debian.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/openvswitch-debian.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -223,16 +223,16 @@ Download it to the server, chmod +x ovs-debian.sh and run ./ovs-debian.sh</descr
       
       <item>
         <title>How to setup and configure OpenvSwitch in openSUSE 15.4</title>
-        <link>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</link>
+        <link>https:/sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</link>
         <pubDate>Thu, 13 Oct 2022 11:00:08 +0000</pubDate>
         
         <atom:modified>Thu, 13 Oct 2022 11:00:08 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</guid>
-        <description>The video explains how to properly install openvswitch in openSUSE 15.4 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https://github.com/sysadmin-info/openvswitch/blob/main/ovs-suse.sh
+        <guid>https:/sysadmin.info.pl/en/blog/how-to-setup-and-configure-openvswitch-in-opensuse-15-4/</guid>
+        <description>The video explains how to properly install openvswitch in openSUSE 15.4 and configure it according to good practice. I reveal the information what causes the ugly behavior of the OpenvSwitch.The script which will do everything for you: https:/github.com/sysadmin-info/openvswitch/blob/main/ovs-suse.sh
 Download it to the server, chmod +x ovs-suse.sh and run ./ovs-suse.sh</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/openvswitch.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -264,20 +264,20 @@ Download it to the server, chmod +x ovs-suse.sh and run ./ovs-suse.sh</descripti
       
       <item>
         <title>Troubleshooting slow network communication or Connection Timeouts in Linux</title>
-        <link>https://sysadmin.info.pl/en/blog/troubleshooting-slow-network-communication-or-connection-timeouts-in-linux/</link>
+        <link>https:/sysadmin.info.pl/en/blog/troubleshooting-slow-network-communication-or-connection-timeouts-in-linux/</link>
         <pubDate>Sun, 02 Oct 2022 09:43:17 +0000</pubDate>
         
         <atom:modified>Sun, 02 Oct 2022 09:43:17 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/troubleshooting-slow-network-communication-or-connection-timeouts-in-linux/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/troubleshooting-slow-network-communication-or-connection-timeouts-in-linux/</guid>
         <description>Troubleshooting slow network communication or Connection Timeouts in LinuxCommands used:
 ifconfig, netstat, ss, ip, ethtool, iperf3
 Bandwidth delay product:
-https://en.wikipedia.org/wiki/Bandwidth-delay_product
+https:/en.wikipedia.org/wiki/Bandwidth-delay_product
 Round Trip Time:
-https://en.wikipedia.org/wiki/Round-trip_delay</description>
+https:/en.wikipedia.org/wiki/Round-trip_delay</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/network.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/network.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -319,16 +319,16 @@ https://en.wikipedia.org/wiki/Round-trip_delay</description>
       
       <item>
         <title>Create own website in Dark Web</title>
-        <link>https://sysadmin.info.pl/en/blog/create-own-website-in-dark-web/</link>
+        <link>https:/sysadmin.info.pl/en/blog/create-own-website-in-dark-web/</link>
         <pubDate>Thu, 03 Mar 2022 11:59:24 +0000</pubDate>
         
         <atom:modified>Thu, 03 Mar 2022 11:59:24 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/create-own-website-in-dark-web/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/create-own-website-in-dark-web/</guid>
         <description>Hi, The below content will let you easily set up your own website in the Dark Web aka Dark Net easily. Bear in mind that this is the tutorial for the Red Hat family distros like CentOS, Red Hat, Fedora etc. For Debian family distros it is a little bit different, but not so hard to modify it.
 Very basic setup of your own website in Dark Web Below you have a very basic configuration that allows you to setup what is needed.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/darknet.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/darknet.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -362,15 +362,15 @@ Very basic setup of your own website in Dark Web Below you have a very basic con
       
       <item>
         <title>The system does not find the root partition, installed on lvm</title>
-        <link>https://sysadmin.info.pl/en/blog/the-system-does-not-find-the-root-partition-installed-on-lvm/</link>
+        <link>https:/sysadmin.info.pl/en/blog/the-system-does-not-find-the-root-partition-installed-on-lvm/</link>
         <pubDate>Sun, 20 Sep 2020 10:37:17 +0000</pubDate>
         
         <atom:modified>Sun, 20 Sep 2020 10:37:17 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/the-system-does-not-find-the-root-partition-installed-on-lvm/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/the-system-does-not-find-the-root-partition-installed-on-lvm/</guid>
         <description>&lt;p&gt;Article shows how to solve the issue with missing swap and plymouthd sigrtmin error, when swap is not created as LVM, but as a standard swap.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2020-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -400,15 +400,15 @@ Very basic setup of your own website in Dark Web Below you have a very basic con
       
       <item>
         <title>Full guide for conky with themes, cava and tilda.</title>
-        <link>https://sysadmin.info.pl/en/blog/full-guide-for-conky-with-themes-cava-and-tilda/</link>
+        <link>https:/sysadmin.info.pl/en/blog/full-guide-for-conky-with-themes-cava-and-tilda/</link>
         <pubDate>Fri, 15 May 2020 17:29:15 +0000</pubDate>
         
         <atom:modified>Fri, 15 May 2020 17:29:15 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/full-guide-for-conky-with-themes-cava-and-tilda/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/full-guide-for-conky-with-themes-cava-and-tilda/</guid>
         <description> Full guide for conky with themes, cava and tilda.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/conky-full-guide.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2020-thumbs/conky-full-guide.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -438,15 +438,15 @@ Very basic setup of your own website in Dark Web Below you have a very basic con
       
       <item>
         <title>Measuring system i/o</title>
-        <link>https://sysadmin.info.pl/en/blog/measuring-system-i-o/</link>
+        <link>https:/sysadmin.info.pl/en/blog/measuring-system-i-o/</link>
         <pubDate>Mon, 23 Dec 2019 16:59:15 +0000</pubDate>
         
         <atom:modified>Mon, 23 Dec 2019 16:59:15 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/measuring-system-i-o/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/measuring-system-i-o/</guid>
         <description>&lt;p&gt;To monitor system behavior, you need to start by creating a baseline that represents normal system behavior. You can do this using a tool like the sar command. You can then use tools such as netstat, iostat, lsof, w and uptime to monitor system behavior, comparing the results to the baseline to determine whether the system is experiencing problems.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -480,16 +480,16 @@ Very basic setup of your own website in Dark Web Below you have a very basic con
       
       <item>
         <title>Linux Resources usage monitoring</title>
-        <link>https://sysadmin.info.pl/en/blog/linux-resources-usage-monitoring/</link>
+        <link>https:/sysadmin.info.pl/en/blog/linux-resources-usage-monitoring/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:49 +0000</pubDate>
         
         <atom:modified>Mon, 23 Dec 2019 16:12:49 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/linux-resources-usage-monitoring/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/linux-resources-usage-monitoring/</guid>
         <description>&lt;p&gt;Capacity planning involves predicting what the capacity requirements for a system will be in future, and planning how to meet these requirements. Monitoring system resource use is important for capacity planning, because it establishes whether existing resource use is approaching capacity limits.&lt;/p&gt;
 &lt;p&gt;In Linux you can use a range of tools to monitor system resource use. These include the top, ps, pstree, vmstat, sar and free commands.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -535,15 +535,15 @@ Very basic setup of your own website in Dark Web Below you have a very basic con
       
       <item>
         <title>How to change the grey background on lock screen in Elementary OS</title>
-        <link>https://sysadmin.info.pl/en/blog/how-to-change-the-grey-background-on-lock-screen-in-elementary-os/</link>
+        <link>https:/sysadmin.info.pl/en/blog/how-to-change-the-grey-background-on-lock-screen-in-elementary-os/</link>
         <pubDate>Sat, 21 Dec 2019 13:28:49 +0000</pubDate>
         
         <atom:modified>Sat, 21 Dec 2019 13:28:49 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/how-to-change-the-grey-background-on-lock-screen-in-elementary-os/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/how-to-change-the-grey-background-on-lock-screen-in-elementary-os/</guid>
         <description>How to change the grey background on lock screen in Elementary OSBelow there is a better explanation from Eric Melo. Thanks Eric for this video!</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/elementary-os_background.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/elementary-os_background.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

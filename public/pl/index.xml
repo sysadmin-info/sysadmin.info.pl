@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
-    <link>https://sysadmin.info.pl/pl/</link>
+    <link>https:/sysadmin.info.pl/pl/</link>
     <description>Recent content on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pl</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Sun, 19 Mar 2023 22:08:59 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/pl/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/pl/index.xml" rel="self" type="application/rss+xml" />
     
       
       
@@ -41,16 +41,16 @@
       
       <item>
         <title>Witaj na blogu Sysadmin</title>
-        <link>https://sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</link>
         <pubDate>Sun, 19 Mar 2023 22:08:59 +0000</pubDate>
         
         <atom:modified>Sun, 19 Mar 2023 22:08:59 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</guid>
         <description>Cześć,
 To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy to dużo, czy mało? Dla mnie zmieniło się bardzo dużo, zdążyłem bowiem przejść na trzecią linię w Fujitsu i przepracować ponad rok w zespole Linux a potem przeszedłem do działu Research and Development, gdzie obecnie pracuję jako Quality Assurance, jednak w zasadzie wciąż moja praca związana jest z systemem Linux, tyle tylko, że obecnie pracuję z SLES i open SUSE.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -76,15 +76,15 @@ To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy 
       
       <item>
         <title>Agenci chaosu</title>
-        <link>https://sysadmin.info.pl/pl/blog/agenci-chaosu/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/agenci-chaosu/</link>
         <pubDate>Mon, 21 Mar 2022 11:34:34 +0000</pubDate>
         
         <atom:modified>Mon, 21 Mar 2022 11:34:34 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/agenci-chaosu/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/agenci-chaosu/</guid>
         <description>Agenci chaosu - zwiastunWbrew pozorom nie jest to dokument o rosyjskiej ingerencji w wybory prezydenckie w USA w 2016 roku. Nazwałbym go odkryciem kart, ukazaniem prawdy o rosyjskiej inwazji i przyczynach wojny na Ukrainie najpierw w 2014 a potem w 2022. Warto zwrócić uwagę na działania farmy rosyjskich trolli - IRA (Internet Research Agency), dla których Ukraina była testowym polem bitwy w cyberprzestrzeni. Ukazano mniej i bardziej wyrafinowane metody stosowane przez Internet Research Agency.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/agents-of-chaos.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/agents-of-chaos.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -122,15 +122,15 @@ To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy 
       
       <item>
         <title>Podstawowa konfiguracja serwera po zainstalowaniu systemu RHEL 8.5 (minimalna).</title>
-        <link>https://sysadmin.info.pl/pl/blog/podstawowa-konfiguracja-serwera-po-zainstalowaniu-systemu-rhel-8-5-minimalna/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/podstawowa-konfiguracja-serwera-po-zainstalowaniu-systemu-rhel-8-5-minimalna/</link>
         <pubDate>Thu, 03 Mar 2022 11:50:26 +0000</pubDate>
         
         <atom:modified>Thu, 03 Mar 2022 11:50:26 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/podstawowa-konfiguracja-serwera-po-zainstalowaniu-systemu-rhel-8-5-minimalna/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/podstawowa-konfiguracja-serwera-po-zainstalowaniu-systemu-rhel-8-5-minimalna/</guid>
         <description>Podstawowa konfiguracja po instalacji RHEL 8.5 (minimal). Zapisałem jako skrypt.sh, nadałem uprawnienia do wykonania chmod u+x skrypt.sh i uruchomiłem jako root ./skrypt.sh, chociaż wiem, że skrypty powinno się odpalać z sudo dla bezpieczeństwa. Tyle, że ja wiem, co robię i po co. Wszystko opisane komentarzami po angielsku. User został utworzony podczas instalacji systemu, stąd zmiana. Na codzień korzystam z usera i sudo. Tu na szybko rozwiązanie. Te komendy można wykonać równie dobrze z użyciem sudo.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/hardened.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/hardened.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -160,15 +160,15 @@ To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy 
       
       <item>
         <title>Instalacja i konfiguracja auditd</title>
-        <link>https://sysadmin.info.pl/pl/blog/instalacja-i-konfiguracja-auditd/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/instalacja-i-konfiguracja-auditd/</link>
         <pubDate>Sun, 14 Feb 2021 14:49:24 +0000</pubDate>
         
         <atom:modified>Sun, 14 Feb 2021 14:49:24 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/instalacja-i-konfiguracja-auditd/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/instalacja-i-konfiguracja-auditd/</guid>
         <description>Reguły w /etc/audit/rules.d/audit.rules###################### This is an example configuration suitable for most systems# Before running with this configuration:# - Remove or comment items which are not applicable# - Check paths of binaries and files########################################### Remove any existing rules######################-D###################### Buffer Size# Might need to be increased, depending on the load of your system.#####################-b 8192###################### Failure Mode###################### 0=Silent# 1=printk, print failure message# 2=panic, halt system-f 1###################### Audit the audit logs.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2021-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2021-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -194,15 +194,15 @@ To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy 
       
       <item>
         <title>Idealna broń – film dokumentalny</title>
-        <link>https://sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</link>
         <pubDate>Sat, 14 Nov 2020 17:25:29 +0000</pubDate>
         
         <atom:modified>Sat, 14 Nov 2020 17:25:29 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</guid>
         <description>Dokument oparty na bestsellerowej książce Davida E. Sangera, korespondenta ds. bezpieczeństwa narodowego New York Timesa, bada wzrost znaczenia cyberkonfliktów jako sposobu, w jaki współcześnie narody konkurują między sobą i wzajemnie się sabotują. W miarę wzrostu niepokojów związanych z wpływem cyberataków na wybory w USA w 2020, film przedstawia wywiady z czołowymi urzędnikami wojskowymi, wywiadowczymi i politykami. Nie brakuje w nim też relacji z “frontów” toczących się obecnie cyberwojen. Reżyserem dokumentu HBO jest John Maggio (serial dokumentalny Amerykańskie doświadczenia).</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -240,17 +240,17 @@ To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy 
       
       <item>
         <title>Moja praca inżynierska</title>
-        <link>https://sysadmin.info.pl/pl/blog/moja-praca-inzynierska/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/moja-praca-inzynierska/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         <atom:modified>Sun, 04 Oct 2020 07:39:43 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/moja-praca-inzynierska/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/moja-praca-inzynierska/</guid>
         <description>Cześć,
 Postanowiłem opublikować moją pracę inżynierską pt.: „Utwardzanie serwera sieciowego opartego o system Linux”. Jest to zebrana wiedza z różnych stron internetrowych oraz książek. Nie jest to w zasadzie żadne „rocket science”. Praca jest własnością Uniwersytetu Łódzkiego i obejmują ją prawa autorskie. Każda strona zawiera znak wodny. Publikacja treści bez mojej zgody jest zabroniona. Uznałem, że może się ona komuś przydać. Wszelkie pytania i uwagi mile widziane.
 &amp;lt;&amp;lt; &gt;&gt; &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/laptop.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2020-thumbs/laptop.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -304,16 +304,16 @@ Postanowiłem opublikować moją pracę inżynierską pt.: „Utwardzanie serwer
       
       <item>
         <title>Jak włączyć szyfrowanie full strict w Cloudflare z użyciem Let’s Encrypt</title>
-        <link>https://sysadmin.info.pl/pl/blog/jak-wlaczyc-szyfrowanie-full-strict-w-cloudflare-z-uzyciem-lets-encrypt/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/jak-wlaczyc-szyfrowanie-full-strict-w-cloudflare-z-uzyciem-lets-encrypt/</link>
         <pubDate>Sat, 03 Oct 2020 15:58:03 +0000</pubDate>
         
         <atom:modified>Sat, 03 Oct 2020 15:58:03 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/jak-wlaczyc-szyfrowanie-full-strict-w-cloudflare-z-uzyciem-lets-encrypt/</guid>
-        <description>&lt;p&gt;Podstawa instalacji i konfiguracji Cloudflare opisana jest tutaj: &lt;a href=&#34;https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/&#34;&gt;https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/&lt;/a&gt;&lt;/p&gt;
+        <guid>https:/sysadmin.info.pl/pl/blog/jak-wlaczyc-szyfrowanie-full-strict-w-cloudflare-z-uzyciem-lets-encrypt/</guid>
+        <description>&lt;p&gt;Podstawa instalacji i konfiguracji Cloudflare opisana jest tutaj: &lt;a href=&#34;https:/sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/&#34;&gt;https:/sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;W tym tutorial zajmiemy się konfiguracją połączenia full strict pomiędzy Twoim serwerem a Cloudflare.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/cloudflare.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2020-thumbs/cloudflare.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -351,16 +351,16 @@ Postanowiłem opublikować moją pracę inżynierską pt.: „Utwardzanie serwer
       
       <item>
         <title>Kurs Zabbix – Arek Siczek</title>
-        <link>https://sysadmin.info.pl/pl/blog/kurs-zabbix-arek-siczek/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/kurs-zabbix-arek-siczek/</link>
         <pubDate>Fri, 04 Sep 2020 12:01:57 +0000</pubDate>
         
         <atom:modified>Fri, 04 Sep 2020 12:01:57 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/kurs-zabbix-arek-siczek/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/kurs-zabbix-arek-siczek/</guid>
         <description>Kurs Zabbix, który startuje od poniedziałku 7 września 2020.
-Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tutaj: https://asdevops.pl/kurs/</description>
+Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tutaj: https:/asdevops.pl/kurs/</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/kurs-zabbix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/kurs-zabbix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -390,15 +390,15 @@ Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tuta
       
       <item>
         <title>Pomiar układu wejścia/wyjścia</title>
-        <link>https://sysadmin.info.pl/pl/blog/pomiar-ukladu-wejscia-wyjscia/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/pomiar-ukladu-wejscia-wyjscia/</link>
         <pubDate>Mon, 23 Dec 2019 16:55:46 +0000</pubDate>
         
         <atom:modified>Mon, 23 Dec 2019 16:55:46 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/pomiar-ukladu-wejscia-wyjscia/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/pomiar-ukladu-wejscia-wyjscia/</guid>
         <description>&lt;p&gt;Aby monitorować zachowanie systemu, należy rozpocząć od utworzenia linii bazowej, która reprezentuje normalne zachowanie systemu. Możesz to zrobić za pomocą narzędzia takiego jak polecenie sar. Następnie możesz użyć takich narzędzi jak netstat, iostat, lsof, w i uptime do monitorowania zachowania systemu, porównując wyniki z poziomem bazowym w celu określenia, czy system ma problemy.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -432,16 +432,16 @@ Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tuta
       
       <item>
         <title>Monitorowanie wykorzystania zasobów systemu Linux</title>
-        <link>https://sysadmin.info.pl/pl/blog/monitorowanie-wykorzystania-zasobow-systemu-linux/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/monitorowanie-wykorzystania-zasobow-systemu-linux/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
         
         <atom:modified>Mon, 23 Dec 2019 16:12:05 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/monitorowanie-wykorzystania-zasobow-systemu-linux/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/monitorowanie-wykorzystania-zasobow-systemu-linux/</guid>
         <description>&lt;p&gt;Planowanie wydajności polega na przewidywaniu, jakie będą wymagania dotyczące wydajności systemu w przyszłości i planowaniu, jak te wymagania spełnić. Monitorowanie wykorzystania zasobów systemu jest ważne dla planowania wydajności, ponieważ pozwala ustalić, czy istniejące wykorzystanie zasobów zbliża się do granic wydajności serwera lub maszyny wirtualnej.&lt;/p&gt;
 &lt;p&gt;W Linuksie można wykorzystać szereg narzędzi do monitorowania wykorzystania zasobów systemowych. Należą do nich polecenia top, ps, pstree, vmstat, sar i free.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/linux-cli.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -487,15 +487,15 @@ Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tuta
       
       <item>
         <title>Lista Kontroli Dostępu w Linux</title>
-        <link>https://sysadmin.info.pl/pl/blog/lista-kontroli-dostepu-w-linux/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/lista-kontroli-dostepu-w-linux/</link>
         <pubDate>Mon, 11 Nov 2019 22:00:40 +0000</pubDate>
         
         <atom:modified>Mon, 11 Nov 2019 22:00:40 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/lista-kontroli-dostepu-w-linux/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/lista-kontroli-dostepu-w-linux/</guid>
         <description>Lista Kontroli Dostępu w LinuxJak używać Listy Kontroli Dostępu w terminalu Linuksowym do ustawiania uprawnień.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -523,15 +523,15 @@ Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tuta
       
       <item>
         <title>Jak zablokować i odblokować użytkownika w systemie Linux</title>
-        <link>https://sysadmin.info.pl/pl/blog/jak-zablokowac-i-odblokowac-uzytkownika-w-systemie-linux/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/jak-zablokowac-i-odblokowac-uzytkownika-w-systemie-linux/</link>
         <pubDate>Sun, 10 Nov 2019 15:13:39 +0000</pubDate>
         
         <atom:modified>Sun, 10 Nov 2019 15:13:39 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/jak-zablokowac-i-odblokowac-uzytkownika-w-systemie-linux/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/jak-zablokowac-i-odblokowac-uzytkownika-w-systemie-linux/</guid>
         <description>Jak zablokować i odblokować użytkownika w systemie LinuxJak zablokować konto użytkownika w systemie Linux? Co ważniejsze, jak odblokować użytkownika w Linuksie? Poznaj różne sposoby blokowania i odblokowywania użytkowników w Linuksowym wierszu poleceń.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -559,16 +559,16 @@ Kurs Zabbix. Autor:Arek SiczekWięcej informacji na temat kursu znajdziesz tuta
       
       <item>
         <title>Dzieci sieci – uzależnieni od Internetu – Dokument Lektor PL</title>
-        <link>https://sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</link>
         <pubDate>Sun, 03 Nov 2019 09:39:45 +0000</pubDate>
         
         <atom:modified>Sun, 03 Nov 2019 09:39:45 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</guid>
-        <description>China&amp;#8217;s Web Junkies: Internet Addiction DocumentaryŹródło: https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html
-Polska wersja: https://www.cda.pl/video/32674549b</description>
+        <guid>https:/sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</guid>
+        <description>China&amp;#8217;s Web Junkies: Internet Addiction DocumentaryŹródło: https:/www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html
+Polska wersja: https:/www.cda.pl/video/32674549b</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/china-web-junkies.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/china-web-junkies.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -594,15 +594,15 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>Uprawnienia specjalne i sticky bit w Linux</title>
-        <link>https://sysadmin.info.pl/pl/blog/uprawnienia-specjalne-i-sticky-bit-w-linux/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/uprawnienia-specjalne-i-sticky-bit-w-linux/</link>
         <pubDate>Sat, 02 Nov 2019 17:15:40 +0000</pubDate>
         
         <atom:modified>Sat, 02 Nov 2019 17:15:40 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/uprawnienia-specjalne-i-sticky-bit-w-linux/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/uprawnienia-specjalne-i-sticky-bit-w-linux/</guid>
         <description>Uprawnienia specjalne i sticky bit w Linux.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/sysadmin-YT-thumb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -630,15 +630,15 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>Reguły  mod_security dla WordPress</title>
-        <link>https://sysadmin.info.pl/pl/blog/reguly-mod_security-dla-wordpress/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/reguly-mod_security-dla-wordpress/</link>
         <pubDate>Wed, 23 Oct 2019 04:23:47 +0000</pubDate>
         
         <atom:modified>Wed, 23 Oct 2019 04:23:47 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/reguly-mod_security-dla-wordpress/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/reguly-mod_security-dla-wordpress/</guid>
         <description>&lt;p&gt;Na tutorial odnośnie instalacji mod_security dla apache, a być może kiedyś dla nginx przyjdzie czas. Dzisiaj wyjaśnię, jak samodzielnie dodawać sobie reguły w pliku whitelist.conf, aby mod_security nie blokował funkcjonalności WordPress.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/mod_security.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/mod_security.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -664,15 +664,15 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>RHCSA – chmod – zmiana uprawnień plików i katalogów</title>
-        <link>https://sysadmin.info.pl/pl/blog/rhcsa-chmod-zmiana-uprawnien-plikow-i-katalogow/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/rhcsa-chmod-zmiana-uprawnien-plikow-i-katalogow/</link>
         <pubDate>Fri, 04 Oct 2019 00:32:44 +0000</pubDate>
         
         <atom:modified>Fri, 04 Oct 2019 00:32:44 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/rhcsa-chmod-zmiana-uprawnien-plikow-i-katalogow/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/rhcsa-chmod-zmiana-uprawnien-plikow-i-katalogow/</guid>
         <description>Jak użyć chmod do zmiany uprawnień plików oraz katalogów.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-chmod.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/rhcsa-chmod.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -700,15 +700,15 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>RHCSA – Hasła użytkowników. Dodawanie grup i użytkowników do grup</title>
-        <link>https://sysadmin.info.pl/pl/blog/rhcsa-hasla-uzytkownikow-dodawanie-grup-i-uzytkownikow-do-grup/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/rhcsa-hasla-uzytkownikow-dodawanie-grup-i-uzytkownikow-do-grup/</link>
         <pubDate>Thu, 03 Oct 2019 09:41:57 +0000</pubDate>
         
         <atom:modified>Thu, 03 Oct 2019 09:41:57 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/rhcsa-hasla-uzytkownikow-dodawanie-grup-i-uzytkownikow-do-grup/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/rhcsa-hasla-uzytkownikow-dodawanie-grup-i-uzytkownikow-do-grup/</guid>
         <description>W tym odcinku pokażę jak zmieniać hasła użytkownikom, , w jaki sposób dodaje się grupy, jak się dodaje użytkowników do grup oraz w jaki sposób zmienia się właściciela katalogu oraz daje dostęp do katalogu dla grupy.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-users-passwords.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/rhcsa-users-passwords.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -736,15 +736,15 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>RHCSA – Dodawanie użytkowników</title>
-        <link>https://sysadmin.info.pl/pl/blog/rhcsa-dodawanie-uzytkownikow/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/rhcsa-dodawanie-uzytkownikow/</link>
         <pubDate>Thu, 03 Oct 2019 07:15:08 +0000</pubDate>
         
         <atom:modified>Thu, 03 Oct 2019 07:15:08 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/rhcsa-dodawanie-uzytkownikow/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/rhcsa-dodawanie-uzytkownikow/</guid>
         <description>RHCSA &amp;#8211; Dodawanie użytkownikówKrótko i na temat, jak dodać użytkowników, a także jak dodac tych z konkretnym id i co się dzieje po dodaniu takiego użytkownika, gdy następnych dodajemy bez przełącznika -u.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa-adding-users.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/rhcsa-adding-users.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -772,15 +772,15 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>Instalacja Red Hat w Virtual Box – konfiguracja sieci oraz ssh.</title>
-        <link>https://sysadmin.info.pl/pl/blog/instalacja-red-hat-w-virtual-box-konfiguracja-sieci-oraz-ssh/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/instalacja-red-hat-w-virtual-box-konfiguracja-sieci-oraz-ssh/</link>
         <pubDate>Wed, 02 Oct 2019 19:50:31 +0000</pubDate>
         
         <atom:modified>Wed, 02 Oct 2019 19:50:31 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/instalacja-red-hat-w-virtual-box-konfiguracja-sieci-oraz-ssh/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/instalacja-red-hat-w-virtual-box-konfiguracja-sieci-oraz-ssh/</guid>
         <description> Instalacja Red Hat w Virtual Box &amp;#8211; konfiguracja sieci oraz ssh. </description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/redhat-installation.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/redhat-installation.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -808,15 +808,15 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>Jak pobrać obraz Red Hat potrzebny do instalacji systemu.</title>
-        <link>https://sysadmin.info.pl/pl/blog/jak-pobrac-obraz-red-hat-potrzebny-do-instalacji-systemu/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/jak-pobrac-obraz-red-hat-potrzebny-do-instalacji-systemu/</link>
         <pubDate>Wed, 02 Oct 2019 19:37:22 +0000</pubDate>
         
         <atom:modified>Wed, 02 Oct 2019 19:37:22 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/jak-pobrac-obraz-red-hat-potrzebny-do-instalacji-systemu/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/jak-pobrac-obraz-red-hat-potrzebny-do-instalacji-systemu/</guid>
         <description> How to download a Red Hat 7.7 image </description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/red-hat-download.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/red-hat-download.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -844,16 +844,16 @@ Polska wersja: https://www.cda.pl/video/32674549b</description>
       
       <item>
         <title>RHCSA - Red Hat Certified System Administrator</title>
-        <link>https://sysadmin.info.pl/pl/blog/red-hat-certified-system-administrator/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/red-hat-certified-system-administrator/</link>
         <pubDate>Mon, 30 Sep 2019 21:35:31 +0000</pubDate>
         
         <atom:modified>Mon, 30 Sep 2019 21:35:31 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/red-hat-certified-system-administrator/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/red-hat-certified-system-administrator/</guid>
         <description>Zamierzam w ciągu następnych kilku tygodni zamieszczać własne szkolenia całkowicie po polsku związane z RHCSA. Tak, za darmo, bo to są takie podstawy podstaw w każdej dystrybucji Linux w zasadzie i jest to według mnie śmiesznie proste. Egzamin wymaga zrozumienia i pamiętania komend na pamięć, więc to już nie jest takie proste, ponieważ polecenia wchodzą w miarę upływu czasu, gdy codziennie się je klepie z palca.
 Cena samego egzaminu to koszt około 1800 PLN.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rhcsa.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/rhcsa.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -881,16 +881,16 @@ Cena samego egzaminu to koszt około 1800 PLN.</description>
       
       <item>
         <title>fail2ban – instalacja i konfiguracja</title>
-        <link>https://sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</link>
         <pubDate>Sat, 28 Sep 2019 07:04:56 +0000</pubDate>
         
         <atom:modified>Sat, 28 Sep 2019 07:04:56 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</guid>
         <description>Uwaga, poniższy tutorial jest fragmentem mojej pracy inżynierskiej pt.: „Utwardzanie serwera sieciowego opartego o system Linux.” pod kierunkiem dr. hab. Kordiana Smolińskiego w Katedrze Fizyki Teoretycznej WFiIS UŁ obronionej w czerwcu 2019.
 CentOS Ubuntu CentOS Aby zainstalować Fail2Ban na CentOS 7.6, w pierwszej kolejności trzeba będzie zainstalować repozytorium EPEL (ang. Extra Packages for Enterprise Linux). EPEL zawiera dodatkowe pakiety dla wszystkich wersji CentOS, jednym z tych dodatkowych pakietów jest Fail2Ban.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/fail2ban.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/fail2ban.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -916,17 +916,17 @@ CentOS Ubuntu CentOS Aby zainstalować Fail2Ban na CentOS 7.6, w pierwszej kolej
       
       <item>
         <title>rclone – instalacja i konfiguracja</title>
-        <link>https://sysadmin.info.pl/pl/blog/rclone-instalacja-i-konfiguracja/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/rclone-instalacja-i-konfiguracja/</link>
         <pubDate>Fri, 27 Sep 2019 20:05:35 +0000</pubDate>
         
         <atom:modified>Fri, 27 Sep 2019 20:05:35 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/rclone-instalacja-i-konfiguracja/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/rclone-instalacja-i-konfiguracja/</guid>
         <description>Cześć,
-Do wykonania kopii zapasowej użyję narzędzia rclone ze strony https://rclone.org W tym konkretnym przypadku użyję https://mega.nz oraz odpowiedniej konfiguracji, aby móc skopiować pliki z serwera do mega.nz. Jeśli nie masz tam konta, możesz je założyć. Na dzień dobry każdy dostaje 50 GB przestrzeni za darmo.
-Proszę zwrócić uwagę na to, że na chwilę bieżącą jest problem z 2FA dla mega. Próba kompilacji aplikacji z kodu źródłowego za pomocą instrukcji z tej strony https://github.</description>
+Do wykonania kopii zapasowej użyję narzędzia rclone ze strony https:/rclone.org W tym konkretnym przypadku użyję https:/mega.nz oraz odpowiedniej konfiguracji, aby móc skopiować pliki z serwera do mega.nz. Jeśli nie masz tam konta, możesz je założyć. Na dzień dobry każdy dostaje 50 GB przestrzeni za darmo.
+Proszę zwrócić uwagę na to, że na chwilę bieżącą jest problem z 2FA dla mega. Próba kompilacji aplikacji z kodu źródłowego za pomocą instrukcji z tej strony https:/github.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/rclone.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/rclone.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -952,17 +952,17 @@ Proszę zwrócić uwagę na to, że na chwilę bieżącą jest problem z 2FA dla
       
       <item>
         <title>Instalacja serwera web na mikr.us z użyciem MariaDB i silnikiem MyISAM</title>
-        <link>https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/</link>
         <pubDate>Sun, 22 Sep 2019 17:38:56 +0000</pubDate>
         
         <atom:modified>Sun, 22 Sep 2019 17:38:56 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/</guid>
         <description>Cześć,
-Trafiła się okazja jak ślepej kurze ziarno dawno temu i upolowałem domenę za darmo sysadmin.info.pl. Pierwotnie zamysł był taki, aby użyć jej do pracy inżynierskiej i tak też się stało. Trzy miesiące później znów nadarzyła się okazja, której nie mogłem przegapić. Tym razem wirtualna maszyna na OpenVZ za śmieszne wręcz pieniądze. Zainteresowanych odsyłam do https://mikr.us. Po kliknięciu w link dostaniesz 5% zniżki na serwer na rok.
+Trafiła się okazja jak ślepej kurze ziarno dawno temu i upolowałem domenę za darmo sysadmin.info.pl. Pierwotnie zamysł był taki, aby użyć jej do pracy inżynierskiej i tak też się stało. Trzy miesiące później znów nadarzyła się okazja, której nie mogłem przegapić. Tym razem wirtualna maszyna na OpenVZ za śmieszne wręcz pieniądze. Zainteresowanych odsyłam do https:/mikr.us. Po kliknięciu w link dostaniesz 5% zniżki na serwer na rok.
 Tym sposobem stało się możliwe posiadanie wersji live własnej strony, której konfigurację opiszę poniżej krok po kroku.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/mariadb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/mariadb.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -988,17 +988,17 @@ Tym sposobem stało się możliwe posiadanie wersji live własnej strony, które
       
       <item>
         <title>Konfiguracja WordPress do połączenia ze zdalną bazą danych</title>
-        <link>https://sysadmin.info.pl/pl/blog/konfiguracja-wordpress-do-polaczenia-ze-zdalna-baza-danych/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/konfiguracja-wordpress-do-polaczenia-ze-zdalna-baza-danych/</link>
         <pubDate>Sun, 22 Sep 2019 17:34:27 +0000</pubDate>
         
         <atom:modified>Sun, 22 Sep 2019 17:34:27 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/konfiguracja-wordpress-do-polaczenia-ze-zdalna-baza-danych/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/konfiguracja-wordpress-do-polaczenia-ze-zdalna-baza-danych/</guid>
         <description>Cześć,
 Opiszę tutaj krok po kroku konfigurację WordPress w konfiguracji dwóch serwerów. Mogą to być serwery fizyczne, lub zainstalowane na wirtualnych maszynach, czy to za pomocą VirtualBox , czy HyperV.
 Zazwyczaj spotykamy się z tymi konfiguracjami powyżej, oczywiście są też inne rozwiązania, jak np. w przypadku usługodawcy hostingu, który ma w innym miejscu bazę danych, a w innym trzyma katalog na pliki strony internetowej, lecz ja zajmę się przypadkiem klasycznym, gdy rozróżniamy dwa różne serwery.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/wp.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/wp.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -1028,16 +1028,16 @@ Zazwyczaj spotykamy się z tymi konfiguracjami powyżej, oczywiście są też in
       
       <item>
         <title>SELinux polityka bezpieczeństwa</title>
-        <link>https://sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</link>
         <pubDate>Sun, 22 Sep 2019 17:26:09 +0000</pubDate>
         
         <atom:modified>Sun, 22 Sep 2019 17:26:09 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/selinux-polityka-bezpieczenstwa/</guid>
         <description>Nie jestem eskpertem od SELinux, ale gdy przeczytałem wiele poradników (ang. tutorial) na ten temat i widziałem dziesiątki porad, które wszystkie jednym głosem oznajmiały: wyłącz SELinux, ponieważ sprawia problemy, uznałem, że czas podważyć tę tezę i udowodnić, że SELinux może być prosty w obsłudze.
 W sytuacji, gdy jakaś usługa nie uruchamia się, z powodu problemów z uprawnieniami, tworząc plik ID procesu (PID), należy zaktualizować politykę SELinux w zakresie egzekwowania zasad w stosunku do aplikacji, która domyślnie nie jest uwzględniona w politykach tzw.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/selinux.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/selinux.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -1067,17 +1067,17 @@ W sytuacji, gdy jakaś usługa nie uruchamia się, z powodu problemów z uprawni
       
       <item>
         <title>Polityka prywatności</title>
-        <link>https://sysadmin.info.pl/pl/privacy/</link>
+        <link>https:/sysadmin.info.pl/pl/privacy/</link>
         <pubDate>Sat, 21 Sep 2019 19:24:59 +0000</pubDate>
         
         <atom:modified>Sat, 21 Sep 2019 19:24:59 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/privacy/</guid>
+        <guid>https:/sysadmin.info.pl/pl/privacy/</guid>
         <description>Polityka prywatności Portal sysadmin.info.pl nie przetwarza, nie udostępnia ani nie wykorzystuje w celach marketingowych danych przekazywanych przez Użytkowników portalu. Możecie być pewni że w przyszłości także nie będziemy przetwarzać, udostępniać ani wykorzystywać waszych danych w jakichkolwiek innych celach, niż zwykłe zbieranie statystyk.
 Portal sysadmin.info.pl nie ponosi odpowiedzialności za treści i opinie wyrażane przez użytkowników w komentarzach lub opisach. Są one wyłącznie własnością użytkowników, od których pochodzą.
 Hugo a ogólne rozporządzenie o ochronie danych osobowych (GDPR) Strona sysadmin.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

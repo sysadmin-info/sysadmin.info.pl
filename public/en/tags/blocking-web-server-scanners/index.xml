@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>blocking web server scanners on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/tags/blocking-web-server-scanners/</link>
+    <link>https:/sysadmin.info.pl/en/tags/blocking-web-server-scanners/</link>
     <description>Recent content in blocking web server scanners on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Mon, 22 Feb 2021 20:11:29 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/en/tags/blocking-web-server-scanners/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/en/tags/blocking-web-server-scanners/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Bash script that blocks web server (apache/nginx/litespeed) scanners.</title>
-        <link>https://sysadmin.info.pl/en/blog/bash-script-that-blocks-web-server-apache-nginx-litespeed-scanners/</link>
+        <link>https:/sysadmin.info.pl/en/blog/bash-script-that-blocks-web-server-apache-nginx-litespeed-scanners/</link>
         <pubDate>Mon, 22 Feb 2021 20:11:29 +0000</pubDate>
         
         <atom:modified>Mon, 22 Feb 2021 20:11:29 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/bash-script-that-blocks-web-server-apache-nginx-litespeed-scanners/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/bash-script-that-blocks-web-server-apache-nginx-litespeed-scanners/</guid>
         <description>Bash script that blocks web server (apache/nginx/litespeed) scannersBash script that blocks web server (apache/nginx/litespeed) scanners. It checks the 400-408 errors or any other in the log you will choose to scan and extracts IP addresses of scanners which are trying to scan a web server and adds IP addresses to the ipset which drops the connection.
 #!/bin/bash######################################################### Apache access_log ####################################################################Look for the file and if does not exist create it.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2021-thumbs/bash_script_that_blocks_web_server_scanners.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2021-thumbs/bash_script_that_blocks_web_server_scanners.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

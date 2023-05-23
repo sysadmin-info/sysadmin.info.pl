@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>firewalld on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/tags/firewalld/</link>
+    <link>https:/sysadmin.info.pl/en/tags/firewalld/</link>
     <description>Recent content in firewalld on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Sun, 04 Oct 2020 10:09:30 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/en/tags/firewalld/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/en/tags/firewalld/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Using blocklist with iptables and firewalld</title>
-        <link>https://sysadmin.info.pl/en/blog/using-blocklist-with-iptables-and-firewalld/</link>
+        <link>https:/sysadmin.info.pl/en/blog/using-blocklist-with-iptables-and-firewalld/</link>
         <pubDate>Sun, 04 Oct 2020 10:09:30 +0000</pubDate>
         
         <atom:modified>Sun, 04 Oct 2020 10:09:30 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/using-blocklist-with-iptables-and-firewalld/</guid>
+        <guid>https:/sysadmin.info.pl/en/blog/using-blocklist-with-iptables-and-firewalld/</guid>
         <description>&lt;p&gt;If you have any kind of server connected to the Internet, you are no doubt aware that no matter how small or unimportant it might seem, it is frequently probed, tested or subject to various attempts at abuse. These attacks come from so many malicious hosts that it is impossible to keep track by hand. So I started looking for a way to implement an automated blocklist to use with iptables and firewalld which I use on my servers.&lt;/p&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/firewall.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2020-thumbs/firewall.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

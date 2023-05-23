@@ -4,7 +4,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *     http:/www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -58,7 +58,7 @@ const FontInspector = (function FontInspectorClosure() {
     }
   }
   return {
-    // Properties/functions needed by PDFBug.
+    / Properties/functions needed by PDFBug.
     id: "FontInspector",
     name: "Font Inspector",
     panel: null,
@@ -90,7 +90,7 @@ const FontInspector = (function FontInspectorClosure() {
         removeSelection();
       }
     },
-    // FontInspector specific functions.
+    / FontInspector specific functions.
     fontAdded(fontObj, url) {
       function properties(obj, list) {
         const moreInfo = document.createElement("table");
@@ -136,8 +136,8 @@ const FontInspector = (function FontInspectorClosure() {
       });
       font.append(select, name, " ", download, " ", logIt, moreInfo);
       fonts.append(font);
-      // Somewhat of a hack, should probably add a hook for when the text layer
-      // is done rendering.
+      / Somewhat of a hack, should probably add a hook for when the text layer
+      / is done rendering.
       setTimeout(() => {
         if (this.active) {
           resetSelection();
@@ -147,7 +147,7 @@ const FontInspector = (function FontInspectorClosure() {
   };
 })();
 
-// Manages all the page steppers.
+/ Manages all the page steppers.
 const StepperManager = (function StepperManagerClosure() {
   let steppers = [];
   let stepperDiv = null;
@@ -155,7 +155,7 @@ const StepperManager = (function StepperManagerClosure() {
   let stepperChooser = null;
   let breakPoints = Object.create(null);
   return {
-    // Properties/functions needed by PDFBug.
+    / Properties/functions needed by PDFBug.
     id: "Stepper",
     name: "Stepper",
     panel: null,
@@ -186,7 +186,7 @@ const StepperManager = (function StepperManagerClosure() {
     },
     enabled: false,
     active: false,
-    // Stepper specific functions.
+    / Stepper specific functions.
     create(pageIndex) {
       const debug = document.createElement("div");
       debug.id = "stepper" + pageIndex;
@@ -224,9 +224,9 @@ const StepperManager = (function StepperManagerClosure() {
   };
 })();
 
-// The stepper for each page's operatorList.
+/ The stepper for each page's operatorList.
 const Stepper = (function StepperClosure() {
-  // Shorter way to create element and optionally set textContent.
+  / Shorter way to create element and optionally set textContent.
   function c(tag, textContent) {
     const d = document.createElement(tag);
     if (textContent) {
@@ -246,7 +246,7 @@ const Stepper = (function StepperClosure() {
       return args;
     }
     if ("length" in args) {
-      // array
+      / array
       const MAX_ITEMS = 10,
         simpleArgs = [];
       let i, ii;
@@ -265,7 +265,7 @@ const Stepper = (function StepperClosure() {
     return simpleObj;
   }
 
-  // eslint-disable-next-line no-shadow
+  / eslint-disable-next-line no-shadow
   class Stepper {
     constructor(panel, pageIndex, initialBreakPoints) {
       this.panel = panel;
@@ -351,7 +351,7 @@ const Stepper = (function StepperClosure() {
               fontCharRow.append(c("td", glyph.fontChar));
               unicodeRow.append(c("td", glyph.unicode));
             } else {
-              // null or number
+              / null or number
               const advanceEl = c("td", glyph);
               advanceEl.classList.add("advance");
               charCodeRow.append(advanceEl);
@@ -405,13 +405,13 @@ const Stepper = (function StepperClosure() {
 
       const listener = evt => {
         switch (evt.keyCode) {
-          case 83: // step
+          case 83: / step
             document.removeEventListener("keydown", listener);
             this.nextBreakPoint = this.currentIdx + 1;
             this.goTo(-1);
             callback();
             break;
-          case 67: // continue
+          case 67: / continue
             document.removeEventListener("keydown", listener);
             this.nextBreakPoint = this.getNextBreakPoint();
             this.goTo(-1);
@@ -441,7 +441,7 @@ const Stepper = (function StepperClosure() {
 const Stats = (function Stats() {
   let stats = [];
   function clear(node) {
-    node.textContent = ""; // Remove any `node` contents from the DOM.
+    node.textContent = ""; / Remove any `node` contents from the DOM.
   }
   function getStatIndex(pageNumber) {
     for (const [i, stat] of stats.entries()) {
@@ -452,7 +452,7 @@ const Stats = (function Stats() {
     return false;
   }
   return {
-    // Properties/functions needed by PDFBug.
+    / Properties/functions needed by PDFBug.
     id: "Stats",
     name: "Stats",
     panel: null,
@@ -460,7 +460,7 @@ const Stats = (function Stats() {
     init(pdfjsLib) {},
     enabled: false,
     active: false,
-    // Stats specific functions.
+    / Stats specific functions.
     add(pageNumber, stat) {
       if (!stat) {
         return;
@@ -494,7 +494,7 @@ const Stats = (function Stats() {
   };
 })();
 
-// Manages all the debugging tools.
+/ Manages all the debugging tools.
 const PDFBug = (function PDFBugClosure() {
   const panelWidth = 300;
   const buttons = [];
@@ -511,7 +511,7 @@ const PDFBug = (function PDFBugClosure() {
         }
       }
       if (!all) {
-        // Sort the tools by the order they are enabled.
+        / Sort the tools by the order they are enabled.
         tools.sort(function (a, b) {
           let indexA = ids.indexOf(a.id);
           indexA = indexA < 0 ? tools.length : indexA;
@@ -547,7 +547,7 @@ const PDFBug = (function PDFBugClosure() {
       container.append(ui);
       container.style.right = panelWidth + "px";
 
-      // Initialize all the debugging tools.
+      / Initialize all the debugging tools.
       for (const tool of this.tools) {
         const panel = document.createElement("div");
         const panelButton = document.createElement("button");

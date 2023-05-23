@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
-    <link>https://sysadmin.info.pl/pl/tags/</link>
+    <link>https:/sysadmin.info.pl/pl/tags/</link>
     <description>Recent content in Tags on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pl</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Sun, 19 Mar 2023 22:08:59 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/pl/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/pl/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>sysadmin</title>
-        <link>https://sysadmin.info.pl/pl/tags/sysadmin/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/sysadmin/</link>
         <pubDate>Sun, 19 Mar 2023 22:08:59 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/sysadmin/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/sysadmin/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -38,11 +38,11 @@
       
       <item>
         <title>Agents of chaos</title>
-        <link>https://sysadmin.info.pl/pl/tags/agents-of-chaos/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/agents-of-chaos/</link>
         <pubDate>Mon, 21 Mar 2022 11:34:34 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/agents-of-chaos/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/agents-of-chaos/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -56,11 +56,11 @@
       
       <item>
         <title>bezpieczeństwo narodowe</title>
-        <link>https://sysadmin.info.pl/pl/tags/bezpiecze%C5%84stwo-narodowe/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/bezpiecze%C5%84stwo-narodowe/</link>
         <pubDate>Mon, 21 Mar 2022 11:34:34 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/bezpiecze%C5%84stwo-narodowe/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/bezpiecze%C5%84stwo-narodowe/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -74,11 +74,11 @@
       
       <item>
         <title>cyberataki</title>
-        <link>https://sysadmin.info.pl/pl/tags/cyberataki/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/cyberataki/</link>
         <pubDate>Mon, 21 Mar 2022 11:34:34 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/cyberataki/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/cyberataki/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -92,11 +92,11 @@
       
       <item>
         <title>cyberkonflikty</title>
-        <link>https://sysadmin.info.pl/pl/tags/cyberkonflikty/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/cyberkonflikty/</link>
         <pubDate>Mon, 21 Mar 2022 11:34:34 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/cyberkonflikty/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/cyberkonflikty/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -110,11 +110,11 @@
       
       <item>
         <title>Bash</title>
-        <link>https://sysadmin.info.pl/pl/tags/bash/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/bash/</link>
         <pubDate>Thu, 03 Mar 2022 11:50:26 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/bash/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/bash/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -128,11 +128,11 @@
       
       <item>
         <title>security</title>
-        <link>https://sysadmin.info.pl/pl/tags/security/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/security/</link>
         <pubDate>Thu, 03 Mar 2022 11:50:26 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/security/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/security/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -146,11 +146,11 @@
       
       <item>
         <title>auditd</title>
-        <link>https://sysadmin.info.pl/pl/tags/auditd/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/auditd/</link>
         <pubDate>Sun, 14 Feb 2021 14:49:24 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/auditd/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/auditd/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -164,11 +164,11 @@
       
       <item>
         <title>idealna broń</title>
-        <link>https://sysadmin.info.pl/pl/tags/idealna-bro%C5%84/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/idealna-bro%C5%84/</link>
         <pubDate>Sat, 14 Nov 2020 17:25:29 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/idealna-bro%C5%84/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/idealna-bro%C5%84/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -182,11 +182,11 @@
       
       <item>
         <title>Dovecot</title>
-        <link>https://sysadmin.info.pl/pl/tags/dovecot/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/dovecot/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/dovecot/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/dovecot/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -200,11 +200,11 @@
       
       <item>
         <title>Linux hardening</title>
-        <link>https://sysadmin.info.pl/pl/tags/linux-hardening/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/linux-hardening/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/linux-hardening/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/linux-hardening/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -218,11 +218,11 @@
       
       <item>
         <title>Postfix</title>
-        <link>https://sysadmin.info.pl/pl/tags/postfix/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/postfix/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/postfix/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/postfix/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -236,11 +236,11 @@
       
       <item>
         <title>praca inżynierska</title>
-        <link>https://sysadmin.info.pl/pl/tags/praca-in%C5%BCynierska/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/praca-in%C5%BCynierska/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/praca-in%C5%BCynierska/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/praca-in%C5%BCynierska/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -254,11 +254,11 @@
       
       <item>
         <title>utwardzanie Linux</title>
-        <link>https://sysadmin.info.pl/pl/tags/utwardzanie-linux/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/utwardzanie-linux/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/utwardzanie-linux/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/utwardzanie-linux/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -272,11 +272,11 @@
       
       <item>
         <title>zabezpieczenie Samba</title>
-        <link>https://sysadmin.info.pl/pl/tags/zabezpieczenie-samba/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/zabezpieczenie-samba/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/zabezpieczenie-samba/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/zabezpieczenie-samba/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -290,11 +290,11 @@
       
       <item>
         <title>zabezpieczenie serwera poczty</title>
-        <link>https://sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-poczty/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-poczty/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-poczty/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-poczty/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -308,11 +308,11 @@
       
       <item>
         <title>zabezpieczenie serwera web</title>
-        <link>https://sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-web/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-web/</link>
         <pubDate>Sun, 04 Oct 2020 07:39:43 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-web/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/zabezpieczenie-serwera-web/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -326,11 +326,11 @@
       
       <item>
         <title>Cloudflare</title>
-        <link>https://sysadmin.info.pl/pl/tags/cloudflare/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/cloudflare/</link>
         <pubDate>Sat, 03 Oct 2020 15:58:03 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/cloudflare/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/cloudflare/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -344,11 +344,11 @@
       
       <item>
         <title>CNAME</title>
-        <link>https://sysadmin.info.pl/pl/tags/cname/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/cname/</link>
         <pubDate>Sat, 03 Oct 2020 15:58:03 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/cname/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/cname/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -362,11 +362,11 @@
       
       <item>
         <title>szyfrowanie full strict</title>
-        <link>https://sysadmin.info.pl/pl/tags/szyfrowanie-full-strict/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/szyfrowanie-full-strict/</link>
         <pubDate>Sat, 03 Oct 2020 15:58:03 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/szyfrowanie-full-strict/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/szyfrowanie-full-strict/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -380,11 +380,11 @@
       
       <item>
         <title>zarządzanie DNS</title>
-        <link>https://sysadmin.info.pl/pl/tags/zarz%C4%85dzanie-dns/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/zarz%C4%85dzanie-dns/</link>
         <pubDate>Sat, 03 Oct 2020 15:58:03 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/zarz%C4%85dzanie-dns/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/zarz%C4%85dzanie-dns/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -398,11 +398,11 @@
       
       <item>
         <title>kurs zabbix</title>
-        <link>https://sysadmin.info.pl/pl/tags/kurs-zabbix/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/kurs-zabbix/</link>
         <pubDate>Fri, 04 Sep 2020 12:01:57 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/kurs-zabbix/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/kurs-zabbix/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -416,11 +416,11 @@
       
       <item>
         <title>zabbix</title>
-        <link>https://sysadmin.info.pl/pl/tags/zabbix/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/zabbix/</link>
         <pubDate>Fri, 04 Sep 2020 12:01:57 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/zabbix/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/zabbix/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -434,11 +434,11 @@
       
       <item>
         <title>iostat</title>
-        <link>https://sysadmin.info.pl/pl/tags/iostat/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/iostat/</link>
         <pubDate>Mon, 23 Dec 2019 16:55:46 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/iostat/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/iostat/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -452,11 +452,11 @@
       
       <item>
         <title>lsof</title>
-        <link>https://sysadmin.info.pl/pl/tags/lsof/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/lsof/</link>
         <pubDate>Mon, 23 Dec 2019 16:55:46 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/lsof/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/lsof/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -470,11 +470,11 @@
       
       <item>
         <title>netstat</title>
-        <link>https://sysadmin.info.pl/pl/tags/netstat/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/netstat/</link>
         <pubDate>Mon, 23 Dec 2019 16:55:46 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/netstat/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/netstat/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -488,11 +488,11 @@
       
       <item>
         <title>free</title>
-        <link>https://sysadmin.info.pl/pl/tags/free/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/free/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/free/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/free/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -506,11 +506,11 @@
       
       <item>
         <title>ps</title>
-        <link>https://sysadmin.info.pl/pl/tags/ps/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/ps/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/ps/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/ps/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -524,11 +524,11 @@
       
       <item>
         <title>pstree</title>
-        <link>https://sysadmin.info.pl/pl/tags/pstree/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/pstree/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/pstree/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/pstree/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -542,11 +542,11 @@
       
       <item>
         <title>sar</title>
-        <link>https://sysadmin.info.pl/pl/tags/sar/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/sar/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/sar/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/sar/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -560,11 +560,11 @@
       
       <item>
         <title>top</title>
-        <link>https://sysadmin.info.pl/pl/tags/top/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/top/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/top/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/top/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -578,11 +578,11 @@
       
       <item>
         <title>vmstat</title>
-        <link>https://sysadmin.info.pl/pl/tags/vmstat/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/vmstat/</link>
         <pubDate>Mon, 23 Dec 2019 16:12:05 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/vmstat/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/vmstat/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -596,11 +596,11 @@
       
       <item>
         <title>RHCSA</title>
-        <link>https://sysadmin.info.pl/pl/tags/rhcsa/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/rhcsa/</link>
         <pubDate>Mon, 11 Nov 2019 22:00:40 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/rhcsa/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/rhcsa/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -614,11 +614,11 @@
       
       <item>
         <title>uzależnienie od Internetu</title>
-        <link>https://sysadmin.info.pl/pl/tags/uzale%C5%BCnienie-od-internetu/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/uzale%C5%BCnienie-od-internetu/</link>
         <pubDate>Sun, 03 Nov 2019 09:39:45 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/uzale%C5%BCnienie-od-internetu/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/uzale%C5%BCnienie-od-internetu/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -632,11 +632,11 @@
       
       <item>
         <title>mod_security</title>
-        <link>https://sysadmin.info.pl/pl/tags/mod_security/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/mod_security/</link>
         <pubDate>Wed, 23 Oct 2019 04:23:47 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/mod_security/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/mod_security/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -650,11 +650,11 @@
       
       <item>
         <title>fail2ban</title>
-        <link>https://sysadmin.info.pl/pl/tags/fail2ban/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/fail2ban/</link>
         <pubDate>Sat, 28 Sep 2019 07:04:56 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/fail2ban/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/fail2ban/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -668,11 +668,11 @@
       
       <item>
         <title>rclone</title>
-        <link>https://sysadmin.info.pl/pl/tags/rclone/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/rclone/</link>
         <pubDate>Fri, 27 Sep 2019 20:05:35 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/rclone/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/rclone/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -686,11 +686,11 @@
       
       <item>
         <title>mikr.us</title>
-        <link>https://sysadmin.info.pl/pl/tags/mikr.us/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/mikr.us/</link>
         <pubDate>Sun, 22 Sep 2019 17:38:56 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/mikr.us/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/mikr.us/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -704,11 +704,11 @@
       
       <item>
         <title>selinux</title>
-        <link>https://sysadmin.info.pl/pl/tags/selinux/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/selinux/</link>
         <pubDate>Sun, 22 Sep 2019 17:26:09 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/selinux/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/selinux/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -722,11 +722,11 @@
       
       <item>
         <title>privacy</title>
-        <link>https://sysadmin.info.pl/pl/tags/privacy/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/privacy/</link>
         <pubDate>Sat, 21 Sep 2019 19:24:59 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/privacy/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/privacy/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -740,11 +740,11 @@
       
       <item>
         <title>index</title>
-        <link>https://sysadmin.info.pl/pl/tags/index/</link>
+        <link>https:/sysadmin.info.pl/pl/tags/index/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/pl/tags/index/</guid>
+        <guid>https:/sysadmin.info.pl/pl/tags/index/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>

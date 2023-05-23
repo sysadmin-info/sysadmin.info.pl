@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>Categories on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/categories/</link>
+    <link>https:/sysadmin.info.pl/en/categories/</link>
     <description>Recent content in Categories on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Sun, 19 Mar 2023 22:05:03 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>general</title>
-        <link>https://sysadmin.info.pl/en/categories/general/</link>
+        <link>https:/sysadmin.info.pl/en/categories/general/</link>
         <pubDate>Sun, 19 Mar 2023 22:05:03 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/general/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/general/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -38,11 +38,11 @@
       
       <item>
         <title>Linux</title>
-        <link>https://sysadmin.info.pl/en/categories/linux/</link>
+        <link>https:/sysadmin.info.pl/en/categories/linux/</link>
         <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/linux/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/linux/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -56,11 +56,11 @@
       
       <item>
         <title>Qemu KVM</title>
-        <link>https://sysadmin.info.pl/en/categories/qemu-kvm/</link>
+        <link>https:/sysadmin.info.pl/en/categories/qemu-kvm/</link>
         <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/qemu-kvm/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/qemu-kvm/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -74,11 +74,11 @@
       
       <item>
         <title>OpenvSwitch</title>
-        <link>https://sysadmin.info.pl/en/categories/openvswitch/</link>
+        <link>https:/sysadmin.info.pl/en/categories/openvswitch/</link>
         <pubDate>Sat, 15 Oct 2022 14:36:56 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/openvswitch/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/openvswitch/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -92,11 +92,11 @@
       
       <item>
         <title>IT security</title>
-        <link>https://sysadmin.info.pl/en/categories/it-security/</link>
+        <link>https:/sysadmin.info.pl/en/categories/it-security/</link>
         <pubDate>Sun, 02 Oct 2022 09:41:03 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/it-security/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/it-security/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -110,11 +110,11 @@
       
       <item>
         <title>Git</title>
-        <link>https://sysadmin.info.pl/en/categories/git/</link>
+        <link>https:/sysadmin.info.pl/en/categories/git/</link>
         <pubDate>Thu, 22 Sep 2022 08:50:49 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/git/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/git/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -128,11 +128,11 @@
       
       <item>
         <title>Home Assistant</title>
-        <link>https://sysadmin.info.pl/en/categories/home-assistant/</link>
+        <link>https:/sysadmin.info.pl/en/categories/home-assistant/</link>
         <pubDate>Fri, 29 Jul 2022 10:13:13 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/home-assistant/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/home-assistant/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -146,11 +146,11 @@
       
       <item>
         <title>Raspberry Pi</title>
-        <link>https://sysadmin.info.pl/en/categories/raspberry-pi/</link>
+        <link>https:/sysadmin.info.pl/en/categories/raspberry-pi/</link>
         <pubDate>Fri, 29 Jul 2022 10:13:13 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/raspberry-pi/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/raspberry-pi/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -164,11 +164,11 @@
       
       <item>
         <title>Documentaries</title>
-        <link>https://sysadmin.info.pl/en/categories/documentaries/</link>
+        <link>https:/sysadmin.info.pl/en/categories/documentaries/</link>
         <pubDate>Mon, 21 Mar 2022 11:36:01 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/documentaries/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/documentaries/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -182,11 +182,11 @@
       
       <item>
         <title>RHCSA</title>
-        <link>https://sysadmin.info.pl/en/categories/rhcsa/</link>
+        <link>https:/sysadmin.info.pl/en/categories/rhcsa/</link>
         <pubDate>Mon, 11 Nov 2019 22:05:32 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/rhcsa/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/rhcsa/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -200,11 +200,11 @@
       
       <item>
         <title>mikr.us</title>
-        <link>https://sysadmin.info.pl/en/categories/mikr.us/</link>
+        <link>https:/sysadmin.info.pl/en/categories/mikr.us/</link>
         <pubDate>Thu, 26 Sep 2019 20:30:45 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/mikr.us/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/mikr.us/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -218,11 +218,11 @@
       
       <item>
         <title>WordPress</title>
-        <link>https://sysadmin.info.pl/en/categories/wordpress/</link>
+        <link>https:/sysadmin.info.pl/en/categories/wordpress/</link>
         <pubDate>Sat, 21 Sep 2019 19:16:03 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/categories/wordpress/</guid>
+        <guid>https:/sysadmin.info.pl/en/categories/wordpress/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>Series on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/series/</link>
+    <link>https:/sysadmin.info.pl/en/series/</link>
     <description>Recent content in Series on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Tue, 25 Oct 2022 11:39:32 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/en/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/en/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Qemu KVM</title>
-        <link>https://sysadmin.info.pl/en/series/qemu-kvm/</link>
+        <link>https:/sysadmin.info.pl/en/series/qemu-kvm/</link>
         <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/series/qemu-kvm/</guid>
+        <guid>https:/sysadmin.info.pl/en/series/qemu-kvm/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -38,11 +38,11 @@
       
       <item>
         <title>Git</title>
-        <link>https://sysadmin.info.pl/en/series/git/</link>
+        <link>https:/sysadmin.info.pl/en/series/git/</link>
         <pubDate>Thu, 22 Sep 2022 08:50:49 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/series/git/</guid>
+        <guid>https:/sysadmin.info.pl/en/series/git/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>
@@ -56,11 +56,11 @@
       
       <item>
         <title>RHCSA</title>
-        <link>https://sysadmin.info.pl/en/series/rhcsa/</link>
+        <link>https:/sysadmin.info.pl/en/series/rhcsa/</link>
         <pubDate>Mon, 11 Nov 2019 22:05:32 +0000</pubDate>
         
         
-        <guid>https://sysadmin.info.pl/en/series/rhcsa/</guid>
+        <guid>https:/sysadmin.info.pl/en/series/rhcsa/</guid>
         <description></description>
         
         <dc:creator>sysadmin</dc:creator>

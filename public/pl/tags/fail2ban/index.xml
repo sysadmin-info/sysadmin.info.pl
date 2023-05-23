@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
+  xmlns:atom="http:/www.w3.org/2005/Atom" 
+  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http:/search.yahoo.com/mrss/">
   <channel>
     <title>fail2ban on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
-    <link>https://sysadmin.info.pl/pl/tags/fail2ban/</link>
+    <link>https:/sysadmin.info.pl/pl/tags/fail2ban/</link>
     <description>Recent content in fail2ban on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pl</language>
-    <copyright>©2023, <a href="https://sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
+    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
     <lastBuildDate>Sat, 28 Sep 2019 07:04:56 +0000</lastBuildDate>
     
-        <atom:link href="https://sysadmin.info.pl/pl/tags/fail2ban/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https:/sysadmin.info.pl/pl/tags/fail2ban/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>fail2ban – instalacja i konfiguracja</title>
-        <link>https://sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</link>
+        <link>https:/sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</link>
         <pubDate>Sat, 28 Sep 2019 07:04:56 +0000</pubDate>
         
         <atom:modified>Sat, 28 Sep 2019 07:04:56 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</guid>
+        <guid>https:/sysadmin.info.pl/pl/blog/fail2ban-instalacja-i-konfiguracja/</guid>
         <description>Uwaga, poniższy tutorial jest fragmentem mojej pracy inżynierskiej pt.: „Utwardzanie serwera sieciowego opartego o system Linux.” pod kierunkiem dr. hab. Kordiana Smolińskiego w Katedrze Fizyki Teoretycznej WFiIS UŁ obronionej w czerwcu 2019.
 CentOS Ubuntu CentOS Aby zainstalować Fail2Ban na CentOS 7.6, w pierwszej kolejności trzeba będzie zainstalować repozytorium EPEL (ang. Extra Packages for Enterprise Linux). EPEL zawiera dodatkowe pakiety dla wszystkich wersji CentOS, jednym z tych dodatkowych pakietów jest Fail2Ban.</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/fail2ban.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/fail2ban.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
