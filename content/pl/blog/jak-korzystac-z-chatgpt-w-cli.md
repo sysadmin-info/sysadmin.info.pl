@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: admin
+author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
@@ -49,7 +49,7 @@ Pamiętaj, że OpenAI nie wyświetli twojego tajnego klucza API ponownie po jego
   {{< tab >}}
   ### SLES
   ```bash
-  sudo zypper install python3-pip
+  sudo zypper install python39 python39-pip
   pip3 --version
   pip3 install openai
   ```  
@@ -149,6 +149,18 @@ Pamiętaj, aby zabezpieczyć swoje klucze API i rozważyć użycie zmiennych śr
 
 ```bash
 ./chatgpt.sh
+```
+
+lub w przypadku openSUSE 15.4 Leap, które wciąż używa domyślnie Python w wersji 3.9.16 uruchom skrypt python.
+
+```python
+./chatgpt.py
+```
+
+Pamietaj o zadeklarowaniu w pliku py prawidłowej ścieżki do prawidłowej wersji python.Dla openSUSE 15.4 będzie to:
+
+```
+#!/usr/bin/python3.9
 ```
 
 To wszystko! Masz teraz podstawowy samouczek na temat korzystania z ChatGPT z API w Linux CLI. Zachęcam do dostosowania skryptu lub poznania bardziej zaawansowanych funkcji API OpenAI.

@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: admin
+author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true

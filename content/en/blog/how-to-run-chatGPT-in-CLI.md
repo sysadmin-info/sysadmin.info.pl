@@ -6,7 +6,7 @@ draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: admin
+author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
@@ -50,7 +50,7 @@ Now, you can install Docker with the following command.
   {{< tab >}}
   ### SLES
   ```bash
-  sudo zypper install python3-pip
+  sudo zypper install python39 python39-pip
   pip3 --version
   pip3 install openai
   ```  
@@ -143,6 +143,18 @@ Remember to secure your API keys and consider environment variables or other sec
 
 ```bash
 ./chatgpt.sh
+```
+
+or in case of the openSUSE 15.4 Leap that is still using by default Python 3.9.16 version run the python script.
+
+```python
+./chatgpt.py
+```
+
+Remember to declare in a py file a proper path to the proper python version. For openSUSE 15.4 it will be:
+
+```
+#!/usr/bin/python3.9
 ```
 
 That's it! You now have a basic tutorial on how to use ChatGPT with the API in the Linux CLI. Feel free to customize the script or explore more advanced features of the OpenAI API.

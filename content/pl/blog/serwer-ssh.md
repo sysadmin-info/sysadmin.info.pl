@@ -5,7 +5,7 @@ date: 2023-04-01T14:50:34+02:00
 hideToc: false
 enableToc: true
 enableTocContent: false
-author: admin
+author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
