@@ -48,7 +48,7 @@ Now, you can install Docker with the following command.
 
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
-  ### SLES
+  ### SLES | openSUSE Leap 15.4
   ```bash
   sudo zypper install python39 python39-pip
   pip3 --version
@@ -109,7 +109,7 @@ while(message["content"]!="exit"):
 cd $HOME
 
 # Run the Python script
-python3 chatgpt.py
+./chatgpt.py
 ```
 
 5. **Set permissions:**
@@ -143,12 +143,6 @@ Remember to secure your API keys and consider environment variables or other sec
 
 ```bash
 ./chatgpt.sh
-```
-
-or in case of the openSUSE 15.4 Leap that is still using by default Python 3.9.16 version run the python script.
-
-```python
-./chatgpt.py
 ```
 
 Remember to declare in a py file a proper path to the proper python version. For openSUSE 15.4 it will be:

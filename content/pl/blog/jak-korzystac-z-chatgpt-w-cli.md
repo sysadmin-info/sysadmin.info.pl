@@ -47,7 +47,7 @@ Pamiętaj, że OpenAI nie wyświetli twojego tajnego klucza API ponownie po jego
 
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
-  ### SLES
+  ### SLES | openSUSE Leap 15.4
   ```bash
   sudo zypper install python39 python39-pip
   pip3 --version
@@ -115,7 +115,7 @@ Wklej poniższą zawartość do pliku:
 cd $HOME
 
 # Run the Python script
-python3 chatgpt.py
+./chatgpt.py
 ```
 
 5. **Nadaj uprawnienia**
@@ -151,13 +151,7 @@ Pamiętaj, aby zabezpieczyć swoje klucze API i rozważyć użycie zmiennych śr
 ./chatgpt.sh
 ```
 
-lub w przypadku openSUSE 15.4 Leap, które wciąż używa domyślnie Python w wersji 3.9.16 uruchom skrypt python.
-
-```python
-./chatgpt.py
-```
-
-Pamietaj o zadeklarowaniu w pliku py prawidłowej ścieżki do prawidłowej wersji python.Dla openSUSE 15.4 będzie to:
+Pamiętaj o zadeklarowaniu w pliku py prawidłowej ścieżki do prawidłowej wersji python. Dla openSUSE 15.4 będzie to:
 
 ```
 #!/usr/bin/python3.9
