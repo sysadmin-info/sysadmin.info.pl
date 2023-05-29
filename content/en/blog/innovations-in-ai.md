@@ -18,7 +18,7 @@ series:
 - chatGPT
 categories:
 - openAI
-image: images/2023-thumbs/chatgpt-and-bing-chat-in-linux-cli.webp
+image: images/2023-thumbs/innovations-in-ai.webp
 ---
 In this video I presented information about Fugaku Supercomputer and Japaneese  language in chatGPT.  Additionally I presented the new programming language - Mojo, that is 35000 times faster than Python 3.
 
