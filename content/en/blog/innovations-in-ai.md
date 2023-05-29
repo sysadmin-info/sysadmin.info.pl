@@ -13,7 +13,8 @@ asciinema: true
 tags:
 - chatGPT
 - openAI
-- LLM
+- Fugaku
+- Mojo
 series:
 - chatGPT
 categories:
