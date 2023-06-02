@@ -76,7 +76,7 @@ If there will be issues during the make or make test install missing libraries. 
   {{< tab >}}
   ### Red Hat
   ```bash
-  sudo dnf install ncurses-devel make gcc g++ libtool libtool-bin
+  sudo dnf install ncurses-devel make gcc g++ libtool 
   ```
   {{< /tab >}}
 {{< /tabs >}}
