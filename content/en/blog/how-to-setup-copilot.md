@@ -27,7 +27,6 @@ In this video  I explained how to install proper version of nodejs and how to en
 
 {{< notice success "Managing your GitHub Copilot subscription for your personal account" >}}
 Before you can start using GitHub Copilot for Individuals, you will need to set up a free trial or subscription. See the URL below:
-
 [Managing your GitHub Copilot subscription for your personal account](https://docs.github.com/en/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-personal-account "Managing your GitHub Copilot subscription for your personal account")
 {{< /notice >}}
 
