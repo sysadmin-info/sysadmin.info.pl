@@ -25,13 +25,41 @@ In this video  I explained how to install proper version of nodejs and how to en
 
 #### Tutorial
 
+Before you can start using GitHub Copilot for Individuals, you will need to set up a free trial or subscription. See the URL below:
+
+[Managing your GitHub Copilot subscription for your personal account](https://docs.github.com/en/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-personal-account "Managing your GitHub Copilot subscription for your personal account")
+
+
 Check installed vim version
 
 ```
 vim -version
 ```
 
-1. Install vim (9.0.0185 or newer) from source
+1. Install git if do not have it installed
+
+{{< tabs SLES Debian RedHat >}}
+  {{< tab >}}
+  ### SLES | openSUSE Leap 15.4
+  ```bash
+  sudo zypper install git
+  ```  
+  {{< /tab >}}
+  {{< tab >}}
+  ### Debian
+  ```bash
+  sudo apt install git
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ### Red Hat
+  ```bash
+  sudo dnf install git
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+
+2. Install vim (9.0.0185 or newer) from source
 
 ```
 cd $HOME
@@ -81,7 +109,7 @@ If there will be issues during the make or make test install missing libraries. 
   {{< /tab >}}
 {{< /tabs >}}
 
-2. Install nodejs using nvm 
+3. Install nodejs using nvm 
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
@@ -94,14 +122,14 @@ nvm use default
 node -v
 ```
 
-3. Install copilot
+4. Install copilot
 
 ```
 git clone https://github.com/github/copilot.vim.git \ 
   $HOME/.vim/pack/github/start/copilot.vim
 ```
 
-4. Create a .vimrc file in your $HOME directory and put the below into it and save
+5. Create a .vimrc file in your $HOME directory and put the below into it and save
 
 ```
 cd $HOME
@@ -130,7 +158,7 @@ syntax on
 ```
 
 
-5. Open vim
+6. Open vim
 
 ```
 vim
@@ -142,4 +170,4 @@ Type
 :Copilot setup
 ```
 
-6. Copy the one-time code, open the provided URL http://github.com/login/device and type the one-time code. Pay 10 USD and use copilot. 
+7. Copy the one-time code, open the provided URL http://github.com/login/device and type the one-time code. Pay 10 USD and use copilot. 
