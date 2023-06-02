@@ -52,6 +52,12 @@ NB_CORES=$(grep -c '^processor' /proc/cpuinfo)
 export MAKEFLAGS="-j$((NB_CORES+1)) -l${NB_CORES}"
 ```
 
+And then type:
+
+```
+source ~/.zshrc # or .bashrc
+```
+
 If there will be issues during the make or make test install missing libraries. make or make test will inform you what is exactly missing, so if any package is missing, tryto look for how to install it.
 
 {{< tabs SLES Debian RedHat >}}
@@ -79,7 +85,6 @@ If there will be issues during the make or make test install missing libraries. 
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-source ~/.zshrc # or .bashrc
 nvm --version
 nvm list-remote
 nvm install v20.2.0
@@ -89,7 +94,14 @@ nvm use default
 node -v
 ```
 
-3. Open vim
+3. Install copilot
+
+```
+git clone https://github.com/github/copilot.vim.git `
+  $HOME/vimfiles/pack/github/start/copilot.vim
+```
+
+4. Open vim
 
 ```
 vim
