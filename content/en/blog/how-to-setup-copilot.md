@@ -23,43 +23,44 @@ In this video  I explained how to install proper version of nodejs and how to en
 
 {{<youtube FPpDinGXcAo>}}
 
-#### Tutorial
+### Tutorial
 
 {{< notice success "Managing your GitHub Copilot subscription for your personal account" >}}
 Before you can start using GitHub Copilot for Individuals, you will need to set up a free trial or subscription. See the URL below:
 [Managing your GitHub Copilot subscription for your personal account](https://docs.github.com/en/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-personal-account "Managing your GitHub Copilot subscription for your personal account")
 {{< /notice >}}
 
-Check installed vim version
 
-```
-vim -version
-```
-
-1. Install git if do not have it installed
+#### Install git if do not have it installed
 
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
-  ### SLES | openSUSE Leap 15.4
+  ##### SLES | openSUSE Leap 15.4
   ```bash
   sudo zypper install git
   ```  
   {{< /tab >}}
   {{< tab >}}
-  ### Debian
+  ##### Debian
   ```bash
   sudo apt install git
   ```
   {{< /tab >}}
   {{< tab >}}
-  ### Red Hat
+  ##### Red Hat
   ```bash
   sudo dnf install git
   ```
   {{< /tab >}}
 {{< /tabs >}}
 
-2. Install vim (9.0.0185 or newer) from source
+#### Check installed vim version
+
+```
+vim -version
+```
+
+#### Install vim (9.0.0185 or newer) from source
 
 ```
 cd $HOME
@@ -72,7 +73,7 @@ make test
 sudo make install
 ```
 
-##### Persistent settings
+#### Persistent settings
 To get these settings persistent, just add in your .bashrc or .zshrc
 
 ```
@@ -86,30 +87,32 @@ And then type:
 source ~/.zshrc # or .bashrc
 ```
 
+#### Issues
+
 If there will be issues during the make or make test install missing libraries. make or make test will inform you what is exactly missing, so if any package is missing, tryto look for how to install it.
 
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
-  ### SLES | openSUSE Leap 15.4
+  ##### SLES | openSUSE Leap 15.4
   ```bash
   sudo zypper install libncurses5 ncurses make gcc g++ libtool libtool-bin
   ```  
   {{< /tab >}}
   {{< tab >}}
-  ### Debian
+  ##### Debian
   ```bash
   sudo apt install libncurses-dev libtool libtool-bin make build-essential g++
   ```
   {{< /tab >}}
   {{< tab >}}
-  ### Red Hat
+  ##### Red Hat
   ```bash
   sudo dnf install ncurses-devel make gcc g++ libtool 
   ```
   {{< /tab >}}
 {{< /tabs >}}
 
-3. Install nodejs using nvm 
+#### Install nodejs using nvm 
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
@@ -122,14 +125,14 @@ nvm use default
 node -v
 ```
 
-4. Install copilot
+#### Install copilot
 
 ```
 git clone https://github.com/github/copilot.vim.git \ 
   $HOME/.vim/pack/github/start/copilot.vim
 ```
 
-5. Create a .vimrc file in your $HOME directory and put the below into it and save
+#### Create a .vimrc file in your $HOME directory and put the below into it and save
 
 ```
 cd $HOME
@@ -157,8 +160,7 @@ filetype indent on
 syntax on
 ```
 
-
-6. Open vim
+#### Open vim
 
 ```
 vim
@@ -170,4 +172,4 @@ Type
 :Copilot setup
 ```
 
-7. Copy the one-time code, open the provided URL http://github.com/login/device and type the one-time code. Pay 10 USD and use copilot. 
+Copy the one-time code, open the provided URL http://github.com/login/device and type the one-time code. Pay 10 USD and use copilot.
