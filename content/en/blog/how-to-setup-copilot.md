@@ -97,7 +97,7 @@ node -v
 3. Install copilot
 
 ```
-git clone https://github.com/github/copilot.vim.git `
+git clone https://github.com/github/copilot.vim.git \ 
   $HOME/vimfiles/pack/github/start/copilot.vim
 ```
 
