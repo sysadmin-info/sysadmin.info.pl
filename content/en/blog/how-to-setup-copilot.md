@@ -113,7 +113,7 @@ set nocompatible
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
 
-" The below enables copilot
+" The below line enables copilot
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
 
@@ -137,4 +137,4 @@ Type
 :Copilot setup
 ```
 
-4. Copy the one-time code, open the provided URL http://github.com/login/device and type the one-time code. Pay 10 USD and use copilot. 
+6. Copy the one-time code, open the provided URL http://github.com/login/device and type the one-time code. Pay 10 USD and use copilot. 
