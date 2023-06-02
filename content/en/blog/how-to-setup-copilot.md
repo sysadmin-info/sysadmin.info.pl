@@ -58,19 +58,19 @@ If there will be issues during the make or make test install missing libraries. 
   {{< tab >}}
   ### SLES | openSUSE Leap 15.4
   ```bash
-  sudo zyppert install libncurses5 ncurses make gcc g++
+  sudo zypper install libncurses5 ncurses make gcc g++ libtool libtool-bin
   ```  
   {{< /tab >}}
   {{< tab >}}
   ### Debian
   ```bash
-  sudo apt install libncurses-dev libtool make build-essential g++
+  sudo apt install libncurses-dev libtool libtool-bin make build-essential g++
   ```
   {{< /tab >}}
   {{< tab >}}
   ### Red Hat
   ```bash
-  sudo dnf install ncurses-libs make gcc g++
+  sudo dnf install ncurses-libs make gcc g++ libtool libtool-bin
   ```
   {{< /tab >}}
 {{< /tabs >}}
