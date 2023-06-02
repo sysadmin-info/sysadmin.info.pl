@@ -101,7 +101,12 @@ git clone https://github.com/github/copilot.vim.git \
   $HOME/.vim/pack/github/start/copilot.vim
 ```
 
-4. Create a .vimrc file and put the below into it and save
+4. Create a .vimrc file in your $HOME directory and put the below into it and save
+
+```
+cd $HOME
+vim .vimrc
+```
 
 ```
 " Add numbers to each line on the left-hand side.
