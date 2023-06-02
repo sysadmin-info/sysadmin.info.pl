@@ -36,7 +36,7 @@ vim -version
 ```
 cd $HOME
 git clone https://github.com/vim/vim.git
-cd /$HOME/vim/src
+cd $HOME/vim/src
 NB_CORES=$(grep -c '^processor' /proc/cpuinfo)
 export MAKEFLAGS="-j$((NB_CORES+1)) -l${NB_CORES}"
 make
@@ -125,7 +125,7 @@ syntax on
 ```
 
 
-4. Open vim
+5. Open vim
 
 ```
 vim
