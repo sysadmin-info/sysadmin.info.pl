@@ -1,7 +1,7 @@
 ---
 title: "How to compile vim from source and use copilot with vim"
 date:  2023-06-03T10:00:00+00:00
-description: "How to use copilot in vim"
+description: "In this video  I explained how to compile vim from source faster thanks flags for make and how to use copilot in vim."
 draft: false
 hideToc: false
 enableToc: true
