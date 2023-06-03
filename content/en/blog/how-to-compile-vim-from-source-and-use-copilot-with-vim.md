@@ -23,3 +23,6 @@ image: images/2023-thumbs/vim-compile-copilot.webp
 In this video  I explained how to compile vim from source faster thanks flags for make and how to use copilot in vim. See the project: https://github.com/github/copilot.vim
 
 {{<youtube aakk18CHm8s>}}
+
+### Tutorial
+[How to setup copilot in vim]({{< ref "how-to-setup-copilot.md" >}})
