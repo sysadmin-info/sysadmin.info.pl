@@ -27,8 +27,7 @@ In this video I presented information about Fugaku Supercomputer and Japaneese  
 
 ##### Resources:
 
-🎙️ Podcats about Mojo language: https://lexfridman.com/chris-lattner-3/ 2:24:58) – Mojo playground
-
+🎙️ Podcats about Mojo language: https://lexfridman.com/chris-lattner-3 (2:24:58) – Mojo playground
 🖥️ Japan's Fugaku supercomputer to help develop homegrown generative AI: 
 https://asia.nikkei.com/Business/Technology/Japan-s-Fugaku-supercomputer-to-help-develop-homegrown-generative-AI
 🤖 What are Generative AI models https://www.youtube.com/watch?v=hfIUstzHs9A
