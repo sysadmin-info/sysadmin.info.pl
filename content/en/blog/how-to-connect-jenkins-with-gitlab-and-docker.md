@@ -1,6 +1,6 @@
 ---
 title: "How to connect Jenkins with GitLab and Docker"
-date:  2023-06-09T21:00:00+00:00
+date:  2023-06-09T21:30:00+00:00
 description: "How to connect Jenkins with GitLab and Docker"
 draft: false
 hideToc: false
