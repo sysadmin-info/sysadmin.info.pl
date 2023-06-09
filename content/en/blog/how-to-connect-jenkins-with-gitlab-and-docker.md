@@ -1,0 +1,122 @@
+---
+title: "How to connect Jenkins with GitLab and Docker"
+date:  2023-06-09T21:00:00+00:00
+description: "How to connect Jenkins with GitLab and Docker"
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+author: sysadmin
+authorEmoji: 🐧
+pinned: false
+asciinema: true
+tags:
+- copilot
+- github
+series:
+- copilot
+categories:
+- copilot
+image: images/2023-thumbs/jenkins-gitlab-docker.webp
+---
+In this series I explain how to install Jenkins, GitLab and Docker on three separate virtual machines in Proxmox and connect them together to run the job in Jenkins, that is using Jenkins pipeline located at GitLab server and run a docker container from predefined configuration in a docker file to perform a test.
+
+{{<youtube QoP3Pc8rvCk>}}
+
+### Tutorial
+
+#### Add Jenkins repository
+
+{{< tabs SLES Debian RedHat >}}
+  {{< tab >}}
+  ##### SLES | openSUSE Leap 15.4
+  ```bash
+  sudo zypper addrepo http://pkg.jenkins.io/opensuse-stable/ jenkins
+  sudo zypper ref
+  ```  
+  {{< /tab >}}
+  {{< tab >}}
+  ##### Debian
+  ```bash
+  wget https://pkg.jenkins.io/debian-stable/jenkins.io.key
+  sudo apt-key add jenkins.io.key
+  echo "deb https://pkg.jenkins.io/debian-stable binary/" | tee /etc/apt/sources.list.d/jenkins.list
+  sudo apt update -y
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ##### Red Hat
+  ```bash
+  sudo dnf install wget
+  wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+
+#### Install Java 11 open JDK
+
+{{< tabs SLES Debian RedHat >}}
+  {{< tab >}}
+  ##### SLES | openSUSE Leap 15.4
+  ```bash
+  sudo zypper install java-11-openjdk
+  ```  
+  {{< /tab >}}
+  {{< tab >}}
+  ##### Debian
+  ```bash
+  sudo apt install openjdk-11-jdk
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ##### Red Hat
+  ```bash
+  sudo dnf install java-11-openjdk
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+
+#### Check Java version
+
+```bash
+java -version
+```
+
+#### Install Jenkins
+
+{{< tabs SLES Debian RedHat >}}
+  {{< tab >}}
+  ##### SLES | openSUSE Leap 15.4
+  ```bash
+  sudo zypper install jenkins
+  ```  
+  {{< /tab >}}
+  {{< tab >}}
+  ##### Debian
+  ```bash
+  sudo apt install jenkins
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ##### Red Hat
+  ```bash
+  sudo dnf install jenkins
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
+
+#### Enable and start Jenkins
+
+```bash
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+```
+
+{{< notice success "Solving the problem with the symbolic link for Jenkins" >}}
+If you will see the error about missing file or directory during enabling the Jenkins, you have to edit the file /usr/lib/systemd/systemd-sysv-install and change the line that contains S50 and change the line to the below one:
+```
+symlink="$(pwd)/$1"
+```
+After that enable and start Jenkins once again.
+{{< /notice >}}
