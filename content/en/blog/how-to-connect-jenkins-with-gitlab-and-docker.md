@@ -20,7 +20,7 @@ categories:
 - jenkins
 image: images/2023-thumbs/jenkins-gitlab-docker.webp
 ---
-In this series I explain how to install Jenkins, GitLab and Docker on three separate virtual machines in Proxmox and connect them together to run the job in Jenkins, that is using Jenkins pipeline located at GitLab server and run a docker container from predefined configuration in a docker file to perform a test.
+In this series I explain how to install Jenkins, GitLab and Docker on three separate virtual machines in Proxmox and connect them together to run the job in Jenkins, that is using Jenkins pipeline located at GitLab server and run a docker container from predefined configuration in a docker file to perform a test. Scroll down to read the tutorial, please.
 
 Intro:
 {{<youtube QoP3Pc8rvCk>}}
