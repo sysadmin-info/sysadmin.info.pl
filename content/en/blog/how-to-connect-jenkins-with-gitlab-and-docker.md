@@ -146,3 +146,11 @@ hostname -I
 ```
 
 #### Copy the URL and paste it into the address bar in your browser and continue the installation
+
+#### Display and copy the password from the file and paste it into the admin's password field. Use combination ctrl+shift+c to copy the displayed password from the command line.
+
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+
