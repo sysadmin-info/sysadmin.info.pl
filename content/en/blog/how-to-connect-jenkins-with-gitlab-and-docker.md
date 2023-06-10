@@ -153,4 +153,12 @@ hostname -I
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
+#### Install suggested plugins and continue
 
+#### Create first administrator and continue. 
+
+#### Leave Jenkins URL as it is.
+
+#### Install locale plugin
+
+Go to Manage Jenkins, then click Plugins, click available plugins, in search field type locale and hit Enter. Click on the button install without restart. Then click one more time on Manage Jenkins, Click System and scroll down to locale section. Set en_us language in Default language field and select Ignore browser preference and force this language to all users. Click Aplly and Save buttons. Install the Restart plugin the same way and restart Jenkins. 
