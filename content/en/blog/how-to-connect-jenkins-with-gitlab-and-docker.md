@@ -130,3 +130,19 @@ symlink="$(pwd)/$1"
 ```
 After that enable and start Jenkins once again.
 {{< /notice >}}
+
+#### Add port 8080 in firewalld, reload the configuration and check the firewall configuration status
+
+```bash
+sudo firewall-cmd --add-port=8080/tcp --permanent --zone="public"
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+```
+
+#### Check the IP address of your machine
+
+```bash
+hostname -I
+```
+
+#### Copy the URL and paste it into the address bar in your browser and continue the installation
