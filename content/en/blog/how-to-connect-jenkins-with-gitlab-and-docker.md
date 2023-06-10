@@ -162,3 +162,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 #### Install locale plugin
 
 Go to Manage Jenkins, then click Plugins, click available plugins, in search field type locale and hit Enter. Click on the button install without restart. Then click one more time on Manage Jenkins, Click System and scroll down to locale section. Set en_us language in Default language field and select Ignore browser preference and force this language to all users. Click Apply and Save buttons. Install the Restart plugin the same way and restart Jenkins. 
+
+#### Summarize
+
+Using above method you have working Jenkins that you can later connect with GitLab and Docker servers to create environment for testing purpose. 
