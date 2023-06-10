@@ -20,7 +20,7 @@ categories:
 - jenkins
 image: images/2023-thumbs/gitlab.webp
 ---
-In this video I explain how to install and configure GitLab in Debian 11 however below you can read the tutorial for othe Linux distributions.
+In this video I explain how to install and configure GitLab in Debian 11 however below you can read the tutorial for other Linux distributions.
 
 {{<youtube vGcWAdMIfUY>}}
 
