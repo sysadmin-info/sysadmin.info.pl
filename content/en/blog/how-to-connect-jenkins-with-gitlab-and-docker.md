@@ -35,7 +35,7 @@ Part two:
 
 ### Tutorial
 
-#### Add Jenkins repository
+##### Add Jenkins repository
 
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
@@ -64,7 +64,7 @@ Part two:
   {{< /tab >}}
 {{< /tabs >}}
 
-#### Install Java 11 open JDK
+##### Install Java 11 open JDK
 
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
@@ -87,13 +87,13 @@ Part two:
   {{< /tab >}}
 {{< /tabs >}}
 
-#### Check Java version
+##### Check Java version
 
 ```bash
 java -version
 ```
 
-#### Install Jenkins
+##### Install Jenkins
 
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
@@ -116,7 +116,7 @@ java -version
   {{< /tab >}}
 {{< /tabs >}}
 
-#### Enable and start Jenkins
+##### Enable and start Jenkins
 
 ```bash
 sudo systemctl enable jenkins
@@ -131,7 +131,7 @@ symlink="$(pwd)/$1"
 After that enable and start Jenkins once again.
 {{< /notice >}}
 
-#### Add port 8080 in firewalld, reload the configuration and check the firewall configuration status
+##### Add port 8080 in firewalld, reload the configuration and check the firewall configuration status
 
 ```bash
 sudo firewall-cmd --add-port=8080/tcp --permanent --zone="public"
@@ -163,12 +163,12 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 Go to Manage Jenkins, then click Plugins, click available plugins, in search field type locale and hit Enter. Click on the button install without restart. Then click one more time on Manage Jenkins, Click System and scroll down to locale section. Set en_us language in Default language field and select Ignore browser preference and force this language to all users. Click Apply and Save buttons. Install the Restart plugin the same way and restart Jenkins. 
 
-#### Remove initial admin's password.
+##### Remove initial admin's password.
 
 ```bash
 sudo rm -f /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-#### Summarize
+##### Summarize
 
 Using above method you have working Jenkins that you can later connect with GitLab and Docker servers to create environment for testing purpose. 
