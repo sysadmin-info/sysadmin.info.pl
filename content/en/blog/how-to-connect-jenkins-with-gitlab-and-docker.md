@@ -139,27 +139,27 @@ sudo firewall-cmd --reload
 sudo firewall-cmd --list-all
 ```
 
-#### Check the IP address of your machine
+##### Check the IP address of your machine
 
 ```bash
 hostname -I
 ```
 
-#### Copy the URL and paste it into the address bar in your browser and continue the installation
+##### Copy the URL and paste it into the address bar in your browser and continue the installation
 
-#### Display and copy the password from the file and paste it into the admin's password field. Use combination ctrl+shift+c to copy the displayed password from the command line.
+##### Display and copy the password from the file and paste it into the admin's password field. Use combination ctrl+shift+c to copy the displayed password from the command line.
 
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-#### Install suggested plugins and continue
+##### Install suggested plugins and continue
 
-#### Create first administrator and continue. 
+##### Create first administrator and continue. 
 
-#### Leave Jenkins URL as it is.
+##### Leave Jenkins URL as it is.
 
-#### Install locale plugin
+##### Install locale plugin
 
 Go to Manage Jenkins, then click Plugins, click available plugins, in search field type locale and hit Enter. Click on the button install without restart. Then click one more time on Manage Jenkins, Click System and scroll down to locale section. Set en_us language in Default language field and select Ignore browser preference and force this language to all users. Click Apply and Save buttons. Install the Restart plugin the same way and restart Jenkins. 
 
