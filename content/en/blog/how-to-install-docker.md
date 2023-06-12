@@ -138,7 +138,7 @@ Update the `apt` package list and install the latest version of Docker CE:
 
 ```bash
 sudo apt update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 
 **Step 6: Verify the Docker Installation**
