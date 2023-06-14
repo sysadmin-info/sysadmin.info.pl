@@ -18,6 +18,10 @@ categories:
 - Docker
 image: images/2023-thumbs/docker-as-node.webp
 ---
+
+{{<youtube jlenypFnn2I>}}
+
+
 #### Tutorial:
 1. Create a jenkins user on a Docker node
 ```bash
