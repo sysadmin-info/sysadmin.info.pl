@@ -21,22 +21,7 @@ image: images/2023-thumbs/singularity.webp
 
 {{<youtube R0MCCdU9rlE>}}
 
-Articles:
-
-🤖 Why general artificial intelligence will not be realized
-<a href="https://www.nature.com/articles/s41599-020-0494-4" target="_blank">https://www.nature.com/articles/s41599-020-0494-4</a>
-🤖 Paul Allen: The Singularity Isn’t Near
-<a href="https://www.technologyreview.com/2011/10/12/190773/paul-allen-the-singularity-isnt-near/" target="_blank">https://www.technologyreview.com/2011/10/12/190773/paul-allen-the-singularity-isnt-near/</a>
-🤖 The singularity is here, again
-<a href="https://www.axios.com/2023/06/12/singularity-ai-silicon-valley" target="_blank">https://www.axios.com/2023/06/12/singularity-ai-silicon-valley</a>
-🤖 New research suggests our brains use quantum computation
-<a href="https://phys.org/news/2022-10-brains-quantum.html" target="_blank">https://phys.org/news/2022-10-brains-quantum.html</a>
-🤖 ChatGPT unleashed an AI race, now regulators are struggling to hold on
-<a href="https://asia.nikkei.com/Spotlight/The-Big-Story/ChatGPT-unleashed-an-AI-race-now-regulators-are-struggling-to-hold-on" target="_blank">https://asia.nikkei.com/Spotlight/The-Big-Story/ChatGPT-unleashed-an-AI-race-now-regulators-are-struggling-to-hold-on</a>
-🤖 Is Consciousness Bound by Quantum Physics? 
-<a href="https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out" target="_blank">https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out</a>
-🤖 Can consciousness be explained by quantum physics?
-<a href="https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582" target="_blank">https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582</a>
+Links to articles are provided at the bottom.
 
 Progress here is deeply affected by the ways in which our brains absorb and process new information, and by the creativity of researchers in dreaming up new theories. Gaining a comprehensive scientific understanding of human cognition is one of the hardest problems there is. Without having a scientifically deep understanding of cognition, we can’t create the software that could spark the singularity. We are only in the "kindergarten" of AI. Ideas, concepts from the 1950s/60s (e.g., perceptron) and their development in the form of neural networks pay off today only as a derivative of computing power (hardware) and new software concepts (e.g., transformers and attentional). Cognitive AI functions are a challenge, without a better understanding of the human brain and how it works, it is a challenge for decades to come.
 
@@ -66,3 +51,20 @@ Footnotes:
 
 [^1]: Consciousness may rely on quantum entanglement - Big Think. https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/
 [^2]: New research suggests our brains use quantum computation - Phys.org. https://phys.org/news/2022-10-brains-quantum.html
+
+Articles:
+
+🤖 Why general artificial intelligence will not be realized
+<a href="https://www.nature.com/articles/s41599-020-0494-4" target="_blank">https://www.nature.com/articles/s41599-020-0494-4</a>
+🤖 Paul Allen: The Singularity Isn’t Near
+<a href="https://www.technologyreview.com/2011/10/12/190773/paul-allen-the-singularity-isnt-near/" target="_blank">https://www.technologyreview.com/2011/10/12/190773/paul-allen-the-singularity-isnt-near/</a>
+🤖 The singularity is here, again
+<a href="https://www.axios.com/2023/06/12/singularity-ai-silicon-valley" target="_blank">https://www.axios.com/2023/06/12/singularity-ai-silicon-valley</a>
+🤖 New research suggests our brains use quantum computation
+<a href="https://phys.org/news/2022-10-brains-quantum.html" target="_blank">https://phys.org/news/2022-10-brains-quantum.html</a>
+🤖 ChatGPT unleashed an AI race, now regulators are struggling to hold on
+<a href="https://asia.nikkei.com/Spotlight/The-Big-Story/ChatGPT-unleashed-an-AI-race-now-regulators-are-struggling-to-hold-on" target="_blank">https://asia.nikkei.com/Spotlight/The-Big-Story/ChatGPT-unleashed-an-AI-race-now-regulators-are-struggling-to-hold-on</a>
+🤖 Is Consciousness Bound by Quantum Physics? 
+<a href="https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out" target="_blank">https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out</a>
+🤖 Can consciousness be explained by quantum physics?
+<a href="https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582" target="_blank">https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582</a>
