@@ -47,11 +47,6 @@ The researchers found MRI signals that resembled heartbeat evoked potentials, a 
 
 These quantum brain processes could potentially explain why humans are still able to outperform supercomputers in certain areas such as dealing with unexpected situations, decision-making, and learning new things. The researchers suggest that their work may shed light on the complexities of biology and consciousness, which are challenging to understand scientifically
 
-Footnotes:
-
-[^1]: Consciousness may rely on quantum entanglement - Big Think. https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/
-[^2]: New research suggests our brains use quantum computation - Phys.org. https://phys.org/news/2022-10-brains-quantum.html
-
 Articles:
 
 🤖 Why general artificial intelligence will not be realized
@@ -68,3 +63,10 @@ Articles:
 <a href="https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out" target="_blank">https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out</a>
 🤖 Can consciousness be explained by quantum physics?
 <a href="https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582" target="_blank">https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582</a>
+
+Footnotes:
+
+[^1]: Consciousness may rely on quantum entanglement - Big Think. https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/
+[^2]: New research suggests our brains use quantum computation - Phys.org. https://phys.org/news/2022-10-brains-quantum.html
+
+
