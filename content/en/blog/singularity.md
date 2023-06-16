@@ -60,7 +60,7 @@ These quantum brain processes could potentially explain why humans are still abl
 
 Footnotes:
 
-[^1] Consciousness may rely on quantum entanglement - Big Think. https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/
-[^2] Is Consciousness Bound by Quantum Physics? https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out
-[^3] Can consciousness be explained by quantum physics? https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582
-[^4] New research suggests our brains use quantum computation - Phys.org. https://phys.org/news/2022-10-brains-quantum.html
+[^1]: Consciousness may rely on quantum entanglement - Big Think. https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/
+[^2]: Is Consciousness Bound by Quantum Physics? https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out
+[^3]: Can consciousness be explained by quantum physics? https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582
+[^4]: New research suggests our brains use quantum computation - Phys.org. https://phys.org/news/2022-10-brains-quantum.html
