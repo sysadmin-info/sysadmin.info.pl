@@ -1,7 +1,7 @@
 ---
-title: "Why AGI will not be realized? The Singularity isn’t near. Does our brains use quantum computation?"
+title: "Why AGI will not be realized? The Singularity isn’t near. Does our brain use quantum computation?"
 date:  2023-06-14T22:00:00+00:00
-description: "Why AGI will not be realized? The Singularity isn’t near. Does our brains use quantum computation?"
+description: "Why AGI will not be realized? The Singularity isn’t near. Does our brain use quantum computation?"
 draft: false
 hideToc: false
 enableToc: true
