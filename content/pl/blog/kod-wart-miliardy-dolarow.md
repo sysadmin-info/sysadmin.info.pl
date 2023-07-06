@@ -16,7 +16,7 @@ tags:
 series:
 -
 categories:
-- Documentaries
+- Filmy dokumentalne 
 image: images/2023-thumbs/the-billion-dollar-code.webp
 ---
 {{< youtube E9Sei2-NjeE >}}
@@ -24,4 +24,4 @@ image: images/2023-thumbs/the-billion-dollar-code.webp
 
 Dwóch niemieckich pionierów komputerowych idzie do sądu w walce z pozornie niezwyciężonym przeciwnikiem, aby zostać uznanym za wynalazcę algorytmu Google Earth. Serial oświetla zarówno scenę hakerską w zjednoczonym Berlinie w latach 90-tych, jak i idealistyczny świat wczesnej Doliny Krzemowej oraz surową rzeczywistość wielomilionowego procesu.
 
-Source: <a href="https://www.netflix.com/pl/title/81074012" target="_blank" rel="noreferrer noopener">Watch at Netflix</a>
+Źródło: <a href="https://www.netflix.com/pl/title/81074012" target="_blank" rel="noreferrer noopener">Watch at Netflix</a>
