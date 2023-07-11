@@ -11,13 +11,15 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 tags:
-- jenkins
-- gitlab
-- docker
+- Docker
+- Jenkins
+- GitLab
 series:
-- jenkins
+- Jenkins
 categories:
-- jenkins
+- Docker
+- Jenkins
+- GitLab
 image: images/2023-thumbs/gitlab.webp
 ---
 In this video I explain how to install and configure GitLab in Debian 11 however below you can read the tutorial for other Linux distributions.

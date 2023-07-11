@@ -12,10 +12,12 @@ pinned: false
 asciinema: true
 tags:
 - Docker
+- Jenkins
 series:
-- Docker
+- Jenkins
 categories:
 - Docker
+- Jenkins
 image: images/2023-thumbs/docker-as-node.webp
 ---
 

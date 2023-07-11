@@ -11,13 +11,15 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 tags:
-- jenkins
-- gitlab
-- docker
+- Docker
+- Jenkins
+- GitLab
 series:
-- jenkins
+- Jenkins
 categories:
-- jenkins
+- Docker
+- Jenkins
+- GitLab
 image: images/2023-thumbs/jenkins-gitlab-connection.webp
 ---
 In this video I explain how to connect Jenkins and GitLab.
