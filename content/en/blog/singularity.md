@@ -11,11 +11,12 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 tags:
-- Docker
+- AGI
+- singularity
 series:
-- Docker
+- AI
 categories:
-- Docker
+- AI
 image: images/2023-thumbs/singularity.webp
 ---
 
