@@ -67,3 +67,17 @@ sudo ./rpiboot
 ```
 
 5. The boot volume should then be mounted on your Linux (or whichever device you're using) a short while after it has finished its work. The D2 LED may also start to light up, indicating that there is disk read/write activity on the eMMC.
+
+#### Flashing Raspberry Pi OS onto the eMMC
+
+The eMMC storage now operates exactly like a microSD card or USB drive that is connected to a computer. Utilize a program like the Raspberry Pi Imager to flash the eMMC with the Raspberry Pi OS (or any other OS of your choice):
+
+{{<youtube X0yUDcN8KUY>}}
+
+1. Download the Raspberry Pi Imager
+
+```bash
+wget https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb
+sudo apt install ./imager_latest_amd64.deb
+```
+
