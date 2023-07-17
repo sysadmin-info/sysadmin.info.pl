@@ -68,7 +68,7 @@ sudo ./rpiboot
 
 5. The boot volume should then be mounted on your Linux (or whichever device you're using) a short while after it has finished its work. The D2 LED may also start to light up, indicating that there is disk read/write activity on the eMMC.
 
-#### Flashing Raspberry Pi OS onto the eMMC
+#### Installing Raspberry Pi imager
 
 The eMMC storage now operates exactly like a microSD card or USB drive that is connected to a computer. Utilize a program like the Raspberry Pi Imager to flash the eMMC with the Raspberry Pi OS (or any other OS of your choice):
 
@@ -81,3 +81,19 @@ wget https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb
 sudo apt install ./imager_latest_amd64.deb
 ```
 
+#### Flashing Raspberry Pi OS onto the eMMC
+
+The video presents installation of the Raspberry Pi OS without and with GUI.
+
+{{<youtube zUcWfZdYp6A>}}
+
+You could now unplug the IO board and eject the boot volume if it's still mounted if you don't need to change anything in the boot volume's content. Remove the eMMC Boot disable jumper from J2 after disconnecting the power, USB slave port connection, and J2.
+
+Reconnect the power, and the CM4 should now start from its recently flashed eMMC storage!
+
+
+Run the below command once more if you ever need to mount the boot disk or re-flash the eMMC storage.
+
+```bash
+sudo./rpiboot
+```
