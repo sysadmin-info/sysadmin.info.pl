@@ -97,3 +97,7 @@ Run the below command once more if you ever need to mount the boot disk or re-fl
 ```bash
 sudo./rpiboot
 ```
+
+#### Configuring Raspberry Pi OS after the installation
+
+{{<youtube 4s3k-heKiwY>}}
