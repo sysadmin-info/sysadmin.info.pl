@@ -40,7 +40,7 @@ I will walk you through the installation and configuration steps in this article
 ##### What You Need For This Tutorial
 * Raspberry Pi 4 or CM4 IO board with Compute Module 4
 * Micro SD Card or eMMC or NVMe/SSD drive
-* Power Supply aprropriate for a Rasdpberry or CM4 IO board.
+* Power Supply aprropriate for a Raspberry Pi or CM4 IO board.
 * I2C 128×64 OLED Display
 * 4 Wire Female to Female Jumper Cable
 
