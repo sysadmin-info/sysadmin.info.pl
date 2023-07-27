@@ -56,6 +56,9 @@ Take note of which color is connected to which connector after plugging your rib
 
 The Raspberry Pi's GPIO pins will then accept the jumpers' opposite ends. The GPIO pinout diagram for the Pi is readily available online and on the company's website.
 
+![Raspberry Pi 4 Pinout](/images/2023/Raspberry-Pi-4-Pinout.webp "Raspberry Pi 4 Pinout")
+<figcaption>Raspberry Pi 4 Pinout</figcaption>
+
 Before connecting or disconnecting jumpers from the GPIO pins, make sure your Pi is turned off and the power is off. You don't want to forget to check your connections before turning it on and accidentally short a connection or plug a lead into the wrong pin.
 
 For the GND and VCC jumpers, you have a few choices. I typically connect the GND jumper to Pin 9 (but you can use any pin with the designation GND). I then connect the VCC jumper to Pin 1, a 3.3V power pin. Any power pin on the GPIO header of the Raspberry Pi will function with these displays because they can run on 3.3V or 5V inputs.
