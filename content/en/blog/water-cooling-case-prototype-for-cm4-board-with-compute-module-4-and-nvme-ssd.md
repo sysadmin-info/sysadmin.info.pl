@@ -24,16 +24,18 @@ image: images/2023-thumbs/prototype.webp
 
 {{<youtube oM9VIu9QyDM>}}
 
-3D component printing
+##### I would like to give special thanks to the following two companies that helped me with 3D printing and laser cutt.
+
+##### 3D components printing:
 <a href="https://smk3d.pl/" target="_blank"><img src="/images/2023/smk3d.webp" align="left" alt="SMK3D - 3D Conceptual Modeling Studio"></a>
 </br></br>
-Laser cutting in acrylic 
+##### Laser cutting in acrylic:
 <a href="https://crafters.com.pl/" target="_blank"><img src="/images/2023/crafters.webp" align="left" alt="Crafters.pl - Laser cutting"></a>
 </br>
 
-##### Summary of prices
+#### Summary of prices
 
-1. Pipes
+##### 1. Pipes
 
 |Name|Price|URL|
 |---|---| ---|
@@ -42,7 +44,7 @@ Laser cutting in acrylic
 
 In total: 111,03 PLN
 
-2. Tank
+##### 2. Tank
 
 |Name|Price|URL|
 |---|---| ---|
@@ -53,44 +55,44 @@ In total: 111,03 PLN
 |Coolant|108,05 PLN|https://amzn.eu/d/bwRswui |
 |Acrylic brackets|19,34 PLN|https://allegro.pl/oferta/50-mm-2-cale-uchwyt-na-stojak-klamra-do-12363704998 |
 
-In total: 281,88 PLN
+**In total: 281,88 PLN**
 
-3. Fans
+##### 3. Fans
 
 |Name|Price|URL|
 |---|---| ---|
 |Noctua fan without PWM|72,00 PLN|https://allegro.pl/oferta/wentylator-wiatrak-noctua-nf-a6x25-60x25-mm-13093668096 |
 |Noctua fan with PWM|76,00 PLN|https://allegro.pl/oferta/wentylator-wiatrak-noctua-nf-a6x25-60x25-mm-13093668096 |
 
-In total: 148 PLN
+**In total: 148 PLN**
 
-4. Cooling solution:
+##### 4. Cooling solution:
 
 |Name|Price|URL|
 |---|---| ---|
 |Heat sink|48,24 PLN|https://pl.aliexpress.com/item/32976072893.html?spm=a2g0o.9042311.0.0.27424c4d5G6zXq&gatewayAdapt=glo2pol |
 |Water cooling block kit|165,62 PLN|https://www.etsy.com/au/listing/967199864/green-water-cooling-block-kit-for |
 
-In total: 213,86 PLN
+**In total: 213,86 PLN**
 
-5. Acrylic tiles
+##### 5. Acrylic tiles
 
 |Name|Price|URL|
 |---|---| ---|
 |Clear acrylic tile| 67,72 PLN | https://amzn.eu/d/4x6yayg |
 |3 acrylic tiles white, gloss, format A4|66,52 PLN|https://studiograf.info.pl/pleksa/36-pleksa-3mm-biala-white-blyszczaca-cieta-na-wymiar-5903858430119.html |
 
-In total: 134,24 PLN
+**In total: 134,24 PLN**
 
-6. Project 3D  & laser cut parts
+##### 6. Project 3D  & laser cut parts
 
 |Name|Price|URL|
 |---|---| ---|
 |CM4 case project|27,60 PLN|https://www.etsy.com/pl/listing/1209925530/raspberry-pi-cm4-io-board-case-3d-print |
 
-In total: 27,60 PLN
+**In total: 27,60 PLN**
 
-7. Tools and needed parts
+##### 7. Tools and needed parts
 
 |Name|Price|URL|
 |---|---| ---|
@@ -102,9 +104,9 @@ In total: 27,60 PLN
 |Methylene chloride|6 PLN|https://allegro.pl/oferta/chlorek-metylenu-dichlorometan-czysty-100ml-8758380480 |
 |Glass syringe with needles|36,18 PLN|https://a.co/d/9enmZi9 |
 
-In total: 309,77 PLN
+**In total: 309,77 PLN**
 
-8. CM4 board hardware
+##### 8. CM4 board hardware
 
 |Name|Price|URL|
 |---|---| ---|
@@ -116,15 +118,14 @@ In total: 309,77 PLN
 |Black ball screw M3x8 allen socket 10pcs.|2,70 PLN|https://allegro.pl/oferta/sruba-kulista-czarna-m3x8-gniazdo-imbus-10szt-5315915867 |
 |NVMe Crucial P3 PLUS 1TB M.2 PCIe|189,90 PLN|https://allegro.pl/oferta/dysk-ssd-crucial-p3-plus-m-2-pcie-gen4-nvme-1tb-14040203933 |
 
-In total: 1273,08
+**In total: 1273,08**
 
-**Total price: 
-2499,46 PLN 
-~620,92 USD 
+##### Total price: 2499,46 PLN
+**~620,92 USD 
 ~922,55 AUD
 ~565,15 EUR**
 
-Alternatively, to buy:
+**Alternatively, to buy:**
 
 Noctua fan PWM: 
 https://amzn.to/35G14Vp
