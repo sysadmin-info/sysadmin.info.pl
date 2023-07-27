@@ -14,7 +14,7 @@ tags:
 - CM4
 - CM4 board
 - CM4 compute module
-- water water cooling
+- water cooling
 - NVMe
 - PCIe
 series:

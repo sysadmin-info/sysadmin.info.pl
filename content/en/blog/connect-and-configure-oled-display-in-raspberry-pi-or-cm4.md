@@ -14,7 +14,7 @@ tags:
 - CM4
 - CM4 board
 - CM4 compute module
-- water water cooling
+- water cooling
 series:
 - Water cooling for CM4 / Raspberry Pi  
 categories:
