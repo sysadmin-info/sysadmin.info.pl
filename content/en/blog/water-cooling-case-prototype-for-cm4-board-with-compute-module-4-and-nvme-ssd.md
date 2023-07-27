@@ -110,7 +110,11 @@ In total: 273,59 PLN
 
 In total: 1273,08
 
-**Total price: 2463,28**
+**Total price: 
+2463,28 PLN 
+~615,68 USD 
+~908,95 AUD
+~557,32 EUR**
 
 Alternatively, to buy:
 
