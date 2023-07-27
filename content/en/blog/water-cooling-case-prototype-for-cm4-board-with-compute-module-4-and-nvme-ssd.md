@@ -24,6 +24,13 @@ image: images/2023-thumbs/prototype.webp
 
 {{<youtube oM9VIu9QyDM>}}
 
+3D component printing
+<a href="https://smk3d.pl/" target="_blank"><img src="/images/2023/smk3d.webp" align="left" alt="SMK3D - 3D Conceptual Modeling Studio"></a>
+</br></br>
+Laser cutting in acrylic 
+<a href="https://crafters.com.pl/" target="_blank"><img src="/images/2023/crafters.webp" align="left" alt="Crafters.pl - Laser cutting"></a>
+</br>
+
 ##### Summary of prices
 
 1. Pipes
