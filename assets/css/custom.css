@@ -26,3 +26,7 @@
 	margin: 1.5rem 0 !important;
 	padding: 0.5rem 0 !important;
 }
+iframe{
+	width: 630px !important;
+	height: 330px !important;
+}
