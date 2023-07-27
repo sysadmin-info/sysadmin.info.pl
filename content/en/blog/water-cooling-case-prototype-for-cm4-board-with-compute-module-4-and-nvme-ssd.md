@@ -93,8 +93,9 @@ In total: 27,60 PLN
 |Momentary pushbutton|31,91 PLN|https://a.co/d/a9hcP5n |
 |180 Pieces M2.5 Hex Brass Spacer Standoffs|105,16 PLN|https://allegro.pl/oferta/180-sztuk-m2-5-mosiezny-dystans-sl-gt-dystans-p-12649955642 |
 |Methylene chloride|6 PLN|https://allegro.pl/oferta/chlorek-metylenu-dichlorometan-czysty-100ml-8758380480 |
+|Glass syringe with needles|36,18 PLN|https://a.co/d/9enmZi9 |
 
-In total: 273,59 PLN
+In total: 309,77 PLN
 
 8. CM4 board hardware
 
@@ -111,10 +112,10 @@ In total: 273,59 PLN
 In total: 1273,08
 
 **Total price: 
-2463,28 PLN 
-~615,68 USD 
-~908,95 AUD
-~557,32 EUR**
+2499,46 PLN 
+~620,92 USD 
+~922,55 AUD
+~565,15 EUR**
 
 Alternatively, to buy:
 
