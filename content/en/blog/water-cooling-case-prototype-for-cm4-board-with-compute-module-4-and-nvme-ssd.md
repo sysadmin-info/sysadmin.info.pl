@@ -24,7 +24,7 @@ image: images/2023-thumbs/prototype.webp
 
 {{<youtube oM9VIu9QyDM>}}
 
-##### I would like to give special thanks to the following two companies that helped me with 3D printing and laser cutt.
+##### I would like to give special thanks to the following two companies that helped me with 3D printing and laser cut.
 
 ##### 3D components printing:
 <a href="https://smk3d.pl/" target="_blank"><img src="/images/2023/smk3d.webp" align="left" alt="SMK3D - 3D Conceptual Modeling Studio"></a>
