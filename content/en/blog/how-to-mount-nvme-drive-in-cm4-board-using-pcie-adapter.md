@@ -17,6 +17,8 @@ tags:
 - water water cooling
 - NVMe
 - PCIe
+series:
+- Water cooling for CM4 / Raspberry Pi  
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/How to mount NVMe drive in CM4 board.webp

@@ -15,6 +15,8 @@ tags:
 - CM4 board
 - CM4 compute module
 - water water cooling
+series:
+- Water cooling for CM4 / Raspberry Pi  
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/flash-compute-module-4-eMMC.webp

@@ -15,6 +15,8 @@ tags:
 - CM4 board
 - CM4 compute module
 - water water cooling
+series:
+- Water cooling for CM4 / Raspberry Pi  
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/how-to-clone-cm4-emmc-onto-nvme-and-boot.webp
