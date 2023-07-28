@@ -166,7 +166,7 @@ Remember to add the "&" at the end to instruct the Pi to continue booting up and
 
 The stats.py script and font also need to be copied into the home directory. The right path in the prior step can also be directly referenced, but I find this to be less dependable.
 
-Make care to copy the PixelOperator typeface and the stats.py script to the /home/pi directory.
+Make care to copy the PixelOperator typeface and the stats.py script to the /home/username directory.
 
 ```bash
 cd OLED_Stats
