@@ -67,6 +67,9 @@ The communication jumpers SCL and SDA, which are simply inserted into the respec
 
 Once you have double-checked all of your connections, you are prepared to turn on your Pi and begin configuring the display.
 
+![Raspberry Pi 4 I2C 128×64 OLED Display PIN connection](/images/2023/Raspberry_Pi_OLED.webp "Raspberry Pi 4 Pinout")
+<figcaption>Raspberry Pi 4 I2C 128×64 OLED Display PIN connection</figcaption>
+
 ##### Programming The OLED Stats Display
 
 After connecting the display, we may consider programming the Raspberry Pi to show the performance metrics. I'll be doing this on a brand-new installation of Raspberry Pi OS Bullseye by flashing the operating system image to a brand-new microSD card using the Raspberry Pi Imager tool.
