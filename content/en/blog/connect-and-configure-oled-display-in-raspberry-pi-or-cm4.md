@@ -42,7 +42,7 @@ I will walk you through the installation and configuration steps in this article
 * Micro SD Card or eMMC or NVMe/SSD drive
 * Power Supply aprropriate for a Raspberry Pi or CM4 IO board.
 * I2C 128×64 OLED Display
-* 4 Wire Female to Female Jumper Cable
+* 4 female to female jumper cables
 
 ##### Using Your Raspberry Pi To Connect Your OLED Stats Display
 
