@@ -156,7 +156,7 @@ import datetime
 # getting the sys library
 import sys
 
-# */1 * * * * cd /home/adrian/PWM/relay && sudo python3 module.py
+# */1 * * * * cd /home/username/ && sudo python3 relay.py
 # Every minute, a crontab will check the temperature. 
 # The script will activate the fan and pump if the temperature 
 # rises above 31 degrees Celsius and keep doing so until it falls 
@@ -276,10 +276,8 @@ If you're opening crontab for the first time, you'll be asked to choose an edito
 To execute the script, include the following line at the end of the file:
 
 ```bash
-@reboot sudo python3 /home/username/relay.py &
+*/1 * * * * cd /home/username && sudo python3 relay.py
 ```
-
-Remember to add the "&" at the end to instruct the Pi to continue booting up and to continue running the script.
 
 When you finish, save the crontab file, and then reboot your Pi/CM4 to check if everything is operating as it should.
 
