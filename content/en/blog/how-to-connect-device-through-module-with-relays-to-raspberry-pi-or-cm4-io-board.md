@@ -46,7 +46,7 @@ I will walk you through the installation and configuration steps in this article
 
 ##### Introduction
 
-I chose to connect the pump and fan using a module with two relays in order to control them simply because controlling the 5V pump is not possible because it is not a PWM device, and controlling solely the Noctua 5V fan with PWM didn't make much sense to me. When the temperature rises above a predetermined threshold (for instance, 50 degrees Celsius), I wanted both devices to turn on, and I wanted them to turn off when the temperature falls below the predetermined threshold.
+I decided to connect the pump and fan using a module with two relays in order to control them simply because controlling the 5V pump is not possible because it is not a PWM device, and controlling solely the Noctua 5V fan with PWM didn't make much sense to me. When the temperature rises above a predetermined threshold (for instance, 50 degrees Celsius), I wanted both devices to turn on, and I wanted them to turn off when the temperature falls below the predetermined threshold.
 
 ##### Module with 2 relays - technical details.
 
