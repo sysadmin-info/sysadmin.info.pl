@@ -160,8 +160,8 @@ import sys
 # ... meaning the Pi/CM4 is in hell, and will never get bellow ACTION_END value!
 
 # Identify which pins control the relays
-FAN_PIN = 12 # GPIO for first fan
-PUMP_PIN = 13 # GPIO for second fan
+FAN_PIN = 12 # GPIO for fan
+PUMP_PIN = 13 # GPIO for pump
 PINS = [FAN_PIN, PUMP_PIN] # Array to handle both fan and pump
 
 # Temperature checks
