@@ -182,12 +182,12 @@ def GPIOsetup():
 	# removing the warings
     GPIO.setwarnings(False) 
     # setting a current mode
-	GPIO.setmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BCM)
     # for loop where pin = 12 next 13
-	for pin in PINS:
+    for pin in PINS:
         #setting the mode for all pins so all will be switched on
-		GPIO.setup(pin, GPIO.OUT)
-	
+        GPIO.setup(pin, GPIO.OUT)
+
 def devicesON():
 	GPIOsetup()
 	for pin in PINS:
