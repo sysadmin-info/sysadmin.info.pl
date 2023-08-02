@@ -145,26 +145,32 @@ The issue of undervoltage and throttling emerges when we add more devices—in m
 
 ```python
 #!/usr/bin/python3
+# getting the os library
 import os
+# getting the main GPIO library
 import RPi.GPIO as GPIO
+# getting the time library
 import time
+# getting the datetime library
 import datetime
+# getting the sys library
 import sys
 
 # */1 * * * * cd /home/adrian/PWM/relay && sudo python3 module.py
-# A crontab will run every minute and check the temperature. 
-# If the temperature is above 31 degrees of Celsius the script will start 
-# the fan and the pump until the temperature goes down to 29 degrees of Celsius. 
-# When it does, the script will end, shutting down the fan and pump as well.
-# If the script executes again while a previous script is running, the latter will exit
-# ... meaning the Pi/CM4 is in hell, and will never get bellow ACTION_END value!
+# Every minute, a crontab will check the temperature. 
+# The script will activate the fan and pump if the temperature 
+# rises above 31 degrees Celsius and keep doing so until it falls 
+# below 29 degrees Celsius. The script will then end, turning off 
+# the fan and pump simultaneously. The previous script will quit 
+# if it is launched while the new one is running, leaving the Pi/CM4 
+# in hell and unable to ever go below the ACTION_END number.
 
-# Identify which pins control the relays
+# Identify the pins that operate the relays. 
 FAN_PIN = 12 # GPIO for fan
 PUMP_PIN = 13 # GPIO for pump
 PINS = [FAN_PIN, PUMP_PIN] # Array to handle both fan and pump
 
-# Temperature checks
+# Set temperature thresholds. 
 ACTION_START = 31
 ACTION_END = 29
 
@@ -173,28 +179,33 @@ action = sys.argv.pop()
 
 
 def GPIOsetup():
-	GPIO.setwarnings(False) 
+	# removing the warings
+    GPIO.setwarnings(False) 
+    # setting a current mode
 	GPIO.setmode(GPIO.BCM)
+    # for loop where pin = 12 next 13
 	for pin in PINS:
+        #setting the mode for all pins so all will be switched on
 		GPIO.setup(pin, GPIO.OUT)
 	
-def fansON():
+def devicesON():
 	GPIOsetup()
 	for pin in PINS:
-		GPIO.output(pin, GPIO.LOW)	#fan and pump on
+		GPIO.output(pin, GPIO.LOW)	#fan and pump on. Setting the GPIO to LOW or 0 or false
 	return()
 
-def fansOFF():
+def devicesOFF():
 	GPIOsetup()
 	for pin in PINS:
-		GPIO.output(pin, GPIO.HIGH) #fan and pump off
+		GPIO.output(pin, GPIO.HIGH) #fan and pump off. Setting the GPIO to HIGH or 1 or true
 	return()
-	
+
+# Get the temperature from the system	
 def get_temp_from_system():
 	res = os.popen('vcgencmd measure_temp').readline()
 	return(res.replace("temp=","").replace("'C\n",""))
 
-def check_fans():
+def check_devices():
 	GPIOsetup()
 	return all(GPIO.input(pin) for pin in PINS)
 
@@ -203,21 +214,19 @@ def run():
 	temp = get_temp_from_system()
 	if float(temp) >= ACTION_START:
 		print(temp+' @ '+str(current_date))
-		if check_fans():
+		if check_devices():
 			print('Fan and pump are off... Starting them.')
-			fansON()
+			devicesON()
 		else:
-			time.sleep(5)
 			print('Fan and pump are on')
 	elif float(temp) <= ACTION_END:
 		print(temp+' @ '+str(current_date))
-		if not check_fans():
+		if not check_devices():
 			print('Fan and pump are on... Shuting them down.')
-			fansOFF()
+			devicesOFF()
 			GPIO.cleanup()
 			return 1 
 		else:
-			time.sleep(5) 
 			print('Fan and pump are off')
 	else:
 			pass 
@@ -225,13 +234,13 @@ def run():
 			
 if action == "on" :
    print('Turning fan and pump on')
-   fansON()
+   devicesON()
 elif action == "off" :
    print('Turning fan and pump off')
-   fansOFF()
+   devicesOFF()
 
 # first check if script is already running
-if not check_fans():
+if not check_devices():
 	print('Fan and pump are on, script must be running from another instance...')
 else:
 	temp = get_temp_from_system()
@@ -244,10 +253,10 @@ else:
 				if tmp == 1: 
 					break
 		except KeyboardInterrupt:
-			fansOFF()
+			devicesOFF()
 			GPIO.cleanup()
 		finally:
-			fansOFF()
+			devicesOFF()
 			GPIO.cleanup()
 ```
 
