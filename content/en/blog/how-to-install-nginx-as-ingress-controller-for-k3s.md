@@ -1,5 +1,5 @@
 ---
-title: "How to install nginx as ingress controller for k3s in Raspberry Pi CM4"
+title: "How to install nginx as ingress controller for k3s"
 date:  2023-08-20T18:00:00+00:00
 description: "How to install nginx as ingress controller for k3s in Raspberry Pi CM4"
 draft: false
