@@ -110,7 +110,7 @@ sudo reboot
 #### Check node status
 
 ```bash
-kubectl get node
+kubectl get nodes
 ```
 
 #### Check pods
