@@ -112,6 +112,6 @@ df -kTh /var
 
 #### 6. Go back to Jenkins and rerun the job 
 
-#### 7. See the section of the tutorial to understand dofference between docker images.
+#### 7. See the section of the tutorial to understand difference between docker images.
 
 Understanding difference between Docker images. Node image contains nodejs and npm that allows node command to work
