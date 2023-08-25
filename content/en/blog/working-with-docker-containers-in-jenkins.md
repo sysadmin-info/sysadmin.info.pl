@@ -114,4 +114,4 @@ df -kTh /var
 
 #### 7. See the section of the tutorial to understand difference between docker images.
 
-Understanding difference between Docker images. Node image contains nodejs and npm that allows node command to work
+Understanding difference between Docker images. Node image contains nodejs and npm that allows node command to work.
