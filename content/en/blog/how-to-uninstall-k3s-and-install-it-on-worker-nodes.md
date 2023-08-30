@@ -99,7 +99,7 @@ hostname -I
 Log into worker node via ssh and perform the below command:
 
 ```bash
-curl -sfL https://get.k3s.io | K3S_URL=https://10.10.0.110:6443 K3S_TOKEN=K1035b821d17f0517f44e801a3884b9f4d39fb963cb89ce3c61e8ab3e21b7eb72c6::server:0ecbcf5784423ce5c9d164153eacec53 sh -
+curl -sfL https://get.k3s.io | K3S_URL=https://10.10.0.110:6443 K3S_TOKEN=K1035b82... sh -
 ```
 
 Add cgroup entries into the cmdline.txt
