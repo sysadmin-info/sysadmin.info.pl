@@ -238,9 +238,9 @@ KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 source /etc/environment
 ```
 
-Explanation:
-
+{{< notice success "Explanation:" >}}
 source is a Bash shell built-in command that executes the content of the file passed as an argument in the current shell. It has a synonym in . (period).
+{{< /notice >}}
 
 
 #### What is NGINX ingress controller?
@@ -544,10 +544,9 @@ EOF
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 ```
 
-Explanation:
-
+{{< notice success "Explanation:" >}}
 Export is a built-in command of the Bash shell. It is used to mark variables and functions to be passed to child processes. Basically, a variable will be included in child process environments without affecting other environments.
-
+{{< /notice >}}
 
 #### Wait 30 seconds for NGINX ingress-controller.
 
