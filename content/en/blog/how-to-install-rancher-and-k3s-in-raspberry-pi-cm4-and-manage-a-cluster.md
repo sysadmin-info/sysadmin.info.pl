@@ -15,7 +15,9 @@ tags:
 - CM4 board
 - CM4 compute module
 - Kubernetes
-- k3s 
+- k3s
+- rancher
+- helm
 series:
 - Kubernetes 
 categories:
