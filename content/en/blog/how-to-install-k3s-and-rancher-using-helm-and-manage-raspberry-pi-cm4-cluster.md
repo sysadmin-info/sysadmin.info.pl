@@ -1,6 +1,6 @@
 ---
 title: "How to install K3S and Rancher using Helm and manage Raspberry Pi CM4 cluster"
-date:  2023-09-28T14:00:00+00:00
+date:  2023-09-28T13:00:00+00:00
 description: "How to install K3S and Rancher using Helm and manage Raspberry Pi CM4 cluster"
 draft: false
 hideToc: false
