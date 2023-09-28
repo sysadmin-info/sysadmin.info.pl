@@ -30,6 +30,8 @@ I will walk you through the k3s and rancher installation and configuration steps
 
 {{<youtube sHTfc3Whu-8>}}
 
+Scripts can be found here: https://github.com/sysadmin-info/rancher
+
 #### Exercises to complete:
 1. Uninstall k3s on master node and workers
 2. Add cgroup entries into the cmdline.txt and reboot each node with ARM processor
@@ -133,7 +135,7 @@ echo "You are the root user."
 
 # Executions
 execute_if_exists "/usr/local/bin/k3s-killall.sh" "k3s-killall.sh"
-execute_if_exists "/usr/local/bin/k3s-agent-uninstall" "k3s-agent-uninstall"
+execute_if_exists "/usr/local/bin/k3s-agent-uninstall.sh" "k3s-agent-uninstall.sh"
 
 # Configure iptables
 configure_iptables
