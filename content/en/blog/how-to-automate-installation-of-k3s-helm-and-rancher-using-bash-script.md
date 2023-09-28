@@ -30,7 +30,7 @@ I will walk you through the k3s and rancher installation and configuration steps
 
 {{<youtube sHTfc3Whu-8>}}
 
-Scripts can be found here: https://github.com/sysadmin-info/rancher
+Scripts can be found here: [Bash scripts](https://github.com/sysadmin-info/rancher)
 
 #### Exercises to complete:
 1. Uninstall k3s on master node and workers
