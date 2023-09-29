@@ -39,7 +39,7 @@ I will walk you through the k3s and rancher installation and configuration steps
 6. Add autocomplete for k3s
 7. Add k3s configuration into the environment
 8. Install nginx as ingress controller in k3s
-9. Patch NGINX ingress controller
+9. Install NGINX ingress controller load balancer 
 10. Perform clusterr check
 11. Install git and helm
 12. Add autocomplete form Helm
@@ -256,19 +256,35 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mast
 See the documentation: [NGINX ingress controller Installation Guide](https://kubernetes.github.io/ingress-nginx/deploy/?ref=blog.thenets.org#bare-metal-clusters)
 
 
-#### Patch NGINX ingress controller
+#### Install NGINX ingress controller load balancer 
 
 ```vim
-cat > ingress.yaml <<EOF
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-nginx-controller-loadbalancer
+  namespace: ingress-nginx
 spec:
-  template:
-    spec:
-      hostNetwork: true
-EOF
+  selector:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/instance: ingress-nginx
+    app.kubernetes.io/name: ingress-nginx
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 443
+  type: LoadBalancer
 ```
 
 ```bash
-kubectl patch deployment ingress-nginx-controller -n ingress-nginx --patch "$(cat ingress.yaml)"
+kubectl apply -f ingress-controller-load-balancer.yaml
 ```
 
 #### Perform clusterr check
