@@ -287,7 +287,7 @@ spec:
 kubectl apply -f ingress-controller-load-balancer.yaml
 ```
 
-#### Perform clusterr check
+#### Perform cluster check
 ```bash
 kubectl cluster-info
 kubectl get nodes
