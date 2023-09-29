@@ -41,8 +41,8 @@ I will walk you through the k3s and rancher installation and configuration steps
 8. Install nginx as ingress controller in k3s
 9. Install NGINX ingress controller load balancer 
 10. Perform cluster check
-11. Install git and helm
-12. Add autocomplete form Helm
+11. Install Git and Helm
+12. Add autocomplete for Helm
 13. Add Rancher repository
 14. Update repository using Helm
 15. Generate certificate
