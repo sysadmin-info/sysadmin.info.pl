@@ -164,6 +164,11 @@ sudo reboot
 
 ### Install k3s v1.26.9+k3s1 without traefik, Helm and Rancher on a master node using a Bash script
 
+
+{{< notice success "Explanation:" >}}
+hostNetwork: true
+{{< /notice >}}
+
 #### Create a file rancher.sh
 
 ```bash
