@@ -165,8 +165,9 @@ sudo reboot
 ### Install k3s v1.26.9+k3s1 without traefik, Helm and Rancher on a master node using a Bash script
 
 
-{{< notice success "hostNetwork: true" >}}
-When you set hostNetwork: true in your Kubernetes Pod specification, the Pod uses the host’s network namespace, instead of its own. This can lead to a situation where the Pod cannot reach the external IPs of services within the same cluster.
+{{< notice success "hostNetwork: true" >}}
+
+When you set hostNetwork: true in your Kubernetes Pod specification, the Pod uses the host’s network namespace, instead of its own. This can lead to a situation where the Pod cannot reach the external IPs of services within the same cluster. See the article: [Kubernetes pod with hostNetwork: true cannot reach external IPs of services in the same cluster](https://sysadmin.info.pl/en/blog/kubernetes-pod-with-hostnetwork/)
 {{< /notice >}}
 
 #### Create a file rancher.sh
