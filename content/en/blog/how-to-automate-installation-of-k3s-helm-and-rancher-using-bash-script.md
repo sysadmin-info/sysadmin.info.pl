@@ -167,6 +167,7 @@ sudo reboot
 
 {{< notice success "Explanation:" >}}
 hostNetwork: true
+When you set hostNetwork: true in your Kubernetes Pod specification, the Pod uses the host’s network namespace, instead of its own. This can lead to a situation where the Pod cannot reach the external IPs of services within the same cluster.
 {{< /notice >}}
 
 #### Create a file rancher.sh
