@@ -38,7 +38,7 @@ Scripts can be found here: [Bash scripts](https://github.com/sysadmin-info/ranch
 3. Install k3s v1.26.9+k3s1 without traefik, Helm and Rancher on a master node using a Bash script
 4. Display the Rancher dashboard URL 
 5. Copy the URL and put it into the address bat into your web browser. 
-6. Then login to Rancher using initial password test123 and login: admin.
+6. Then login to Rancher using initial password test1234 and login: admin.
 7. Copy the token
 8. Copy IP address of the master node
 9. Install newest k3s on worker nodes
@@ -544,7 +544,7 @@ sudo chmod +x rancher.sh
 echo https://rancher.local/dashboard/?setup=$(kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}')
 ```
 
-#### Copy the URL and put it into the address bat into your web browser. Then login to Rancher using initial password test123 and login: admin.
+#### Copy the URL and put it into the address bat into your web browser. Then login to Rancher using initial password test1234 and login: admin.
 
 ### Installation on worker nodes
 
