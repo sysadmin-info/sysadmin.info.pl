@@ -55,7 +55,7 @@ I will walk you through the k3s and rancher installation and configuration steps
 22. Wait 120 seconds for Rancher
 23. Display all pods and check status of rancher pods.
 24. Display the Rancher dashboard URL 
-25. Copy the URL and put it into the address bat into your web browser. 
+25. Copy the URL and put it into the address bar into your web browser. 
 26. Then login to Rancher using initial password test123 and login: admin.
 27. Copy the token
 28. Copy IP address of the master node
@@ -586,7 +586,7 @@ kubectl get pods -A
 echo https://rancher.local/dashboard/?setup=$(kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}')
 ```
 
-#### Copy the URL and put it into the address bat into your web browser. Then login to Rancher using initial password test123 and login: admin.
+#### Copy the URL and put it into the address bar into your web browser. Then login to Rancher using initial password test123 and login: admin.
 
 
 ### Installation on worker nodes
