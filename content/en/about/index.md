@@ -1,9 +1,8 @@
 +++
 title = "Who am I"
-description = "Administration, security and hardening of Linux"
+description = "Information about me"
 type = "about"
 date = "2019-10-23T19:09:45+00:00"
-featured_image = "wp-content/uploads/2019/09/mainframe.webp"
 +++
 
 <figure>

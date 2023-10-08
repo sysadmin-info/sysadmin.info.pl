@@ -11,9 +11,9 @@
   weight = 2
 
 [[main]]
-  identifier = "contact"
-  name = "Kontakt"
-  url = "contact"
+  identifier = "sprzęt"
+  name = "Sprzęt"
+  url = "gear"
   weight = 3
 
 [[main]]
