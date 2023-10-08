@@ -4,7 +4,7 @@ date: 2023-10-08T10:00:16+09:00
 description: My gear 
 type: gear
 description: "My gear"
-image: images/feature2/gallery.png
+image: images/feature/my-desk.webp
 ---
 
 Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit.co/sysadmin-info)
