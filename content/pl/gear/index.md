@@ -61,4 +61,6 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 
 |   Nazwa             |  Model                                                                                                                                                              |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Szafa serwerowa   | [Lanberg Szafa wisząca 10 cali 4U 280x310mm szara](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)                                      |
+| Szafa serwerowa     | [Lanberg Szafa wisząca 10 cali 4U 280x310mm szara](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)                                    |
+| Półka do szafy      | [półka stała 10” 1U 95 mm szara RAL 7035](https://sklep.sabaj.pl/pl/p/Polka-stala-10-1U-95-mm-szara-RAL-7035/2884)                                                  |
+| Półka do szafy      | []()|

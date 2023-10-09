@@ -13,25 +13,25 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### My desk and furniture
 
-|   Name            |  Model                                                                                                                                                          |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Desk          | [IKEA UTESPELARE gaming desk, 160x80 cm, black](https://www.ikea.com/pl/pl/p/utespelare-biurko-gamingowe-czarny-80507627/)                                          |
-| Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/pl/pl/p/helmer-komoda-na-kolkach-czarny-20341970/)           |
-| Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/) |
-| Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                            |
-| Monitor arm   | [NB North Bayou Dual Monitor, 22''-32''](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                   |
+|   Name            |  Model                                                                                                                                                            |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Desk          | [IKEA UTESPELARE gaming desk, 160x80 cm, black](https://www.ikea.com/us/en/p/utespelare-gaming-desk-black-80507627/)                                                  |
+| Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/us/en/p/helmer-drawer-unit-on-casters-black-20341970/#content) |
+| Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/)   |
+| Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                              |
+| Monitor arm   | [NB North Bayou Dual Monitor, 22''-32''](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                     |
 
 
 ##### Keyboard and mice gear
 
-|   Name            |  Model                                                                                                                                                             |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Keyboard      | [Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/) |
-| Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)                                              |
-| Wrist rest for keyboard | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/)                       |
-| Wrist rest for mouse | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                                                     |
-| Mouse | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/pl-pl/products/mice/mx-master-3s.910-006559.html)                                                           |
-| Desk pad | [Felt desk pad 100x40cm](https://allegro.pl/oferta/filcowa-podkladka-na-biurko-100x40cm-13227543583)                                                                        |
+|   Name            |  Model                                                                                                                              |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Keyboard      | [Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://www.keychron.com/products/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard) |
+| Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)               |
+| Wrist rest for keyboard | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://a.co/d/fozjdR2)                                 |
+| Wrist rest for mouse | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                      |
+| Mouse | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006556.html)                            |
+| Desk pad | [Felt desk pad 100x40cm](https://a.co/d/0yqX4yq)                                                                                             |
 
 ##### Sound gear
 
@@ -59,6 +59,7 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### Server cabinet and all the network stuff
 
-|   Name            |  Model                                                                                                                                                           |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Server cabinet    | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm grey](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)                    |
+|   Name            |  Model                                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------------------ |
+| Server cabinet    | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm grey](https://lanberg.pl/en/produkt/WF10-2304-10S) |
+| Cabinet shelf     | [Fixed shelf 10" 1U 95 mm grey RAL 7035](https://a.co/d/5dSOQel)                                             |
