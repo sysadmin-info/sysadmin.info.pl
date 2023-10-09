@@ -13,25 +13,25 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### My desk and furniture
 
-|   Name            |  Model                                                                                                                                                           |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Desk          | [IKEA UTESPELARE gaming desk, 160x80 cm, black](https://www.ikea.com/pl/pl/p/utespelare-biurko-gamingowe-czarny-80507627/)                                           |
-| Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/pl/pl/p/helmer-komoda-na-kolkach-czarny-20341970/)            |
-| Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/)  |
-| Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                             |
-| Monitor arm   | [NB North Bayou Dual Monitor, 22''-32''](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                    |
+|   Name            |  Model                                                                                                                                                          |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Desk          | [IKEA UTESPELARE gaming desk, 160x80 cm, black](https://www.ikea.com/pl/pl/p/utespelare-biurko-gamingowe-czarny-80507627/)                                          |
+| Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/pl/pl/p/helmer-komoda-na-kolkach-czarny-20341970/)           |
+| Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/) |
+| Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                            |
+| Monitor arm   | [NB North Bayou Dual Monitor, 22''-32''](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                   |
 
 
 ##### Keyboard and mice gear
 
-|   Name            |  Model                                                                                                                                                               |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Keyboard      | [Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/)   |
-| Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)                                                |
-| Wrist rest for keyboard | [Glorious PC Gaming Race Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/) |
-| Wrist rest for mouse | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                                                       |
-| Mouse | [Logitech MX Master 3S - Wireless, Black ](https://www.logitech.com/pl-pl/products/mice/mx-master-3s.910-006559.html)                                                            |
-| Desk pad | [Felt desk pad 100x40cm](https://allegro.pl/oferta/filcowa-podkladka-na-biurko-100x40cm-13227543583)                                                                          |
+|   Name            |  Model                                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Keyboard      | [Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/) |
+| Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)                                              |
+| Wrist rest for keyboard | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/)                       |
+| Wrist rest for mouse | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                                                     |
+| Mouse | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/pl-pl/products/mice/mx-master-3s.910-006559.html)                                                           |
+| Desk pad | [Felt desk pad 100x40cm](https://allegro.pl/oferta/filcowa-podkladka-na-biurko-100x40cm-13227543583)                                                                        |
 
 ##### Sound gear
 
@@ -52,7 +52,7 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Softbox Lighting Kit | [NEEWER 700W Equivalent Softbox Lighting Kit, 2Pack](https://www.amazon.com/Neewer-Professional-Photography-Centimeters-Lighting/dp/B017D7W57S)               |
 | Camera | [Razer Kiyo: Full HD 1080p 30FPS/720p 60FPS Computer Camera](https://www.razer.com/eu-en/streaming-cameras/razer-kiyo)                                                      |
-| Teleprompter | [Neewer X1 Mini Teleprompter, 8" Portable Teleprompter](https://www.amazon.com/Neewer-Teleprompter-Smartphone-Compatible-Mirrorless/dp/B08K7KXGKD)                    |
+| Teleprompter | [Neewer X1 Mini Teleprompter, 8", Portable](https://www.amazon.com/Neewer-Teleprompter-Smartphone-Compatible-Mirrorless/dp/B08K7KXGKD)                    |
 | Monitor lighting | [Xiaomi Mi Computer Monitor Light Bar](https://www.amazon.com/Mi-Computer-Monitor-Light-Bar/dp/B08W2C5W59/ref=sr_1_3?keywords=Xiaomi+Mi+Computer+Monitor+Light+Bar&qid=1696757241&sr=8-3)                                                                                                                                                                 |
 | Tripod for Teleprompter and camera | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini](https://www.amazon.com/Huepar-Lightweight-Aluminum-Tripod-Mini-Adjustable/dp/B07NSQZBWR)  |
 | RGB lighting | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights](https://www.amazon.com/Govee-Upgraded-Technology-Compatible-Christmas/dp/B0B42BWVLM)       |
