@@ -62,7 +62,9 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### Server cabinet and all the network stuff
 
-|   Name            |  Model                                                                                                       |
-| ----------------- | ------------------------------------------------------------------------------------------------------------ |
-| Server cabinet    | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm grey](https://lanberg.pl/en/produkt/WF10-2304-10S) |
-| Cabinet shelf     | [Fixed shelf 10" 1U 95 mm grey RAL 7035](https://a.co/d/5dSOQel)                                             |
+|   Name                  |  Model                                                                                                                                 |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Server cabinet          | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm grey](https://lanberg.pl/en/produkt/WF10-2304-10S)                           |
+| Cabinet shelf           | [Fixed shelf 10" 1U 95 mm grey RAL 7035](https://a.co/d/5dSOQel)                                                                       |
+| Cabinet shelf           | [RACK shelf 10" 1U 150mm grey with holes](https://a.co/d/aO2Yo8c)                                                                      |
+| Power distribution unit | [10" Rack PDU - 1U (4 Outlet) Power Distribution Unit 10 inch for Mini Racks w/Protection (110V/15A 6ft Cable)](https://a.co/d/glCdxO8)|

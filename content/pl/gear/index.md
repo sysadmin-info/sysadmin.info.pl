@@ -61,8 +61,9 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 
 ##### Szafa serwerowa i wszystkie elementy sieciowe
 
-|   Nazwa             |  Model                                                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Szafa serwerowa     | [Lanberg Szafa wisząca 10 cali 4U 280x310mm szara](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)                                    |
-| Półka do szafy      | [półka stała 10” 1U 95 mm szara RAL 7035](https://sklep.sabaj.pl/pl/p/Polka-stala-10-1U-95-mm-szara-RAL-7035/2884)                                                  |
-| Półka do szafy      | []()|
+|   Nazwa             |  Model                                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Szafa serwerowa     | [Lanberg Szafa wisząca 10 cali 4U 280x310mm szara](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)|
+| Półka do szafy      | [półka stała 10” 1U 95 mm szara RAL 7035](https://sklep.sabaj.pl/pl/p/Polka-stala-10-1U-95-mm-szara-RAL-7035/2884)              |
+| Półka do szafy      | [Półka RACK 10" 1U 150mm szara z otworami](https://allegro.pl/oferta/polka-rack-10-1u-150mm-szara-z-otworami-13876479903)       |
+| Listwa Zasilająca   | [Neku 22.5009 4 gniazda czarna](https://allegro.pl/oferta/neku-listwa-zasilajaca-rack-10-4-gn-wylacznik-6007187523)             |
