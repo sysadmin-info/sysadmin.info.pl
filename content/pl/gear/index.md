@@ -9,6 +9,8 @@ authorEmoji: 🐧
 image: images/2023-thumbs/my-desk.webp
 ---
 
+{{< img src="/images/2023-thumbs/my-desk.webp" title="Mój sprzęt, którego używam do pracy, tworzenia treści w Internecie i nagrywania kolejnych tutoriali na YouTube." alt="Mój sprzęt, którego używam do pracy, tworzenia treści w Internecie i nagrywania kolejnych tutoriali na YouTube." >}}
+
 Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit.co/sysadmin-info)
 
 ##### Moje biurko i meble 

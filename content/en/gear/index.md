@@ -9,6 +9,8 @@ authorEmoji: 🐧
 image: images/2023-thumbs/my-desk.webp
 ---
 
+{{< img src="/images/2023-thumbs/my-desk.webp" title="My gear that I use for work, creating web content and recording more YouTube tutorials." alt="My gear that I use for work, creating web content and recording more YouTube tutorials." >}}
+
 All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sysadmin-info)
 
 ##### My desk and furniture
