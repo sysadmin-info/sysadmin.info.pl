@@ -26,7 +26,7 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 
 |   Nazwa       |  Model                                                                                                                                                                    |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Klawiatura    | [Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/)    |
+| Klawiatura    | [Keychron K10 Pro, pełny rozmiar 108 klawiszy](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/)    |
 | Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)                                                 |
 | Podkładka pod nadgarstki do klawiatury | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/)           |
 | Podkładka pod nadgarstek do myszy | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                                           |
