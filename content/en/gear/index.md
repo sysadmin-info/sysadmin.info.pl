@@ -3,8 +3,10 @@ title: Gear
 date: 2023-10-08T10:00:16+09:00
 description: My gear 
 type: gear
-description: "My gear"
-image: images/feature/my-desk.webp
+description: "My equipment that I use for work, creating web content and recording more YouTube tutorials."
+author: sysadmin
+authorEmoji: 🐧
+image: images/2023-thumbs/my-desk.webp
 ---
 
 All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sysadmin-info)

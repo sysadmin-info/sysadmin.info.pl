@@ -1,10 +1,12 @@
 ---
 title: Sprzęt 
 date: 2023-10-08T10:00:16+09:00
-description: My gear 
+description: Mój sprzęt
 type: gear
-description: "My gear"
-image: images/feature/my-desk.webp
+description: "Mój sprzęt, którego używam do pracy, tworzenia treści w Internecie i nagrywania kolejnych tutoriali na YouTube."
+author: sysadmin
+authorEmoji: 🐧
+image: images/2023-thumbs/my-desk.webp
 ---
 
 Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit.co/sysadmin-info)
