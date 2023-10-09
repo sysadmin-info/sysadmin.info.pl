@@ -56,3 +56,9 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Oświetlenie monitora | [Xiaomi Mi Computer Monitor Light Bar](https://www.amazon.com/Mi-Computer-Monitor-Light-Bar/dp/B08W2C5W59/ref=sr_1_3?keywords=Xiaomi+Mi+Computer+Monitor+Light+Bar&qid=1696757241&sr=8-3) |
 | Statyw dla telepromptera i kamery | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini Portable Adjustable Tripod for Laser Level and Camera, with 3-Way Flexible Pan Head](https://www.amazon.com/Huepar-Lightweight-Aluminum-Tripod-Mini-Adjustable/dp/B07NSQZBWR) |
 | Oświetlenie RGB | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights Alexa Compatible, Music Sync, DIY Multiple Colors on One Line](https://www.amazon.com/Govee-Upgraded-Technology-Compatible-Christmas/dp/B0B42BWVLM) |
+
+##### Szafa serwerowa i wszystkie elementy sieciowe
+
+|   Nazwa           |  Model                                                                                                                                                           |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Szafa serwerowa   | [Lanberg Szafa wisząca 10 cali 4U 280x310mm szara](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)                                 |
