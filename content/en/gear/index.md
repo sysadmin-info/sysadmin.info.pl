@@ -61,4 +61,4 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 |   Name            |  Model                                                                                                                                                           |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Server cabinet    | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm gre](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)                     |
+| Server cabinet    | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm grey](https://allegro.pl/oferta/4u-szafa-rack-wiszaca-10-szara-lanberg-10090720634)                     |
