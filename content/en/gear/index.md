@@ -35,16 +35,17 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### Sound gear
 
-|   Name            |  Model                                                                                                                                                           |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Acoustic mat      | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)                   |
-| Bas trap          | [Bass trap corner quarter round 100 x 10 x 10 cm](https://allegro.pl/oferta/pulapka-basowa-narozna-cwiercwalek-prof-cw10-1000-8902720842)                        |
-| Microphone        | [Thronmax MDrill One Pro](https://www.thronmax.com/product/thronmax-mdrill-one-pro/)                                                                             |
-| Shock mount       | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)                                           |
-| Microphone holder | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)                                             |
-| Heahphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)                                                              |
-| Heahphones        | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)                                               |
-| Speakers          | [Creative Pebble Plus 2.1 USB-powered desktop speakers with subwoofer](https://www.amazon.com/Creative-USB-Powered-Down-Firing-Subwoofer-Far-Field/dp/B07NWLWM9B)|
+|   Name            |  Model                                                                                                                                                              |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Acoustic mat      | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)                      |
+| Bas trap          | [Bass trap corner quarter round 100 x 10 x 10 cm](https://allegro.pl/oferta/pulapka-basowa-narozna-cwiercwalek-prof-cw10-1000-8902720842)                           |
+| Microphone        | [Thronmax MDrill One Pro](https://www.thronmax.com/product/thronmax-mdrill-one-pro/)                                                                                |
+| Shock mount       | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)                                              |
+| Microphone holder | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)                                                |
+| Microphone holder - replacement | [Boom Mic Arm for Shure SM7B/MV7/Blue Yeti, 2023 New Upgraded Microphone Desk Mount with Hidden Cable Trough & Extension Tube](https://a.co/d/6zrKIRl)|
+| Heahphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)                                                                 |
+| Heahphones        | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)                                                  |
+| Speakers          | [Creative Pebble Plus 2.1 USB-powered desktop speakers with subwoofer](https://www.amazon.com/Creative-USB-Powered-Down-Firing-Subwoofer-Far-Field/dp/B07NWLWM9B)   |
 
 ##### Camera and lighting gear
 

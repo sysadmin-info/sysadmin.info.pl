@@ -13,19 +13,19 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 
 ##### Moje biurko i meble 
 
-|   Nazwa             |  Model                                                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Biurko              | [IKEA UTESPELARE gaming desk, 160x80 cm, black](https://www.ikea.com/pl/pl/p/utespelare-biurko-gamingowe-czarny-80507627/)                                          |
-| Komoda              | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/pl/pl/p/helmer-komoda-na-kolkach-czarny-20341970/)           |
-| Uchwyt na kubek     | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/) |
-| Krzesło             | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                            |
-| Uchwyt do monitorów | [NB North Bayou Dual Monitor, 22''-32''](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                   |
+|   Nazwa             |  Model                                                                                                                                          |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Biurko              | [IKEA UTESPELARE biurko gamingowe, 160x80 cm, czarne](https://www.ikea.com/pl/pl/p/utespelare-biurko-gamingowe-czarny-80507627/)                |
+| Komoda              | [IKEA Helmer stalowa komoda z szufladami, na kółkach, czarna, 28x69 cm](https://www.ikea.com/pl/pl/p/helmer-komoda-na-kolkach-czarny-20341970/) |
+| Uchwyt na kubek     | [IKEA LANESPELARE uchwyt na kubek, czarny, 9x11cm](https://www.ikea.com/pl/pl/p/lanespelare-uchwyt-na-kubek-czarny-90507844/#content)           |
+| Krzesło             | [Diablo V-Commander czarne krzesło gamingowe, ergonomiczne](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)    |
+| Uchwyt do monitorów | [NB North Bayou uchwyt na dwa monitory, 22''-32''](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                     |
 
 
 ##### Sprzęt do klawiatur i myszy 
 
-|   Nazwa             |  Model                                                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   Nazwa       |  Model                                                                                                                                                                    |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Klawiatura    | Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/)     |
 | Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)                                                 |
 | Podkładka pod nadgarstki do klawiatury | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/)           |
