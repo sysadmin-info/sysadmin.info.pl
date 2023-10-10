@@ -50,14 +50,14 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 
 ##### Kamera i sprzęt oświetleniowy 
 
-|   Nazwa             |  Model                                                                                                                                                              |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Zestaw oświetleniowy softbox | [NEEWER 700W Equivalent Softbox Lighting Kit, 2Pack](https://www.amazon.com/Neewer-Professional-Photography-Centimeters-Lighting/dp/B017D7W57S)            |
-| Kamera | [Razer Kiyo: Full HD 1080p 30FPS/720p 60FPS Computer Camera](https://www.razer.com/eu-en/streaming-cameras/razer-kiyo)                                                           |
-| Teleprompter | [Neewer X1 Mini Teleprompter, 8", przenośny](https://www.amazon.com/Neewer-Teleprompter-Smartphone-Compatible-Mirrorless/dp/B08K7KXGKD)                                    |
-| Oświetlenie monitora | [Xiaomi Mi Computer Monitor Light Bar](https://www.amazon.com/Mi-Computer-Monitor-Light-Bar/dp/B08W2C5W59/ref=sr_1_3?keywords=Xiaomi+Mi+Computer+Monitor+Light+Bar&qid=1696757241&sr=8-3)                                                                                                                                                                      |
-| Statyw dla telepromptera i kamery | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini](https://www.amazon.com/Huepar-Lightweight-Aluminum-Tripod-Mini-Adjustable/dp/B07NSQZBWR)        |
-| Oświetlenie RGB | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights](https://www.amazon.com/Govee-Upgraded-Technology-Compatible-Christmas/dp/B0B42BWVLM)         |
+|   Nazwa                      |  Model                                                                                                                |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Zestaw oświetleniowy softbox | [NEEWER 700W Equivalent Softbox Lighting Kit, 2Pack](https://a.co/d/6eKt3Bx)                                          |
+| Kamera                       | [Razer Kiyo: Full HD 1080p 30FPS/720p 60FPS Computer Camera](https://www.razer.com/eu-en/streaming-cameras/razer-kiyo)|
+| Teleprompter                 | [Neewer X1 Mini Teleprompter, 8", przenośny](https://a.co/d/eRqXFfb)                                                  |
+| Oświetlenie monitora         | [Xiaomi Mi Computer Monitor Light Bar](https://a.co/d/4wnGNo8)                                                        |
+| Statyw dla telepromptera i kamery | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini](https://a.co/d/cyhTfL6)                                    |
+| Oświetlenie RGB | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights](https://a.co/d/i7hQKxb)                                 |
 
 ##### Szafa serwerowa i wszystkie elementy sieciowe
 
