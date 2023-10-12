@@ -3,7 +3,7 @@ title: Sprzęt
 date: 2023-10-08T10:00:16+09:00
 description: Mój sprzęt
 type: gear
-description: "Mój sprzęt, którego używam do pracy, tworzenia treści w Internecie i nagrywania kolejnych tutoriali na YouTube."
+description: "Mój sprzęt, którego używam do pracy, tworzenia treści w Internecie i nagrywania kolejnych tutoriali na YouTube. Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit.co/sysadmin-info)"
 author: sysadmin
 authorEmoji: 🐧
 image: images/2023-thumbs/my-desk.webp
