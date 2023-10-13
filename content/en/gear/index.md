@@ -62,11 +62,15 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### Server cabinet and all the network stuff
 
-|   Name                  |  Model                                                                                                                                 |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Server cabinet          | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm grey](https://lanberg.pl/en/produkt/WF10-2304-10S)                           |
-| Cabinet shelf           | [Fixed shelf 10" 1U 95 mm grey RAL 7035](https://a.co/d/5dSOQel)                                                                       |
-| Cabinet shelf           | [RACK shelf 10" 1U 150mm grey with holes](https://a.co/d/aO2Yo8c)                                                                      |
-| Power distribution unit | [10" Rack PDU - 1U (4 Outlet) Power Distribution Unit 10 inch for Mini Racks w/Protection (110V/15A 6ft Cable)](https://a.co/d/glCdxO8)|
-| Fan for rack            | [Fan with temperature sensor for rack] |
-| Rack mounting screws    | [Mounting screws M6 set for rack cabinets 100 pcs](https://a.co/d/34Mienw)                                                             |
+|   Name                   |  Model                                                                                                                                 |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Server cabinet           | [Lanberg server cabinet 10 inch 4U hanging rack 280x310mm grey](https://lanberg.pl/en/produkt/WF10-2304-10S)                           |
+| Cabinet shelf            | [Fixed shelf 10" 1U 95 mm grey RAL 7035](https://a.co/d/5dSOQel)                                                                       |
+| Cabinet shelf            | [RACK shelf 10" 1U 150mm grey with holes](https://a.co/d/aO2Yo8c)                                                                      |
+| Power distribution unit  | [10" Rack PDU - 1U (4 Outlet) Power Distribution Unit 10 inch for Mini Racks w/Protection (110V/15A 6ft Cable)](https://a.co/d/glCdxO8)|
+| Fan for rack             | [Fan with temperature sensor for rack] |
+| Rack mounting screws     | [Mounting screws M6 set for rack cabinets 100 pcs](https://a.co/d/34Mienw)                                                             |
+| Green Cell UPS AiO 600VA | [Green Cell UPS AiO 600VA 360W with LCD Display](https://greencell.global/en/uninterruptible-power-supplies/1090-green-cell-uninterruptible-power-supply-ups-aio-600va-360w-with-lcd-display-eu-version-6x-schuko-sockets.html) |
+| MikroTik hAP ac2 router  | [MikroTik hAP ac2 ](https://a.co/d/aqMa2Do) |
+| TP-Link Deco E4 Wi-Fi 5  | [TP Link Deco E4 - 2-Pack](https://a.co/d/1uvwwSj) |
+| TP-Link Deco X20 Wi-Fi 6 | [TP Link Deco E4 - 2-Pack](https://a.co/d/4CyZzHF) |

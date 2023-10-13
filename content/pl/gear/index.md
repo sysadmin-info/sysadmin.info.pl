@@ -69,3 +69,7 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Listwa Zasilająca   | [Neku 22.5009 4 gniazda czarna](https://allegro.pl/oferta/neku-listwa-zasilajaca-rack-10-4-gn-wylacznik-6007187523)                          |
 | Wentylator do szafy | [Wentylator z czujnikiem temperatury do szafy rack](https://allegro.pl/oferta/wentylator-z-czujnikiem-temperatury-do-szafy-rack-10747640134) |
 | Śruby montażowe     | [śrubki M6 kpl. do szaf RACK 20 sztuk](https://allegro.pl/oferta/sruby-montazowe-srubki-m6-kpl-do-szaf-rack-20szt-11281118708)               |
+| Green Cell UPS AiO 600VA | [Green Cell UPS AiO 600VA 360W with LCD Display](https://greencell.global/en/uninterruptible-power-supplies/1090-green-cell-uninterruptible-power-supply-ups-aio-600va-360w-with-lcd-display-eu-version-6x-schuko-sockets.html) |
+| MikroTik hAP ac2 router  | [MikroTik hAP ac2 ](https://amzn.eu/d/ahvBxLf) |
+| TP-Link Deco E4 Wi-Fi 5  | [TP-Link Deco E4 - 2 sztuki](https://allegro.pl/oferta/tp-link-system-mesh-deco-e4-ac1200-dualband-11363213953) |
+| TP-Link Deco X20 Wi-Fi 6 | [Tp_link Deco X20 - 2 sztuki](https://allegro.pl/oferta/tp-link-deco-x20-2-pack-dual-band-2-4-ghz-5-ghz-14293438817) |
