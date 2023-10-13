@@ -11,7 +11,7 @@ image: images/2023-thumbs/my-desk.webp
 
 {{< img src="/images/2023-thumbs/my-desk.webp" title="My gear that I use for work, creating web content and recording more YouTube tutorials." alt="My gear that I use for work, creating web content and recording more YouTube tutorials." >}}
 
-All the gear you can see here: <a href="https://kit.co/sysadmin-info" target="_blank">https://kit.co/sysadmin-info</a>
+All the gear you can see here: < rawhtml >}}<a href="https://kit.co/sysadmin-info" target="_blank">https://kit.co/sysadmin-info</a>{{< /rawhtml >
 
 ##### My desk and furniture
 
