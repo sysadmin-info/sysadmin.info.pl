@@ -21,7 +21,7 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Komoda              | [IKEA Helmer stalowa komoda z szufladami, na kółkach, czarna, 28x69 cm](https://www.ikea.com/pl/pl/p/helmer-komoda-na-kolkach-czarny-20341970/) |
 | Uchwyt na kubek     | [IKEA LANESPELARE uchwyt na kubek, czarny, 9x11cm](https://www.ikea.com/pl/pl/p/lanespelare-uchwyt-na-kubek-czarny-90507844/#content)           |
 | Krzesło             | [Diablo V-Commander czarne krzesło gamingowe, ergonomiczne](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)    |
-| Uchwyt do monitorów | [NB North Bayou uchwyt na dwa monitory, 22"-32"](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                     |
+| Uchwyt do monitorów | [NB North Bayou uchwyt na dwa monitory, 22-32 cale](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                     |
 
 
 ##### Sprzęt do klawiatur i myszy 
