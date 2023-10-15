@@ -21,7 +21,7 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/us/en/p/helmer-drawer-unit-on-casters-black-20341970/#content) |
 | Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/)   |
 | Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                              |
-| Monitor arm   | [NB North Bayou Dual Monitor, 22''-32''](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                     |
+| Monitor arm   | [NB North Bayou Dual Monitor, 22"-32"](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                     |
 
 
 ##### Keyboard and mice gear
