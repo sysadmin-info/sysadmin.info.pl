@@ -47,6 +47,10 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Słuchawki         | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)                                                                   |
 | Słuchawki         | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)                                                    |
 | Głośniki          | [Głośniki Creative Pebble Plus 2.1 zasilane przez USB z subwooferem](https://www.amazon.com/Creative-USB-Powered-Down-Firing-Subwoofer-Far-Field/dp/B07NWLWM9B)       |
+| Mikrofon          | [Elgato Wave DX](https://allegro.pl/oferta/mikrofon-streamingowy-elgato-wave-dx-13316571941)|
+| Interfejs mikrofonu XLR | [Elgato Wave XLR](https://allegro.pl/oferta/przedwzmacniacz-mikrofonowy-elgato-wave-xlr-usb-c-14511307671)|
+| Statyw na mikrofon | [Elgato Wave low profile mic arm](https://allegro.pl/oferta/uchwyt-elgato-wave-mic-arm-low-profile-12848238251)|
+| kabel XLR         | [Elgato XLR Microphone Cable](https://allegro.pl/oferta/kabel-analogowy-audio-elgato-xlr-do-mikrofonu-3m-14513521098)|
 
 ##### Kamera i sprzęt oświetleniowy 
 

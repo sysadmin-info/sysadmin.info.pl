@@ -48,6 +48,10 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Heahphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)                                                                 |
 | Heahphones        | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)                                                  |
 | Speakers          | [Creative Pebble Plus 2.1 USB-powered desktop speakers with subwoofer](https://www.amazon.com/Creative-USB-Powered-Down-Firing-Subwoofer-Far-Field/dp/B07NWLWM9B)   |
+| Microphone        | [Elgato Wave DX](https://a.co/d/eEaVvzz)|
+| XLR mic interface | [Elgato Wave XLR](https://a.co/d/drmwZ8p)|
+| Microphone arm    | [Elgato Wave low profile mic arm](https://a.co/d/06VszQ3)| 
+| XLR cable         | [Elgato XLR Microphone Cable](https://a.co/d/fD4hWsw)|
 
 ##### Camera and lighting gear
 
