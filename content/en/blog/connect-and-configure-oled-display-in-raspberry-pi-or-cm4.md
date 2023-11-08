@@ -94,6 +94,7 @@ The Adafruit CircuitPython library will then be installed using the following co
 cd ~
 sudo pip3 install --upgrade adafruit-python-shell
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
+sudo apt-get install python3-dev
 sudo python3 raspi-blinka.py
 ```
 
