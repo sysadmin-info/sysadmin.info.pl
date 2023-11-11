@@ -65,7 +65,13 @@ and place a password for the ansible user to connect to remote hosts.
 chmod 400 pass_file_ansible
 ``` 
 
-4. Create a script
+4. Create a list of servers with IP addresses or hostnames
+
+```bash
+vim servers
+```
+
+5. Create a script
 
 ```bash
 vim  ssh-copy-id.sh
@@ -82,15 +88,15 @@ for i in $servers; do
 done
 ```
 
-5. Make sure that PasswordAuthentication has set boolean value to yes in /etc/ssh/sshd_config file
+6. Make sure that PasswordAuthentication has set boolean value to yes in /etc/ssh/sshd_config file on remote servers.
 
-6. Make the script executable
+7. Make the script executable
 
 ```bash
 chmod +x ssh-copy-id.sh 
 ```
 
-7. Execute the script
+8. Execute the script
 
 ```bash
 ./ssh-copy-id.sh 

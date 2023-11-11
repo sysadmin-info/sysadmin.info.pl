@@ -109,7 +109,13 @@ and place a password for the user that is currently able to connect to remote ho
 chmod 400 pass_file
 ``` 
 
-9. Create a script
+9. Create a list of servers with IP addresses or hostnames
+
+```bash
+vim servers
+```
+
+10. Create a script
 
 ```bash
 vim  ansible-sudo.sh
@@ -136,20 +142,20 @@ if [ $ans == 'y' ] ;then
 fi
 ```
 
-10. Make sure that PasswordAuthentication has set boolean value to yes in /etc/ssh/sshd_config file
+11. Make sure that PasswordAuthentication has set boolean value to yes in /etc/ssh/sshd_config file on remote servers
 
-11. Make the script executable
+12. Make the script executable
 
 ```bash
 chmod +x ansible-sudo.sh
 ```
 
-12. Execute the script
+13. Execute the script
 
 ```bash
 ./ansible-sudo.sh
 ```
 
-13. Provide username: ansible
+14. Provide username: ansible
 
-14. See the result. User ansible should be added to group admins.
+15. See the result. User ansible should be added to group admins.
