@@ -21,7 +21,7 @@ categories:
 image: images/2023-thumbs/ansible05.webp
 ---
 
-Article about known_hosts: 
+Article about known_hosts: [What is known_hosts File in Linux](/en/blog/known-hosts-file)
 
 1. **Here is a video tutorial**
 
@@ -83,4 +83,6 @@ ansible-playbook ssh-session.yaml
 cat ~/.ssh/known_hosts
 ```
 7. See do you have entries added into known_hosts
+
+##### Solution that I have found in the Internet that I really do not recommend
 
