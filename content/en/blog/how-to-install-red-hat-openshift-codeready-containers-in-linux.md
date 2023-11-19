@@ -11,13 +11,13 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 tags:
-- Ansible
-- known_hosts 
-- ssh
+- OpenShift
+- crc
+- CodeReady Containers
 series:
-- Ansible
+- OpenShift
 categories:
-- Ansible 
+- OpenShift
 image: images/2023-thumbs/openshift01.webp
 ---
 
