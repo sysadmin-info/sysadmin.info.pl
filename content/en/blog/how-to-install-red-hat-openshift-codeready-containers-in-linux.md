@@ -119,3 +119,10 @@ crc stop
 crc delete
 crc cleanup
 ```
+
+2. Run the below command:
+```bash
+./haproxy-remove.sh
+```
+
+The file you  will find here: [haproxy-remove.sh](https://github.com/sysadmin-info/openshift) 
