@@ -103,6 +103,7 @@ chmod +x  haproxy.sh
 6. Now test the cluster with openshift CLI or in short oc
 ```bash
 echo 'eval $(crc oc-env)' >> ~/.bashrc
+source ~/.bashrc
 oc login -u kubeadmin https://api.crc.testing:6443
 oc get projects
 oc get nodes
