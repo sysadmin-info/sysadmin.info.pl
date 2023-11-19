@@ -25,6 +25,11 @@ image: images/2023-thumbs/openshift01.webp
 
 {{<youtube Sc4O96nh4aw>}}
 
+
+{{< notice info "info" >}}
+Please bear in mind that the user you are using for the installatiopn (the one that is currently logged in through ssh) has to be in sudoers group. 
+{{< /notice >}}
+
 Scripts and configuration files are available [here:](https://github.com/sysadmin-info/openshift)
 
 ##### System requirements: 
