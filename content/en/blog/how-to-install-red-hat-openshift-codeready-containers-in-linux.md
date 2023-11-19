@@ -122,6 +122,7 @@ crc cleanup
 
 2. Run the below command:
 ```bash
+chmod +x haproxy-remove.sh
 ./haproxy-remove.sh
 ```
 
