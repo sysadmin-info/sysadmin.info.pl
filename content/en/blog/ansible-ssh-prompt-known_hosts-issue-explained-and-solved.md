@@ -86,3 +86,17 @@ cat ~/.ssh/known_hosts
 
 ##### Solution that I have found in the Internet that I really do not recommend
 
+1. Run the ansible playbook with the below command:
+```bash
+ansible-playbook ssh-keyscan.yaml
+```
+2. Check the result in known_hosts
+```bash
+cat ~/.ssh/known_hosts
+```
+3. Get rid of unecessary entries in known_hosts
+4. Run the ansible playbook with the below command:
+```bash
+ansible-playbook ssh-session.yaml
+```
+5. Watch the mentioned video to understand what happened and why.
