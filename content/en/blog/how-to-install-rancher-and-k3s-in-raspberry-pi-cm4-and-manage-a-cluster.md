@@ -202,7 +202,7 @@ systemctl is-enabled k3s
 #### Copy the token
 
 ```bash
-cat /var/lib/rancher/k3s/server/node-token
+sudo cat /var/lib/rancher/k3s/server/node-token
 ```
 
 #### Copy IP address of the master node
