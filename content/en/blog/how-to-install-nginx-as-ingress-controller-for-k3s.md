@@ -237,7 +237,7 @@ sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 Change owner to user for k3s config file
 
 ```bash
-sudo chown -R user:user /home/user
+sudo chown -R $USER:$USER /home/$USER
 ```
 
 #### Install k9s 
