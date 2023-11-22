@@ -31,8 +31,6 @@ Click here: [A series of articles about Ansible:](/en/categories/ansible/)
 
 {{<youtube PAl4P6tii7M>}}
 
-Scripts and configuration files are available [here:](https://github.com/sysadmin-info/ansible)
-
 #### Requirements:
 
 ##### For Raspberry Pi / CM4 
@@ -153,3 +151,7 @@ kubectl get pods -A
 kubectl get svc -A
 kubectl get all -A
 ```
+
+{{< notice success "Information" >}}
+Scripts and configuration files are available [here:](https://github.com/sysadmin-info/ansible)
+{{< /notice >}}
