@@ -12,8 +12,7 @@ pinned: false
 asciinema: true
 tags:
 - Ansible
-- Bash
-- sshpass 
+- k3s
 series:
 - Ansible
 categories:
@@ -21,7 +20,12 @@ categories:
 image: images/2023-thumbs/ansible06.webp
 ---
 
-[A series of articles about Ansible](/en/categories/ansible/)
+
+{{< notice success "How to install, configure and use Ansible" >}}
+Click here: [A series of articles about Ansible:](/en/categories/ansible/)
+{{< /notice >}}
+
+### Ansible+k3s on Raspberry Pi CM4 cluster
 
 1. **Here is a video tutorial**
 
