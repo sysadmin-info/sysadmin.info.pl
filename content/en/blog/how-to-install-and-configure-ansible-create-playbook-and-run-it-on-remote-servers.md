@@ -65,7 +65,7 @@ sudo vim /etc/ansible/hosts
 
 and put the below content into the file
 
-```vim
+```yaml
 servers:
   hosts:
     worker1:
@@ -93,7 +93,7 @@ ansible --version
 vim ssh-session.yaml
 ```
 
-```vim
+```yaml
 - hosts: servers
   tasks:
   - name: "connect via ssh"
@@ -104,7 +104,7 @@ vim ssh-session.yaml
 vim passwd-auth.yaml
 ```
 
-```vim
+```yaml
 - hosts: servers 
   become: true
   tasks:

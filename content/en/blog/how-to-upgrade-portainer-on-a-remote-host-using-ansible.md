@@ -42,7 +42,7 @@ Click here: [A series of articles about Ansible:](/en/categories/ansible/)
 sudo vim /etc/ansible/hosts
 ```
 
-```vim
+```yaml
 all:
   children:
     portainer:
@@ -63,7 +63,7 @@ vim portainer.yml
 
 3. Put the below content into this file.
 
-```vim
+```yaml
 ---
 - name: Upgrade Portainer on AdGuard Home LXC container in Proxmox
   hosts: portainer

@@ -57,7 +57,7 @@ added to
 sudo vim /etc/ansible/hosts
 ```
 
-```vim
+```yaml
 all:
   children:
     master:
@@ -83,7 +83,7 @@ vim k3s-raspberry-cluster.yml
 
 3. Put the below content into this file.
 
-```vim
+```yaml
 ---
 - name: Install K3s on Master Node
   hosts: master
