@@ -6,6 +6,7 @@ type: gear
 description: "Mój sprzęt, którego używam do pracy, tworzenia treści w Internecie i nagrywania kolejnych tutoriali na YouTube. Cały sprzęt można zobaczyć tutaj: https://kit.co/sysadmin-info"
 author: sysadmin
 authorEmoji: 🐧
+pinned: true
 image: images/2023-thumbs/my-desk.webp
 ---
 

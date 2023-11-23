@@ -6,6 +6,7 @@ type: gear
 description: "My gear that I use for work, creating web content and recording more YouTube tutorials. All the gear you can see here: https://kit.co/sysadmin-info"
 author: sysadmin
 authorEmoji: 🐧
+pinned: true
 image: images/2023-thumbs/my-desk.webp
 ---
 
