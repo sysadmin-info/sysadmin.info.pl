@@ -27,7 +27,7 @@ First of all, you need the audit2why tool to explain what has been blocked and w
 
 To check in CentOS, Red Hat, whether Fedora, what package it provides, follow the command:
 
-```
+```bash
 sudo yum -q provides audit2why policycoreutils-python-2.5-17.1.el7.x86_64 : SELinux policy core python                                             : utilities  
 Repo        : base  
 Matched from:  Filename    : /usr/bin/audit2allow
@@ -40,7 +40,7 @@ You need to install the policycoreutils-python package (and dependencies):
 
   ### CentOS 7 section
 
-  ```
+  ```bash
   sudo yum install policycoreutils-python
   ```
 
@@ -49,7 +49,7 @@ You need to install the policycoreutils-python package (and dependencies):
 
   ### CentOS 8 section
 
-  ```
+  ```bash
   sudo yum install policycoreutils-python-utils
   ```
   {{< /tab >}}
@@ -57,13 +57,13 @@ You need to install the policycoreutils-python package (and dependencies):
 
 Subsequently, perform the audit using the audit2why tool and the audit log:
 
-```
+```bash
 sudo audit2why -i /var/log/audit/audit.log
 ```
 
 A corresponding message will be displayed, which contains, for example, this information:
 
-```
+```bash
 scontext=system_u:system_r:nagios_t:s0
 tcontext=system_u:system_r:nagios_t:s0
 ...
@@ -74,7 +74,7 @@ Was caused by:
 
 A little hint about the first two lines:
 
-```
+```bash
   * scontext = Source Context
   * tcontext = Target Context 
   * \_u:\_r:_t:s# = user:role:type:security level
@@ -82,7 +82,7 @@ A little hint about the first two lines:
 
 The source and target contexts are identical, so it seems to me that the command should be allowed to work. But let&#8217;s try audit2allow and see what it says:
 
-```
+```bash
 sudo audit2allow -i /var/log/audit/audit.log
 
 #============= nagios_t ==============
@@ -106,13 +106,13 @@ Pretty unfriendly behavior. Although if the alternative is to completely disable
 
 So audit2allow provided some rules. What now? Fortunately, the audit2why and audit2allow man pages contain details on how to incorporate the principles into the SELinux policy. First of all, you should generate a new type of policy:
 
-```
+```bash
 sudo audit2allow -i /var/log/audit/audit.log --module local > local.te
 ```
 
 This includes some additional information in addition to the default output:
 
-```
+```bash
 # cat local.te
 
 module local 1.0;
@@ -131,7 +131,7 @@ allow nagios_t self:capability chown;
 
 The next page of the man says about:
 
-```
+```bash
 # SELinux provides a policy devel environment under
 # /usr/share/selinux/devel including all of the shipped
 # interface files.
@@ -142,20 +142,20 @@ $ sudo make -f /usr/share/selinux/devel/Makefile local.pp
 
 But my system didn&#8217;t have a directory /usr/share/selinux/devel:
 
-```
+```bash
 # ls /usr/share/selinux/
 packages  targeted
 ```
 
 I had to install the policycoreutils-devel package and dependencies.
 
-```
+```bash
 sudo yum install policycoreutils-devel
 ```
 
 Now compile a policy file to a binary file:
 
-```
+```bash
 sudo make -f /usr/share/selinux/devel/Makefile local.pp
 Compiling targeted local module
 /usr/bin/checkmodule:  loading policy configuration from tmp/local.tmp
@@ -167,13 +167,13 @@ rm tmp/local.mod.fc tmp/local.mod
 
 Then install the policy from the pp file that was previously generated using the make -f command. I use the semodule tool.
 
-```
+```bash
 sudo semodule -i local.pp
 ```
 
 Did it solve the problem?
 
-```
+```bash
 sudo systemctl start icinga
 sudo systemctl status icinga
 ● icinga.service - LSB: start and stop Icinga monitoring daemon
@@ -197,13 +197,13 @@ Hint: Some lines were ellipsized, use -l to show in full.
 
 It worked! The licensing issues were resolved without resorting to the exclusion of SELinux. Every problem of this type in SELinux can be solved by analogy. At the very end it is worth to install the sealert tool:
 
-```
+```bash
 sudo yum install setroubleshoot setools
 ```
 
 And check the status of alerts with a command:
 
-```
+```bash
 sudo sealert -a /var/log/audit/audit.log
 ```
 
