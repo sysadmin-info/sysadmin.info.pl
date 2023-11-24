@@ -22,33 +22,33 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Komoda              | [IKEA Helmer stalowa komoda z szufladami, na kółkach, czarna, 28x69 cm](https://www.ikea.com/pl/pl/p/helmer-komoda-na-kolkach-czarny-20341970/) |
 | Uchwyt na kubek     | [IKEA LANESPELARE uchwyt na kubek, czarny, 9x11cm](https://www.ikea.com/pl/pl/p/lanespelare-uchwyt-na-kubek-czarny-90507844/#content)           |
 | Krzesło             | [Diablo V-Commander czarne krzesło gamingowe, ergonomiczne](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)    |
-| Uchwyt do monitorów | [NB North Bayou uchwyt na dwa monitory, 22-32 cale](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                     |
+| Uchwyt do monitorów | [NB North Bayou uchwyt na dwa monitory, 22-32 cale](https://a.co/d/bTMIffl)|
 
 
 ##### Sprzęt do klawiatur i myszy 
 
-|   Nazwa       |  Model                                                                                                                                                                    |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Klawiatura    | [Keychron K10 Pro, pełny rozmiar 108 klawiszy](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/)    |
-| Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)                                                 |
-| Podkładka pod nadgarstki do klawiatury | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/)           |
-| Podkładka pod nadgarstek do myszy | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                                           |
-| Mysz | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/pl-pl/products/mice/mx-master-3s.910-006559.html)                                                               |
+|   Nazwa       |  Model                                                                                                                                                                |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Klawiatura    | [Keychron K10 Pro, pełny rozmiar 108 klawiszy](https://shelter.pl/produkt/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard-bezprzewodowa-klawiatura-mechaniczna/)|
+| Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)|
+| Podkładka pod nadgarstki do klawiatury | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/)|
+| Podkładka pod nadgarstek do myszy | [Glorious Wooden Mouse Wrist Rest](https://a.co/d/fZf9tuo)|
+| Mysz | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/pl-pl/products/mice/mx-master-3s.910-006559.html)|
 | Mysz | [Logitech G502 HERO](https://www.logitechg.com/pl-pl/products/gaming-mice/g502-hero-gaming-mouse.910-005470.html)|
-| Podkładka pod klawiaturę i mysz | [Felt desk pad 100x40cm](https://allegro.pl/oferta/filcowa-podkladka-na-biurko-100x40cm-13227543583)                                                    |
+| Podkładka pod klawiaturę i mysz | [Felt desk pad 100x40cm](https://allegro.pl/oferta/filcowa-podkladka-na-biurko-100x40cm-13227543583)|
 
 ##### Sprzęt audio 
 
-|   Nazwa                     |  Model                                                                                                                                                      |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mata akystyczna             | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)              |
-| Pułapka basowa              | [Bass trap corner quarter round 100 x 10 x 10 cm](https://allegro.pl/oferta/pulapka-basowa-narozna-cwiercwalek-prof-cw10-1000-8902720842)                   |
-| Mikrofon                    | [Thronmax MDrill One Pro](https://www.thronmax.com/product/thronmax-mdrill-one-pro/)                                                                        |
-| Uchwyt wstrząsowy mikrofonu | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)                                      |
-| Statyw na mikrofon | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)                                                 |
-| Słuchawki         | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)                                                                   |
-| Słuchawki         | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)                                                    |
-| Głośniki          | [Głośniki Creative Pebble Plus 2.1 zasilane przez USB z subwooferem](https://www.amazon.com/Creative-USB-Powered-Down-Firing-Subwoofer-Far-Field/dp/B07NWLWM9B)       |
+|   Nazwa                     |  Model                                                                                                                                        |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mata akystyczna             | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)|
+| Pułapka basowa              | [Bass trap corner quarter round 100 x 10 x 10 cm](https://allegro.pl/oferta/pulapka-basowa-narozna-cwiercwalek-prof-cw10-1000-8902720842)|
+| Mikrofon                    | [Thronmax MDrill One Pro](https://www.thronmax.com/product/thronmax-mdrill-one-pro/)|
+| Uchwyt wstrząsowy mikrofonu | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)|
+| Statyw na mikrofon | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)|
+| Słuchawki         | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)|
+| Słuchawki         | [Logitech G230 Gaming Headset with Mic](https://a.co/d/3XKh7E8)|
+| Głośniki          | [Głośniki Creative Pebble Plus 2.1 zasilane przez USB z subwooferem](https://a.co/d/6E4QTp9)|
 | Mikrofon          | [Elgato Wave DX](https://allegro.pl/oferta/mikrofon-streamingowy-elgato-wave-dx-13316571941)|
 | Interfejs mikrofonu XLR | [Elgato Wave XLR](https://allegro.pl/oferta/przedwzmacniacz-mikrofonowy-elgato-wave-xlr-usb-c-14511307671)|
 | Statyw na mikrofon | [Elgato Wave low profile mic arm](https://allegro.pl/oferta/uchwyt-elgato-wave-mic-arm-low-profile-12848238251)|

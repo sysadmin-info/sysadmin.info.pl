@@ -16,13 +16,13 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### My desk and furniture
 
-|   Name            |  Model                                                                                                                                                            |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Desk          | [IKEA UTESPELARE gaming desk, 160x80 cm, black](https://www.ikea.com/us/en/p/utespelare-gaming-desk-black-80507627/)                                                  |
-| Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/us/en/p/helmer-drawer-unit-on-casters-black-20341970/#content) |
-| Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/)   |
-| Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                              |
-| Monitor arm   | [NB North Bayou Dual Monitor, 22-32 inches](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                  |
+|   Name        |  Model                                                                                                              |
+| ------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Desk          | [IKEA UTESPELARE gaming desk, 160x80 cm, black](https://www.ikea.com/us/en/p/utespelare-gaming-desk-black-80507627/)|
+| Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/us/en/p/helmer-drawer-unit-on-casters-black-20341970/#content)|
+| Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/)|
+| Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)|
+| Monitor arm   | [NB North Bayou Dual Monitor, 22-32 inches](https://a.co/d/bDwhW2o)|
 
 
 ##### Keyboard and mice gear
@@ -48,24 +48,24 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Microphone holder | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)|
 | Microphone holder - replacement | [Boom Mic Arm for Shure SM7B/MV7/Blue Yeti, 2023 New Upgraded Microphone Desk Mount with Hidden Cable Trough & Extension Tube](https://a.co/d/6zrKIRl)|
 | Heahphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)|
-| Heahphones        | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)|
+| Heahphones        | [Logitech G230 Gaming Headset with Mic](https://a.co/d/3753Y9I)|
 | Speakers          | [Creative Pebble Plus 2.1 USB-powered desktop speakers with subwoofer](https://a.co/d/eM02W6J)|
-| Microphone        | [Elgato Wave DX](https://a.co/d/eEaVvzz)|
-| XLR mic interface | [Elgato Wave XLR](https://a.co/d/drmwZ8p)|
-| Microphone arm    | [Elgato Wave low profile mic arm](https://a.co/d/06VszQ3)| 
-| XLR cable         | [Elgato XLR Microphone Cable](https://a.co/d/fD4hWsw)|
-| Stream Deck       | [Elgato Stream Deck Mini](https://a.co/d/j5iZrCO)|
+| Microphone        | [Elgato Wave DX](https://www.elgato.com/us/en/p/wave-dx-dynamic-microphone)|
+| XLR mic interface | [Elgato Wave XLR](https://www.elgato.com/us/en/p/wave-xlr)|
+| Microphone arm    | [Elgato Wave low profile mic arm](https://www.elgato.com/us/en/p/wave-mic-arm-lp)| 
+| XLR cable         | [Elgato XLR Microphone Cable](https://www.elgato.com/us/en/p/xlr-cable)|
+| Stream Deck       | [Elgato Stream Deck Mini](https://www.elgato.com/us/en/p/stream-deck-mini)|
 
 ##### Camera and lighting gear
 
-|   Name            |  Model                                                                                                                                                           |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Softbox Lighting Kit | [NEEWER 700W Equivalent Softbox Lighting Kit, 2Pack](https://www.amazon.com/Neewer-Professional-Photography-Centimeters-Lighting/dp/B017D7W57S)               |
-| Camera | [Razer Kiyo: Full HD 1080p 30FPS/720p 60FPS Computer Camera](https://www.razer.com/eu-en/streaming-cameras/razer-kiyo)                                                      |
-| Teleprompter | [Neewer X1 Mini Teleprompter, 8", Portable](https://www.amazon.com/Neewer-Teleprompter-Smartphone-Compatible-Mirrorless/dp/B08K7KXGKD)                    |
-| Monitor lighting | [Xiaomi Mi Computer Monitor Light Bar](https://www.amazon.com/Mi-Computer-Monitor-Light-Bar/dp/B08W2C5W59/ref=sr_1_3?keywords=Xiaomi+Mi+Computer+Monitor+Light+Bar&qid=1696757241&sr=8-3)                                                                                                                                                                 |
-| Tripod for Teleprompter and camera | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini](https://www.amazon.com/Huepar-Lightweight-Aluminum-Tripod-Mini-Adjustable/dp/B07NSQZBWR)  |
-| RGB lighting | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights](https://www.amazon.com/Govee-Upgraded-Technology-Compatible-Christmas/dp/B0B42BWVLM)       |
+|   Name            |  Model                                                                         |
+| ----------------- | ------------------------------------------------------------------------------ |
+| Softbox Lighting Kit | [NEEWER 700W Equivalent Softbox Lighting Kit, 2Pack](https://a.co/d/7AYHhdG)|
+| Camera | [Razer Kiyo: Full HD 1080p 30FPS/720p 60FPS Computer Camera](https://www.razer.com/eu-en/streaming-cameras/razer-kiyo)|
+| Teleprompter | [Neewer X1 Mini Teleprompter, 8", Portable](https://a.co/d/6w8f5A9)|
+| Monitor lighting | [Xiaomi Mi Computer Monitor Light Bar](https://a.co/d/8yPF6aJ)|
+| Tripod for Teleprompter and camera | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini](https://a.co/d/iicSOiq)|
+| RGB lighting | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights](https://a.co/d/g7SKBFe)|
 
 ##### Server cabinet and all the network stuff
 
