@@ -22,37 +22,39 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Drawer        | [IKEA Helmer Steel Drawer Unit on Castors, Epoxy/Polyester Powder Coating, Black](https://www.ikea.com/us/en/p/helmer-drawer-unit-on-casters-black-20341970/#content) |
 | Cup Holder    | [IKEA LANESPELARE Mug/Drinks Cup Holder for Gaming Desk, Black, Wood-Effect, Clamp-On, 9x11cm](https://www.ikea.com/gb/en/p/lanespelare-mug-holder-black-90507844/)   |
 | Chair         | [Diablo V-Commander black gaming chair](https://diablochairs.com/en/3743-ergonomic-chair-diablo-v-commander-black-black)                                              |
-| Monitor arm   | [NB North Bayou Dual Monitor, 22-32 inches](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                     |
+| Monitor arm   | [NB North Bayou Dual Monitor, 22-32 inches](https://www.amazon.com/NB-North-Bayou-Monitors-Adjustable/dp/B0BMG37THG)                                                  |
 
 
 ##### Keyboard and mice gear
 
-|   Name            |  Model                                                                                                                              |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Keyboard      | [Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://www.keychron.com/products/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard) |
-| Keycaps       | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)               |
-| Wrist rest for keyboard | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://a.co/d/fozjdR2)                                 |
-| Wrist rest for mouse | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                      |
-| Mouse | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006556.html)                            |
-| Desk pad | [Felt desk pad 100x40cm](https://a.co/d/0yqX4yq)                                                                                             |
+|   Name                  |  Model                                                                                                                                 |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Keyboard                | [Keychron K10 Pro QMK/VIA, Full Size 108 Keys](https://www.keychron.com/products/keychron-k10-pro-qmk-via-wireless-mechanical-keyboard)|
+| Keycaps                 | [Reverse Toxic Keycap Set - Kraken Keycaps](https://krakenkeyboards.com/products/reverse-toxic-keycap-set-kraken-keycaps)              |
+| Wrist rest for keyboard | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://a.co/d/fozjdR2)                                          |
+| Wrist rest for mouse    | [Glorious Wooden Mouse Wrist Rest](https://a.co/d/dHdW2sD)                                                                             |
+| Mouse                   | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006556.html)                   |
+| Mouse                   | [Logitech G502 HERO](https://a.co/d/2tZWNq4)                                                                                           |
+| Desk pad                | [Felt desk pad 100x40cm](https://a.co/d/0yqX4yq)                                                                                       |
 
 ##### Sound gear
 
 |   Name            |  Model                                                                                                                                                              |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Acoustic mat      | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)                      |
-| Bas trap          | [Bass trap corner quarter round 100 x 10 x 10 cm](https://allegro.pl/oferta/pulapka-basowa-narozna-cwiercwalek-prof-cw10-1000-8902720842)                           |
-| Microphone        | [Thronmax MDrill One Pro](https://www.thronmax.com/product/thronmax-mdrill-one-pro/)                                                                                |
-| Shock mount       | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)                                              |
-| Microphone holder | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)                                                |
+| Acoustic mat      | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)|
+| Bas trap          | [Bass trap corner quarter round 100 x 10 x 10 cm](https://allegro.pl/oferta/pulapka-basowa-narozna-cwiercwalek-prof-cw10-1000-8902720842)|
+| Microphone        | [Thronmax MDrill One Pro](https://www.thronmax.com/product/thronmax-mdrill-one-pro/)|
+| Shock mount       | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)|
+| Microphone holder | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)|
 | Microphone holder - replacement | [Boom Mic Arm for Shure SM7B/MV7/Blue Yeti, 2023 New Upgraded Microphone Desk Mount with Hidden Cable Trough & Extension Tube](https://a.co/d/6zrKIRl)|
-| Heahphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)                                                                 |
-| Heahphones        | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)                                                  |
-| Speakers          | [Creative Pebble Plus 2.1 USB-powered desktop speakers with subwoofer](https://www.amazon.com/Creative-USB-Powered-Down-Firing-Subwoofer-Far-Field/dp/B07NWLWM9B)   |
+| Heahphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)|
+| Heahphones        | [Logitech G230 Gaming Headset with Mic](https://www.amazon.com/Logitech-Stereo-Gaming-Headset-Cable/dp/B00BFOEY4I)|
+| Speakers          | [Creative Pebble Plus 2.1 USB-powered desktop speakers with subwoofer](https://a.co/d/eM02W6J)|
 | Microphone        | [Elgato Wave DX](https://a.co/d/eEaVvzz)|
 | XLR mic interface | [Elgato Wave XLR](https://a.co/d/drmwZ8p)|
 | Microphone arm    | [Elgato Wave low profile mic arm](https://a.co/d/06VszQ3)| 
 | XLR cable         | [Elgato XLR Microphone Cable](https://a.co/d/fD4hWsw)|
+| Stream Deck       | [Elgato Stream Deck Mini](https://a.co/d/j5iZrCO)|
 
 ##### Camera and lighting gear
 
