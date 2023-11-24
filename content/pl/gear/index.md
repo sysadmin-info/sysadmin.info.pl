@@ -34,6 +34,7 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Podkładka pod nadgarstki do klawiatury | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://shelter.pl/produkt/glorious-wooden-keyboard-wrist-rest/)           |
 | Podkładka pod nadgarstek do myszy | [Glorious Wooden Mouse Wrist Rest](https://www.amazon.com/Glorious-Gaming-Wooden-Mouse-Wrist/dp/B01NCH9P2Y)                                           |
 | Mysz | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/pl-pl/products/mice/mx-master-3s.910-006559.html)                                                               |
+| Mysz | [Logitech G502 HERO](https://www.logitechg.com/pl-pl/products/gaming-mice/g502-hero-gaming-mouse.910-005470.html)|
 | Podkładka pod klawiaturę i mysz | [Felt desk pad 100x40cm](https://allegro.pl/oferta/filcowa-podkladka-na-biurko-100x40cm-13227543583)                                                    |
 
 ##### Sprzęt audio 
@@ -52,6 +53,7 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Interfejs mikrofonu XLR | [Elgato Wave XLR](https://allegro.pl/oferta/przedwzmacniacz-mikrofonowy-elgato-wave-xlr-usb-c-14511307671)|
 | Statyw na mikrofon | [Elgato Wave low profile mic arm](https://allegro.pl/oferta/uchwyt-elgato-wave-mic-arm-low-profile-12848238251)|
 | kabel XLR         | [Elgato XLR Microphone Cable](https://allegro.pl/oferta/kabel-analogowy-audio-elgato-xlr-do-mikrofonu-3m-14513521098)|
+| Stream Deck | [Elgato Stream Deck Mini](https://www.elgato.com/pl/pl/p/stream-deck-mini)|
 
 ##### Kamera i sprzęt oświetleniowy 
 

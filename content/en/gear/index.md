@@ -34,7 +34,7 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Wrist rest for keyboard | [Glorious Gaming Wooden Wrist Rest - Full Standard Size - Onyx/Black](https://a.co/d/fozjdR2)                                          |
 | Wrist rest for mouse    | [Glorious Wooden Mouse Wrist Rest](https://a.co/d/dHdW2sD)                                                                             |
 | Mouse                   | [Logitech MX Master 3S - Wireless, Black](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006556.html)                   |
-| Mouse                   | [Logitech G502 HERO](https://a.co/d/2tZWNq4)                                                                                           |
+| Mouse                   | [Logitech G502 HERO](https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.910-005469.html)                      |
 | Desk pad                | [Felt desk pad 100x40cm](https://a.co/d/0yqX4yq)                                                                                       |
 
 ##### Sound gear
