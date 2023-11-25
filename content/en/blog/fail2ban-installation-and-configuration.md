@@ -26,7 +26,7 @@ To install Fail2Ban on CentOS 7.6, you will first need to install the EPEL (_Ext
   {{< tab >}}
   ### CentOS
   To install Fail2Ban on CentOS 7.6, you will first need to install the EPEL (_Extra Packages for Enterprise Linux_) repository. EPEL contains additional packages for all versions of CentOS, one of these additional packages is Fail2Ban.
-  ```
+  ```bash
   sudo yum install epel-release
   sudo yum install fail2ban fail2ban-systemd
   ```
@@ -34,7 +34,7 @@ To install Fail2Ban on CentOS 7.6, you will first need to install the EPEL (_Ext
   {{< tab >}}
   ### Debian/Ubuntu
   For Debian/Ubuntu, a command is enough:
-  ```
+  ```bash
   sudo apt-get install fail2ban
   ```
   {{< /tab >}}
@@ -42,7 +42,7 @@ To install Fail2Ban on CentOS 7.6, you will first need to install the EPEL (_Ext
 
 For CentOS, the next step is to update the SELinux rules. (Note: there is no SELinux installed on mikr.us.)
 
-```
+```bash
 sudo yum update -y selinux-policy*
 ```
 
@@ -52,19 +52,19 @@ Once installed, you will need to configure and customize the software using the 
 
 Make a copy of the jail.conf file and save it under the name jail.local: update the SELinux policy:
 
-```
+```bash
 cp -pf /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
 
 Open the jail.local file for editing in Vim with the following command:
 
-```
+```bash
 sudo -e /etc/fail2ban/jail.local
 ```
 
 A file code can consist of multiple lines of codes that execute themselves to prevent the blocking of one or more IP addresses, set the duration of bantime, etc.. A typical prison configuration file contains the following lines:
 
-```
+```vim
 [DEFAULT]
 ignoreip = 127.0.0.1/8
 ignorecommand =
@@ -83,13 +83,13 @@ backend = systemd
 
 Create a new file using the vim editor.
 
-```
+```bash
 sudo -e /etc/fail2ban/jail.d/sshd.local
 ```
 
 The following lines of code should be added to the above file.
 
-```
+```vim
 [sshd]
 enabled = true
 port = ssh
@@ -103,7 +103,7 @@ bantime = 86400
 
 In case you are using iptables , action set as below:
 
-```
+```bash
 action = iptables-allports
 ```
 
@@ -119,14 +119,14 @@ action = iptables-allports
 
 If you are not using the CentOS firewalld yet, run it:
 
-```
+```bash
 sudo systemctl enable firewalld
 sudo systemctl start firewalld
 ```
 
 If you want to use iptables
 
-```
+```bash
 sudo yum install iptables
 sudo systemctl enable iptables
 sudo systemctl start iptables
@@ -134,7 +134,7 @@ sudo systemctl start iptables
 
 Perform the following tasks to run Fail2Ban on the server.
 
-```
+```bash
 sudo systemctl enable fail2ban
 sudo systemctl start fail2ban
 ```
@@ -143,13 +143,13 @@ sudo systemctl start fail2ban
 
 The following command is used to check which attempts to log in to the server via post ssh failed.
 
-```
+```bash
 cat /var/log/secure | grep 'Failed password'
 ```
 
 If you execute the above command, a list of unsuccessful attempts to enter the master password from different IP addresses will be displayed. The format of the results will be similar to the one shown below:
 
-```
+```bash
 Feb 12 19:27:12 centos sshd[25729]: Failed password for root from 150.10.0.107 port 9074 ssh2
 Feb 13 15:05:35 deb_usr sshd[1617]: Failed password for invalid user pi from 42.236.138.215 port 58182 ssh2
 ```
@@ -158,7 +158,7 @@ Feb 13 15:05:35 deb_usr sshd[1617]: Failed password for invalid user pi from 42.
 
 The following command is used to obtain a list of blocked IP addresses that have been identified as threats using the brute force method.
 
-```
+```bash
 iptables -L –n
 ```
 
@@ -166,13 +166,13 @@ iptables -L –n
 
 Use the following command to check the status of jail files in Fail2Ban:
 
-```
+```bash
 sudo fail2ban-client status
 ```
 
 The result should be similar to this:
 
-```
+```bash
 fail2ban-client status
 Status
 |- Number of jail: 1
@@ -181,7 +181,7 @@ Status
 
 The following command will display banned IP addresses for the jail.
 
-```
+```bash
 sudo fail2ban-client status sshd
 ```
 
@@ -189,7 +189,7 @@ sudo fail2ban-client status sshd
 
 In order to remove the IP address from the blocked list, the IPADDRESS parameter is set to the appropriate IP address, which needs to be unbanned. The name &#8222;sshd&#8221; is the name of the prison, in this case it is the prison &#8222;sshd&#8221;, which we have configured above. The following command allows you to remove the IP address.
 
-```
+```bash
 sudo fail2ban-client set sshd unbanip IPADDRESS
 ```
 
@@ -199,17 +199,17 @@ Fail2ban allows you to create your own filters. Below is a brief description of 
 
 1. Go to the filter.d Fail2ban directory
 
-```
+```bash
 sudo cd /etc/fail2ban/filter.d
 ```
 
 2. Create a wordpress.conf file and add a regular expression to it.
 
-```
+```bash
 sudo -e wordpress.conf
 ```
 
-```
+```vim
 #Fail2Ban filter for WordPress
 [Definition]
 failregex =  - - [(\d{2})/\w{3}/\d{4}:\1:\1:\1 -\d{4}] "POST /wp-login.php HTTP/1.1" 200
@@ -220,11 +220,11 @@ Save and close the file.
 
 3. Add the WordPress section to the end of the jail.local file:
 
-```
+```bash
 sudo -e /etc/fail2ban/jail.local
 ```
 
-```
+```vim
 [wordpress]
 enabled = true
 filter = wordpress
@@ -241,12 +241,12 @@ If you want to ban bots, just add the action, ban time and number of attempts, a
 The default ban and email action will be used for this purpose. Other actions can be defined by adding an action = line.  
 Save and exit and then run Fail2ban again with a command:
 
-```
+```bash
 sudo systemctl restart fail2ban
 ```
 
 Also check if your regex works:
 
-```
+```bash
 fail2ban-regex /var/log/apache2/access.log /etc/fail2ban/filter.d/wordpress.conf
 ```
