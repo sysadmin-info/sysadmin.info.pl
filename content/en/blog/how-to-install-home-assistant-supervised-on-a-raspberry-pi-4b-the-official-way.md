@@ -24,7 +24,7 @@ This video describes how to install Home Assistant Supervised. Home Assistant (f
 {{< youtube zz8dq4wi_40 >}}
 <figcaption>How to Install Home Assistant Supervised on a Raspberry Pi 4b – the official way</figcaption>
 
-```
+```bash
 # Check the OS
 sudo cat /etc/os-release
 
