@@ -35,25 +35,25 @@ Logwatch is the classic log file email utility that emails a daily status of act
 
 Type in the terminal:
 
-```
+```bash
 sudo yum install logwatch
 ```
 
 Next, navigate to the logwatch services directory which is located as follows:
 
-```
+```bash
 cd /usr/share/logwatch/default.conf/services
 ```
 
 Here edit the following files:
 
-```
+```bash
 sudo vi zz-disk_space.conf
 ```
 
 Uncomment the lines as shown:
 
-```
+```vim
 #New disk report options
 #Uncomment this to show the home directory sizes
 $show_home_dir_sizes = 1
@@ -69,13 +69,13 @@ $show_disk_usage = 1
 
 Next, edit the following file:
 
-```
+```bash
 sudo vi http.conf
 ```
 
 Set the following to 1
 
-```
+```vim
 # Set flag to 1 to enable ignore
 # or set to 0 to disable
 $HTTP_IGNORE_ERROR_HACKS = 1
@@ -83,14 +83,14 @@ $HTTP_IGNORE_ERROR_HACKS = 1
 
 Next, you may want to edit the email address that logwatch emails the report.
 
-```
+```bash
 cd /usr/share/logwatch/default.conf/
 sudo vi logwatch.conf
 ```
 
 Change MailTo = to an email address as desired:
 
-```
+```vim
 # Default person to mail reports to. Can be a local account or a
 # complete email address. Variable Print should be set to No to
 # enable mail feature.
@@ -100,14 +100,14 @@ MailTo = admin@example.com
 
 It is common practice to send root mail from all servers to a mailing list that all admins subscribe to. Once complete, you may run logwatch manually at the command line with no options to test:
 
-```
+```bash
 sudo logwatch
 ```
 
 Logwatch by default runs with daily cron jobs in /etc/cron.daily.  
 Below is an example logwatch output:
 
-```
+```vim
 ############# Logwatch 7.4.0 (03/01/11)
 Processing Initiated: Wed Oct 14 08:51:15 2020 Date Range Processed: yesterday ( 2020-Oct-13 ) Period is day. Detail Level of Output: 0 Type of Output/Format: stdout / text Logfiles for Host: mail.sysadmin.info.pl
 ##################################################################
@@ -259,7 +259,7 @@ devtmpfs 1.9G 0 1.9G 0% /dev
 
 Look at the kernel section. In case of every error you have a specific type, e.g: 1130, 1131. You can find the error messages here: <a href="https://github.com/torvalds/linux/blob/master/include/uapi/linux/audit.h" target="_blank" rel="noreferrer noopener">https://github.com/torvalds/linux/blob/master/include/uapi/linux/audit.h</a> Thank you very much Linus Torvalds! The section which is important:
 
-```
+```vim
 /* The netlink messages for the audit system is divided into blocks:
 * 1000 - 1099 are for commanding the audit system
 * 1100 - 1199 user space trusted application messages
@@ -289,13 +289,13 @@ Look at the kernel section. In case of every error you have a specific type, e.g
 
 At least now we know what we are dealing with. But that is not all. Look at auid=4294967295 as an example. You can use auditd to look for auid.
 
-```
+```bash
 ausearch -x sudo -ua 4294967295
 ```
 
 A small example what I have found:
 
-```
+```vim
 time->Wed Oct 14 09:06:04 2020
 type=CRED_REFR msg=audit(1602659164.991:369688): pid=24197 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:unconfined_service_t:s0 msg='op=PAM:setcred grantors=pam_env,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=? res=success'
 
@@ -305,7 +305,7 @@ type=CRED_DISP msg=audit(1602659165.130:369689): pid=24197 uid=0 auid=4294967295
 
 This shows that I was using the sudo command. According to this:
 
-```
+```vim
 * 1100 - 1199 user space trusted application messages
 ```
 
