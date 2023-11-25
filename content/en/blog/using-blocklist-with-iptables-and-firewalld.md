@@ -33,16 +33,16 @@ A bit more searching lead me to the site beris.nl, which had both a shell script
 
 I installed the ipset. Then created the directory in /opt called blocklist and created a file called blocklist.sh where I put the content of the script published below.
 
-```
+```bash
 sudo yum install ipset
-$ cd /opt
+cd /opt
 sudo mkdir blocklist
 sudo vi blocklist.sh
 ```
 
 Press insert in vi editor, then copy the script below and put with the right button of the mouse into the vi editor. Then press Esc button on the keyboard, type :x and hit Enter.
 
-```
+```bash
 #!/bin/bash
 exec 3>&1 4>&2
 trap 'exec 2>&4 1>&3' 0 1 2 3
@@ -129,25 +129,25 @@ cat /etc/ip-blocklist.conf | wc -l
 
 ### Bash script Explanation
 
-```
+```bash
 exec 3>&1 4>&2
 ```
 
 Saves file descriptors so they can be restored to whatever they were before redirection or used themselves to output to whatever they were before the following redirect.
 
-```
+```bash
 trap 'exec 2>&4 1>&3' 0 1 2 3
 ```
 
 Restore file descriptors for particular signals. Not generally necessary since they should be restored when the sub-shell exits.
 
-```
+```bash
 exec 1>log.out 2>&1
 ```
 
 Redirect stdout to file log.out then redirect stderr to stdout. Note that the order is important when you want them going to the same file. stdout must be redirected before stderr is redirected to stdout.
 
-```
+```bash
 set -ex
 ```
 
@@ -155,13 +155,13 @@ if it should exit upon error.
 
 Now you can put the script in /opt/blocklist directory and run the script in the background.
 
-```
+```bash
 nohup ./blacklist.sh &&gt;/dev/null &
 ```
 
 If you want to see the progress just type:
 
-```
+```bash
 tail -f log.out
 ```
 
@@ -169,13 +169,13 @@ To break use ctrl+c
 
 To check is the job running type
 
-```
+```bash
 sudo jobs
 ```
 
 or
 
-```
+```bash
 bg
 ```
 
@@ -187,7 +187,7 @@ I have found in the internet one website, which contains a list of IPs databases
 
 #### Shodan.io IP addresses
 
-```
+```bash
 93.120.27.62
 85.25.43.94
 85.25.103.50
@@ -212,13 +212,13 @@ Please note that the instructions that follow, are written for CentOS 7 but they
 
 Edit the crontab with this command:
 
-```
+```bash
 sudo crontab -e
 ```
 
 Add this line:
 
-```
+```bash
 0 0 * * sun python -c 'import random; import time; time.sleep(random.random() * 3600)' && /opt/blocklist/blocklist.sh
 ```
 
@@ -230,14 +230,14 @@ Excellent cronjob examples you will find here: <a href="https://crontab.guru/" t
 
 Running this script from the command line will fail at the moment. While it will create the blocklist file in /etc/ip-blocklist.conf, it will not be able to load the ipset because we have not yet created an ipset called blocklist. We can create it by hand in the following way:
 
-```
+```bash
 sudo ipset create blocklist hash:net hashsize 1048576 maxelem 1048576
 sudo firewall-cmd --permanent --new-ipset=blocklist --type=hash:net --option=family=inet --option=hashsize=1048576 --option=maxelem=1048576
 ```
 
 This command creates an ipset called “blocklist” of type “hash:net”. This type of ipset is used to store different sized IP network addresses, ranging from large netblocks right down to single hosts. Running the above script now will create the blocklist and populate the ipset with the created blocklist. Next we need to add a rule to firewalld so that it will use the blocklist. I recommend inserting this rule at or near the top of the INPUT chain so that it will be processed early in your ruleset. Let’s take a look at the INPUT chain, so we will know where to insert the new rule. The hash size and maxelem value is a power of two.
 
-```
+```bash
 sudo iptables -L INPUT -n -v --line-numbers
 Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
 num pkts bytes target prot opt in out source destination
@@ -253,21 +253,21 @@ num pkts bytes target prot opt in out source destination
 
 The command above will list all the rules currently in the INPUT chain of iptables, with line numbers, which makes it easy to see where to insert the new rule. A snippet of my INPUT chain can be seen above. The first rule accepts all traffic, the second rule accepts all traffic to the loopback interface and we’ll leave them at the top. The sixth rule drops all incoming packets that are in an invalid state which is good. The rule below that logs the number of incoming connections which are rejected. Since that is already quite specific, let’s insert our new rule above this one.
 
-```
+```bash
 sudo iptables -I INPUT 7 -m set --match-set blocklist src -j DROP
 sudo firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 7 -m set --match-set blocklist src -j DROP
 ```
 
 This command inserts our rule at position 7 in the INPUT chain and matches incoming traffic to the set  called “blocklist”, dropping corresponding traffic. At this point, iptables is silently dropping all traffic coming from hosts and netblocks in the blocklist. However, if we want to see what is being blocked, we need to add a logging rule above rule 7 Since I am curious to see what gets blocked, I added the following rule.
 
-```
+```bash
 sudo iptables -I INPUT 7 -m set --match-set blocklist src -j LOG --log-prefix "IP Blocked: "
 sudo firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 7 -m set --match-set blocklist src -j LOG --log-prefix "IP Blocked: "
 ```
 
 This rule is inserted in position 7 pushing the drop rule to position 8 Now, each incoming traffic matching our blocklist is first logged with the prefix “IP Blocked:” by rule 7 and then discarded by rule 8. A look at the logging reveals this:
 
-```
+```bash
 Sep 23 17:57:49 mail kernel: IP Blocked: IN=eth0 OUT= MAC=52:54:00:24:58:7e:4c:5e:0c:de:ac:d4:08:00 SRC=45.129.33.17 DST=192.166.218.231 LEN=40 TOS=0x00 PREC=0x00 TTL=244 ID=61513 PROTO=TCP SPT=49899 DPT=458
 23 WINDOW=1024 RES=0x00 SYN URGP=0
 Sep 23 17:58:36 mail kernel: IP Blocked: IN=eth0 OUT= MAC=52:54:00:24:58:7e:4c:5e:0c:de:ac:d4:08:00 SRC=89.248.172.140 DST=192.166.218.231 LEN=40 TOS=0x00 PREC=0x00 TTL=244 ID=43698 PROTO=TCP SPT=49466 DPT=3
@@ -282,7 +282,7 @@ Here we see several attempts by hosts with different IP addresses attempting to 
 
 Since the rules we have written seem to be working, we need to save them so that they will be loaded again should iptables get restarted. On CentOS 7, we can use iptables for that purpose. Issuing the command below will save the rules in /etc/sysconfig/iptables.
 
-```
+```bash
 sudo service iptables save
 ```
 
@@ -292,13 +292,13 @@ So far, we’ve managed to download and compile an extensive blocklist, learned 
 
 Create a file called ipset.sh located in /usr/local/bin/
 
-```
+```bash
 sudo vi /usr/local/bin/ipset.sh
 ```
 
 Put the following script into this file exactly the same way as before.
 
-```
+```bash
 #!/bin/bash
 
 # Script to set up ipset called blocklist 
@@ -320,11 +320,11 @@ done
 
 What this script does, is quite simple. It first makes sure there is no ipset called blocklist by emptying and destroying any ipset of that name. It then (re-)creates the ipset called blocklist and populates it, using the /etc/ip-blocklist.conf file we’ve created before. I then integrated that script in the new systemd service unit by adding it as a post-up script in /etc/systemd/system/ipset_blocklist.service as below.
 
-```
+```bash
 sudo vi /etc/systemd/system/ipset_blocklist.service
 ```
 
-```
+```bash
 [Unit]
 Description=ipset_blocklist
 Before=firewalld.service
@@ -340,25 +340,25 @@ WantedBy=basic.target
 
 Reload the systemd process to consider newly created sample.service OR every time when sample.service gets modified.
 
-```
+```bash
 sudo systemctl daemon-reload
 ```
 
 Enable this service to start after reboot automatically.
 
-```
+```bash
 sudo systemctl enable ipset_blocklist.service
 ```
 
 Start the service.
 
-```
+```bash
 sudo systemctl start ipset_blocklist.service
 ```
 
 In Debian/Ubuntu you can integrate it a little bit different by adding it as a post-up script in /etc/network/interfaces as below:
 
-```
+```bash
 # The primary network interface
 auto eth0 
 iface eth0 inet static 
@@ -377,7 +377,7 @@ As soon as the primary interface (in many cases eth0) is up, the ipset is create
 
 The script contains additional part for the firewalld which is a result of looking for the solution for Red Hat family distros.
 
-```
+```bash
 firewall-cmd --delete-ipset=blocklist --permanent
 firewall-cmd --permanent --new-ipset=blocklist --type=hash:net --option=family=inet --option=hashsize=1048576 --option=maxelem=1048576
 firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 3 -m set --match-set blocklist src -j LOG --log-prefix "IP Blocked: "
@@ -392,13 +392,13 @@ First line deletes the existing ipset. Second adds it with proper hash size and 
 
 To enable logging dropped connections you need to perform this command.
 
-```
+```bash
 firewall-cmd --set-log-denied=all
 ```
 
 It changes the value in file /etc/firewalld/firewalld.conf. You can check it with this command:
 
-```
+```bash
 cat /etc/firewalld/firewalld.conf | grep -i "LogDenied=all"
 ```
 
@@ -408,7 +408,7 @@ Finally I decided to remove logging bad IPs, just because it creates a really me
 
 The content of this files looks like this:
 
-```
+```bash
 <?xml version="1.0" encoding="utf-8"?>
 <direct>
 <rule priority="3" table="filter" ipv="ipv4" chain="INPUT">-m set --match-set blacklist src -j LOG --log-prefix 'IP Blocked: '</rule>
@@ -418,13 +418,13 @@ The content of this files looks like this:
 
 I just removed the first rule
 
-```
+```bash
 <rule priority="3" table="filter" ipv="ipv4" chain="INPUT">-m set --match-set blacklist src -j LOG --log-prefix 'IP Blocked: '</rule>
 ```
 
 To filter this I use commands like those below:
 
-```
+```bash
 sudo tail -f /var/log/messages
 sudo firewall-cmd --get-log-denied
 sudo dmesg | grep -i DROP
@@ -433,13 +433,13 @@ sudo dmesg | grep -i REJECT
 
 It was better, but everything went to /var/log/messages. This is wrong. I decided to redirect these messages to separate logs. This is how I did it.
 
-```
+```bash
 sudo vi /etc/rsyslog.d/firewalld.conf
 ```
 
 I added there these lines:
 
-```
+```bash
 :msg,contains,"_DROP" /var/log/firewalld-dropped_log
 :msg,contains,"_REJECT" /var/log/firewalld-rejected_log
 & stop
@@ -447,13 +447,13 @@ I added there these lines:
 
 I saved the file and exited. Then I decided to create a logrotate for these logs.
 
-```
+```bash
 sudo vi /etc/logrotate.d/firewalld-dropped_log
 ```
 
 Added this content:
 
-```
+```bash
 /var/log/firewalld-dropped_log {
 daily
 create 0644 root root
@@ -475,13 +475,13 @@ endscript
 
 Then I did the same for rejected.
 
-```
+```bash
 sudo vi /etc/logrotate.d/firewalld-rejected_log
 ```
 
 And added:
 
-```
+```bash
 /var/log/firewalld-rejected_log {
 daily
 create 0644 root root
@@ -503,13 +503,13 @@ endscript
 
 Great this is what I wanted, but still messages was messy, so I decided to edit rsyslog.conf and change it this way according to the solution from this website: <a href="https://serverfault.com/questions/557885/remove-iptables-log-from-kern-log-syslog-messages" target="_blank" rel="noreferrer noopener">https://serverfault.com/questions/557885/remove-iptables-log-from-kern-log-syslog-messages</a>
 
-```
+```bash
 sudo vi /etc/rsyslog.conf
 ```
 
 Look for the part with rules and modify it according to the below example.
 
-```
+```bash
 ###### RULES ######
 $ Log all kernel messages to the console.
 # Logging much else clutters up the screen.
@@ -522,36 +522,35 @@ kern.warning                                          /var/log/kern-warnings_log
 # Don't log private authentication messages!
 *.info;mail.none;authpriv.none;cron.none;local2.none  /var/log/messages
 ```
-Leave everything below as it is
-
+Leave everything below as it is.
 
 After that edit the below file:
 
-```
+```bash
 sudo vi /etc/audisp/plugins.d/syslog.conf
 ```
 
 And set the line args like below:
 
-```
+```bash
 args = LOG_INFO
 ```
 
 After that restart auditd and rsyslog with the below commands:
 
-```
+```bash
 sudo service auditd restart && sudo service rsyslog restart
 ```
 
 Then I decided to download multitail to be able to monitor them at once.
 
-```
+```bash
 sudo yum install multitail
 ```
 
 Then I have run this way:
 
-```
+```bash
 sudo multitail /var/log/firewalld-dropped_log /var/log/firewalld-rejected_log /var/log/firewalld /var/log/kern /var/log/kern-info_log /var/log/kern-warnings_log
 ```
 
@@ -559,13 +558,13 @@ It was nice, however still messy, so I decided to look for the solution about th
 
 The solution was simple and I changed values this way:
 
-```
+```bash
 sudo sysctl -w kernel.printk="3 4 1 3"
 ```
 
 Then I checked these values with this command:
 
-```
+```bash
 sudo sysctl kernel.printk
 ```
 
@@ -582,7 +581,7 @@ Reminder of the severity levels and the four values of kernel.printk:
 
 On my CentOS: 7 4 1 7
 
-```                     
+```bash
                      CUR  DEF  MIN  BTDEF
 0 - emergency        x              x                        
 1 - alert            x         x    x
@@ -596,7 +595,7 @@ On my CentOS: 7 4 1 7
 
 This is too noisy, I just want critical and up (no errors). Unlabeled messages should be regarded as warning, so DEF is good:
 
-```
+```bash
                      CUR  DEF  MIN  BTDEF
 0 - emergency        x              x                        
 1 - alert            x         x    x
@@ -612,7 +611,7 @@ Set to: 3 4 1 3 and problem solved. Now when I use multitail to watch logs I see
 
 The last thing I had to do was to whitelist Google&#8217;s IP addresses, because e-mails from Gmail was rejected because the above solution blocked IP addresses. I did it this way.
 
-```
+```bash
 sudo -i 
 (type your sudo password)
 dig gmail.com txt
@@ -630,7 +629,7 @@ Above commands let save their IP addresses into two files. **<span class="has-in
 
 After that hit ctrl+d to log out and go back to the standard user.
 
-```
+```bash
 sudo firewall-cmd --permanent --new-ipset=whitelist4 --type=hash:net --option=maxelem=256 --option=family=inet --option=hashsize=4096
 sudo firewall-cmd --permanent --new-ipset=whitelist6 --type=hash:net --option=maxelem=256 --option=family=inet6 --option=hashsize=4096
 sudo firewall-cmd --permanent --zone=trusted --add-source=ipset:whitelist4
@@ -643,7 +642,7 @@ sudo firewall-cmd --permanent --ipset=whitelist6 --get-entries | wc -l
 
 Then all you have to do is to reload firewalld rules.
 
-```
+```bash
 sudo firewall-cmd --reload
 ```
 
