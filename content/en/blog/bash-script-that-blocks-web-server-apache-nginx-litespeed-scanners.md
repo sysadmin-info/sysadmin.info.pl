@@ -23,7 +23,7 @@ image: images/2021-thumbs/bash_script_that_blocks_web_server_scanners.webp
 
 Bash script that blocks web server (apache/nginx/litespeed) scanners. It checks the 400-408 errors or any other in the log you will choose to scan and extracts IP addresses of scanners which are trying to scan a web server and adds IP addresses to the ipset which drops the connection.
 
-```
+```vim
 #!/bin/bash
 
 ######################################################### Apache access_log ###################################################################
