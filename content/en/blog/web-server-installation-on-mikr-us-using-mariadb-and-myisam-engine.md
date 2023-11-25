@@ -31,7 +31,7 @@ Create a free basic account on <a rel="noreferrer noopener" href="https://www.cl
 
 Confirm your email and go to domain configuration where you have a panel from your domain. Change the DNS servers (ns1 and ns2) there to:
 
-```
+```bash
 aragorn.ns.cloudflare.com
 vida.ns.cloudflare.com
 ```
@@ -39,7 +39,7 @@ vida.ns.cloudflare.com
 Log in to cloudflare. Add domain.  
 Set AAAA record as a domain name and as an IPv6 IPv6 address. You will find this address by entering a command in the terminal:
 
-```
+```bash
 sudo ip a
 ```
 
@@ -79,13 +79,13 @@ If you have any questions about other settings, please write in your comment wha
 Access to the virtual machine is only possible after ssh.  
 First you need to change your root password for security reasons, because you get a temporary password to login, server address and you can use only root account for the first login, which is not safe in itself.
 
-```
+```bash
 passwd root
 ```
 
 Once the password is set, we need to add a user to be used to log in to ssh and replace it with root for security reasons, but to be able to execute commands with root rights sometimes, we will add the user to the sudoers group.
 
-```
+```bash
 useradd user
 passwd user
 usermod -aG wheel user
@@ -94,13 +94,13 @@ systemctl daemon reload
 
 Next, block root user for ssh connections. To do this, you need to edit the sshd_config file.
 
-```
+```bash
 vi /etc/ssh/sshd_config
 ```
 
 We find the entry and set it this way: `PermitRootLogin no` To edit, press insert, change the value from yes to no. Next, press Esc, type :wq and press Enter. This is how we saved the changes. Now there is still a restart of the ssh daemon.
 
-```
+```bash
 systemctl restart sshd
 ```
 
@@ -111,7 +111,7 @@ I assume that everyone knows how to connect to the server using a terminal or pu
 
 After logging in with ssh and your user account, in our case it will be a user, follow the instructions below.
 
-```
+```bash
 cd /home/user
 sudo mkdir .ssh
 sudo chmod 700 .ssh
@@ -121,17 +121,17 @@ sudo vi authorized_keys
 
 Copy from the field from ssh-rsa to the end of everything, go to the logged-in session, press the insert, paste the whole thing with the right mouse, then press Esc, type :wq and press Enter. Then set the file to read only with the command:
 
-```
+```bash
 sudo chmod 600 authorized_keys
 ```
 
-```
+```bash
 sudo systemctl restart sshd
 ```
 
 Next, edit the /etc/ssh/sshd_config file, as above. Change the values to: `RSAAuthentication yes` and `PubkeyAuthentication yes`, as well as PermitEmptyPasswords no and PasswordAuthentication no. Save the file as described above. (I assume that using vi has already been understood). Restart ssh with a command:
 
-```
+```bash
 sudo systemctl restart sshd
 ```
 
@@ -139,19 +139,19 @@ In connection with the putty or terminal we have to indicate the private key fil
 
 If you are using a terminal, you generate a command to generate a key on your computer from the terminal level:
 
-```
+```bash
 ssh-keygen -t rsa -b 4096 -C "username@mikr.us"
 ```
 
 Then you copy the key to the server with a command:
 
-```
+```bash
 ssh-copy-id root@name.mikr.us -p 12345 
 ```
 
 You change the port number 12345 to the one you received in the email, and the name is the same as the port number. I described above how to block access to ssh for root user. Now all you need to do is restart ssh daemon.
 
-```
+```bash
 systemctl restart sshd
 ```
 
@@ -159,7 +159,7 @@ Hang up the exit command and connect again using ssh root@root@name.mikr.us -p 1
 
 The security level can be further increased by adding a group to the ssh login and adding a user to this group.
 
-```
+```bash
 sudo groupadd grupassh
 sudo gpasswd -a &lt;user> grupassh
 groups user
@@ -167,19 +167,19 @@ groups user
 
 Wyświetli się: user : user sudo grupassh lub user : user wheel grupassh
 
-```
+```bash
 sudo vi /etc/ssh/sshd_config
 ```
 
 Dodaj: AllowGroups grupassh
 
-```
+```bash
 sudo systemctl restart sshd
 ```
 
 For the safety of Ubuntu/Debian users I recommend to install policies.
 
-```
+```bash
 sudo apt-get install libpam-cracklib
 ```
 
@@ -194,7 +194,7 @@ First clear the download manager. CentOS uses yum, while Debian/Ubuntu uses apt-
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo yum clean all
   ```
 
@@ -203,7 +203,7 @@ First clear the download manager. CentOS uses yum, while Debian/Ubuntu uses apt-
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo apt-get autoremove && sudo apt-get clean
   ```
   {{< /tab >}}
@@ -216,7 +216,7 @@ Install all updates:
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo yum -y update
   ```
 
@@ -225,7 +225,7 @@ Install all updates:
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo apt-get update && sudo apt-get upgrade
   ```
   {{< /tab >}}
@@ -238,7 +238,7 @@ Next, install Apache (httpd in CentOS, apache2 in Debian/Ubuntu).
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo yum -y install httpd
   ```
 
@@ -247,7 +247,7 @@ Next, install Apache (httpd in CentOS, apache2 in Debian/Ubuntu).
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo apt-get install apache2
   ```
   {{< /tab >}}
@@ -260,7 +260,7 @@ Enable Apache at system startup and run the service.
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo systemctl enable httpd
   sudo systemctl start httpd
   ```
@@ -270,7 +270,7 @@ Enable Apache at system startup and run the service.
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo systemctl enable apache2
   sudo systemctl start apache2
   ```
@@ -284,7 +284,7 @@ You can check the status of the service:
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo systemctl status httpd
   ```
 
@@ -293,7 +293,7 @@ You can check the status of the service:
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo systemctl status apache2
   ```
   {{< /tab >}}
@@ -306,7 +306,7 @@ You can check the status of the service:
 
   In the case of CentOS we create a virtual host file for http (port 80) using the following command:
 
-  ```
+  ```bash
   sudo vi /etc/httpd/conf.d/example.com.pl.conf
   ```
 
@@ -315,13 +315,13 @@ You can check the status of the service:
 
   In the case of Ubuntu
 
-  ```
+  ```bash
   sudo vi /etc/apache2/sites-available/example.com.pl.conf
   ```
   {{< /tab >}}
 {{< /tabs >}}
 
-```
+```bash
 <VirtualHost *:80>
    ServerName example.com.pl
    ServerAlias www.example.com.pl
@@ -347,7 +347,7 @@ You can check the status of the service:
 
 For Debian/Apache we still have to turn on the page.
 
-```
+```bash
 sudo a2ensite example.com.pl.conf
 ```
 
@@ -357,19 +357,19 @@ This will create a symbolic link in the /etc/apache2/sites-enabled directory.
 
 Now you need to create a directory for the page in /var/www/html directory.
 
-```
+```bash
 sudo -i
 ```
 (enter the password of the user you created at the beginning)
 
-```
+```bash
 cd /var/www/html
 sudo mkdir example.com.pl
 ```
 
 Create a directory named src in your site directory to store new copies of WordPress source files. This guide uses the home directory /var/www/html/example.com.pl/ as an example. Go to this new directory:
 
-```
+```bash
 sudo mkdir -p /var/www/html/example.com.pl/src/
 cd /var/www/html/example.com.pl/src/
 ```
@@ -381,7 +381,7 @@ Set the web server user, <em><strong>www-data</strong></em>, as the owner of the
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo chown -R apache:apache /var/www/html/example.com.pl/
   ```
 
@@ -390,7 +390,7 @@ Set the web server user, <em><strong>www-data</strong></em>, as the owner of the
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo chown -R www-data:www-data /var/www/html/example.com.pl/
   ```
   {{< /tab >}}
@@ -398,7 +398,7 @@ Set the web server user, <em><strong>www-data</strong></em>, as the owner of the
 
 Install the latest version of WordPress and extract it using the appropriate name depending on the system you are using:
 
-```
+```bash
 sudo wget http://wordpress.org/latest.tar.gz
 sudo -u www-data tar -xvf latest.tar.gz
 sudo -u apache tar -xvf latest.tar.gz
@@ -406,13 +406,13 @@ sudo -u apache tar -xvf latest.tar.gz
 
 Rename the latest.tar.gz file to wordpress, then set the backup date for the original source files. This will be useful if you install new versions in the future and need to return to the previous version:
 
-```
+```bash
 sudo mv latest.tar.gz wordpress-`date "+%Y-%m-%d"`.tar.gz
 ```
 
 Create the public_html directory, which will be the WordPress root directory. Move the WordPress files to the public_html folder:
 
-```
+```bash
 sudo mkdir -p /var/www/html/strona.com.pl/public_html/
 sudo mv wordpress/* ../public_html/
 ```
@@ -424,7 +424,7 @@ Give the public_html folder permissions for the www-data or apache group:
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo chown -R www-data:www-data /var/www/html/example.com.pl/public_html
   ```
 
@@ -433,7 +433,7 @@ Give the public_html folder permissions for the www-data or apache group:
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo chown -R apache:apache /var/www/html/example.com.pl/public_html
   ```
   {{< /tab >}}
@@ -441,14 +441,14 @@ Give the public_html folder permissions for the www-data or apache group:
 
 Go to the directory where WordPress was extracted, copy the sample configuration and set it to use the remote database:
 
-```
+```bash
 cd /var/www/html/example.com.pl/public_html
 sudo cp wp-config-sample.php wp-config.php
 ```
 
 Change the login variables to match the database and the user. Edit the file:
 
-```
+```bash
 sudo vi /var/www/html/example.com.pl/public_html/wp-config.php 
 
 /** The name of the database for WordPress */
@@ -467,7 +467,7 @@ define('DB_HOST', 'localhost');
 Add security keys to protect wp-admin.  
 Use <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="noreferrer noopener">Security Key Generator WordPress</a> to create random, complex hashes that WordPress will use to encrypt your login data. Copy the result and replace the corresponding section in the file wp-config.php:
 
-```
+```bash
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -493,7 +493,7 @@ define('NONCE_SALT',       'put your unique phrase here');
 
   ### Installation and configuration of Maria DB 10.4 in CentOS 7.6.
 
-  ```
+```bash
 sudo tee /etc/yum.repos.d/MariaDB.repo&lt;&lt;EOF
 [mariadb]
 name = MariaDB
@@ -503,7 +503,7 @@ gpgcheck=1
 EOF
 ```
 
-```
+```bash
 sudo yum makecache fast
 sudo yum -y install MariaDB-server MariaDB-client
 sudo systemctl enable mariadb
@@ -511,11 +511,11 @@ sudo systemctl enable mariadb
 
 When configuring, confirm the empty root password in MariaDB, and in the next step set the root password (the one from MariaDB). This password should be different from the root password you got in the email after setting up the server on mikr.us.
 
-```
+```bash
 mysql_secure_installation
 ```
 
-```
+```bash
  NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
        SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
  In order to log into MariaDB to secure it, we'll need the current
@@ -561,14 +561,14 @@ mysql_secure_installation
  Thanks for using MariaDB!
 ```
 
-```
+```bash
 sudo systemctl start mariadb
 mysql -u root -p
 ```
 
 #### After logging in to the database, create a database and assign it to the user.
 
-```
+```bash
 CREATE DATABASE wordpress;
 CREATE USER 'user'@'localhost' IDENTIFIED BY 'database_user_password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'user'@'localhost';
@@ -578,19 +578,19 @@ exit
 
 Enter
 
-```
+```bash
 mysql -u user -p Enter
 ```
 
 enter the password of the user you just created
 
-```
+```bash
 status;
 ```
 
 If it shows the MariaDB version, everything is working.
 
-```
+```bash
 exit
 ```
 
@@ -598,7 +598,7 @@ Enter
 
 Restart the database server and web commands:
 
-```
+```bash
 sudo systemctl restart mariadb && sudo systemctl restart httpd
 ```
 
@@ -609,7 +609,7 @@ sudo systemctl restart mariadb && sudo systemctl restart httpd
 
 To install MariaDB 10.3 on Ubuntu 16.04, you need to add the MariaDB repository to your system. Run the following commands to import the PGP key of the MariaDB repository and add the repository.
 
-```
+```bash
 sudo apt -y install software-properties-common dirmngr
 sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
 sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/10.3/ubuntu xenial main'
@@ -617,14 +617,14 @@ sudo add-apt-repository 'deb [arch=amd64] http://mirror.zol.co.zw/mariadb/repo/1
 
 Update the list of system packages and install MariaDB.
 
-```
+```bash
 sudo apt update
 sudo apt -y install mariadb-server mariadb-client
 ```
 
 You will be asked to enter the password of the MariaDB root. You will have to enter it twice. Confirm the change of password. You can confirm the installed version of MariaDB by logging in as root user.
 
-```
+```bash
 mysql -u root -p
 ```
 
@@ -632,14 +632,14 @@ After logging in, enter the status; (remember about semicolons in SQL syntax). T
 
 I recommend performing exactly the same procedure as for CentOS installation. Above you can see what steps need to be taken.
 
-```
+```bash
 mysql_secure_installation
 ```
 
 Then follow the instructions from CentOS installation:
 
 
-```
+```bash
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
 sudo systemctl status mariadb
@@ -662,7 +662,7 @@ Do not enable redirection from http to https, as you will do so on the Cloudflar
 
 Certbot will automatically install the certificate, create a virtual host file. Now all you have to do is go to the directory:
 
-```
+```bash
 sudo -i
 cd /etc/apache2/sites-available
 ls -al
@@ -676,7 +676,7 @@ I recommend to modify the virtual host file for https to make it look like this:
 
   ### CentOS section
 
-  ```
+  ```bash
   sudo vi /etc/httpd/conf.d/example.com.pl-le-ssl.conf
   ```
 
@@ -685,14 +685,14 @@ I recommend to modify the virtual host file for https to make it look like this:
 
   ### Ubuntu section
 
-  ```
+  ```bash
   sudo vi /etc/apache2/sites-available/example.com.pl-le-ssl.conf
   ```
 
   {{< /tab >}}
 {{< /tabs >}}
 
-```
+```bash
 <IfModule mod_ssl.c>
  SSLStaplingCache shmcb:/run/httpd/ssl_stapling(32768)
   <VirtualHost *:443>
@@ -748,13 +748,13 @@ SSLCertificateChainFile /etc/letsencrypt/live/example.com.pl/chain.pem
 
 In CentOS we edit the my.cnf file.
 
-```
+```bash
 sudo vi /etc/my.cnf
 ```
 
 Now basically it is enough to replace this file with what is shown below:
 
-```
+```bash
 # This group is read both both by the client and the server use it for options that affect everything
  [mysqld]
  MyISAM Settings
@@ -796,7 +796,7 @@ Now basically it is enough to replace this file with what is shown below:
 
 Save changes, restart httpd and mariadb.
 
-```
+```bash
 sudo systemctl restart mariadb httpd
 ```
   {{< /tab >}}
@@ -805,13 +805,13 @@ sudo systemctl restart mariadb httpd
   ### Ubuntu
   In the case of Ubuntu 16.04, the location of the file is slightly different.
 
-```
+```bash
 sudo vi /etc/mysql/my.cnf
 ```
 
 Just paste into this file what is in the [mysqld] section above. However, I recommend that you enable error logging to mariadb and set the error logging in my.cnf, as above it is visible.
 
-```
+```bash
 sudo -i
 cd /var/log/
 mkdir mariadb
@@ -821,7 +821,7 @@ touch error.log
 
 Save changes, restart apache2 and mariadb.
 
-```
+```bash
 sudo systemctl restart mariadb apache2
 ```
   {{< /tab >}}
@@ -836,7 +836,7 @@ sudo systemctl restart mariadb apache2
 
 The assumption is that there is a user added to the wheel group (sudoers) at the very beginning of the tutorial. After sudo -i the user password is given, not root.
 
-```
+```bash
 sudo -i
 cd /tmp
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -853,7 +853,7 @@ php -v
   {{< tab >}}
   ### Debian/Ubuntu
   #### PHP 7.3 installation &#8211; Ubuntu 16.04
-```
+```bash
 sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt install php7.3 php7.3-cli php7.3-common
@@ -870,7 +870,7 @@ sudo systemctl restart apache2
 
 #### Setting the memory limit in PHP
 
-```
+```bash
 sudo find / -iname "php.ini"
 ```
 
@@ -879,7 +879,7 @@ sudo find / -iname "php.ini"
 
   ### CentOS 7.6 section
 
-  ```
+  ```bash
   sudo vi /etc/php.ini
   ```
 
@@ -888,7 +888,7 @@ sudo find / -iname "php.ini"
 
   ### Ubuntu 16.04 section
 
-  ```
+  ```bash
   sudo vi /etc/php/7.3/apache2/php.ini
   ```
   {{< /tab >}}
@@ -896,7 +896,7 @@ sudo find / -iname "php.ini"
 
 Set:
 
-```
+```bash
 memory_limit = 10M
 ```
 
@@ -905,13 +905,13 @@ memory_limit = 10M
 {{< tabs CentOS Ubuntu >}}
   {{< tab >}}
   ### CentOS
-  ```
+  ```bash
   sudo vi /etc/httpd/conf/httpd.conf
   ```
   {{< /tab >}}
   {{< tab >}}
   ### Debian/Ubuntu
-  ```
+  ```bash
   sudo vi /etc/apache2/mods-enabled/mpm_prefork.conf
   ```
   {{< /tab >}}
@@ -919,7 +919,7 @@ memory_limit = 10M
 
 Add this at the end of this file:
 
-```
+```bash
 HostnameLookups Off
 MaxKeepAliveRequests 500
 KeepAliveTimeout 5
@@ -944,7 +944,7 @@ Save the file and exit.
 
 Turn off the firewalld:
 
-```
+```bash
 sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 sudo systemctl mask firewalld
@@ -952,7 +952,7 @@ sudo systemctl mask firewalld
 
 Install iptables and turn it on.
 
-```
+```bash
 sudo yum install iptables-services
 sudo systemctl start iptables
 sudo systemctl start iptables6
@@ -962,7 +962,7 @@ sudo systemctl enable iptables6
 
 Check the status of the iptables and the rules.
 
-```
+```bash
 sudo systemctl status iptables
 sudo systemctl status iptables6
 sudo iptables -nvL
@@ -971,7 +971,7 @@ sudo iptables6 -nvL
 
 Add rules for iptables.
 
-```
+```bash
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
@@ -979,7 +979,7 @@ sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
 
 Save changes.
 
-```
+```bash
 sudo service iptables save
 sudo service ip6tables save
 sudo systemctl restart iptables
@@ -991,13 +991,13 @@ sudo systemctl restart ip6tables
   ### Debian/Ubuntu
   #### Installation and configuration of iptables in Ubuntu 16.04
 
-```
+```bash
 sudo apt-get install iptables-persistent
 ```
 
 During installation, it will ask you whether you want to keep the current rules and whether you want to use both IPv4 and IPv6. All these questions will be answered in the affirmative.
 
-```
+```bash
 sudo systemctl start iptables
 sudo systemctl start iptables6
 sudo systemctl enable iptables
@@ -1006,7 +1006,7 @@ sudo systemctl enable iptables6
 
 Add ports.
 
-```
+```bash
 sudo iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
@@ -1014,7 +1014,7 @@ sudo iptables -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
 
 Save changes and reload the service:
 
-```
+```bash
 service netfilter-persistent save
 service netfilter-persistent reload
 ```
