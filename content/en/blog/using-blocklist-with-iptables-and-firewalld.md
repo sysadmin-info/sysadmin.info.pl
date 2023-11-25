@@ -42,7 +42,7 @@ sudo vi blocklist.sh
 
 Press insert in vi editor, then copy the script below and put with the right button of the mouse into the vi editor. Then press Esc button on the keyboard, type :x and hit Enter.
 
-```bash
+```vim
 #!/bin/bash
 exec 3>&1 4>&2
 trap 'exec 2>&4 1>&3' 0 1 2 3
