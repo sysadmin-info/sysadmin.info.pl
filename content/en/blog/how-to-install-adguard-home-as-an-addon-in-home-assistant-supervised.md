@@ -24,7 +24,7 @@ This video describes how to install Adguard Home addon in Home Assistant Supervi
 {{< youtube qNB4ldWldmU >}}
 <figcaption>How to install Adguard Home as an addon in Home Assistant Supervised</figcaption>
 
-```
+```bash
 # Install AdGuard Home addon in the Settings -> Addons - Addons shop
 
 # Because AdGuard Home will be our resolver and we do not want to see the below warnings when we check the status:
