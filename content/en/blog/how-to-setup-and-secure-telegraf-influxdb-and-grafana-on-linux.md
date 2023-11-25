@@ -48,7 +48,7 @@ Before starting, make sure that you have sudo privileges on the system, otherwis
 
 All installation activities will be done as root. So you need to type in terminal:
 
-```
+```bash
 sudo -i or sudo su -
 cd
 ```
@@ -56,11 +56,11 @@ cd
 ### I – Installing InfluxDB
 #### a – Install InfluxDB as a service
 ##### Get the software
-```
+```bash
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.8.2.x86_64.rpm
 ```
 ##### and install
-```
+```bash
 yum localinstall influxdb-1.8.2.x86_64.rpm
 ```
 
@@ -70,13 +70,13 @@ Right now, InfluxDB should run as a **service** on your server.
 
 To verify it, run the following command:
 
-```
+```bash
 $ systemctl status influxdb
 ```
 
 InfluxDB should run automatically, but if this is not the case, make sure to start it.
 
-```
+```bash
 systemctl start influxdb
 ```
 
@@ -87,7 +87,7 @@ However, even if your service is running, it does not guarantee that it is corre
 
 To verify it, **check your journal logs**.
 
-```
+```bash
 journalctl -f -u influxdb.service
 ```
 
@@ -100,7 +100,7 @@ If you are having error messages in this section, please refer to the **troubles
 
 To make it sure that the InfluxDB service will start with the server enable it.
 
-```
+```bash
 systemctl enable influxdb
 ```
 
@@ -108,7 +108,7 @@ TCP port 8086 is used for client-server communication over InfluxDB’s HTTP API
 TCP port 8088 is used for the RPC service for backup and restore
 
 You can view the current configuration with:
-```
+```bash
 influxd config
 ```
 
@@ -116,7 +116,7 @@ The configuration file can be found in: /etc/influxdb/influxdb.conf
 
 Let’s create a database and make it secure. Create an admin user with all the rights and a user used by Telegraf.
 
-```
+```bash
 influx -precision rfc3339
 > CREATE DATABASE "GRAFANA"
 > SHOW DATABASES
@@ -131,7 +131,7 @@ Of course you have to change the secret to your password. I recommend to use at 
 
 I recommend to set up retention policy. 
 
-```
+```bash
 influx -precision rfc3339
 > CREATE RETENTION POLICY "twenty_four_hours" ON "GRAFANA" DURATION 24h REPLICATION 1 DEFAULT
 > CREATE RETENTION POLICY "a_year" ON "GRAFANA" DURATION 52w REPLICATION 1
@@ -144,25 +144,25 @@ One fact is worth to mention, that 24 hours is set as default. Just because my s
 
 To check retention policy just type:
 
-```
+```bash
 SHOW RETENTION POLICIES ON GRAFANA
 ```
 
 To remove 24 hours retention policy just type:
 
-```
+```bash
 DROP RETENTION POLICY twenty_four_hours ON GRAFANA
 ```
 
 Restart InfluxDB service.
 
-```
+```bash
 systemctl restart influxdb
 ```
 
 To get rid of logging to the /var/log/messages just edit the file /usr/lib/systemd/system/influxdb.service and add below entries in [Service] section:
 
-```
+```bash
 StandardOutput=null
 StandardError=null
 ```
@@ -184,12 +184,12 @@ In our case, we are going to use <a href="https://docs.influxdata.com/telegraf/v
 To install **Telegraf 1.15.2** on Red Hat 7.x, CentOS 7.x or Fedora 29 or newer, run the following commands:
 
 ##### Get the software
-```
+```bash
 wget https://dl.influxdata.com/telegraf/releases/telegraf-1.15.2-1.x86_64.rpm
 ```
 
 ##### and install
-```
+```bash
 yum localinstall telegraf-1.15.2-1.x86_64.rpm
 ```
 
@@ -199,13 +199,13 @@ Right now, Telegraf should run as a **service** on your server.
 
 To verify it, run the following command:
 
-```
+```bash
 systemctl status telegraf
 ```
 
 Telegraf should run automatically, but if this is not the case, make sure to start it.
 
-```
+```bash
 systemctl start telegraf
 ```
 
@@ -215,7 +215,7 @@ However, even if your service is running, it does not guarantee that it is corre
 
 To verify it, **check your journal logs**.
 
-```
+```bash
 journalctl -f -u telegraf.service
 ```
 ![Telegraf logs](/images/2020/telegraf_logs.webp "Telegraf logs")
@@ -224,7 +224,7 @@ If you are having error messages in this section, please refer to the **troubles
 
 To make it sure that the InfluxDB service will start with the server enable it.
 
-```
+```bash
 systemctl enable telegraf
 ```
 
@@ -236,7 +236,7 @@ systemctl enable telegraf
 
 Head over to **/etc/influxdb/influxdb.conf** and edit the following lines.
 
-```
+```vim
 [http]
   # Determines whether HTTP endpoint is enabled.
   enabled = true
@@ -256,7 +256,7 @@ Head over to the configuration file of Telegraf, located at **/etc/telegraf/tele
 
 Modify the following lines :
 
-```
+```vim
 ## HTTP Basic Auth
   username = "telegraf"
   password = "secret"
@@ -264,14 +264,14 @@ Modify the following lines :
 
 Restart the Telegraf service, as well as the InfluxDB service.
 
-```
+```bash
 systemctl restart influxdb
 systemctl restart telegraf
 ```
 
 Again, check that you are not getting any errors when restarting the service.
 
-```
+```bash
 journalctl -f -u telegraf.service
 ```
 
@@ -291,7 +291,7 @@ If your Telegraf instances are running remotely (on a Raspberry Pi or another se
 
 First, install the **gnutls-utils** package that might come as gnutls-bin on Debian distributions for example.
 
-```
+```bash
 yum install gnutls-utils
 ```
 
@@ -299,7 +299,7 @@ Now that you have the **certtool** installed, **generate a private key** for you
 
 Head over to the **/etc/ssl** folder of your Linux distribution and create a new folder for InfluxDB.
 
-```
+```bash
 cd /etc/ssl
 mkdir influxdb && cd influxdb
 certtool --generate-privkey --outfile server-key.pem --bits 2048
@@ -307,7 +307,7 @@ certtool --generate-privkey --outfile server-key.pem --bits 2048
 
 #### b – Create a public key for your InfluxDB server
 
-```
+```bash
 certtool --generate-self-signed --load-privkey server-key.pem --outfile server-cert.pem
 ```
 
@@ -315,7 +315,7 @@ Great! You now have a** key pair** for your InfluxDB server.
 
 Other option is to generate it this way:
 
-```
+```bash
 openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/ssl/influxdb/influxdb-selfsigned.key -out /etc/ssl/influxdb/influxdb-selfsigned.crt -days <NUMBER_OF_DAYS>
 ```
 
@@ -323,22 +323,22 @@ When you execute the command, it will prompt you for more information. You can c
 
 Do not forget to set permissions for the InfluxDB user and group.
 
-```
+```bash
 chown influxdb:influxdb server-key.pem server-cert.pem
 ```
 or
-```
+```bash
 chown influxdb:influxdb influxdb-selfsigned.key influxdb-selfsigned.crt
 ```
 
 Run the following command to give InfluxDB read and write permissions on the certificate files.
 
-```
+```bash
 chmod 644 /etc/ssl/influxdb/server-cert.pem
 chmod 600 /etc/ssl/influxdb/server-key.pem
 ```
 or
-```
+```bash
 chmod 644 /etc/ssl/influxdb/influxdb-selfsigned.crt
 chmod 600 /etc/ssl/influxdb/influxdb-selfsigned.key
 ```
@@ -349,7 +349,7 @@ Now that your certificates are created, it is time to tweak our InfluxDB configu
 
 Head over to **/etc/influxdb/influxdb.conf** and modify the following lines.
 
-```
+```vim
 # Determines whether HTTPS is enabled.
   https-enabled = true
 
@@ -362,7 +362,7 @@ https-private-key = "/etc/ssl/influxdb/server-key.pem"
 
 Restart the InfluxDB service and make sure that you are not getting any errors.
 
-```
+```bash
 systemctl restart influxdb
 journalctl -f -u influxdb.service
 ```
@@ -373,7 +373,7 @@ Now that HTTPS is available on the InfluxDB server, **it is time for Telegraf to
 
 Head over to **/etc/telegraf/telegraf.conf** and modify the following lines.
 
-```
+```vim
 # Configuration for sending metrics to InfluxDB
 [[outputs.influxdb]]
 
@@ -392,7 +392,7 @@ As a consequence, the InfluxDB server identify is not certified by a certificate
 
 Restart Telegraf, and again make sure that you are not getting any errors.
 
-```
+```bash
 sudo systemctl restart telegraf
 sudo journalctl -f -u telegraf.service
 ```
@@ -411,7 +411,7 @@ To do this, use the InfluxDB CLI with the following parameters.
 
 Data is stored in the “**telegraf**” database, each measurement being named as the name of the input plugin.
 
-```
+```bash
 $ influx -ssl -unsafeSsl -username 'admin' -password 'secret'
 Connected to http://localhost:8086 version 1.8.2
 InfluxDB shell version: 1.8.2
@@ -435,12 +435,12 @@ Data is correctly being aggregated on the InfluxDB server.
 To install **Grafana 7.1.5** on Red Hat 7.x, CentOS 7.x or Fedora 29 or newer, run the following commands:
 
 ##### Get the software
-```
+```bash
 wget https://dl.grafana.com/oss/release/grafana-7.1.5-1.x86_64.rpm
 ```
 
 ##### and install
-```
+```bash
 yum localinstall grafana-7.1.5-1.x86_64.rpm
 ```
 
@@ -450,13 +450,13 @@ Right now, Grafana should run as a **service** on your server.
 
 To verify it, run the following command:
 
-```
+```bash
 systemctl status grafana-server
 ```
 
 Grafana should run automatically, but if this is not the case, make sure to start it.
 
-```
+```bash
 systemctl start grafana-server
 ```
 
@@ -465,7 +465,7 @@ systemctl start grafana-server
 
 Head over to /etc/grafana/grafana.ini and edit the following lines.
 
-```
+```vim
 [server]
 # The public facing domain name used to access grafana from a browser
 ;domain = localhost
@@ -491,7 +491,7 @@ disable_brute_force_login_protection = false
 # set to true if you host Grafana behind HTTPS. default is false.
 cookie_secure = true
 
-# set cookie SameSite attribute. defaults to `lax`. can be set to "lax", "strict", "none" and "disabled"
+# set cookie SameSite attribute. defaults to `lax````bashbash. can be set to "lax", "strict", "none" and "disabled"
 cookie_samesite = lax
 
 # Set to true if you want to enable http strict transport security (HSTS) response header.
@@ -567,7 +567,7 @@ However, even if your service is running, it does not guarantee that it is corre
 
 To verify it, **check your journal logs**.
 
-```
+```bash
 journalctl -f -u grafana-server.service
 ```
 ![Grafana logs](/images/2020/grafana_logs.webp "Grafana logs")
@@ -576,15 +576,15 @@ If you are having error messages in this section, please refer to the **troubles
 
 To make it sure that the Grafana service will start with the server enable it.
 
-```
+```bash
 systemctl enable grafana-server
 ```
 
 #### c - Configure web server Nginx
 
-In your Nginx configuration file, add a new `server` block:
+In your Nginx configuration file, add a new `server````bashbash block:
 
-```
+```vim
 server { 
     listen 80; 
     root /usr/share/nginx/html; 
@@ -598,9 +598,9 @@ server {
 
 Reload Nginx configuration.
 
-To configure NGINX to serve Grafana under a _sub path_, update the `location` block:
+To configure NGINX to serve Grafana under a _sub path_, update the `location````bashbash block:
 
-```
+```vim
 server {
     listen 80;
   root /usr/share/nginx/html;
@@ -614,9 +614,9 @@ server {
 
 #### d - Configure web server Apache
 
-In your Apache configuration file, add a new `server` block:
+In your Apache configuration file, add a new `server````bashbash block:
 
-```
+```vim
 ProxyPreserveHost On
 ProxyPass "/" "http://localhost:3000/"
 ProxyPassReverse "/" "http://localhost:3000/"
@@ -635,7 +635,7 @@ ProxyPassReverse "/" "http://localhost:3000/"
 
 If you are using php-fpm proxy, additionally you should add this in virtual host:
 
-```
+```vim
 # Redirect to the proxy
 <FilesMatch \.php$> 
     SetHandler proxy:fcgi://php-fpm 
@@ -745,7 +745,7 @@ The first thing would be to connect Telegraf to <a rel="noreferrer noopener" hre
 
 **Possible solution**: make sure that InfluxDB is correctly running on the port 8086.
 
-```
+```bash
 $ sudo lsof -i -P -n | grep influxdb
 influxd   17737    influxdb  128u  IPv6 1177009213    0t0  TCP *:8086 (LISTEN)
 ```
@@ -781,7 +781,7 @@ If you are using OWASP I recommend to read this article: <https://sysadmin.info.
 
 You need to also modify the mod_evasive config file located in /etc/httpd/conf.d directory and set these values mentioned below to let grafana works properly with mod_evasive enabled.
 
-```
+```vim
 DOSHashTableSize 3097
 DOSPageCount 20
 DOSSiteCount 100
@@ -797,13 +797,13 @@ Enter the directory which contains filters for fail2ban, located at **/etc/fail2
 
 Create a new filter called grafana.conf. Type in terminal:
 
-```
+```bash
 vi grafana.conf
 ```
 
 Then hit the insert button (ins) to paste the below content:
 
-```
+```vim
 [INCLUDES]
 before = common.conf
 [Definition]
@@ -819,13 +819,13 @@ Enter the directory which contains jails for fail2ban, located at **/etc/fail2ba
 
 Create a new jail called grafana.local. Type in terminal&#8221;
 
-```
+```bash
 vi grafana.local
 ```
 
 Then hit the insert button (ins) to paste the below content:
 
-```
+```vim
 [grafana]
 enabled = true
 port = http,https
@@ -841,13 +841,13 @@ Hit Esc button, then type : and x without spaces and hit Enter to save and exit.
 
 Restart the fail2ban by typing in terminal:
 
-```
+```bash
 systemctl restart fail2ban
 ```
 
 Check your fail2ban filter by typing in terminal:
 
-```
+```bash
 fail2ban-regex /var/log/grafana/grafana.log /etc/fail2ban/filter.d/grafana.conf
 ```
 
