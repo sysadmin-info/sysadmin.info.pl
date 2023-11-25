@@ -28,17 +28,17 @@ We need curl
 {{< tabs CentOS Ubuntu >}}
   {{< tab >}}
   ### CentOS
-  ```
+  ```bash
   sudo yum install curl
   ```
   {{< /tab >}}
   {{< tab >}}
   ### Debian/Ubuntu
-  ```
+  ```bash
   sudo apt-get install curl
   ```
   or
-  ```
+  ```bash
   sudo apt install curl
   ```
   {{< /tab >}}
@@ -46,19 +46,19 @@ We need curl
 
 Next, execute the following command:
 
-```
+```bash
 curl https://rclone.org/install.sh | sudo bash
 ```
 
 Log in with increased privileges as a sudoers user.
 
-```
+```bash
 sudo -i
 ```
 
 Run rclone configuration with a command:
 
-```
+```bash
 rclone config
 ```
 
@@ -73,26 +73,26 @@ rclone config
 
 Check now that the configuration is working.
 
-```
+```bash
 rclone lsd mega:
 ```
 
 If everything went well, you will be logged in to our account. On mega you can manually create a folder called backup. Then you can manually copy files to this folder using the lower command:
 
-```
+```bash
 rclone copy /home/user mega:backup
 ```
 
 But why bother? You can write yourself a script.
 
-```
+```bash
 cd /home/user
 vi backup.sh
 ```
 
 Press the insert on the keyboard (ins) and paste the following content:
 
-```
+```vim
 #!/bin/bash
  TIME=date +%b-%d-%y
  FILENAME=backup-bin-$TIME.tar.gz
@@ -215,25 +215,25 @@ Press Esc, type in :x and press Enter.
 
 In order for a script to be executable, it must be given appropriate permissions.
 
-```
+```bash
 chmod +x backup.sh
 ```
 
 Now you can execute the script manually:
 
-```
+```bash
 ./backup.sh
 ```
 
 If you want to automate this fairly lengthy process, add a task to the cron that will execute this script for you.If you want to automate this fairly lengthy process, add a task to the cron that will execute this script for you.If you want to automate this fairly lengthy process, add a task to the cron that will execute this script for you.
 
-```
+```bash
 crontab -e
 ```
 
 Press the insert (ins) and paste it:
 
-```
+```bash
 00 04 * * * /bin/bash /home/user/backup.sh
 ```
 
@@ -243,7 +243,7 @@ The script will be executed at 4 a.m. every 24 hours.
 
 Explanation:
 
-```
+```vim
 #!/bin/bash
 # shebang, meaning that the script will be executed by a particular 
 interpreter, here bash.
