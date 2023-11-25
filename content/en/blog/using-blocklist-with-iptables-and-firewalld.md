@@ -324,7 +324,7 @@ What this script does, is quite simple. It first makes sure there is no ipset ca
 sudo vi /etc/systemd/system/ipset_blocklist.service
 ```
 
-```bash
+```vim
 [Unit]
 Description=ipset_blocklist
 Before=firewalld.service
@@ -358,7 +358,7 @@ sudo systemctl start ipset_blocklist.service
 
 In Debian/Ubuntu you can integrate it a little bit different by adding it as a post-up script in /etc/network/interfaces as below:
 
-```bash
+```vim
 # The primary network interface
 auto eth0 
 iface eth0 inet static 
@@ -377,7 +377,7 @@ As soon as the primary interface (in many cases eth0) is up, the ipset is create
 
 The script contains additional part for the firewalld which is a result of looking for the solution for Red Hat family distros.
 
-```bash
+```vim
 firewall-cmd --delete-ipset=blocklist --permanent
 firewall-cmd --permanent --new-ipset=blocklist --type=hash:net --option=family=inet --option=hashsize=1048576 --option=maxelem=1048576
 firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 3 -m set --match-set blocklist src -j LOG --log-prefix "IP Blocked: "
@@ -408,7 +408,7 @@ Finally I decided to remove logging bad IPs, just because it creates a really me
 
 The content of this files looks like this:
 
-```bash
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <direct>
 <rule priority="3" table="filter" ipv="ipv4" chain="INPUT">-m set --match-set blacklist src -j LOG --log-prefix 'IP Blocked: '</rule>
@@ -439,7 +439,7 @@ sudo vi /etc/rsyslog.d/firewalld.conf
 
 I added there these lines:
 
-```bash
+```vim
 :msg,contains,"_DROP" /var/log/firewalld-dropped_log
 :msg,contains,"_REJECT" /var/log/firewalld-rejected_log
 & stop
@@ -453,7 +453,7 @@ sudo vi /etc/logrotate.d/firewalld-dropped_log
 
 Added this content:
 
-```bash
+```vim
 /var/log/firewalld-dropped_log {
 daily
 create 0644 root root
@@ -481,7 +481,7 @@ sudo vi /etc/logrotate.d/firewalld-rejected_log
 
 And added:
 
-```bash
+```vim
 /var/log/firewalld-rejected_log {
 daily
 create 0644 root root
@@ -509,7 +509,7 @@ sudo vi /etc/rsyslog.conf
 
 Look for the part with rules and modify it according to the below example.
 
-```bash
+```vim
 ###### RULES ######
 $ Log all kernel messages to the console.
 # Logging much else clutters up the screen.
@@ -532,7 +532,7 @@ sudo vi /etc/audisp/plugins.d/syslog.conf
 
 And set the line args like below:
 
-```bash
+```vim
 args = LOG_INFO
 ```
 
@@ -581,7 +581,7 @@ Reminder of the severity levels and the four values of kernel.printk:
 
 On my CentOS: 7 4 1 7
 
-```bash
+```vim
                      CUR  DEF  MIN  BTDEF
 0 - emergency        x              x                        
 1 - alert            x         x    x
@@ -595,7 +595,7 @@ On my CentOS: 7 4 1 7
 
 This is too noisy, I just want critical and up (no errors). Unlabeled messages should be regarded as warning, so DEF is good:
 
-```bash
+```vim
                      CUR  DEF  MIN  BTDEF
 0 - emergency        x              x                        
 1 - alert            x         x    x
