@@ -41,7 +41,7 @@ If OpenSSH, however, is not yet installed you can install it with the following 
   {{< tab >}}
   ### SLES
   To install OpenSSH type:
-  ```
+```bash
   # refresh repositories
   sudo zypper ref
   # install OpenSSH
@@ -61,7 +61,7 @@ If OpenSSH, however, is not yet installed you can install it with the following 
   {{< tab >}}
   ### Debian
   To install OpenSSH type:
-  ```
+```bash
   # refresh repositories
   sudo apt update
   # install OpenSSH
@@ -77,7 +77,7 @@ If OpenSSH, however, is not yet installed you can install it with the following 
   {{< tab >}}
   ### Red Hat
   To install OpenSSH type:
-  ```
+```bash
   sudo yum install openssh-server -y
   lub
   sudo dnf install openssh-server -y
@@ -101,7 +101,7 @@ Then, on the Linux machine with which you intend to connect to the server, you n
   {{< tab >}}
   ### SLES
   To install OpenSSH type:
-  ```
+```bash
   # refresh repositories
   sudo zypper ref
   # install OpenSSH
@@ -111,7 +111,7 @@ Then, on the Linux machine with which you intend to connect to the server, you n
   {{< tab >}}
   ### Debian
   To install OpenSSH type:
-  ```
+```bash
   # refresh repositories
   sudo apt update
   # install OpenSSH
@@ -121,7 +121,7 @@ Then, on the Linux machine with which you intend to connect to the server, you n
   {{< tab >}}
   ### Red Hat
   To install OpenSSH type:
-  ```
+```bash
   sudo yum install openssh-clients -y
   or
   sudo dnf install openssh-clients -y
@@ -137,7 +137,7 @@ Then, on the Linux machine with which you intend to connect to the server, you n
   {{< tab >}}
   ### SLES
   To install firewalld type:
-  ```
+```bash
   # refresh repositories
   sudo zypper ref
   # install firewalld
@@ -151,7 +151,7 @@ Then, on the Linux machine with which you intend to connect to the server, you n
   {{< tab >}}
   ### Debian
   To install firewalld type:
-  ```
+```bash
   # refresh repositories
   sudo apt update
   # install firewalld
@@ -165,7 +165,7 @@ Then, on the Linux machine with which you intend to connect to the server, you n
   {{< tab >}}
   ### Red Hat
   To install firewalld type:
-  ```
+```bash
   sudo yum install firewalld -y
   or
   sudo dnf install firewalld -y
@@ -182,7 +182,7 @@ By default the firewalld after installation has SSH service implemented as allow
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
   ### SLES
-  ```
+```bash
   linux:~ # sudo firewall-cmd --add-service=ssh --permanent
   success
   linux:~ # sudo firewall-cmd --reload
@@ -191,13 +191,13 @@ By default the firewalld after installation has SSH service implemented as allow
   {{< /tab >}}
   {{< tab >}}
   ### Debian
-  ```
+```bash
   sudo ufw allow ssh
   ```
   {{< /tab >}}
   {{< tab >}}
   ### Red Hat
-  ```
+```bash
   linux:~ # sudo firewall-cmd --add-service=ssh --permanent
   success
   linux:~ # sudo firewall-cmd --reload
@@ -209,7 +209,7 @@ By default the firewalld after installation has SSH service implemented as allow
 #### Configure SSH Client
 Connect to SSH server with a common user.
 
-```
+```bash
 # ssh [login_user@hostname_or_IP_address]
 adrian@client:~> ssh adrian@example.com
 The authenticity of host 'example.com (10.0.0.50)' can't be established.
@@ -226,7 +226,7 @@ Configure SSH server to login with Key-Pair Authentication. Create a private key
 
 Create Key-Pair for each user, so login with a common user on SSH Server Host and work like follows.
 
-```
+```bash
 # create key-pair on a client
 ssh-keygen -t rsa -b 4096 -C "name and surname"
 Generating public/private rsa key pair.
@@ -256,14 +256,14 @@ hexdump -vn16 -e'4/4 "%08X" 1 "\n"' /dev/urandom
 
 List the key-pair
 
-```
+```bash
 adrian@linux:~> ll ~/.ssh/p-tech*
 -rw------- 1 adrian adrian 3.4K Apr  1 16:44 /home/adrian/.ssh/p-tech
 -rw-r--r-- 1 adrian adrian  745 Apr  1 16:44 /home/adrian/.ssh/p-tech.pub
 ```
 
 Copy the public key from the client to the server
-```
+```bash
 ssh-copy-id -i ~/.ssh/p-tech.pub student@IP-ADDRRESS
 ```
 
@@ -271,7 +271,7 @@ The public key is saved into the ~/.ssh/authorized_keys
 
 Provide a password
 
-```
+```bash
 # login with the key to the server
 ssh -i ~/.ssh/p-tech student@IP-ADDRRESS
 ```
@@ -282,7 +282,7 @@ Provide a passphrase
 
 Add below entries to .bashrc or .zshrc file located in your /home/user directory. First entry starts ssh agent and a second loads your private key to the agent. If you did set up a passphrase on your key it will ask for it. You can add more than one key. Bear in mind, that each time the Bash or Zsh starts aftyer a reboot or boot process of the operating system, in CLI it will ask you to provide a passphrase. 
 
-```
+```bash
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/p-tech
 ```
@@ -291,9 +291,11 @@ ssh-add ~/.ssh/p-tech
 
 Edit /etc/ssh/sshd_config
 
-```
+```bash
 sudo vi /etc/ssh/sshd_config
+```
 
+```vim
 # Uncomment these lines and change to [no]
 
 PasswordAuthentication no
@@ -396,7 +398,7 @@ ClientAliveCountMax 1
 
 To disconnect inactive clients, if you are using bash as shell you could set the TMOUT value in a system-wide default or per-user profile:
 
-```
+```vim
 # TMOUT  If  set to a value greater than zero, 
 # TMOUT is treated as the default timeout for the read builtin. 
 #
@@ -436,7 +438,7 @@ To disconnect inactive clients, if you are using bash as shell you could set the
 
 #### Secure Configuration of Ciphers/MACs/Kex available in SSH
 
-```
+```vim
 KexAlgorithms diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org
 Ciphers aes256-ctr,aes192-ctr,aes128-ctr
 MACs hmac-sha2-512
@@ -449,7 +451,7 @@ MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@op
 
 Make sure your ssh client can use these ciphers, run:
 
-```
+```bash
 ssh -Q cipher | sort -u
 to see the list
 ```
@@ -458,6 +460,6 @@ I recommend to read this article:
 [Secure Configuration of Ciphers/MACs/Kex available in SSH](https://security.stackexchange.com/questions/39756/secure-configuration-of-ciphers-macs-kex-available-in-ssh "Secure Configuration of Ciphers/MACs/Kex available in SSH")
 
 Reload SSH service
-```
+```bash
 sudo systemctl reload sshd
 ```
