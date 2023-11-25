@@ -25,7 +25,7 @@ Hi, The below content will let you easily set up your own website in the Dark We
 
 Below you have a very basic configuration that allows you to setup what is needed. Advanced security configuration for nginx has been added additionally below this section, to allow you to harden the nginx. Of course this tutorial does not contain all the steps, just because it requires a knowledge that I share in my other posts. 
 
-```
+```bash
 # Update packages
 dnf update
 
@@ -144,11 +144,11 @@ Enjoy your dark web website!
 
 You can control and configure Linux kernel and networking settings via /etc/sysctl.conf. Remember to **<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">reboot</mark>** the server after this step, please.
 
-```
+```bash
 sudo vim /etc/sysctl.conf
 ```
 
-```
+```vim
 # Avoid a smurf attack
 net.ipv4.icmp_echo_ignore_broadcasts = 1
  
@@ -223,13 +223,13 @@ net.ipv4.tcp_window_scaling = 1
 
 Edit nginx.conf and set the buffer size limitations for all clients.
 
-```
+```bash
 sudo vim /etc/nginx/nginx.conf
 ```
 
 Edit and set the buffer size limitations for all clients as follows:
 
-```
+```vim
 client_body_buffer_size  1K;
   client_header_buffer_size 1k;
   client_max_body_size 1k;
@@ -240,7 +240,7 @@ client_body_buffer_size  1K;
 
 I suggest that you disable any HTTP methods, which are not going to be utilized and which are not required to be implemented on the web server. If you add the following condition in the location block of the nginx virtual host configuration file, the server will only allow GET, HEAD, and POST methods and will filter out methods such as DELETE and TRACE.
 
-```
+```vim
 location / {
     limit_except GET HEAD POST { deny all; }
 }
@@ -248,7 +248,7 @@ location / {
 
 Another approach is to add the following condition to the server section (or server block). It can be regarded as more universal but <a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noreferrer noopener"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">y</mark></a><a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noreferrer noopener nofollow"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">ou should be careful with if statements in the location context.</mark></a>
 
-```
+```vim
 if ($request_method !~ ^(GET|HEAD|POST)$ ) {
     return 444; }
 ```
@@ -263,7 +263,7 @@ You use the X-Frame-Options HTTP response header to indicate if a browser should
 
 To do this, add the following parameter to the nginx configuration file in the server section:
 
-```
+```vim
 add_header X-Frame-Options "SAMEORIGIN";
 ```
 
@@ -271,7 +271,7 @@ add_header X-Frame-Options "SAMEORIGIN";
 
 HTTP Strict Transport Security (HSTS) is a method used by websites to declare that they should only be accessed using a secure connection (HTTPS). If a website declares an HSTS policy, the browser must refuse all HTTP connections and prevent users from accepting insecure SSL certificates. To add an HSTS header to your nginx server, you can add the following directive to your server section:
 
-```
+```vim
 add_header Strict-Transport-Security "max-age=31536000; includeSubdomains; preload";
 ```
 
@@ -279,19 +279,19 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubdomains; prelo
 
 Content Security Policy (CSP) protects your web server against certain types of attacks, including Cross-site Scripting attacks (XSS) and data injection attacks. You can implement CSP by adding the following example Content-Security-Policy header (note that the actual header should be configured to match your unique requirements):
 
-```
+```vim
 add_header Content-Security-Policy "default-src 'self' http: https: data: blob: 'unsafe-inline'" always;
 ```
 
 The HTTP X-XSS-Protection header is supported by IE and Safari and is not necessary for modern browsers if you have a strong Content Security Policy. However, to help prevent XSS in the case of older browsers (that don’t support CSP yet), you can add the X-XSS Protection header to your server section:
 
-```
+```vim
 add_header X-XSS-Protection "1; mode=block";
 ```
 
 The whole nginx configuration after the modification should looks like this:
 
-```
+```vim
 # For more information on configuration, see:
 #   * Official English Documentation: http://nginx.org/en/docs/
 #   * Official Russian Documentation: http://nginx.org/ru/docs/
@@ -402,7 +402,7 @@ http {
 
 Check logs: (press ctrl+c to exit tail)
 
-```
+```bash
 tail -f /var/log/tor/log
 tail -f /var/log/nginx/access.log
 tail -f /var/log/nginx/error.log
@@ -410,13 +410,13 @@ tail -f /var/log/nginx/error.log
 
 I recommend to install more convenient tool called multitail
 
-```
+```bash
 sudo dnf install multitail
 ```
 
 Then you can view logs with this tools this way:
 
-```
+```bash
 multitail /var/log/tor/log /var/log/nginx/access.log /var/log/nginx/error.log
 ```
 
@@ -430,13 +430,13 @@ You can install vanguards to protect the service from github repository <a href=
 
 All you need to do is to install few packages in RHEL 8
 
-```
+```bash
 sudo dnf install git python3-stem
 ```
 
 In the next step you need to clone the repository
 
-```
+```bash
 #Switch to root
 sudo -i 
 cd /home/root
@@ -445,26 +445,26 @@ git clone https://github.com/mikeperry-tor/vanguards.git
 
 Edit the vanguards.py file
 
-```
+```bash
 vim /root/vanguards/src/vanguards.py
 ```
 
 Change shebang to the path where your python3 is installed. By default it will be /usr/bin/python3 so it should look like this:
 
-```
+```vim
 #!/usr/bin/python3
 ```
 Press Esc, then type :x and hit enter
 
 After that edit the crontab with the command: (it will open in the default text editor, in my case it is vim I installed, because I do not use nano).
 
-```
+```bash
 crontab -e
 ```
 
 Add this line
 
-```
+```bash
 @reboot /usr/bin/python3 /root/vanguards/src/vanguards.py
 ```
 Press Esc, then type :x and hit enter
