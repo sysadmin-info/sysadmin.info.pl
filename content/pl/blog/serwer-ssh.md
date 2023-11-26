@@ -42,7 +42,7 @@ Jeśli OpenSSH jednak nie jest jeszcze zainstalowany możesz go zainstalować za
   {{< tab >}}
   ### SLES
   Aby zainstalować OpenSSH wpisz:
-  ```
+```bash
   # odśwież repozytoria
   sudo zypper ref
   # zainstaluj OpenSSH
@@ -62,7 +62,7 @@ Jeśli OpenSSH jednak nie jest jeszcze zainstalowany możesz go zainstalować za
   {{< tab >}}
   ### Debian
   Aby zainstalować OpenSSH wpisz:
-  ```
+```bash
   # odśwież repozytoria
   sudo apt update
   # zainstaluj OpenSSH
@@ -78,7 +78,7 @@ Jeśli OpenSSH jednak nie jest jeszcze zainstalowany możesz go zainstalować za
   {{< tab >}}
   ### Red Hat
   Aby zainstalować OpenSSH wpisz:
-  ```
+```bash
   sudo yum install openssh-server -y
   lub
   sudo dnf install openssh-server -y
@@ -102,7 +102,7 @@ Następnie na maszynie z Linux, za pomocą której zamierzasz łączyć się do 
   {{< tab >}}
   ### SLES
   Aby zainstalować OpenSSH wpisz:
-  ```
+```bash
   # odśwież repozytoria
   sudo zypper ref
   # zainstaluj OpenSSH
@@ -112,7 +112,7 @@ Następnie na maszynie z Linux, za pomocą której zamierzasz łączyć się do 
   {{< tab >}}
   ### Debian
   Aby zainstalować OpenSSH wpisz:
-  ```
+```bash
   # odśwież repozytoria
   sudo apt update
   # zainstaluj OpenSSH
@@ -122,7 +122,7 @@ Następnie na maszynie z Linux, za pomocą której zamierzasz łączyć się do 
   {{< tab >}}
   ### Red Hat
   Aby zainstalować OpenSSH wpisz:
-  ```
+```bash
   sudo yum install openssh-clients -y
   lub
   sudo dnf install openssh-clients -y
@@ -136,7 +136,7 @@ Następnie na maszynie z Linux, za pomocą której zamierzasz łączyć się do 
   {{< tab >}}
   ### SLES
   Aby zainstalować firewalld wpisz:
-  ```
+```bash
   # odśwież repozytoria
   sudo zypper ref
   # zainstaluj firewalld
@@ -150,7 +150,7 @@ Następnie na maszynie z Linux, za pomocą której zamierzasz łączyć się do 
   {{< tab >}}
   ### Debian
   Aby zainstalować firewalld wpisz:
-  ```
+```bash
   # odśwież repozytoria
   sudo apt update
   # zainstaluj firewalld
@@ -164,7 +164,7 @@ Następnie na maszynie z Linux, za pomocą której zamierzasz łączyć się do 
   {{< tab >}}
   ### Red Hat
   Aby zainstalować firewalld wpisz:
-  ```
+```bash
   sudo yum install firewalld -y
   lub
   sudo dnf install firewalld -y
@@ -181,7 +181,7 @@ Domyślnie firewalld po instalacji ma zaimplementowaną usługę SSH jako dozwol
 {{< tabs SLES Debian RedHat >}}
   {{< tab >}}
   ### SLES
-  ```
+```bash
   linux:~ # sudo firewall-cmd --add-service=ssh --permanent
   success
   linux:~ # sudo firewall-cmd --reload
@@ -190,18 +190,18 @@ Domyślnie firewalld po instalacji ma zaimplementowaną usługę SSH jako dozwol
   {{< /tab >}}
   {{< tab >}}
   ### Debian
-  ```
+```bash
   sudo ufw allow ssh
-  ```
+```
   {{< /tab >}}
   {{< tab >}}
   ### Red Hat
-  ```
+```bash
   linux:~ # sudo firewall-cmd --add-service=ssh --permanent
   success
   linux:~ # sudo firewall-cmd --reload
   success
-  ```
+```
   {{< /tab >}}
 {{< /tabs >}}
 
@@ -209,7 +209,7 @@ Domyślnie firewalld po instalacji ma zaimplementowaną usługę SSH jako dozwol
 
 Połącz się z serwerem SSH za pomocą zwykłego użytkownika.
 
-```
+```bash
 # ssh [login_user@hostname_or_IP_address]
 adrian@client:~> ssh adrian@example.com
 The authenticity of host 'example.com (10.0.0.50)' can't be established.
@@ -226,7 +226,7 @@ Skonfiguruj serwer SSH do logowania za pomocą Key-Pair Authentication. Utwórz 
 
 Utwórz Key-Pair dla każdego użytkownika, więc zaloguj się wspólnym użytkownikiem na SSH Server Host i pracuj jak poniżej.
 
-```
+```bash
 # utwórz parę kluczy na kliencie
 ssh-keygen -t rsa -b 4096 -C "imię i nazwisko"
 Generating public/private rsa key pair.
@@ -252,13 +252,13 @@ The key's randomart image is:
 ```
 
 Aby wygenerować passphrase możesz użyć następującego polecenia w osobnym oknie CLI
-```
+```bash
 hexdump -vn16 -e'4/4 "%08X" 1 "\n"' /dev/urandom
 ```
 
 Wylistuj parę kluczy
 
-```
+```bash
 adrian@linux:~> ll ~/.ssh/p-tech*
 -rw------- 1 adrian adrian 3.4K Apr  1 16:44 /home/adrian/.ssh/p-tech
 -rw-r--r-- 1 adrian adrian  745 Apr  1 16:44 /home/adrian/.ssh/p-tech.pub
@@ -266,7 +266,7 @@ adrian@linux:~> ll ~/.ssh/p-tech*
 
 Skopiuj klucz publiczny z klienta na serwer
 
-```
+```bash
 ssh-copy-id -i ~/.ssh/p-tech.pub student@IP-ADDRRESS
 ```
 
@@ -274,7 +274,7 @@ Podaj hasło
 
 Zaloguj się z kluczem do serwera
 
-```
+```bash
 ssh -i ~/.ssh/p-tech student@IP-ADDRRESS
 ```
 
@@ -284,7 +284,7 @@ Podaj passphrase
 
 Dodaj poniższe wpisy do pliku .bashrc lub .zshrc znajdującego się w katalogu /home/user. Pierwszy wpis uruchamia agenta ssh, a drugi ładuje do niego Twój klucz prywatny. Jeśli ustawiłeś passphrase na swoim kluczu, agent zapyta o jego wpisanie. Możesz dodać więcej niż jeden klucz. Należy pamiętać, że za każdym razem, gdy Bash lub Zsh uruchomi proces restartu lub rozruchu systemu operacyjnego, w CLI poprosi o podanie passphrase.
 
-```
+```bash
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/p-tech
 ```
@@ -293,9 +293,11 @@ ssh-add ~/.ssh/p-tech
 
 Edytuj /etc/ssh/sshd_config
 
-```
+```bash
 sudo vi /etc/ssh/sshd_config
+```
 
+```vim
 # odkomentuj te linie i zmień na [no]
 PasswordAuthentication no
 ChallengeResponseAuthentication no
@@ -395,7 +397,7 @@ ClientAliveCountMax 1
 
 Aby odłączyć nieaktywnych klientów, jeśli używasz bash jako powłoki, możesz ustawić wartość TMOUT w ogólnosystemowym profilu domyślnym lub na użytkownika:
 
-```
+```vim
 # TMOUT Jeśli ustawione na wartość większą od zera,
 # TMOUT traktowane jest jako domyślny limit czasu (tiomeout) 
 # dla wbudowanego odczytu (read).
@@ -435,7 +437,7 @@ Aby odłączyć nieaktywnych klientów, jeśli używasz bash jako powłoki, moż
 
 #### Bezpieczna konfiguracja szyfrów/MAC/Kex dostępnych w SSH 
 
-```
+```vim
 KexAlgorithms diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org
 Ciphers aes256-ctr,aes192-ctr,aes128-ctr
 MACs hmac-sha2-512
@@ -448,7 +450,7 @@ MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@op
 
 Upewnij się, że twój klient ssh może używać tych szyfrów, uruchom:
 
-```
+```bash
 ssh -Q cipher | sort -u
 to see the list
 ```
@@ -458,6 +460,6 @@ Polecam przeczytać ten artykuł::
 
 Przeładuj usługę SSH
 
-```
+```bash
 sudo systemctl reload sshd
 ```
