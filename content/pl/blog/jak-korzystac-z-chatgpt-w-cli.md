@@ -137,7 +137,7 @@ export OPENAI_API_KEY=twoj-klucz-API
 
 A następnie załaduj ją za pomocą poniższej komendy:
 
-```
+```bash
 source .bashrc
 lub
 source .zshrc
@@ -153,7 +153,7 @@ Pamiętaj, aby zabezpieczyć swoje klucze API i rozważyć użycie zmiennych śr
 
 Pamiętaj o zadeklarowaniu w pliku py prawidłowej ścieżki do prawidłowej wersji python. Dla openSUSE 15.4 będzie to:
 
-```
+```vim
 #!/usr/bin/python3.9
 ```
 
