@@ -51,7 +51,7 @@ interwał - określa liczbę sekund oczekiwania pomiędzy raportami.
 ```
 
 Przykład:
-```
+```bash
 iostat -p sda
 ```
 
@@ -100,7 +100,7 @@ Podobnie jak polecenie w, również podaje liczbę użytkowników zalogowanych o
   * demon collectd &#8211; wymaga do działania Apache lub Nginx
 
 Użycie collectd:
-```
+```bash
 cp -r /contrib/collection3 /var/www/html
 cd /var/www/html/collection3/
 ```
