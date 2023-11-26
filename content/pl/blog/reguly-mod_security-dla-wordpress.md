@@ -21,20 +21,20 @@ Na tutorial odnośnie instalacji mod\_security dla apache, a być może kiedyś 
 
 Po zalogowaniu przez ssh do serwera, wpisz komendę:
 
-```
+```bash
 sudo tail -f /var/log/httpd/error_log
 ```
 
 To jest log dla Apache w Centos określony w pliku httpd.conf, który możesz znaleźć poleceniem:
 
-```
+```bash
 sudo find / -iname "httpd.conf"
 ```
 
 W logu mam, co następuje:
 
 
-```
+```vim
 [Wed Oct 23 06:01:58.888373 2019] [:error] [pid 29603] 
 [client 162.158.102.200:59466] [client 111.111.111.100] 
 ModSecurity: Access denied with code 403 (phase 2). 
@@ -58,13 +58,13 @@ referer: https://example.com/wp-admin/admin.php?page=wp-fail2ban-addons
 
 No i co dalej? Dość prosto. Spójrz na numer id wewnątrz nawiasów kwadratowych. Edytujesz plik (jeśli go nie ma, to stwórz poleceniem touch /etc/httpd/conf.d/whitelist.conf).
 
-```
+```bash
 sudo vi /etc/httpd/conf.d/whitelist.conf
 ```
 
 Wklej to:
 
-```
+```vim
 <LocationMatch "/wp-admin/plugin-install.php">
   SecRuleRemoveByID 981173
 </LocationMatch>
@@ -74,7 +74,7 @@ Prawda, że proste?
 
 Poniżej gotowiec wykonany przeze mnie, który działa. Więcej błędów ze strony mod_security nie mam w logach.
 
-```
+```vim
 <LocationMatch "/logowanie">
 SecRuleRemoveById 950109
 </LocationMatch>
@@ -223,7 +223,7 @@ SecRuleRemoveById 960015
 
 Na koniec restart apache.
 
-```
+```bash
 systemctl restart httpd php-fpm
 ```
 
