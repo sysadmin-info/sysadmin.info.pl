@@ -29,8 +29,11 @@ Po pierwsze, potrzebne jest narzędzie audit2why, aby wyjaśnić, co zostało za
 
 Aby sprawdzić w CentOS, Red Hat, czy Fedora, jaki pakiet dostarcza w/w narzędzie, wykonaj polecenie:
 
-``` 
+```bash 
 sudo yum -q provides audit2why
+```
+
+```vim
 policycoreutils-python-2.5-17.1.el7.x86_64 : SELinux policy core python
                                            : utilities
 Repo        : base
@@ -40,7 +43,7 @@ Filename    : /usr/bin/audit2allow
 
 Należy zainstalować pakiet policycoreutils-python (i zależności):
 
-``` 
+```bash
 ### CentOS 7 
 sudo yum install policycoreutils-python
 
@@ -50,13 +53,13 @@ sudo yum install policycoreutils-python-utils
 
 Następnie przeprowadzić audyt przy pomocy narzędzia audit2why oraz dziennika audytu:
 
-``` 
+```bash
 sudo audit2why -i /var/log/audit/audit.log
 ```
 
 Wyświetlony zostanie odpowiedni komunikat, który zawiera przykładowo takie informacje:
 
-``` 
+```vim 
 scontext=system_u:system_r:nagios_t:s0
 tcontext=system_u:system_r:nagios_t:s0
 ...
@@ -67,7 +70,7 @@ Was caused by:
 
 Mała podpowiedź odnośnie pierwszych dwóch linii:
 
-``` markdown
+```vim
   * scontext = Source Context (kontekst źródłowy)
   * tcontext = Target Context (kontekst docelowy)
   * \_u:\_r:_t:s# = user:role:type:security level (użytkownik, rola, typ, poziom zabezpieczeń)
@@ -75,9 +78,11 @@ Mała podpowiedź odnośnie pierwszych dwóch linii:
 
 Kontekst źródłowy i docelowy są identyczne, więc wydaje mi się, że polecenie powinno być dopuszczone do działania. Ale spróbujmy audit2allow i zobaczmy, co nam powie:
 
-``` 
+```bash
 sudo audit2allow -i /var/log/audit/audit.log
+```
 
+```vim
 #============= nagios_t ==============
 allow nagios_t initrc_var_run_t:file { lock open read write };
 allow nagios_t self:capability chown;
@@ -98,15 +103,17 @@ Dość nieprzyjazne zachowanie. Chociaż jeśli alternatywą jest całkowite wy�
 
 Więc audit2allow zapewnił kilka zasad. Co teraz? Na szczęście strony audit2why i audit2allow man zawierają szczegóły, jak włączyć zasady do polityki SELinux. Po pierwsze, należy wygenerować nowy typ polityki:
 
-``` 
+```bash
 sudo audit2allow -i /var/log/audit/audit.log --module local > local.te
 ```
 
 Obejmuje to pewne dodatkowe informacje oprócz domyślnego wyjścia:
 
-``` 
+```bash 
 cat local.te
+```
 
+```vim
 module local 1.0;
 
 require {
@@ -129,26 +136,26 @@ Następnie strona man mówi o:
 > interface files.
 > You can create a te file and compile it by executing
 
-``` 
+```bash
 sudo make -f /usr/share/selinux/devel/Makefile local.pp
 ```
 
 Jednak mój system nie miał katalogu /usr/share/selinux/devel:
 
-``` 
+```bash
 ls /usr/share/selinux/
 packages  targeted
 ```
 
 Musiałem zainstalować pakiet policycoreutils-devel (i zależności):
 
-``` 
+```bash
 sudo yum install policycoreutils-devel
 ```
 
 Teraz kompilacja pliku z polisami do pliku binarnego:
 
-``` 
+```bash 
 sudo make -f /usr/share/selinux/devel/Makefile local.pp
 Compiling targeted local module
 /usr/bin/checkmodule:  loading policy configuration from tmp/local.tmp
@@ -160,14 +167,14 @@ rm tmp/local.mod.fc tmp/local.mod
 
 Następnie instalacja polityki z pliku pp, który został wcześniej wygenerowany, przy użyciu komendy make -f. Korzystam z narzędzia semodule.
 
-``` 
+```bash
 sudo semodule -i local.pp
 ```
 
 Czy to rozwiązało problem?
 
 
-``` 
+```bash
 sudo systemctl start icinga
 sudo systemctl status icinga
 ● icinga.service - LSB: start and stop Icinga monitoring daemon
@@ -195,15 +202,14 @@ Każdy problem tego typu w SELinux można rozwiązać poprzez analogię.
 
 Na sam koniec warto zainstalować narzędzie sealert:
 
-``` 
+```bash
 sudo yum install setroubleshoot setools
 ```
 
 I sprawdzić stan alertów przy pomocy polecenia:
 
-``` 
+```bash
 sudo sealert -a /var/log/audit/audit.log
 ```
 
 Źródło: [SELinux audit2why audit2allow policy files](https://osric.com/chris/accidental-developer/2017/11/selinux-audit2why-audit2allow-policy-files/)
-
