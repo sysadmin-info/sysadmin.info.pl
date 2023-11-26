@@ -27,17 +27,17 @@ Potrzebny nam curl
 {{< tabs CentOS Ubuntu >}}
   {{< tab >}}
   ### CentOS
-  ```
+  ```bash
   sudo yum install curl
   ```
   {{< /tab >}}
   {{< tab >}}
   ### Debian/Ubuntu
-  ```
+  ```bash
   sudo apt-get install curl
   ```
   lub
-  ```
+  ```bash
   sudo apt install curl
   ```
   {{< /tab >}}
@@ -45,19 +45,19 @@ Potrzebny nam curl
 
 W następnej kolejności należy wykonać poniższą komendę:
 
-```
+```bash
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
 ```
 
 Logujemy się z podwyższonymi uprawnieniami jako użytkownik sudoers.
 
-```
+```bash
 sudo -i
 ```
 
 Uruchamiamy konfigurację rclone poleceniem:
 
-```
+```bash
 rclone config
 ```
 
@@ -72,26 +72,26 @@ rclone config
 
 Sprawdzimy teraz, czy konfiguracja działa.
 
-```
+```bash
 rclone lsd mega:
 ```
 
 Jeśli wszystko przebiegło poprawnie, zostaniemy zalogowani do naszego konta. Na mega możemy utworzyć ręcznie folder o nazwie backup. Wtedy możemy ręcznie kopiować pliki do tego folderu za pomocą niższego polecenia:
 
-```
+```bash
 rclone copy /home/user mega:backup
 ```
 
 Jednak po co się męczyć? Można napisać sobie skrypt.
 
-```
+```bash
 cd /home/user
 vi backup.sh
 ```
 
 Wciskamy insert na klawiaturze (ins) i wklejamy poniższą zawartość:
 
-```
+```vim
 #!/bin/bash
  TIME=date +%b-%d-%y
  FILENAME=backup-bin-$TIME.tar.gz
@@ -214,25 +214,25 @@ Wciskamy Esc, wpisujemy :x i wciskamy Enter
 
 Aby skrypt był wykonywalny, trzeba nadać mu odpowiednie uprawnienia.
 
-```
+```bash
 chmod +x backup.sh
 ```
 
 Teraz możemy wykonać skrypt ręcznie:
 
-```
+```bash
 ./backup.sh
 ```
 
 Jeśli chcemy zautomatyzować ten dość długotrwały proces dodajemy zadanie do crona, które będzie wykonywać ten skrypt za nas.
 
-```
+```bash
 crontab -e
 ```
 
 Wciskamy insert (ins) i wklejamy:
 
-```
+```vim
 00 04 * * * /bin/bash /home/user/backup.sh
 ```
 
@@ -242,7 +242,7 @@ Skrypt będzie wykonywać się o 4 w nocy co 24 godziny.
 
 Legenda:
 
-```
+```vim
 #!/bin/bash
 # shebang, oznaczający, że skrypt będzie wykonywany 
 przez konkretny interpreter, tutaj bash.
