@@ -66,7 +66,7 @@ kubectl exec -it multiarch -- /bin/ash
 ```bash
 vim pod.yaml
 ```
-```bash
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
