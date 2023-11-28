@@ -111,7 +111,7 @@ sudo vim /boot/cmdline.txt
 Add at the end of the line that starts with console= the below entries:
 
 ```bash
-cgroup_memory=1 cgroup+enable=memory
+cgroup_memory=1 cgroup_enable=memory
 ```
 
 Save the file and exit.
