@@ -104,7 +104,7 @@ vim ingress-controller-load-balancer.yaml
 
 * Put the below content into the file
 
-```bash
+```yaml
 ---
 
 apiVersion: v1
@@ -152,7 +152,7 @@ The domain name that is used is another crucial factor. I'm going to use the dom
 
 Create a file called my-example.yaml and use the following syntax to implement this example for Ingress testing:
 
-```bash
+```yaml
 ---
 
 apiVersion: apps/v1
