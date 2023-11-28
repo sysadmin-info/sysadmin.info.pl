@@ -115,7 +115,7 @@ vim nginx-ubuntu.yaml
 ```
 Paste into the file:
 
-```vim
+```yaml
 name: nginx-ubuntu
 spec:
   containers:
@@ -131,7 +131,7 @@ spec:
 cp nginx-ubuntu.yaml pod.yaml
 ```
 
-```vim
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
