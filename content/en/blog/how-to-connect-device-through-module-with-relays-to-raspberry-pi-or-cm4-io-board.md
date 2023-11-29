@@ -263,7 +263,7 @@ else:
 
 ##### Making The Script Run Automatically On Startup
 
-Now that the display is running, we would like it to do so automatically when the computer starts up because it will cease as soon as we close the terminal window. We're going to use crontab to accomplish this.
+Now that the script is running, we would like it to do so automatically when the computer starts up because it will cease as soon as we close the terminal window. We're going to use crontab to accomplish this.
 
 Enter the next command to launch crontab:
 
