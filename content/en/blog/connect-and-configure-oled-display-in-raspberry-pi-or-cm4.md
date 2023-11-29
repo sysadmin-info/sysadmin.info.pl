@@ -242,7 +242,7 @@ vim stats-off.py
 
 And change the below section:
 
-```bash
+```python
     # Pi Stats Display
     draw.text((0, 0), "IP: " + str(IP,'utf-8'), font=font, fill=255)
     draw.text((0, 16), str(CPU,'utf-8') + "LA", font=font, fill=255)
@@ -253,7 +253,7 @@ And change the below section:
 
 into this:
 
-```bash
+```python
     # Pi Stats Display
     draw.text((0, 0), "IP: " + str(IP,'utf-8'), font=font, fill=0)
     draw.text((0, 16), str(CPU,'utf-8') + "LA", font=font, fill=0)
