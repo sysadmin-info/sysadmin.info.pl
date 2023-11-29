@@ -31,15 +31,15 @@ W tym artykule przeprowadzę Cię przez kroki instalacji i konfiguracji k3s oraz
 {{<youtube RwMpXQMO-zE>}}
 
 #### Ćwiczenia do wykonania:
-1. Odinstaluj k3s na węźle głównym i pracownikach
+1. Odinstaluj k3s na węźle głównym i węzłach roboczych
 2. Odinstaluj rancher
 3. Dodaj wpisy cgroup do cmdline.txt i zrestartuj każdy węzeł z procesorem ARM
 4. Zainstaluj bezpiecznie k3s v1.21.1+k3s1 bez traefika
 5. Sprawdź status k3s
 6. Skopiuj token
 7. Skopiuj adres IP węzła głównego
-8. Zainstaluj k3s v1.21.1+k3s1 na węzłach pracowników
-9. Dodaj etykiety do węzłów pracowników na węźle głównym
+8. Zainstaluj k3s v1.21.1+k3s1 na węzłach roboczych
+9. Dodaj etykiety do węzłów roboczych na węźle głównym
 10. Włącz uzupełnianie k3s
 11. Zainstaluj nginx jako kontroler dostępu w k3s
 12. Sprawdź status węzłów i podów
@@ -50,7 +50,7 @@ W tym artykule przeprowadzę Cię przez kroki instalacji i konfiguracji k3s oraz
 17. Sprawdź przykładową aplikację testową
 18. Zainstaluj i skonfiguruj Rancher
 
-#### Odinstalowanie k3s na węźle głównym i pracownikach
+#### Odinstalowanie k3s na węźle głównym i węzłach roboczych
 
 * Skrypt Bash dla węzła głównego:
 
@@ -90,7 +90,7 @@ update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 reboot
 ```
 
-* Skrypt Bash dla węzłów pracowników:
+* Skrypt Bash dla węzłów roboczych:
 
 ```vim
 #!/bin/bash
@@ -213,13 +213,13 @@ sudo cat /var/lib/rancher/k3s/server/node-token
 hostname -I | awk '{ print $1 }'
 ```
 
-#### Instalacja k3s v1.21.1+k3s1 na węzłach pracowników
+#### Instalacja k3s v1.21.1+k3s1 na węzłach roboczych
 ```bash
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.21.1+k3s1" K3S_TOKEN="<TWÓJ_TOKEN>" K3S_URL="https://<URL_WĘZŁA_GŁÓWNEGO>:6443" K3S_NODE_NAME="worker1" sh -
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.21.1+k3s1" K3S_TOKEN="<TWÓJ_TOKEN>" K3S_URL="https://<URL_WĘZŁA_GŁÓWNEGO>:6443" K3S_NODE_NAME="worker2" sh -
 ```
 
-#### Dodawanie etykiet do węzłów pracowników na węźle głównym
+#### Dodawanie etykiet do węzłów roboczych na węźle głównym
 
 ```bash
 kubectl label nodes worker1 kubernetes.io/role=worker
@@ -234,7 +234,7 @@ source .bashrc
 ```
 
 #### Czym jest kontroler ingress NGINX?
-
+roboczych
 Zobacz dokumentację: [Kontroler dostępu NGINX](https://docs.nginx.com/nginx-ingress-controller/intro/how-nginx-ingress-controller-works/)
 
 #### Zainstaluj NGINX jako kontroler ingress w k3s

@@ -258,9 +258,8 @@ See the documentation: [NGINX ingress controller Installation Guide](https://kub
 
 #### Install NGINX ingress controller load balancer 
 
-```vim
+```yaml
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
