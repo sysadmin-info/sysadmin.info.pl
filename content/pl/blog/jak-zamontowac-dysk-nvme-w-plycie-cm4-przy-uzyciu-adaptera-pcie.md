@@ -14,11 +14,11 @@ tags:
 - CM4
 - CM4 board
 - CM4 compute module
-- chłodzenie wodne
+- water cooling
 - NVMe
 - PCIe
 series:
-- chłodzenie wodne dla CM4 / Raspberry Pi  
+- water cooling dla CM4 / Raspberry Pi  
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/How to mount NVMe drive in CM4 board.webp

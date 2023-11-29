@@ -14,9 +14,9 @@ tags:
 - CM4
 - CM4 IO
 - CM4 compute module
-- chłodzenie wodne
+- water cooling
 series:
-- chłodzenie wodne dla CM4 / Raspberry Pi  
+- water cooling dla CM4 / Raspberry Pi  
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/how-to-clone-cm4-emmc-onto-nvme-and-boot.webp
