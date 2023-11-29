@@ -1,7 +1,7 @@
 ---
-title: "Podłączanie i konfigurowanie wyświetlacza OLED w Raspberry Pi lub CM4"
+title: "Podłączanie i konfiguracja wyświetlacza OLED w Raspberry Pi lub CM4"
 date:  2023-07-27T13:00:00+00:00
-description: "Podłączanie i konfigurowanie wyświetlacza OLED w Raspberry Pi lub CM4"
+description: "Podłączanie i konfiguracja wyświetlacza OLED w Raspberry Pi lub CM4"
 draft: false
 hideToc: false
 enableToc: true
@@ -12,11 +12,11 @@ pinned: false
 asciinema: true
 tags:
 - CM4
-- CM4 IO
+- CM4 board
 - CM4 compute module
 - water cooling
 series:
-- water cooling dla CM4 / Raspberry Pi  
+- Water cooling dla CM4 / Raspberry Pi  
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/oled.webp

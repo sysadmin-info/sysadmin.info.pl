@@ -27,8 +27,6 @@ image: images/2023-thumbs/oled.webp
 3. Run the stats.py script
 4. Enable and disable OLED via Bash scripts
 
-
-
 ##### The OLED Stats Display for the Raspberry Pi OS - Debian 11 Bullseye
 
 I will walk you through the installation and configuration steps in this article so you can use the same 12864 I2C OLED display with Raspberry Pi OS Bullseye.
