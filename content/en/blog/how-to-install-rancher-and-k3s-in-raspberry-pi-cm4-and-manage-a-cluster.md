@@ -264,9 +264,8 @@ vim ingress-controller-load-balancer.yaml
 
 * Put the below content into the file
 
-```vim
+```yaml
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -312,9 +311,8 @@ The domain name that is used is another crucial factor. I'm going to use the dom
 
 Create a file called my-example.yaml and use the following syntax to implement this example for Ingress testing:
 
-```vim
+```yaml
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
