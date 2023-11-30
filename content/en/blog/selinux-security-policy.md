@@ -1,7 +1,7 @@
 ---
-title: "SELinux security policy"
-date: 2019-09-22T17:27:50+00:00 
-description: "SELinux security policy"
+title: SELinux security policy
+date: 2019-09-22T17:27:50+00:00
+description: SELinux security policy
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- security
 series:
--
+- 
 categories:
 - IT security
 image: images/2019-thumbs/selinux.webp

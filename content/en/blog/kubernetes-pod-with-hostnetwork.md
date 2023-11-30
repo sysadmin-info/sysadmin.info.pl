@@ -1,7 +1,9 @@
 ---
-title: "Kubernetes pod with hostNetwork: true cannot reach external IPs of services in the same cluster"
-date:  2023-09-30T16:15:00+00:00
-description: "Kubernetes pod with hostNetwork: true cannot reach external IPs of services in the same cluster"
+title: 'Kubernetes pod with hostNetwork: true cannot reach external IPs of services
+  in the same cluster'
+date: 2023-09-30T16:15:00+00:00
+description: 'Kubernetes pod with hostNetwork: true cannot reach external IPs of services
+  in the same cluster'
 draft: false
 hideToc: false
 enableToc: true
@@ -10,16 +12,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- Kubernetes
-- k3s
-- Rancher
-- Helm
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/hostnetworktrue.webp

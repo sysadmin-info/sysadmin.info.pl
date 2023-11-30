@@ -1,7 +1,7 @@
 ---
-title: "Deleting pods in Kubernetes in Raspberry Pi CM4"
-date:  2023-09-01T15:00:00+00:00
-description: "Deleting pods in Kubernetes in Raspberry Pi CM4"
+title: Deleting pods in Kubernetes in Raspberry Pi CM4
+date: 2023-09-01T15:00:00+00:00
+description: Deleting pods in Kubernetes in Raspberry Pi CM4
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- Kubernetes
-- k3s 
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/deleting-pods.webp

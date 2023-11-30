@@ -1,7 +1,7 @@
 ---
-title: "Kevin Mitnick talks about security in IT"
-date:  2019-11-05T21:48:12+00:00
-description: "Kevin Mitnick talks about security in IT"
+title: Kevin Mitnick talks about security in IT
+date: 2019-11-05T21:48:12+00:00
+description: Kevin Mitnick talks about security in IT
 draft: false
 hideToc: false
 enableToc: true
@@ -9,11 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Kevin Mitnick
-- security
 series:
--
+- 
 categories:
 - Documentaries
 image: images/2019-thumbs/kevin-mitnick.webp

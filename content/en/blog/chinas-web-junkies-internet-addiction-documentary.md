@@ -1,7 +1,7 @@
 ---
-title: "China’s Web Junkies: Internet Addiction Documentary"
-date:  2019-11-03T09:43:35+00:00
-description: "China’s Web Junkies: Internet Addiction Documentary"
+title: 'China’s Web Junkies: Internet Addiction Documentary'
+date: 2019-11-03T09:43:35+00:00
+description: 'China’s Web Junkies: Internet Addiction Documentary'
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Internet Addiction
 series:
--
+- 
 categories:
 - Documentaries
 image: images/2019-thumbs/china-web-junkies.webp

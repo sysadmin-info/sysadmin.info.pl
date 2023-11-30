@@ -1,7 +1,8 @@
 ---
-title: "Troubleshooting slow network communication or Connection Timeouts in Linux"
+title: Troubleshooting slow network communication or Connection Timeouts in Linux
 date: 2022-10-02T09:43:17+00:00
-description: "Troubleshooting slow network communication or Connection Timeouts in Linux"
+description: Troubleshooting slow network communication or Connection Timeouts in
+  Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -9,14 +10,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- ifconfig
-- netstat
-- ip
-- ethtool
-- iperf3
 series:
--
+- 
 categories:
 - Linux
 image: images/2022-thumbs/network.webp

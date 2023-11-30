@@ -1,7 +1,8 @@
 ---
-title: "How to install Adguard Home as an addon in Home Assistant Supervised"
-date:  2022-07-29T10:13:13+00:00
-description: "This video describes how to install Adguard Home addon in Home Assistant Supervised."
+title: How to install Adguard Home as an addon in Home Assistant Supervised
+date: 2022-07-29T10:13:13+00:00
+description: This video describes how to install Adguard Home addon in Home Assistant
+  Supervised.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,9 +10,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Home Assistant
-- Raspberry Pi
 series:
 - 
 categories:

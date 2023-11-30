@@ -1,7 +1,7 @@
 ---
-title: "git video course – advanced aspects of configuring the git."
+title: git video course – advanced aspects of configuring the git.
 date: 2022-09-22T08:50:49+00:00
-description: "git video course – advanced aspects of configuring the git."
+description: git video course – advanced aspects of configuring the git.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Git
 series:
 - Git
 categories:

@@ -1,20 +1,16 @@
 ---
-title: "Measuring system i/o"
+title: Measuring system i/o
 date: 2019-12-23T16:59:15+00:00
-description: "Measuring system i/o"
+description: Measuring system i/o
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- netstat
-- iostat
-- lsof
 series:
--
+- 
 categories:
 - Linux
 image: images/2019-thumbs/linux-cli.webp

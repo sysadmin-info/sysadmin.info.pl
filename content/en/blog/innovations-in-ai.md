@@ -1,7 +1,10 @@
 ---
-title: "Innovations in A.I. supercomputer Fugaku, chatGPT & Japaneese. Mojo language faster than Python"
-date:  2023-05-29T17:00:00+00:00
-description: "In this video I presented information about Fugaku Supercomputer and Japaneese  language in chatGPT.  Additionally I presented the new programming language - Mojo, that is 35000 times faster than Python 3."
+title: Innovations in A.I. supercomputer Fugaku, chatGPT & Japaneese. Mojo language
+  faster than Python
+date: 2023-05-29T17:00:00+00:00
+description: In this video I presented information about Fugaku Supercomputer and
+  Japaneese  language in chatGPT.  Additionally I presented the new programming language
+  - Mojo, that is 35000 times faster than Python 3.
 draft: false
 hideToc: false
 enableToc: true
@@ -10,11 +13,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- chatGPT
-- openAI
-- Fugaku
-- Mojo
 series:
 - chatGPT
 categories:

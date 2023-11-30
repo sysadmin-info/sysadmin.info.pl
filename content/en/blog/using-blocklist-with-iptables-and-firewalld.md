@@ -1,7 +1,9 @@
 ---
-title: "Using blocklist with iptables and firewalld"
+title: Using blocklist with iptables and firewalld
 date: 2020-10-04T10:09:30+00:00
-description: "If you have any kind of server connected to the Internet, you are no doubt aware that no matter how small or unimportant it might seem, it is frequently probed, tested or subject to various attempts at abuse."
+description: If you have any kind of server connected to the Internet, you are no
+  doubt aware that no matter how small or unimportant it might seem, it is frequently
+  probed, tested or subject to various attempts at abuse.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,12 +11,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- security
-- firewalld
-- iptables
 series:
--
+- 
 categories:
 - IT security
 image: images/2020-thumbs/firewall.webp

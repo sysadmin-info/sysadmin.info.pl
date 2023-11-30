@@ -1,7 +1,7 @@
 ---
-title: "Server basic configuration after installing RHEL 8.5 (minimal)."
-date:  2022-03-03T11:48:18+00:00
-description: "Server basic configuration after installing RHEL 8.5 (minimal)."
+title: Server basic configuration after installing RHEL 8.5 (minimal).
+date: 2022-03-03T11:48:18+00:00
+description: Server basic configuration after installing RHEL 8.5 (minimal).
 draft: false
 hideToc: false
 enableToc: true
@@ -9,9 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Bash
-- security
 series:
 - 
 categories:

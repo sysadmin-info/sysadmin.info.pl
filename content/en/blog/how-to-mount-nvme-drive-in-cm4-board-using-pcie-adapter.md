@@ -1,7 +1,7 @@
 ---
-title: "How to mount NVMe drive in CM4 board using PCIe adapter"
-date:  2023-07-18T13:45:00+00:00
-description: "How to mount NVMe drive in CM4 board using PCIe adapter"
+title: How to mount NVMe drive in CM4 board using PCIe adapter
+date: 2023-07-18T13:45:00+00:00
+description: How to mount NVMe drive in CM4 board using PCIe adapter
 draft: false
 hideToc: false
 enableToc: true
@@ -10,15 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- water cooling
-- NVMe
-- PCIe
 series:
-- Water cooling for CM4 / Raspberry Pi  
+- Water cooling for CM4 / Raspberry Pi
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/How to mount NVMe drive in CM4 board.webp

@@ -1,7 +1,7 @@
 ---
-title: "Detailed ssh configuration with RSA keys explained."
+title: Detailed ssh configuration with RSA keys explained.
 date: 2022-10-02T09:41:03+00:00
-description: "Detailed ssh configuration with RSA keys explained."
+description: Detailed ssh configuration with RSA keys explained.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- SSH
 series:
--
+- 
 categories:
 - IT Security
 image: images/2022-thumbs/ssh.webp

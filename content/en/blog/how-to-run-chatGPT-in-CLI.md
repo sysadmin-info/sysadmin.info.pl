@@ -1,7 +1,7 @@
 ---
-title: "How to use ChatGPT with the API in the Linux command line interface"
-date:  2023-05-25T12:25:00+00:00
-description: "How to use ChatGPT with the API in the Linux command line interface (CLI)"
+title: How to use ChatGPT with the API in the Linux command line interface
+date: 2023-05-25T12:25:00+00:00
+description: How to use ChatGPT with the API in the Linux command line interface (CLI)
 draft: false
 hideToc: false
 enableToc: true
@@ -10,10 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- chatGPT
-- openAI
-- LLM
 series:
 - chatGPT
 categories:

@@ -1,7 +1,7 @@
 ---
-title: "Mod_security rules for WordPress"
-date:  2019-10-23T04:25:36+00:00
-description: "Mod_security rules for WordPress"
+title: Mod_security rules for WordPress
+date: 2019-10-23T04:25:36+00:00
+description: Mod_security rules for WordPress
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- mod_security
 series:
 - 
 categories:

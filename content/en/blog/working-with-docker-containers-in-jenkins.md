@@ -1,7 +1,8 @@
 ---
-title: "Working with Docker containers in Jenkins"
-date:  2023-07-11T20:00:00+00:00
-description: "Working with Docker containers in Jenkins. Solving issue with missing space"
+title: Working with Docker containers in Jenkins
+date: 2023-07-11T20:00:00+00:00
+description: Working with Docker containers in Jenkins. Solving issue with missing
+  space
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +11,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
 series:
 - Jenkins
 categories:

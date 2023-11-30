@@ -1,7 +1,7 @@
 ---
-title: "How to install nginx as ingress controller for k3s"
-date:  2023-08-20T18:00:00+00:00
-description: "How to install nginx as ingress controller for k3s in Raspberry Pi CM4"
+title: How to install nginx as ingress controller for k3s
+date: 2023-08-20T18:00:00+00:00
+description: How to install nginx as ingress controller for k3s in Raspberry Pi CM4
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- Kubernetes
-- k3s 
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/k3s-nginx-ingress.webp

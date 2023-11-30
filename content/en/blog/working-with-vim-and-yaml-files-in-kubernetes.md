@@ -1,7 +1,7 @@
 ---
-title: "Working with vim and YAML files in Kubernetes"
-date:  2023-09-01T17:00:00+00:00
-description: "Working with vim and YAML files in Kubernetes"
+title: Working with vim and YAML files in Kubernetes
+date: 2023-09-01T17:00:00+00:00
+description: Working with vim and YAML files in Kubernetes
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- Kubernetes
-- k3s 
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/vim-yaml.webp

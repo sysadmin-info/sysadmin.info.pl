@@ -1,7 +1,7 @@
 ---
-title: "How to setup and secure Telegraf, InfluxDB and Grafana on Linux"
-date: 2020-09-10T19:05:29+00:00 
-description: "How to setup and secure Telegraf, InfluxDB and Grafana on Linux"
+title: How to setup and secure Telegraf, InfluxDB and Grafana on Linux
+date: 2020-09-10T19:05:29+00:00
+description: How to setup and secure Telegraf, InfluxDB and Grafana on Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -9,13 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- security
-- Grafana
-- Telegraf
-- InfluxDB
 series:
--
+- 
 categories:
 - IT security
 image: images/2020-thumbs/grafana.webp

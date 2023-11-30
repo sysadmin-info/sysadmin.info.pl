@@ -1,7 +1,7 @@
 ---
-title: "Why you cannot access chatGPT"
-date:  2023-05-31T20:00:00+00:00
-description: "Why you cannot access chatGPT"
+title: Why you cannot access chatGPT
+date: 2023-05-31T20:00:00+00:00
+description: Why you cannot access chatGPT
 draft: false
 hideToc: false
 enableToc: true
@@ -10,11 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- chatGPT
-- openAI
-- load balancer
-- AWS
 series:
 - chatGPT
 categories:

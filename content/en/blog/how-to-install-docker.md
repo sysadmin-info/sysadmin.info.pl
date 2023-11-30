@@ -1,7 +1,7 @@
 ---
-title: "How to install Docker"
-date:  2023-05-24T08:40:00+00:00
-description: "How to install Docker"
+title: How to install Docker
+date: 2023-05-24T08:40:00+00:00
+description: How to install Docker
 draft: false
 hideToc: false
 enableToc: true
@@ -10,8 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
 series:
 - Docker
 categories:

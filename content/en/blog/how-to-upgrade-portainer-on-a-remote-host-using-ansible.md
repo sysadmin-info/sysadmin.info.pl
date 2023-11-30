@@ -1,7 +1,7 @@
 ---
-title: "How to upgrade Portainer on a remote host using Ansible"
-date:  2023-11-23T22:35:00+00:00
-description: "How to upgrade Portainer on a remote host using Ansible"
+title: How to upgrade Portainer on a remote host using Ansible
+date: 2023-11-23T22:35:00+00:00
+description: How to upgrade Portainer on a remote host using Ansible
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +10,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- Portainer
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023-thumbs/ansible07.webp
 ---
 

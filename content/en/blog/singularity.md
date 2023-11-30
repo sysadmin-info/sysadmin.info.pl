@@ -1,7 +1,9 @@
 ---
-title: "Why AGI will not be realized? The Singularity isn’t near. Does our brain use quantum computation?"
-date:  2023-06-14T22:00:00+00:00
-description: "Why AGI will not be realized? The Singularity isn’t near. Does our brain use quantum computation?"
+title: Why AGI will not be realized? The Singularity isn’t near. Does our brain use
+  quantum computation?
+date: 2023-06-14T22:00:00+00:00
+description: Why AGI will not be realized? The Singularity isn’t near. Does our brain
+  use quantum computation?
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +12,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- AGI
-- singularity
 series:
 - AI
 categories:

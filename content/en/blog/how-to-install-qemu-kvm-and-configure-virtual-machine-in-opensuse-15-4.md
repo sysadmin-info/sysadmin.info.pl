@@ -1,7 +1,7 @@
 ---
-title: "How to install QEMU KVM and configure virtual machine in openSUSE 15.4"
+title: How to install QEMU KVM and configure virtual machine in openSUSE 15.4
 date: 2022-10-17T11:33:00+00:00
-description: "How to install QEMU KVM and configure virtual machine in openSUSE 15.4"
+description: How to install QEMU KVM and configure virtual machine in openSUSE 15.4
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Qemu KVM
 series:
 - Qemu KVM
 categories:

@@ -1,7 +1,7 @@
 ---
-title: "RHCSA – Adding users"
-date:  2019-10-03T07:20:37+00:00
-description: "RHCSA – Adding users"
+title: RHCSA – Adding users
+date: 2019-10-03T07:20:37+00:00
+description: RHCSA – Adding users
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:

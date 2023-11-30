@@ -1,7 +1,7 @@
 ---
-title: "SSH server"
-date:  2023-04-01T15:00:00+00:00
-description: "Configure SSH Server to login to a server from remote computer."
+title: SSH server
+date: 2023-04-01T15:00:00+00:00
+description: Configure SSH Server to login to a server from remote computer.
 draft: false
 hideToc: false
 enableToc: true
@@ -10,8 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- SSHD
 series:
 - RHCSA
 categories:

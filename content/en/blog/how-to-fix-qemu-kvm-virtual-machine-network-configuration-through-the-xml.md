@@ -1,7 +1,8 @@
 ---
-title: "How to fix QEMU KVM virtual machine network configuration through the xml"
+title: How to fix QEMU KVM virtual machine network configuration through the xml
 date: 2022-10-22T11:36:00+00:00
-description: "How to fix QEMU KVM virtual machine network configuration through the xml"
+description: How to fix QEMU KVM virtual machine network configuration through the
+  xml
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +10,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Qemu KVM
 series:
 - Qemu KVM
 categories:

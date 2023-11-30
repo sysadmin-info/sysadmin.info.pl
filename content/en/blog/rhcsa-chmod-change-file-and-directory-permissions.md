@@ -1,7 +1,7 @@
 ---
-title: "RHCSA – chmod – change file and directory permissions"
-date:  2019-10-04T00:32:44+00:00
-description: "RHCSA – chmod – change file and directory permissions"
+title: RHCSA – chmod – change file and directory permissions
+date: 2019-10-04T00:32:44+00:00
+description: RHCSA – chmod – change file and directory permissions
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:

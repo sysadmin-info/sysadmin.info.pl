@@ -1,18 +1,16 @@
 ---
-title: "WordPress configuration for connecting to a remote database"
-date: 2019-09-21T19:16:03+00:00 
-description: "WordPress configuration for connecting to a remote database"
+title: WordPress configuration for connecting to a remote database
+date: 2019-09-21T19:16:03+00:00
+description: WordPress configuration for connecting to a remote database
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- security
 series:
--
+- 
 categories:
 - IT Security
 - WordPress

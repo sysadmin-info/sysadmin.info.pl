@@ -1,7 +1,7 @@
 ---
-title: "How to setup and configure OpenvSwitch in Debian 11"
+title: How to setup and configure OpenvSwitch in Debian 11
 date: 2022-10-15T14:36:56+00:00
-description: "How to setup and configure OpenvSwitch in Debian 11"
+description: How to setup and configure OpenvSwitch in Debian 11
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- OpenvSwitch
 series:
 - Qemu KVM
 categories:

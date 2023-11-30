@@ -1,7 +1,7 @@
 ---
-title: "Managing special permissions and sticky bit in Linux"
-date:  2019-11-02T17:15:40+00:00
-description: "Managing special permissions and sticky bit in Linux"
+title: Managing special permissions and sticky bit in Linux
+date: 2019-11-02T17:15:40+00:00
+description: Managing special permissions and sticky bit in Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:

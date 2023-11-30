@@ -1,7 +1,9 @@
 ---
-title: "Configure the NUT to manage a UPS through the Home Assistant as a Docker container on a Raspberry Pi"
-date:  2022-06-28T14:17:34+00:00
-description: "Configure the NUT to manage a UPS through the Home Assistant as a Docker container on a Raspberry Pi"
+title: Configure the NUT to manage a UPS through the Home Assistant as a Docker container
+  on a Raspberry Pi
+date: 2022-06-28T14:17:34+00:00
+description: Configure the NUT to manage a UPS through the Home Assistant as a Docker
+  container on a Raspberry Pi
 draft: false
 hideToc: false
 enableToc: true
@@ -9,11 +11,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- NUT
-- UPS
 series:
--
+- 
 categories:
 - Raspberry Pi
 image: images/2022-thumbs/raspberry_pi_nut.webp

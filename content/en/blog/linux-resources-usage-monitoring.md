@@ -1,23 +1,16 @@
 ---
-title: "Linux Resources usage monitoring"
+title: Linux Resources usage monitoring
 date: 2019-12-23T16:12:49+00:00
-description: "Linux Resources usage monitoring"
+description: Linux Resources usage monitoring
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- top
-- ps
-- pstree
-- sar
-- vmstat
-- free
 series:
--
+- 
 categories:
 - Linux
 image: images/2019-thumbs/linux-cli.webp

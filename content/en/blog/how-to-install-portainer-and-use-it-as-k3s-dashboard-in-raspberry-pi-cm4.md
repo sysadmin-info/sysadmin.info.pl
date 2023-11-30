@@ -1,7 +1,8 @@
 ---
-title: "How to install Portainer and use it as K3S dashboard in Raspberry Pi CM4"
-date:  2023-10-05T17:20:00+00:00
-description: "How to install Portainer and use it as K3S dashboard in Raspberry Pi CM4"
+title: How to install Portainer and use it as K3S dashboard in Raspberry Pi CM4
+date: 2023-10-05T17:20:00+00:00
+description: How to install Portainer and use it as K3S dashboard in Raspberry Pi
+  CM4
 draft: false
 hideToc: false
 enableToc: true
@@ -10,16 +11,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- Kubernetes
-- k3s
-- Rancher
-- Portainer 
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/k3s-rancher-portainer.webp

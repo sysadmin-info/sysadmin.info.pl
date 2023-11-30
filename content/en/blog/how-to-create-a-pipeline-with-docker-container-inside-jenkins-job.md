@@ -1,7 +1,8 @@
 ---
-title: "How to create a pipeline with docker container inside Jenkins job"
-date:  2023-07-11T12:00:00+00:00
-description: "How to create a pipeline with docker container inside Jenkins job. Fixing issues with dial unix /var/run/docker.sock permissions"
+title: How to create a pipeline with docker container inside Jenkins job
+date: 2023-07-11T12:00:00+00:00
+description: How to create a pipeline with docker container inside Jenkins job. Fixing
+  issues with dial unix /var/run/docker.sock permissions
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +11,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
 series:
 - Jenkins
 categories:

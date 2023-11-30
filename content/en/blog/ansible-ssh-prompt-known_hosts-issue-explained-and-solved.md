@@ -1,7 +1,7 @@
 ---
-title: "Ansible SSH prompt known_hosts issue explained and solved"
-date:  2023-11-19T12:00:00+00:00
-description: "Ansible SSH prompt known_hosts issue explained and solved"
+title: Ansible SSH prompt known_hosts issue explained and solved
+date: 2023-11-19T12:00:00+00:00
+description: Ansible SSH prompt known_hosts issue explained and solved
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +10,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- known_hosts 
-- ssh
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023-thumbs/ansible05.webp
 ---
 

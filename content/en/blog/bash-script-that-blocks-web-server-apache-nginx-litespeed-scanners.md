@@ -1,7 +1,7 @@
 ---
-title: "Bash script that blocks web server (apache/nginx/litespeed) scanners."
+title: Bash script that blocks web server (apache/nginx/litespeed) scanners.
 date: 2021-02-22T20:11:29+00:00
-description: "Bash script that blocks web server (apache/nginx/litespeed) scanners."
+description: Bash script that blocks web server (apache/nginx/litespeed) scanners.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,11 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Bash
-- blocking web server scanners
 series:
--
+- 
 categories:
 - IT security
 image: images/2021-thumbs/bash_script_that_blocks_web_server_scanners.webp

@@ -1,7 +1,7 @@
 ---
-title: "How to Lock and Unlock User in Linux"
+title: How to Lock and Unlock User in Linux
 date: 2019-11-10T12:54:09+00:00
-description: "How to Lock and Unlock User in Linux"
+description: How to Lock and Unlock User in Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:

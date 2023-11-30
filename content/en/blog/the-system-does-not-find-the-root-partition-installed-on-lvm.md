@@ -1,7 +1,7 @@
 ---
-title: "The system does not find the root partition, installed on lvm"
+title: The system does not find the root partition, installed on lvm
 date: 2020-09-20T10:37:17+00:00
-description: "The system does not find the root partition, installed on lvm"
+description: The system does not find the root partition, installed on lvm
 draft: false
 hideToc: false
 enableToc: true
@@ -9,9 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- LVM
-- root partition missing
 series:
 - 
 categories:

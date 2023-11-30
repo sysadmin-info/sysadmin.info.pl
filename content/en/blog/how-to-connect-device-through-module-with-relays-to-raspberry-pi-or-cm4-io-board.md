@@ -1,7 +1,9 @@
 ---
-title: "How to connect device through module with relays to Raspberry Pi or CM4 IO board"
-date:  2023-08-01T09:00:00+00:00
-description: "How to connect device through module with relays to Raspberry Pi or CM4 IO board"
+title: How to connect device through module with relays to Raspberry Pi or CM4 IO
+  board
+date: 2023-08-01T09:00:00+00:00
+description: How to connect device through module with relays to Raspberry Pi or CM4
+  IO board
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +12,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- water cooling
 series:
-- Water cooling for CM4 / Raspberry Pi  
+- Water cooling for CM4 / Raspberry Pi
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/module-with-relays-raspberry-pi-cm4.webp

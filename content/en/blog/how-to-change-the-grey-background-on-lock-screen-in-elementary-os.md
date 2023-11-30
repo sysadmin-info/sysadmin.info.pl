@@ -1,7 +1,7 @@
 ---
-title: "How to change the grey background on lock screen in Elementary OS"
+title: How to change the grey background on lock screen in Elementary OS
 date: 2019-12-21T13:28:49+00:00
-description: "How to change the grey background on lock screen in Elementary OS"
+description: How to change the grey background on lock screen in Elementary OS
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Elementary OS
 series:
--
+- 
 categories:
 - Linux
 image: images/2019-thumbs/elementary-os_background.webp

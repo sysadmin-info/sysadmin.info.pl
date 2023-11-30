@@ -1,7 +1,9 @@
 ---
-title: "The perfect weapon"
-date:  2020-11-14T17:29:44+00:00
-description: "Based on a best-selling book by New York Times national security correspondent David E. Sanger, The Perfect Weapon explores the rise of cyber conflict as the primary way nations now compete with and sabotage one another."
+title: The perfect weapon
+date: 2020-11-14T17:29:44+00:00
+description: Based on a best-selling book by New York Times national security correspondent
+  David E. Sanger, The Perfect Weapon explores the rise of cyber conflict as the primary
+  way nations now compete with and sabotage one another.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,13 +11,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- perfect weapon
-- national security
-- cyberconflicts
-- cyberattacks
 series:
--
+- 
 categories:
 - Documentaries
 image: images/2020-thumbs/perfect-weapon.webp

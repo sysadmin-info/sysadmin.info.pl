@@ -1,7 +1,8 @@
 ---
-title: "Create own website in Dark Web"
+title: Create own website in Dark Web
 date: 2022-03-03T11:59:24+00:00
-description: "The content of this article will let you easily set up your own website in the Dark Web aka Dark Net easily."
+description: The content of this article will let you easily set up your own website
+  in the Dark Web aka Dark Net easily.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,12 +10,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Dark Web
-- Dark Net
-- own website in Dark Web
 series:
--
+- 
 categories:
 - Linux
 image: images/2022-thumbs/darknet.webp

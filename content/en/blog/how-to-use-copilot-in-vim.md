@@ -1,7 +1,7 @@
 ---
-title: "How to use copilot in vim"
-date:  2023-06-01T17:00:00+00:00
-description: "How to use copilot in vim"
+title: How to use copilot in vim
+date: 2023-06-01T17:00:00+00:00
+description: How to use copilot in vim
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- copilot
-- github
 series:
 - copilot
 categories:

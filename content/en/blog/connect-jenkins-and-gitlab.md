@@ -1,7 +1,7 @@
 ---
-title: "Connect Jenkins and GitLab"
-date:  2023-06-11T18:00:00+00:00
-description: "Connect Jenkins and GitLab"
+title: Connect Jenkins and GitLab
+date: 2023-06-11T18:00:00+00:00
+description: Connect Jenkins and GitLab
 draft: false
 hideToc: false
 enableToc: true
@@ -10,10 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
-- GitLab
 series:
 - Jenkins
 categories:

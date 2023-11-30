@@ -1,7 +1,10 @@
 ---
-title: "Agents of chaos"
-date:  2022-03-21T11:36:01+00:00
-description: "Despite appearances, this is not a documentary about Russian interference in the 2016 US presidential election. I would call it a revealing of the cards, showing the truth about the Russian invasion and the reasons for the war in Ukraine first in 2014 and then in 2022."
+title: Agents of chaos
+date: 2022-03-21T11:36:01+00:00
+description: Despite appearances, this is not a documentary about Russian interference
+  in the 2016 US presidential election. I would call it a revealing of the cards,
+  showing the truth about the Russian invasion and the reasons for the war in Ukraine
+  first in 2014 and then in 2022.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,13 +12,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Agents of chaos
-- national security
-- cyberconflicts
-- cyberattacks
 series:
--
+- 
 categories:
 - Documentaries
 image: images/2022-thumbs/agents-of-chaos.webp

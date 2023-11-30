@@ -1,7 +1,7 @@
 ---
-title: "How to flash Raspberry Pi OS onto the Compute Module 4 eMMC with usbboot"
-date:  2023-07-16T13:45:00+00:00
-description: "How to flash Raspberry Pi OS onto the Compute Module 4 eMMC with usbboot"
+title: How to flash Raspberry Pi OS onto the Compute Module 4 eMMC with usbboot
+date: 2023-07-16T13:45:00+00:00
+description: How to flash Raspberry Pi OS onto the Compute Module 4 eMMC with usbboot
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- water cooling
 series:
-- Water cooling for CM4 / Raspberry Pi  
+- Water cooling for CM4 / Raspberry Pi
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/flash-compute-module-4-eMMC.webp

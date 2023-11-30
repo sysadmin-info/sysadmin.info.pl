@@ -1,7 +1,7 @@
 ---
-title: "logwatch auditd analysis"
+title: logwatch auditd analysis
 date: 2020-10-14T07:13:25+00:00
-description: "logwatch auditd analysis"
+description: logwatch auditd analysis
 draft: false
 hideToc: false
 enableToc: true
@@ -9,12 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- security
-- logwatch
-- auditd
 series:
--
+- 
 categories:
 - IT security
 image: images/2020-thumbs/linux-cli.webp

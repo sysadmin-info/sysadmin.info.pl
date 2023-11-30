@@ -1,18 +1,16 @@
 ---
-title: "Welcome to the Sysadmin blog"
-date: 2023-03-19T22:05:03+00:00 
-description: "Welcome to the Sysadmin blog"
+title: Welcome to the Sysadmin blog
+date: 2023-03-19T22:05:03+00:00
+description: Welcome to the Sysadmin blog
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- sysadmin
 series:
--
+- 
 categories:
 - general
 image: images/2019-thumbs/sysadmin-logo.webp

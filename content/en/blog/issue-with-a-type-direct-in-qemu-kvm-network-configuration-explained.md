@@ -1,7 +1,7 @@
 ---
-title: "Issue with a type direct in QEMU KVM network configuration explained"
+title: Issue with a type direct in QEMU KVM network configuration explained
 date: 2022-10-22T11:31:00+00:00
-description: "Issue with a type direct in QEMU KVM network configuration explained"
+description: Issue with a type direct in QEMU KVM network configuration explained
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Qemu KVM
 series:
 - Qemu KVM
 categories:

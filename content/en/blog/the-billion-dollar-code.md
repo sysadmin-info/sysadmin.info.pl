@@ -1,7 +1,8 @@
 ---
-title: "The Billion Dollar Code"
-date:  2023-07-06T08:20:00+00:00
-description: "In 1990s Berlin, an artist and a hacker invented a new way to see the world. Years later, they reunite to sue Google for patent infringement on it."
+title: The Billion Dollar Code
+date: 2023-07-06T08:20:00+00:00
+description: In 1990s Berlin, an artist and a hacker invented a new way to see the
+  world. Years later, they reunite to sue Google for patent infringement on it.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,12 +10,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- The Billion Dollar Code
-- Google Earth
-- German computer pioneers
 series:
--
+- 
 categories:
 - Documentaries
 image: images/2023-thumbs/the-billion-dollar-code.webp

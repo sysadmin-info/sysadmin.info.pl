@@ -1,7 +1,7 @@
 ---
-title: "How to automate installation of K3S, Helm and Rancher using Bash script"
-date:  2023-09-28T14:00:00+00:00
-description: "How to automate installation of K3S, Helm and Rancher using Bash script"
+title: How to automate installation of K3S, Helm and Rancher using Bash script
+date: 2023-09-28T14:00:00+00:00
+description: How to automate installation of K3S, Helm and Rancher using Bash script
 draft: false
 hideToc: false
 enableToc: true
@@ -10,16 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- Kubernetes
-- k3s
-- Rancher
-- Helm
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/k3s-helm-rancher-bash.webp

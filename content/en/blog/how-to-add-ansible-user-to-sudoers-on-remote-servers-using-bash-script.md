@@ -1,7 +1,7 @@
 ---
-title: "How to add ansible user to sudoers on remote servers using Bash script"
-date:  2023-11-11T18:00:00+00:00
-description: "How to add ansible user to sudoers on remote servers using Bash script"
+title: How to add ansible user to sudoers on remote servers using Bash script
+date: 2023-11-11T18:00:00+00:00
+description: How to add ansible user to sudoers on remote servers using Bash script
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +10,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- Bash
-- sshpass 
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023-thumbs/ansible02.webp
 ---
 

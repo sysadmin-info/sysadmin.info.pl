@@ -1,7 +1,7 @@
 ---
-title: "How to install properly a virtual machine in QEMU KVM"
+title: How to install properly a virtual machine in QEMU KVM
 date: 2022-10-25T11:39:32+00:00
-description: "How to install properly a virtual machine in QEMU KVM"
+description: How to install properly a virtual machine in QEMU KVM
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Qemu KVM
 series:
 - Qemu KVM
 categories:

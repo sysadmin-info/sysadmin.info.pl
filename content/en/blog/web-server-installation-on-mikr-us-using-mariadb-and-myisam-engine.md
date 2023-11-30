@@ -1,18 +1,16 @@
 ---
-title: "Web server installation on mikr.us using MariaDB and MyISAM engine"
+title: Web server installation on mikr.us using MariaDB and MyISAM engine
 date: 2019-09-22T17:40:40+00:00
-description: "Web server installation on mikr.us using MariaDB and MyISAM engine"
+description: Web server installation on mikr.us using MariaDB and MyISAM engine
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- security
 series:
--
+- 
 categories:
 - mikr.us
 image: images/2019-thumbs/mariadb.webp

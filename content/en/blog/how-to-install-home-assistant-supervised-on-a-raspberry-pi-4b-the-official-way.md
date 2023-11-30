@@ -1,7 +1,9 @@
 ---
-title: "How to Install Home Assistant Supervised on a Raspberry Pi 4b – the official way"
-date:  2022-07-29T09:39:10+00:00
-description: "How to Install Home Assistant Supervised on a Raspberry Pi 4b – the official way"
+title: How to Install Home Assistant Supervised on a Raspberry Pi 4b – the official
+  way
+date: 2022-07-29T09:39:10+00:00
+description: How to Install Home Assistant Supervised on a Raspberry Pi 4b – the official
+  way
 draft: false
 hideToc: false
 enableToc: true
@@ -9,9 +11,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Home Assistant
-- Raspberry Pi
 series:
 - 
 categories:

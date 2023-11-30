@@ -1,7 +1,7 @@
 ---
-title: "How to setup and configure OpenvSwitch in openSUSE 15.4"
+title: How to setup and configure OpenvSwitch in openSUSE 15.4
 date: 2022-10-13T11:00:08+00:00
-description: "How to setup and configure OpenvSwitch in openSUSE 15.4"
+description: How to setup and configure OpenvSwitch in openSUSE 15.4
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- OpenvSwitch
 series:
 - Qemu KVM
 categories:

@@ -1,7 +1,7 @@
 ---
-title: "How to add Docker as node in Jenkins"
-date:  2023-06-14T14:00:00+00:00
-description: "How to add Docker as node in Jenkins"
+title: How to add Docker as node in Jenkins
+date: 2023-06-14T14:00:00+00:00
+description: How to add Docker as node in Jenkins
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
 series:
 - Jenkins
 categories:

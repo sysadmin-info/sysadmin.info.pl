@@ -1,16 +1,14 @@
 ---
-title: "How to download Red Hat image needed to install the system."
-date: 2019-10-02T19:40:37+00:00 
-description: "How to download Red Hat image needed to install the system."
+title: How to download Red Hat image needed to install the system.
+date: 2019-10-02T19:40:37+00:00
+description: How to download Red Hat image needed to install the system.
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:
