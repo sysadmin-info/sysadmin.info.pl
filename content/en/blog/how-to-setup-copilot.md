@@ -62,7 +62,7 @@ vim -version
 
 #### Install vim (9.0.0185 or newer) from source
 
-```
+```bash
 cd $HOME
 git clone https://github.com/vim/vim.git
 cd $HOME/vim/src
@@ -76,14 +76,14 @@ sudo make install
 #### Persistent settings
 To get these settings persistent, just add in your .bashrc or .zshrc
 
-```
+```vim
 NB_CORES=$(grep -c '^processor' /proc/cpuinfo)
 export MAKEFLAGS="-j$((NB_CORES+1)) -l${NB_CORES}"
 ```
 
 And then type:
 
-```
+```bash
 source ~/.zshrc # or .bashrc
 ```
 
@@ -127,19 +127,19 @@ node -v
 
 #### Install copilot
 
-```
+```bash
 git clone https://github.com/github/copilot.vim.git \ 
   $HOME/.vim/pack/github/start/copilot.vim
 ```
 
 #### Create a .vimrc file in your $HOME directory and put the below into it and save
 
-```
+```bash
 cd $HOME
 vim .vimrc
 ```
 
-```
+```vim
 " Add numbers to each line on the left-hand side.
  set number
 
@@ -162,13 +162,13 @@ syntax on
 
 #### Open vim
 
-```
+```bash
 vim
 ```
 
 Type
 
-```
+```vim
 :Copilot setup
 ```
 
