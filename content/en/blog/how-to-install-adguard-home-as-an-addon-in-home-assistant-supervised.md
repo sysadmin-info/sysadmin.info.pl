@@ -25,7 +25,7 @@ This video describes how to install Adguard Home addon in Home Assistant Supervi
 
 ##### Install AdGuard Home addon in the Settings -> Addons - Addons shop
 
-##### Because AdGuard Home will be our resolver and we do not want to see the below warnings when we check the status:
+Because AdGuard Home will be our resolver and we do not want to see the below warnings when we check the status:
 
 ```bash
 sudo systemctl status systemd-resolved.service
@@ -87,9 +87,10 @@ The TCP protocol entries from LISTEN are responsible for the web server on port 
 
 If you enable AdGuard browsing security web service, XXX.XXX.XXX.XXX:443 will appear.
 
-##### Now switch all three switchers and start the AdGuard Home addon in Home Assistant and select show on the sidebar
+Now switch all three switchers and start the AdGuard Home addon in Home Assistant and select show on the sidebar
 
-##### it will not work. Why? Because you need to allow the port that the container is using. How to check it? See the below command:
+It will not work. Why? Because you need to allow the port that the container is using. How to check it? See the below command:
+
 ```bash
 sudo ss -tulpn | grep LISTEN
 sudo netstat -napletu | grep LISTEN
@@ -115,7 +116,7 @@ sudo ufw allow 62048/tcp
 
 ##### Now the AdGuard Home panel will load
 
-##### The same situation is with every addon you will install , that contains a switcher (link) on a sidebar on the left side. You check the port and allow the port.
+The same situation is with every addon you will install , that contains a switcher (link) on a sidebar on the left side. You check the port and allow the port.
 
 ```
 Exclusions:
@@ -126,17 +127,10 @@ Exclusions:
 Additional filters:
 
 [MajkiIT Polish PiHole](https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-pihole-filters/all_ads_filters.txt)
-
 [MajkiIT Polish Adguard](https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-adblock-filters/adblock_adguard.txt)
-
 [Cert Polska](https://hole.cert.pl/domains/domains.txt)
-
 [KAD hosts](https://raw.githubusercontent.com/FiltersHeroes/KADhosts/master/KADhosts.txt)
-
 [URLHaus](https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-agh.txt)
-
 [UncheckyAds](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts)
-
 [Phishing Hosts Blocklist](https://malware-filter.gitlab.io/malware-filter/phishing-filter-hosts.txt)
-
 [Dandelion Sprout's Anti-Malware Hosts (Alpha)](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt)
