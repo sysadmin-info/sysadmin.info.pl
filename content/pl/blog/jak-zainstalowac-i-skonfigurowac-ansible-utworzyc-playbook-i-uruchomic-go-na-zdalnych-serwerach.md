@@ -1,7 +1,9 @@
 ---
-title: "Jak zainstalować i skonfigurować Ansible, utworzyć playbook i uruchomić go na zdalnych serwerach"
-date:  2023-11-11T20:00:00+00:00
-description: "Jak zainstalować i skonfigurować Ansible, utworzyć playbook i uruchomić go na zdalnych serwerach"
+title: Jak zainstalować i skonfigurować Ansible, utworzyć playbook i uruchomić go
+  na zdalnych serwerach
+date: 2023-11-11T20:00:00+00:00
+description: Jak zainstalować i skonfigurować Ansible, utworzyć playbook i uruchomić
+  go na zdalnych serwerach
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +12,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- Bash
-- sshpass 
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023-thumbs/ansible04.webp
 ---
 

@@ -1,7 +1,8 @@
 ---
-title: "Kod wart miliardy dolarów"
-date:  2023-07-06T08:30:00+00:00
-description: "W latach 90. w Berlinie artysta i haker wymyślili nowy sposób patrzenia na świat. Po latach połączyli siły, by pozwać Google za naruszenie patentu."
+title: Kod wart miliardy dolarów
+date: 2023-07-06T08:30:00+00:00
+description: W latach 90. w Berlinie artysta i haker wymyślili nowy sposób patrzenia
+  na świat. Po latach połączyli siły, by pozwać Google za naruszenie patentu.
 draft: false
 hideToc: false
 enableToc: true
@@ -9,14 +10,10 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Kod wart miliardy dolarów
-- Google Earth
-- Niemieccy pionierzy komputerowi
 series:
--
+- 
 categories:
-- Filmy dokumentalne 
+- Filmy dokumentalne
 image: images/2023-thumbs/the-billion-dollar-code.webp
 ---
 {{< youtube E9Sei2-NjeE >}}

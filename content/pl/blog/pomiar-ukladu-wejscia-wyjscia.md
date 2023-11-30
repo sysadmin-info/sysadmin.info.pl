@@ -1,20 +1,16 @@
 ---
-title: "Pomiar układu wejścia/wyjścia"
+title: Pomiar układu wejścia/wyjścia
 date: 2019-12-23T16:55:46+00:00
-description: "Pomiar układu wejścia/wyjścia"
+description: Pomiar układu wejścia/wyjścia
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- netstat
-- iostat
-- lsof
 series:
--
+- 
 categories:
 - Linux
 image: images/2019-thumbs/linux-cli.webp

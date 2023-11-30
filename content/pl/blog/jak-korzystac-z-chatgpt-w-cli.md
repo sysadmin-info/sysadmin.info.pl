@@ -1,7 +1,9 @@
 ---
-title: "Jak korzystać z ChatGPT za pomocą interfejsu API w wierszu poleceń systemu Linux"
-date:  2023-05-25T12:25:00+00:00
-description: "Jak korzystać z ChatGPT za pomocą interfejsu API w wierszu poleceń systemu Linux (CLI)"
+title: Jak korzystać z ChatGPT za pomocą interfejsu API w wierszu poleceń systemu
+  Linux
+date: 2023-05-25T12:25:00+00:00
+description: Jak korzystać z ChatGPT za pomocą interfejsu API w wierszu poleceń systemu
+  Linux (CLI)
 draft: false
 hideToc: false
 enableToc: true
@@ -10,10 +12,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- chatGPT
-- openAI
-- LLM
 series:
 - chatGPT
 categories:

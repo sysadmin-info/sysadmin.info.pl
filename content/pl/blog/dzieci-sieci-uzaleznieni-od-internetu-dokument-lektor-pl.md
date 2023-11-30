@@ -1,7 +1,7 @@
 ---
-title: "Dzieci sieci – uzależnieni od Internetu – Dokument Lektor PL"
-date:  2019-11-03T09:39:45+00:00
-description: "Dzieci sieci – uzależnieni od Internetu – Dokument Lektor PL"
+title: Dzieci sieci – uzależnieni od Internetu – Dokument Lektor PL
+date: 2019-11-03T09:39:45+00:00
+description: Dzieci sieci – uzależnieni od Internetu – Dokument Lektor PL
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- uzależnienie od Internetu
 series:
--
+- 
 categories:
 - Filmy dokumentalne
 image: images/2019-thumbs/china-web-junkies.webp

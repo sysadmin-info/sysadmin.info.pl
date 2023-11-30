@@ -1,7 +1,7 @@
 ---
-title: "Jak zainstalować Red Hat OpenShift CodeReady Containers w systemie Linux"
+title: Jak zainstalować Red Hat OpenShift CodeReady Containers w systemie Linux
 date: 2023-11-19T16:00:00+00:00
-description: "Jak zainstalować Red Hat OpenShift CodeReady Containers w systemie Linux"
+description: Jak zainstalować Red Hat OpenShift CodeReady Containers w systemie Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -10,10 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- OpenShift
-- crc
-- CodeReady Containers
 series:
 - OpenShift
 categories:

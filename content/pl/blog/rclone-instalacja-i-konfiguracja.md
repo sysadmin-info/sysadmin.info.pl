@@ -1,7 +1,7 @@
 ---
-title: "rclone – instalacja i konfiguracja"
-date: 2019-09-27T20:05:35+00:00 
-description: "rclone – instalacja i konfiguracja"
+title: rclone – instalacja i konfiguracja
+date: 2019-09-27T20:05:35+00:00
+description: rclone – instalacja i konfiguracja
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- rclone
 series:
--
+- 
 categories:
 - mikr.us
 image: images/2019-thumbs/rclone.webp

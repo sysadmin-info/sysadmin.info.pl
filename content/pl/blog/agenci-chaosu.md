@@ -1,7 +1,7 @@
 ---
-title: "Agenci chaosu"
-date:  2022-03-21T11:34:34+00:00
-description: "Agenci chaosu"
+title: Agenci chaosu
+date: 2022-03-21T11:34:34+00:00
+description: Agenci chaosu
 draft: false
 hideToc: false
 enableToc: true
@@ -9,13 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Agents of chaos
-- bezpieczeństwo narodowe
-- cyberkonflikty
-- cyberataki 
 series:
--
+- 
 categories:
 - Filmy dokumentalne
 image: images/2022-thumbs/agents-of-chaos.webp

@@ -1,7 +1,7 @@
 ---
-title: "Co to jest plik known_hosts w systemie Linux"
-date:  2023-11-14T15:00:00+00:00
-description: "Co to jest plik known_hosts w systemie Linux"
+title: Co to jest plik known_hosts w systemie Linux
+date: 2023-11-14T15:00:00+00:00
+description: Co to jest plik known_hosts w systemie Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +10,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- known_hosts 
-- ssh
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023/mitm.webp
 ---
 

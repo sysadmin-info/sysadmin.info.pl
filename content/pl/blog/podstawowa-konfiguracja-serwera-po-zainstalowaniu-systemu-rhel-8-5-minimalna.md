@@ -1,7 +1,7 @@
 ---
-title: "Podstawowa konfiguracja serwera po zainstalowaniu systemu RHEL 8.5 (minimalna)."
-date:  2022-03-03T11:50:26+00:00
-description: "Podstawowa konfiguracja serwera po zainstalowaniu systemu RHEL 8.5 (minimalna)."
+title: Podstawowa konfiguracja serwera po zainstalowaniu systemu RHEL 8.5 (minimalna).
+date: 2022-03-03T11:50:26+00:00
+description: Podstawowa konfiguracja serwera po zainstalowaniu systemu RHEL 8.5 (minimalna).
 draft: false
 hideToc: false
 enableToc: true
@@ -9,9 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- Bash
-- security
 series:
 - 
 categories:

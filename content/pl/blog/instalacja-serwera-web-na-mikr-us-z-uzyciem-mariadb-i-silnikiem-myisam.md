@@ -1,7 +1,7 @@
 ---
-title: "Instalacja serwera web na mikr.us z użyciem MariaDB i silnikiem MyISAM"
-date: 2019-09-22T17:38:56+00:00 
-description: "Instalacja serwera web na mikr.us z użyciem MariaDB i silnikiem MyISAM"
+title: Instalacja serwera web na mikr.us z użyciem MariaDB i silnikiem MyISAM
+date: 2019-09-22T17:38:56+00:00
+description: Instalacja serwera web na mikr.us z użyciem MariaDB i silnikiem MyISAM
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- mikr.us
 series:
--
+- 
 categories:
 - Linux
 image: images/2019-thumbs/mariadb.webp

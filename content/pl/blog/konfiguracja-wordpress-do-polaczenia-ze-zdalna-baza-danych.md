@@ -1,7 +1,7 @@
 ---
-title: "Konfiguracja WordPress do połączenia ze zdalną bazą danych"
-date: 2019-09-22T17:34:27+00:00 
-description: "Konfiguracja WordPress do połączenia ze zdalną bazą danych"
+title: Konfiguracja WordPress do połączenia ze zdalną bazą danych
+date: 2019-09-22T17:34:27+00:00
+description: Konfiguracja WordPress do połączenia ze zdalną bazą danych
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- security
 series:
--
+- 
 categories:
 - IT Security
 - WordPress

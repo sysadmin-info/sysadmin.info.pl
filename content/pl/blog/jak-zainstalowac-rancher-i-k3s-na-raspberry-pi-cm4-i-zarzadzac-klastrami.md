@@ -1,7 +1,7 @@
 ---
-title: "Jak zainstalować rancher i K3S na Raspberry Pi CM4 i zarządzać klastrami"
-date:  2023-09-08T16:00:00+00:00
-description: "Jak zainstalować rancher i K3S na Raspberry Pi CM4 i zarządzać klastrami"
+title: Jak zainstalować rancher i K3S na Raspberry Pi CM4 i zarządzać klastrami
+date: 2023-09-08T16:00:00+00:00
+description: Jak zainstalować rancher i K3S na Raspberry Pi CM4 i zarządzać klastrami
 draft: false
 hideToc: false
 enableToc: true
@@ -10,16 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 board
-- CM4 compute module
-- Kubernetes
-- k3s
-- rancher
-- helm
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/k3s-rancher.webp

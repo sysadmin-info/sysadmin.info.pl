@@ -1,23 +1,16 @@
 ---
-title: "Monitorowanie wykorzystania zasobów systemu Linux"
+title: Monitorowanie wykorzystania zasobów systemu Linux
 date: 2019-12-23T16:12:05+00:00
-description: "Monitorowanie wykorzystania zasobów systemu Linux"
+description: Monitorowanie wykorzystania zasobów systemu Linux
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
-authorEmoji: 🐧 
+authorEmoji: 🐧
 pinned: false
-tags:
-- top
-- ps
-- pstree
-- sar
-- vmstat
-- free
 series:
--
+- 
 categories:
 - Linux
 image: images/2019-thumbs/linux-cli.webp

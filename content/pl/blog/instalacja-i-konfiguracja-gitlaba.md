@@ -1,7 +1,7 @@
 ---
-title: "Instalacja i konfiguracja GitLaba"
-date:  2023-06-10T12:30:00+00:00
-description: "Instalacja i konfiguracja GitLaba"
+title: Instalacja i konfiguracja GitLaba
+date: 2023-06-10T12:30:00+00:00
+description: Instalacja i konfiguracja GitLaba
 draft: false
 hideToc: false
 enableToc: true
@@ -10,10 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
-- GitLab
 series:
 - Jenkins
 categories:

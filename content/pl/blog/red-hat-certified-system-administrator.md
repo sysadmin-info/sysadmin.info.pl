@@ -1,16 +1,14 @@
 ---
-title: "RHCSA - Red Hat Certified System Administrator"
-date: 2019-09-30T21:35:31+00:00 
-description: "RHCSA - Red Hat Certified System Administrator"
+title: RHCSA - Red Hat Certified System Administrator
+date: 2019-09-30T21:35:31+00:00
+description: RHCSA - Red Hat Certified System Administrator
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
-pinned: false 
-tags:
-- RHCSA 
+pinned: false
 series:
 - RHCSA
 categories:

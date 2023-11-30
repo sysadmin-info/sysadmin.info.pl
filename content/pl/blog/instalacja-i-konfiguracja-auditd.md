@@ -1,7 +1,7 @@
 ---
-title: "Instalacja i konfiguracja auditd"
+title: Instalacja i konfiguracja auditd
 date: 2021-02-14T14:49:24+00:00
-description: "Instalacja i konfiguracja auditd"
+description: Instalacja i konfiguracja auditd
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- auditd
 series:
--
+- 
 categories:
 - IT security
 image: images/2021-thumbs/sysadmin-YT-thumb.webp

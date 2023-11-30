@@ -1,7 +1,9 @@
 ---
-title: "water cooling dla płytki bazowej CM4 IO wraz z modułem Rasberry Pi CM4 i dyskiem NVMe SSD"
-date:  2023-07-14T15:00:00+00:00
-description: "water cooling dla płytki bazowej CM4 IO wraz z modułem Rasberry Pi CM4 i dyskiem NVMe SSD"
+title: water cooling dla płytki bazowej CM4 IO wraz z modułem Rasberry Pi CM4 i dyskiem
+  NVMe SSD
+date: 2023-07-14T15:00:00+00:00
+description: water cooling dla płytki bazowej CM4 IO wraz z modułem Rasberry Pi CM4
+  i dyskiem NVMe SSD
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +12,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 IO
-- CM4 compute module
-- water cooling
 series:
-- water cooling dla CM4 / Raspberry Pi  
+- water cooling dla CM4 / Raspberry Pi
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/water-cooling-CM4.webp

@@ -1,7 +1,7 @@
 ---
-title: "SELinux polityka bezpieczeństwa"
-date: 2019-09-22T17:26:09+00:00 
-description: "SELinux polityka bezpieczeństwa"
+title: SELinux polityka bezpieczeństwa
+date: 2019-09-22T17:26:09+00:00
+description: SELinux polityka bezpieczeństwa
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- selinux
 series:
--
+- 
 categories:
 - IT Security
 - Linux

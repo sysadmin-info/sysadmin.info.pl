@@ -1,7 +1,9 @@
 ---
-title: "Dlaczego AGI nie zostanie zrealizowane? Osobliwość nie jest bliska. Czy nasz mózg wykorzystuje obliczenia kwantowe?"
-date:  2023-06-14T22:00:00+00:00
-description: "Dlaczego AGI nie zostanie zrealizowane? Osobliwość nie jest bliska. Czy nasz mózg wykorzystuje obliczenia kwantowe?"
+title: Dlaczego AGI nie zostanie zrealizowane? Osobliwość nie jest bliska. Czy nasz
+  mózg wykorzystuje obliczenia kwantowe?
+date: 2023-06-14T22:00:00+00:00
+description: Dlaczego AGI nie zostanie zrealizowane? Osobliwość nie jest bliska. Czy
+  nasz mózg wykorzystuje obliczenia kwantowe?
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +12,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- AGI
-- Osobliwość
 series:
 - AI
 categories:

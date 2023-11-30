@@ -1,7 +1,8 @@
 ---
-title: "Jak odinstalować k3s i zainstalować go bezpiecznie bez traefik"
-date:  2023-08-20T15:00:00+00:00
-description: "Jak odinstalować k3s i zainstalować go bezpiecznie bez traefik w Raspberry Pi CM4"
+title: Jak odinstalować k3s i zainstalować go bezpiecznie bez traefik
+date: 2023-08-20T15:00:00+00:00
+description: Jak odinstalować k3s i zainstalować go bezpiecznie bez traefik w Raspberry
+  Pi CM4
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +11,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- Moduł obliczeniowy CM4
-- Płyta CM4
-- Kubernetes
-- k3s 
 series:
-- Kubernetes 
+- Kubernetes
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/k3s-traefik.webp

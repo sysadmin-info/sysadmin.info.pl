@@ -1,7 +1,7 @@
 ---
-title: "Jak sklonować CM4 eMMC na NVMe i uruchomić system"
-date:  2023-07-20T17:20:00+00:00
-description: "Jak sklonować CM4 eMMC na NVMe i uruchomić system"
+title: Jak sklonować CM4 eMMC na NVMe i uruchomić system
+date: 2023-07-20T17:20:00+00:00
+description: Jak sklonować CM4 eMMC na NVMe i uruchomić system
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 IO
-- CM4 compute module
-- water cooling
 series:
-- water cooling dla CM4 / Raspberry Pi  
+- water cooling dla CM4 / Raspberry Pi
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/how-to-clone-cm4-emmc-onto-nvme-and-boot.webp

@@ -1,7 +1,7 @@
 ---
-title: "Jak zainstalować k3s na klastrze Raspberry Pi CM4 przy użyciu Ansible"
-date:  2023-11-22T12:00:00+00:00
-description: "Jak zainstalować k3s na klastrze Raspberry Pi CM4 przy użyciu Ansible"
+title: Jak zainstalować k3s na klastrze Raspberry Pi CM4 przy użyciu Ansible
+date: 2023-11-22T12:00:00+00:00
+description: Jak zainstalować k3s na klastrze Raspberry Pi CM4 przy użyciu Ansible
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +10,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- k3s
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023-thumbs/ansible06.webp
 ---
 

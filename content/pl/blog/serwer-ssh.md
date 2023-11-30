@@ -1,6 +1,7 @@
 ---
-title: "Serwer SSH"
-description: "Konfiguracja serwera SSH w celu zalogowania się do serwera ze zdalnego komputera."
+title: Serwer SSH
+description: Konfiguracja serwera SSH w celu zalogowania się do serwera ze zdalnego
+  komputera.
 date: 2023-04-01T14:50:34+02:00
 hideToc: false
 enableToc: true
@@ -10,11 +11,9 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 categories:
-  - RHCSA 
-tags:
-  - SSH
+- RHCSA
 series:
-  - RHCSA
+- RHCSA
 
 draft: false
 image: images/2023-thumbs/ssh.webp

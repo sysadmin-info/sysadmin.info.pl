@@ -1,7 +1,9 @@
 ---
-title: "Jak zainstalować Raspberry Pi OS na modułach Compute Module 4 z pamięcią eMMC za pomocą usbboot"
-date:  2023-07-16T13:45:00+00:00
-description: "Jak zainstalować Raspberry Pi OS na modułach Compute Module 4 z pamięcią eMMC za pomocą usbboot"
+title: Jak zainstalować Raspberry Pi OS na modułach Compute Module 4 z pamięcią eMMC
+  za pomocą usbboot
+date: 2023-07-16T13:45:00+00:00
+description: Jak zainstalować Raspberry Pi OS na modułach Compute Module 4 z pamięcią
+  eMMC za pomocą usbboot
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +12,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 IO
-- CM4 compute module
-- water cooling
 series:
-- water cooling dla CM4 / Raspberry Pi  
+- water cooling dla CM4 / Raspberry Pi
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/flash-compute-module-4-eMMC.webp

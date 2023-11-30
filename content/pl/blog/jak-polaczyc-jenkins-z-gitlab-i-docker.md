@@ -1,7 +1,7 @@
 ---
-title: "Jak połączyć Jenkins z GitLab i Docker"
-date:  2023-06-09T21:30:00+00:00
-description: "Jak połączyć Jenkins z GitLab i Docker"
+title: Jak połączyć Jenkins z GitLab i Docker
+date: 2023-06-09T21:30:00+00:00
+description: Jak połączyć Jenkins z GitLab i Docker
 draft: false
 hideToc: false
 enableToc: true
@@ -10,10 +10,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
-- GitLab
 series:
 - Jenkins
 categories:

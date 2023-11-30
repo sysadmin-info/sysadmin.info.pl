@@ -1,7 +1,7 @@
 ---
-title: "Lista Kontroli Dostępu w Linux"
+title: Lista Kontroli Dostępu w Linux
 date: 2019-11-11T22:00:40+00:00
-description: "Lista Kontroli Dostępu w Linux"
+description: Lista Kontroli Dostępu w Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:

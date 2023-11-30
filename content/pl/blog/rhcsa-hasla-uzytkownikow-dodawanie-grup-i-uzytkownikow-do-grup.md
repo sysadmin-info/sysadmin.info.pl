@@ -1,7 +1,7 @@
 ---
-title: "RHCSA – Hasła użytkowników. Dodawanie grup i użytkowników do grup"
-date:  2019-10-03T09:41:57+00:00
-description: "RHCSA – Hasła użytkowników. Dodawanie grup i użytkowników do grup"
+title: RHCSA – Hasła użytkowników. Dodawanie grup i użytkowników do grup
+date: 2019-10-03T09:41:57+00:00
+description: RHCSA – Hasła użytkowników. Dodawanie grup i użytkowników do grup
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:

@@ -1,7 +1,7 @@
 ---
-title: "Witaj na blogu Sysadmin"
-date:  2023-03-19T22:08:59+00:00
-description: "Witaj na blogu Sysadmin"
+title: Witaj na blogu Sysadmin
+date: 2023-03-19T22:08:59+00:00
+description: Witaj na blogu Sysadmin
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- sysadmin
 series:
--
+- 
 categories:
 - general
 image: images/2019-thumbs/sysadmin-logo.webp

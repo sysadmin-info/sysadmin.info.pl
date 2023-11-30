@@ -1,7 +1,8 @@
 ---
-title: "Jak korzystać z chatGPT i czatu Bing w wierszu poleceń systemu Linux"
-date:  2023-05-28T09:30:00+00:00
-description: "Jak korzystać z chatGPT i czatu Bing w wierszu poleceń systemu Linux (CLI)"
+title: Jak korzystać z chatGPT i czatu Bing w wierszu poleceń systemu Linux
+date: 2023-05-28T09:30:00+00:00
+description: Jak korzystać z chatGPT i czatu Bing w wierszu poleceń systemu Linux
+  (CLI)
 draft: false
 hideToc: false
 enableToc: true
@@ -10,10 +11,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- chatGPT
-- openAI
-- LLM
 series:
 - chatGPT
 categories:

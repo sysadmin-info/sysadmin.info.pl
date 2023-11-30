@@ -1,7 +1,7 @@
 ---
-title: "fail2ban – instalacja i konfiguracja"
-date: 2019-09-28T07:04:56+00:00 
-description: "fail2ban – instalacja i konfiguracja"
+title: fail2ban – instalacja i konfiguracja
+date: 2019-09-28T07:04:56+00:00
+description: fail2ban – instalacja i konfiguracja
 draft: false
 hideToc: false
 enableToc: true
@@ -9,10 +9,8 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- fail2ban
 series:
--
+- 
 categories:
 - IT security
 image: images/2019-thumbs/fail2ban.webp

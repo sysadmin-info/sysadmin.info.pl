@@ -1,7 +1,9 @@
 ---
-title: "Jak podłączyć urządzenie przez moduł z przekaźnikami do Raspberry Pi lub płytki CM4 IO"
-date:  2023-08-01T09:00:00+00:00
-description: "Jak podłączyć urządzenie przez moduł z przekaźnikami do Raspberry Pi lub płytki CM4 IO"
+title: Jak podłączyć urządzenie przez moduł z przekaźnikami do Raspberry Pi lub płytki
+  CM4 IO
+date: 2023-08-01T09:00:00+00:00
+description: Jak podłączyć urządzenie przez moduł z przekaźnikami do Raspberry Pi
+  lub płytki CM4 IO
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +12,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- CM4
-- CM4 IO
-- CM4 compute module
-- water cooling
 series:
-- Water cooling dla CM4 / Raspberry Pi  
+- Water cooling dla CM4 / Raspberry Pi
 categories:
 - Raspberry Pi
 image: images/2023-thumbs/module-with-relays-raspberry-pi-cm4.webp

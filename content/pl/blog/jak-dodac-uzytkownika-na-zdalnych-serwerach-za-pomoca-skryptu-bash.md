@@ -1,7 +1,7 @@
 ---
-title: "Jak dodać użytkownika na zdalnych serwerach za pomocą skryptu Bash"
-date:  2023-11-11T17:00:00+00:00
-description: "Jak dodać użytkownika na zdalnych serwerach za pomocą skryptu Bash"
+title: Jak dodać użytkownika na zdalnych serwerach za pomocą skryptu Bash
+date: 2023-11-11T17:00:00+00:00
+description: Jak dodać użytkownika na zdalnych serwerach za pomocą skryptu Bash
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +10,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- Bash
-- sshpass 
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023-thumbs/ansible01.webp
 ---
 

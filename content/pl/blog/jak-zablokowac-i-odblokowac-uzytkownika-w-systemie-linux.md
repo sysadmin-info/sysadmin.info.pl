@@ -1,7 +1,7 @@
 ---
-title: "Jak zablokować i odblokować użytkownika w systemie Linux"
+title: Jak zablokować i odblokować użytkownika w systemie Linux
 date: 2019-11-10T15:13:39+00:00
-description: "Jak zablokować i odblokować użytkownika w systemie Linux"
+description: Jak zablokować i odblokować użytkownika w systemie Linux
 draft: false
 hideToc: false
 enableToc: true
@@ -9,8 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- RHCSA
 series:
 - RHCSA
 categories:

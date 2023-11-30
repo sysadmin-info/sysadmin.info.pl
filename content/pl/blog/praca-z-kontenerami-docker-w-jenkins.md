@@ -1,7 +1,8 @@
 ---
-title: "Praca z kontenerami Docker w Jenkins"
-date:  2023-07-11T20:00:00+00:00
-description: "Praca z kontenerami Docker w Jenkins. Rozwiązywanie problemu z brakującą przestrzenią"
+title: Praca z kontenerami Docker w Jenkins
+date: 2023-07-11T20:00:00+00:00
+description: Praca z kontenerami Docker w Jenkins. Rozwiązywanie problemu z brakującą
+  przestrzenią
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +11,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
 series:
 - Jenkins
 categories:

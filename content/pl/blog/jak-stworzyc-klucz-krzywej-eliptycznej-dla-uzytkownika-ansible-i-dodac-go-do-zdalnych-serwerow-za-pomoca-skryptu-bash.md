@@ -1,7 +1,9 @@
 ---
-title: "Jak stworzyć klucz krzywej eliptycznej dla użytkownika ansible i dodać go do zdalnych serwerów za pomocą skryptu Bash"
-date:  2023-11-11T19:00:00+00:00
-description: "Jak stworzyć klucz krzywej eliptycznej dla użytkownika ansible i dodać go do zdalnych serwerów za pomocą skryptu Bash"
+title: Jak stworzyć klucz krzywej eliptycznej dla użytkownika ansible i dodać go do
+  zdalnych serwerów za pomocą skryptu Bash
+date: 2023-11-11T19:00:00+00:00
+description: Jak stworzyć klucz krzywej eliptycznej dla użytkownika ansible i dodać
+  go do zdalnych serwerów za pomocą skryptu Bash
 draft: false
 hideToc: false
 enableToc: true
@@ -10,14 +12,10 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Ansible
-- Bash
-- sshpass 
 series:
 - Ansible
 categories:
-- Ansible 
+- Ansible
 image: images/2023-thumbs/ansible03.webp
 ---
 

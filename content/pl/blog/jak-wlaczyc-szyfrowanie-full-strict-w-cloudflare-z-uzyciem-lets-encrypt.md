@@ -1,7 +1,7 @@
 ---
-title: "Jak włączyć szyfrowanie full strict w Cloudflare z użyciem Let’s Encrypt"
-date:  2020-10-03T15:58:03+00:00
-description: "Jak włączyć szyfrowanie full strict w Cloudflare z użyciem Let’s Encrypt"
+title: Jak włączyć szyfrowanie full strict w Cloudflare z użyciem Let’s Encrypt
+date: 2020-10-03T15:58:03+00:00
+description: Jak włączyć szyfrowanie full strict w Cloudflare z użyciem Let’s Encrypt
 draft: false
 hideToc: false
 enableToc: true
@@ -9,11 +9,6 @@ enableTocContent: false
 author: sysadmin
 authorEmoji: 🐧
 pinned: false
-tags:
-- szyfrowanie full strict
-- Cloudflare
-- zarządzanie DNS
-- CNAME
 series:
 - 
 categories:

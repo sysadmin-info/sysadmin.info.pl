@@ -1,7 +1,7 @@
 ---
-title: "Jak dodać termostat Eurotronic Spirit Z-Wave Plus do Home Assistant"
-date:  2023-10-24T17:00:00+00:00
-description: "Jak dodać termostat Eurotronic Spirit Z-Wave Plus do Home Assistant"
+title: Jak dodać termostat Eurotronic Spirit Z-Wave Plus do Home Assistant
+date: 2023-10-24T17:00:00+00:00
+description: Jak dodać termostat Eurotronic Spirit Z-Wave Plus do Home Assistant
 draft: false
 hideToc: false
 enableToc: true
@@ -10,13 +10,8 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Eurotronic Spirit Z-Wave Plus
-- Z-Wave
-- thermostat
-- Home Assistan
 series:
-- Z-Wave 
+- Z-Wave
 categories:
 - Home Assistant
 image: images/2023-thumbs/eurotronic_spirit_z-wave_plus_thermostat.webp

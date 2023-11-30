@@ -1,7 +1,8 @@
 ---
-title: "Jak stworzyć pipeline z kontenerem Docker w zadaniu Jenkins"
-date:  2023-07-11T12:00:00+00:00
-description: "Jak stworzyć pipeline z kontenerem Docker w zadaniu Jenkins. Rozwiązywanie problemów z uprawnieniami dla dial unix /var/run/docker.sock"
+title: Jak stworzyć pipeline z kontenerem Docker w zadaniu Jenkins
+date: 2023-07-11T12:00:00+00:00
+description: Jak stworzyć pipeline z kontenerem Docker w zadaniu Jenkins. Rozwiązywanie
+  problemów z uprawnieniami dla dial unix /var/run/docker.sock
 draft: false
 hideToc: false
 enableToc: true
@@ -10,9 +11,6 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-tags:
-- Docker
-- Jenkins
 series:
 - Jenkins
 categories:
