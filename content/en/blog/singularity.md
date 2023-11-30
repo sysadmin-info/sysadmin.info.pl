@@ -39,7 +39,6 @@ However, this theory is highly criticized and there is no direct experimental ev
 - **No entanglement mechanism**: It is not known how exactly quantum entanglement would arise and persist in microtubules. It is also unknown how entanglement would affect the functioning of neurons and the brain as a whole. There is no mathematical or physical model to describe the process. [^2]
 Recently, researchers at Trinity College Dublin used a technique developed to test the existence of quantum gravity to study the human brain and how it works. [^1] They used magnetic resonance imaging (MRI) to measure proton spins in the "brain water" that naturally accumulates as fluid in our brains. They found that the proton spins were entangled with each other, suggesting that quantum processes can occur in the brain.
 
-
 The article reports on research from Trinity College Dublin that suggests our brains may use quantum computation. The scientists utilized an approach originally developed to confirm the existence of quantum gravity to investigate the operations of the human brain. The brain functions they observed were found to be associated with short-term memory performance and conscious awareness, leading to the suggestion that quantum processes may play a part in cognitive and conscious brain functions
 
 Dr. Christian Kerskens, the lead physicist at the Trinity College Institute of Neuroscience (TCIN), explained that their approach involved using known quantum systems (in this case, proton spins in 'brain water') to interact with an unknown system. The theory was that if the known systems became entangled, then the unknown system would also be a quantum system
@@ -69,5 +68,3 @@ Footnotes:
 
 [^1]: Consciousness may rely on quantum entanglement - Big Think. https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/
 [^2]: New research suggests our brains use quantum computation - Phys.org. https://phys.org/news/2022-10-brains-quantum.html
-
-
