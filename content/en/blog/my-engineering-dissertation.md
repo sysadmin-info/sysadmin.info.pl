@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- IT Security
+- IT security
 image: images/2020-thumbs/laptop.webp
 ---
 Hi,

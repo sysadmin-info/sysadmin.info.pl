@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- IT Security
+- IT security
 - WordPress
 image: images/2019-thumbs/wp.webp
 ---

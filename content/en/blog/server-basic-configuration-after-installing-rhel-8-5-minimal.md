@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- IT Security
+- IT security
 image: images/2022-thumbs/hardened.webp
 ---
 I saved it as script.sh, gave it chmod u+x script.sh executable permissions and ran it as root ./script.sh, although I know that scripts should be run from sudo for security. But I know what I’m doing and why. Everything is described with comments in English. User was created during installation of the system, hence the change. I use sudo and user on a daily basis. Here it is a quick solution. These commands can be executed equally well using sudo.

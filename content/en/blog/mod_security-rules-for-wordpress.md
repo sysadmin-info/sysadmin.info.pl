@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- IT Security
+- IT security
 image: images/2019-thumbs/mod_security.webp
 ---
 There will be time for a tutorial on how to install mod_security for apache, and perhaps someday for nginx. Today I will explain how to add rules for yourself in the whitelist.conf file so that mod_security does not block WordPress functionality.
