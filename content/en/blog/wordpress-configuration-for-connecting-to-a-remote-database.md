@@ -1,6 +1,6 @@
 ---
 title: WordPress configuration for connecting to a remote database
-date: 2019-09-21T19:16:03+00:00
+date: 2019-09-22T17:34:27+00:00
 description: WordPress configuration for connecting to a remote database
 draft: false
 hideToc: false
