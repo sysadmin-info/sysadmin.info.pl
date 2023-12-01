@@ -13,6 +13,7 @@ series:
 - 
 categories:
 - IT security
+- Linux
 image: images/2019-thumbs/selinux.webp
 ---
 I&#8217;m not an SELinux expert, but when I read many tutorials on the subject and saw dozens of tips that all said in one voice: turn off SELinux, because it causes problems, I thought it was time to challenge this thesis and prove that SELinux could be easy to use. 
