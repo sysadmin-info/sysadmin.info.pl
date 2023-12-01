@@ -1,6 +1,6 @@
 ---
 title: "Privacy policy"
-date: 2019-11-07T08:13:36+00:00 
+date: 2019-09-21T19:24:59+00:00 
 description: "Privacy policy"
 draft: false
 hideToc: false
