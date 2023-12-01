@@ -577,7 +577,7 @@ systemctl enable grafana-server
 
 #### c - Configure web server Nginx
 
-In your Nginx configuration file, add a new `server````bashbash block:
+In your Nginx configuration file, add a new `server` bash block:
 
 ```vim
 server { 
@@ -637,7 +637,7 @@ If you are using php-fpm proxy, additionally you should add this in virtual host
 </FilesMatch>
 ```
 
-If you will have any troubles with the virtual host configuration contact me through the contact form in Contact section. I will help. I use grafana with SSL from <a href="https://letsencrypt.org" target="_blank" rel="noreferrer noopener">Let&#8217;s Encrypt</a>. 
+If you will have any troubles with the virtual host configuration contact me. I will help. I use grafana with SSL from <a href="https://letsencrypt.org" target="_blank" rel="noreferrer noopener">Let&#8217;s Encrypt</a>. 
 
 #### e – Add InfluxDB as a datasource on Grafana
 
