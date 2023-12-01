@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- Bezpieczeństwo IT
+- IT Security
 image: images/2020-thumbs/linux-cli.webp
 ---
 Witaj,

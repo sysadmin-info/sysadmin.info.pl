@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- Bezpieczeństwo IT
+- IT Security
 image: images/2020-thumbs/firewall.webp
 ---
 Jeśli masz jakikolwiek serwer podłączony do Internetu, na pewno zdajesz sobie sprawę, że niezależnie od tego, jak mały lub nieistotny się wydaje, jest on często sondowany, testowany lub poddawany różnym próbom nadużycia. Ataki te pochodzą od wielu złośliwych hostów, co sprawia, że niemożliwe jest ich ręczne śledzenie. Dlatego zacząłem szukać sposobu na wprowadzenie zautomatyzowanej blokady do użycia z iptables i firewalld, które stosuję na swoich serwerach.

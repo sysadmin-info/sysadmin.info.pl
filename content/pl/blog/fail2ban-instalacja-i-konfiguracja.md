@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- IT security
+- IT Security
 image: images/2019-thumbs/fail2ban.webp
 ---
 Uwaga, poniższy tutorial jest fragmentem mojej pracy inżynierskiej pt.: &#8222;Utwardzanie serwera sieciowego opartego o system Linux.&#8221; pod kierunkiem dr. hab. Kordiana Smolińskiego w Katedrze Fizyki Teoretycznej WFiIS UŁ obronionej w czerwcu 2019.

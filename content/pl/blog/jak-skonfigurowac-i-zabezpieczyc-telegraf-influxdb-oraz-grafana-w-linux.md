@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- Bezpieczeństwo IT
+- IT Security
 image: images/2020-thumbs/grafana.webp
 ---
 Samouczek jest przeznaczony dla dystrybucji serwerów rodziny Red Hat takich jak CentOS 7.x, Red Hat 7.x, Fedora29 lub nowsze (obecna wersja to 32) itp.

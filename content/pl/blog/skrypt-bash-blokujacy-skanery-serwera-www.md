@@ -12,7 +12,7 @@ pinned: false
 series:
 - 
 categories:
-- Bezpieczeństwo IT
+- IT Security
 image: images/2021-thumbs/bash_script_that_blocks_web_server_scanners.webp
 ---
 {{< youtube zgnijChQ45E >}}
