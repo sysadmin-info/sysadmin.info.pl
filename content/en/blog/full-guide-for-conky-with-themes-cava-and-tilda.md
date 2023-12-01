@@ -10,7 +10,7 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 series:
-- 
+- conky
 categories:
 - Linux
 image: images/2020-thumbs/conky-full-guide.webp
