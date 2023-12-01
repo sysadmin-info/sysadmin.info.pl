@@ -13,6 +13,7 @@ series:
 - 
 categories:
 - mikr.us
+- Linux
 image: images/2020-thumbs/cloudflare.webp
 ---
 Podstawa instalacji i konfiguracji Cloudflare opisana jest tutaj: <https://sysadmin.info.pl/pl/blog/instalacja-serwera-web-na-mikr-us-z-uzyciem-mariadb-i-silnikiem-myisam/>

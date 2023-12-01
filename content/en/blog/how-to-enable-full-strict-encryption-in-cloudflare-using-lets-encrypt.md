@@ -13,6 +13,7 @@ series:
 - 
 categories:
 - mikr.us
+- Linux
 image: images/2020-thumbs/cloudflare.webp
 ---
 

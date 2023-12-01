@@ -12,6 +12,7 @@ pinned: false
 series:
 - 
 categories:
+- mikr.us
 - Linux
 image: images/2019-thumbs/mariadb.webp
 ---
