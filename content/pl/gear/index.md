@@ -41,7 +41,7 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 
 |   Nazwa                     |  Model                                                                                                                                        |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mata akystyczna             | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)|
+| Mata akustyczna             | [Acoustic mat for soundproofing - waves 150 x 100 x 3 cm](https://allegro.pl/oferta/zestaw-panele-akustyczne-dekoracja-apama-prof-11260195344)|
 | Pułapka basowa              | [Bass trap corner quarter round 100 x 10 x 10 cm](https://allegro.pl/oferta/pulapka-basowa-narozna-cwiercwalek-prof-cw10-1000-8902720842)|
 | Mikrofon                    | [Thronmax MDrill One Pro](https://www.thronmax.com/product/thronmax-mdrill-one-pro/)|
 | Uchwyt wstrząsowy mikrofonu | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)|
