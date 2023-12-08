@@ -17,7 +17,7 @@ categories:
 image: images/2023-thumbs/ulanzi02.webp
 ---
 
-{{<youtube >}}
+{{<youtube 3nlCNo_33z4>}}
 
 ##### Setting Up MQTT Communication:
 
@@ -27,8 +27,11 @@ image: images/2023-thumbs/ulanzi02.webp
 
 eg. ```mqtt-user``` 
 
-4. Add user for the MQTT on Ulanzi TC001 Smart Pixel Clock  in the Auth section.
-5. Prepare a simple payload for communication with the Ulanzi device in MQTT Mosquito addon.
+4. Setup integration in Settings -> Devices and services and add integration and select MQTT. See the video. 
+You need an IP address of the Home Assitant to be set for MQTT mosquito broker, so go to Settings -> System -> Network, click three dots and copy the IP address without the mask.
+
+5. Add user for the MQTT on Ulanzi TC001 Smart Pixel Clock  in the Auth section.
+6. Prepare a simple payload for communication with the Ulanzi device in MQTT Mosquito addon.
 
 ```json
 {
@@ -38,4 +41,10 @@ eg. ```mqtt-user```
 	"duration": 10
 }
 ```
-6. Click publish and check that the text is visible on Ulanzi TC001 Smart Pixel Clock. Unfortunatelly this is not a permanent solution. 
+Add a topic this way: 
+
+```awtrix_b6d76c/notify```
+
+And change the icon using this website: [icons](https://developer.lametric.com/icons) - see the video tutorial to find out how to make it work.
+
+7. Click publish and check that the text is visible on Ulanzi TC001 Smart Pixel Clock. Unfortunatelly this is not a permanent solution. 
