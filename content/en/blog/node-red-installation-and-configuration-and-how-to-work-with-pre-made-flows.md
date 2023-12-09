@@ -16,11 +16,8 @@ categories:
 - Home Assistant
 image: images/2023-thumbs/ulanzi03.webp
 ---
-
 {{<youtube SwdMC2K-vPQ>}}
-
 ##### Setting Up Node-RED:
-
 1. Install Node-RED add-on in Home Assistant.
 2. Configure Node-RED integration with MQTT in Home Assistant.
 3. Open Node-RED
@@ -29,6 +26,5 @@ image: images/2023-thumbs/ulanzi03.webp
 - get YouTube ID from your channel
 - get the API Key from Google Developer Console
 6. Click publish and check that the text is visible on Ulanzi TC001 Smart Pixel Clock. 
-
 Watch the video to find out how to perform each step.
 You can pick up icons from this website: [icons](https://developer.lametric.com/icons) - see the video tutorial to find out how to make it work.
