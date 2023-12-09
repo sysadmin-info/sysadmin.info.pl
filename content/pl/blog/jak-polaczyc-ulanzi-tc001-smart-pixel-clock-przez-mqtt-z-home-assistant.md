@@ -17,7 +17,7 @@ categories:
 image: images/2023-thumbs/ulanzi02.webp
 ---
 
-{{<youtube >}}
+{{<youtube 3nlCNo_33z4>}}
 
 ##### Konfiguracja komunikacji MQTT:
 
