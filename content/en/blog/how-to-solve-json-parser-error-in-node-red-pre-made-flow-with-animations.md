@@ -19,7 +19,7 @@ image: images/2023-thumbs/ulanzi04.webp
 
 {{<youtube xjhPrCVNnLA>}}
 
-1. Importto Node-RED the flow from here: [Random Effects/Animations Flow](https://flows.blueforcer.de/flow/zB235ed0OrLJ)
+1. Import to Node-RED the flow from here: [Random Effects/Animations Flow](https://flows.blueforcer.de/flow/zB235ed0OrLJ)
 2. Change in AwtrixUlanzi/CustomApp flow a parsed json object to UTF-8 string.
 3. Deploy
 4. Problem solved
