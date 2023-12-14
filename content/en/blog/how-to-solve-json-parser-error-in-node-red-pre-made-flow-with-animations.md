@@ -1,7 +1,7 @@
 ---
-title: How to solve JSON parser error in  Node RED pre made flow with animations
+title: How to solve JSON parser error in  Node-RED pre-made flow with animations
 date: 2023-12-09T14:00:00+00:00
-description: How to solve JSON parser error in  Node RED pre made flow with animations
+description: How to solve JSON parser error in  Node-RED pre-made flow with animations
 draft: false
 hideToc: false
 enableToc: true
