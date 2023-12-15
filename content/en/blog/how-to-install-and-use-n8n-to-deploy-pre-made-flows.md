@@ -1,6 +1,6 @@
 ---
 title: How to install and use n8n to deploy pre-made flows
-date: 2023-12-15T10:00:00+00:00
+date: 2023-12-15T14:00:00+00:00
 description: How to install and use n8n - workflow automation tool to deploy pre-made flows onto Ulanzi TC001
 draft: false
 hideToc: false
@@ -40,7 +40,7 @@ npm --version
 
 4. Run n8n
 ```bash
-npx n98
+npx n8n
 ```
 
 5. To run n8n in the background install screen
@@ -67,7 +67,7 @@ npx n8n
 ctrl+a and ctrl+d #to detach
 ```
 
-9. reattach screen session with the below command:
+9. Reattach screen session with the below command:
 
 ```bash
 screen -r
@@ -79,6 +79,6 @@ screen -r
 hostname -I
 ```
 
-11. Login in yopur webbrowser using the URL schema: http://IP_addresss:5678 (5678 is a port).
+11. Login in your web browser using the URL schema: http://IP_addresss:5678 (5678 is a port).
 
 12. Follow the video tutorial to see how to import and run the flow in n8n.
