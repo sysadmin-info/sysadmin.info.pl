@@ -35,6 +35,6 @@ cat .config.runtime.json
 mv .config.runtime.json .bla.config.runtime.json.bak
 ```
 3. Zrestartuj Node-RED
-4. Podaj użytkownika i hasło brokera MQTT w połączeniu MQTT w każdym przepływie lub podaj użytkownika i hasło do panelu GUI internetowego Ulanzi TC001 (niektóre przepływy łączą się bezpośrednio z urządzeniem Ulanzi za pomocą adresu IP).
-5. Wdrożenie
+4. Podaj użytkownika i hasło brokera MQTT w połączeniu MQTT w każdym schemacie lub podaj użytkownika i hasło do panelu GUI internetowego Ulanzi TC001 (niektóre schematy łączą się bezpośrednio z urządzeniem Ulanzi za pomocą adresu IP).
+5. Uruchom polecenie deploy
 6. Problem rozwiązany
