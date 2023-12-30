@@ -19,6 +19,34 @@ image: images/2023-thumbs/ulanzi09.webp
 
 {{<youtube gE4O2c1H8Vw>}}
 
+##### How to deploy n8n in Kubernetes - k3s 
+
+Quick implementation:
+
+1. Install git
+
+```bash
+sudo apt install git
+```
+
+2. Clone the repository
+
+```bash
+git clone https://github.com/sysadmin-info/n8n-k3s.git
+```
+
+3. Enter the directory
+
+```bash
+cd n8n-k3s
+```
+
+4. Deploy n8n in k3s
+
+```bash
+kubectl apply -f .
+```
+
 The article details setting up n8n, a workflow automation solution, on Kubernetes. It focuses on the use of YAML files for Kubernetes deployment.
 
 **Key Points:**
@@ -243,7 +271,7 @@ As you can see, the primary variations are:
 * The default port for a PostgreSQL server is 5432, which is the port that I am currently exposing in both my postgres-statefulset.yaml and postgres-service.yaml files.
 * Similar to the last setup, pay close attention to the service selector, since it needs to line up with the stateful set container's labels.
 
-Using both K8S configurations, the following results are obtained:
+Using both K8S configurations, the following commands needs to be executed:
 
 ```bash
 kubectl apply -f postgres-statefulset.yaml,postgres-service.yaml
