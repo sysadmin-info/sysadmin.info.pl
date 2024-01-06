@@ -1,7 +1,7 @@
 ---
 title: What is a pod in Kubernetes?
 date: 2024-01-06T16:00:00+00:00
-description: Article explains what is a pod Kubernetes is and compares it to a single apartment in a large apartment building.
+description: Article explains what is a pod in Kubernetes and compares it to a single apartment in a large apartment building.
 draft: false
 hideToc: false
 enableToc: true
