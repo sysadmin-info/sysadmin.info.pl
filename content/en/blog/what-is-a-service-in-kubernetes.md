@@ -21,7 +21,7 @@ image: images/2023-thumbs/service.webp
 
 In Kubernetes, a Service is a critical concept that acts like a gateway or a receptionist for pods. It's a way for Kubernetes to expose pods, either to other pods within the same cluster or to external users and systems. (The rest of the article is under the image.)
 
-![reception](/images/2023/reception.webp "reception")<figcaption>reception</figcaption>
+![receptionist](/images/2023/receptionist.webp "receptionist")<figcaption>receptionist</figcaption>
 
 Think of a Service as a stable address for accessing pods. Just like a receptionist in a hotel who directs your call to the right person, a Service ensures that network traffic is directed to the appropriate pods. This is important because pods can be ephemeral – they might be replaced, moved, or scaled, so their IP addresses can change. The Service provides a consistent way to access the pods, regardless of these changes.
 

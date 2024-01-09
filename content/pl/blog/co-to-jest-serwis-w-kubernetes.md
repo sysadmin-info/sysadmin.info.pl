@@ -21,7 +21,7 @@ image: images/2023-thumbs/service.webp
 
 W Kubernetes serwis to kluczowe pojęcie, działające jak brama lub recepcjonista dla podów. Jest to sposób, w jaki Kubernetes udostępnia pody, zarówno innym podom w tym samym klastrze, jak i zewnętrznym użytkownikom oraz systemom. (Reszta artykułu znajduje się pod obrazem.)
 
-![reception](/images/2023/reception.webp "reception")<figcaption>reception</figcaption>
+![recepcjonistka](/images/2023/receptionist.webp "recepcjonistka")<figcaption>recepcjonistka</figcaption>
 
 Pomyśl o serwisie jako o stabilnym adresie dostępu do podów. Tak jak recepcjonista w hotelu, który kieruje twój telefon do odpowiedniej osoby, serwis zapewnia, że ruch sieciowy jest kierowany do odpowiednich podów. Jest to ważne, ponieważ pody mogą być nietrwałe – mogą być zastępowane, przemieszczane lub skalowane, więc ich adresy IP mogą się zmieniać. Serwis zapewnia spójny sposób dostępu do podów, niezależnie od tych zmian.
 
