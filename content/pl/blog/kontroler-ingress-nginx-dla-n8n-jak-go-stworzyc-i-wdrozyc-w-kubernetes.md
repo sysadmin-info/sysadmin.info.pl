@@ -131,6 +131,10 @@ Oto dlaczego obie są potrzebne:
 
 Podsumowując, `n8n-service` służy do wewnętrznego balansowania obciążenia i potencjalnego bezpośredniego zewnętrznego dostępu do n8n, podczas gdy `nginx-ingress-n8n-service` służy do zewnętrznego dostępu do kontrolera wejścia, który następnie inteligentnie kieruje ruch do wewnętrznych usług, takich jak `n8n-service`. To oddzielenie umożliwia bardziej wyrafinowane zasady routingu, lepsze bezpieczeństwo i łatwiejsze zarządzanie ruchem wejściowym w środowisku Kubernetes.
 
+{{< notice success "Ważna informacja" >}}
+Kontroler NGINX ingress dla konkretnej usługi musi zostać utworzony w tej samej przestrzeni nazw, w której usługa jest uruchomiona.
+{{< /notice >}}
+
 Ale to nie wszystko, co musisz wiedzieć, aby zrozumieć, jak to działa.
 
 Poniższy wpis pokazuje regułę iptables:
@@ -195,6 +199,10 @@ kubectl apply -f ingress-n8n-class.yml -f n8n-ingress.yml -f nginx-ingress-n8n-s
 ```
 
 ##### Jak używać domeny zamiast adresu IP?
+
+{{< notice success "Uwaga!" >}}
+W wideo pokazuję Adguard Home, który działa jako DNS na porcie 53 oraz NGINX Proxy Manager, aby pokazać, w jaki sposób można przypisać konkretną domenę do konkretnego adresu IP (Adguard Home) oraz NodePort (NGINX Proxy Manage).
+{{< /notice >}}
 
 Aby używać nazwy domeny zamiast adresu IP do dostępu do twoich usług Kubernetes (jak n8n w twoim przypadku), zazwyczaj wykonujesz następujące kroki:
 

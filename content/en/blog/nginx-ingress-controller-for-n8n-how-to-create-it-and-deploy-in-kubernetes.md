@@ -131,6 +131,10 @@ Here's why both are needed:
 
 In summary, the `n8n-service` is for internal load balancing and potential direct external access to n8n, while `nginx-ingress-n8n-service` is for external access to the Ingress Controller, which then intelligently routes traffic to internal services like `n8n-service`. This separation allows more sophisticated routing rules, better security, and easier management of ingress traffic in a Kubernetes environment.
 
+{{< notice success "Important information" >}}
+NGINX ingress controller for a specific service needs to be created in the same namespace where the service is running.
+{{< /notice >}}
+
 But this is not everything you need to know to understand how it works.
 
 The below entry shows iptables rule:
@@ -193,6 +197,10 @@ kubectl apply -f ingress-n8n-class.yml -f n8n-ingress.yml -f nginx-ingress-n8n-s
 ```
 
 ##### How to use a domain instead of IP address?
+
+{{< notice success "Attention!">}}
+In the video, I show Adguard Home, which acts as a DNS on port 53, and NGINX Proxy Manager to demonstrate how to assign a specific domain to a specific IP address (Adguard Home) and NodePort (NGINX Proxy Manage).
+{{< /notice >}}
 
 To use a domain name instead of an IP address for accessing your Kubernetes services (like n8n in your case), you typically follow these steps:
 
