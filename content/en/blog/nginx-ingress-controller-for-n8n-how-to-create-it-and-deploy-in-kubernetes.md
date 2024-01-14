@@ -185,7 +185,7 @@ The iptables rule is indeed sufficient to ensure that the traffic reaching the K
 ```bash
 git clone https://github.com/sysadmin-info/n8n-k3s.git
 cd n8n-k3s/ingress
-kubectl apply -f .
+kubectl apply -f ingress-n8n-class.yml -f n8n-ingress.yml -f nginx-ingress-n8n-service.yml
 ```
 
 ##### How to use a domain instead of IP address?

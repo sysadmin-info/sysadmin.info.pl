@@ -187,7 +187,7 @@ owaniem ruchu zgodnie z zdefiniowanymi przez ciebie regułami Ingress. Ta konfig
 ```bash
 git clone https://github.com/sysadmin-info/n8n-k3s.git
 cd n8n-k3s/ingress
-kubectl apply -f .
+kubectl apply -f ingress-n8n-class.yml -f n8n-ingress.yml -f nginx-ingress-n8n-service.yml
 ```
 
 ##### Jak używać domeny zamiast adresu IP?
