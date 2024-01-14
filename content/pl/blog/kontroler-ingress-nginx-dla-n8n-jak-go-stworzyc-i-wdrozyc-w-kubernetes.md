@@ -163,6 +163,10 @@ sudo systemctl daemon-reload
 sudo systemctl restart k3s.service
 ```
 
+{{< notice success "Ważna informacja" >}}
+Restart usługi Kubernetes ( w tym przypadku K3S) nie powoduje zmiany NodePort dla usług, których deployment nastąpił wcześniej i działałya, ponieważ raz przypisany losowo przez Kubernetes NodePort ulega zmianie dopiero w momencie usunięcia usługi.
+{{< /notice >}}
+
 Dodatkowo IngressClass został dodany przez ingress-class.yml i jest również określony w pliku n8n-ingresss.yml.
 
 Przeanalizujmy komponenty i ich role w zarządzaniu ruchem sieciowym dla mojego ustawienia Kubernetes, koncentrując się na iptables, kontrolerze Ingress i zakresie portów usługi node.
