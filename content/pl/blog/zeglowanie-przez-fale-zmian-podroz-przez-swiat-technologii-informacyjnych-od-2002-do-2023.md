@@ -11,9 +11,9 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 series:
-- Ansible
+- 
 categories:
-- Ansible
+- general
 image: images/2023-thumbs/zeglowanie.webp
 ---
 
