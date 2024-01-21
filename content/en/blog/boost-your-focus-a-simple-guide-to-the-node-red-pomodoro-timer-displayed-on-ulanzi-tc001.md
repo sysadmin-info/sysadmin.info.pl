@@ -616,7 +616,9 @@ Before diving into the technical details, it's crucial to know how to import thi
     - Paste the copied JSON code into the text field.
     - Click `Import` to add the flow to your workspace.
 
-4. **Upload icons** to your Ulanzi TC001 device as I presented on the video {{<youtube PUFgScaYtnQ>}}. You can use icons from here: [icons](https://developer.lametric.com/icons)
+4. **Upload icons** to your Ulanzi TC001 device as I presented on the video {{<youtube PUFgScaYtnQ>}}. 
+
+    You can use icons from here: **[icons](https://developer.lametric.com/icons)**
 
 5. **Check the connectivity** to your MQTT broker.
 

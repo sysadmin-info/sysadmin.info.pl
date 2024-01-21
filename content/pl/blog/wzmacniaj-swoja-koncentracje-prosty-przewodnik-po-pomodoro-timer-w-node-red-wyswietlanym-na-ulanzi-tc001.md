@@ -616,7 +616,9 @@ Przed zagłębieniem się w szczegóły techniczne, ważne jest, aby wiedzieć, 
     - Wklej skopiowany kod JSON do pola tekstowego.
     - Kliknij `Import`, aby dodać schemat do obszaru roboczego.
 
-4. **Prześlij ikony** do urządzenia Ulanzi TC001, tak jak zaprezentowałem na filmie {{<youtube PUFgScaYtnQ>}}. Możesz użyć ikon stąd: [icons](https://developer.lametric.com/icons)
+4. **Prześlij ikony** do urządzenia Ulanzi TC001, tak jak zaprezentowałem na filmie {{<youtube PUFgScaYtnQ>}}. 
+
+    Możesz użyć ikon stąd: **[icons](https://developer.lametric.com/icons)**
 
 5. **Sprawdź łączność** z brokerem MQTT.
 
