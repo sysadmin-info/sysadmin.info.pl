@@ -10,9 +10,9 @@ author: sysadmin
 authorEmoji: 🐧
 pinned: false
 asciinema: true
-serie:
+series:
 - Ulanzi TC001 Smart Pixel Clock
-kategorie:
+categories:
 - Home Assistant
 image: images/2023-thumbs/ulanzi12.webp
 ---
