@@ -22,7 +22,7 @@ image: images/2023-thumbs/ulanzi12.webp
 1. Otwórz Node-RED
 2. Zaimportuj poniższy przepływ
 
-##### Przepływ licznika obserwujących na Instagramie w Node-RED
+##### Schemat licznika obserwujących na Instagramie w Node-RED
 
 ```json
 [
