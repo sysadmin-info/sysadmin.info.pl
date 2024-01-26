@@ -189,7 +189,7 @@ image: images/2023-thumbs/ulanzi12.webp
 6. Pobierz ikonę Instagram stąd:
 [Instagram icon](https://flows.blueforcer.de/flow/3eJpdo8B5y8N/download/assets)
 7. Prześlij ikonę do urządzenia Ulanzi za pośrednictwem pulpitu nawigacyjnego. (Zobacz wideo).
-8. Wdróż przepływ.
+8. Wdróż (deploy) schemat.
 9. Uruchom węzeł inject jeden raz.
 
 {{< notice warning "UWAGA:" >}}
