@@ -21,14 +21,6 @@ image: images/2023-thumbs/ulanzi12.webp
 
 1. Otwórz Node-RED
 2. Zaimportuj poniższy przepływ
-3. Zmień swoją nazwę użytkownika w adresie URL węzła żądania HTTP
-4. Zmień adres IP swojego brokera MQTT
-5. Zmień prefiks w temacie (zobacz film, aby dowiedzieć się, o czym mówię)
-
-{{< notice warning "UWAGA:" >}}
-Uruchamiaj ten węzeł jak najrzadziej!
-Czasomierz jest ustawiony na pobieranie danych co 12 godzin.
-{{< /notice >}}
 
 ##### Przepływ licznika obserwujących na Instagramie w Node-RED
 
@@ -190,3 +182,18 @@ Czasomierz jest ustawiony na pobieranie danych co 12 godzin.
     }
 ]
 ```
+
+3. Zmień swoją nazwę użytkownika w adresie URL węzła żądania HTTP
+4. Zmień adres IP swojego brokera MQTT
+5. Zmień prefiks w temacie (zobacz film, aby dowiedzieć się, o czym mówię)
+6. Pobierz ikonę Instagram stąd:
+[Instagram icon](https://flows.blueforcer.de/flow/3eJpdo8B5y8N/download/assets)
+7. Prześlij ikonę do urządzenia Ulanzi za pośrednictwem pulpitu nawigacyjnego. (Zobacz wideo).
+8. Wdróż przepływ.
+9. Uruchom węzeł inject jeden raz.
+
+{{< notice warning "UWAGA:" >}}
+Uruchamiaj ten węzeł jak najrzadziej!
+Czasomierz jest ustawiony na pobieranie danych co 12 godzin.
+{{< /notice >}}
+

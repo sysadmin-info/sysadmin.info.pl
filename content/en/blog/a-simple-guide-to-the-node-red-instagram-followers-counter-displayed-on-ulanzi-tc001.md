@@ -21,14 +21,6 @@ image: images/2023-thumbs/ulanzi12.webp
 
 1. Open Node-RED
 2. Import the below flow
-3. Change your username in the http request node URL
-4. Change the IP address of your MQTT Broker
-5. Change the prefix in topic (see the video to find out what I am talking about)
-
-{{< notice warning "ATTENTION:" >}}
-Trigger this node as rarely as possible!
-The timer is set to fetch the data every 12 hours.
-{{< /notice >}}
 
 ##### Node-RED Instagram followers counter flow
 
@@ -190,3 +182,18 @@ The timer is set to fetch the data every 12 hours.
     }
 ]
 ```
+
+3. Change your username in the http request node URL
+4. Change the IP address of your MQTT Broker
+5. Change the prefix in topic (see the video to find out what I am talking about)
+6. Download the Instagram icon from here:
+[Instagram icon](https://flows.blueforcer.de/flow/3eJpdo8B5y8N/download/assets)
+7. Upload the icon to the Ulanzi device via web dashboard. (See the video).
+8. Deploy the flow.
+9. Run the inject node once.
+
+{{< notice warning "ATTENTION:" >}}
+Trigger this node as rarely as possible!
+The timer is set to fetch the data every 12 hours.
+{{< /notice >}}
+
