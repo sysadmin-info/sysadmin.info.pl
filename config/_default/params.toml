@@ -189,7 +189,7 @@ commento = false
   matrix = "https://matrix.to/#/@sysadmin.info.pl:matrix.org"
   xmpp = ""
   dev-to = ""
-  gitea = ""
+  gitea = "https://gitea.com/sysadmin-info"
   google-scholar = ""
 
 [donationOptions]
