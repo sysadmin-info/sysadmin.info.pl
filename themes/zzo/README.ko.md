@@ -986,7 +986,7 @@ content_font = "\"Merriweather\", serif"
 root/layouts/partials/head/custom-head.html 경로에 파일을 만드시고 폰트를 그곳에서 로드해주세요.
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
+<link href="https://fonts.bunny.net/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
 ```
 
 ### custom copyright
