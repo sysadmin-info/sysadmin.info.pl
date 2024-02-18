@@ -197,20 +197,24 @@ And put the below content into this file.
       shell: kubectl delete service/awx-operator-controller-manager-metrics-service service/awx-postgres-13 service/awx-service -n awx
       ignore_errors: yes
 
+    - name: Get persistent volume claim name
+      command: kubectl get pvc -n awx -o custom-columns=:metadata.name --no-headers
+      register: pvc_output
+      ignore_errors: yes
+
+    - name: Remove persistent volume claim
+      command: kubectl delete pvc {{ pvc_output.stdout }} -n awx
+      when: pvc_output.stdout != ""
+      ignore_errors: yes
+
     - name: Get persistent volume name
-      shell: PV_VOLUME=`kubectl get pv -n awx | grep "pv" | awk '{print $1}'`
+      command: kubectl get pv -n awx -o custom-columns=:metadata.name --no-headers
+      register: pv_output
       ignore_errors: yes
 
     - name: Remove persistent volume
-      shell: kubectl delete pv $PV_VOLUME -n awx
-      ignore_errors: yes
-
-    - name: Get persistent volume claim name
-      shell: PVC_VOLUME=`kubectl get pvc -n awx | grep "pvc" | awk '{print $1}'`
-      ignore_errors: yes
-
-    - name: Remove persitent volume claim
-      shell: kubectl delete pvc $PVC_VOLUME -n awx
+      command: kubectl delete pv {{ pv_output.stdout }}
+      when: pv_output.stdout != ""
       ignore_errors: yes
 
     - name: Remove namespace awx
