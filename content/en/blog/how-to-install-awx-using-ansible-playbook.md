@@ -165,14 +165,41 @@ And put the below content into this file.
   hosts: localhost
   become: yes
   tasks:
-    - name: Kick off the removal of the ansible awx
-      shell: kubectl delete --all -n awx
+    - name: Remove awx deployment 
+      shell: kubectl delete  deployment awx-operator-controller-manager
+
+    - name: Remove service account
+      shell: kubectl  delete serviceaccount awx-operator-controller-manager
+
+    - name: Remove role binding
+      shell: kubectl delete rolebinding awx-operator-awx-manager-rolebinding
+
+    - name: remove role
+      shell: kubectl delete role awx-operator-awx-manager-role
+
+    - name: scales all deployments in the awx namespace to zero replicas
+      shell: kubectl scale deployment --all --replicas=0 -n awx
+
+    - name: remove deployments
+      shell: kubectl -n awx delete deployments.apps/awx-web deployments.apps/awx-task deployments.apps/awx-operator-controller-manager
+
+    - name: remove statefulsets
+      shell: kubectl -n awx delete statefulsets.apps/awx-postgres-13 
+
+    - name: remove services
+      shell: kubectl -n awx delete service/awx-operator-controller-manager-metrics-service service/awx-postgres-13 service/awx-service
 
     - name: Get persistent volume name
-      shell: VOLUME=`kubectl get pv -n awx | grep "pvc" | awk '{print $1}'`
+      shell: PV_VOLUME=`kubectl get pv -n awx | grep "pvc" | awk '{print $1}'`
 
     - name: Remove persistent volume
-      shell: kubectl delete pv $VOLUME -n awx
+      shell: kubectl delete pv $PV_VOLUME -n awx      
+
+    - name: Get persistent volume claim name
+      shell: PVC_VOLUME=`kubectl get pvc -n awx | grep "pvc" | awk '{print $1}'`
+
+    - name: Remove persitent volume claim
+      shell: kubectl delete pvc $PVC_VOLUME -n awx      
 
     - name: Remove namespace awx
       shell: kubectl delete namespace awx
