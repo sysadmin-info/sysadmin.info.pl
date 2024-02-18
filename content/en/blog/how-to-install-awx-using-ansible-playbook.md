@@ -166,43 +166,56 @@ And put the below content into this file.
   become: yes
   tasks:
     - name: Remove awx deployment 
-      shell: kubectl -n awx delete  deployment awx-operator-controller-manager
+      shell: kubectl delete deployment awx-operator-controller-manager -n awx
+      ignore_errors: yes
 
     - name: Remove service account
-      shell: kubectl -n awx delete serviceaccount awx-operator-controller-manager
+      shell: kubectl delete serviceaccount awx-operator-controller-manager -n awx
+      ignore_errors: yes
 
     - name: Remove role binding
-      shell: kubectl -n awx delete rolebinding awx-operator-awx-manager-rolebinding
+      shell: kubectl delete rolebinding awx-operator-awx-manager-rolebinding -n awx
+      ignore_errors: yes
 
     - name: remove role
-      shell: kubectl -n awx delete role awx-operator-awx-manager-role
+      shell: kubectl delete role awx-operator-awx-manager-role -n awx
+      ignore_errors: yes
 
     - name: scales all deployments in the awx namespace to zero replicas
-      shell: kubectl -n awx scale deployment --all --replicas=0
+      shell: kubectl scale deployment --all --replicas=0 -n awx
+      ignore_errors: yes
 
     - name: remove deployments
-      shell: kubectl -n awx delete deployments.apps/awx-web deployments.apps/awx-task deployments.apps/awx-operator-controller-manager
+      shell: kubectl delete deployments.apps/awx-web deployments.apps/awx-task -n awx 
+      ignore_errors: yes
 
     - name: remove statefulsets
-      shell: kubectl -n awx delete statefulsets.apps/awx-postgres-13 
+      shell: kubectl delete statefulsets.apps/awx-postgres-13 -n awx 
+      ignore_errors: yes
 
     - name: remove services
-      shell: kubectl -n awx delete service/awx-operator-controller-manager-metrics-service service/awx-postgres-13 service/awx-service
+      shell: kubectl delete service/awx-operator-controller-manager-metrics-service service/awx-postgres-13 service/awx-service -n awx
+      ignore_errors: yes
 
     - name: Get persistent volume name
-      shell: PV_VOLUME=`kubectl -n awx get pv | grep "pvc" | awk '{print $1}'`
+      shell: PV_VOLUME=`kubectl get pv -n awx | grep "pv" | awk '{print $1}'`
+      ignore_errors: yes
 
     - name: Remove persistent volume
-      shell: kubectl -n awx delete pv $PV_VOLUME
+      shell: kubectl delete pv $PV_VOLUME -n awx
+      ignore_errors: yes
 
     - name: Get persistent volume claim name
-      shell: PVC_VOLUME=`kubectl -n awx get pvc | grep "pvc" | awk '{print $1}'`
+      shell: PVC_VOLUME=`kubectl get pvc -n awx | grep "pvc" | awk '{print $1}'`
+      ignore_errors: yes
 
     - name: Remove persitent volume claim
-      shell: kubectl -n awx delete pvc $PVC_VOLUME
+      shell: kubectl delete pvc $PVC_VOLUME -n awx
+      ignore_errors: yes
 
     - name: Remove namespace awx
       shell: kubectl delete namespace awx
+      ignore_errors: yes
 ```
 
 Run the playbook like below:
