@@ -169,19 +169,19 @@ I wklej poniższą zawartość do tego pliku.
   become: yes
   tasks:
     - name: Remove awx deployment 
-      shell: kubectl delete  deployment awx-operator-controller-manager
+      shell: kubectl -n awx delete  deployment awx-operator-controller-manager
 
     - name: Remove service account
-      shell: kubectl  delete serviceaccount awx-operator-controller-manager
+      shell: kubectl -n awx delete serviceaccount awx-operator-controller-manager
 
     - name: Remove role binding
-      shell: kubectl delete rolebinding awx-operator-awx-manager-rolebinding
+      shell: kubectl -n awx delete rolebinding awx-operator-awx-manager-rolebinding
 
     - name: remove role
-      shell: kubectl delete role awx-operator-awx-manager-role
+      shell: kubectl -n awx delete role awx-operator-awx-manager-role
 
     - name: scales all deployments in the awx namespace to zero replicas
-      shell: kubectl scale deployment --all --replicas=0 -n awx
+      shell: kubectl -n awx scale deployment --all --replicas=0
 
     - name: remove deployments
       shell: kubectl -n awx delete deployments.apps/awx-web deployments.apps/awx-task deployments.apps/awx-operator-controller-manager
@@ -193,16 +193,16 @@ I wklej poniższą zawartość do tego pliku.
       shell: kubectl -n awx delete service/awx-operator-controller-manager-metrics-service service/awx-postgres-13 service/awx-service
 
     - name: Get persistent volume name
-      shell: PV_VOLUME=`kubectl get pv -n awx | grep "pvc" | awk '{print $1}'`
+      shell: PV_VOLUME=`kubectl -n awx get pv | grep "pvc" | awk '{print $1}'`
 
     - name: Remove persistent volume
-      shell: kubectl delete pv $PV_VOLUME -n awx      
+      shell: kubectl -n awx delete pv $PV_VOLUME
 
     - name: Get persistent volume claim name
-      shell: PVC_VOLUME=`kubectl get pvc -n awx | grep "pvc" | awk '{print $1}'`
+      shell: PVC_VOLUME=`kubectl -n awx get pvc | grep "pvc" | awk '{print $1}'`
 
     - name: Remove persitent volume claim
-      shell: kubectl delete pvc $PVC_VOLUME -n awx      
+      shell: kubectl -n awx delete pvc $PVC_VOLUME
 
     - name: Remove namespace awx
       shell: kubectl delete namespace awx
