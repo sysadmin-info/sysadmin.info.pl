@@ -165,54 +165,8 @@ And put the below content into this file.
   hosts: localhost
   become: yes
   tasks:
-    - name: Download Kustomize with curl
-      shell: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
-
-    - name: Move Kustomize to the /usr/local/bin directory
-      shell: mv kustomize /usr/local/bin
-
-    - name: Create awx.yaml 
-      shell:
-        cmd: |
-          cat > awx.yaml << EOF
-          ---
-          apiVersion: awx.ansible.com/v1beta1
-          kind: AWX
-          metadata:
-            name: awx
-          spec:
-            service_type: nodeport
-            nodeport_port: 30060
-          EOF
-      args:
-        executable: /bin/bash
-
-    - name: Create variable RELEASE_TAG
-      shell: RELEASE_TAG=`curl -s https://api.github.com/repos/ansible/awx-operator/releases/latest | grep tag_name | cut -d '"' -f 4`
-
-    - name: Create kustomization.yaml
-      shell:
-        cmd: |
-          cat > kustomization.yaml << EOF
-          ---
-          apiVersion: kustomize.config.k8s.io/v1beta1
-          kind: Kustomization
-          resources:
-            # Find the latest tag here: https://github.com/ansible/awx-operator/releases
-            - github.com/ansible/awx-operator/config/default?ref=$RELEASE_TAG
-            - awx.yaml
-          # Set the image tags to match the git version from above
-          images:
-            - name: quay.io/ansible/awx-operator
-              newTag: $RELEASE_TAG
-          # Specify a custom namespace in which to install AWX
-          namespace: awx
-          EOF
-      args:
-        executable: /bin/bash
-
     - name: Kick off the removal of the ansible awx
-      shell: kustomize build . | kubectl delete -f -
+      shell: kubectl delete --all -n awx
 
     - name: Get persistent volume name
       shell: VOLUME=`kubectl get pv -n awx | grep "pvc" | awk '{print $1}'`
