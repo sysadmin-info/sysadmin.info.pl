@@ -48,16 +48,16 @@ I wklej poniższą zawartość do tego pliku.
   hosts: localhost
   become: yes
   tasks:
-    - name: Pobierz Kustomize przy użyciu curl
+    - name: Download Kustomize with curl
       shell: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash
 
-    - name: Przenieś Kustomize do katalogu /usr/local/bin
+    - name: Move Kustomize to the /usr/local/bin directory
       shell: mv kustomize /usr/local/bin
 
-    - name: Utwórz przestrzeń nazw awx
+    - name: Create namespace awx
       shell: kubectl create namespace awx
 
-    - name: Utwórz plik awx.yaml 
+    - name: Create awx.yaml 
       shell:
         cmd: |
           cat > awx.yaml << EOF
@@ -73,7 +73,13 @@ I wklej poniższą zawartość do tego pliku.
       args:
         executable: /bin/bash
 
-    - name: Utwórz kustomization.yaml
+    - name: Create variable RELEASE_TAG
+      shell: RELEASE_TAG=`curl -s https://api.github.com/repos/ansible/awx-operator/releases/latest | grep tag_name | cut -d '"' -f 4`
+    
+    - name: Display variable RELEASE_TAG
+      shell: echo $RELEASE_TAG
+
+    - name: Create kustomization.yaml
       shell:
         cmd: |
           cat > kustomization.yaml << EOF
@@ -81,21 +87,21 @@ I wklej poniższą zawartość do tego pliku.
           apiVersion: kustomize.config.k8s.io/v1beta1
           kind: Kustomization
           resources:
-            # Znajdź najnowszy tag tutaj: https://github.com/ansible/awx-operator/releases
-            - github.com/ansible/awx-operator/config/default?ref=2.8.0
+            # Find the latest tag here: https://github.com/ansible/awx-operator/releases
+            - github.com/ansible/awx-operator/config/default?ref=$RELEASE_TAG
             - awx.yaml
-          # Ustaw tagi obrazów, aby pasowały do wersji git z powyżej
+          # Set the image tags to match the git version from above
           images:
             - name: quay.io/ansible/awx-operator
-              newTag: 2.8.0
-          # Określ niestandardową przestrzeń nazw, w której zainstalujesz AWX
+              newTag: $RELEASE_TAG
+          # Specify a custom namespace in which to install AWX
           namespace: awx
           EOF
       args:
         executable: /bin/bash
 
-    - name: Rozpocznij budowę ansible awx
-      shell: kustomize build . | kubectl apply -f - 
+    - name: Kick off the building of the ansible awx
+      shell: kustomize build . | kubectl apply -f -
 ```
 
 {{< notice success "Informacje" >}}

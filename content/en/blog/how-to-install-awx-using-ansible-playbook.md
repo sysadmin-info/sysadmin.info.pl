@@ -73,6 +73,12 @@ And put the below content into this file.
       args:
         executable: /bin/bash
 
+    - name: Create variable RELEASE_TAG
+      shell: RELEASE_TAG=`curl -s https://api.github.com/repos/ansible/awx-operator/releases/latest | grep tag_name | cut -d '"' -f 4`
+    
+    - name: Display variable RELEASE_TAG
+      shell: echo $RELEASE_TAG
+
     - name: Create kustomization.yaml
       shell:
         cmd: |
@@ -82,12 +88,12 @@ And put the below content into this file.
           kind: Kustomization
           resources:
             # Find the latest tag here: https://github.com/ansible/awx-operator/releases
-            - github.com/ansible/awx-operator/config/default?ref=2.8.0
+            - github.com/ansible/awx-operator/config/default?ref=$RELEASE_TAG
             - awx.yaml
           # Set the image tags to match the git version from above
           images:
             - name: quay.io/ansible/awx-operator
-              newTag: 2.8.0
+              newTag: $RELEASE_TAG
           # Specify a custom namespace in which to install AWX
           namespace: awx
           EOF
@@ -95,7 +101,7 @@ And put the below content into this file.
         executable: /bin/bash
 
     - name: Kick off the building of the ansible awx
-      shell: kustomize build . | kubectl apply -f - 
+      shell: kustomize build . | kubectl apply -f -
 ```
 
 {{< notice success "Information" >}}
