@@ -21,7 +21,7 @@ image: images/2024-thumbs/kubernetes.webp
 
 Imagine Kubernetes as a powerful and efficient system designed to manage containerized applications across a cluster of machines. In simpler terms, Kubernetes is like a highly skilled conductor orchestrating a large and diverse group of musicians (containers) to perform in harmony. (The rest of the article is under the image.)
 
-![conductor managing an orchestra](/images/2023/conductor.webp "conductor managing an orchestra")<figcaption>conductor managing an orchestra</figcaption>
+![conductor managing an orchestra](/images/2024/conductor.webp "conductor managing an orchestra")<figcaption>conductor managing an orchestra</figcaption>
 
 Just as a conductor manages different sections of an orchestra to create a symphony, Kubernetes coordinates a multitude of containers, ensuring they work together seamlessly. Containers, like individual musicians, each perform a specific part of a larger task. Kubernetes ensures these containers are running as intended, scales them up or down depending on the demand (like adjusting the volume or number of musicians), and keeps the performance (your applications) running smoothly, even if there are changes or issues (like a musician missing a note).
 
