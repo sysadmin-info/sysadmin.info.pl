@@ -14,7 +14,7 @@ series:
 - Kubernetes
 categories: 
 - Raspberry Pi
-image: images/2023-thumbs/kubernetes.webp
+image: images/2024-thumbs/kubernetes.webp
 ---
 **Oto krótkie wideo; czytaj dalej, aby dowiedzieć się więcej.**
 
