@@ -14,14 +14,14 @@ series:
 - Kubernetes
 categories:
 - Raspberry Pi
-image: images/2023-thumbs/nginx-ingress-controller.webp
+image: images/2024-thumbs/nginx-ingress-controller.webp
 ---
 **Oto krótki film; czytaj dalej, aby dowiedzieć się więcej.**
 {{<youtube FW8TP5UDq4g>}}
 
 Kontroler NGINX Ingress w Kubernetes można najlepiej zrozumieć jako wyspecjalizowaną wersję narzędzia Ingress. To jak wysoce wykwalifikowany recepcjonista przy głównym wejściu do budynku mieszkalnego, wyposażony w dodatkowe możliwości i ekspertyzę.
 
-![wysoce wykwalifikowany recepcjonista](/images/2023/highly-skilled-receptionist.webp "wysoce wykwalifikowany recepcjonista")<figcaption>wysoce wykwalifikowany recepcjonista</figcaption>
+![wysoce wykwalifikowany recepcjonista](/images/2024/highly-skilled-receptionist.webp "wysoce wykwalifikowany recepcjonista")<figcaption>wysoce wykwalifikowany recepcjonista</figcaption>
 
 Podobnie jak ten wyspecjalizowany recepcjonista nie tylko kieruje odwiedzających do odpowiedniego mieszkania, ale także oferuje dodatkowe usługi takie jak kontrole bezpieczeństwa, kontroler NGINX Ingress robi więcej niż tylko kierowanie zewnętrznego ruchu do odpowiednich usług w klastrze Kubernetes. Zapewnia dodatkowe kluczowe funkcjonalności:
 
