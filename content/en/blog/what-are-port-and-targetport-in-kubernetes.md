@@ -14,14 +14,14 @@ series:
 - Kubernetes
 categories:
 - Raspberry Pi
-image: images/2023-thumbs/port.webp
+image: images/2024-thumbs/port.webp
 ---
 **Here is a short video; continue reading to find out more.**
 {{<youtube chU2pqzuC2I>}}
 
 In Kubernetes, 'Port' and 'TargetPort' are crucial settings within a service that control how network traffic is routed to the pods. (The rest of the article is under the image.)
 
-![internal phone system](/images/2023/internal-phone-system.webp "internal phone system")<figcaption>internal phone system</figcaption>
+![internal phone system](/images/2024/internal-phone-system.webp "internal phone system")<figcaption>internal phone system</figcaption>
 
 * **Port:** This refers to the port number on the service itself. It's the point of contact for other services or external users when they want to communicate with the pods managed by this service.
 
