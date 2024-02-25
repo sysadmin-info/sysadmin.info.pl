@@ -14,13 +14,13 @@ series:
 - Kubernetes
 categories:
 - Raspberry Pi
-image: images/2023-thumbs/nodeport.webp
+image: images/2024-thumbs/nodeport.webp
 ---
 **Here is a short video; continue reading to find out more.**
 {{<youtube CZ2GQhrEC-0>}}
 
 NodePort is a type of service in Kubernetes that makes a pod accessible from outside the Kubernetes cluster. It's like opening a specific channel for external traffic to reach your pods. (The rest of the article is under the image.)
 
-![mail slot](/images/2023/mail-slot.webp "mail slot")<figcaption>mail slot</figcaption>
+![mail slot](/images/2024/mail-slot.webp "mail slot")<figcaption>mail slot</figcaption>
 
 Think of NodePort like a mail slot in an apartment door. Just as the mail slot allows letters (network traffic) to be delivered directly from the outside world into an apartment, NodePort allows external requests to reach the right pod within your Kubernetes cluster.
