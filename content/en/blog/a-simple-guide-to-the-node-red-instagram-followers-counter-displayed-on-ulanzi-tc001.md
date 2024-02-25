@@ -14,7 +14,7 @@ series:
 - Ulanzi TC001 Smart Pixel Clock
 categories:
 - Home Assistant
-image: images/2023-thumbs/ulanzi12.webp
+image: images/2024-thumbs/ulanzi12.webp
 ---
 
 {{<youtube 4XDcqW6yGN0>}}
