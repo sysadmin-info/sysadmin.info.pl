@@ -1,5 +1,5 @@
 ---
-title: Trwała perfekcja - opanowanie storage danych w projekcie AWX na Kubernetes
+title: Trwała perfekcja - opanowanie storage w projekcie AWX na Kubernetes
 date: 2024-02-24T14:00:00+00:00
 description: Jak naprawić problem w AWX - Nie ma dostępnych katalogów playbook w /var/lib/awx/projects.
 draft: false
