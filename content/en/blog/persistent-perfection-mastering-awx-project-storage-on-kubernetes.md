@@ -25,7 +25,7 @@ There are no available playbook directories in /var/lib/awx/projects. Either tha
 
 **Here is a video tutorial**
 
-{{<youtube >}}
+{{<youtube q03HPrUVxUw>}}
 
 ### Below there is a fixed playbook that solves the problem with a path for projects in AWX GUI. 
 Now you can create a /var/lib/awx/projects directory on your host, also create subdirectories inside this directory to separate projects. What you will create on a host it will be created automatically inside container in awx-web pod.

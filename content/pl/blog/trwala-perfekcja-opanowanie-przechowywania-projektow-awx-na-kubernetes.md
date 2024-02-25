@@ -25,7 +25,7 @@ Nie ma dostępnych katalogów playbook w /var/lib/awx/projects. Albo ten katalog
 
 **Oto samouczek wideo**
 
-{{<youtube >}}
+{{<youtube q03HPrUVxUw>}}
 
 ### Poniżej znajduje się poprawiony playbook, który rozwiązuje problem ze ścieżką dla projektów w GUI AWX. 
 Teraz możesz utworzyć katalog /var/lib/awx/projects na swoim hoście, a także tworzyć podkatalogi w tym katalogu, aby oddzielić projekty. To, co utworzysz na hoście, zostanie automatycznie utworzone w kontenerze w podzie awx-web.
