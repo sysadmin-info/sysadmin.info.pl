@@ -14,7 +14,7 @@ series:
 - ansible
 categories:
 - ansible
-image: images/2023-thumbs/ansible09.webp
+image: images/2024-thumbs/ansible09.webp
 ---
 
 {{< notice success "Information in AWX" >}}
