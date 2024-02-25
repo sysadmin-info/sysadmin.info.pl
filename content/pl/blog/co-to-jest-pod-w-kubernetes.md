@@ -21,14 +21,14 @@ image: images/2024-thumbs/pod.webp
 
 W kontekście Kubernetes, pod można postrzegać jako najmniejszą jednostkę wdrożeniową, podobną do pojedynczego mieszkania w dużym bloku mieszkalnym. (Reszta artykułu znajduje się pod obrazkiem.)
 
-![duży blok mieszkalny](/images/2023/large-apartment-building.webp "duży blok mieszkalny")<figcaption>duży blok mieszkalny</figcaption>
+![duży blok mieszkalny](/images/2024/large-apartment-building.webp "duży blok mieszkalny")<figcaption>duży blok mieszkalny</figcaption>
 
 Tak jak mieszkanie może mieć jeden lub więcej pokoi, pod może zawierać jeden lub więcej kontenerów, takich jak kontenery Docker. Te kontenery wewnątrz pod są jak pokoje w mieszkaniu, każdy z nich służy określonej funkcji lub celowi. Dzielą zasoby i są zarządzane jako pojedyncza jednostka.
 
-![plan mieszkania](/images/2023/apartment-plan.webp "plan mieszkania")<figcaption>plan mieszkania</figcaption>
+![plan mieszkania](/images/2024/apartment-plan.webp "plan mieszkania")<figcaption>plan mieszkania</figcaption>
 
 W tej analogii każdy kontener (pokój) w pod (mieszkanie) pracuje na wspólny cel, taki jak uruchamianie różnych aspektów aplikacji. Dzielą tę samą przestrzeń adresową sieci (jak adres mieszkania) i mogą łatwo ze sobą komunikować, tak jak ludzie w różnych pokojach tego samego mieszkania mogą łatwo rozmawiać ze sobą.
 
 Pod reprezentuje więc spójną jednostkę wdrożenia w ekosystemie Kubernetes, enkapsulującą i uruchamiającą zestaw kontenerów razem.
 
-![mieszkanie](/images/2023/apartment.webp "mieszkanie")<figcaption>mieszkanie</figcaption>
+![mieszkanie](/images/2024/apartment.webp "mieszkanie")<figcaption>mieszkanie</figcaption>
