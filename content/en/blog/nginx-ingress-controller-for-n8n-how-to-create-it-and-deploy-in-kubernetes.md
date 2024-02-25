@@ -14,7 +14,7 @@ series:
 - Kubernetes
 categories:
 - Raspberry Pi
-image: images/2023-thumbs/nginx-ingress-controller-n8n.webp
+image: images/2024-thumbs/nginx-ingress-controller-n8n.webp
 ---
 **Here is a short video; continue reading to find out more.**
 {{<youtube wMaaoJ9Oj8M>}}
