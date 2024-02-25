@@ -14,14 +14,14 @@ series:
 - Kubernetes
 categories:
 - Raspberry Pi
-image: images/2023-thumbs/ingress.webp
+image: images/2024-thumbs/ingress.webp
 ---
 **Oto krótki film; czytaj dalej, aby dowiedzieć się więcej.**
 {{<youtube DahTLuhhV60>}}
 
 W Kubernetes Ingress to narzędzie zarządzające dostępem zewnętrznym do usług w klastrze, głównie dla ruchu HTTP i HTTPS. Działa jako kontroler kierujący zewnętrzne żądania do wewnętrznych usług. (Reszta artykułu znajduje się pod obrazkiem.)
 
-![recepcja](/images/2023/reception.webp "recepcja")<figcaption>recepcja</figcaption>
+![recepcja](/images/2024/reception.webp "recepcja")<figcaption>recepcja</figcaption>
 
 Aby zrozumieć Ingress, można go porównać do głównego wejścia lub recepcji w budynku mieszkalnym. Podobnie jak recepcja kieruje gości do różnych mieszkań w zależności od tego, kogo chcą zobaczyć, Ingress kieruje przychodzący ruch zewnętrzny do odpowiednich usług w klastrze Kubernetes.
 
