@@ -27,7 +27,7 @@ Rozpoczęcie pracy z AWX, otwartą wersją Ansible Tower, wymaga kilku kroków, 
 
 ### Krok 1: Instalacja AWX
 
-Zakładam, że AWX jest już zainstalowane na Twoim systemie. Jeśli nie, najlepiej jest postępować zgodnie z oficjalną dokumentacją AWX dla najbardziej aktualnych instrukcji.
+Zakładam, że AWX jest już zainstalowany w systemie. Jeśli nie, najlepiej postępować zgodnie z oficjalną dokumentacją AWX, aby uzyskać najbardziej aktualne instrukcje instalacji. Możesz również zapoznać się z moim samouczkiem: [Jak zainstalować AWX przy użyciu Ansible playbook](/pl/blog/how-to-install-awx-using-ansible-playbook)
 
 ### Krok 2: Konfiguracja AWX
 
