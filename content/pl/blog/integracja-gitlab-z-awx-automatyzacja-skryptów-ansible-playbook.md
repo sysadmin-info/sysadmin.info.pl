@@ -1,7 +1,7 @@
 ---
-title: Od Zera do Bohatera - Krok po kroku konfiguracja i zarządzanie AWX
-date: 2024-02-29T10:00:00+00:00
-description: Rozpoczęcie pracy z AWX, otwartą wersją Ansible Tower, wymaga kilku kroków, aby skonfigurować i uruchomić pierwsze zadanie. Oto szczegółowy przewodnik krok po kroku, który pomoże Ci osiągnąć Twój cel.
+title: Integracja GitLab z AWX - Automatyzacja wykonania skryptów Ansible Playbook
+date: 2024-03-07T13:00:00+00:00
+description: Odkryj kroki niezbędne do rozpoczęcia pracy z AWX, otwartą wersją Ansible Tower, wykorzystując repozytorium Gitlab do zarządzania playbookami Ansible. Ten artykuł to kompletny przewodnik krok po kroku, który pokazuje, jak skonfigurować i uruchomić swoje pierwsze zadanie w AWX, pobierając playbooki z repozytorium Gitlab. Dowiedz się, jak zainstalować AWX, skonfigurować projekty Ansible, dodawać inventory oraz tworzyć szablony zadań. Znajdziesz tu również praktyczne wskazówki oraz dodatkowe informacje na temat automatyzacji i dokumentacji. Rozpocznij swoją przygodę z automatyzacją dzięki AWX już dziś!
 draft: false
 hideToc: false
 enableToc: true
@@ -14,12 +14,12 @@ series:
 - ansible
 categories:
 - ansible
-image: images/2024-thumbs/ansible10.webp
+image: images/2024-thumbs/ansible11.webp
 ---
 
-### Od Zera do Bohatera - Krok po kroku konfiguracja i zarządzanie AWX
+### Integracja GitLab z AWX - Automatyzacja wykonania skryptów Ansible Playbook
 
-**W tym filmie wyjaśniam, jak skonfigurować AWX.**
+**W tym filmie wyjaśniam, jak skonfigurować AWX z GitLab.**
 
 {{<youtube DR8jYqejPJw>}}
 
@@ -45,7 +45,9 @@ Po zainstalowaniu AWX, musisz go skonfigurować do użytku. Oto podstawowe kroki
 
 1. **Tworzenie nowego projektu**:
     - Przejdź do zakładki „Projects” i kliknij „Add”.
-    - Nazwij swój projekt i wybierz metodę pobierania „SCM Type” jako „Manual”.
+    - Nazwij swój projekt i wybierz metodę pobierania „SCM Type” jako „Git”.
+    - Podaj URL do repozytorium Git zawierającego Twoje playbooki Ansible (np. GitLab).
+    - Określ gałąź, jeśli używasz innej niż domyślna.
     - Kliknij „Save”.
 
 2. **Czekaj na synchronizację projektu**: AWX automatycznie zsynchronizuje projekt z repozytorium Git. Możesz obserwować postęp w zakładce „Projects”.

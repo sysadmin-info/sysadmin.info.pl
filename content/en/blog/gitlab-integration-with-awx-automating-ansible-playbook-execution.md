@@ -1,7 +1,7 @@
 ---
-title: From Zero to Hero - Step-by-Step AWX Configuration and Management
-date: 2024-02-29T10:00:00+00:00
-description: Starting work with AWX, the open-source version of Ansible Tower, requires several steps to configure and launch your first job. Here is a detailed step-by-step guide to help you achieve your goal.
+title: Gitlab Integration with AWX - Automating Ansible Playbook Execution
+date: 2024-03-07T13:00:00+00:00
+description: Discover the steps required to start working with AWX, the open-source version of Ansible Tower, utilizing a GitLab repository to manage Ansible playbooks. Our article is a comprehensive step-by-step guide that shows how to configure and run your first task in AWX, fetching playbooks from a GitLab repository. Learn how to install AWX, configure Ansible projects, add inventory, and create task templates. You'll also find practical tips and additional information on automation and documentation. Start your automation journey with AWX today!
 draft: false
 hideToc: false
 enableToc: true
@@ -14,21 +14,24 @@ series:
 - ansible
 categories:
 - ansible
-image: images/2024-thumbs/ansible10.webp
+image: images/2024-thumbs/ansible11.webp
 ---
 
-### From Zero to Hero: Step-by-Step AWX Configuration and Management
+### Gitlab Integration with AWX - Automating Ansible Playbook Execution
 
-**In this video, I explain how to configure the AWX.**
+**In this video, I explain how to configure the AWX with GitLab.**
 
-{{<youtube DR8jYqejPJw>}}
+{{<youtube vjhXh0OD9gk>}}
 
-Starting work with AWX, the open-source version of Ansible Tower, requires several steps to configure and launch your first job. Here is a detailed step-by-step guide to help you achieve your goal:
+### GitLab installation
 
-##### Step 1: AWX Installation
+If you do not have GitLab installed I recommend to watch and read this tutorial: [GitLab installation and configuration](/en/blog/gitlab-installation-and-configuration)
 
-Assuming AWX is already installed on your system. If not, it's best to follow the official AWX documentation for the most up-to-date installation instructions.
-But you can also check my tutorial: [How to install AWX using Ansible playbook](/en/blog/how-to-install-awx-using-ansible-playbook)
+Starting work with AWX, the open-source version of Ansible Tower, requires several steps to configure and launch your first job. Below is a detailed step-by-step guide to help you achieve your goal:
+
+### Step 1: AWX Installation
+
+Assuming AWX is already installed on your system. If not, it's best to follow the official AWX documentation for the most up-to-date installation instructions. But you can also check my tutorial: [How to install AWX using Ansible playbook](/en/blog/how-to-install-awx-using-ansible-playbook)
 
 ### Step 2: AWX Configuration
 
@@ -46,7 +49,9 @@ After installing AWX, you need to configure it for use. Here are the basic steps
 
 1. **Creating a new project**:
     - Go to the “Projects” tab and click “Add”.
-    - Name your project and select the “SCM Type” as “Manual”.
+    - Name your project and select the “SCM Type” as “Git”.
+    - Provide the URL to the Git repository containing your Ansible playbooks (e.g., GitLab).
+    - Specify the branch if you are using one other than the default.
     - Click “Save”.
 
 2. **Wait for the project to synchronize**: AWX will automatically synchronize the project with the Git repository. You can monitor the progress in the “Projects” tab.
@@ -77,7 +82,6 @@ After installing AWX, you need to configure it for use. Here are the basic steps
 
 - **Automation**: Consider using AWX features to automate job launches, e.g., through schedules or webhooks.
 - **Documentation and Help**: The official AWX documentation is an excellent source of knowledge about advanced features and troubleshooting.
-
 
 To update systems using different package managers like `apt`, with Ansible, you can write a playbook that detects the operating system (or its family) and applies the appropriate update command. Below is an example playbook that accomplishes this task.
 
