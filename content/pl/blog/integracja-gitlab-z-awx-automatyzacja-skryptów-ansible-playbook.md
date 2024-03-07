@@ -23,6 +23,10 @@ image: images/2024-thumbs/ansible11.webp
 
 {{<youtube DR8jYqejPJw>}}
 
+### Instalacja GitLab
+
+Jeśli nie masz zainstalowanego GitLab, polecam obejrzenie i przeczytanie tego samouczka:: [Instalacja i konfiguracja GitLaba](/pl/blog/instalacja-i-konfiguracja-gitlaba/)
+
 Rozpoczęcie pracy z AWX, otwartą wersją Ansible Tower, wymaga kilku kroków, aby skonfigurować i uruchomić pierwsze zadanie (job). Oto szczegółowy przewodnik krok po kroku, który pomoże Ci osiągnąć Twój cel:
 
 ### Krok 1: Instalacja AWX
