@@ -131,7 +131,7 @@ Argo CD generuje początkowe hasło administratora, które będziesz potrzebowa�
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
-Następnie należy usunąć początkowy sekret, jak sugeruje [Przewodnik Rozpoczęcia](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
+Następnie powinieneś usunąć początkowy sekret, jak sugeruje [Przewodnik dla Początkujących](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
 
 **Modyfikuj konfigurację Argo CD w przypadku problemów z wylogowaniem:**
 
@@ -219,7 +219,7 @@ Argo CD generuje początkowe hasło administratora, które będziesz potrzebowa�
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
-6. Następnie należy usunąć początkowy sekret, jak sugeruje [Przewodnik Rozpoczęcia](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
+6. Następnie powinieneś usunąć początkowy sekret, jak sugeruje [Przewodnik dla Początkujących](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
 
 ---
 
@@ -376,7 +376,7 @@ Każde zadanie zawiera opcję `ignore_errors: yes`, aby kontynuować wykonanie n
 
 dzanie aplikacjami w środowiskach Kubernetes.
 
-(Powinieneś usunąć początkowy sekret później, jak sugeruje Przewodnik dla Początkujących: https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
+Następnie powinieneś usunąć początkowy sekret, jak sugeruje [Przewodnik dla Początkujących](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
 
 ---
 

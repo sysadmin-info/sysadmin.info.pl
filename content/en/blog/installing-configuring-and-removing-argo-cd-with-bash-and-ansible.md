@@ -373,7 +373,7 @@ Each task includes the `ignore_errors: yes` option to continue execution even if
 
 By combining these tasks, the playbook automates the setup and initial configuration of Argo CD, facilitating continuous deployment and management of applications within Kubernetes environments.
 
-(You should delete the initial secret afterwards as suggested by the Getting Started Guide: https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
+You should delete the initial secret afterwards as suggested by the [Getting Started Guide](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
 
 ---
 
