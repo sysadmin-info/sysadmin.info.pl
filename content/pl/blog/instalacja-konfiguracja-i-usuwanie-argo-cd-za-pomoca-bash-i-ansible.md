@@ -128,7 +128,7 @@ kubectl apply -f argocd-ingress.yml
 Argo CD generuje początkowe hasło administratora, które będziesz potrzebować do logowania:
 
 ```bash
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d ; echo
 ```
 
 Następnie powinieneś usunąć początkowy sekret, jak sugeruje [Przewodnik dla Początkujących](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
@@ -216,7 +216,7 @@ chmod +x argocd-install.sh
 Argo CD generuje początkowe hasło administratora, które będziesz potrzebować do logowania:
 
 ```bash
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d ; echo
 ```
 
 6. Następnie powinieneś usunąć początkowy sekret, jak sugeruje [Przewodnik dla Początkujących](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
@@ -341,7 +341,7 @@ PLAY RECAP *********************************************************************
 Argo CD generuje początkowe hasło administratora, którego będziesz potrzebować do logowania:
 
 ```bash
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d ; echo
 ```
 
 5. Następnie powinieneś usunąć początkowy sekret, jak sugeruje [Przewodnik dla Początkujących](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
