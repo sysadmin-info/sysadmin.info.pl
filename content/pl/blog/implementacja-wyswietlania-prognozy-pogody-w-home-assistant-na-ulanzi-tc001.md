@@ -28,7 +28,7 @@ Oto uporządkowany samouczek:
 
 ```json
 {
-  "text": "Temp {{ state_attr('weather.home', 'temperature') }}°C, Wilgotność {{ state_attr('weather.home', 'humidity') }}%, Wiatr {{ state_attr('weather.home', 'wind_speed') }}km/h, Ciśnienie {{ state_attr('weather.home', 'pressure') }}hPa",
+  "text": "Temperature {{ state_attr('weather.home', 'temperature') }}°C, Humidity {{ state_attr('weather.home', 'humidity') }}%, Wind {{ state_attr('weather.home', 'wind_speed') }}km/h, Pressure {{ state_attr('weather.home', 'pressure') }}hPa",
   "icon": "53288",
   "rainbow": false,
   "duration": 30
