@@ -250,7 +250,7 @@ With the help of the supported DNS providers, this technology enables the automa
 Specifically designed for Kubernetes, this DNS server is currently the standard DNS server for Kubernetes 1.14 and higher. CoreDNS is an adaptable and expandable DNS server that may be used for name resolution and service discovery inside a cluster. With minor configuration adjustments, it can also be used to access external DNS providers.
 
 ![Kubernetes DNS flowchart](/images/2024/k3s-dns.webp "Kubernetes DNS flowchart")
-<figcaption>Kubernetes DNS flowchart/figcaption>
+<figcaption>Kubernetes DNS flowchart</figcaption>
 
 **The Reasons ExternalDNS Is a Useful Complement to K8s Cluster:**
 
