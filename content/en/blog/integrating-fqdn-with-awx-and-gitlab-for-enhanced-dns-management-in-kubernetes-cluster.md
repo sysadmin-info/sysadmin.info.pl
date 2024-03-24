@@ -226,6 +226,48 @@ By following these steps, you should be able to set up your K3s cluster's DNS re
 
 #### Configuring CoreDNS in Kubernetes
 
+Domain Name System (DNS) is used by Kubernetes, an open-source platform for orchestrating containerized applications, to enable communication between its many components.
+
+CoreDNS and ExternalDNS are two crucial technologies for DNS management in a Kubernetes cluster.
+
+##### How CoreDNS and ExternalDNS Work
+
+For its different components, including pods and services, to communicate with each other seamlessly, Kubernetes depends on the Domain Name System (DNS).
+The platform immediately creates a DNS record for a newly built Kubernetes service, making it simple for other pods to find and connect to the service. In addition, Kubernetes supports ExternalDNS, which makes it easier to set up and maintain DNS records for services that must be reachable from the outside world. As a result, accessing the services within the cluster is made simpler for external customers.
+
+To put it another way, Kubernetes uses DNS to assist pods and services in locating and establishing hostname-based communication with one another.
+- A DNS record for a Kubernetes service is automatically generated upon its creation.
+- ExternalDNS, which assists in managing DNS records for services that must be reachable from outside the cluster, is supported by Kubernetes.
+
+**external DNS**
+
+To put it briefly, externalDNS is a pod that monitors all of your ingresses while it is operating in your EKS cluster. It automatically gathers the hostname and endpoint upon detecting an ingress with a particular host, creating a record for that resource in Route53. External DNS will instantly update Route53 if the host is modified or removed.
+
+With the help of the supported DNS providers, this technology enables the automatic creation and maintenance of DNS entries for services that are publicly accessible. By resolving the service's hostname to the external IP address of the Kubernetes cluster, it allows external clients to access the services that are operating inside the cluster.
+
+**coreDNS**
+
+Specifically designed for Kubernetes, this DNS server is currently the standard DNS server for Kubernetes 1.14 and higher. CoreDNS is an adaptable and expandable DNS server that may be used for name resolution and service discovery inside a cluster. With minor configuration adjustments, it can also be used to access external DNS providers.
+
+![Kubernetes DNS flowchart](/images/2024/k3s-dns.webp "Kubernetes DNS flowchart")
+<figcaption>Kubernetes DNS flowchart/figcaption>
+
+**The Reasons ExternalDNS Is a Useful Complement to K8s Cluster:**
+
+Kube-DNS, also referred to as CoreDNS, is the built-in DNS system for Kubernetes that handles DNS name resolution for pods and services inside a cluster. Nonetheless, because of a number of benefits, businesses frequently choose to use an external DNS system.
+
+1. **Advanced features:** DNS-based traffic management, automatic failover, and global load balancing are just a few of the extra capabilities that external DNS systems can provide. Additionally, they have built-in security capabilities like DNSSEC, which guard against spoofing and tampering attacks. These characteristics are essential for businesses handling sensitive data, managing traffic across several locations, or managing heavy traffic loads.
+
+2. **Consistent DNS architecture:** Whether or not a company uses Kubernetes, it may still maintain a consistent DNS infrastructure across all of its apps by utilizing an external DNS system. This improves security and streamlines management.
+
+3. **Dynamic and granular control** over DNS records or text instructions kept on DNS servers is made possible by external DNS. Its main function is to serve as a bridge, making it possible to employ DNS providers with specific knowledge outside of Kubernetes. Millions of DNS records can be handled via external DNS, and it provides additional management possibilities.
+
+4. **Scalability:** The Kube-DNS system may become a bottleneck when a Kubernetes cluster's number of services and pods increases. In order to prevent the DNS system from becoming a bottleneck for the rest of the cluster, an external DNS system can manage a far higher volume of DNS queries.
+
+5. **Flexibility:** You have more options when it comes to DNS server types when you use External DNS with Kubernetes. You can choose from a variety of commercial DNS solutions like Google Cloud DNS, Amazon Route 53, BIND, or Microsoft DNS, as well as open-source DNS options like CoreDNS, SkyDNS, or Knot DNS, Adguard Home, Pi-hole, depending on your needs and preferences.
+
+An advanced and adaptable DNS infrastructure and management is available to enterprises by integrating an external DNS system with Kubernetes. Since Kubernetes may be used with a number of well-known external DNS providers, using an external DNS is advised when implementing Kubernetes in production.
+
 CoreDNS is a powerful, flexible, and extendable DNS server widely used in Kubernetes. However, sometimes we need to customize its operation to our specific needs, for example, by redirecting DNS queries to external servers. How do we do this?
 
 Let's start by opening the CoreDNS configuration file, which you'll find in Kubernetes named ConfigMap. I'll show you how to edit this file by adding a 'forward' section. This section is responsible for redirecting traffic to an external DNS server.
@@ -398,3 +440,4 @@ kubectl -n kube-system delete pods -l k8s-app=kube-dns
 **Conclusion:**
 
 That's all for today. I hope this tutorial was clear and helpful to you. If you have any questions or doubts, feel free to ask in the comments below. I also encourage you to subscribe to my channel and share this video if you find it valuable. Thank you for watching, and see you in the next tutorial!
+
