@@ -207,7 +207,7 @@ And put the below content into this file.
       ignore_errors: yes
 
     - name: Remove persistent volume claim
-      command: kubectl delete pvc {{ pvc_output.stdout }} -n awx
+      command: kubectl -n awx delete pvc {{ pvc_output.stdout }}
       when: pvc_output.stdout != ""
       ignore_errors: yes
 
@@ -217,7 +217,7 @@ And put the below content into this file.
       ignore_errors: yes
 
     - name: Remove persistent volume
-      command: kubectl delete pv {{ pv_output.stdout }}
+      command: kubectl -n awx delete pv {{ pv_output.stdout }}
       when: pv_output.stdout != ""
       ignore_errors: yes
 

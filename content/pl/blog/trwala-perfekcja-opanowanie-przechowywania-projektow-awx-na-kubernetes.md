@@ -248,7 +248,7 @@ I wstaw poniższą zawartość do tego pliku.
       ignore_errors: yes
 
     - name: Usuń Persistent volume claim
-      command: kubectl delete pvc {{ pvc_output.stdout }} -n awx
+      command: kubectl -n awx delete pvc {{ pvc_output.stdout }}
       when: pvc_output.stdout != ""
       ignore_errors: yes
 
@@ -258,7 +258,7 @@ I wstaw poniższą zawartość do tego pliku.
       ignore_errors: yes
 
     - name: Usuń Persistent volume
-      command: kubectl delete pv {{ pv_output.stdout }}
+      command: kubectl -n awx delete pv {{ pv_output.stdout }}
       when: pv_output.stdout != ""
       ignore_errors: yes
 

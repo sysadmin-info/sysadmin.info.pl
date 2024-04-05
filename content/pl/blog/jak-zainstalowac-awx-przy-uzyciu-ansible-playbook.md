@@ -165,63 +165,63 @@ I wklej poniższą zawartość do tego pliku.
 
 ```yaml
 ---
-- name: Remove AWX
+- name: Usuń AWX
   hosts: localhost
   become: yes
   tasks:
-    - name: Remove awx deployment 
+    - name: Usuń wdrożenie awx 
       shell: kubectl delete deployment awx-operator-controller-manager -n awx
       ignore_errors: yes
 
-    - name: Remove service account
+    - name: Usuń konto usługi
       shell: kubectl delete serviceaccount awx-operator-controller-manager -n awx
       ignore_errors: yes
 
-    - name: Remove role binding
+    - name: Usuń powiązanie roli
       shell: kubectl delete rolebinding awx-operator-awx-manager-rolebinding -n awx
       ignore_errors: yes
 
-    - name: remove role
+    - name: Usuń rolę
       shell: kubectl delete role awx-operator-awx-manager-role -n awx
       ignore_errors: yes
 
-    - name: scales all deployments in the awx namespace to zero replicas
+    - name: Zmniejsz liczbę replik wszystkich wdrożeń w przestrzeni nazw awx do zera
       shell: kubectl scale deployment --all --replicas=0 -n awx
       ignore_errors: yes
 
-    - name: remove deployments
+    - name: Usuń wdrożenia
       shell: kubectl delete deployments.apps/awx-web deployments.apps/awx-task -n awx 
       ignore_errors: yes
 
-    - name: remove statefulsets
+    - name: Usuń zestawy stanowe
       shell: kubectl delete statefulsets.apps/awx-postgres-13 -n awx 
       ignore_errors: yes
 
-    - name: remove services
+    - name: Usuń usługi
       shell: kubectl delete service/awx-operator-controller-manager-metrics-service service/awx-postgres-13 service/awx-service -n awx
       ignore_errors: yes
 
-    - name: Get persistent volume claim name
+    - name: Pobierz nazwę persistent volume claim
       command: kubectl get pvc -n awx -o custom-columns=:metadata.name --no-headers
       register: pvc_output
       ignore_errors: yes
 
-    - name: Remove persistent volume claim
-      command: kubectl delete pvc {{ pvc_output.stdout }} -n awx
+    - name: Usuń Persistent volume claim
+      command: kubectl -n awx delete pvc {{ pvc_output.stdout }}
       when: pvc_output.stdout != ""
       ignore_errors: yes
 
-    - name: Get persistent volume name
+    - name: Pobierz nazwę objętości trwałej
       command: kubectl get pv -n awx -o custom-columns=:metadata.name --no-headers
       register: pv_output
       ignore_errors: yes
 
-    - name: Remove persistent volume
-      command: kubectl delete pv {{ pv_output.stdout }}
+    - name: Usuń Persistent volume
+      command: kubectl -n awx delete pv {{ pv_output.stdout }}
       when: pv_output.stdout != ""
       ignore_errors: yes
 
-    - name: Remove namespace awx
+    - name: Usuń przestrzeń nazw awx
       shell: kubectl delete namespace awx
       ignore_errors: yes
 ```
