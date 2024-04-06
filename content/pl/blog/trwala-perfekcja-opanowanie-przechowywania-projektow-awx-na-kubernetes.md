@@ -179,7 +179,7 @@ kubectl get svc -n awx
 5. Pobierz hasło awx
 
 ```bash
-kubectl get secret awx-admin-password -o jsonpath="{.data.password}" -n awx | base64 --decode
+kubectl get secret awx-admin-password -o jsonpath="{.data.password}" -n awx | base64 --decode ; echo
 ```
 
 6. Sprawdź adres IP hosta, na którym zainstalowano AWX
