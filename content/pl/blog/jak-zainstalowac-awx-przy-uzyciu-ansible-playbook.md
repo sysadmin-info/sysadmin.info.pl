@@ -141,6 +141,12 @@ kubectl get svc -n awx
 kubectl get secret awx-admin-password -o jsonpath="{.data.password}" -n awx | base64 --decode ; echo
 ```
 
+Dodatkowo możesz zmienić hasło na swoje własne za pomocą poniższej komendy:
+
+```bash
+kubectl -n awx exec -it awx-web-65655b54bf-8lxvr -- awx-manage changepassword admin
+```
+
 6. Sprawdź adres IP hosta, na którym zainstalowano AWX
 
 ```bash
