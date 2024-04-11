@@ -54,7 +54,7 @@ Oto schemat w formacie JSON, który możesz zaimportować do Node-RED. Pamiętaj
     {
         "id": "c29e36f478fc3db8",
         "type": "tab",
-        "label": "Wyświetlacz Pogody",
+        "label": "Weather Display",
         "disabled": false,
         "info": "",
         "env": []
@@ -88,7 +88,7 @@ Oto schemat w formacie JSON, który możesz zaimportować do Node-RED. Pamiętaj
         "type": "inject",
         "z": "c29e36f478fc3db8",
         "g": "a372fa45308d730e",
-        "name": "Wysyłaj Pogodę Periodycznie",
+        "name": "Send Weather Periodically",
         "props": [
             {
                 "p": "payload"
@@ -118,7 +118,7 @@ Oto schemat w formacie JSON, który możesz zaimportować do Node-RED. Pamiętaj
         "type": "api-current-state",
         "z": "c29e36f478fc3db8",
         "g": "a372fa45308d730e",
-        "name": "Pobierz Stan Pogody",
+        "name": "Get Weather State",
         "server": "073a5b0aaf38a13c",
         "version": 3,
         "outputs": 1,
@@ -159,12 +159,12 @@ Oto schemat w formacie JSON, który możesz zaimportować do Node-RED. Pamiętaj
         ]
     },
     {
-        "id": "21c94aafe496d28b",
+        "id": "801b22e036cb3913",
         "type": "function",
-        "z": "c29e36f478fc3db8",
-        "g": "a372fa45308d730e",
-        "name": "Formatuj wiadomość pogodową",
-        "func": "var state = msg.data.state;\nvar iconMap={\n    \"sunny\": \"11201\",\n    \"partlycloudy\": \"22586\",\n    \"cloudy\": \"11220\",\n    \"rainy\": \"53288\",\n    \"snowy\": \"4702\"\n};\nvar iconId = iconMap[state.toLowerCase()] || \"16754\"\n\nvar temperature = msg.data.attributes.temperature;\nvar humidity = msg.data.attributes.humidity;\nvar windSpeed = msg.data.attributes.wind_speed;\nvar pressure = msg.data.attributes.pressure;\n\nmsg.payload = {\n    \"text\": `Temp: ${temperature}°C, Hum: ${humidity}%, Wind: ${windSpeed} km/h, Pressure: ${pressure} hPa`,\n    \"icon\": `${iconId}`, // Zmień zgodnie z twoim systemem ikon\n    \"duration\": 30\n};\n\nreturn msg;",
+        "z": "563f3f5c2595232d",
+        "g": "167b4fee447b386d",
+        "name": "Format Weather Message",
+        "func": "var state = msg.data.state;\nvar iconMap={\n    \"sunny\": \"11201\",\n    \"partlycloudy\": \"22586\",\n    \"cloudy\": \"2283\",\n    \"rainy\": \"53288\",\n    \"snowy\": \"4702\",\n    \"fog\": \"56703\"\n};\nvar iconId = iconMap[state.toLowerCase()] || \"16754\"\n\nvar temperature = msg.data.attributes.temperature;\nvar humidity = msg.data.attributes.humidity;\nvar windSpeed = msg.data.attributes.wind_speed;\nvar pressure = msg.data.attributes.pressure;\n\nmsg.payload = {\n    \"text\": `Temp: ${temperature}°C, Hum: ${humidity}%, Wind: ${windSpeed} km/h, Pressure: ${pressure} hPa`,\n    \"icon\": `${iconId}`, // Change based on your icon system\n    \"duration\": 30\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -175,7 +175,7 @@ Oto schemat w formacie JSON, który możesz zaimportować do Node-RED. Pamiętaj
         "y": 60,
         "wires": [
             [
-                "156691c5396806f2"
+                "74740f68df8feb6a"
             ]
         ]
     },
@@ -184,7 +184,7 @@ Oto schemat w formacie JSON, który możesz zaimportować do Node-RED. Pamiętaj
         "type": "mqtt out",
         "z": "c29e36f478fc3db8",
         "g": "a372fa45308d730e",
-        "name": "Publikuj pogodę do MQTT",
+        "name": "Publish Weather to MQTT",
         "topic": "awtrix_prefix/custom/weather",
         "qos": "2",
         "retain": "false",
