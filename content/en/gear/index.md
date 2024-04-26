@@ -93,6 +93,6 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Raspberry Pi 4 Model B 8GB | []() |
 | Fujitsu Q920 Esprimo core i5 16 GB RAM 512 GB SSD + 128 GB SSD | []() |
 | Fujitsu Q958 Esprimo core i5 32 GB RAM 256 GB SSD | []() |
-| Laptop Dell Inspiron 5767 17,3 " Intel Core i7, 8 GB RAM, 1TB SSD | []() |
+| Laptop Dell Inspiron 5767 17,3 " Intel Core i7, 16 GB RAM, 1TB SSD Samsung Evo 870 | []() |
 | SAMSUNG Galaxy Tab A7 Lite 8.7" 32GB WiFi Android Tablet | []() |
 | Synology DS723+ | []() |
