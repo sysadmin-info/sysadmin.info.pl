@@ -47,8 +47,8 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Shock mount       | [Thronmax Shock Mount for Microphone, Microphone Stand](https://www.thronmax.com/product/thronmax-expert-shock-mount/)|
 | Microphone holder | [MOZOS SB38-BK microphone desk arm holder](https://mozos.pl/sklep/mozos-sb38-bk-statyw-biurkowy-na-mikrofon-czarny/)|
 | Microphone holder - replacement | [Boom Mic Arm for Shure SM7B/MV7/Blue Yeti, 2023 New Upgraded Microphone Desk Mount with Hidden Cable Trough & Extension Tube](https://a.co/d/6zrKIRl)|
-| Heahphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)|
-| Heahphones        | [Logitech G230 Gaming Headset with Mic](https://a.co/d/3753Y9I)|
+| Headphones        | [Razer BlackShark V2 X Gaming Headset](https://www.razer.com/gaming-headsets/razer-blackshark-v2-x)|
+| Headphones        | [Logitech G230 Gaming Headset with Mic](https://a.co/d/3753Y9I)|
 | Speakers          | [Creative Pebble Plus 2.1 USB-powered desktop speakers with subwoofer](https://a.co/d/eM02W6J)|
 | Microphone        | [Elgato Wave DX](https://www.elgato.com/us/en/p/wave-dx-dynamic-microphone)|
 | XLR mic interface | [Elgato Wave XLR](https://www.elgato.com/us/en/p/wave-xlr)|
