@@ -28,7 +28,7 @@ image: images/2024-thumbs/arch.webp
 
 ##### 1. Download Arch iso
 
-DOwnload iso from here [Arch Linux - Downloads](https://archlinux.org/download/)
+Download iso from here [Arch Linux - Downloads](https://archlinux.org/download/)
 
 ##### 2. Use dd to copy content of the iso to a USB stick
 
