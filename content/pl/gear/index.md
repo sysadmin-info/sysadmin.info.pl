@@ -65,6 +65,7 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | Oświetlenie monitora         | [Xiaomi Mi Computer Monitor Light Bar](https://a.co/d/4wnGNo8)                                                        |
 | Statyw dla telepromptera i kamery | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini](https://a.co/d/cyhTfL6)                                    |
 | Oświetlenie RGB | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights](https://a.co/d/i7hQKxb)                                 |
+| Green screen | [ELGATO GREEN SCREEN](https://www.elgato.com/pl/pl/p/green-screen)                                                                    |
 
 ##### Szafa serwerowa i wszystkie elementy sieciowe
 
@@ -80,3 +81,17 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 | MikroTik hAP ac2 router  | [MikroTik hAP ac2 ](https://amzn.eu/d/ahvBxLf) |
 | TP-Link Deco E4 Wi-Fi 5  | [TP-Link Deco E4 - 2 sztuki](https://allegro.pl/oferta/tp-link-system-mesh-deco-e4-ac1200-dualband-11363213953) |
 | TP-Link Deco X20 Wi-Fi 6 | [Tp_link Deco X20 - 2 sztuki](https://allegro.pl/oferta/tp-link-deco-x20-2-pack-dual-band-2-4-ghz-5-ghz-14293438817) |
+
+##### Komputery & single board
+
+|   Name            |  Model                                                                         |
+| ----------------- | ------------------------------------------------------------------------------ |
+| Raspberry Pi Compute Module 4-8GB RAM 32GB eMMC (CM4108032) | []() |
+| Raspberry Pi CM4 IO board | []() |
+| Raspberry Pi 4 Model B 8GB | []() |
+| Raspberry Pi 4 Model B 8GB | []() |
+| Fujitsu Q920 Esprimo core i5 16 GB RAM 512 GB SSD + 128 GB SSD | []() |
+| Fujitsu Q958 Esprimo core i5 32 GB RAM 256 GB SSD | []() |
+| Laptop Dell Inspiron 5767 17,3 " Intel Core i7, 8 GB RAM, 1TB SSD | []() |
+| SAMSUNG Galaxy Tab A7 Lite 8.7" 32GB WiFi Android Tablet | []() |
+| Synology DS723+ | []() |

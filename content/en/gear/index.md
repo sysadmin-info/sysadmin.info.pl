@@ -66,6 +66,7 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | Monitor lighting | [Xiaomi Mi Computer Monitor Light Bar](https://a.co/d/8yPF6aJ)|
 | Tripod for Teleprompter and camera | [Huepar TPD05 19.7" Lightweight Aluminum Tripod-Mini](https://a.co/d/iicSOiq)|
 | RGB lighting | [Govee M1 RGBIC LED Strip Lights, Upgraded Technology, 16.4ft WiFi Lights](https://a.co/d/g7SKBFe)|
+| Green screen | [ELGATO GREEN SCREEN](https://www.elgato.com/pl/en/p/green-screen)|
 
 ##### Server cabinet and all the network stuff
 
@@ -81,3 +82,17 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 | MikroTik hAP ac2 router  | [MikroTik hAP ac2 ](https://a.co/d/aqMa2Do) |
 | TP-Link Deco E4 Wi-Fi 5  | [TP Link Deco E4 - 2-Pack](https://a.co/d/1uvwwSj) |
 | TP-Link Deco X20 Wi-Fi 6 | [TP Link Deco E4 - 2-Pack](https://a.co/d/4CyZzHF) |
+
+##### Computers & single board
+
+|   Name            |  Model                                                                         |
+| ----------------- | ------------------------------------------------------------------------------ |
+| Raspberry Pi Compute Module 4-8GB RAM 32GB eMMC (CM4108032) | []() |
+| Raspberry Pi CM4 IO board | []() |
+| Raspberry Pi 4 Model B 8GB | []() |
+| Raspberry Pi 4 Model B 8GB | []() |
+| Fujitsu Q920 Esprimo core i5 16 GB RAM 512 GB SSD + 128 GB SSD | []() |
+| Fujitsu Q958 Esprimo core i5 32 GB RAM 256 GB SSD | []() |
+| Laptop Dell Inspiron 5767 17,3 " Intel Core i7, 8 GB RAM, 1TB SSD | []() |
+| SAMSUNG Galaxy Tab A7 Lite 8.7" 32GB WiFi Android Tablet | []() |
+| Synology DS723+ | []() |
