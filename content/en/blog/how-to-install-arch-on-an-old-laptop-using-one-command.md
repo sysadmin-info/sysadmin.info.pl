@@ -33,7 +33,7 @@ Download iso from here [Arch Linux - Downloads](https://archlinux.org/download/)
 ##### 2. Use dd to copy content of the iso to a USB stick
 
 ```bash
-sudo dd bs=4M iff=/home/username/Downloads/archlinux-2024.04.01.iso of=/dev/dis/by-id/name-of-the-usb-stick conv=fsync oflag=direct status=progress
+sudo dd bs=4M if=/home/username/Downloads/archlinux-2024.04.01.iso of=/dev/dis/by-id/name-of-the-usb-stick conv=fsync oflag=direct status=progress
 ```
 
 ##### 3. Plug the USB drive into USB port in old laptop
