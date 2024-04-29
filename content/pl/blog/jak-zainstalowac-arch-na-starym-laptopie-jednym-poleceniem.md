@@ -33,7 +33,7 @@ Pobierz iso stąd [Arch Linux - Pobieranie](https://archlinux.org/download/)
 ##### 2. Użyj dd, aby skopiować zawartość iso na pendrive
 
 ```bash
-sudo dd bs=4M iff=/home/username/Downloads/archlinux-2024.04.01.iso of=/dev/dis/by-id/name-of-the-usb-stick conv=fsync oflag=direct status=progress
+sudo dd bs=4M if=/home/username/Downloads/archlinux-2024.04.01.iso of=/dev/dis/by-id/name-of-the-usb-stick conv=fsync oflag=direct status=progress
 ```
 
 ##### 3. Włóż pendrive do portu USB w starym laptopie
