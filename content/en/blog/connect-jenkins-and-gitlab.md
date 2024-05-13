@@ -32,17 +32,24 @@ In this video I explain how to connect Jenkins and GitLab.
 </dev/null openssl s_client -connect 10.10.0.119:443 -servername 10.10.0.119 | openssl x509 > $HOME/10.10.0.119.crt
 ```
 
-4. ```bash
+4. 
+
+```bash
 sudo find / -iname "cacerts"
 ```
+
 5. 
+
 ```bash
 java -version
 ```
+
 6. 
+
 ```bash
 sudo find / -iname "keytool"
 ```
+
 7. Import GitLab certificate to Java cacerts 
 
 ```bash
@@ -54,9 +61,10 @@ sudo /usr/lib64/jvm/java-11-openjdk-11/bin/keytool -delete -alias gitlab -keysto
 
 # List all certificates
 sudo /usr/lib64/jvm/java-11-openjdk-11/bin/keytool -list -keystore /usr/lib64/jvm/java-11-openjdk-11/lib/security/cacerts
-
 ```
+
 8. type password 
+
 ```bash
 changeit
 ```
