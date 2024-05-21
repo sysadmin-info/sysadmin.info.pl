@@ -1,9 +1,10 @@
 [build]
   command = "hugo"
   publish = "public"
-
-[build.environment]
-  HUGO_VERSION = "0.111.3"
+  environment = { 
+    HUGO_VERSION = "0.111.3",
+    NODE_VERSION = "18.x"  # Add this line to specify the Node.js version
+  }
 
 [[headers]]
   for = "/*"
@@ -24,3 +25,4 @@
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
+
