@@ -1,6 +1,6 @@
 ---
 title: Automatyzacja Testów Taiko i Gauge z Użyciem Jenkins, GitLab i Docker - Kompletny Samouczek
-date: 2024-05-21T17:00:00+00:00
+date: 2024-05-21T17:30:00+00:00
 description: Automatyzacja Testów Taiko i Gauge z Użyciem Jenkins, GitLab i Docker - Kompletny Samouczek
 draft: false
 hideToc: false

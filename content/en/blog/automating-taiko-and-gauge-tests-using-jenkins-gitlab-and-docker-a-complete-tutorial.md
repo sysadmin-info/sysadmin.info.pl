@@ -1,6 +1,6 @@
 ---
 title: Automating Taiko and Gauge Tests Using Jenkins, GitLab and Docker - A Complete Tutorial
-date: 2024-05-21T17:00:00+00:00
+date: 2024-05-21T17:30:00+00:00
 description: Automating Taiko and Gauge Tests Using Jenkins, GitLab and Docker - A Complete Tutorial
 draft: false
 hideToc: false
