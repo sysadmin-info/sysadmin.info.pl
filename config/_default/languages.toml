@@ -2,12 +2,14 @@
   title = "Sysadmin - Linux administration, security and hardening"
   languageName = "English"
   weight = 1
-  languagedir = "ltr"
   contentdir = "content/en"
+  [en.params]
+    languagedir = "ltr"
 
 [pl]
   title = "Sysadmin - Administracja serwerami opartymi o dystrybucje Linux."
   languageName = "Polski"
   weight = 2
-  languagedir = "ltr"
   contentdir = "content/pl"
+  [pl.params]
+    languagedir = "ltr"

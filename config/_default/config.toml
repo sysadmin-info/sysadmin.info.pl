@@ -1,4 +1,4 @@
-baseURL = "https://sysadmin.info.pl/" 
+baseURL = "https://sysadmin.info.pl/"
 title = "SYSADMIN"
 theme = ["hugo-embed-pdf-shortcode", "zzo"]
 
@@ -16,7 +16,7 @@ buildFuture = true
 copyright = "&copy;{year}, [sysadmin](https://sysadmin.info.pl/) - All rights reserved"
 timeout = 10000
 enableEmoji = true
-paginate = 9 
+paginate = 9
 rssLimit = 100
 
 enableGitInfo = false
@@ -41,7 +41,6 @@ googleAnalytics = ""
 [outputs]
   home = ["HTML", "RSS", "SearchIndex"]
   section = ["HTML", "RSS", "SearchIndex"]
-  taxonomyTerm = ["HTML", "RSS", "SearchIndex"]
   taxonomy = ["HTML", "RSS", "SearchIndex"]
 
 [outputFormats]
@@ -78,3 +77,17 @@ googleAnalytics = ""
   [privacy.youtube]
     disable = false
     privacyEnhanced = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 1
+    [languages.en.params]
+      languagedir = "ltr"
+  [languages.pl]
+    languageName = "Polish"
+    contentDir = "content/pl"
+    weight = 2
+    [languages.pl.params]
+      languagedir = "ltr"
