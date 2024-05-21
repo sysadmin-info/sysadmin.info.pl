@@ -1,10 +1,10 @@
 [build]
   command = "hugo"
   publish = "public"
-  environment = { 
-    HUGO_VERSION = "0.111.3",
-    NODE_VERSION = "18.x"  # Add this line to specify the Node.js version
-  }
+
+[build.environment]
+  HUGO_VERSION = "0.111.3"
+  NODE_VERSION = "18.x"  # Add this line to specify the Node.js version
 
 [[headers]]
   for = "/*"
