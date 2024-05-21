@@ -22,6 +22,8 @@ rssLimit = 100
 enableGitInfo = false
 googleAnalytics = ""
 
+ignoreErrors = ["error-output-taxonomy"]  # Add this line here
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
