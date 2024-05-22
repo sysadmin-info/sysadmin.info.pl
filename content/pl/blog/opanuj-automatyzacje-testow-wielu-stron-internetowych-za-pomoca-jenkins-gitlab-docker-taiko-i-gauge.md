@@ -1,7 +1,7 @@
 ---
-title: Master Multi-Website Test Automation with Jenkins, GitLab, Docker, Taiko, and Gauge
+title: Opanuj automatyzację testów wielu stron internetowych za pomocą Jenkins, GitLab, Docker, Taiko i Gauge
 date: 2024-05-22T16:00:00+00:00
-description: Master Multi-Website Test Automation with Jenkins, GitLab, Docker, Taiko, and Gauge
+description: Opanuj automatyzację testów wielu stron internetowych za pomocą Jenkins, GitLab, Docker, Taiko i Gauge
 draft: false
 hideToc: false
 enableToc: true
@@ -17,104 +17,104 @@ categories:
 image: images/2024-thumbs/taiko08.webp
 ---
 
-[Taiko repository](https://github.com/getgauge/taiko)
+[Repozytorium Taiko](https://github.com/getgauge/taiko)
 [Taiko API](https://docs.taiko.dev/)
 
-**Here is a video tutorial**
+**Oto samouczek wideo**
 
 {{<youtube 617wPbPk2d4>}}
 
-## Introduction
+## Wprowadzenie
 
-In this tutorial, we will walk through the process of setting up automated tests for AWX and ArgoCD using Jenkins, GitLab, Docker, Taiko, and Gauge. This guide assumes you have basic knowledge of these technologies and have them installed on your virtual machines. 
+W tym samouczku przejdziemy przez proces konfiguracji automatycznych testów dla AWX i ArgoCD za pomocą Jenkins, GitLab, Docker, Taiko i Gauge. Ten przewodnik zakłada, że masz podstawową wiedzę na temat tych technologii i masz je zainstalowane na swoich maszynach wirtualnych.
 
-## Prerequisites
+## Wymagania wstępne
 
-- Proxmox with three VMs: one for Jenkins, one for GitLab, and one for Docker.
-- Basic knowledge of Jenkins, GitLab, Docker, Taiko, and Gauge.
-- Environment variables set up for credentials management.
+- Proxmox z trzema maszynami wirtualnymi: jedna dla Jenkins, jedna dla GitLab i jedna dla Docker.
+- Podstawowa wiedza o Jenkins, GitLab, Docker, Taiko i Gauge.
+- Zmiennie środowiskowe skonfigurowane do zarządzania poświadczeniami.
 
-### Step 1: Set Up Your Environment
+### Krok 1: Skonfiguruj swoje środowisko
 
-Ensure your virtual machines are set up and connected as follows:
+Upewnij się, że twoje maszyny wirtualne są skonfigurowane i połączone w następujący sposób:
 
-1. **Jenkins VM**: This will host Jenkins and manage your build and test pipeline.
-2. **GitLab VM**: This will host your code repositories.
-3. **Docker VM**: This will run Docker containers required for testing.
+1. **Jenkins VM**: Będzie hostować Jenkins i zarządzać twoim potokiem budowania i testowania.
+2. **GitLab VM**: Będzie hostować twoje repozytoria kodu.
+3. **Docker VM**: Będzie uruchamiać kontenery Docker wymagane do testowania.
 
-### Step 2: Create Taiko Test Scripts
+### Krok 2: Utwórz skrypty testowe Taiko
 
-Create the following JavaScript test scripts using Taiko:
+Utwórz następujące skrypty testowe JavaScript za pomocą Taiko:
 
-#### AWX Test Script (`awx.js`)
+#### Skrypt testowy AWX (`awx.js`)
 
 ```javascript
-const { goto, text, button, textBox, write, click, into, waitFor, screenshot, evaluate } = require('taiko');  // Import necessary functions from Taiko
-const assert = require('assert');  // Import assert module
+const { goto, text, button, textBox, write, click, into, waitFor, screenshot, evaluate } = require('taiko');  // Importuj niezbędne funkcje z Taiko
+const assert = require('assert');  // Importuj moduł assert
 const path = require('path');
 
-step("Navigate to the AWX login page", async function () {
+step("Przejdź na stronę logowania AWX", async function () {
     await goto("awx.sysadmin.homes");
 });
 
-step("Assert the AWX login page is loaded", async () => {
-    assert(await text("Welcome to AWX!").exists());  // Use assert to check if the text exists
+step("Potwierdź, że załadowała się strona logowania AWX", async () => {
+    assert(await text("Welcome to AWX!").exists());  // Użyj assert do sprawdzenia, czy tekst istnieje
 });
 
-step('Use AWX credentials <username>:<password>', async (username, password) => {
+step('Użyj poświadczeń AWX <username>:<password>', async (username, password) => {
     await write(process.env.username, into(textBox("Username"), {force:true}));
     await write(process.env.password, into(textBox("Password"), {force:true}));
 });
 
-step("Click the AWX login button", async () => {
+step("Kliknij przycisk logowania AWX", async () => {
     await click(button("Log In"));
-    await waitFor(5000);  // Wait for 5 seconds to allow the page to load
-    await screenshot({ path: 'after-login.png' });  // Capture a screenshot after login attempt for debugging
+    await waitFor(5000);  // Poczekaj 5 sekund, aby strona się załadowała
+    await screenshot({ path: 'after-login.png' });  // Zrób zrzut ekranu po próbie logowania dla debugowania
 });
 
-step("Verify successful AWX login", async () => {
-    assert(await text("Dashboard").exists());  // Use assert to check if the text exists
+step("Zweryfikuj pomyślne logowanie do AWX", async () => {
+    assert(await text("Dashboard").exists());  // Użyj assert do sprawdzenia, czy tekst istnieje
 });
 
-step("Clear all AWX tasks", async function () {
+step("Wyczyść wszystkie zadania AWX", async function () {
     await evaluate(() => localStorage.clear());
 });
 ```
 
-#### ArgoCD Test Script (`argocd.js`)
+#### Skrypt testowy ArgoCD (`argocd.js`)
 
 ```javascript
-const { goto, text, button, textBox, write, click, into, waitFor, screenshot, evaluate } = require('taiko');  // Import necessary functions from Taiko
-const assert = require('assert');  // Import assert module
+const { goto, text, button, textBox, write, click, into, waitFor, screenshot, evaluate } = require('taiko');  // Importuj niezbędne funkcje z Taiko
+const assert = require('assert');  // Importuj moduł assert
 const path = require('path');
 
-step("Navigate to the ArgoCD login page", async function () {
+step("Przejdź na stronę logowania ArgoCD", async function () {
     await goto("argocd.sysadmin.homes");
 });
 
-step("Assert the ArgoCD login page is loaded", async () => {
+step("Potwierdź, że załadowała się strona logowania ArgoCD", async () => {
     assert(await text("Let's get stuff deployed!").exists());
 });
 
-step('Use ArgoCD credentials <username>:<password>', async (username, password) => {
+step('Użyj poświadczeń ArgoCD <username>:<password>', async (username, password) => {
     await write(process.env.username, into(textBox("Username"), {force:true}));
     await write(process.env.password, into(textBox("Password"), {force:true}));
 });
 
-step("Click the ArgoCD login button", async () => {
+step("Kliknij przycisk logowania ArgoCD", async () => {
     await click(button("SIGN IN"));
 });
 
-step("Verify successful ArgoCD login", async () => {
+step("Zweryfikuj pomyślne logowanie do ArgoCD", async () => {
     assert(await text("Applications").exists());
 });
 
-step("Clear all ArgoCD tasks", async function () {
+step("Wyczyść wszystkie zadania ArgoCD", async function () {
     await evaluate(() => localStorage.clear());
 });
 ```
 
-#### Common Script (`common.js`)
+#### Wspólny skrypt (`common.js`)
 
 ```javascript
 /* globals gauge*/
@@ -152,7 +152,7 @@ afterSuite(async () => {
     await closeBrowser();
 });
 
-// Return a screenshot file name
+// Zwraca nazwę pliku zrzutu ekranu
 gauge.customScreenshotWriter = async function () {
     const screenshotFilePath = path.join(process.env['gauge_screenshots_dir'],
         `screenshot-${process.hrtime.bigint()}.png`);
@@ -164,53 +164,53 @@ gauge.customScreenshotWriter = async function () {
 };
 ```
 
-### Step 3: Create Gauge Specification Files
+### Krok 3: Utwórz pliki specyfikacji Gauge
 
-Create specification files to define the steps for your tests:
+Utwórz pliki specyfikacji definiujące kroki dla twoich testów:
 
-#### AWX Specification (`test-awx.spec`)
-
-```markdown
-# AWX login test
-
-To execute this specification, use
-    npm test
-
-This is a context step that runs before every scenario
-* Navigate to the AWX login page
-
-## Login to AWX
-* Assert the AWX login page is loaded
-* Use AWX credentials "admin":"password"
-* Click the AWX login button
-* Verify successful AWX login
-___
-* Clear all AWX tasks
-```
-
-#### ArgoCD Specification (`test-argocd.spec`)
+#### Specyfikacja AWX (`test-awx.spec`)
 
 ```markdown
-# ArgoCD login test
+# Test logowania AWX
 
-To execute this specification, use
+Aby wykonać tę specyfikację, użyj
     npm test
 
-This is a context step that runs before every scenario
-* Navigate to the ArgoCD login page
+To jest krok kontekstowy, który jest wykonywany przed każdym scenariuszem
+* Przejdź na stronę logowania AWX
 
-## Login to ArgoCD
-* Assert the ArgoCD login page is loaded
-* Use ArgoCD credentials "admin":"password"
-* Click the ArgoCD login button
-* Verify successful ArgoCD login
+## Logowanie do AWX
+* Potwierdź, że załadowała się strona logowania AWX
+* Użyj poświadczeń AWX "admin":"password"
+* Kliknij przycisk logowania AWX
+* Zweryfikuj pomyślne logowanie do AWX
 ___
-* Clear all ArgoCD tasks
+* Wyczyść wszystkie zadania AWX
 ```
 
-### Step 4: Set Up Jenkins Pipeline
+#### Specyfikacja ArgoCD (`test-argocd.spec`)
 
-Create a Jenkinsfile to define your Jenkins pipeline:
+```markdown
+# Test logowania ArgoCD
+
+Aby wykonać tę specyfikację, użyj
+    npm test
+
+To jest krok kontekstowy, który jest wykonywany przed każdym scenariuszem
+* Przejdź na stronę logowania ArgoCD
+
+## Logowanie do ArgoCD
+* Potwierdź, że załadowała się strona logowania ArgoCD
+* Użyj poświadczeń ArgoCD "admin":"password"
+* Kliknij przycisk logowania ArgoCD
+* Zweryfikuj pomyślne logowanie do ArgoCD
+___
+* Wyczyść wszystkie zadania ArgoCD
+```
+
+### Krok 4: Skonfiguruj potok Jenkins
+
+Utwórz plik Jenkinsfile do zdefiniowania potoku Jenkins:
 
 ```groovy
 pipeline {
@@ -219,8 +219,10 @@ pipeline {
         disableConcurrentBuilds()
     }
     parameters {
-        choice(name: 'choose_server', choices: ['ArgoCD', 'AWX', 'AdGuardHome', 'Confluence', 'GitLab', 'Grafana', 'HomeAssistant', 'Jenkins', 'NginxProxyManager', 'Proxmox', 'Synology', 'Wazuh', 'PortainerProxy', 'PortainerAdGuardHome'], description: 'Select server')
-        choice(name: 'SPEC_FILE', choices: ['test-awx.spec', 'test-argocd.spec', 'test-adguardhome.spec', 'test-confluence.spec', 'test-gitlab.spec', 'test-grafana.spec', 'test-homeassistant.spec', 'test-jenkins.spec', 'test-nginxproxymanager.spec', 'test-proxmox.spec', 'test-synology.spec', 'test-wazuh.spec', 'test-portainerproxy.spec', 'test-portaineradguardhome.spec'], description: 'Choose spec file to test a module')
+        choice(name: 'choose_server', choices: ['ArgoCD', 'AWX', 'AdGuardHome', 'Confluence', 'GitLab', 'Grafana', 'HomeAssistant', 'Jenkins', 'NginxProxyManager', 'Proxmox', 'Synology', 'Wazuh', 'PortainerProxy', 'PortainerAdGuardHome'], description: 'Wybierz serwer')
+        choice(name: 'SPEC_FILE', choices: ['test-awx.spec', 'test-argocd.spec', 'test-adguardhome.spec', 'test-confluence.spec', 'test-gitlab.spec', 'test-grafana.spec', 'test-homeassistant.spec', 'test-jenkins.spec', 'test-nginxproxymanager.spec', 'test-proxmox.spec', 'test-synology.spec', 'test-wazuh.spec', 'test-portainerproxy.spec', 'test-portainerad
+
+guardhome.spec'], description: 'Wybierz plik specyfikacji do przetestowania modułu')
     }
     environment {
         REPO_URL = 'git@gitlab.sysadmin.homes:developers/awx-taiko.git'
@@ -337,7 +339,7 @@ pipeline {
                             env.PASSWORD_ID = 'portainer-password'
                             break
                         default:
-                            error("Unsupported server: ${params.choose_server}")
+                            error("Nieobsługiwany serwer: ${params.choose_server}")
                     }
                 }
             }
@@ -389,19 +391,19 @@ pipeline {
 }
 ```
 
-### Step 5: Run Your Pipeline
+### Krok 5: Uruchom swój potok
 
-1. **Configure Jenkins**: Ensure your Jenkins server is configured with the necessary credentials and Docker is set up correctly.
-2. **Trigger the Pipeline**: Run the pipeline by selecting the server and providing the credentials as parameters.
-3. **Review the Results**: Check the reports and logs generated by Taiko and Gauge to ensure everything is working correctly.
+1. **Skonfiguruj Jenkins**: Upewnij się, że twój serwer Jenkins jest skonfigurowany z niezbędnymi poświadczeniami i Docker jest poprawnie skonfigurowany.
+2. **Uruchom potok**: Uruchom potok, wybierając serwer i podając poświadczenia jako parametry.
+3. **Przejrzyj wyniki**: Sprawdź raporty i logi wygenerowane przez Taiko i Gauge, aby upewnić się, że wszystko działa poprawnie.
 
-### Final Configuration Summary
+### Podsumowanie konfiguracji końcowej
 
-1. **`common.js`**: Ensures the browser is opened and closed before and after the test suite respectively, and includes a custom screenshot writer.
-2. **`test-awx.spec`** and **`test-argocd.spec`**: Define the steps for logging into AWX and ArgoCD, including navigation, login, verification, and clearing tasks.
-3. **JavaScript Test Scripts**: `awx.js` and `argocd.js` handle the actual test steps, making use of environment variables for credentials.
-4. **Jenkinsfile**: Manages the pipeline stages, including resolving server IPs, initializing the container, setting environment variables, running tests, and archiving artifacts.
+1. **`common.js`**: Zapewnia, że przeglądarka jest otwierana i zamykana przed i po suite testów oraz zawiera niestandardowy pisarz zrzutów ekranu.
+2. **`test-awx.spec`** i **`test-argocd.spec`**: Definiują kroki logowania do AWX i ArgoCD, w tym nawigację, logowanie, weryfikację i czyszczenie zadań.
+3. **Skrypty testowe JavaScript**: `awx.js` i `argocd.js` obsługują rzeczywiste kroki testowe, wykorzystując zmienne środowiskowe do poświadczeń.
+4. **Jenkinsfile**: Zarządza etapami potoku, w tym rozwiązywaniem adresów IP serwerów, inicjalizacją kontenera, ustawianiem zmiennych środowiskowych, uruchamianiem testów i archiwizowaniem artefaktów.
 
-This setup ensures a robust and automated testing environment, providing consistency and efficiency in your testing processes.
+Ta konfiguracja zapewnia solidne i zautomatyzowane środowisko testowe, zapewniając spójność i efektywność twoich procesów testowych.
 
-Feel free to follow this tutorial to automate your own testing workflows, and adjust the steps as needed to fit your specific requirements.
+Śmiało korzystaj z tego samouczka do automatyzacji własnych procesów testowych i dostosuj kroki w miarę potrzeby do swoich specyficznych wymagań.
