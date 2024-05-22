@@ -169,6 +169,9 @@ log "Aktualizacja gitlab.rb, aby używał nowych plików certyfikatu..."
 sed -i "s|nginx\['ssl_certificate'\] = .*|nginx['ssl_certificate'] = \"$CRT_FILE\"|g" "$GITLAB_CONFIG"
 sed -i "s|nginx\['ssl_certificate_key'\] = .*|nginx['ssl_certificate_key'] = \"$KEY_FILE\"|g" "$GITLAB_CONFIG"
 
+# Usuń błąd Let's Encrypt
+sudo sed -i "s/# letsencrypt\['enable'\] = nil/letsencrypt['enable'] = false/" /etc/gitlab/gitlab.rb
+
 # Weryfikacja zmian w gitlab.rb
 log "Weryfikacja aktualizacji w gitlab.rb..."
 grep "nginx\['ssl_certificate'\]" "$GITLAB_CONFIG"
