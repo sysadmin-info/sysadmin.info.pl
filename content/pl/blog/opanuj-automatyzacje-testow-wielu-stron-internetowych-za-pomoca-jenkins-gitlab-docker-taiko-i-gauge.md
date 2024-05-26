@@ -240,7 +240,7 @@ guardhome.spec'], description: 'Wybierz plik specyfikacji do przetestowania modu
         stage('Resolve IP') {
             steps {
                 script {
-                    def serverIpMapping = [
+                    def serverAddressMapping = [
                         'ArgoCD': 'argocd.sysadmin.homes',
                         'AWX': 'awx.sysadmin.homes',
                         'AdGuardHome': '10.10.0.108',
@@ -256,7 +256,7 @@ guardhome.spec'], description: 'Wybierz plik specyfikacji do przetestowania modu
                         'PortainerProxy': 'npm-portainer.sysadmin.homes',
                         'PortainerAdGuardHome': 'adguard-portainer.sysadmin.homes'
                     ]
-                    env.server_ip = serverIpMapping[params.choose_server]
+                    env.server_address = serverAddressMapping[params.choose_server]
                 }
             }
         }
@@ -349,7 +349,7 @@ guardhome.spec'], description: 'Wybierz plik specyfikacji do przetestowania modu
                 withCredentials([string(credentialsId: env.USERNAME_ID, variable: 'username'), string(credentialsId: env.PASSWORD_ID, variable: 'password')]) {
                     script {
                         sh '''
-                            export server_ip=$server_ip
+                            export server_address=$server_address
                             export username=$username
                             export password=$password
                         '''

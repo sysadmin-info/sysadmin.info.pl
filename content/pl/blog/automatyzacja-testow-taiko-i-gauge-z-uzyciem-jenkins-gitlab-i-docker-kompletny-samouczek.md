@@ -476,7 +476,7 @@ pipeline {
         stage('Resolve IP') {
             steps {
                 script {
-                    def serverIpMapping = [
+                    def serverAddressMapping = [
                         'ArgoCD': 'argocd.sysadmin.homes',
                         'AWX': 'awx.sysadmin.homes',
                         'AdGuardHome': '10.10.0.108',
@@ -492,7 +492,7 @@ pipeline {
                         'PortainerProxy': 'npm-portainer.sysadmin.homes',
                         'PortainerAdGuardHome': 'adguard-portainer.sysadmin.homes'
                     ]
-                    env.server_ip = serverIpMapping[params.choose_server]
+                    env.server_address = serverAddressMapping[params.choose_server]
                 }
             }
         }
@@ -519,7 +519,7 @@ pipeline {
                 withCredentials([string(credentialsId: username, variable: 'username'), string(credentialsId: password, variable: 'password')]) {
                     script {
                         sh '''
-                            export server_ip=$server_ip
+                            export server_address=$server_address
                             export username=$username
                             export password=$password
                         '''
