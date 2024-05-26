@@ -1,7 +1,7 @@
 ---
-title: Managing Docker Build Arguments and Environment Variables in Jenkins Pipelines
+title: Zarządzanie argumentami kompilacji Docker i zmiennymi środowiskowymi w Jenkins Pipelines
 date: 2024-05-25T16:00:00+00:00
-description: Managing Docker Build Arguments and Environment Variables in Jenkins Pipelines
+description: Zarządzanie argumentami kompilacji Docker i zmiennymi środowiskowymi w Jenkins Pipelines
 draft: false
 hideToc: false
 enableToc: true
@@ -17,25 +17,25 @@ categories:
 image: images/2024-thumbs/jenkins01.webp
 ---
 
-**Here is a video tutorial**
+**Tutaj jest wideo tutorial**
 
 {{<youtube XVvaXgzPWKo>}}
 
-### Introduction
+### Wstęp
 
-In this tutorial, we will explore how to properly manage Docker build arguments and environment variables within Jenkins pipelines, focusing on the differences between defining Docker settings in the agent block versus within pipeline stages. We will use two Jenkins pipeline examples to illustrate common issues and their solutions.
+W tym poradniku omówimy, jak prawidłowo zarządzać argumentami kompilacji Docker i zmiennymi środowiskowymi w pipeline Jenkins, koncentrując się na różnicach między definiowaniem ustawień Docker w bloku agent a w etapach pipeline. Użyjemy dwóch przykładów pipeline Jenkins, aby zilustrować typowe problemy i ich rozwiązania.
 
-### Problem Overview
+### Przegląd Problemów
 
-The main issue arises when build arguments and credentials defined in the Jenkins environment are not properly passed to the Dockerfile during the pipeline execution. This can result in credentials not being loaded correctly, causing the build to fail. 
+Główny problem pojawia się, gdy argumenty kompilacji i poświadczenia zdefiniowane w środowisku Jenkins nie są prawidłowo przekazywane do Dockerfile podczas wykonywania pipeline. Może to skutkować niezaładowaniem poświadczeń, co powoduje błąd kompilacji.
 
-### Example Pipelines
+### Przykłady Pipeline
 
-We will use two Jenkins pipeline scripts to understand the problem and its solution. 
+Użyjemy dwóch skryptów pipeline Jenkins, aby zrozumieć problem i jego rozwiązanie.
 
-#### Pipeline 1: Using Dockerfile in the Agent Block
+#### Pipeline 1: Używanie Dockerfile w Bloku Agent
 
-This pipeline defines a Dockerfile in the agent block, expecting environment variables to be available within the Docker build process.
+Ten pipeline definiuje Dockerfile w bloku agent, oczekując, że zmienne środowiskowe będą dostępne w procesie budowy Docker.
 
 ```groovy
 pipeline {
@@ -212,12 +212,14 @@ pipeline {
     post {
         always {
             cleanWs()
+
+
         }
     }
 }
 ```
 
-#### Pipeline 1 - modified: Using Dockerfile in the Agent Block
+#### Pipeline 1 - zmodyfikowany: Używanie Dockerfile w Bloku Agent
 
 ```groovy
 pipeline {
@@ -398,9 +400,9 @@ pipeline {
 }
 ```
 
-#### Pipeline 2: Defining Docker Settings in Build Stage
+#### Pipeline 2: Definiowanie Ustawień Docker w Etapie Budowy
 
-This pipeline separates the Docker image build process into a distinct stage, allowing for better management of environment variables and credentials.
+Ten pipeline oddziela proces budowy obrazu Docker do osobnego etapu, umożliwiając lepsze zarządzanie zmiennymi środowiskowymi i poświadczeniami.
 
 ```groovy
 pipeline {
@@ -432,7 +434,9 @@ pipeline {
                     def serverIpMapping = [
                         'ArgoCD': 'argocd.sysadmin.homes',
                         'AWX': 'awx.sysadmin.homes',
-                        'AdGuardHome': '10.10.0.108',
+                        'AdGuardHome': '
+
+10.10.0.108',
                         'Confluence': 'confluence.sysadmin.homes',
                         'GitLab': 'gitlab.sysadmin.homes',
                         'Grafana': 'grafana.sysadmin.homes',
@@ -616,32 +620,34 @@ pipeline {
 }
 ```
 
-### Detailed Analysis
+### Szczegółowa Analiza
 
-#### Pipeline 1 Issues
+#### Problemy Pipeline 1
 
-- **Environment Variables and Credentials**: In the first pipeline, environment variables defined in the `environment` section are not automatically available as build arguments in the Dockerfile. Additionally, credentials defined in Jenkins must be explicitly loaded using the `withCredentials` block within the relevant stage.
+- **Zmienne Środowiskowe i Poświadczenia**: W pierwszym pipeline zmienne środowiskowe zdefiniowane w sekcji `environment` nie są automatycznie dostępne jako argumenty kompilacji w Dockerfile. Dodatkowo, poświadczenia zdefiniowane w Jenkins muszą być wyraźnie załadowane przy użyciu bloku `withCredentials` w odpowiednim etapie.
   
-- **Agent Dockerfile**: Using `agent dockerfile` means that the entire pipeline runs within the context of a Docker container built from the specified Dockerfile. If credentials and environment variables are not correctly passed as build arguments, they will not be available within the Docker container.
+- **Agent Dockerfile**: Użycie `agent dockerfile` oznacza, że cały pipeline działa w kontekście kontenera Docker zbudowanego z określonego Dockerfile. Jeśli poświadczenia i zmienne środowiskowe nie są poprawnie przekazywane jako argumenty kompilacji, nie będą one dostępne w kontenerze Docker.
 
-#### Pipeline 2 Solutions
+#### Rozwiązania Pipeline 2
 
-- **Separated Build Stage**: The second pipeline explicitly separates the Docker image build process into its own stage. This allows for better control and management of environment variables and credentials.
+- **Oddzielony Etap Budowy**: Drugi pipeline wyraźnie oddziela proces budowy obrazu Docker do własnego etapu. Umożliwia to lepszą kontrolę i zarządzanie zmiennymi środowiskowymi oraz poświadczeniami.
 
-- **WithCredentials Block**: The use of `withCredentials` within the build stage ensures that the credentials are properly loaded and available as environment variables. These can then be passed as build arguments to the Docker build process.
+- **Blok WithCredentials**: Użycie `withCredentials` w etapie budowy zapewnia, że poświadczenia są prawidłowo załadowane i dostępne jako zmienne środowiskowe. Mogą one być następnie przekazane jako argumenty kompilacji do procesu budowy Docker.
 
-- **Docker Image Agent**: Subsequent stages use the built Docker image as the agent, ensuring that all necessary dependencies and environment variables are correctly set up.
+- **Agent Obrazu Docker**: Kolejne etapy używają zbudowanego obrazu Docker jako agenta, zapewniając, że wszystkie niezbędne zależności i zmienne środowiskowe są poprawnie skonfigurowane.
 
-### Best Practices
+### Najlepsze Praktyki
 
-1. **Separate Build and Runtime Contexts**: Always separate the build process of a Docker image from its runtime execution within the pipeline. This ensures that environment variables and credentials can be managed appropriately.
+1. **Oddzielanie Kontekstów Budowy i Wykonania**: Zawsze oddzielaj proces budowy obrazu Docker od jego wykonania w pipeline. Zapewnia to odpowiednie zarządzanie zmiennymi środowiskowymi i poświadczeniami.
   
-2. **Explicit Credential Loading**: Use the `withCredentials` block to load credentials explicitly within the stages that require them. This ensures that sensitive information is handled securely and is available only when needed.
+2. **Wyraźne Ładowanie Poświadczeń**: Używaj bloku `withCredentials` do wyraźnego ładowania poświadczeń w etapach, które tego wymagają. Zapewnia to, że wrażliwe informacje są przetwarzane bezpiecznie i są dostępne tylko wtedy, gdy są potrzebne.
 
-3. **Pass Build Arguments Explicitly**: When building Docker images, pass necessary build arguments explicitly using the `--build-arg` option. This ensures that all required variables are available during the build process.
+3. **Przekazywanie Argumentów Kompilacji Wyraźnie**: Podczas budowania obrazów Docker przekazuj niezbędne argumenty kompilacji wyraźnie za pomocą opcji `--build-arg`. Zapewnia to, że wszystkie wymagane zmienne są dostępne podczas procesu budowy.
 
-4. **Modular and Maintainable Pipelines**: Structure your Jenkins pipelines in a modular way, separating different concerns (e.g., code checkout, environment setup, build, test, and deploy). This makes the pipeline easier to maintain and troubleshoot.
+4. **Modularne i Utrzymywalne Pipelines**: Strukturyzuj swoje pipelines Jenkins w sposób modularny, oddzielając różne zadania (np. pobieranie kodu, konfiguracja środowiska, budowa, testowanie i wd
 
-### Conclusion
+rażanie). Ułatwia to utrzymanie i rozwiązywanie problemów w pipeline.
 
-By following these best practices and structuring your Jenkins pipelines effectively, you can ensure that environment variables, credentials, and build arguments are correctly managed, leading to more reliable and secure CI/CD workflows. The second pipeline example demonstrates a robust approach to handling Docker builds within Jenkins, addressing common issues and providing a maintainable solution.
+### Podsumowanie
+
+Przestrzegając tych najlepszych praktyk i efektywnie strukturyzując swoje pipelines Jenkins, możesz zapewnić, że zmienne środowiskowe, poświadczenia i argumenty kompilacji są prawidłowo zarządzane, co prowadzi do bardziej niezawodnych i bezpiecznych workflow CI/CD. Drugi przykład pipeline demonstruje solidne podejście do obsługi budów Docker w Jenkins, rozwiązując typowe problemy i zapewniając utrzymywalne rozwiązanie.
