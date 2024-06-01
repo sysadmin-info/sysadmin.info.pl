@@ -2,7 +2,7 @@
 title: Using a Domain Name Instead of IP Address in GitLab Continuous Integration/Continuous Development Pipeline
 date: 2024-05-31T12:00:00+00:00
 description: Using a Domain Name Instead of IP Address in GitLab Continuous Integration/Continuous Development Pipeline
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false

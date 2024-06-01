@@ -2,7 +2,7 @@
 title: Użycie nazwy domeny zamiast adresu IP w pipeline CI/CD GitLab
 date: 2024-05-31T12:00:00+00:00
 description: Użycie nazwy domeny zamiast adresu IP w pipeline CI/CD GitLab
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
