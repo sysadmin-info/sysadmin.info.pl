@@ -13,7 +13,10 @@ asciinema: true
 series:
 - Taiko
 categories:
-- Taiko, Gauge, Node.js, npm
+- Taiko
+- Gauge
+- Node.js
+- npm
 image: images/2024-thumbs/taiko06.webp
 ---
 
