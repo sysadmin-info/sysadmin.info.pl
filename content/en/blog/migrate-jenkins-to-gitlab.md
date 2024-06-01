@@ -14,7 +14,8 @@ series:
 - GitLab
 categories:
 - Taiko
-- Gauge- Node.js
+- Gauge
+- Node.js
 - npm
 - GitLab
 image: images/2024-thumbs/gitlab01.webp
