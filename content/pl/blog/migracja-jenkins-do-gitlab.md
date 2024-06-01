@@ -430,7 +430,7 @@ Upewnij się, że masz skonfigurowany klucz wdrożeniowy lub token dostępu osob
 ssh-keygen -t ed25519 -C "gitlab-runner"
 ```
 
-Dodaj klucz publiczny (`~/.ssh/id_rsa.pub`) do swojego projektu GitLab w sekcji **Settings** > **Repository** > **Deploy Keys**.
+Dodaj klucz publiczny (`~/.ssh/id_ed25519.pub`) do swojego projektu GitLab w sekcji **Settings** > **Repository** > **Deploy Keys**.
 
 ##### 3. Upewnij się, że GitLab Runner ma dostęp do klucza SSH
 
@@ -443,7 +443,7 @@ GitLab Runner musi używać klucza SSH do uwierzytelniania. Możesz dodać klucz
 3. Rozwiń sekcję **Variables**.
 4. Dodaj nową zmienną:
    - **Key**: `SSH_PRIVATE_KEY`
-   - **Value**: Wklej zawartość swojego prywatnego klucza SSH (`~/.ssh/id_rsa`).
+   - **Value**: Wklej zawartość swojego prywatnego klucza SSH (`~/.ssh/id_ed25519`).
    - Zaznacz **Masked** i **Protected** jeśli to odpowiednie.
 
 ##### 4. Utwórz `.gitlab-ci.yml` aby użyć klucza SSH
@@ -474,9 +474,9 @@ before_script:
   - touch ~/.ssh/known_hosts
   - ssh-keyscan 10.10.0.119 >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-  - chmod 400 ~/.ssh/id_rsa
-  - ssh-add ~/.ssh/id_rsa
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_ed25519
+  - chmod 400 ~/.ssh/id_ed25519
+  - ssh-add ~/.ssh/id_ed25519
 
 build_and_test_awx:
   stage: build_and_test
