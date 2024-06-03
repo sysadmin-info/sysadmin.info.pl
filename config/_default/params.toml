@@ -161,6 +161,7 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
+  bluesky = "https://sysadmin-info.bsky.social"
   email = ""
   phone = ""
   facebook = "https://www.facebook.com/sysadmininfo"
