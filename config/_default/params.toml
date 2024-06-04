@@ -192,6 +192,7 @@ commento = false
   dev-to = ""
   gitea = "https://gitea.com/sysadmin-info"
   google-scholar = ""
+  threads = "https://www.threads.net/@sysadmin.info.pl"
 
 [donationOptions]
   enable = false
