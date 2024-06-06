@@ -49,7 +49,7 @@ You can organize and execute your tests right within GitLab with GitLab Continuo
 
 ### How to Move from Jenkins to GitLab Continuous Integration/Continuous Development
 
-1. Examine your existing Jenkins pipelines.
+1. **Examine your existing Jenkins pipelines**
    - Make a list of every Jenkins task, process, and stage that you have.
    - Note the use of any plugins or particular customizations.
 
