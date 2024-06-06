@@ -38,7 +38,7 @@ You can organize and execute your tests right within GitLab with GitLab Continuo
 3. **Built-in Security:** - GitLab's settings allow for the safe management of environment variables and secrets.
    - Sensitive variable management and masking are supported natively by GitLab.
 
-4. **GitLab CI/CD is scalable:**, meaning it can grow with your project. It is possible to manage job concurrency, employ multiple runners, and run jobs in parallel.
+4. **GitLab CI/CD is scalable:** - it can grow with your project. It is possible to manage job concurrency, employ multiple runners, and run jobs in parallel.
    - GitLab Runners are a simple to set up tool for workload distribution.
 
 5. **Flexibility:** - Handles a variety of tools and environments, such as cloud providers, Docker, and Kubernetes.
