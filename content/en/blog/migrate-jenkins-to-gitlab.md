@@ -805,13 +805,9 @@ The logs for the `gitlab-runner` service are typically managed by the system's l
 
 #### 8. Configuring GitLab Runner Logging
 
-If you want to configure where GitLab Runner writes its logs, you can modify the `config.toml` file or adjust the service configuration. Here are the steps to change logging configurations:
+If you want to configure where GitLab Runner writes its logs, you can adjust the service configuration. Here are the steps to change logging configurations:
 
-1. **Modify `config.toml`:**
-
-   The `config.toml` file for GitLab Runner is typically located at `/etc/gitlab-runner/config.toml`. You can add or modify the logging settings there. However, `gitlab-runner` does not natively support specifying a log file in the `config.toml`.
-
-2. **Redirect Logs in the Service File:**
+1. **Redirect Logs in the Service File:**
 
    If you need to redirect logs to a specific file, you can modify the `gitlab-runner` service file. This is generally located at `/etc/systemd/system/gitlab-runner.service` or similar.
 
@@ -819,11 +815,26 @@ If you want to configure where GitLab Runner writes its logs, you can modify the
    sudo vim /etc/systemd/system/gitlab-runner.service
    ```
 
-   Add or modify the `ExecStart` line to redirect logs:
+   Add `StandardOutput` and `StandardError` after the `ExecStart` line to redirect logs:
 
    ```ini
    [Service]
-   ExecStart=/usr/local/bin/gitlab-runner run --working-directory /home/gitlab-runner --config /etc/gitlab-runner/config.toml --log-level debug >> /var/log/gitlab-runner.log 2>&1
+   ExecStart=/usr/local/bin/gitlab-runner "run" "--working-directory" "/home/gitlab-runner" "--config" "/etc/gitlab-runner/config.toml" "--service" "gitlab-runner" "--user" "gitlab-runner
+   StandardOutput=file:/var/log/gitlab-runner/runner-std.log
+   StandardError=file:/var/log/gitlab-runner/runner-err.log
+   ```
+
+   Create a directory:
+
+   ```bash
+   sudo mkdir -p /var/log/gitlab-runner
+   ```
+
+   Create files:
+
+   ```bash
+   sudo touch /var/log/gitlab-runner/runner-std.log
+   sudo touch /var/log/gitlab-runner/runner-err.log
    ```
 
    Reload the `systemd` configuration and restart the service:
