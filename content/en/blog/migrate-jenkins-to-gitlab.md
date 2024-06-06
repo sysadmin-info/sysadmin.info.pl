@@ -41,7 +41,7 @@ You can organize and execute your tests right within GitLab with GitLab Continuo
 4. GitLab Continuous Integration/Continuous Development is scalable, meaning it can grow with your project. It is possible to manage job concurrency, employ multiple runners, and run jobs in parallel.
    - GitLab Runners are a simple to set up tool for workload distribution.
 
-5. ** Flexibility:** - Handles a variety of tools and environments, such as cloud providers, Docker, and Kubernetes.
+5. **Flexibility:** - Handles a variety of tools and environments, such as cloud providers, Docker, and Kubernetes.
    - Permits the usage of intricate job dependencies and unique scripts.
 
 6. **User-Friendly Interface:** - Job logs, artifacts, and pipeline status are all clearly visible through the GitLab interface.
