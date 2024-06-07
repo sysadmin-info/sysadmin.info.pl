@@ -1,6 +1,6 @@
 ---
 title: Secure Secrets Management - Using HashiCorp Vault with GitLab CI/CD
-date: 2024-06-07T13:00:00+00:00
+date: 2024-06-08T13:00:00+00:00
 description: Secure Secrets Management - Using HashiCorp Vault with GitLab CI/CD
 draft: true
 hideToc: false
@@ -35,19 +35,19 @@ Below is an integrated tutorial covering the installation of HashiCorp Vault on 
   {{< tab >}}
   ##### Debian/Ubuntu
   ```bash
-    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+  wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-    sudo apt update && sudo apt install vault
+  sudo apt update && sudo apt install vault
   ```
   {{< /tab >}}
   {{< tab >}}
   ##### CentOS/RHEL
   ```bash
-    sudo yum install -y yum-utils
-    sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-    sudo yum -y install vault
-    # Verify the installation
-    vault --version
+  sudo yum install -y yum-utils
+  sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+  sudo yum -y install vault
+  # Verify the installation
+  vault --version
   ```
   {{< /tab >}}
 {{< /tabs >}}

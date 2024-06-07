@@ -1,6 +1,6 @@
 ---
 title: Integracja OpenBao Password Manager Vault w celu usprawnienia zarządzania sekretami w GitLab
-date: 2024-06-07T13:00:00+00:00
+date: 2024-06-09T13:00:00+00:00
 description: Integracja OpenBao Password Manager Vault w celu usprawnienia zarządzania sekretami w GitLab
 draft: true
 hideToc: false
