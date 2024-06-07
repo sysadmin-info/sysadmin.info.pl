@@ -86,7 +86,6 @@ Zainstaluj Docker, wykonując następujące kroki:
   {{< tab >}}
   ##### Debian/Ubuntu
   ```bash
-  s
   # Dodaj oficjalny klucz GPG Docker:
   sudo apt update
   sudo apt install -y apt-transport-https ca-certificates curl software-properties-common

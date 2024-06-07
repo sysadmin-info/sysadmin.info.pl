@@ -27,23 +27,30 @@ Poniżej przedstawiam zintegrowany tutorial obejmujący instalację HashiCorp Va
 
 ### Instalacja HashiCorp Vault na osobnym serwerze
 
-1. **Pobierz i zainstaluj Vault**:
+1. **Zainstaluj Vault**:
 
     Na serwerze z systemem Linux wykonaj poniższe kroki:
 
-    ```bash
-    # Pobierz binarkę Vault
-    curl -O https://releases.hashicorp.com/vault/1.10.4/vault_1.10.4_linux_amd64.zip
-
-    # Wypakuj plik
-    unzip vault_1.10.4_linux_amd64.zip
-
-    # Przenieś binarkę do ścieżki systemowej
-    sudo mv vault /usr/local/bin/
-
-    # Sprawdź instalację
+{{< tabs Debian CentOS >}}
+  {{< tab >}}
+  ##### Debian/Ubuntu
+  ```bash
+    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update && sudo apt install vault
+  ```
+  {{< /tab >}}
+  {{< tab >}}
+  ##### CentOS/RHEL
+  ```bash
+    sudo yum install -y yum-utils
+    sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+    sudo yum -y install vault
+    # Verify the installation
     vault --version
-    ```
+  ```
+  {{< /tab >}}
+{{< /tabs >}}
 
 2. **Skonfiguruj Vault**:
 

@@ -86,7 +86,6 @@ Install Docker by following these steps:
   {{< tab >}}
   ##### Debian/Ubuntu
   ```bash
-  s
   # Add Docker's official GPG key:
   sudo apt update
   sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
@@ -103,7 +102,7 @@ Install Docker by following these steps:
   ```
   {{< /tab >}}
   {{< tab >}}
-  ##### CentOS
+  ##### CentOS/RHEL
   ```bash
   sudo yum install -y yum-utils device-mapper-persistent-data lvm2
   sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -143,7 +142,7 @@ Download and install GitLab Runner:
   ```
   {{< /tab >}}
   {{< tab >}}
-  ##### CentOS
+  ##### CentOS/RHEL
   ```bash
   sudo yum install -y gitlab-runner
   sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
