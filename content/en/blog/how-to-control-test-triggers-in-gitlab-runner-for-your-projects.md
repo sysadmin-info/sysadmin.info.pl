@@ -1,6 +1,6 @@
 ---
 title: How to control test triggers in GitLab runner for your projects
-date: 2024-06-06T13:00:00+00:00
+date: 2024-06-07T13:00:00+00:00
 description: How to control test triggers in GitLab runner for your projects
 draft: true
 hideToc: false
@@ -96,6 +96,7 @@ In this way, no tests will run until you uncomment this section.
 You can also add `[ci skip]` or `[skip ci]` to the commit message to skip running CI/CD for that specific commit.
 
 Example commit message:
+
 ```
 Commit message [ci skip]
 ```
@@ -105,6 +106,7 @@ Commit message [ci skip]
 If you want to disable specific Runners, you can use tags to decide which Runners should be used to run certain jobs.
 
 Example in the `.gitlab-ci.yml` file:
+
 ```yaml
 test:
   script:
