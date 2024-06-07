@@ -21,6 +21,8 @@ image: images/2024-thumbs/gitlab04.webp
 
 {{<youtube>}}
 
+[Dokumentacja HashiCorp Vault](https://developer.hashicorp.com/vault/install?product_intent=vault)
+
 ## Wstęp
 
 Poniżej przedstawiam zintegrowany tutorial obejmujący instalację HashiCorp Vault na osobnym serwerze oraz jego integrację z GitLab Runnerami. Dzięki temu zapewnimy bezpieczne przechowywanie sekretów i ich wykorzystanie w pipeline'ach GitLab CI/CD.
@@ -148,8 +150,8 @@ echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://
     Na każdym runnerze GitLab, zainstaluj `vault`:
 
     ```bash
-    curl -O https://releases.hashicorp.com/vault/1.10.4/vault_1.10.4_linux_amd64.zip
-    unzip vault_1.10.4_linux_amd64.zip
+    curl -O https://releases.hashicorp.com/vault/1.16.3/vault_1.16.3_linux_amd64.zip
+    unzip vault_1.16.3_linux_amd64.zip
     sudo mv vault /usr/local/bin/
     vault --version
     ```
