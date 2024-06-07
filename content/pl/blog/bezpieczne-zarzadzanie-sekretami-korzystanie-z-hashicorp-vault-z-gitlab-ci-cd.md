@@ -21,11 +21,11 @@ image: images/2024-thumbs/gitlab04.webp
 
 {{<youtube>}}
 
-[Dokumentacja HashiCorp Vault](https://developer.hashicorp.com/vault/install?product_intent=vault)
-
 ## Wstęp
 
 Poniżej przedstawiam zintegrowany tutorial obejmujący instalację HashiCorp Vault na osobnym serwerze oraz jego integrację z GitLab Runnerami. Dzięki temu zapewnimy bezpieczne przechowywanie sekretów i ich wykorzystanie w pipeline'ach GitLab CI/CD.
+
+[Dokumentacja HashiCorp Vault](https://developer.hashicorp.com/vault/install?product_intent=vault)
 
 ### Instalacja HashiCorp Vault na osobnym serwerze
 
