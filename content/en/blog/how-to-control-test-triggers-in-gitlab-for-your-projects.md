@@ -1,8 +1,8 @@
 ---
 title: How to control test triggers in GitLab for your projects
-date: 2024-06-07T13:00:00+00:00
+date: 2024-06-09T06:00:00+00:00
 description: How to control test triggers in GitLab for your projects
-draft: true
+draft: false 
 hideToc: false
 enableToc: true
 enableTocContent: false
@@ -19,7 +19,7 @@ image: images/2024-thumbs/gitlab03.webp
 
 **Here is a video tutorial**
 
-{{<youtube>}}
+{{<youtube -De_Tg9R6rA>}}
 
 #### Introduction
 
