@@ -110,6 +110,7 @@ Use the following commands to generate a new private key and certificate:
    ```bash
    mv tls.crt /opt/vault/tls/tls.crt
    mv tls.key /opt/vault/tls/tls.key
+   chown -R vault:vault /opt/vault/tls/
    ```
 
 3. **Configure Vault**:
@@ -278,13 +279,17 @@ Use the following commands to generate a new private key and certificate:
     In a new terminal, run the following commands:
 
     ```bash
-    export VAULT_ADDR='https://<vault_server_ip>:8200'
-    
-    # Initialize Vault
-    vault operator init
-
-    # Save the keys and root token generated during initialization
+    echo "export VAULT_ADDR='https://<vault_server_ip>:8200'" >> ~/.bashrc
+    source ~/.bashrc
     ```
+    
+    Initialize Vault
+
+    ```bash
+    vault operator init
+    ```
+
+    Save the keys and root token generated during initialization
 
     You will receive several unseal keys and one root token. Save them in a secure place.
 
@@ -423,6 +428,13 @@ before_script:
     export ARGOCD_SECRET=$(curl --silent --header "X-Vault-Token: $VAULT_TOKEN" $VAULT_ADDR/v1/secret/data/gitlab/argocd)
     export ARGOCD_USERNAME=$(echo $ARGOCD_SECRET | jq -r '.data.data.login')
     export ARGOCD_PASSWORD=$(echo $ARGOCD_SECRET | jq -r '.data.data.password')
+  
+  # The NPM_USER and NPM_PASS variables are not properly passed to the Dockerfile when exported in the before_script section. 
+  # Docker builds the image before running the before_script, so these variables are not available when building the Docker image. 
+  # To solve this problem, the NPM_USER and NPM_PASS variables should be defined as CI/CD variables at the project level in GitLab, 
+  # and then passed as arguments when building the Docker image. 
+
+Translated with DeepL.com (free version)
 
 build_and_test_awx:
   stage: build_and_test
@@ -505,9 +517,7 @@ build_and_test_argocd:
         rm -rf /workspace/node_modules
         rm -rf /lib/node_modules
         ln -s /usr/local/lib/node_modules/ /workspace/node_modules
-        ln
-
- -s /usr/local/lib/node_modules/ /lib/node_modules
+        ln -s /usr/local/lib/node_modules/ /lib/node_modules
         rm -f *.tar downloaded//*
         rm -rf reports .gauge logs
         gauge run /workspace/specs/test-argocd.spec

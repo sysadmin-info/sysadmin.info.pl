@@ -110,6 +110,7 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
    ```bash
    mv tls.crt /opt/vault/tls/tls.crt
    mv tls.key /opt/vault/tls/tls.key
+   chown -R vault:vault /opt/vault/tls/
    ```
 
 3. **Skonfiguruj Vault**:
@@ -278,14 +279,18 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
     W nowym terminalu uruchom poniższe komendy:
 
     ```bash
-    export VAULT_ADDR='https://<vault_server_ip>:8200'
+    echo "export VAULT_ADDR='https://<vault_server_ip>:8200'" >> ~/.bashrc
+    source ~/.bashrc
+    ```
     
-    # Inicjalizacja Vault
-    vault operator init
+    Inicjalizacja Vault
 
-    # Zapisz klucze i token root wygenerowane podczas inicjalizacji
+    ```bash
+    vault operator init
     ```
 
+    Zapisz klucze i token root wygenerowane podczas inicjalizacji
+  
     Otrzymasz kilka kluczy unseal i jeden token root. Zapisz je w bezpiecznym miejscu.
 
     ```bash
@@ -421,6 +426,11 @@ before_script:
     export ARGOCD_SECRET=$(curl --silent --header "X-Vault-Token: $VAULT_TOKEN" $VAULT_ADDR/v1/secret/data/gitlab/argocd)
     export ARGOCD_USERNAME=$(echo $ARGOCD_SECRET | jq -r '.data.data.login')
     export ARGOCD_PASSWORD=$(echo $ARGOCD_SECRET | jq -r '.data.data.password')
+
+  # Zmienne NPM_USER i NPM_PASS nie są poprawnie przekazywane do Dockerfile, gdy są eksportowane w sekcji before_script. 
+  # Docker buduje obraz przed uruchomieniem skryptów before_script, więc zmienne te nie są dostępne w czasie budowania obrazu Docker. 
+  # Aby rozwiązać ten problem, zmienne NPM_USER i NPM_PASS powinny być zdefiniowane jako zmienne CI/CD na poziomie projektu w GitLab, 
+  # a następnie przekazywane jako argumenty podczas budowania obrazu Docker.
 
 build_and_test_awx:
   stage: build_and_test
