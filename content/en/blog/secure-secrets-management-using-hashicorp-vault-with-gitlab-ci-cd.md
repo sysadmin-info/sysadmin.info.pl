@@ -358,7 +358,42 @@ root_token>
 
 If you add the VAULT_TOKEN and VAULT_ADDR environment variables in the CI/CD project settings in GitLab, you do not need to declare them again in the .gitlab-ci.yml file. GitLab will automatically pass these variables to all jobs in the pipeline.
 
-18. **Configure `.gitlab-ci.yml`**:
+### Add Vault Certificate in GitLab Runners
+
+18. **Download SSL Certificate from Vault**:
+   
+   First, download the SSL certificate used by Vault:
+
+   ```bash
+   echo -n | openssl s_client -connect 10.10.0.150:8200 | openssl x509 > vault.crt
+   ```
+
+19. **Add Certificate to Trusted Certificates**:
+
+   Copy the downloaded certificate to the system's trusted certificates:
+
+   **On the machine trying to connect to Vault (e.g., GitLab):**
+
+   ```bash
+   sudo cp vault.crt /usr/local/share/ca-certificates/
+   sudo update-ca-certificates
+   ```
+
+### Check Connection
+
+20. **Check Connection to Vault Using OpenSSL**:
+
+   ```bash
+   openssl s_client -connect 10.10.0.150:8200 -CAfile /usr/local/share/ca-certificates/vault.crt
+   ```
+
+21. **Check Connection to Vault Using curl**:
+
+```bash
+curl --cacert /usr/local/share/ca-certificates/vault.crt https://10.10.0.150:8200/v1/sys/health
+```
+
+22. **Configure `.gitlab-ci.yml`**:
 
 ```yaml
 variables:
@@ -546,41 +581,6 @@ clean_workspace:
   script:
     # Clean up workspace directory
     - rm -rf $CI_PROJECT_DIR/*
-```
-
-### Add Vault Certificate in GitLab Runners
-
-19. **Download SSL Certificate from Vault**:
-   
-   First, download the SSL certificate used by Vault:
-
-   ```bash
-   echo -n | openssl s_client -connect 10.10.0.150:8200 | openssl x509 > vault.crt
-   ```
-
-20. **Add Certificate to Trusted Certificates**:
-
-   Copy the downloaded certificate to the system's trusted certificates:
-
-   **On the machine trying to connect to Vault (e.g., GitLab):**
-
-   ```bash
-   sudo cp vault.crt /usr/local/share/ca-certificates/
-   sudo update-ca-certificates
-   ```
-
-### Check Connection
-
-21. **Check Connection to Vault Using OpenSSL**:
-
-   ```bash
-   openssl s_client -connect 10.10.0.150:8200 -CAfile /usr/local/share/ca-certificates/vault.crt
-   ```
-
-22. **Check Connection to Vault Using curl**:
-
-```bash
-curl --cacert /usr/local/share/ca-certificates/vault.crt https://10.10.0.150:8200/v1/sys/health
 ```
 
 ### Summary
