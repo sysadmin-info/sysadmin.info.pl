@@ -108,9 +108,9 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
    Skopiuj nowo wygenerowane pliki `tls.key` i `tls.crt` do odpowiedniego katalogu (np. `/opt/vault/tls/`):
 
    ```bash
-   mv tls.crt /opt/vault/tls/tls.crt
-   mv tls.key /opt/vault/tls/tls.key
-   chown -R vault:vault /opt/vault/tls/
+   sudo mv tls.crt /opt/vault/tls/tls.crt
+   sudo mv tls.key /opt/vault/tls/tls.key
+   sudo chown -R vault:vault /opt/vault/tls/
    ```
 
 3. **Skonfiguruj Vault**:
@@ -180,8 +180,8 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
    Skopiuj certyfikat do odpowiedniej lokalizacji i zaktualizuj bazę zaufanych certyfikatów:
 
    ```bash
-   cp /opt/vault/tls/tls.crt /usr/local/share/ca-certificates/vault.crt
-   update-ca-certificates
+   sudo cp /opt/vault/tls/tls.crt /usr/local/share/ca-certificates/vault.crt
+   sudo update-ca-certificates
    ```
 
 5. **Plik środowiskowy Vault:**

@@ -108,9 +108,9 @@ Use the following commands to generate a new private key and certificate:
    Copy the newly generated `tls.key` and `tls.crt` files to the appropriate directory (e.g., `/opt/vault/tls/`):
 
    ```bash
-   mv tls.crt /opt/vault/tls/tls.crt
-   mv tls.key /opt/vault/tls/tls.key
-   chown -R vault:vault /opt/vault/tls/
+   sudo mv tls.crt /opt/vault/tls/tls.crt
+   sudo mv tls.key /opt/vault/tls/tls.key
+   sudo chown -R vault:vault /opt/vault/tls/
    ```
 
 3. **Configure Vault**:
@@ -180,8 +180,8 @@ Use the following commands to generate a new private key and certificate:
    Copy the certificate to the appropriate location and update the trusted certificate store:
 
    ```bash
-   cp /opt/vault/tls/tls.crt /usr/local/share/ca-certificates/vault.crt
-   update-ca-certificates
+   sudo cp /opt/vault/tls/tls.crt /usr/local/share/ca-certificates/vault.crt
+   sudo update-ca-certificates
    ```
 
 5. **Vault Environment File:**
@@ -303,9 +303,7 @@ Use the following commands to generate a new private key and certificate:
     Log in using the root token:
 
     ```bash
-    vault login <
-
-root_token>
+    vault login <root_token>
     ```
 
 ### Configuring HashiCorp Vault
