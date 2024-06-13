@@ -189,7 +189,8 @@ Use the following commands to generate a new private key and certificate:
    Create the `vault.env` file in `/etc/vault.d/` with the appropriate environment variables.
 
    ```sh
-   VAULT_ADDR=https://10.10.0.150:8200
+   VAULT_ADDR=https://<vault_server_ip>
+   DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
    ```
 
 ### Create Systemd Service File

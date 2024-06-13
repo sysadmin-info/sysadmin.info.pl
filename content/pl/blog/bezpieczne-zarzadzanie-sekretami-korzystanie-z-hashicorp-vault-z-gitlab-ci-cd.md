@@ -188,8 +188,9 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
 
    Stwórz plik `vault.env` w `/etc/vault.d/` z odpowiednimi zmiennymi środowiskowymi.
 
-   ```sh
-   VAULT_ADDR=https://10.10.0.150:8200
+   ```bash
+   VAULT_ADDR=https://<vault_server_ip>
+   DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
    ```
 
 ### Stworzenie pliku usługi systemd
