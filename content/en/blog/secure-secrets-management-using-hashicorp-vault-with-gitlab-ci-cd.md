@@ -279,7 +279,24 @@ Use the following commands to generate a new private key and certificate:
     In a new terminal, run the following commands:
 
     ```bash
-    echo "export VAULT_ADDR='https://<vault_server_ip>:8200'" >> ~/.bashrc
+    echo "export VAULT_ADDR='https://<vault_server_ip>:8200'" >> ~/.bashrc    
+    source ~/.bashrc
+    ```
+
+    ### Solve the problem with DBUS_SESSION_BUS_ADDRESS
+
+    When you run the command `sudo journalctl -u vault.service` you see warn:
+
+    ```bash
+    WARN[0000]log.go:244 gosnowflake.(*defaultLogger).Warn DBUS_SESSION_BUS_ADDRESS envvar looks to be not set, this can lead to runaway dbus-daemon processes. To avoid this, set envvar DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus (if it exists) or DBUS_SESSION_BUS_ADDRESS=/dev/null.
+    ```
+
+    The warning message `DBUS_SESSION_BUS_ADDRESS envvar looks to be not set, this can lead to runaway dbus-daemon processes` indicates that the `DBUS_SESSION_BUS_ADDRESS` environment variable is not set. This can lead to runaway dbus-daemon processes, which might cause resource issues.
+
+    To solve this problem, you need to set the `DBUS_SESSION_BUS_ADDRESS` environment variable in `.bashrc` file.
+
+    ```bash
+    echo "export DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus" >> ~/.bashrc
     source ~/.bashrc
     ```
     
@@ -465,9 +482,7 @@ before_script:
   # The NPM_USER and NPM_PASS variables are not properly passed to the Dockerfile when exported in the before_script section. 
   # Docker builds the image before running the before_script, so these variables are not available when building the Docker image. 
   # To solve this problem, the NPM_USER and NPM_PASS variables should be defined as CI/CD variables at the project level in GitLab, 
-  # and then passed as arguments when building the Docker image. 
-
-Translated with DeepL.com (free version)
+  # and then passed as arguments when building the Docker image.
 
 build_and_test_awx:
   stage: build_and_test
@@ -523,8 +538,8 @@ build_and_test_awx:
 build_and_test_argocd:
   stage: build_and_test
   tags:
-    # Use runner with tag 'docker1'
-    - docker1
+    # Use runner with tag 'docker2'
+    - docker2
   image: docker:latest
   services:
     # Use Docker-in-Docker service
@@ -573,9 +588,13 @@ build_and_test_argocd:
 
 clean_workspace:
   stage: cleanup
+  parallel:
+    matrix:
+      # Use runners with tag 'docker1' and 'docker2'
+      - RUNNER: docker1
+      - RUNNER: docker2
   tags:
-    # Use runner with tag 'docker1'
-    - docker1
+    - ${RUNNER}
   script:
     # Clean up workspace directory
     - rm -rf $CI_PROJECT_DIR/*

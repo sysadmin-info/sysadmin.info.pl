@@ -272,6 +272,7 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
 
     Vault będzie teraz działał na `https://<vault_server_ip>:8200`.
 
+
 ### Inicjalizacja Vault
 
 14. **Inicjalizacja i odblokowanie Vault**:
@@ -282,7 +283,24 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
     echo "export VAULT_ADDR='https://<vault_server_ip>:8200'" >> ~/.bashrc
     source ~/.bashrc
     ```
-    
+
+    ### Rozwiąż problem z DBUS_SESSION_BUS_ADDRESS
+
+    Gdy uruchamiasz polecenie `sudo journalctl -u vault.service`, widzisz ostrzeżenie:
+
+    ```bash
+    WARN[0000]log.go:244 gosnowflake.(*defaultLogger).Warn DBUS_SESSION_BUS_ADDRESS envvar looks to be not set, this can lead to runaway dbus-daemon processes. To avoid this, set envvar DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus (if it exists) or DBUS_SESSION_BUS_ADDRESS=/dev/null.
+    ```
+
+    Ostrzeżenie `DBUS_SESSION_BUS_ADDRESS envvar looks to be not set, this can lead to runaway dbus-daemon processes` wskazuje, że zmienna środowiskowa `DBUS_SESSION_BUS_ADDRESS` nie jest ustawiona. Może to prowadzić do niekontrolowanych procesów dbus-daemon, co może powodować problemy z zasobami.
+
+    Aby rozwiązać ten problem, należy ustawić zmienną środowiskową `DBUS_SESSION_BUS_ADDRESS` w pliku `.bashrc`.
+
+    ```bash
+        echo "export DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus" >> ~/.bashrc
+        source ~/.bashrc
+    ```
+
     Inicjalizacja Vault
 
     ```bash
@@ -521,8 +539,8 @@ build_and_test_awx:
 build_and_test_argocd:
   stage: build_and_test
   tags:
-    # Użyj runnera z tagiem 'docker1'
-    - docker1
+    # Użyj runnera z tagiem 'docker2'
+    - docker2
   image: docker:latest
   services:
     # Użyj usługi Docker-in-Docker
@@ -571,11 +589,16 @@ build_and_test_argocd:
     paths:
       - "${CI_PROJECT_DIR}/*.tar"
 
+
 clean_workspace:
   stage: cleanup
+  parallel:
+    matrix:
+      # Użyj runnerów z tagiem 'docker1' i 'docker2'
+      - RUNNER: docker1
+      - RUNNER: docker2
   tags:
-    # Użyj runnera z tagiem 'docker1'
-    - docker1
+    - ${RUNNER}
   script:
     # Czyści katalog workspace
     - rm -rf $CI_PROJECT_DIR/*
