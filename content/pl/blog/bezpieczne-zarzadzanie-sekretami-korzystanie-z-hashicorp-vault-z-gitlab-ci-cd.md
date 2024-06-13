@@ -19,7 +19,7 @@ image: images/2024-thumbs/gitlab04.webp
 
 **Oto film instruktażowy**
 
-{{<youtube>}}
+{{<youtube HHuRUZCUs-0>}}
 
 ## Wstęp
 

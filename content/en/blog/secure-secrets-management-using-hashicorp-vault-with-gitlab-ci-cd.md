@@ -19,7 +19,7 @@ image: images/2024-thumbs/gitlab04.webp
 
 **Here is a video tutorial**
 
-{{<youtube>}}
+{{<youtube HHuRUZCUs-0>}}
 
 ## Introduction
 
