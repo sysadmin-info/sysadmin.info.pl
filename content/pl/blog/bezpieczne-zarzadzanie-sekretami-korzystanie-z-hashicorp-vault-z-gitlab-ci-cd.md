@@ -1,8 +1,8 @@
 ---
 title: Bezpieczne zarządzanie sekretami - Korzystanie z HashiCorp Vault z GitLab CI/CD
-date: 2024-06-11T08:00:00+00:00
+date: 2024-06-14T08:00:00+00:00
 description: Bezpieczne zarządzanie sekretami - Korzystanie z HashiCorp Vault z GitLab CI/CD
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
@@ -100,6 +100,9 @@ Użyj poniższych poleceń do wygenerowania nowego klucza prywatnego i certyfika
 
    ```bash
    openssl genpkey -algorithm RSA -out tls.key
+   ```
+
+   ```bash
    openssl req -new -x509 -days 365 -key tls.key -out tls.crt -config openssl.cnf
    ```
 
