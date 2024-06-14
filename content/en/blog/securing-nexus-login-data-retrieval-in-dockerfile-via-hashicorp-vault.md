@@ -246,7 +246,7 @@ RUN NPM_SECRET=$(curl --verbose --header "X-Vault-Token: $VAULT_TOKEN" $VAULT_AD
     NPM_USER=$(echo $NPM_SECRET | jq -r '.data.data.NPM_USER') && \
     NPM_PASS=$(echo $NPM_SECRET | jq -r '.data.data.NPM_PASS') && \
     echo "registry=https://nexus.sysadmin.homes/repository/npm-group/" > /root/.npmrc && \
-    echo "https://nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc && \
+    echo "//nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc && \
     echo "always-auth=true" >> /root/.npmrc
 
 # Adding GitLab SSH key to known_hosts

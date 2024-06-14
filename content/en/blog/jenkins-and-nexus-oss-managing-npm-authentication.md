@@ -547,7 +547,7 @@ ARG NPM_PASS
 
 # Encode username and password in base64 and create .npmrc file
 RUN echo "registry=https://nexus.sysadmin.homes/repository/npm-group/" > /root/.npmrc
-RUN echo "https://nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
+RUN echo "//nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
 RUN echo "always-auth=true" >> /root/.npmrc
 
 # Updating apk
@@ -612,7 +612,7 @@ This Dockerfile is designed to create a Docker image containing an environment f
 3. **Configure .npmrc**:
     ```dockerfile
     RUN echo "registry=https://nexus.sysadmin.homes/repository/npm-group/" > /root/.npmrc
-    RUN echo "https://nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
+    RUN echo "//nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
     RUN echo "always-auth=true" >> /root/.npmrc
     ```
     These commands create the `.npmrc` file in the root directory (`/root`), configuring the npm registry and adding base64-encoded credentials for authentication.

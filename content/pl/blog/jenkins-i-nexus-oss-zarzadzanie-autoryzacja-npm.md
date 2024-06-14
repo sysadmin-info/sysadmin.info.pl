@@ -551,7 +551,7 @@ ARG NPM_PASS
 
 # Encode username and password in base64 and create .npmrc file
 RUN echo "registry=https://nexus.sysadmin.homes/repository/npm-group/" > /root/.npmrc
-RUN echo "https://nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
+RUN echo "//nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
 RUN echo "always-auth=true" >> /root/.npmrc
 
 # Updating apk
@@ -616,7 +616,7 @@ Ten Dockerfile został zaprojektowany, aby stworzyć obraz Docker zawierający �
 3. **Konfiguracja .npmrc**:
     ```dockerfile
     RUN echo "registry=https://nexus.sysadmin.homes/repository/npm-group/" > /root/.npmrc
-    RUN echo "https://nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
+    RUN echo "//nexus.sysadmin.homes/repository/npm-group/:_auth=$(echo -n ${NPM_USER}:${NPM_PASS} | base64)" >> /root/.npmrc
     RUN echo "always-auth=true" >> /root/.npmrc
     ```
     Te polecenia tworzą plik `.npmrc` w katalogu root (`/root`), konfigurując rejestr npm i dodając zakodowane w base64 poświadczenia do uwierzytelniania.
