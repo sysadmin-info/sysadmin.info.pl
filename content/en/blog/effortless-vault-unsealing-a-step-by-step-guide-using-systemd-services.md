@@ -74,7 +74,23 @@ Vault by HashiCorp requires unsealing after every restart to ensure the security
   {{< /tab >}}
 {{< /tabs >}}
 
-#### Step 1: Encrypt the Unseal Keys
+#### Step 1: Store the GPG Passphrase
+
+1. Create a file to store the GPG passphrase. This file will be accessible only to the root user.
+
+   ```bash
+   vim /root/.gpg_passphrase
+   # enter "your-passphrase"
+   # save and exit
+   ```
+
+2. Set the permissions to make it readable only by the root user.
+   ```bash
+   chmod 400 /root/.gpg_passphrase
+   ```
+
+
+#### Step 2: Encrypt the Unseal Keys
 
 For the highest security, run the command in a new shell session where history is disabled, and ensure no sensitive information is stored.
 
@@ -93,10 +109,7 @@ For the highest security, run the command in a new shell session where history i
 3. Create an encrypted file to store your unseal keys using `gpg`.
 
    ```bash
-   vim /root/passphrase.txt
-   chmod 400 /root/passphrase.txt
-   echo -e "your-unseal-key-1\nyour-unseal-key-2\nyour-unseal-key-3" | gpg --batch --yes --passphrase-file /root/passphrase.txt --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
-   rm /root/passphrase.txt
+   echo -e "your-unseal-key-1\nyour-unseal-key-2\nyour-unseal-key-3" | gpg --batch --yes --passphrase-file /root/.gpg_passphrase --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
    ```
 
 4. You will be prompted to enter a passphrase. Remember this passphrase as you will need it to decrypt the file.
@@ -105,21 +118,6 @@ For the highest security, run the command in a new shell session where history i
 
    ```bash
    exit
-   ```
-
-#### Step 2: Store the GPG Passphrase
-
-1. Create a file to store the GPG passphrase. This file will be accessible only to the root user.
-
-   ```bash
-   vim /root/.gpg_passphrase
-   # enter "your-passphrase"
-   # save and exit
-   ```
-
-2. Set the permissions to make it readable only by the root user.
-   ```bash
-   chmod 400 /root/.gpg_passphrase
    ```
 
 #### Step 3: Create the Unseal Script
