@@ -93,7 +93,10 @@ For the highest security, run the command in a new shell session where history i
 3. Create an encrypted file to store your unseal keys using `gpg`.
 
    ```bash
-   echo -e "your-unseal-key-1\nyour-unseal-key-2\nyour-unseal-key-3" | gpg --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
+   vim /root/passphrase.txt
+   chmod 400 /root/passphrase.txt
+   echo -e "your-unseal-key-1\nyour-unseal-key-2\nyour-unseal-key-3" | gpg --batch --yes --passphrase-file /root/passphrase.txt --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
+   rm /root/passphrase.txt
    ```
 
 4. You will be prompted to enter a passphrase. Remember this passphrase as you will need it to decrypt the file.
