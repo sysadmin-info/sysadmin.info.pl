@@ -89,7 +89,6 @@ Vault by HashiCorp requires unsealing after every restart to ensure the security
    chmod 400 /root/.gpg_passphrase
    ```
 
-
 #### Step 2: Encrypt the Unseal Keys
 
 For the highest security, run the command in a new shell session where history is disabled, and ensure no sensitive information is stored.
@@ -127,25 +126,58 @@ Create a script to unseal Vault that securely fetches the unseal keys. Save the 
 ```bash
 #!/bin/bash
 
+export VAULT_ADDR='https://10.10.0.150:8200'
+LOGFILE=/var/log/unseal_vault.log
+
+# Log the start time
+echo "Starting unseal at $(date)" >> $LOGFILE
+
+# Wait for Vault to be ready
+while ! vault status 2>&1 | grep -q "Sealed.*true"; do
+  echo "Waiting for Vault to be sealed and ready..." >> $LOGFILE
+  sleep 5
+done
+
+echo "Vault is sealed and ready at $(date)" >> $LOGFILE
+
 # Load the GPG passphrase
 GPG_PASSPHRASE=$(cat /root/.gpg_passphrase)
 
 # Decrypt the unseal keys
 UNSEAL_KEYS=$(gpg --quiet --batch --yes --decrypt --passphrase "$GPG_PASSPHRASE" /root/.vault_unseal_keys.gpg)
+if [ $? -ne 0 ]; then
+  echo "Failed to decrypt unseal keys at $(date)" >> $LOGFILE
+  exit 1
+fi
+
+echo "Unseal keys decrypted successfully at $(date)" >> $LOGFILE
 
 # Convert decrypted keys to an array
 UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
 
 # Unseal Vault
-vault operator unseal ${UNSEAL_KEYS_ARRAY[0]}
-vault operator unseal ${UNSEAL_KEYS_ARRAY[1]}
-vault operator unseal ${UNSEAL_KEYS_ARRAY[2]}
+for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
+  vault operator unseal "$key" >> $LOGFILE 2>&1
+  if [ $? -ne 0 ]; then
+    echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+    exit 1
+  fi
+  echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
+done
+
+echo "Vault unsealed successfully at $(date)" >> $LOGFILE
 ```
 
 Make the script executable:
 
 ```bash
 chmod +x /usr/local/bin/unseal_vault.sh
+```
+
+Create a log
+
+```bash
+sudo touch /var/log/unseal_vault.log
 ```
 
 #### Step 2: Create a systemd Service
@@ -165,7 +197,15 @@ ExecStart=/usr/local/bin/unseal_vault.sh
 WantedBy=multi-user.target
 ```
 
-#### Step 3: Enable the Unseal Service
+#### Step 3: Adjust Permissions for `vault-unseal.service`
+
+To avoid the "Access denied" error, create or modify a sudoers file for the `vault` user to ensure it has permissions to start the `vault-unseal.service`:
+
+```bash
+echo "vault ALL=(ALL) NOPASSWD: /bin/systemctl start vault-unseal.service" > /etc/sudoers.d/vault
+chmod 440 /etc/sudoers.d/vault
+```
+#### Step 4: Enable the Unseal Service
 
 Enable the unseal service to ensure it runs after Vault starts:
 
@@ -173,33 +213,7 @@ Enable the unseal service to ensure it runs after Vault starts:
 systemctl enable vault-unseal.service
 ```
 
-Reload systemd to apply the changes:
-
-```bash
-systemctl daemon-reload
-```
-
-#### Step 4: Verify the Setup
-
-Finally, restart the Vault service and verify that the unseal script runs successfully.
-
-```bash
-systemctl restart vault.service
-```
-
-Check the status of the unseal service:
-
-```bash
-systemctl status vault-unseal.service
-```
-
-Ensure Vault is unsealed by checking its status:
-
-```bash
-vault status
-```
-
-#### What happens during the boot process
+#### Step 5: What happens during the boot process - modify systemd services files
 
 When your system boots up, the following sequence happens:
 
@@ -233,20 +247,24 @@ Edit the `vault.service` file (usually found in `/etc/systemd/system/` or `/lib/
 
 ```ini
 [Unit]
-Description="HashiCorp Vault - A tool for managing secrets"
+Description=HashiCorp Vault
 Documentation=https://www.vaultproject.io/docs/
 Requires=network-online.target
 After=network-online.target
-# Add the following line to ensure vault-unseal.service runs after vault.service
-PartOf=vault-unseal.service
+After=vault.service
+Requires=vault-unseal.service
 
 [Service]
 User=vault
 Group=vault
-ExecStart=/usr/local/bin/vault server -config=/etc/vault.d/vault.hcl
-ExecReload=/bin/kill -HUP $MAINPID
+EnvironmentFile=/etc/vault.d/vault.env
+ExecStart=/usr/bin/vault server -config=/etc/vault.d/vault.hcl
+ExecReload=/bin/kill --signal HUP $MAINPID
+KillMode=process
+KillSignal=SIGINT
+Restart=on-failure
+RestartSec=5
 LimitNOFILE=65536
-# Other options...
 
 [Install]
 WantedBy=multi-user.target
@@ -263,6 +281,8 @@ Requires=vault.service
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/unseal_vault.sh
+Environment=VAULT_ADDR=https://10.10.0.150:8200
+Environment=DBUS_SESSION_BUS_ADDRESS=/dev/null
 
 [Install]
 WantedBy=multi-user.target
