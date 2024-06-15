@@ -1,6 +1,6 @@
 ---
 title: Zabezpieczenie danych logowania do Nexus w Dockerfile za pomocą HashiCorp Vault
-date: 2024-06-14T14:00:00+00:00
+date: 2024-06-16T14:00:00+00:00
 description: Zabezpieczenie danych logowania do Nexus w Dockerfile za pomocą HashiCorp Vault
 draft: true
 hideToc: false
@@ -14,12 +14,8 @@ series:
 - GitLab
 categories:
 - GitLab
-image: images/2024-thumbs/gitlab05.webp
+image: images/2024-thumbs/gitlab06.webp
 ---
-
-**Oto film instruktażowy**
-
-{{<youtube >}}
 
 ## Wstęp
 
@@ -282,3 +278,7 @@ RUN apk add chromium
 ### Podsumowanie
 
 W powyższych krokach dodaliśmy możliwość pobierania danych logowania do NPM z HashiCorp Vault wewnątrz kontenera Docker podczas procesu budowania. Użyliśmy argumentów `VAULT_ADDR` i `VAULT_TOKEN` w Dockerfile, aby bezpośrednio pobrać tajemnice z Vault i ustawić je jako zmienne środowiskowe, które są następnie używane do ustawienia poświadczeń NPM w kontenerze. Dzięki temu procesowi dane logowania są bezpiecznie pobierane i używane w kontenerze bez konieczności ich wcześniejszego przechowywania jako zmienne CI/CD w GitLab.
+
+### Film instruktażowy
+
+{{<youtube >}}

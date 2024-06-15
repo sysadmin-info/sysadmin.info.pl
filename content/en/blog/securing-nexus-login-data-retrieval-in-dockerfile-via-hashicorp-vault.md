@@ -1,6 +1,6 @@
 ---
 title: Securing Nexus login data retrieval in Dockerfile via HashiCorp Vault
-date: 2024-06-14T14:00:00+00:00
+date: 2024-06-16T14:00:00+00:00
 description: Securing Nexus login data retrieval in Dockerfile via HashiCorp Vault
 draft: true
 hideToc: false
@@ -14,12 +14,8 @@ series:
 - GitLab
 categories:
 - GitLab
-image: images/2024-thumbs/gitlab05.webp
+image: images/2024-thumbs/gitlab06.webp
 ---
-
-**Here is a video tutorial**
-
-{{<youtube >}}
 
 ## Introduction
 
@@ -285,3 +281,7 @@ RUN apk add chromium
 ### Summary
 
 In the above steps, we added the capability to retrieve NPM login data from HashiCorp Vault inside the Docker container during the build process. We used the `VAULT_ADDR` and `VAULT_TOKEN` arguments in the Dockerfile to fetch secrets directly from Vault and set them as environment variables, which are then used to configure NPM credentials in the container. This ensures that the login data is securely retrieved and used within the container without the need to store it as CI/CD variables in GitLab.
+
+#### Walkthrough video
+
+{{<youtube >}}

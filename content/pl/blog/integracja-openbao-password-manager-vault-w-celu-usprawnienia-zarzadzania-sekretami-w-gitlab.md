@@ -1,6 +1,6 @@
 ---
 title: Integracja OpenBao Password Manager Vault w celu usprawnienia zarządzania sekretami w GitLab
-date: 2024-06-09T13:00:00+00:00
+date: 2024-06-17T13:00:00+00:00
 description: Integracja OpenBao Password Manager Vault w celu usprawnienia zarządzania sekretami w GitLab
 draft: true
 hideToc: false
@@ -14,12 +14,8 @@ series:
 - GitLab
 categories:
 - GitLab
-image: images/2024-thumbs/gitlab05.webp
+image: images/2024-thumbs/gitlab07.webp
 ---
-
-**Oto film instruktażowy**
-
-{{<youtube>}}
 
 ### Instalacja OpenBao z interfejsem użytkownika
 
@@ -176,3 +172,7 @@ image: images/2024-thumbs/gitlab05.webp
 ### Podsumowanie
 
 Powyższe kroki obejmują instalację Go, pobranie i zbudowanie OpenBao wraz z interfejsem użytkownika, konfigurację OpenBao oraz integrację z GitLab. Dzięki temu możesz bezpiecznie przechowywać i zarządzać sekretami używanymi w swoich pipeline'ach CI/CD. Jeśli masz dodatkowe pytania lub potrzebujesz dalszej pomocy, daj znać!
+
+#### Film instruktażowy
+
+{{<youtube >}}
