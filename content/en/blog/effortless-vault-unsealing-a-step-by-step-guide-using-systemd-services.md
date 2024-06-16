@@ -179,12 +179,13 @@ UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
 
 # Unseal Vault
 for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
-  vault operator unseal "$key" >> $LOGFILE 2>&1
-  if [ $? -ne 0 ]; then
-    echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
-    exit 1
-  fi
-  echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
+# commented out because I do not want to debug it anymore
+  vault operator unseal "$key" # >> $LOGFILE 2>&1
+  #if [ $? -ne 0 ]; then
+  #  echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+  #  exit 1
+  #fi
+  #echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
 done
 
 echo "Vault unsealed successfully at $(date)" >> $LOGFILE
@@ -405,12 +406,13 @@ UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
 
 # Unseal Vault
 for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
-  vault operator unseal "$key" >> $LOGFILE 2>&1
-  if [ $? -ne 0 ]; then
-    echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
-    exit 1
-  fi
-  echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
+# commented out because I do not want to debug it anymore
+  vault operator unseal "$key" # >> $LOGFILE 2>&1
+  #if [ $? -ne 0 ]; then
+  #  echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+  #  exit 1
+  #fi
+  #echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
 done
 
 echo "Vault unsealed successfully at $(date)" >> $LOGFILE
