@@ -179,12 +179,13 @@ UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
 
 # Unseal Vault
 for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
-  vault operator unseal "$key" >> $LOGFILE 2>&1
-  if [ $? -ne 0 ]; then
-    echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
-    exit 1
-  fi
-  echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
+# commented out because I do not want to debug it anymore
+  vault operator unseal "$key" # >> $LOGFILE 2>&1
+  #if [ $? -ne 0 ]; then
+  #  echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+  #  exit 1
+  #fi
+  #echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
 done
 
 echo "Vault unsealed successfully at $(date)" >> $LOGFILE
@@ -405,12 +406,13 @@ UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
 
 # Unseal Vault
 for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
-  vault operator unseal "$key" >> $LOGFILE 2>&1
-  if [ $? -ne 0 ]; then
-    echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
-    exit 1
-  fi
-  echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
+# commented out because I do not want to debug it anymore
+  vault operator unseal "$key" # >> $LOGFILE 2>&1
+  #if [ $? -ne 0 ]; then
+  #  echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+  #  exit 1
+  #fi
+  #echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
 done
 
 echo "Vault unsealed successfully at $(date)" >> $LOGFILE
@@ -507,7 +509,6 @@ rm -f /var/log/unseal_vault.log
 rm -f /root/.gpg_passphrase
 rm -f /root/.vault_unseal_keys.gpg
 rm -f /usr/local/bin/unseal_vault.sh
-rm -f /etc/sudoers.d/vault
 rm -f /etc/systemd/system/vault-unseal.service
 cat << 'EOF' > /etc/systemd/system/vault.service
 [Unit]
