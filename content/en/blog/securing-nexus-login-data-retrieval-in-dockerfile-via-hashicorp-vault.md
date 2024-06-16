@@ -21,11 +21,11 @@ image: images/2024-thumbs/gitlab06.webp
 
 To use HashiCorp Vault for storing and retrieving Nexus (NPM) login data during Docker image building, we need to focus on securely storing these credentials in Vault and then retrieving them inside the Docker container during the build process. The key aspect here is using the `vault` tool in the Docker container to fetch secrets directly during the image build.
 
-### Steps:
+### Steps to follow
 
-1. **Storing Nexus (NPM) login data in HashiCorp Vault**.
-2. **Modifying `.gitlab-ci.yml`** to fetch this data inside the Docker container.
-3. **Modifying Dockerfile** to fetch login data from Vault during image build.
+1.**Storing Nexus (NPM) login data in HashiCorp Vault**.
+2.**Modifying `.gitlab-ci.yml`** to fetch this data inside the Docker container.
+3.**Modifying Dockerfile** to fetch login data from Vault during image build.
 
 ### Step 1: Storing NPM login data in HashiCorp Vault
 
@@ -202,9 +202,7 @@ build_and_test_argocd:
     paths:
       - "${CI_PROJECT_DIR}/*.tar"
 
-clean_workspace
-
-:
+clean_workspace:
   stage: cleanup
   parallel:
     matrix:
@@ -284,4 +282,4 @@ In the above steps, we added the capability to retrieve NPM login data from Hash
 
 #### Walkthrough video
 
-{{<youtube >}}
+{{<youtube>}}
