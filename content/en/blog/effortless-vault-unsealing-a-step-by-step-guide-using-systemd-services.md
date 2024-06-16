@@ -507,7 +507,6 @@ rm -f /var/log/unseal_vault.log
 rm -f /root/.gpg_passphrase
 rm -f /root/.vault_unseal_keys.gpg
 rm -f /usr/local/bin/unseal_vault.sh
-rm -f /etc/sudoers.d/vault
 rm -f /etc/systemd/system/vault-unseal.service
 cat << 'EOF' > /etc/systemd/system/vault.service
 [Unit]
