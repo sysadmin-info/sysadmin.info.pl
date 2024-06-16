@@ -28,49 +28,63 @@ Vault by HashiCorp requires unsealing after every restart to ensure the security
 - Basic knowledge of systemd and bash scripting
 - `gpg` installed for encryption
 
-
 #### How to install gpg
 
 {{< tabs Debian CentOS Fedora Arch OpenSUSE >}}
   {{< tab >}}
-  ##### Debian/Ubuntu
+
+##### Debian/Ubuntu
+
   ```bash
   sudo apt update
   sudo apt -y install gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### CentOS/RHEL
+
+##### CentOS/RHEL
+
   ```bash
   sudo yum update
   sudo yum -y install gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### Fedora
+
+##### Fedora
+
   ```bash
   sudo dnf update
   sudo dnf -y install gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### Arch Linux
+
+##### Arch Linux
+
   ```bash
   sudo pacman -Syu
   sudo pacman -S gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### OpenSUSE
+
+##### OpenSUSE
+
   ```bash
   sudo zypper refresh
   sudo zypper install gpg2
   gpg --version
   ```
+
   {{< /tab >}}
 {{< /tabs >}}
 
@@ -82,24 +96,22 @@ Vault by HashiCorp requires unsealing after every restart to ensure the security
     sudo -i
     ```
 
-2. **Start a new bash session**: Execute a new bash shell and disable history. 
+2. **Start a new bash session**: Execute a new bash shell and disable history.
 
 Explanation: For the highest security, run the command in a new shell session where history is disabled, and ensure no sensitive information is stored.
 
-    ```bash
-    bash
-    set +o history
-    ```
+   ```bash
+   bash
+   set +o history
+   ```
 
-3. **Create a file to store the GPG passphrase**: Ensure the file is accessible only to the root user.
+3.**Create a file to store the GPG passphrase**: Ensure the file is accessible only to the root user.
 
-    ```bash
-    vim /root/.gpg_passphrase
-    # enter "your-passphrase"
-    # save and exit
-    ```
+   ```bash
+   echo "your-passphrase" > /root/.gpg_passphrase
+   ```
 
-4. **Set the permissions to make it readable only by the root user.**
+4.**Set the permissions to make it readable only by the root user.**
 
    ```bash
    chmod 400 /root/.gpg_passphrase
@@ -128,8 +140,16 @@ Create a script to unseal Vault that securely fetches the unseal keys. Save the 
 ```bash
 #!/bin/bash
 
-export VAULT_ADDR='https://10.10.0.150:8200'
+export VAULT_ADDR='https://<vault IP address>:8200'
+
+# Create log file if it doesn't exist
 LOGFILE=/var/log/unseal_vault.log
+if [ ! -f "$LOGFILE" ]; then
+    touch "$LOGFILE"
+    chown vault:vault "$LOGFILE"
+else
+    echo "$LOGFILE exists"
+fi
 
 # Log the start time
 echo "Starting unseal at $(date)" >> $LOGFILE
@@ -176,15 +196,9 @@ Make the script executable:
 chmod 500 /usr/local/bin/unseal_vault.sh
 ```
 
-Create a log
-
-```bash
-sudo touch /var/log/unseal_vault.log
-```
-
 #### Step 4: Modify Vault Service
 
-Modify the `vault.service` file to include a dependency on the `vault-unseal.service`.
+Modify the `/etc/systemd/system/vault.service` file to include a dependency on the `vault-unseal.service`.
 
 ```ini
 [Unit]
@@ -193,14 +207,12 @@ Documentation=https://www.vaultproject.io/docs/
 Requires=network-online.target
 After=network-online.target
 Requires=vault-unseal.service
-After=vault-unseal.service
 
 [Service]
 User=vault
 Group=vault
 EnvironmentFile=/etc/vault.d/vault.env
 ExecStart=/usr/bin/vault server -config=/etc/vault.d/vault.hcl
-ExecStartPost=/bin/systemctl start vault-unseal.service
 ExecReload=/bin/kill --signal HUP $MAINPID
 KillMode=process
 KillSignal=SIGINT
@@ -225,6 +237,8 @@ Requires=vault.service
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/unseal_vault.sh
+Environment=VAULT_ADDR=https://<vault IP address>:8200
+Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 
 [Install]
 WantedBy=multi-user.target
@@ -232,22 +246,12 @@ WantedBy=multi-user.target
 
 With these modifications, the `vault-unseal.service` will be considered part of the `vault.service` process. Restarting `vault.service` will now also trigger the `vault-unseal.service`.
 
-#### Step 6: Configure Sudoers
-
-Add an entry to the sudoers directory for the vault user to be able to execute systemctl commands.
-
-```bash
-echo "vault ALL=(ALL) NOPASSWD: /bin/systemctl start vault-unseal.service" > /etc/sudoers.d/vault
-chmod 400 /etc/sudoers.d/vault
-```
-
-#### Step 7: Reload Systemd and Start Services
+#### Step 6: Reload Systemd and Start Services
 
 Reload systemd to apply the changes and start the services:
 
 ```bash
 systemctl daemon-reload
-systemctl start vault-unseal.service
 systemctl restart vault.service
 ```
 
@@ -315,68 +319,101 @@ The `vault-unseal.service` will run both during the boot process and any manual 
 
 {{<youtube >}}
 
-#### Bash script for the tutorial that automates the whole process
+#### Bash script that automates the whole process
+
+```bash
+vim vault.sh
+```
+
+Put the below content:
 
 ```bash
 #!/bin/bash
 
-# Switch to root and start a new bash session
-sudo -i
-bash
+echo "This quick installer script requires root privileges."
+echo "Checking..."
+if [[ $(/usr/bin/id -u) -ne 0 ]]; 
+then
+    echo "Not running as root"
+    exit 0
+else
+        echo "Installation continues"
+fi
 
-# Disable bash history
-set +o history
+SUDO=
+if [ "$UID" != "0" ]; then
+        if [ -e /usr/bin/sudo -o -e /bin/sudo ]; then
+                SUDO=sudo
+        else
+                echo "*** This quick installer script requires root privileges."
+                exit 0
+        fi
+fi
 
 # Step 1: Create passphrase file
-echo "your-passphrase" > /root/.gpg_passphrase
-chmod 440 /root/.gpg_passphrase
+echo "<your passphrase>" > /root/.gpg_passphrase
+chmod 400 /root/.gpg_passphrase
 
 # Step 2: Encrypt unseal keys
 echo -e "your-unseal-key-1\nyour-unseal-key-2\nyour-unseal-key-3" | gpg --batch --yes --passphrase-file /root/.gpg_passphrase --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
+
 chmod 400 /root/.vault_unseal_keys.gpg
 
 # Step 3: Clear bash history and exit the temporary session
 history -c
-exit
 
 # Step 4: Create the unseal script
 cat << 'EOF' > /usr/local/bin/unseal_vault.sh
 #!/bin/bash
 
-# Create log file if it doesn't exist
-LOG_FILE="/var/log/unseal_vault.log"
-touch $LOG_FILE
+export VAULT_ADDR='https://<vault IP address>:8200'
 
-echo "Starting unseal at $(date)" >> $LOG_FILE
+# Create log file if it doesn't exist
+LOGFILE=/var/log/unseal_vault.log
+if [ ! -f "$LOGFILE" ]; then
+    touch "$LOGFILE"
+    chown vault:vault "$LOGFILE"
+else
+    echo "$LOGFILE exists"
+fi
+
+# Log the start time
+echo "Starting unseal at $(date)" >> $LOGFILE
 
 # Wait for Vault to be ready
-while ! vault status | grep -q "Sealed: true"; do
-  echo "Waiting for Vault to be sealed and ready..." >> $LOG_FILE
+while ! vault status 2>&1 | grep -q "Sealed.*true"; do
+  echo "Waiting for Vault to be sealed and ready..." >> $LOGFILE
   sleep 5
 done
 
-export VAULT_ADDR='https://127.0.0.1:8200'
+echo "Vault is sealed and ready at $(date)" >> $LOGFILE
 
 # Load the GPG passphrase
 GPG_PASSPHRASE=$(cat /root/.gpg_passphrase)
 
 # Decrypt the unseal keys
 UNSEAL_KEYS=$(gpg --quiet --batch --yes --decrypt --passphrase "$GPG_PASSPHRASE" /root/.vault_unseal_keys.gpg)
+if [ $? -ne 0 ]; then
+  echo "Failed to decrypt unseal keys at $(date)" >> $LOGFILE
+  exit 1
+fi
+
+echo "Unseal keys decrypted successfully at $(date)" >> $LOGFILE
 
 # Convert decrypted keys to an array
 UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
 
 # Unseal Vault
-for KEY in "${UNSEAL_KEYS_ARRAY[@]}"; do
-  vault operator unseal $KEY >> $LOG_FILE 2>&1
-  if [ $? -eq 0 ]; then
-    echo "Successfully used unseal key $KEY at $(date)" >> $LOG_FILE
-  else
-    echo "Failed to use unseal key $KEY at $(date)" >> $LOG_FILE
+for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
+  vault operator unseal "$key" >> $LOGFILE 2>&1
+  if [ $? -ne 0 ]; then
+    echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+    exit 1
   fi
+  echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
 done
 
-echo "Vault unsealed successfully at $(date)" >> $LOG_FILE
+echo "Vault unsealed successfully at $(date)" >> $LOGFILE
 EOF
 
 chmod 500 /usr/local/bin/unseal_vault.sh
@@ -389,14 +426,12 @@ Documentation=https://www.vaultproject.io/docs/
 Requires=network-online.target
 After=network-online.target
 Requires=vault-unseal.service
-After=vault-unseal.service
 
 [Service]
 User=vault
 Group=vault
 EnvironmentFile=/etc/vault.d/vault.env
 ExecStart=/usr/bin/vault server -config=/etc/vault.d/vault.hcl
-ExecStartPost=/bin/systemctl start vault-unseal.service
 ExecReload=/bin/kill --signal HUP $MAINPID
 KillMode=process
 KillSignal=SIGINT
@@ -418,17 +453,84 @@ Requires=vault.service
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/unseal_vault.sh
+Environment=VAULT_ADDR=https://<vault IP address>:8200
+Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 
 [Install]
 WantedBy=multi-user.target
 EOF
 
-# Step 7: Configure sudoers
-echo "vault ALL=(ALL) NOPASSWD: /bin/systemctl start vault-unseal.service" > /etc/sudoers.d/vault
-chmod 400 /etc/sudoers.d/vault
-
-# Step 8: Reload systemd and start services
+# Step 7: Reload systemd and start services
 systemctl daemon-reload
-systemctl start vault-unseal.service
+systemctl enable vault-unseal.service
+systemctl enable vault.service
 systemctl restart vault.service
+```
+
+Make the bash script executable:
+
+```bash
+chmod +x vault.sh
+```
+
+Run the script:
+
+```bash
+sudo ./vault.sh
+```
+
+#### Bash script that reverts all changes
+
+```bash
+#!/bin/bash
+
+echo "This quick installer script requires root privileges."
+echo "Checking..."
+if [[ $(/usr/bin/id -u) -ne 0 ]]; 
+then
+    echo "Not running as root"
+    exit 0
+else
+        echo "Installation continues"
+fi
+
+SUDO=
+if [ "$UID" != "0" ]; then
+        if [ -e /usr/bin/sudo -o -e /bin/sudo ]; then
+                SUDO=sudo
+        else
+                echo "*** This quick installer script requires root privileges."
+                exit 0
+        fi
+fi
+rm -f /var/log/unseal_vault.log
+rm -f /root/.gpg_passphrase
+rm -f /root/.vault_unseal_keys.gpg
+rm -f /usr/local/bin/unseal_vault.sh
+rm -f /etc/sudoers.d/vault
+rm -f /etc/systemd/system/vault-unseal.service
+cat << 'EOF' > /etc/systemd/system/vault.service
+[Unit]
+Description=HashiCorp Vault
+Documentation=https://www.vaultproject.io/docs/
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+User=vault
+Group=vault
+EnvironmentFile=/etc/vault.d/vault.env
+ExecStart=/usr/bin/vault server -config=/etc/vault.d/vault.hcl
+ExecReload=/bin/kill --signal HUP $MAINPID
+KillMode=process
+KillSignal=SIGINT
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl daemon-reload
+systemctl restart vault
 ```
