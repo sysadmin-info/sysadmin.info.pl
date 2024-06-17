@@ -285,11 +285,11 @@ systemctl restart vault.service
 Here’s what happens:
 
 1. **`vault.service` stops**: The Vault service stops and then starts again.
-2. **`vault-unseal.service` does not automatically restart**: By default, `vault-unseal.service` does not automatically restart just because `vault.service` was restarted. The `vault-unseal.service` is set to run after `vault.service` during the boot process, but it doesn’t automatically bind to restarts of `vault.service`.
+2. **`vault-unseal.service` automatically restarts**: The service `vault-unseal.service` automatically restarts just because `vault.service` was restarted. The `vault-unseal.service` is set to run after `vault.service` during the boot process.
 
 ### Ensuring Unseal After Restart
 
-To ensure that the `vault-unseal.service` runs every time `vault.service` is restarted, run the below command in one SSH session:
+To ensure that the `vault-unseal.service` runs every time `vault.service` is restarted, run the below command:
 
 ```bash
 tail -f /var/log/unseal_vault.log

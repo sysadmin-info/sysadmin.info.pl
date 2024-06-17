@@ -245,7 +245,7 @@ Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 WantedBy=multi-user.target
 ```
 
-Dzięki tym modyfikacjom, `vault-unseal.service` będzie uważana za część procesu `vault.service`. Restart `vault.service` będzie teraz także uruchamiał `vault-unseal.service`.
+Dzięki tym modyfikacjom, usługa `vault-unseal.service` będzie uważana za część procesu `vault.service`. Restart `vault.service` będzie teraz także uruchamiał `vault-unseal.service`.
 
 #### Krok 6: Przeładuj systemd i uruchom usługi
 
@@ -270,11 +270,9 @@ Kiedy Twój system uruchamia się, dzieje się następująca sekwencja:
 1. **`vault.service` startuje**: Jest to główna usługa dla Vault. Startuje zgodnie z jej konfiguracją.
 2. **`vault-unseal.service` startuje**: Ta usługa jest skonfigurowana do uruchamiania po `vault.service` z powodu dyrektywy `After=vault.service`. Oznacza to, że `vault-unseal.service` nie uruchomi się, dopóki `vault.service` nie zostanie w pełni uruchomiona.
 
-`vault-unseal.service` zależy od `vault.service` i będzie uruchamiana skrypt odblokowujący dopiero po uruchomieniu usługi Vault.
+Usługa `vault-unseal.service` zależy od `vault.service` i będzie uruchamiać skrypt odblokowujący klucze dopiero po uruchomieniu usługi Vault.
 
-### Zachowanie przy
-
- ręcznym restarcie
+### Zachowanie przy ręcznym restarcie
 
 #### Ręczny restart `vault.service`
 
@@ -284,14 +282,14 @@ Kiedy ręcznie restartujesz `vault.service` używając komendy:
 systemctl restart vault.service
 ```
 
-Dzieje się następujące:
+Oto co się dzieje:
 
 1. **`vault.service` zatrzymuje się**: Usługa Vault zatrzymuje się, a następnie ponownie uruchamia.
-2. **`vault-unseal.service` nie uruchamia się automatycznie**: Domyślnie `vault-unseal.service` nie uruchamia się automatycznie tylko dlatego, że `vault.service` został zrestartowany. `vault-unseal.service` jest ustawiona do uruchamiania po `vault.service` podczas procesu rozruchu, ale nie wiąże się automatycznie z restartami `vault.service`.
+2. **`vault-unseal.service` uruchamia się automatycznie**: Usługa `vault-unseal.service` uruchamia się automatycznie, ponieważ `vault.service` został zrestartowany. `vault-unseal.service` jest ustawiona do uruchamiania po `vault.service` podczas procesu rozruchu.
 
-### Zapewnienie odblokowania po restarcie
+### Sprawdzenie logu
 
-Aby zapewnić, że `vault-unseal.service` uruchomi się za każdym razem, gdy `vault.service` jest restartowana, uruchom poniższą komendę w jednej sesji SSH:
+Aby sprawdzić, czy faktycznie `vault-unseal.service` uruchomi się za każdym razem, gdy usługa  `vault.service` jest restartowana, uruchom poniższą komendę:
 
 ```bash
 tail -f /var/log/unseal_vault.log
@@ -316,7 +314,7 @@ Ta konfiguracja zapewnia bezpieczną metodę odblokowywania Vault poprzez szyfro
 
 Postępując zgodnie z tym przewodnikiem, zapewniasz, że wrażliwe klucze odblokowujące nie są narażone na widok w postaci zwykłego tekstu, a dostęp do hasła jest ograniczony do użytkownika root, zapewniając dodatkową warstwę bezpieczeństwa.
 
-`vault-unseal.service` będzie uruchamiana zarówno podczas procesu rozruchu, jak i podczas ręcznych restartów `vault.service`, utrzymując Vault automatycznie odblokowanym i operacyjnym.
+`vault-unseal.service` będzie uruchamiana zarówno podczas procesu rozruchu, jak i podczas ręcznych restartów `vault.service`, powodując, że Vault automatycznie będzie odblokowany i operacyjny.
 
 #### Przegląd wideo
 
