@@ -1,8 +1,8 @@
 ---
 title: Effortless HashiCorp Vault unsealing - a step-by-step guide using systemd services
-date: 2024-06-16T10:45:00+00:00
+date: 2024-06-17T13:00:00+00:00
 description: Effortless HashiCorp Vault unsealing - a step-by-step guide using systemd services
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false

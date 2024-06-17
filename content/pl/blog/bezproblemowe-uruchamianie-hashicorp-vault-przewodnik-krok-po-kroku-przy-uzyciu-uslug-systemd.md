@@ -1,8 +1,8 @@
 ---
 title: Bezproblemowe uruchamianie HashiCorp Vault - przewodnik krok po kroku przy użyciu usług systemd
-date: 2024-06-15T10:00:00+00:00
+date: 2024-06-17T13:00:00+00:00
 description: Bezproblemowe uruchamianie HashiCorp Vault - przewodnik krok po kroku przy użyciu usług systemd
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
@@ -19,264 +19,287 @@ image: images/2024-thumbs/gitlab05.webp
 
 #### Wprowadzenie
 
-Vault firmy HashiCorp wymaga odpieczętowania po każdym ponownym uruchomieniu, aby zapewnić bezpieczeństwo przechowywanych sekretów. Ten samouczek poprowadzi Cię przez automatyzację procesu odpieczętowania przy użyciu usługi systemd na systemie Linux.
+Vault od HashiCorp wymaga odblokowania po każdym restarcie, aby zapewnić bezpieczeństwo przechowywanych sekretów. Ten poradnik przeprowadzi Cię przez automatyzację procesu odblokowywania za pomocą usługi systemd w systemie Linux.
 
 #### Wymagania wstępne
 
-- Vault zainstalowany i skonfigurowany na Twoim systemie
-- Dostęp do kluczy odpieczętowania
+- Vault zainstalowany i skonfigurowany w Twoim systemie
+- Dostęp do kluczy odblokowujących
 - Podstawowa znajomość systemd i skryptów bash
 - `gpg` zainstalowany do szyfrowania
-
 
 #### Jak zainstalować gpg
 
 {{< tabs Debian CentOS Fedora Arch OpenSUSE >}}
   {{< tab >}}
-  ##### Debian/Ubuntu
+
+##### Debian/Ubuntu
+
   ```bash
   sudo apt update
   sudo apt -y install gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### CentOS/RHEL
+
+##### CentOS/RHEL
+
   ```bash
   sudo yum update
   sudo yum -y install gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### Fedora
+
+##### Fedora
+
   ```bash
   sudo dnf update
   sudo dnf -y install gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### Arch Linux
+
+##### Arch Linux
+
   ```bash
   sudo pacman -Syu
   sudo pacman -S gnupg
   gpg --version
   ```
+
   {{< /tab >}}
   {{< tab >}}
-  ##### OpenSUSE
+
+##### OpenSUSE
+
   ```bash
   sudo zypper refresh
   sudo zypper install gpg2
   gpg --version
   ```
+
   {{< /tab >}}
 {{< /tabs >}}
 
-#### Krok 1: Szyfrowanie kluczy odpieczętowania
+#### Krok 1: Przygotowanie
 
-Dla najwyższego bezpieczeństwa uruchom polecenie w nowej sesji powłoki, gdzie historia jest wyłączona, i upewnij się, że żadne poufne informacje nie są przechowywane.
+1.**Zaloguj się przez SSH**: Połącz się ze swoim serwerem jako standardowy użytkownik i przełącz się na root.
 
-1. Uruchom nową sesję powłoki.
+   ```bash
+   sudo -i
+   ```
+
+2.**Rozpocznij nową sesję bash**: Uruchom nową powłokę bash i wyłącz historię.
+
+Wyjaśnienie: Dla najwyższego bezpieczeństwa, uruchom komendę w nowej sesji powłoki, gdzie historia jest wyłączona, i upewnij się, że żadne wrażliwe informacje nie są przechowywane.
 
    ```bash
    bash
-   ```
-
-2. Wyłącz historię.
-
-   ```bash
    set +o history
    ```
 
-3. Utwórz zaszyfrowany plik do przechowywania kluczy odpieczętowania przy użyciu `gpg`.
+3.**Utwórz plik do przechowywania hasła GPG**: Upewnij się, że plik jest dostępny tylko dla użytkownika root.
 
    ```bash
-   echo -e "twój-klucz-odpieczętowania-1\ntwój-klucz-odpieczętowania-2\ntwój-klucz-odpieczętowania-3" | gpg --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
+   echo "your-passphrase" > /root/.gpg_passphrase
    ```
 
-4. Zostaniesz poproszony o podanie hasła. Zapamiętaj to hasło, ponieważ będziesz go potrzebować do odszyfrowania pliku.
+4.**Ustaw uprawnienia, aby plik był czytelny tylko dla użytkownika root.**
 
-5. Zakończ sesję powłoki.
-
-   ```bash
-   exit
-   ```
-
-#### Krok 2: Przechowywanie hasła GPG
-
-1. Utwórz plik do przechowywania hasła GPG. Ten plik będzie dostępny tylko dla użytkownika root.
-
-   ```bash
-   vim /root/.gpg_passphrase
-   # wpisz "twoje-hasło"
-   # zapisz i wyjdź
-   ```
-
-2. Ustaw uprawnienia, aby plik był czytelny tylko dla użytkownika root.
    ```bash
    chmod 400 /root/.gpg_passphrase
    ```
 
-#### Krok 3: Utworzenie skryptu odpieczętowania
+#### Krok 2: Szyfrowanie kluczy odblokowujących
 
-Utwórz skrypt do odpieczętowania Vault, który bezpiecznie pobiera klucze odpieczętowania. Zapisz poniższy skrypt w `/usr/local/bin/unseal_vault.sh`.
+1.**Utwórz zaszyfrowany plik do przechowywania kluczy odblokowujących**:
+
+   ```bash
+   echo -e "your-unseal-key-1\nyour-unseal-key-2\nyour-unseal-key-3" | gpg --batch --yes --passphrase-file /root/.gpg_passphrase --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
+   chmod 400 /root/.vault_unseal_keys.gpg
+   ```
+
+2.**Wyczyść historię bash i wyjdź z tymczasowej sesji**:
+
+   ```bash
+   history -c
+   exit
+   ```
+
+#### Krok 3: Utwórz skrypt odblokowujący
+
+Utwórz skrypt do odblokowywania Vault, który bezpiecznie pobiera klucze odblokowujące. Zapisz poniższy skrypt do `/usr/local/bin/unseal_vault.sh`.
 
 ```bash
 #!/bin/bash
 
+export VAULT_ADDR='https://<vault IP address>:8200'
+
+# Utwórz plik logu, jeśli nie istnieje
+LOGFILE=/var/log/unseal_vault.log
+if [ ! -f "$LOGFILE" ]; then
+    touch "$LOGFILE"
+    chown vault:vault "$LOGFILE"
+else
+    echo "$LOGFILE exists"
+fi
+
+# Zaloguj czas rozpoczęcia
+echo "Starting unseal at $(date)" >> $LOGFILE
+
+# Czekaj na gotowość Vault
+while ! vault status 2>&1 | grep -q "Sealed.*true"; do
+  echo "Waiting for Vault to be sealed and ready..." >> $LOGFILE
+  sleep 5
+done
+
+echo "Vault is sealed and ready at $(date)" >> $LOGFILE
+
 # Załaduj hasło GPG
 GPG_PASSPHRASE=$(cat /root/.gpg_passphrase)
 
-# Odszyfruj klucze odpieczętowania
+# Odszyfruj klucze odblokowujące
 UNSEAL_KEYS=$(gpg --quiet --batch --yes --decrypt --passphrase "$GPG_PASSPHRASE" /root/.vault_unseal_keys.gpg)
+if [ $? -ne 0 ]; then
+  echo "Failed to decrypt unseal keys at $(date)" >> $LOGFILE
+  exit 1
+fi
+
+echo "Unseal keys decrypted successfully at $(date)" >> $LOGFILE
 
 # Przekształć odszyfrowane klucze w tablicę
 UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
 
-# Odpieczętuj Vault
-vault operator unseal ${UNSEAL_KEYS_ARRAY[0]}
-vault operator unseal ${UNSEAL_KEYS_ARRAY[1]}
-vault operator unseal ${UNSEAL_KEYS_ARRAY[2]}
+# Odblokuj Vault
+for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
+# zakomentowane, ponieważ nie chcę już tego debugować
+  vault operator unseal "$key" # >> $LOGFILE 2>&1
+  #if [ $? -ne 0 ]; then
+  #  echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+  #  exit 1
+  #fi
+  #echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
+done
+
+echo "Vault unsealed successfully at $(date)" >> $LOGFILE
 ```
 
-Nadaj skryptowi uprawnienia do wykonywania:
+Uczyń skrypt wykonywalnym:
 
 ```bash
-chmod +x /usr/local/bin/unseal_vault.sh
+chmod 500 /usr/local/bin/unseal_vault.sh
 ```
 
-#### Krok 4: Utworzenie usługi systemd
+#### Krok 4: Zmodyfikuj usługę Vault
 
-Następnie utwórz usługę systemd, która uruchomi skrypt odpieczętowania po uruchomieniu usługi Vault. Utwórz nowy plik usługi w `/etc/systemd/system/vault-unseal.service` z następującą zawartością:
+Zmodyfikuj plik `/etc/systemd/system/vault.service`, aby uwzględnić zależność od `vault-unseal.service`.
 
 ```ini
 [Unit]
-Description=Odpieczętowanie Vault
-After=vault.service
-
-[Service]
-Type=oneshot
-ExecStart=/usr/local/bin/unseal_vault.sh
-
-[Install]
-WantedBy=multi-user.target
-```
-
-#### Krok 5: Włącz usługę odpieczętowania
-
-Włącz usługę odpieczętowania, aby upewnić się, że uruchomi się po starcie Vault:
-
-```bash
-systemctl enable vault-unseal.service
-```
-
-Przeładuj systemd, aby zastosować zmiany:
-
-```bash
-systemctl daemon-reload
-```
-
-#### Krok 6: Zweryfikuj konfigurację
-
-Na koniec, uruchom ponownie usługę Vault i zweryfikuj, czy skrypt odpieczętowania uruchomił się pomyślnie.
-
-```bash
-systemctl restart vault.service
-```
-
-Sprawdź status usługi odpieczętowania:
-
-```bash
-systemctl status vault-unseal.service
-```
-
-Upewnij się, że Vault jest odpieczętowany, sprawdzając jego status:
-
-```bash
-vault status
-```
-
-#### Co dzieje się podczas procesu startu
-
-Kiedy system się uruchamia, następuje kolejność:
-
-1. **`vault.service` się uruchamia**: Jest to główna usługa dla Vault. Uruchomi się zgodnie z jej konfiguracją.
-2. **`vault-unseal.service` się uruchamia**: Ta usługa jest skonfigurowana, aby uruchomić się po `vault.service` z powodu dyrektywy `After=vault.service`. Oznacza to, że `vault-unseal.service` nie uruchomi się, dopóki `vault.service` nie zostanie w pełni uruchomiona.
-
-Usługa `vault-unseal.service` zależy od `vault.service` i uruchomi skrypt odpieczętowania dopiero po uruchomieniu usługi Vault.
-
-### Zachowanie przy ręcznym ponownym uruchomieniu
-
-#### Ręczne ponowne uruchomienie `vault.service`
-
-Kiedy ręcznie ponownie uruchomisz `vault.service` za pomocą polecenia:
-
-```bash
-systemctl restart vault.service
-```
-
-Oto, co się dzieje:
-
-1. **`vault.service` się zatrzymuje**: Usługa Vault zatrzymuje się, a następnie uruchamia ponownie.
-2. **`vault-unseal.service` nie uruchamia się automatycznie ponownie**: Domyślnie `vault-unseal.service` nie uruchamia się automatycznie ponownie tylko dlatego, że `vault.service` została ponownie uruchomiona. Usługa `vault-unseal.service` jest ustawiona do uruchomienia po `vault.service` podczas procesu startu, ale nie wiąże się automatycznie z ponownymi uruchomieniami `vault.service`.
-
-### Zapewnienie odpieczętowania po ponownym uruchomieniu
-
-Aby upewnić się, że `vault-unseal.service` uruchamia się za każdym razem, gdy `vault.service` jest ponownie uruchamiana, musisz dodać zależność w pliku `vault.service`.
-
-#### Modyfikacja `vault.service`
-
-Edytuj plik `vault.service` (zazwyczaj znajduje się w `/etc/systemd/system/` lub `/lib
-
-/systemd/system/`), aby uwzględnić `vault-unseal.service` jako zależność:
-
-```ini
-[Unit]
-Description="HashiCorp Vault - Narzędzie do zarządzania sekretami"
+Description=HashiCorp Vault
 Documentation=https://www.vaultproject.io/docs/
 Requires=network-online.target
 After=network-online.target
-# Dodaj poniższą linię, aby upewnić się, że vault-unseal.service uruchamia się po vault.service
-PartOf=vault-unseal.service
+Requires=vault-unseal.service
 
 [Service]
 User=vault
 Group=vault
-ExecStart=/usr/local/bin/vault server -config=/etc/vault.d/vault.hcl
-ExecReload=/bin/kill -HUP $MAINPID
+EnvironmentFile=/etc/vault.d/vault.env
+ExecStart=/usr/bin/vault server -config=/etc/vault.d/vault.hcl
+ExecReload=/bin/kill --signal HUP $MAINPID
+KillMode=process
+KillSignal=SIGINT
+Restart=on-failure
+RestartSec=5
 LimitNOFILE=65536
-# Inne opcje...
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-I zmodyfikuj plik `vault-unseal.service`, aby uwzględnić:
+#### Krok 5: Utwórz usługę Vault Unseal
+
+Utwórz nowy plik usługi w `/etc/systemd/system/vault-unseal.service` z następującą zawartością:
 
 ```ini
 [Unit]
-Description=Odpieczętowanie Vault
+Description=Unseal Vault
 After=vault.service
 Requires=vault.service
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/unseal_vault.sh
+Environment=VAULT_ADDR=https://<vault IP address>:8200
+Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Po tych modyfikacjach `vault-unseal.service` będzie uznawana za część procesu `vault.service`. Ponowne uruchomienie `vault.service` teraz również uruchomi `vault-unseal.service`.
+Dzięki tym modyfikacjom, `vault-unseal.service` będzie uważana za część procesu `vault.service`. Restart `vault.service` będzie teraz także uruchamiał `vault-unseal.service`.
 
-### Testowanie konfiguracji
+#### Krok 6: Przeładuj systemd i uruchom usługi
 
-Po dokonaniu tych zmian, przeładuj konfigurację systemd i ponownie uruchom usługę Vault:
+Przeładuj systemd, aby zastosować zmiany i uruchom usługi:
 
 ```bash
 systemctl daemon-reload
+systemctl restart vault.service
+```
+
+#### Krok 8: Włącz obie usługi podczas rozruchu
+
+```bash
+systemctl enable vault-unseal.service
+systemctl enable vault.service
+```
+
+#### Wyjaśnienie: Co się dzieje podczas procesu rozruchu
+
+Kiedy Twój system uruchamia się, dzieje się następująca sekwencja:
+
+1. **`vault.service` startuje**: Jest to główna usługa dla Vault. Startuje zgodnie z jej konfiguracją.
+2. **`vault-unseal.service` startuje**: Ta usługa jest skonfigurowana do uruchamiania po `vault.service` z powodu dyrektywy `After=vault.service`. Oznacza to, że `vault-unseal.service` nie uruchomi się, dopóki `vault.service` nie zostanie w pełni uruchomiona.
+
+`vault-unseal.service` zależy od `vault.service` i będzie uruchamiana skrypt odblokowujący dopiero po uruchomieniu usługi Vault.
+
+### Zachowanie przy
+
+ ręcznym restarcie
+
+#### Ręczny restart `vault.service`
+
+Kiedy ręcznie restartujesz `vault.service` używając komendy:
+
+```bash
+systemctl restart vault.service
+```
+
+Dzieje się następujące:
+
+1. **`vault.service` zatrzymuje się**: Usługa Vault zatrzymuje się, a następnie ponownie uruchamia.
+2. **`vault-unseal.service` nie uruchamia się automatycznie**: Domyślnie `vault-unseal.service` nie uruchamia się automatycznie tylko dlatego, że `vault.service` został zrestartowany. `vault-unseal.service` jest ustawiona do uruchamiania po `vault.service` podczas procesu rozruchu, ale nie wiąże się automatycznie z restartami `vault.service`.
+
+### Zapewnienie odblokowania po restarcie
+
+Aby zapewnić, że `vault-unseal.service` uruchomi się za każdym razem, gdy `vault.service` jest restartowana, uruchom poniższą komendę w jednej sesji SSH:
+
+```bash
+tail -f /var/log/unseal_vault.log
+```
+
+W innej sesji SSH, zrestartuj `vault.service`:
+
+```bash
 systemctl restart vault.service
 ```
 
@@ -289,12 +312,230 @@ systemctl status vault-unseal.service
 
 ### Podsumowanie
 
-Ta konfiguracja zapewnia bezpieczną metodę odpieczętowania Vault poprzez zaszyfrowanie kluczy odpieczętowania za pomocą GPG i bezpieczne przechowywanie hasła. Skrypt pobiera hasło i odszyfrowuje klucze w czasie rzeczywistym, zwiększając bezpieczeństwo konfiguracji.
+Ta konfiguracja zapewnia bezpieczną metodę odblokowywania Vault poprzez szyfrowanie kluczy odblokowujących za pomocą GPG i bezpieczne przechowywanie hasła. Skrypt pobiera hasło i odszyfrowuje klucze podczas działania, zwiększając bezpieczeństwo Twojej konfiguracji.
 
-Postępując zgodnie z tym przewodnikiem, zapewnisz, że poufne klucze odpieczętowania nie są wystawione w formie zwykłego tekstu, a dostęp do hasła jest ograniczony do użytkownika root, co zapewnia dodatkową warstwę bezpieczeństwa.
+Postępując zgodnie z tym przewodnikiem, zapewniasz, że wrażliwe klucze odblokowujące nie są narażone na widok w postaci zwykłego tekstu, a dostęp do hasła jest ograniczony do użytkownika root, zapewniając dodatkową warstwę bezpieczeństwa.
 
-Usługa `vault-unseal.service` będzie działać zarówno podczas procesu startu, jak i przy ręcznych ponownych uruchomieniach `vault.service`, utrzymując Vault automatycznie odpieczętowanym i operacyjnym.
+`vault-unseal.service` będzie uruchamiana zarówno podczas procesu rozruchu, jak i podczas ręcznych restartów `vault.service`, utrzymując Vault automatycznie odblokowanym i operacyjnym.
 
-#### Film instruktażowy
+#### Przegląd wideo
 
-{{<youtube >}}
+{{<youtube AvtRY9EszSI>}}
+
+#### Skrypt bash, który automatyzuje cały proces
+
+```bash
+vim vault.sh
+```
+
+Umieść poniższą zawartość:
+
+```bash
+#!/bin/bash
+
+echo "Ten szybki skrypt instalacyjny wymaga uprawnień roota."
+echo "Sprawdzanie..."
+if [[ $(/usr/bin/id -u) -ne 0 ]]; 
+then
+    echo "Nie uruchomiono jako root"
+    exit 0
+else
+        echo "Instalacja trwa"
+fi
+
+SUDO=
+if [ "$UID" != "0" ]; then
+        if [ -e /usr/bin/sudo -o -e /bin/sudo ]; then
+                SUDO=sudo
+        else
+                echo "*** Ten szybki skrypt instalacyjny wymaga uprawnień roota."
+                exit 0
+        fi
+fi
+
+# Krok 1: Utwórz plik z hasłem
+echo "<your passphrase>" > /root/.gpg_passphrase
+chmod 400 /root/.gpg_passphrase
+
+# Krok 2: Zaszyfruj klucze odblokowujące
+echo -e "your-unseal-key-1\nyour-unseal-key-2\nyour-unseal-key-3" | gpg --batch --yes --passphrase-file /root/.gpg_passphrase --symmetric --cipher-algo AES256 -o /root/.vault_unseal_keys.gpg
+
+chmod 400 /root/.vault_unseal_keys.gpg
+
+# Krok 3: Wyczyść historię bash i zakończ tymczasową sesję
+history -c
+
+# Krok 4: Utwórz skrypt odblokowujący
+cat << 'EOF' > /usr/local/bin/unseal_vault.sh
+#!/bin/bash
+
+export VAULT_ADDR='https://<vault IP address>:8200'
+
+# Utwórz plik logu, jeśli nie istnieje
+LOGFILE=/var/log/unseal_vault.log
+if [ ! -f "$LOGFILE" ]; then
+    touch "$LOGFILE"
+    chown vault:vault "$LOGFILE"
+else
+    echo "$LOGFILE exists"
+fi
+
+# Zaloguj czas rozpoczęcia
+echo "Starting unseal at $(date)" >> $LOGFILE
+
+# Czekaj na gotowość Vault
+while ! vault status 2>&1 | grep -q "Sealed.*true"; do
+  echo "Waiting for Vault to be sealed and ready..." >> $LOGFILE
+  sleep 5
+done
+
+echo "Vault is sealed and ready at $(date)" >> $LOGFILE
+
+# Załaduj hasło GPG
+GPG_PASSPHRASE=$(cat /root/.gpg_passphrase)
+
+# Odszyfruj klucze odblokowujące
+UNSEAL_KEYS=$(gpg --quiet --batch --yes --decrypt --passphrase "$GPG_PASSPHRASE" /root/.vault_unseal_keys.gpg)
+if [ $? -ne 0 ]; then
+  echo "Failed to decrypt unseal keys at $(date)" >> $LOGFILE
+  exit 1
+fi
+
+echo "Unseal keys decrypted successfully at $(date)" >> $LOGFILE
+
+# Przekształć odszyfrowane klucze w tablicę
+UNSEAL_KEYS_ARRAY=($(echo "$UNSEAL_KEYS"))
+
+# Odblokuj Vault
+for key in "${UNSEAL_KEYS_ARRAY[@]}"; do
+# zakomentowane, ponieważ nie chcę już tego debugować
+  vault operator unseal "$key" # >> $LOGFILE 2>&1
+  #if [ $? -ne 0 ]; then
+  #  echo "Failed to unseal with key $key at $(date)" >> $LOGFILE
+  #  exit 1
+  #fi
+  #echo "Successfully used unseal key $key at $(date)" >> $LOGFILE
+done
+
+echo "Vault unsealed successfully at $(date)" >> $LOGFILE
+EOF
+
+chmod 500 /usr/local/bin/unseal_vault.sh
+
+# Krok 5: Zmodyfikuj vault.service
+cat << 'EOF' > /etc/systemd/system/vault.service
+[Unit]
+Description=HashiCorp Vault
+Documentation=https://www.vaultproject.io/docs/
+Requires=network-online.target
+After=network-online.target
+Requires=vault-unseal.service
+
+[Service]
+User=vault
+Group=vault
+EnvironmentFile=/etc/vault.d/vault.env
+ExecStart=/usr/bin/vault server -config=/etc/vault.d/vault.hcl
+ExecReload=/bin/kill --signal HUP $MAINPID
+KillMode=process
+KillSignal=SIGINT
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Krok 6: Utwórz vault-unseal.service
+cat << 'EOF' > /etc/systemd/system/vault-unseal.service
+[Unit]
+Description=Unseal Vault
+After=vault.service
+Requires=vault.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/unseal_vault.sh
+Environment=VAULT_ADDR=https://<vault IP address>:8200
+Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Krok 7: Przeładuj systemd i uruchom usługi
+systemctl daemon-reload
+systemctl enable vault-unseal.service
+systemctl enable vault.service
+systemctl restart vault.service
+```
+
+Uczyń skrypt bash wykonywalnym:
+
+```bash
+chmod +x vault.sh
+```
+
+Uruchom skrypt:
+
+```bash
+sudo ./vault.sh
+```
+
+#### Skrypt bash, który cofa wszystkie zmiany
+
+```bash
+#!/bin/bash
+
+echo "Ten szybki skrypt instalacyjny wymaga uprawnień roota."
+echo "Sprawdzanie..."
+if [[ $(/usr/bin/id -u) -ne 0 ]]; 
+then
+    echo "Nie uruchomiono jako root"
+    exit 0
+else
+        echo "Instalacja trwa"
+fi
+
+SUDO=
+if [ "$UID" != "0" ]; then
+        if [ -e /usr/bin/sudo -o -e /bin/sudo ]; to
+                SUDO=sudo
+        else
+                echo "*** Ten szybki skrypt instalacyjny wymaga uprawnień roota."
+                exit 0
+        fi
+fi
+rm -f /var/log/unseal_vault.log
+rm -f /root/.gpg_passphrase
+rm -f /root/.vault_unseal_keys.gpg
+rm -f /usr/local/bin/unseal_vault.sh
+rm -f /etc/systemd/system/vault-unseal.service
+cat << 'EOF' > /etc/systemd/system/vault.service
+[Unit]
+Description=HashiCorp Vault
+Documentation=https://www.vaultproject.io/docs/
+Requires=network-online.target
+After=network-online
+
+.target
+
+[Service]
+User=vault
+Group=vault
+EnvironmentFile=/etc/vault.d/vault.env
+ExecStart=/usr/bin/vault server -config=/etc/vault.d/vault.hcl
+ExecReload=/bin/kill --signal HUP $MAINPID
+KillMode=process
+KillSignal=SIGINT
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl daemon-reload
+systemctl restart vault
+```
