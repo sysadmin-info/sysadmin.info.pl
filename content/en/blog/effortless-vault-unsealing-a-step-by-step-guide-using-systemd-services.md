@@ -318,7 +318,7 @@ The `vault-unseal.service` will run both during the boot process and any manual 
 
 #### Walkthrough video
 
-{{<youtube>}}
+{{<youtube AvtRY9EszSI>}}
 
 #### Bash script that automates the whole process
 
