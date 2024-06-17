@@ -195,13 +195,14 @@ commento = false
   threads = "https://www.threads.net/@sysadmin.info.pl"
 
 [donationOptions]
-  enable = false
+  enable = true
   alipay = "" 
   wechat = ""
   paypal = ""
   patreon = ""
   bitcoin = ""
-  buymeacoffee = ""
+  buymeacoffee = "https://www.buymeacoffee.com/sysadmininfo"
+  buycoffee = "https://buycoffee.to/sysadmin"
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "pocket", "feedly", "hatena", "pinterest", "delicious", "google"]
 [[share]]
