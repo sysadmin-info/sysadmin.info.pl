@@ -2,7 +2,7 @@
 title: Securing Nexus login data retrieval in Dockerfile via HashiCorp Vault
 date: 2024-06-18T12:00:00+00:00
 description: Securing Nexus login data retrieval in Dockerfile via HashiCorp Vault
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
@@ -282,4 +282,4 @@ In the above steps, we added the capability to retrieve NPM login data from Hash
 
 #### Walkthrough video
 
-{{<youtube>}}
+{{<youtube NRW9p7tJll4>}}

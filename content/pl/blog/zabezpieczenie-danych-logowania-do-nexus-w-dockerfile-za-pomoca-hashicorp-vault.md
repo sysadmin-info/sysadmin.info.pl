@@ -2,7 +2,7 @@
 title: Zabezpieczenie danych logowania do Nexus w Dockerfile za pomocą HashiCorp Vault
 date: 2024-06-18T12:00:00+00:00
 description: Zabezpieczenie danych logowania do Nexus w Dockerfile za pomocą HashiCorp Vault
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
@@ -280,4 +280,4 @@ W powyższych krokach dodaliśmy możliwość pobierania danych logowania do NPM
 
 ### Film instruktażowy
 
-{{<youtube>}}
+{{<youtube NRW9p7tJll4>}}
