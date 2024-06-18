@@ -1,6 +1,6 @@
 ---
 title: Securing Nexus login data retrieval in Dockerfile via HashiCorp Vault
-date: 2024-06-16T14:00:00+00:00
+date: 2024-06-18T12:00:00+00:00
 description: Securing Nexus login data retrieval in Dockerfile via HashiCorp Vault
 draft: true
 hideToc: false
