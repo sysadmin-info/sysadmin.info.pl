@@ -1,6 +1,6 @@
 ---
 title: Integracja OpenBao Password Manager Vault w celu usprawnienia zarządzania sekretami w GitLab
-date: 2024-06-17T13:00:00+00:00
+date: 2024-06-19T08:00:00+00:00
 description: Integracja OpenBao Password Manager Vault w celu usprawnienia zarządzania sekretami w GitLab
 draft: true
 hideToc: false
@@ -21,19 +21,19 @@ image: images/2024-thumbs/gitlab07.webp
 
 #### Krok 1: Instalacja Go
 
-1. **Pobierz i zainstaluj Go**:
-   
-   ```bash
-   wget https://go.dev/dl/go1.20.5.linux-amd64.tar.gz  # Sprawdź najnowszą wersję na stronie Go
-   sudo tar -C /usr/local -xzf go1.20.5.linux-amd64.tar.gz
+1. **Pobierz i zainstaluj Go**
 
-   # Dodaj Go do ścieżki systemowej
-   echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-   source ~/.profile
+  ```bash
+  wget https://go.dev/dl/go1.20.5.linux-amd64.tar.gz  # Sprawdź najnowszą wersję na stronie Go
+  sudo tar -C /usr/local -xzf go1.20.5.linux-amd64.tar.gz
 
-   # Sprawdź instalację
-   go version
-   ```
+  # Dodaj Go do ścieżki systemowej
+  echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+  source ~/.profile
+
+  # Sprawdź instalację
+  go version
+  ```
 
 #### Krok 2: Instalacja OpenBao
 
