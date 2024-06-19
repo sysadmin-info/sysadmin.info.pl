@@ -250,7 +250,7 @@ WantedBy=multi-user.target
 
 ```bash
 cat << 'EOF' > /etc/vault.d/vault.env
-VAULT_ADDR=http://<vault IP address>:8200
+VAULT_ADDR=https://<vault IP address>:8200
 DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 EOF
 ```
@@ -259,7 +259,7 @@ EOF
 
 ```bash
 BASHRC_PATH="$HOME/.bashrc"
-echo "export VAULT_ADDR='http://<vault IP address>:8200'" >> $BASHRC_PATH
+echo "export VAULT_ADDR='https://<vault IP address>:8200'" >> $BASHRC_PATH
 echo "export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR/bus" >> $BASHRC_PATH
 source $BASHRC_PATH
 ```
@@ -484,7 +484,7 @@ EOF
 
 # Krok 7: Stwórz plik vault.env
 cat << 'EOF' > /etc/vault.d/vault.env
-VAULT_ADDR=http://<vault IP address>:8200
+VAULT_ADDR=https://<vault IP address>:8200
 DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 EOF
 
@@ -496,7 +496,7 @@ systemctl restart vault.service
 
 # Krok 9: wyeksportuj zmienne do to .bashrc
 BASHRC_PATH="$HOME/.bashrc"
-echo "export VAULT_ADDR='http://<vault IP address>:8200'" >> $BASHRC_PATH
+echo "export VAULT_ADDR='https://<vault IP address>:8200'" >> $BASHRC_PATH
 echo "export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR/bus" >> $BASHRC_PATH
 source $BASHRC_PATH
 ```
@@ -568,7 +568,7 @@ systemctl daemon-reload
 systemctl restart vault
 
 BASHRC_PATH="$HOME/.bashrc"
-sed -i "/export VAULT_ADDR='http:\/\/<vault IP address>:8200'/d" $BASHRC_PATH
+sed -i "/export VAULT_ADDR='https:\/\/<vault IP address>:8200'/d" $BASHRC_PATH
 sed -i "/export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR\/bus/d" $BASHRC_PATH
 source $BASHRC_PATH
 ```
