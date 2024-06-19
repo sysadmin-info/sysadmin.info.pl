@@ -246,6 +246,24 @@ Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 WantedBy=multi-user.target
 ```
 
+#### Krok 6: Stwórz plik vault.env
+
+```bash
+cat << 'EOF' > /etc/vault.d/vault.env
+VAULT_ADDR=http://<vault IP address>:8200
+DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
+EOF
+```
+
+#### Krok 7: wyeksportuj zmienne do to .bashrc
+
+```bash
+BASHRC_PATH="$HOME/.bashrc"
+echo "export VAULT_ADDR='http://<vault IP address>:8200'" >> $BASHRC_PATH
+echo "export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR/bus" >> $BASHRC_PATH
+source $BASHRC_PATH
+```
+
 Dzięki tym modyfikacjom, usługa `vault-unseal.service` będzie uważana za część procesu `vault.service`. Restart `vault.service` będzie teraz także uruchamiał `vault-unseal.service`.
 
 #### Krok 6: Przeładuj systemd i uruchom usługi
@@ -464,11 +482,23 @@ Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 WantedBy=multi-user.target
 EOF
 
-# Krok 7: Przeładuj systemd i uruchom usługi
+# Krok 7: Stwórz plik vault.env
+cat << 'EOF' > /etc/vault.d/vault.env
+VAULT_ADDR=http://<vault IP address>:8200
+DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
+EOF
+
+# Krok 8: Przeładuj systemd i uruchom usługi
 systemctl daemon-reload
 systemctl enable vault-unseal.service
 systemctl enable vault.service
 systemctl restart vault.service
+
+# Krok 9: wyeksportuj zmienne do to .bashrc
+BASHRC_PATH="$HOME/.bashrc"
+echo "export VAULT_ADDR='http://<vault IP address>:8200'" >> $BASHRC_PATH
+echo "export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR/bus" >> $BASHRC_PATH
+source $BASHRC_PATH
 ```
 
 Uczyń skrypt bash wykonywalnym:
@@ -517,9 +547,7 @@ cat << 'EOF' > /etc/systemd/system/vault.service
 Description=HashiCorp Vault
 Documentation=https://www.vaultproject.io/docs/
 Requires=network-online.target
-After=network-online
-
-.target
+After=network-online.target
 
 [Service]
 User=vault
@@ -538,4 +566,9 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl restart vault
+
+BASHRC_PATH="$HOME/.bashrc"
+sed -i "/export VAULT_ADDR='http:\/\/<vault IP address>:8200'/d" $BASHRC_PATH
+sed -i "/export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR\/bus/d" $BASHRC_PATH
+source $BASHRC_PATH
 ```

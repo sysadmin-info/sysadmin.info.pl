@@ -246,6 +246,24 @@ Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 WantedBy=multi-user.target
 ```
 
+#### Step 6: Create vault.env file
+
+```bash
+cat << 'EOF' > /etc/vault.d/vault.env
+VAULT_ADDR=http://<vault IP address>:8200
+DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
+EOF
+```
+
+#### Step 7: export variables to .bashrc
+
+```bash
+BASHRC_PATH="$HOME/.bashrc"
+echo "export VAULT_ADDR='http://<vault IP address>:8200'" >> $BASHRC_PATH
+echo "export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR/bus" >> $BASHRC_PATH
+source $BASHRC_PATH
+```
+
 With these modifications, the `vault-unseal.service` will be considered part of the `vault.service` process. Restarting `vault.service` will now also trigger the `vault-unseal.service`.
 
 #### Step 6: Reload Systemd and Start Services
@@ -464,11 +482,23 @@ Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
 WantedBy=multi-user.target
 EOF
 
-# Step 7: Reload systemd and start services
+# Step 7: Create vault.env file
+cat << 'EOF' > /etc/vault.d/vault.env
+VAULT_ADDR=http://<vault IP address>:8200
+DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
+EOF
+
+# Step 8: Reload systemd and start services
 systemctl daemon-reload
 systemctl enable vault-unseal.service
 systemctl enable vault.service
 systemctl restart vault.service
+
+# Step 9: export variables to .bashrc
+BASHRC_PATH="$HOME/.bashrc"
+echo "export VAULT_ADDR='http://<vault IP address>:8200'" >> $BASHRC_PATH
+echo "export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR/bus" >> $BASHRC_PATH
+source $BASHRC_PATH
 ```
 
 Make the bash script executable:
@@ -512,6 +542,7 @@ rm -f /root/.gpg_passphrase
 rm -f /root/.vault_unseal_keys.gpg
 rm -f /usr/local/bin/unseal_vault.sh
 rm -f /etc/systemd/system/vault-unseal.service
+rm -f /etc/vault.d/vault.env
 cat << 'EOF' > /etc/systemd/system/vault.service
 [Unit]
 Description=HashiCorp Vault
@@ -522,7 +553,6 @@ After=network-online.target
 [Service]
 User=vault
 Group=vault
-EnvironmentFile=/etc/vault.d/vault.env
 ExecStart=/usr/local/bin/vault server -config=/etc/vault.d/vault.hcl
 ExecReload=/bin/kill --signal HUP $MAINPID
 KillMode=process
@@ -530,10 +560,16 @@ KillSignal=SIGINT
 Restart=on-failure
 RestartSec=5
 LimitNOFILE=65536
+LimitMEMLOCK=infinity
 
 [Install]
 WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl restart vault
+
+BASHRC_PATH="$HOME/.bashrc"
+sed -i "/export VAULT_ADDR='http:\/\/<vault IP address>:8200'/d" $BASHRC_PATH
+sed -i "/export DBUS_SESSION_BUS_ADDRESS=\$XDG_RUNTIME_DIR\/bus/d" $BASHRC_PATH
+source $BASHRC_PATH
 ```
