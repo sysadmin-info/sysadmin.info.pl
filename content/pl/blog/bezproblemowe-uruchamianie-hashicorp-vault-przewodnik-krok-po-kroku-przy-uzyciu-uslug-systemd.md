@@ -220,6 +220,7 @@ KillSignal=SIGINT
 Restart=on-failure
 RestartSec=5
 LimitNOFILE=65536
+LimitMEMLOCK=infinity
 
 [Install]
 WantedBy=multi-user.target
@@ -440,6 +441,7 @@ KillSignal=SIGINT
 Restart=on-failure
 RestartSec=5
 LimitNOFILE=65536
+LimitMEMLOCK=infinity
 
 [Install]
 WantedBy=multi-user.target
