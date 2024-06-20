@@ -98,8 +98,8 @@ Here is a basic example of what a `config.hcl` file might look like. Adjust the 
   ui = true
   
   # Server configuration
-  cluster_addr  = "https://10.10.0.113:8201"
-  api_addr      = "https://10.10.0.113:8200"
+  cluster_addr  = "https://10.10.0.120:8201"
+  api_addr      = "https://10.10.0.120:8200"
 
   # Disable mlock
   disable_mlock = true
@@ -147,7 +147,7 @@ ST = State
 L  = City
 O  = Organization
 OU = Organizational Unit
-CN = 10.10.0.113
+CN = 10.10.0.120
 
 [req_ext]
 subjectAltName = @alt_names
@@ -157,7 +157,7 @@ subjectAltName = @alt_names
 basicConstraints = critical, CA:true
 
 [alt_names]
-IP.1 = 10.10.0.113
+IP.1 = 10.10.0.120
 ```
 
 2.**Generate a New Private Key and Certificate:**
@@ -213,7 +213,7 @@ Refer to the OpenBao documentation for more detailed configuration options and e
 #### Step 8: Initialize and unseal OpenBao
 
   ```bash
-  export VAULT_ADDR='https://10.10.0.113:8200'
+  export VAULT_ADDR='https://10.10.0.120:8200'
   openbao operator init
 
   # Save the unseal keys and root token generated during initialization
@@ -270,7 +270,7 @@ Refer to the OpenBao documentation for more detailed configuration options and e
 
     Add CI/CD variables in GitLab:
 
-    - `VAULT_ADDR` = `https://10.10.0.113:8200`
+    - `VAULT_ADDR` = `https://10.10.0.120:8200`
     - `VAULT_TOKEN` = `<vault_token>`
 
 3. **Configure `.gitlab-ci.yml`**:
@@ -280,7 +280,7 @@ Refer to the OpenBao documentation for more detailed configuration options and e
       - test
 
     variables:
-      VAULT_ADDR: "https://10.10.0.113:8200"
+      VAULT_ADDR: "https://10.10.0.120:8200"
 
     before_script:
       - apt-get update -y && apt-get install -y jq
