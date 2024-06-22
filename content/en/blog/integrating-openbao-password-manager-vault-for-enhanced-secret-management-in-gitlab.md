@@ -17,190 +17,229 @@ categories:
 image: images/2024-thumbs/gitlab07.webp
 ---
 
-### Installing OpenBao with User Interface
+### Integrating OpenBao Password Manager Vault for Enhanced Secret Management in GitLab
 
-#### Step 1: Install Go
+#### Prerequisites
 
-1. **Download and install Go**
+Ensure you have root privileges before starting the installation.
 
-  ```bash
-   # Check the latest version on the Go website
-  wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
-  sudo tar -C /usr/local -xzf go1.22.4.linux-amd64.tar.gz
+#### Automated Installation Script
 
-  # Add Go to the system path
-  echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-  source ~/.profile
+To automate the installation and configuration of OpenBao, use the provided script `bao.sh`. This script handles the following:
 
-  # Verify the installation
-  go version
-  ```
+1. Creates a system user and group for OpenBao.
+2. Installs Go.
+3. Installs necessary dependencies.
+4. Installs NVM, Node.js, and Yarn.
+5. Clones and builds the OpenBao repository.
+6. Configures OpenBao.
+7. Generates SSL certificates.
+8. Initializes and unseals OpenBao.
+9. Creates necessary systemd services.
 
-#### Step 2: Install OpenBao
+Download and run the script as root:
+
+```bash
+curl -O https://raw.githubusercontent.com/yourusername/yourrepository/main/bao.sh
+chmod +x bao.sh
+sudo ./bao.sh
+```
+
+The script handles all the steps detailed below. However, if you prefer to understand each step or run them manually, follow the detailed guide.
+
+### Detailed Installation Steps
+
+#### Step 1: Create User and Setup Environment
+
+The script will check if the `openbao` user exists and create it if necessary. It also ensures the environment is properly set up for the `openbao` user.
+
+#### Step 2: Install Go
+
+1. **Download and install Go**:
+
+    ```bash
+    wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
+    sudo tar -C /usr/local -xzf go1.22.4.linux-amd64.tar.gz
+    sudo mkdir -p /var/lib/openbao
+    sudo touch /var/lib/openbao/.profile
+    echo "export PATH=\$PATH:/usr/local/go/bin" | sudo tee -a /var/lib/openbao/.profile
+    sudo chown -R openbao:openbao /var/lib/openbao
+    ```
+
+#### Step 3: Install Dependencies
+
+1. **Install required packages**:
+
+    ```bash
+    sudo apt install -y git make curl gnupg2
+    ```
+
+2. **Setup NVM, Node.js, and Yarn for the openbao user**:
+
+    ```bash
+    sudo -u openbao -H bash -c 'cd /var/lib/openbao && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
+    sudo -u openbao -H bash -c 'export NVM_DIR="/var/lib/openbao/.nvm" && cd /var/lib/openbao && source $NVM_DIR/nvm.sh && nvm install 22'
+    sudo -u openbao -H bash -c 'export NVM_DIR="/var/lib/openbao/.nvm" && cd /var/lib/openbao && source $NVM_DIR/nvm.sh && npm config set prefix /var/lib/openbao/.npm-global && npm install -g yarn'
+    sudo -u openbao -H bash -c 'echo "export PATH=/var/lib/openbao/.npm-global/bin:\$PATH" >> /var/lib/openbao/.profile'
+    ```
+
+#### Step 4: Clone and Build OpenBao
 
 1. **Clone the OpenBao repository**:
 
     ```bash
-    sudo mkdir -p $GOPATH/src/github.com/openbao && cd $_
-    sudo apt install -y git
-    sudo git clone https://github.com/openbao/openbao.git
-    cd openbao
-    sudo chown -R $(whoami):$(whoami) $GOPATH/src/github.com/openbao/openbao
+    sudo mkdir -p /var/lib/openbao/src/github.com/openbao
+    sudo chown -R openbao:openbao /var/lib/openbao/src/github.com
+    cd /var/lib/openbao/src/github.com/openbao
+    sudo -u openbao git clone https://github.com/openbao/openbao.git
     ```
 
-2. **Build OpenBao with the user interface**:
+2. **Build OpenBao**:
 
     ```bash
-    sudo apt install -y make curl gnupg2
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    export NVM_DIR="$HOME/.nvm"[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm 
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-    nvm install 22
-    npm install --global yarn
-    yarn config set --home enableTelemetry 0
-    export NODE_OPTIONS="--max_old_space_size=4096"
-    make bootstrap
-    make static-dist dev-ui
+    sudo -u openbao -H bash -c 'source /var/lib/openbao/.profile && cd /var/lib/openbao/src/github.com/openbao/openbao && export NVM_DIR="/var/lib/openbao/.nvm" && source $NVM_DIR/nvm.sh && nvm use --delete-prefix v22.3.0 --silent && export NODE_OPTIONS="--max_old_space_size=4096" && make bootstrap'
+    sudo -u openbao -H bash -c 'source /var/lib/openbao/.profile && cd /var/lib/openbao/src/github.com/openbao/openbao && export NVM_DIR="/var/lib/openbao/.nvm" && source $NVM_DIR/nvm.sh && nvm use --delete-prefix v22.3.0 --silent && make static-dist dev-ui'
+    sudo mv /var/lib/openbao/src/github.com/openbao/openbao/bin/bao /usr/local/bin/openbao
     ```
 
-3. **Move the binary to the system path**:
+#### Step 5: Configure OpenBao
+
+1. **Create configuration directory and file**:
 
     ```bash
-    sudo mv bin/bao /usr/local/bin/openbao
-    openbao --version
+    sudo mkdir -p /var/lib/openbao/config
+    cat << 'EOF' | sudo tee /var/lib/openbao/config/config.hcl
+    ui = true
+    cluster_addr  = "https://10.10.0.126:8201"
+    api_addr      = "https://10.10.0.126:8200"
+    disable_mlock = true
+    storage "file" {
+      path = "/var/lib/openbao/data"
+    }
+    listener "tcp" {
+      address       = "10.10.0.126:8200"
+      tls_cert_file = "/var/lib/openbao/tls/tls.crt"
+      tls_key_file  = "/var/lib/openbao/tls/tls.key"
+    }
+    EOF
+    sudo mkdir -p /var/lib/openbao/data
+    sudo chown -R openbao:openbao /var/lib/openbao/data
+    sudo chmod -R 755 /var/lib/openbao/data
     ```
 
-#### Step 3: Configure OpenBao
+#### Step 6: Generate SSL Certificates
 
-1. **Create a directory for the configuration file**:
-  
-    ```bash
-    mkdir -p ~/openbao/config
-    cd ~/openbao/config
-    ```
-
-#### Step 4: Create the `config.hcl` File
-
-1. **Create and open the `config.hcl` file**:
-
-  ```bash
-  vim config.hcl
-  ```
-
-#### Step 5: Populate the `config.hcl` File
-
-Here is a basic example of what a `config.hcl` file might look like. Adjust the contents based on your specific needs and the references from the test fixture files you found.
-
-  ```hcl
-  # Example OpenBao Configuration
-
-  # Enable or disable the UI
-  ui = true
-  
-  # Server configuration
-  cluster_addr  = "https://10.10.0.120:8201"
-  api_addr      = "https://10.10.0.120:8200"
-
-  # Disable mlock
-  disable_mlock = true
-
-  # Storage configuration
-  storage "file" {
-    path = "/var/lib/openbao/data"
-  }
-
-  # Listener
-  listener "tcp" {
-    address       = "0.0.0.0:8200"
-    tls_cert_file = "/home/adrian/openbao/tls/tls.crt"
-    tls_key_file  = "/home/adrian/openbao/tls/tls.key"
-  }
-  ```
-
-Create a directory for openBAO data.
-
-  ```bash
-  sudo mkdir -p /var/lib/openbao/data
-  sudo chown -R $(whoami):$(whoami) /var/lib/openbao/data
-  sudo chmod -R 755 /var/lib/openbao/data
-  ```
-
-#### Step 6: Create an OpenSSL Configuration File for Certificate with IP SAN
-
-1.**You need to generate a new certificate that includes the IP address as a SAN:**
-
-Create a file named `openssl.cnf`:
-
-```ini
-[req]
-default_bits       = 2048
-default_md         = sha256
-prompt             = no
-encrypt_key        = no
-distinguished_name = dn
-req_extensions     = req_ext
-x509_extensions    = v3_ca
-
-[dn]
-C  = US
-ST = State
-L  = City
-O  = Organization
-OU = Organizational Unit
-CN = 10.10.0.120
-
-[req_ext]
-subjectAltName = @alt_names
-
-[v3_ca]
-subjectAltName = @alt_names
-basicConstraints = critical, CA:true
-
-[alt_names]
-IP.1 = 10.10.0.120
-```
-
-2.**Generate a New Private Key and Certificate:**
-
-Use the following commands to generate a new private key and certificate:
-
-   ```bash
-   openssl genpkey -algorithm RSA -out tls.key
-   ```
-
-   ```bash
-   openssl req -new -x509 -days 365 -key tls.key -out tls.crt -config openssl.cnf
-   ```
-
-3.**Update Vault Certificate Files:**
-
-   Copy the newly generated `tls.key` and `tls.crt` files to the appropriate directory (e.g., `~/openbao/tls/`):
-
-   ```bash
-   sudo mkdir -p ~/openbao/tls
-   sudo mv tls.crt ~/openbao/tls/
-   sudo mv tls.key ~/openbao/tls/
-   sudo chown -R $(whoami):$(whoami) ~/openbao/tls/
-   ```
-
-4.**Update Trusted Certificates**
-
-   Copy the certificate to the appropriate location and update the trusted certificate store:
-
-   ```bash
-   sudo cp ~/openbao/tls/tls.crt /usr/local/share/ca-certificates/openbao.crt
-   sudo update-ca-certificates
-   ```
-
-#### Step 7: Start OpenBao with the Configuration File
-
-1. **Run OpenBao with your configuration**:
+1. **Create OpenSSL configuration file**:
 
     ```bash
-    openbao server -config ~/openbao/config/config.hcl
+    cat << 'EOF' | sudo tee /var/lib/openbao/openssl.cnf
+    [req]
+    default_bits       = 2048
+    default_md         = sha256
+    prompt             = no
+    encrypt_key        = no
+    distinguished_name = dn
+    req_extensions     = req_ext
+    x509_extensions    = v3_ca
+    [dn]
+    C  = US
+    ST = State
+    L  = City
+    O  = Organization
+    OU = Organizational Unit
+    CN = 10.10.0.126
+    [req_ext]
+    subjectAltName = @alt_names
+    [v3_ca]
+    subjectAltName = @alt_names
+    basicConstraints = critical, CA:true
+    [alt_names]
+    IP.1 = 10.10.0.126
+    EOF
     ```
 
-#### Customizing the Configuration
+2. **Generate private key and certificate**:
+
+    ```bash
+    sudo openssl genpkey -algorithm RSA -out /var/lib/openbao/tls.key
+    sudo openssl req -new -x509 -days 365 -key /var/lib/openbao/tls.key -out /var/lib/openbao/tls.crt -config /var/lib/openbao/openssl.cnf
+    sudo mkdir -p /var/lib/openbao/tls
+    sudo mv /var/lib/openbao/tls.crt /var/lib/openbao/tls/
+    sudo mv /var/lib/openbao/tls.key /var/lib/openbao/tls/
+    sudo chown -R openbao:openbao /var/lib/openbao/tls/
+    sudo cp /var/lib/openbao/tls/tls.crt /usr/local/share/ca-certificates/openbao.crt
+    sudo update-ca-certificates
+    ```
+
+#### Step 7: Initialize and Unseal OpenBao
+
+1. **Initialize and unseal OpenBao**:
+
+    ```bash
+    sudo -u openbao -H bash -c 'source /var/lib/openbao/.bashrc && openbao server -config /var/lib/openbao/config/config.hcl &'
+    sleep 30
+    sudo -u openbao -H bash -c 'source /var/lib/openbao/.bashrc && openbao operator init > /tmp/init_output.txt'
+    ```
+
+2. **Unseal OpenBao**:
+
+    ```bash
+    UNSEAL_KEYS=$(grep 'Unseal Key' /tmp/init_output.txt | awk '{print $NF}')
+    echo "$UNSEAL_KEYS" > /tmp/unseal_keys.txt
+    for key in $(cat /tmp/unseal_keys.txt); do
+        openbao operator unseal $key
+    done
+    ```
+
+#### Step 8: Create Systemd Services
+
+1. **Create `openbao.service` and `openbao-unseal.service`**:
+
+    ```bash
+    cat << 'EOF' | sudo tee /etc/systemd/system/openbao.service
+    [Unit]
+    Description=OpenBao
+    Documentation=https://github.com/openbao/openbao
+    Requires=network-online.target
+    After=network-online.target
+    Requires=openbao-unseal.service
+    [Service]
+    User=openbao
+    Group=openbao
+    EnvironmentFile=/etc/openbao.d/openbao.env
+    ExecStart=/usr/local/bin/openbao server -config=/var/lib/openbao/config/config.hcl
+    ExecReload=/bin/kill --signal HUP $MAINPID
+    KillMode=process
+    KillSignal=SIGINT
+    Restart=on-failure
+    RestartSec=5
+    LimitNOFILE=65536
+    LimitMEMLOCK=infinity
+    [Install]
+    WantedBy=multi-user.target
+    EOF
+
+    cat << 'EOF' | sudo tee /etc/systemd/system/openbao-unseal.service
+    [Unit]
+    Description=Unseal OpenBao
+    After=openbao.service
+    Requires=openbao.service
+    [Service]
+    Type=oneshot
+    ExecStart=/usr/local/bin/unseal_openbao.sh
+    Environment=VAULT_ADDR=https://10.10.0.126:8200
+    Environment=DBUS_SESSION_BUS_ADDRESS=$XDG_RUNTIME_DIR/bus
+    [Install]
+    WantedBy=multi-user.target
+    EOF
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable openbao-unseal.service
+    sudo systemctl enable openbao.service
+    sudo systemctl start openbao.service
+    ```
+
+### Customizing the Configuration
 
 - **Server Settings**: Adjust the server address, port, and UI settings.
 - **Storage Settings**: Configure the storage backend as required (e.g., file, database, etc.).
@@ -210,77 +249,23 @@ Use the following commands to generate a new private key and certificate:
 
 Refer to the OpenBao documentation for more detailed configuration options and examples. This example provides a starting point and should be tailored to your specific requirements and environment. If you need further assistance or specific configuration options, feel free to ask!
 
-#### Step 8: Initialize and unseal OpenBao
-
-  ```bash
-  export VAULT_ADDR='https://10.10.0.120:8200'
-  openbao operator init
-
-  # Save the unseal keys and root token generated during initialization
-
-  openbao operator unseal <unseal_key_1>
-  openbao operator unseal <unseal_key_2>
-  openbao operator unseal <unseal_key_3>
-  openbao login <root_token>
-  ```
-
-#### Step 9: Configure Policies and Secrets
-
-1. **Create the `gitlab-policy.hcl` policy**:
-
-    ```hcl
-    path "secret/data/gitlab/*" {
-      capabilities = ["create", "read", "update", "delete", "list"]
-    }
-    ```
-
-2. **Load the policy into OpenBao**:
-
-    ```bash
-    openbao policy write gitlab-policy gitlab-policy.hcl
-    ```
-
-3. **Create a secret for GitLab**:
-
-    ```bash
-    openbao secrets enable -path=secret kv-v2
-    openbao kv put secret/gitlab/database username="my-username" password="my-password"
-    ```
-
-4. **Create an access token for GitLab**:
-
-    ```bash
-    openbao token create -policy=gitlab-policy -period=24h
-    ```
-
-    Save the generated token.
-
 ### GitLab Configuration
 
-1. **Install `openbao` on runners**:
-
-    On each GitLab runner, install `openbao`:
-
-    ```bash
-    # Copy the openbao binary to the runners
-    scp /usr/local/bin/openbao user@runner:/usr/local/bin/
-    ```
-
-2. **Define environment variables in GitLab CI/CD**:
+1. **Define environment variables in GitLab CI/CD**:
 
     Add CI/CD variables in GitLab:
 
-    - `VAULT_ADDR` = `https://10.10.0.120:8200`
+    - `VAULT_ADDR` = `https://10.10.0.126:8200`
     - `VAULT_TOKEN` = `<vault_token>`
 
-3. **Configure `.gitlab-ci.yml`**:
+2. **Configure `.gitlab-ci.yml`**:
 
     ```yaml
     stages:
       - test
 
     variables:
-      VAULT_ADDR: "https://10.10.0.120:8200"
+      VAULT_ADDR: "https://10.10.0.126:8200"
 
     before_script:
       - apt-get update -y && apt-get install -y jq
