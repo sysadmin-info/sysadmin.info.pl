@@ -1,6 +1,6 @@
 ---
 title: Integrating OpenBao Password Manager Vault for Enhanced Secret Management in GitLab
-date: 2024-06-20T13:00:00+00:00
+date: 2024-06-24T13:00:00+00:00
 description: Integrating OpenBao Password Manager Vault for Enhanced Secret Management in GitLab
 draft: true
 hideToc: false
@@ -40,7 +40,7 @@ To automate the installation and configuration of OpenBao, use the provided scri
 Download and run the script as root:
 
 ```bash
-curl -O https://raw.githubusercontent.com/yourusername/yourrepository/main/bao.sh
+curl -O https://raw.githubusercontent.com/sysadmin-info/openbao/main/openbao.sh
 chmod +x bao.sh
 sudo ./bao.sh
 ```
