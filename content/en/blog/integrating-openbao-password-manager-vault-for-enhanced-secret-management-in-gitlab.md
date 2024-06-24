@@ -41,7 +41,23 @@ Download and run the script as root:
 
 ```bash
 curl -O https://raw.githubusercontent.com/sysadmin-info/openbao/main/openbao.sh
+```
+
+Replace `<IP address or URL>` with real IP address or URL and run it before you will run the script. See eg. below:
+
+```bash
+sed -i 's|<IP address or URL>|10.10.0.126|g' openbao.sh
+```
+
+Make the file executable:
+
+```bash
 chmod +x bao.sh
+```
+
+Run the script with sudo:
+
+```bash
 sudo ./bao.sh
 ```
 
