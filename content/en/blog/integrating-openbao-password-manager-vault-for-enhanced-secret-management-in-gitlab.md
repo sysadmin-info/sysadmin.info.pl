@@ -276,31 +276,7 @@ Refer to the OpenBao documentation for more detailed configuration options and e
     - `VAULT_ADDR` = `https://10.10.0.126:8200`
     - `VAULT_TOKEN` = `<vault_token>`
 
-2. **Configure `.gitlab-ci.yml`**:
-
-    ```yaml
-    stages:
-      - test
-
-    variables:
-      VAULT_ADDR: "https://10.10.0.126:8200"
-
-    before_script:
-      - apt-get update -y && apt-get install -y jq
-      - echo $VAULT_TOKEN > /tmp/.vault-token
-
-    job:
-      stage: test
-      script:
-        - echo "Fetching secrets from OpenBao"
-        - export VAULT_TOKEN=$(cat /tmp/.vault-token)
-        - secrets=$(openbao kv get -format=json secret/gitlab/database)
-        - export DB_USERNAME=$(echo $secrets | jq -r '.data.data.username')
-        - export DB_PASSWORD=$(echo $secrets | jq -r '.data.data.password')
-        - echo "Using fetched secrets"
-        - echo "DB_USERNAME: $DB_USERNAME"
-        - echo "DB_PASSWORD: $DB_PASSWORD"
-    ```
+2. **Configure `.gitlab-ci.yml`**
 
 #### Summary
 
