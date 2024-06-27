@@ -1,8 +1,8 @@
 ---
 title: Integrating OpenBao Password Manager Vault for Enhanced Secret Management in GitLab
-date: 2024-06-25T14:11:00+00:00
+date: 2024-06-27T18:10:00+00:00
 description: Integrating OpenBao Password Manager Vault for Enhanced Secret Management in GitLab
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
@@ -284,4 +284,5 @@ The above steps cover the installation of Go, downloading and building OpenBao w
 
 #### Walkthrough video
 
-{{<youtube >}}
+{{<youtube hweJTAiD-iA>}}
+
