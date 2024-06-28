@@ -285,4 +285,3 @@ The above steps cover the installation of Go, downloading and building OpenBao w
 #### Walkthrough video
 
 {{<youtube hweJTAiD-iA>}}
-
