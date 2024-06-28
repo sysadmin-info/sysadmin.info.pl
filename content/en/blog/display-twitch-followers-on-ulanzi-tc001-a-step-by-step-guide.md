@@ -36,8 +36,8 @@ This tutorial will guide you through the process of setting up a developer accou
 4. **Register Your Application**
    - Click on "Register Your Application."
    - Provide a unique name for your application.
-   - Fill in the OAuth Redirect URLs with the necessary URL: <https://api.twitch.tv/helix/channels/followers?broadcaster_id=XXXXXXXXX>
-   - Use this website [convert Twitch username to user ID]{<https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/}> to get the broadcaster ID.
+   - Fill in the OAuth Redirect URLs with the necessary URL: https://api.twitch.tv/helix/channels/followers?broadcaster_id=XXXXXXXXX
+   - Use this website [convert Twitch username to user ID](https://www.streamweasels.com/tools/convert-twitch-username-to-user-id/) to get the broadcaster ID.
    - Select a category such as "Application Integration."
    - Choose "Confidential" for the application type.
    - Complete the CAPTCHA and click "Create."
