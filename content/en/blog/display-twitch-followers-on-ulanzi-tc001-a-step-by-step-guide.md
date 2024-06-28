@@ -368,4 +368,4 @@ By following these steps, you will have successfully set up a Twitch developer a
 
 #### Walkthrough video
 
-{{<youtube >}}
+{{<youtube XVhkqvqN_bI>}}
