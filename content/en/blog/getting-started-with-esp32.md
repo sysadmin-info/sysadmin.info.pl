@@ -147,6 +147,7 @@ After installing Arduino IDE and connecting ESP32, the next steps are:
 3. Configuring Arduino IDE:
    - Select the appropriate ESP32 model in Tools > Board > esp32 > AI Thinker ESP32-CAM from the Arduino IDE menus.
    - Select the correct port in Tools > Port
+   - Select proper frequency - see crystal freq. Usually 80 or 40 MHz
 
 4. Testing the connection:
    - Open an example sketch: File > Examples > WiFi > WiFiScan
