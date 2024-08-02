@@ -2,7 +2,7 @@
 title: Getting started with ESP32 in Debian 12 - a step-by-step guide
 date: 2024-08-02T11:50:00+00:00
 description: Getting started with ESP32 in Debian 12 - a step-by-step guide
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
@@ -63,6 +63,7 @@ If you're unsure, you can disconnect and reconnect the ESP32, observing which po
    Open a terminal and type:
 
    ```bash
+   USER=your_username
    mkdir /home/$USER/backup
    sudo /home/$USER/esptool/bin/python3.11 /home/$USER/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud 115200 --before default_reset --after hard_reset read_flash 0 0x400000 ~/backup/flash_content.bin
    ```
@@ -160,3 +161,7 @@ After installing Arduino IDE and connecting ESP32, the next steps are:
    - Open Tools > Serial Monitor
    - Set baud to 115200
    - Observe the result of the code
+
+#### Walkthrough video
+
+{{<youtube jmiKZUIE_EM>}}
