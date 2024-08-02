@@ -1,6 +1,6 @@
 ---
 title: Getting started with ESP32 - a step-by-step guide
-date: 2024-07-19T11:50:00+00:00
+date: 2024-08-02T11:50:00+00:00
 description: Getting started with ESP32 - a step-by-step guide
 draft: true
 hideToc: false
@@ -89,21 +89,13 @@ Remember that the port name may vary depending on the driver and operating syste
    Open a terminal and type:
 
    ```bash
-   mkdir /home/adrian/backup
-   sudo /home/adrian/esptool/bin/python3.11 /home/adrian/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud 115200 --before default_reset --after hard_reset read_flash 0 0x400000 ~/backup/flash_content.bin
+   mkdir /home/$USER/backup
+   sudo /home/$USER/esptool/bin/python3.11 /home/$USER/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud 115200 --before default_reset --after hard_reset read_flash 0 0x400000 ~/backup/flash_content.bin
    ```
 
 Note: Change `/dev/ttyUSB0` to the appropriate port for your system.
 
 4.This command will create a `flash_contents.bin` file, which will contain a copy of the entire ESP32 flash memory.
-
-5.Also save the partition information:
-
-   ```bash
-   sudo /home/adrian/esptool/bin/python3.11 /home/adrian/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud 115200 ~/backup/partition_table
-   ```
-
-6.Save the output of this command to know how the memory is divided.
 
 A few notes:
 
@@ -115,7 +107,7 @@ To restore this copy later:
 
 ```bash
 sudo chmod a+rw /dev/ttyUSB0
-sudo /home/adrian/esptool/bin/python3.11 /home/adrian/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash 0 ~/backup/flash_contents.bin
+sudo /home/$USER/esptool/bin/python3.11 /home/$USER/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud 115200 write_flash 0 ~/backup/flash_contents.bin
 ```
 
 Remember that this copy contains everything in the flash memory, including the bootloader, partitions, and application.
