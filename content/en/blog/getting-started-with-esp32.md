@@ -14,7 +14,7 @@ series:
 - ESP32
 categories:
 - ESP32
-image: images/2024-thumbs/esp32webp
+image: images/2024-thumbs/esp32.webp
 ---
 
 To connect ESP32 to your computer, you will need to follow these steps:
