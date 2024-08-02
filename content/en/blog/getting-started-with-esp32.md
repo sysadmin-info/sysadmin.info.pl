@@ -1,7 +1,7 @@
 ---
-title: Getting started with ESP32 - a step-by-step guide
+title: Getting started with ESP32 in Debian 12 - a step-by-step guide
 date: 2024-08-02T11:50:00+00:00
-description: Getting started with ESP32 - a step-by-step guide
+description: Getting started with ESP32 in Debian 12 - a step-by-step guide
 draft: true
 hideToc: false
 enableToc: true
@@ -17,7 +17,7 @@ categories:
 image: images/2024-thumbs/esp32.webp
 ---
 
-To connect ESP32 to your computer, you will need to follow these steps:
+To connect ESP32 to your computer with Linux Debian 12, you will need to follow these steps:
 
 1. USB Cable: You need a USB to micro-USB or USB-C cable, depending on the port type in your ESP32.
 2. Drivers: Most modern operating systems automatically recognize ESP32, but you may need to install CP210x USB to UART Bridge VCP drivers.
@@ -25,8 +25,6 @@ To connect ESP32 to your computer, you will need to follow these steps:
    - Connect the USB cable to the ESP32.
    - Connect the other end of the cable to a USB port on your computer.
 4. Checking the connection:
-   - On Windows, check the Device Manager.
-   - On macOS, use the command "ls /dev/cu.*" in the terminal.
    - On Linux, use the command "ls /dev/tty*" in the terminal.
 You should see a new serial device.
 5. Software: For programming ESP32, you can use Arduino IDE or the ESP-IDF platform.
@@ -58,31 +56,7 @@ How do I know which port to use?
 - Compare the results - the new port that appeared is probably your ESP32
 - It will usually be something like `/dev/ttyUSB0` or `/dev/ttyACM0`
 
-**On Windows:**
-
-- Open Device Manager
-- Expand the "Ports (COM & LPT)" section
-- Connect the ESP32 to your computer
-- A new port should appear, usually labeled as "Silicon Labs CP210x USB to UART Bridge" or similar
-- Remember the COM port number (e.g., COM3, COM4, etc.)
-
-**On macOS:**
-
-- Open Terminal
-- Type: `ls /dev/cu.*`
-- Connect the ESP32
-- Type again: `ls /dev/cu.*`
-- The new port is probably your ESP32, usually in the form of `/dev/cu.SLAB_USBtoUART` or similar
-
-**In Arduino IDE:**
-
-- Connect the ESP32
-- Go to "Tools" > "Port"
-- You should see a new port in the list
-
 If you're unsure, you can disconnect and reconnect the ESP32, observing which port disappears and reappears on the list.
-
-Remember that the port name may vary depending on the driver and operating system. If you're still having trouble identifying the port, let me know, and I'll help you in more detail.
 
 3.Perform the backup:
 
@@ -101,7 +75,7 @@ A few notes:
 
 - Make sure you have enough disk space (the file will be about 4MB).
 - The process may take a few minutes.
-- If you encounter connection problems, you may need to hold down the BOOT button when starting the process.
+- If you encounter connection problems, you may need to repeat the command to perform a backup.
 
 To restore this copy later:
 
@@ -180,3 +154,8 @@ After installing Arduino IDE and connecting ESP32, the next steps are:
 
 5. Programming:
    - Now you can start writing your own programs or modify existing examples
+
+6. Testing application/code
+   - Open Tools > Serial Monitor
+   - Set baud to 115200
+   - Observe the result of the code
