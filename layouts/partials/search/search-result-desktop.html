@@ -1,4 +1,4 @@
-<div class="search-result" data-display="none">
+<div id="search-result" class="search-result" data-display="none">
   <div class="search-result__header">
     <div class="search-result__close" data-dir="{{ if or (ne ($.Param "languagedir") "rtl") (eq ($.Param "sidebarPosition") "left") }}ltr{{ else }}rtl{{ end }}">
       {{ partial "svgs/etc/cancel.svg" (dict "width" 28 "height" 28) }}
