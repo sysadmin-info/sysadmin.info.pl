@@ -32,7 +32,8 @@
         </div>
         {{ partial "body/main-right" . }}
     </div>
-    <script src="/js/search.js"></script>
+    {{ $searchJs := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $searchJs.RelPermalink }}"></script>
 </body>
 
 </html>
