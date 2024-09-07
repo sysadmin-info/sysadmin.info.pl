@@ -1,3 +1,498 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Categories on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title><link>https://sysadmin.info.pl/pl/categories/</link><description>Recent content in Categories on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description><generator>Hugo -- gohugo.io</generator><language>pl</language><copyright>©2024,<a href="https://sysadmin.info.pl/" target="_blank" rel="nofollow noopener noreferrer"><span>
-sysadmin</span></a>
-- All rights reserved</copyright><lastBuildDate>Fri, 02 Aug 2024 11:50:00 +0000</lastBuildDate><sy:updatePeriod>daily</sy:updatePeriod><sy:updateFrequency>1</sy:updateFrequency><atom:link href="https://sysadmin.info.pl/pl/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>ESP32</title><link>https://sysadmin.info.pl/pl/categories/esp32/</link><pubDate>Fri, 02 Aug 2024 11:50:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/esp32/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Home Assistant</title><link>https://sysadmin.info.pl/pl/categories/home-assistant/</link><pubDate>Fri, 28 Jun 2024 18:14:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/home-assistant/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>GitLab</title><link>https://sysadmin.info.pl/pl/categories/gitlab/</link><pubDate>Thu, 27 Jun 2024 18:10:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/gitlab/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Gauge</title><link>https://sysadmin.info.pl/pl/categories/gauge/</link><pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/gauge/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Node.js</title><link>https://sysadmin.info.pl/pl/categories/node.js/</link><pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/node.js/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>npm</title><link>https://sysadmin.info.pl/pl/categories/npm/</link><pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/npm/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Taiko</title><link>https://sysadmin.info.pl/pl/categories/taiko/</link><pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/taiko/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Linux</title><link>https://sysadmin.info.pl/pl/categories/linux/</link><pubDate>Fri, 26 Apr 2024 13:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/linux/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Ansible</title><link>https://sysadmin.info.pl/pl/categories/ansible/</link><pubDate>Tue, 19 Mar 2024 01:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/ansible/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Raspberry Pi</title><link>https://sysadmin.info.pl/pl/categories/raspberry-pi/</link><pubDate>Fri, 12 Jan 2024 21:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/raspberry-pi/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>general</title><link>https://sysadmin.info.pl/pl/categories/general/</link><pubDate>Wed, 06 Dec 2023 13:40:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/general/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>OpenShift</title><link>https://sysadmin.info.pl/pl/categories/openshift/</link><pubDate>Sun, 19 Nov 2023 16:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/openshift/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Docker</title><link>https://sysadmin.info.pl/pl/categories/docker/</link><pubDate>Tue, 11 Jul 2023 20:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/docker/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Jenkins</title><link>https://sysadmin.info.pl/pl/categories/jenkins/</link><pubDate>Tue, 11 Jul 2023 20:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/jenkins/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Filmy dokumentalne</title><link>https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/</link><pubDate>Thu, 06 Jul 2023 08:30:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>AI</title><link>https://sysadmin.info.pl/pl/categories/ai/</link><pubDate>Wed, 14 Jun 2023 22:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/ai/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>copilot</title><link>https://sysadmin.info.pl/pl/categories/copilot/</link><pubDate>Sat, 03 Jun 2023 10:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/copilot/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>openAI</title><link>https://sysadmin.info.pl/pl/categories/openai/</link><pubDate>Wed, 31 May 2023 20:00:00 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/openai/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>RHCSA</title><link>https://sysadmin.info.pl/pl/categories/rhcsa/</link><pubDate>Sat, 01 Apr 2023 14:50:34 +0200</pubDate><guid>https://sysadmin.info.pl/pl/categories/rhcsa/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Qemu KVM</title><link>https://sysadmin.info.pl/pl/categories/qemu-kvm/</link><pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/qemu-kvm/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>OpenvSwitch</title><link>https://sysadmin.info.pl/pl/categories/openvswitch/</link><pubDate>Sat, 15 Oct 2022 14:36:56 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/openvswitch/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>IT Security</title><link>https://sysadmin.info.pl/pl/categories/it-security/</link><pubDate>Sun, 02 Oct 2022 09:41:03 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/it-security/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>Git</title><link>https://sysadmin.info.pl/pl/categories/git/</link><pubDate>Thu, 22 Sep 2022 08:50:49 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/git/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>mikr.us</title><link>https://sysadmin.info.pl/pl/categories/mikr.us/</link><pubDate>Sat, 03 Oct 2020 15:58:03 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/mikr.us/</guid><description/><dc:creator>sysadmin</dc:creator></item><item><title>WordPress</title><link>https://sysadmin.info.pl/pl/categories/wordpress/</link><pubDate>Sun, 22 Sep 2019 17:34:27 +0000</pubDate><guid>https://sysadmin.info.pl/pl/categories/wordpress/</guid><description/><dc:creator>sysadmin</dc:creator></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Categories on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/categories/</link>
+    <description>Recent content in Categories on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Fri, 02 Aug 2024 11:50:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>ESP32</title>
+        <link>https://sysadmin.info.pl/pl/categories/esp32/</link>
+        <pubDate>Fri, 02 Aug 2024 11:50:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/esp32/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Home Assistant</title>
+        <link>https://sysadmin.info.pl/pl/categories/home-assistant/</link>
+        <pubDate>Fri, 28 Jun 2024 18:14:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/home-assistant/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>GitLab</title>
+        <link>https://sysadmin.info.pl/pl/categories/gitlab/</link>
+        <pubDate>Thu, 27 Jun 2024 18:10:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/gitlab/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Gauge</title>
+        <link>https://sysadmin.info.pl/pl/categories/gauge/</link>
+        <pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/gauge/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Node.js</title>
+        <link>https://sysadmin.info.pl/pl/categories/node.js/</link>
+        <pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/node.js/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>npm</title>
+        <link>https://sysadmin.info.pl/pl/categories/npm/</link>
+        <pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/npm/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Taiko</title>
+        <link>https://sysadmin.info.pl/pl/categories/taiko/</link>
+        <pubDate>Fri, 31 May 2024 12:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/taiko/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Linux</title>
+        <link>https://sysadmin.info.pl/pl/categories/linux/</link>
+        <pubDate>Fri, 26 Apr 2024 13:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/linux/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Ansible</title>
+        <link>https://sysadmin.info.pl/pl/categories/ansible/</link>
+        <pubDate>Tue, 19 Mar 2024 01:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/ansible/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Raspberry Pi</title>
+        <link>https://sysadmin.info.pl/pl/categories/raspberry-pi/</link>
+        <pubDate>Fri, 12 Jan 2024 21:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/raspberry-pi/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>general</title>
+        <link>https://sysadmin.info.pl/pl/categories/general/</link>
+        <pubDate>Wed, 06 Dec 2023 13:40:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/general/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>OpenShift</title>
+        <link>https://sysadmin.info.pl/pl/categories/openshift/</link>
+        <pubDate>Sun, 19 Nov 2023 16:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/openshift/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Docker</title>
+        <link>https://sysadmin.info.pl/pl/categories/docker/</link>
+        <pubDate>Tue, 11 Jul 2023 20:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/docker/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Jenkins</title>
+        <link>https://sysadmin.info.pl/pl/categories/jenkins/</link>
+        <pubDate>Tue, 11 Jul 2023 20:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/jenkins/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Filmy dokumentalne</title>
+        <link>https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/</link>
+        <pubDate>Thu, 06 Jul 2023 08:30:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>AI</title>
+        <link>https://sysadmin.info.pl/pl/categories/ai/</link>
+        <pubDate>Wed, 14 Jun 2023 22:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/ai/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>copilot</title>
+        <link>https://sysadmin.info.pl/pl/categories/copilot/</link>
+        <pubDate>Sat, 03 Jun 2023 10:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/copilot/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>openAI</title>
+        <link>https://sysadmin.info.pl/pl/categories/openai/</link>
+        <pubDate>Wed, 31 May 2023 20:00:00 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/openai/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>RHCSA</title>
+        <link>https://sysadmin.info.pl/pl/categories/rhcsa/</link>
+        <pubDate>Sat, 01 Apr 2023 14:50:34 +0200</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/rhcsa/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Qemu KVM</title>
+        <link>https://sysadmin.info.pl/pl/categories/qemu-kvm/</link>
+        <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/qemu-kvm/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>OpenvSwitch</title>
+        <link>https://sysadmin.info.pl/pl/categories/openvswitch/</link>
+        <pubDate>Sat, 15 Oct 2022 14:36:56 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/openvswitch/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>IT Security</title>
+        <link>https://sysadmin.info.pl/pl/categories/it-security/</link>
+        <pubDate>Sun, 02 Oct 2022 09:41:03 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/it-security/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Git</title>
+        <link>https://sysadmin.info.pl/pl/categories/git/</link>
+        <pubDate>Thu, 22 Sep 2022 08:50:49 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/git/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>mikr.us</title>
+        <link>https://sysadmin.info.pl/pl/categories/mikr.us/</link>
+        <pubDate>Sat, 03 Oct 2020 15:58:03 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/mikr.us/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>WordPress</title>
+        <link>https://sysadmin.info.pl/pl/categories/wordpress/</link>
+        <pubDate>Sun, 22 Sep 2019 17:34:27 +0000</pubDate>
+        
+        
+        <guid>https://sysadmin.info.pl/pl/categories/wordpress/</guid>
+        <description></description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

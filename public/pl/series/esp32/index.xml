@@ -1,221 +1,325 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>ESP32 on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title><link>https://sysadmin.info.pl/pl/series/esp32/</link><description>Recent content in ESP32 on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description><generator>Hugo -- gohugo.io</generator><language>pl</language><copyright>©2024,<a href="https://sysadmin.info.pl/" target="_blank" rel="nofollow noopener noreferrer"><span>
-sysadmin</span></a>
-- All rights reserved</copyright><lastBuildDate>Fri, 02 Aug 2024 11:50:00 +0000</lastBuildDate><sy:updatePeriod>daily</sy:updatePeriod><sy:updateFrequency>1</sy:updateFrequency><atom:link href="https://sysadmin.info.pl/pl/series/esp32/index.xml" rel="self" type="application/rss+xml"/><item><title>Jak zacząć pracę z ESP32 w Debian 12 - krok po kroku</title><link>https://sysadmin.info.pl/pl/blog/jak-zaczac-prace-z-esp32/</link><pubDate>Fri, 02 Aug 2024 11:50:00 +0000</pubDate><atom:modified>Fri, 02 Aug 2024 11:50:00 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/jak-zaczac-prace-z-esp32/</guid><description>&lt;p>Aby podłączyć ESP32 do komputera z systemem Linux Debian 12, należy wykonać następujące kroki:&lt;/p>
-&lt;ol>
-&lt;li>Kabel USB: Potrzebujesz kabla USB do micro-USB lub USB-C, w zależności od typu portu w ESP32.&lt;/li>
-&lt;li>Sterowniki: Większość nowoczesnych systemów operacyjnych automatycznie rozpoznaje ESP32, ale może być konieczne zainstalowanie sterowników CP210x USB to UART Bridge VCP.&lt;/li>
-&lt;li>Połączenie:
-&lt;ul>
-&lt;li>Podłącz kabel USB do ESP32.&lt;/li>
-&lt;li>Podłącz drugi koniec kabla do portu USB w komputerze.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Sprawdzanie połączenia:
-&lt;ul>
-&lt;li>W systemie Linux użyj polecenia &amp;ldquo;ls /dev/tty*&amp;rdquo; w terminalu.&lt;br />
-Powinieneś zobaczyć nowe urządzenie szeregowe.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Oprogramowanie: Do programowania ESP32 możesz użyć Arduino IDE lub platformy ESP-IDF.&lt;/li>
-&lt;/ol>
-&lt;h4 id="kopia-zapasowa">Kopia zapasowa&lt;/h4>
-&lt;p>Wykonanie kopii zapasowej zawartości fabrycznej ESP32 jest dobrym pomysłem, zwłaszcza przed wprowadzeniem własnych zmian. Oto jak to zrobić:&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>Zainstaluj esptool:&lt;/p>
-&lt;p>Jeśli jeszcze go nie masz, zainstaluj esptool. Możesz to zrobić za pomocą pip:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install python3-pip python3.11-venv python3-wxgtk4.0 python3-full
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir esptool
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">python3 -m venv ~/esptool/
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~/esptool/bin/python3.11 ~/esptool/bin/pip install esptool
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>Podłącz ESP32 do komputera za pomocą USB.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>Skąd mam wiedzieć, którego portu użyć?&lt;/p>
-&lt;p>&lt;strong>W systemie Linux:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Otwórz terminal i wpisz: &lt;code>ls /dev/tty*&lt;/code>&lt;/li>
-&lt;li>Podłącz ESP32 do komputera&lt;/li>
-&lt;li>Wpisz ponownie: &lt;code>ls /dev/tty*&lt;/code>&lt;/li>
-&lt;li>Porównaj wyniki - nowy port, który się pojawił, to prawdopodobnie twoje ESP32&lt;/li>
-&lt;li>Zazwyczaj będzie to coś w rodzaju &lt;code>/dev/ttyUSB0&lt;/code> lub &lt;code>/dev/ttyACM0&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>Jeśli nie jesteś pewien, możesz odłączyć i ponownie podłączyć ESP32, obserwując, który port znika i pojawia się na liście.&lt;/p>
-&lt;ol start="3">
-&lt;li>
-&lt;p>Wykonaj kopię zapasową:&lt;/p>
-&lt;p>Otwórz terminal i wpisz:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">USER&lt;/span>&lt;span class="o">=&lt;/span>twoja_nazwa_użytkownika
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir /home/&lt;span class="nv">$USER&lt;/span>/backup
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo /home/&lt;span class="nv">$USER&lt;/span>/esptool/bin/python3.11 /home/&lt;span class="nv">$USER&lt;/span>/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud &lt;span class="m">115200&lt;/span> --before default_reset --after hard_reset read_flash &lt;span class="m">0&lt;/span> 0x400000 ~/backup/flash_content.bin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ol>
-&lt;p>Uwaga: Zmień &lt;code>/dev/ttyUSB0&lt;/code> na odpowiedni port dla twojego systemu.&lt;/p>
-&lt;ol start="4">
-&lt;li>To polecenie utworzy plik &lt;code>flash_contents.bin&lt;/code>, który będzie zawierał kopię całej pamięci flash ESP32.&lt;/li>
-&lt;/ol>
-&lt;p>Kilka uwag:&lt;/p>
-&lt;ul>
-&lt;li>Upewnij się, że masz wystarczająco dużo miejsca na dysku (plik będzie miał około 4MB).&lt;/li>
-&lt;li>Proces może potrwać kilka minut.&lt;/li>
-&lt;li>Jeśli napotkasz problemy z połączeniem, może być konieczne powtórzenie polecenia, aby wykonać kopię zapasową.&lt;/li>
-&lt;/ul>
-&lt;p>Aby później przywrócić tę kopię:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chmod a+rw /dev/ttyUSB0
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo /home/&lt;span class="nv">$USER&lt;/span>/esptool/bin/python3.11 /home/&lt;span class="nv">$USER&lt;/span>/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud &lt;span class="m">115200&lt;/span> write_flash &lt;span class="m">0&lt;/span> ~/backup/flash_contents.bin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Pamiętaj, że ta kopia zawiera wszystko w pamięci flash, w tym bootloader, partycje i aplikację.&lt;/p>
-&lt;h4 id="instalacja-arduino-ide">Instalacja Arduino IDE&lt;/h4>
-&lt;p>Aby zainstalować Arduino IDE w systemie Linux, możesz użyć jednej z dwóch głównych metod:&lt;/p>
-&lt;ol>
-&lt;li>Instalacja za pomocą menedżera pakietów (łatwiejsza, ale może nie być to najnowsza wersja):&lt;/li>
-&lt;/ol>
-&lt;p>Otwórz terminal i wpisz:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get update
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get install arduino
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Ta metoda działa na systemach opartych na Debianie/Ubuntu. Dla innych dystrybucji polecenie może się różnić.&lt;/p>
-&lt;ol start="2">
-&lt;li>Instalacja z oficjalnej strony Arduino (najnowsza wersja):&lt;br />
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>ESP32 on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/series/esp32/</link>
+    <description>Recent content in ESP32 on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Fri, 02 Aug 2024 11:50:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/series/esp32/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Jak zacząć pracę z ESP32 w Debian 12 - krok po kroku</title>
+        <link>https://sysadmin.info.pl/pl/blog/jak-zaczac-prace-z-esp32/</link>
+        <pubDate>Fri, 02 Aug 2024 11:50:00 +0000</pubDate>
+        
+        <atom:modified>Fri, 02 Aug 2024 11:50:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/jak-zaczac-prace-z-esp32/</guid>
+        <description>&lt;p&gt;Aby podłączyć ESP32 do komputera z systemem Linux Debian 12, należy wykonać następujące kroki:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Kabel USB: Potrzebujesz kabla USB do micro-USB lub USB-C, w zależności od typu portu w ESP32.&lt;/li&gt;
+&lt;li&gt;Sterowniki: Większość nowoczesnych systemów operacyjnych automatycznie rozpoznaje ESP32, ale może być konieczne zainstalowanie sterowników CP210x USB to UART Bridge VCP.&lt;/li&gt;
+&lt;li&gt;Połączenie:
+&lt;ul&gt;
+&lt;li&gt;Podłącz kabel USB do ESP32.&lt;/li&gt;
+&lt;li&gt;Podłącz drugi koniec kabla do portu USB w komputerze.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sprawdzanie połączenia:
+&lt;ul&gt;
+&lt;li&gt;W systemie Linux użyj polecenia &amp;ldquo;ls /dev/tty*&amp;rdquo; w terminalu.&lt;br /&gt;
+Powinieneś zobaczyć nowe urządzenie szeregowe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Oprogramowanie: Do programowania ESP32 możesz użyć Arduino IDE lub platformy ESP-IDF.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;kopia-zapasowa&#34;&gt;Kopia zapasowa&lt;/h4&gt;
+&lt;p&gt;Wykonanie kopii zapasowej zawartości fabrycznej ESP32 jest dobrym pomysłem, zwłaszcza przed wprowadzeniem własnych zmian. Oto jak to zrobić:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Zainstaluj esptool:&lt;/p&gt;
+&lt;p&gt;Jeśli jeszcze go nie masz, zainstaluj esptool. Możesz to zrobić za pomocą pip:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install python3-pip python3.11-venv python3-wxgtk4.0 python3-full
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir esptool
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 -m venv ~/esptool/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;~/esptool/bin/python3.11 ~/esptool/bin/pip install esptool
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Podłącz ESP32 do komputera za pomocą USB.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Skąd mam wiedzieć, którego portu użyć?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;W systemie Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Otwórz terminal i wpisz: &lt;code&gt;ls /dev/tty*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Podłącz ESP32 do komputera&lt;/li&gt;
+&lt;li&gt;Wpisz ponownie: &lt;code&gt;ls /dev/tty*&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Porównaj wyniki - nowy port, który się pojawił, to prawdopodobnie twoje ESP32&lt;/li&gt;
+&lt;li&gt;Zazwyczaj będzie to coś w rodzaju &lt;code&gt;/dev/ttyUSB0&lt;/code&gt; lub &lt;code&gt;/dev/ttyACM0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jeśli nie jesteś pewien, możesz odłączyć i ponownie podłączyć ESP32, obserwując, który port znika i pojawia się na liście.&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Wykonaj kopię zapasową:&lt;/p&gt;
+&lt;p&gt;Otwórz terminal i wpisz:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;USER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;twoja_nazwa_użytkownika
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir /home/&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;/backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo /home/&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;/esptool/bin/python3.11 /home/&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud &lt;span class=&#34;m&#34;&gt;115200&lt;/span&gt; --before default_reset --after hard_reset read_flash &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 0x400000 ~/backup/flash_content.bin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Uwaga: Zmień &lt;code&gt;/dev/ttyUSB0&lt;/code&gt; na odpowiedni port dla twojego systemu.&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;To polecenie utworzy plik &lt;code&gt;flash_contents.bin&lt;/code&gt;, który będzie zawierał kopię całej pamięci flash ESP32.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Kilka uwag:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Upewnij się, że masz wystarczająco dużo miejsca na dysku (plik będzie miał około 4MB).&lt;/li&gt;
+&lt;li&gt;Proces może potrwać kilka minut.&lt;/li&gt;
+&lt;li&gt;Jeśli napotkasz problemy z połączeniem, może być konieczne powtórzenie polecenia, aby wykonać kopię zapasową.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Aby później przywrócić tę kopię:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod a+rw /dev/ttyUSB0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo /home/&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;/esptool/bin/python3.11 /home/&lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;/esptool/bin/esptool.py --port /dev/ttyUSB0 --baud &lt;span class=&#34;m&#34;&gt;115200&lt;/span&gt; write_flash &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; ~/backup/flash_contents.bin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Pamiętaj, że ta kopia zawiera wszystko w pamięci flash, w tym bootloader, partycje i aplikację.&lt;/p&gt;
+&lt;h4 id=&#34;instalacja-arduino-ide&#34;&gt;Instalacja Arduino IDE&lt;/h4&gt;
+&lt;p&gt;Aby zainstalować Arduino IDE w systemie Linux, możesz użyć jednej z dwóch głównych metod:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Instalacja za pomocą menedżera pakietów (łatwiejsza, ale może nie być to najnowsza wersja):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Otwórz terminal i wpisz:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install arduino
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Ta metoda działa na systemach opartych na Debianie/Ubuntu. Dla innych dystrybucji polecenie może się różnić.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Instalacja z oficjalnej strony Arduino (najnowsza wersja):&lt;br /&gt;
 a) Przejdź na stronę &lt;a
-href = "https://www.arduino.cc/en/software"
-target = "_blank"
-rel = "nofollow noopener noreferrer"
->
-&lt;span>
-https://www.arduino.cc/en/software
-&lt;/span>
-&lt;/a>
-&lt;br />
-b) Pobierz wersję dla systemu Linux (64-bitową lub 32-bitową, w zależności od twojego systemu)&lt;br />
-c) Rozpakuj pobrany plik .tar.xz&lt;br />
-d) Otwórz terminal w folderze, w którym rozpakowałeś pliki&lt;br />
-e) Uruchom skrypt instalacyjny:&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">./install.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Po zainstalowaniu możesz uruchomić Arduino IDE z menu aplikacji lub wpisując &lt;code>arduino&lt;/code> w terminalu.&lt;/p>
-&lt;p>Dodatkowo, aby używać Arduino IDE bez uprawnień root, musisz dodać swojego użytkownika do grupy dialout:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo usermod -a -G dialout &lt;span class="nv">$USER&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Upewnij się również, że możesz pisać do urządzenia:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo chmod a+rw /dev/ttyUSB0
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Po wykonaniu tego polecenia konieczne będzie ponowne uruchomienie systemu lub wylogowanie i ponowne zalogowanie.&lt;/p>
-&lt;p>Po zainstalowaniu Arduino IDE i podłączeniu ESP32, kolejne kroki to:&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>Dodanie wsparcia dla ESP32 w Arduino IDE:&lt;/p>
-&lt;ul>
-&lt;li>Otwórz Arduino IDE&lt;/li>
-&lt;li>Przejdź do File &amp;gt; Preferences&lt;/li>
-&lt;li>W polu &amp;ldquo;Additional Boards Manager URLs&amp;rdquo; dodaj:&lt;br />
-&lt;code>https://espressif.github.io/arduino-esp32/package_esp32_index.json&lt;/code>&lt;/li>
-&lt;li>Kliknij OK&lt;/li>
-&lt;/ul>
-&lt;p>Zobacz dokumentację: &lt;a
-href = "https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html"
-target = "_blank"
-rel = "nofollow noopener noreferrer"
->
-&lt;span>
-https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html
-&lt;/span>
-&lt;/a>
-&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Instalacja płytki ESP32:&lt;/p>
-&lt;ul>
-&lt;li>Przejdź do Tools &amp;gt; Board &amp;gt; Boards Manager&lt;/li>
-&lt;li>Wyszukaj &amp;ldquo;ESP32&amp;rdquo;&lt;/li>
-&lt;li>Zainstaluj &amp;ldquo;ESP32 by Espressif Systems&amp;rdquo;&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Konfiguracja Arduino IDE:&lt;/p>
-&lt;ul>
-&lt;li>Wybierz odpowiedni model ESP32 w Tools &amp;gt; Board &amp;gt; esp32 &amp;gt; AI Thinker ESP32-CAM z menu Arduino IDE.&lt;/li>
-&lt;li>Wybierz właściwy port w Tools &amp;gt; Port&lt;/li>
-&lt;li>Wybierz odpowiednią częstotliwość - zobacz częstotliwość kryształu. Zwykle 80 lub 40 MHz&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Testowanie połączenia:&lt;/p>
-&lt;ul>
-&lt;li>Otwórz przykładowy szkic: File &amp;gt; Examples &amp;gt; WiFi &amp;gt; WiFiScan&lt;/li>
-&lt;li>Kliknij przycisk &amp;ldquo;Upload&amp;rdquo;, aby skompilować i wgrać program&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Programowanie:&lt;/p>
-&lt;ul>
-&lt;li>Teraz możesz zacząć pisać własne programy lub modyfikować istniejące przykłady&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Testowanie aplikacji/kodu&lt;/p>
-&lt;ul>
-&lt;li>Otwórz Tools &amp;gt; Serial Monitor&lt;/li>
-&lt;li>Ustaw baud na 115200&lt;/li>
-&lt;li>Obserwuj wynik kodu&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;h4 id="film-instruktażowy">Film instruktażowy&lt;/h4>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/jmiKZUIE_EM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2024-thumbs/esp32.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>ESP32</category><category>ESP32</category></item></channel></rss>
+
+	
+	
+		href = &#34;https://www.arduino.cc/en/software&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.arduino.cc/en/software
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;br /&gt;
+b) Pobierz wersję dla systemu Linux (64-bitową lub 32-bitową, w zależności od twojego systemu)&lt;br /&gt;
+c) Rozpakuj pobrany plik .tar.xz&lt;br /&gt;
+d) Otwórz terminal w folderze, w którym rozpakowałeś pliki&lt;br /&gt;
+e) Uruchom skrypt instalacyjny:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Po zainstalowaniu możesz uruchomić Arduino IDE z menu aplikacji lub wpisując &lt;code&gt;arduino&lt;/code&gt; w terminalu.&lt;/p&gt;
+&lt;p&gt;Dodatkowo, aby używać Arduino IDE bez uprawnień root, musisz dodać swojego użytkownika do grupy dialout:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -a -G dialout &lt;span class=&#34;nv&#34;&gt;$USER&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Upewnij się również, że możesz pisać do urządzenia:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod a+rw /dev/ttyUSB0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Po wykonaniu tego polecenia konieczne będzie ponowne uruchomienie systemu lub wylogowanie i ponowne zalogowanie.&lt;/p&gt;
+&lt;p&gt;Po zainstalowaniu Arduino IDE i podłączeniu ESP32, kolejne kroki to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Dodanie wsparcia dla ESP32 w Arduino IDE:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Otwórz Arduino IDE&lt;/li&gt;
+&lt;li&gt;Przejdź do File &amp;gt; Preferences&lt;/li&gt;
+&lt;li&gt;W polu &amp;ldquo;Additional Boards Manager URLs&amp;rdquo; dodaj:&lt;br /&gt;
+&lt;code&gt;https://espressif.github.io/arduino-esp32/package_esp32_index.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Kliknij OK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zobacz dokumentację: &lt;a
+
+	
+	
+		href = &#34;https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalacja płytki ESP32:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Przejdź do Tools &amp;gt; Board &amp;gt; Boards Manager&lt;/li&gt;
+&lt;li&gt;Wyszukaj &amp;ldquo;ESP32&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Zainstaluj &amp;ldquo;ESP32 by Espressif Systems&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Konfiguracja Arduino IDE:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wybierz odpowiedni model ESP32 w Tools &amp;gt; Board &amp;gt; esp32 &amp;gt; AI Thinker ESP32-CAM z menu Arduino IDE.&lt;/li&gt;
+&lt;li&gt;Wybierz właściwy port w Tools &amp;gt; Port&lt;/li&gt;
+&lt;li&gt;Wybierz odpowiednią częstotliwość - zobacz częstotliwość kryształu. Zwykle 80 lub 40 MHz&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Testowanie połączenia:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Otwórz przykładowy szkic: File &amp;gt; Examples &amp;gt; WiFi &amp;gt; WiFiScan&lt;/li&gt;
+&lt;li&gt;Kliknij przycisk &amp;ldquo;Upload&amp;rdquo;, aby skompilować i wgrać program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Programowanie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Teraz możesz zacząć pisać własne programy lub modyfikować istniejące przykłady&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Testowanie aplikacji/kodu&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Otwórz Tools &amp;gt; Serial Monitor&lt;/li&gt;
+&lt;li&gt;Ustaw baud na 115200&lt;/li&gt;
+&lt;li&gt;Obserwuj wynik kodu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;film-instruktażowy&#34;&gt;Film instruktażowy&lt;/h4&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/jmiKZUIE_EM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2024-thumbs/esp32.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>ESP32</category>
+            
+          
+        
+        
+          
+            
+              <category>ESP32</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

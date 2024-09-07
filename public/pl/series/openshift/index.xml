@@ -1,218 +1,348 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>OpenShift on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title><link>https://sysadmin.info.pl/pl/series/openshift/</link><description>Recent content in OpenShift on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description><generator>Hugo -- gohugo.io</generator><language>pl</language><copyright>©2024,<a href="https://sysadmin.info.pl/" target="_blank" rel="nofollow noopener noreferrer"><span>
-sysadmin</span></a>
-- All rights reserved</copyright><lastBuildDate>Sun, 19 Nov 2023 16:00:00 +0000</lastBuildDate><sy:updatePeriod>daily</sy:updatePeriod><sy:updateFrequency>1</sy:updateFrequency><atom:link href="https://sysadmin.info.pl/pl/series/openshift/index.xml" rel="self" type="application/rss+xml"/><item><title>Jak zainstalować Red Hat OpenShift CodeReady Containers w systemie Linux</title><link>https://sysadmin.info.pl/pl/blog/jak-zainstalowac-red-hat-openshift-codeready-containers-w-systemie-linux/</link><pubDate>Sun, 19 Nov 2023 16:00:00 +0000</pubDate><atom:modified>Sun, 19 Nov 2023 16:00:00 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/jak-zainstalowac-red-hat-openshift-codeready-containers-w-systemie-linux/</guid><description>&lt;ol>
-&lt;li>&lt;strong>Oto samouczek wideo&lt;/strong>&lt;/li>
-&lt;/ol>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/Sc4O96nh4aw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;p>Skrypty i pliki konfiguracyjne są dostępne &lt;a
-href = "https://github.com/sysadmin-info/openshift"
-target = "_blank"
-rel = "nofollow noopener noreferrer"
->
-&lt;span>
-tutaj:
-&lt;/span>
-&lt;/a>
-&lt;/p>
-&lt;div class="notices info" data-title="Info">
-Proszę pamiętać, że użytkownik, którego używasz do instalacji (ten, który jest obecnie zalogowany przez ssh), musi znajdować się w grupie sudoers.
-&lt;/div>
-&lt;h5 id="wymagania-systemowe">Wymagania systemowe:&lt;/h5>
-&lt;ul>
-&lt;li>4 fizyczne rdzenie CPU lub vCPU&lt;/li>
-&lt;li>9 GB wolnej pamięci RAM, więc maszyna powinna mieć co najmniej 12 GB RAM w sumie&lt;/li>
-&lt;li>35 GB miejsca na dysku&lt;/li>
-&lt;li>AMD64/Intel 64&lt;/li>
-&lt;li>Microsoft Windows 10 (wersja 1709 lub nowsza)&lt;/li>
-&lt;li>MacOS 10.14 Mojave lub nowszy&lt;/li>
-&lt;li>Red Hat Enterprise Linux/CentOS 7.5 lub nowszy&lt;/li>
-&lt;/ul>
-&lt;p>To jest tymczasowa konfiguracja klastra i nie powinieneś przechowywać żadnych ważnych danych ani aplikacji wewnątrz klastra CRC.&lt;/p>
-&lt;ul>
-&lt;li>Przeznaczone do rozwoju i testowania&lt;/li>
-&lt;li>Brak bezpośredniej aktualizacji do nowszej wersji CRC&lt;/li>
-&lt;li>Jednowęzłowy klaster OpenShift (wspólny węzeł główny i roboczy)&lt;/li>
-&lt;li>Domyślnie wyłączony operator monitorowania klastra&lt;/li>
-&lt;li>Uruchamianie jako maszyna wirtualna&lt;/li>
-&lt;/ul>
-&lt;h5 id="procedura-instalacji-openshift">Procedura instalacji OpenShift&lt;/h5>
-&lt;ol>
-&lt;li>Przejdź do: &lt;a
-href = "https://console.redhat.com/openshift"
-target = "_blank"
-rel = "nofollow noopener noreferrer"
->
-&lt;span>
-https://console.redhat.com/openshift
-&lt;/span>
-&lt;/a>
-&lt;/li>
-&lt;li>Zarejestruj konto, jeśli go nie masz.&lt;/li>
-&lt;li>Zaloguj się.&lt;/li>
-&lt;li>Przejdź do zakładki lokalnej.&lt;/li>
-&lt;li>Pobierz CRC i sekret pobierania&lt;/li>
-&lt;li>Prześlij na serwer, na którym chcesz zainstalować OpenShift.&lt;/li>
-&lt;li>Rozpakuj&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">tar xvf crc-linux-amd64.tar.xz
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="7">
-&lt;li>Dodaj zmienną do pliku .bashrc&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;export PATH=$PATH:~/crc-linux-2.29.0-amd64&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.bashrc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="8">
-&lt;li>Wykonaj poniższe polecenie:&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> ~/.bashrc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="9">
-&lt;li>Wpisz&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">crc version
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>aby upewnić się, że plik wykonywalny działa poprawnie&lt;/p>
-&lt;ol start="10">
-&lt;li>Wykonaj poniższe polecenia jeden po drugim, aby zainstalować OpenShift&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">crc setup
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crc config &lt;span class="nb">set&lt;/span> cpus &lt;span class="m">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crc config &lt;span class="nb">set&lt;/span> memory &lt;span class="m">10000&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crc start -p pull-secret
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h5 id="procedura-instalacji-haproxy">Procedura instalacji HAProxy&lt;/h5>
-&lt;div class="notices warning" data-title="Ostrzeżenie">
-Wykonaj tę procedurę tylko w lokalnej sieci. Eksponowanie niezabezpieczonego serwera w Internecie ma wiele implikacji bezpieczeństwa.
-&lt;/div>
-&lt;ol>
-&lt;li>Upewnij się, że klaster pozostaje uruchomiony podczas tej procedury.&lt;/li>
-&lt;li>Zainstaluj pakiet haproxy i inne narzędzia, uruchamiając skrypt haproxy.sh stąd: &lt;a
-href = "https://github.com/sysadmin-info/openshift"
-target = "_blank"
-rel = "nofollow noopener noreferrer"
->
-&lt;span>
-haproxy.sh
-&lt;/span>
-&lt;/a>
-&lt;/li>
-&lt;li>Zmień uprawnienia dla pliku&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">chmod +x haproxy.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="4">
-&lt;li>Uruchom skrypt&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">./haproxy.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="5">
-&lt;li>Dodaj symbol wieloznaczny&lt;/li>
-&lt;/ol>
-&lt;p>w Adguard Home / Pi-Hole dla adresu IP. Zobacz wideo.&lt;br />
-6. Teraz przetestuj klaster za pomocą CLI openshift lub w skrócie oc&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">echo&lt;/span> &lt;span class="s1">&amp;#39;eval $(crc oc-env)&amp;#39;&lt;/span> &amp;gt;&amp;gt; ~/.bashrc
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> ~/.bashrc
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oc login -u kubeadmin https://api.crc.testing:6443
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oc get projects
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oc get nodes
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oc get pods -A
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">oc get all -A
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h5 id="zatrzymanie-usunięcie-i-czyszczenie-openshift">Zatrzymanie, usunięcie i czyszczenie OpenShift&lt;/h5>
-&lt;ol>
-&lt;li>Wykonaj poniższe polecenia jeden po drugim:&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">crc stop
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crc delete
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">crc cleanup
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="2">
-&lt;li>Uruchom poniższe polecenie:&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">chmod +x haproxy-remove.sh
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./haproxy-remove.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Plik znajdziesz tutaj: &lt;a
-href = "https://github.com/sysadmin-info/openshift"
-target = "_blank"
-rel = "nofollow noopener noreferrer"
->
-&lt;span>
-haproxy-remove.sh
-&lt;/span>
-&lt;/a>
-&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2023-thumbs/openshift01.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>OpenShift</category><category>OpenShift</category></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>OpenShift on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/series/openshift/</link>
+    <description>Recent content in OpenShift on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Sun, 19 Nov 2023 16:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/series/openshift/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Jak zainstalować Red Hat OpenShift CodeReady Containers w systemie Linux</title>
+        <link>https://sysadmin.info.pl/pl/blog/jak-zainstalowac-red-hat-openshift-codeready-containers-w-systemie-linux/</link>
+        <pubDate>Sun, 19 Nov 2023 16:00:00 +0000</pubDate>
+        
+        <atom:modified>Sun, 19 Nov 2023 16:00:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/jak-zainstalowac-red-hat-openshift-codeready-containers-w-systemie-linux/</guid>
+        <description>&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Oto samouczek wideo&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Sc4O96nh4aw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Skrypty i pliki konfiguracyjne są dostępne &lt;a
+
+	
+	
+		href = &#34;https://github.com/sysadmin-info/openshift&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		tutaj:
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;div class=&#34;notices info&#34; data-title=&#34;Info&#34;&gt;
+  Proszę pamiętać, że użytkownik, którego używasz do instalacji (ten, który jest obecnie zalogowany przez ssh), musi znajdować się w grupie sudoers.
+&lt;/div&gt;
+&lt;h5 id=&#34;wymagania-systemowe&#34;&gt;Wymagania systemowe:&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;4 fizyczne rdzenie CPU lub vCPU&lt;/li&gt;
+&lt;li&gt;9 GB wolnej pamięci RAM, więc maszyna powinna mieć co najmniej 12 GB RAM w sumie&lt;/li&gt;
+&lt;li&gt;35 GB miejsca na dysku&lt;/li&gt;
+&lt;li&gt;AMD64/Intel 64&lt;/li&gt;
+&lt;li&gt;Microsoft Windows 10 (wersja 1709 lub nowsza)&lt;/li&gt;
+&lt;li&gt;MacOS 10.14 Mojave lub nowszy&lt;/li&gt;
+&lt;li&gt;Red Hat Enterprise Linux/CentOS 7.5 lub nowszy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To jest tymczasowa konfiguracja klastra i nie powinieneś przechowywać żadnych ważnych danych ani aplikacji wewnątrz klastra CRC.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Przeznaczone do rozwoju i testowania&lt;/li&gt;
+&lt;li&gt;Brak bezpośredniej aktualizacji do nowszej wersji CRC&lt;/li&gt;
+&lt;li&gt;Jednowęzłowy klaster OpenShift (wspólny węzeł główny i roboczy)&lt;/li&gt;
+&lt;li&gt;Domyślnie wyłączony operator monitorowania klastra&lt;/li&gt;
+&lt;li&gt;Uruchamianie jako maszyna wirtualna&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;procedura-instalacji-openshift&#34;&gt;Procedura instalacji OpenShift&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;Przejdź do: &lt;a
+
+	
+	
+		href = &#34;https://console.redhat.com/openshift&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://console.redhat.com/openshift
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Zarejestruj konto, jeśli go nie masz.&lt;/li&gt;
+&lt;li&gt;Zaloguj się.&lt;/li&gt;
+&lt;li&gt;Przejdź do zakładki lokalnej.&lt;/li&gt;
+&lt;li&gt;Pobierz CRC i sekret pobierania&lt;/li&gt;
+&lt;li&gt;Prześlij na serwer, na którym chcesz zainstalować OpenShift.&lt;/li&gt;
+&lt;li&gt;Rozpakuj&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar xvf crc-linux-amd64.tar.xz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Dodaj zmienną do pliku .bashrc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=$PATH:~/crc-linux-2.29.0-amd64&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Wykonaj poniższe polecenie:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;Wpisz&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;aby upewnić się, że plik wykonywalny działa poprawnie&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;Wykonaj poniższe polecenia jeden po drugim, aby zainstalować OpenShift&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc setup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc config &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; cpus &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc config &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; memory &lt;span class=&#34;m&#34;&gt;10000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc start -p pull-secret
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id=&#34;procedura-instalacji-haproxy&#34;&gt;Procedura instalacji HAProxy&lt;/h5&gt;
+&lt;div class=&#34;notices warning&#34; data-title=&#34;Ostrzeżenie&#34;&gt;
+  Wykonaj tę procedurę tylko w lokalnej sieci. Eksponowanie niezabezpieczonego serwera w Internecie ma wiele implikacji bezpieczeństwa.
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Upewnij się, że klaster pozostaje uruchomiony podczas tej procedury.&lt;/li&gt;
+&lt;li&gt;Zainstaluj pakiet haproxy i inne narzędzia, uruchamiając skrypt haproxy.sh stąd: &lt;a
+
+	
+	
+		href = &#34;https://github.com/sysadmin-info/openshift&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		haproxy.sh
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Zmień uprawnienia dla pliku&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x haproxy.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Uruchom skrypt&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./haproxy.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Dodaj symbol wieloznaczny&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;w Adguard Home / Pi-Hole dla adresu IP. Zobacz wideo.&lt;br /&gt;
+6. Teraz przetestuj klaster za pomocą CLI openshift lub w skrócie oc&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval $(crc oc-env)&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;oc login -u kubeadmin https://api.crc.testing:6443
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;oc get projects
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;oc get nodes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;oc get pods -A
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;oc get all -A
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h5 id=&#34;zatrzymanie-usunięcie-i-czyszczenie-openshift&#34;&gt;Zatrzymanie, usunięcie i czyszczenie OpenShift&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;Wykonaj poniższe polecenia jeden po drugim:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc delete
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;crc cleanup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Uruchom poniższe polecenie:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x haproxy-remove.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./haproxy-remove.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Plik znajdziesz tutaj: &lt;a
+
+	
+	
+		href = &#34;https://github.com/sysadmin-info/openshift&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		haproxy-remove.sh
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/openshift01.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>OpenShift</category>
+            
+          
+        
+        
+          
+            
+              <category>OpenShift</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

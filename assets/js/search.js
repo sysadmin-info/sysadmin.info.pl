@@ -1,8 +1,10 @@
-// Initialize Lunr.js with data from index.json
+// Get the base URL and language prefix dynamically
+const baseUrl = document.querySelector('html').getAttribute('lang');
 const searchInput = document.getElementById('search');
 const searchResults = document.getElementById('search-result');
 
-fetch('/index.json')
+// Fetch the correct index.json file based on the language
+fetch(`/${baseUrl}/index.json`)
   .then(response => response.json())
   .then(data => {
     const idx = lunr(function () {
