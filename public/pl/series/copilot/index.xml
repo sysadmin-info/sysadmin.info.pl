@@ -1,637 +1,379 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
-  <channel>
-    <title>copilot on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
-    <link>https://sysadmin.info.pl/pl/series/copilot/</link>
-    <description>Recent content in copilot on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pl</language>
-    <copyright>©2024, <a
-
-	
-	
-		href = "https://sysadmin.info.pl/"
-
-		
-
-	
-
-	
-
-		target = "_blank"
-		rel = "nofollow noopener noreferrer"
-
-		>
-	
-	<span>
-		sysadmin
-	</span>
-
-</a>
- - All rights reserved</copyright>
-    <lastBuildDate>Sat, 03 Jun 2023 10:00:00 +0000</lastBuildDate>
-    <sy:updatePeriod>daily</sy:updatePeriod>
-    <sy:updateFrequency>1</sy:updateFrequency>
-    
-        <atom:link href="https://sysadmin.info.pl/pl/series/copilot/index.xml" rel="self" type="application/rss+xml" />
-    
-
-      
-      <item>
-        <title>Jak skompilować vim ze źródła i używać copilot z vim</title>
-        <link>https://sysadmin.info.pl/pl/blog/jak-skompilowac-vim-ze-zrodla-i-uzywac-copilot-z-vim/</link>
-        <pubDate>Sat, 03 Jun 2023 10:00:00 +0000</pubDate>
-        
-        <atom:modified>Sat, 03 Jun 2023 10:00:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/jak-skompilowac-vim-ze-zrodla-i-uzywac-copilot-z-vim/</guid>
-        <description>&lt;p&gt;W tym filmie wyjaśniłem, jak szybciej skompilować vim ze źródła dzięki flagom dla make i jak używać copilot w vim. Zobacz projekt: &lt;a
-
-	
-	
-		href = &#34;https://github.com/github/copilot.vim&#34;
-
-		
-
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		https://github.com/github/copilot.vim
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/aakk18CHm8s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;poradnik&#34;&gt;Poradnik&lt;/h3&gt;
-&lt;p&gt;&lt;a
-
-	
-	
-		href = &#34;/pl/blog/jak-skonfigurowac-copilot-w-vim&#34;
-
-		
-
-	
-
-	&gt;
-	
-	&lt;span&gt;
-		Jak skonfigurować copilot w vim
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/vim-compile-copilot.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>copilot</category>
-            
-          
-        
-        
-          
-            
-              <category>copilot</category>
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Jak korzystać z copilot w vim</title>
-        <link>https://sysadmin.info.pl/pl/blog/jak-korzystac-z-copilot-w-vim/</link>
-        <pubDate>Thu, 01 Jun 2023 17:00:00 +0000</pubDate>
-        
-        <atom:modified>Thu, 01 Jun 2023 17:00:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/jak-korzystac-z-copilot-w-vim/</guid>
-        <description>&lt;p&gt;W tym filmie wyjaśniłem, jak korzystać z copilot w vim. Zobacz projekt: &lt;a
-
-	
-	
-		href = &#34;https://github.com/github/copilot.vim&#34;
-
-		
-
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		https://github.com/github/copilot.vim
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/Ku1nn3xSM6M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/copilot-usage.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>copilot</category>
-            
-          
-        
-        
-          
-            
-              <category>copilot</category>
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Jak skonfigurować copilot w vim</title>
-        <link>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-copilot-w-vim/</link>
-        <pubDate>Thu, 01 Jun 2023 16:00:00 +0000</pubDate>
-        
-        <atom:modified>Thu, 01 Jun 2023 16:00:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-copilot-w-vim/</guid>
-        <description>&lt;p&gt;W tym filmie wyjaśniłem, jak zainstalować odpowiednią wersję nodejs i jak włączyć copilot w vim. Zobacz projekt: &lt;a
-
-	
-	
-		href = &#34;https://github.com/github/copilot.vim&#34;
-
-		
-
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		https://github.com/github/copilot.vim
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/FPpDinGXcAo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;poradnik&#34;&gt;Poradnik&lt;/h3&gt;
-&lt;div class=&#34;notices success&#34; data-title=&#34;Zarządzanie subskrypcją git hub copilot dla twojego osobistego konta&#34;&gt;
-  Zanim zaczniesz korzystać z GitHub Copilot dla Osób Fizycznych, musisz skonfigurować bezpłatną wersję próbną lub subskrypcję. Zobacz poniższy URL:&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>copilot on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title><link>https://sysadmin.info.pl/pl/series/copilot/</link><description>Recent content in copilot on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description><generator>Hugo -- gohugo.io</generator><language>pl</language><copyright>©2024,<a href="https://sysadmin.info.pl/" target="_blank" rel="nofollow noopener noreferrer"><span>
+sysadmin</span></a>
+- All rights reserved</copyright><lastBuildDate>Sat, 03 Jun 2023 10:00:00 +0000</lastBuildDate><sy:updatePeriod>daily</sy:updatePeriod><sy:updateFrequency>1</sy:updateFrequency><atom:link href="https://sysadmin.info.pl/pl/series/copilot/index.xml" rel="self" type="application/rss+xml"/><item><title>Jak skompilować vim ze źródła i używać copilot z vim</title><link>https://sysadmin.info.pl/pl/blog/jak-skompilowac-vim-ze-zrodla-i-uzywac-copilot-z-vim/</link><pubDate>Sat, 03 Jun 2023 10:00:00 +0000</pubDate><atom:modified>Sat, 03 Jun 2023 10:00:00 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/jak-skompilowac-vim-ze-zrodla-i-uzywac-copilot-z-vim/</guid><description>&lt;p>W tym filmie wyjaśniłem, jak szybciej skompilować vim ze źródła dzięki flagom dla make i jak używać copilot w vim. Zobacz projekt: &lt;a
+href = "https://github.com/github/copilot.vim"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+https://github.com/github/copilot.vim
+&lt;/span>
+&lt;/a>
+&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/aakk18CHm8s" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;h3 id="poradnik">Poradnik&lt;/h3>
+&lt;p>&lt;a
+href = "/pl/blog/jak-skonfigurowac-copilot-w-vim"
+>
+&lt;span>
+Jak skonfigurować copilot w vim
+&lt;/span>
+&lt;/a>
+&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2023-thumbs/vim-compile-copilot.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>copilot</category><category>copilot</category></item><item><title>Jak korzystać z copilot w vim</title><link>https://sysadmin.info.pl/pl/blog/jak-korzystac-z-copilot-w-vim/</link><pubDate>Thu, 01 Jun 2023 17:00:00 +0000</pubDate><atom:modified>Thu, 01 Jun 2023 17:00:00 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/jak-korzystac-z-copilot-w-vim/</guid><description>&lt;p>W tym filmie wyjaśniłem, jak korzystać z copilot w vim. Zobacz projekt: &lt;a
+href = "https://github.com/github/copilot.vim"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+https://github.com/github/copilot.vim
+&lt;/span>
+&lt;/a>
+&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/Ku1nn3xSM6M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2023-thumbs/copilot-usage.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>copilot</category><category>copilot</category></item><item><title>Jak skonfigurować copilot w vim</title><link>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-copilot-w-vim/</link><pubDate>Thu, 01 Jun 2023 16:00:00 +0000</pubDate><atom:modified>Thu, 01 Jun 2023 16:00:00 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-copilot-w-vim/</guid><description>&lt;p>W tym filmie wyjaśniłem, jak zainstalować odpowiednią wersję nodejs i jak włączyć copilot w vim. Zobacz projekt: &lt;a
+href = "https://github.com/github/copilot.vim"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+https://github.com/github/copilot.vim
+&lt;/span>
+&lt;/a>
+&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/FPpDinGXcAo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;h3 id="poradnik">Poradnik&lt;/h3>
+&lt;div class="notices success" data-title="Zarządzanie subskrypcją git hub copilot dla twojego osobistego konta">
+Zanim zaczniesz korzystać z GitHub Copilot dla Osób Fizycznych, musisz skonfigurować bezpłatną wersję próbną lub subskrypcję. Zobacz poniższy URL:&lt;br />
 &lt;a
-
-	
-	
-		href = &#34;https://docs.github.com/en/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-personal-account&#34;
-
-		
-
-	
-		
-		title = &#34;Zarządzanie subskrypcją GitHub Copilot dla Twojego osobistego konta&#34;
-	
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		Zarządzanie subskrypcją GitHub Copilot dla Twojego osobistego konta
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/div&gt;
-&lt;h4 id=&#34;zainstaluj-git-jeśli-go-nie-masz&#34;&gt;Zainstaluj git, jeśli go nie masz&lt;/h4&gt;
-
-&lt;div id=&#34;69c38e0c6176ea7a&#34; class=&#34;tab&#34;&gt;
-  &lt;div class=&#34;tab__links&#34;&gt;
-    
-      &lt;button class=&#34;tab__link&#34; aria-label=&#34;Tab link&#34;&gt;SLES&lt;/button&gt;
-    
-      &lt;button class=&#34;tab__link&#34; aria-label=&#34;Tab link&#34;&gt;Debian&lt;/button&gt;
-    
-      &lt;button class=&#34;tab__link&#34; aria-label=&#34;Tab link&#34;&gt;RedHat&lt;/button&gt;
-    
-  &lt;/div&gt;
-  
-  
-&lt;div id=&#34;18f4a93c7125f564&#34; class=&#34;tab__content&#34;&gt;
-  &lt;h5 id=&#34;sles--opensuse-leap-154&#34;&gt;SLES | openSUSE Leap 15.4&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo zypper install git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-  
-&lt;div id=&#34;546d22cb20461c29&#34; class=&#34;tab__content&#34;&gt;
-  &lt;h5 id=&#34;debian&#34;&gt;Debian&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-  
-&lt;div id=&#34;0b2200659b3e7e72&#34; class=&#34;tab__content&#34;&gt;
-  &lt;h5 id=&#34;red-hat&#34;&gt;Red Hat&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script&gt;
-  &#39;use strict&#39;;
-
-  var containerId = JSON.parse(&#34;\&#34;69c38e0c6176ea7a\&#34;&#34;);
-  var containerElem = document.getElementById(containerId);
-  var tabLinks = null;
-  var tabContents = null;
-  var ids = [];
-
-  if (containerElem) {
-    tabLinks = containerElem.querySelectorAll(&#39;.tab__link&#39;);
-    tabContents = containerElem.querySelectorAll(&#39;.tab__content&#39;);
-  }
-
-  for (var i = 0; i &lt; tabContents.length; i++) {
-    ids = ids.concat(tabContents[i].getAttribute(&#39;id&#39;));
-    tabContents[i].style.display = &#39;none&#39;;
-
-    if (0 === parseInt(i, 10) &amp;&amp; !tabContents[i].classList.contains(&#39;active&#39;)) {
-      tabContents[i].classList.add(&#39;active&#39;);
-    }
-  }
-
-  for (var i = 0; i &lt; tabLinks.length; i++) {
-    tabLinks[i].setAttribute(&#39;id&#39;, ids[i]);
-
-    if (0 === parseInt(i, 10) &amp;&amp; !tabLinks[i].classList.contains(&#39;active&#39;)) {
-      tabLinks[i].classList.add(&#39;active&#39;);
-    } else {
-      tabLinks[i].classList.remove(&#39;active&#39;);
-    }
-  }
-
-  if (tabContents.length &gt; 0) {
-    tabContents[0].style.display = &#39;block&#39;;
-  }
-&lt;/script&gt;
-&lt;h4 id=&#34;sprawdź-zainstalowaną-wersję-vima&#34;&gt;Sprawdź zainstalowaną wersję vima&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim -version
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;zainstaluj-vim-900185-lub-nowszy-ze-źródła&#34;&gt;Zainstaluj vim (9.0.0185 lub nowszy) ze źródła&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/vim/vim.git
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/vim/src
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;NB_CORES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;grep -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;^processor&amp;#39;&lt;/span&gt; /proc/cpuinfo&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MAKEFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-j&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;NB_CORES+1&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; -l&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;NB_CORES&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo make install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;ustawienia-stałe&#34;&gt;Ustawienia stałe&lt;/h4&gt;
-&lt;p&gt;Aby te ustawienia były trwałe, dodaj je do swojego .bashrc lub .zshrc&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;NB_CORES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;$&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;^processor&amp;#39;&lt;/span&gt; &lt;span class=&#34;sr&#34;&gt;/proc/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cpuinfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;MAKEFLAGS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;-j$((NB_CORES+1)) -l${NB_CORES}&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;A następnie wpisz:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.zshrc &lt;span class=&#34;c1&#34;&gt;# lub .bashrc&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;problemy&#34;&gt;Problemy&lt;/h4&gt;
-&lt;p&gt;Jeśli pojawią się problemy podczas make lub make test, zainstaluj brakujące biblioteki. make lub make test poinformują Cię, co dokładnie brakuje, więc jeśli czegoś brakuje, spróbuj dowiedzieć się, jak to zainstalować.&lt;/p&gt;
-
-&lt;div id=&#34;1d9118031150b149&#34; class=&#34;tab&#34;&gt;
-  &lt;div class=&#34;tab__links&#34;&gt;
-    
-      &lt;button class=&#34;tab__link&#34; aria-label=&#34;Tab link&#34;&gt;SLES&lt;/button&gt;
-    
-      &lt;button class=&#34;tab__link&#34; aria-label=&#34;Tab link&#34;&gt;Debian&lt;/button&gt;
-    
-      &lt;button class=&#34;tab__link&#34; aria-label=&#34;Tab link&#34;&gt;RedHat&lt;/button&gt;
-    
-  &lt;/div&gt;
-  
-  
-&lt;div id=&#34;1d6b96e60d4fbd64&#34; class=&#34;tab__content&#34;&gt;
-  &lt;h5 id=&#34;sles--opensuse-leap-154&#34;&gt;SLES | openSUSE Leap 15.4&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo zypper install libncurses5 ncurses make gcc g++ libtool libtool-bin
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-  
-&lt;div id=&#34;9e0dc6cfaf690a81&#34; class=&#34;tab__content&#34;&gt;
-  &lt;h5 id=&#34;debian&#34;&gt;Debian&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install libncurses-dev libtool libtool-bin make build-essential g++
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-  
-&lt;div id=&#34;5bb57ee1d6210f6a&#34; class=&#34;tab__content&#34;&gt;
-  &lt;h5 id=&#34;red-hat&#34;&gt;Red Hat&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dnf install ncurses-devel make gcc g++ libtool 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script&gt;
-  &#39;use strict&#39;;
-
-  var containerId = JSON.parse(&#34;\&#34;1d9118031150b149\&#34;&#34;);
-  var containerElem = document.getElementById(containerId);
-  var tabLinks = null;
-  var tabContents = null;
-  var ids = [];
-
-  if (containerElem) {
-    tabLinks = containerElem.querySelectorAll(&#39;.tab__link&#39;);
-    tabContents = containerElem.querySelectorAll(&#39;.tab__content&#39;);
-  }
-
-  for (var i = 0; i &lt; tabContents.length; i++) {
-    ids = ids.concat(tabContents[i].getAttribute(&#39;id&#39;));
-    tabContents[i].style.display = &#39;none&#39;;
-
-    if (0 === parseInt(i, 10) &amp;&amp; !tabContents[i].classList.contains(&#39;active&#39;)) {
-      tabContents[i].classList.add(&#39;active&#39;);
-    }
-  }
-
-  for (var i = 0; i &lt; tabLinks.length; i++) {
-    tabLinks[i].setAttribute(&#39;id&#39;, ids[i]);
-
-    if (0 === parseInt(i, 10) &amp;&amp; !tabLinks[i].classList.contains(&#39;active&#39;)) {
-      tabLinks[i].classList.add(&#39;active&#39;);
-    } else {
-      tabLinks[i].classList.remove(&#39;active&#39;);
-    }
-  }
-
-  if (tabContents.length &gt; 0) {
-    tabContents[0].style.display = &#39;block&#39;;
-  }
-&lt;/script&gt;
-&lt;h4 id=&#34;zainstaluj-nodejs-za-pomocą-nvm&#34;&gt;Zainstaluj nodejs za pomocą nvm&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; bash
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvm --version
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvm list-remote
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvm install v20.2.0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvm &lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; default 20.2.0
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvm use default
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;node -v
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;zainstaluj-copilot&#34;&gt;Zainstaluj copilot&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/github/copilot.vim.git &lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.vim/pack/github/start/copilot.vim
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;utwórz-plik-vimrc-w-swoim-katalogu-home-i-wpisz-do-niego-poniższe-i-zapisz&#34;&gt;Utwórz plik .vimrc w swoim katalogu $HOME i wpisz do niego poniższe i zapisz&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim .vimrc
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; Dodaj numery do każdej linii po lewej stronie.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; Wyłącz kompatybilność z vi, która może powodować nieoczekiwane problemy.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nocompatible&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; Włącz wykrywanie typu pliku. Vim będzie mógł próbować wykryć typ używanego pliku.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;filetype&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; Poniższa linia włącza copilot&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; Włącz wtyczki i załaduj wtyczkę dla wykrytego typu pliku.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;filetype&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;plugin&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; Załaduj plik wcięć dla wykrytego typu pliku.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;filetype&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;indent&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;#34; Włącz podświetlanie składni.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;syntax&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;otwórz-vim&#34;&gt;Otwórz vim&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Wpisz&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Copilot&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Skopiuj kod jednorazowy, otwórz podany URL &lt;a
-
-	
-	
-		href = &#34;http://github.com/login/device&#34;
-
-		
-
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		http://github.com/login/device
-	&lt;/span&gt;
-
-&lt;/a&gt;
- i wpisz kod jednorazowy. Zapłać 10 USD i używaj copilot.&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/copilot-setup.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>copilot</category>
-            
-          
-        
-        
-          
-            
-              <category>copilot</category>
-            
-          
-        
-      </item>
-      
-
-    
-  </channel>
-</rss>
+href = "https://docs.github.com/en/billing/managing-billing-for-github-copilot/managing-your-github-copilot-subscription-for-your-personal-account"
+title = "Zarządzanie subskrypcją GitHub Copilot dla Twojego osobistego konta"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+Zarządzanie subskrypcją GitHub Copilot dla Twojego osobistego konta
+&lt;/span>
+&lt;/a>
+&lt;/div>
+&lt;h4 id="zainstaluj-git-jeśli-go-nie-masz">Zainstaluj git, jeśli go nie masz&lt;/h4>
+&lt;div id="69c38e0c6176ea7a" class="tab">
+&lt;div class="tab__links">
+&lt;button class="tab__link" aria-label="Tab link">SLES&lt;/button>
+&lt;button class="tab__link" aria-label="Tab link">Debian&lt;/button>
+&lt;button class="tab__link" aria-label="Tab link">RedHat&lt;/button>
+&lt;/div>
+&lt;div id="18f4a93c7125f564" class="tab__content">
+&lt;h5 id="sles--opensuse-leap-154">SLES | openSUSE Leap 15.4&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo zypper install git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="546d22cb20461c29" class="tab__content">
+&lt;h5 id="debian">Debian&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="0b2200659b3e7e72" class="tab__content">
+&lt;h5 id="red-hat">Red Hat&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo dnf install git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;script>
+'use strict';
+var containerId = JSON.parse("\"69c38e0c6176ea7a\"");
+var containerElem = document.getElementById(containerId);
+var tabLinks = null;
+var tabContents = null;
+var ids = [];
+if (containerElem) {
+tabLinks = containerElem.querySelectorAll('.tab__link');
+tabContents = containerElem.querySelectorAll('.tab__content');
+}
+for (var i = 0; i &lt; tabContents.length; i++) {
+ids = ids.concat(tabContents[i].getAttribute('id'));
+tabContents[i].style.display = 'none';
+if (0 === parseInt(i, 10) &amp;&amp; !tabContents[i].classList.contains('active')) {
+tabContents[i].classList.add('active');
+}
+}
+for (var i = 0; i &lt; tabLinks.length; i++) {
+tabLinks[i].setAttribute('id', ids[i]);
+if (0 === parseInt(i, 10) &amp;&amp; !tabLinks[i].classList.contains('active')) {
+tabLinks[i].classList.add('active');
+} else {
+tabLinks[i].classList.remove('active');
+}
+}
+if (tabContents.length > 0) {
+tabContents[0].style.display = 'block';
+}
+&lt;/script>
+&lt;h4 id="sprawdź-zainstalowaną-wersję-vima">Sprawdź zainstalowaną wersję vima&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">vim -version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="zainstaluj-vim-900185-lub-nowszy-ze-źródła">Zainstaluj vim (9.0.0185 lub nowszy) ze źródła&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> &lt;span class="nv">$HOME&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git clone https://github.com/vim/vim.git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> &lt;span class="nv">$HOME&lt;/span>/vim/src
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">NB_CORES&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="k">$(&lt;/span>grep -c &lt;span class="s1">&amp;#39;^processor&amp;#39;&lt;/span> /proc/cpuinfo&lt;span class="k">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">MAKEFLAGS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;-j&lt;/span>&lt;span class="k">$((&lt;/span>NB_CORES+1&lt;span class="k">))&lt;/span>&lt;span class="s2"> -l&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">NB_CORES&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">make &lt;span class="nb">test&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo make install
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="ustawienia-stałe">Ustawienia stałe&lt;/h4>
+&lt;p>Aby te ustawienia były trwałe, dodaj je do swojego .bashrc lub .zshrc&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">NB_CORES&lt;/span>&lt;span class="p">=&lt;/span>$&lt;span class="p">(&lt;/span>&lt;span class="nx">grep&lt;/span> &lt;span class="p">-&lt;/span>&lt;span class="nx">c&lt;/span> &lt;span class="s1">&amp;#39;^processor&amp;#39;&lt;/span> &lt;span class="sr">/proc/&lt;/span>&lt;span class="nx">cpuinfo&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">export&lt;/span> &lt;span class="nx">MAKEFLAGS&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s2">&amp;#34;-j$((NB_CORES+1)) -l${NB_CORES}&amp;#34;&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>A następnie wpisz:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> ~/.zshrc &lt;span class="c1"># lub .bashrc&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="problemy">Problemy&lt;/h4>
+&lt;p>Jeśli pojawią się problemy podczas make lub make test, zainstaluj brakujące biblioteki. make lub make test poinformują Cię, co dokładnie brakuje, więc jeśli czegoś brakuje, spróbuj dowiedzieć się, jak to zainstalować.&lt;/p>
+&lt;div id="1d9118031150b149" class="tab">
+&lt;div class="tab__links">
+&lt;button class="tab__link" aria-label="Tab link">SLES&lt;/button>
+&lt;button class="tab__link" aria-label="Tab link">Debian&lt;/button>
+&lt;button class="tab__link" aria-label="Tab link">RedHat&lt;/button>
+&lt;/div>
+&lt;div id="1d6b96e60d4fbd64" class="tab__content">
+&lt;h5 id="sles--opensuse-leap-154">SLES | openSUSE Leap 15.4&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo zypper install libncurses5 ncurses make gcc g++ libtool libtool-bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="9e0dc6cfaf690a81" class="tab__content">
+&lt;h5 id="debian">Debian&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt install libncurses-dev libtool libtool-bin make build-essential g++
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div id="5bb57ee1d6210f6a" class="tab__content">
+&lt;h5 id="red-hat">Red Hat&lt;/h5>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo dnf install ncurses-devel make gcc g++ libtool
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;script>
+'use strict';
+var containerId = JSON.parse("\"1d9118031150b149\"");
+var containerElem = document.getElementById(containerId);
+var tabLinks = null;
+var tabContents = null;
+var ids = [];
+if (containerElem) {
+tabLinks = containerElem.querySelectorAll('.tab__link');
+tabContents = containerElem.querySelectorAll('.tab__content');
+}
+for (var i = 0; i &lt; tabContents.length; i++) {
+ids = ids.concat(tabContents[i].getAttribute('id'));
+tabContents[i].style.display = 'none';
+if (0 === parseInt(i, 10) &amp;&amp; !tabContents[i].classList.contains('active')) {
+tabContents[i].classList.add('active');
+}
+}
+for (var i = 0; i &lt; tabLinks.length; i++) {
+tabLinks[i].setAttribute('id', ids[i]);
+if (0 === parseInt(i, 10) &amp;&amp; !tabLinks[i].classList.contains('active')) {
+tabLinks[i].classList.add('active');
+} else {
+tabLinks[i].classList.remove('active');
+}
+}
+if (tabContents.length > 0) {
+tabContents[0].style.display = 'block';
+}
+&lt;/script>
+&lt;h4 id="zainstaluj-nodejs-za-pomocą-nvm">Zainstaluj nodejs za pomocą nvm&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh &lt;span class="p">|&lt;/span> bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvm --version
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvm list-remote
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvm install v20.2.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">node -v
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvm &lt;span class="nb">alias&lt;/span> default 20.2.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nvm use default
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">node -v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="zainstaluj-copilot">Zainstaluj copilot&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git clone https://github.com/github/copilot.vim.git &lt;span class="se">\ &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$HOME&lt;/span>/.vim/pack/github/start/copilot.vim
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="utwórz-plik-vimrc-w-swoim-katalogu-home-i-wpisz-do-niego-poniższe-i-zapisz">Utwórz plik .vimrc w swoim katalogu $HOME i wpisz do niego poniższe i zapisz&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> &lt;span class="nv">$HOME&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vim .vimrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; Dodaj numery do każdej linii po lewej stronie.&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; Wyłącz kompatybilność z vi, która może powodować nieoczekiwane problemy.&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">set&lt;/span> &lt;span class="nx">nocompatible&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; Włącz wykrywanie typu pliku. Vim będzie mógł próbować wykryć typ używanego pliku.&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">filetype&lt;/span> &lt;span class="nx">on&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; Poniższa linia włącza copilot&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">&amp;#34; Włącz wtyczki i załaduj wtyczkę dla wykrytego typu pliku.&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">filetype&lt;/span> &lt;span class="nx">plugin&lt;/span> &lt;span class="nx">on&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; Załaduj plik wcięć dla wykrytego typu pliku.&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">filetype&lt;/span> &lt;span class="nx">indent&lt;/span> &lt;span class="nx">on&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="c">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;#34; Włącz podświetlanie składni.&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="nx">syntax&lt;/span> &lt;span class="nx">on&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="otwórz-vim">Otwórz vim&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">vim
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Wpisz&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-vim" data-lang="vim">&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="nx">Copilot&lt;/span> &lt;span class="nx">setup&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Skopiuj kod jednorazowy, otwórz podany URL &lt;a
+href = "http://github.com/login/device"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+http://github.com/login/device
+&lt;/span>
+&lt;/a>
+i wpisz kod jednorazowy. Zapłać 10 USD i używaj copilot.&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2023-thumbs/copilot-setup.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>copilot</category><category>copilot</category></item></channel></rss>

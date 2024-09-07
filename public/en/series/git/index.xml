@@ -1,99 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
-  <channel>
-    <title>Git on Sysadmin - Linux administration, security and hardening</title>
-    <link>https://sysadmin.info.pl/en/series/git/</link>
-    <description>Recent content in Git on Sysadmin - Linux administration, security and hardening</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>©2024, <a
-
-	
-	
-		href = "https://sysadmin.info.pl/"
-
-		
-
-	
-
-	
-
-		target = "_blank"
-		rel = "nofollow noopener noreferrer"
-
-		>
-	
-	<span>
-		sysadmin
-	</span>
-
-</a>
- - All rights reserved</copyright>
-    <lastBuildDate>Thu, 22 Sep 2022 08:50:49 +0000</lastBuildDate>
-    <sy:updatePeriod>daily</sy:updatePeriod>
-    <sy:updateFrequency>1</sy:updateFrequency>
-    
-        <atom:link href="https://sysadmin.info.pl/en/series/git/index.xml" rel="self" type="application/rss+xml" />
-    
-
-      
-      <item>
-        <title>git video course – advanced aspects of configuring the git.</title>
-        <link>https://sysadmin.info.pl/en/blog/git-video-course-advanced-aspects-of-configuring-the-git/</link>
-        <pubDate>Thu, 22 Sep 2022 08:50:49 +0000</pubDate>
-        
-        <atom:modified>Thu, 22 Sep 2022 08:50:49 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/en/blog/git-video-course-advanced-aspects-of-configuring-the-git/</guid>
-        <description>&lt;p&gt;&lt;a href=&#34;https://youtu.be/zDzNrnt9Qgw?list=PL8iI5aR-61mqAr3ipK5BvmMKLqYbJgIkB&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Watch the playlist&lt;/a&gt;&lt;/p&gt;
-&lt;figcaption&gt;Use the next button in the video to watch lessons, or the playlist button.&lt;/figcaption&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/zDzNrnt9Qgw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/3xjPj8jdpis&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/vTQz6R-W2I8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/DQu4NSzbkho&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/git-01.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>Git</category>
-            
-          
-        
-        
-          
-            
-              <category>Git</category>
-            
-          
-        
-      </item>
-      
-
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Git on Sysadmin - Linux administration, security and hardening</title><link>https://sysadmin.info.pl/en/series/git/</link><description>Recent content in Git on Sysadmin - Linux administration, security and hardening</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>©2024,<a href="https://sysadmin.info.pl/" target="_blank" rel="nofollow noopener noreferrer"><span>
+sysadmin</span></a>
+- All rights reserved</copyright><lastBuildDate>Thu, 22 Sep 2022 08:50:49 +0000</lastBuildDate><sy:updatePeriod>daily</sy:updatePeriod><sy:updateFrequency>1</sy:updateFrequency><atom:link href="https://sysadmin.info.pl/en/series/git/index.xml" rel="self" type="application/rss+xml"/><item><title>git video course – advanced aspects of configuring the git.</title><link>https://sysadmin.info.pl/en/blog/git-video-course-advanced-aspects-of-configuring-the-git/</link><pubDate>Thu, 22 Sep 2022 08:50:49 +0000</pubDate><atom:modified>Thu, 22 Sep 2022 08:50:49 +0000</atom:modified><guid>https://sysadmin.info.pl/en/blog/git-video-course-advanced-aspects-of-configuring-the-git/</guid><description>&lt;p>&lt;a href="https://youtu.be/zDzNrnt9Qgw?list=PL8iI5aR-61mqAr3ipK5BvmMKLqYbJgIkB" target="_blank" rel="noreferrer noopener">Watch the playlist&lt;/a>&lt;/p>
+&lt;figcaption>Use the next button in the video to watch lessons, or the playlist button.&lt;/figcaption>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/zDzNrnt9Qgw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/3xjPj8jdpis" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/vTQz6R-W2I8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/DQu4NSzbkho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2022-thumbs/git-01.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>Git</category><category>Git</category></item></channel></rss>

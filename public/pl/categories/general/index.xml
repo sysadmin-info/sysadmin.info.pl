@@ -1,231 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
-  <channel>
-    <title>general on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
-    <link>https://sysadmin.info.pl/pl/categories/general/</link>
-    <description>Recent content in general on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pl</language>
-    <copyright>©2024, <a
-
-	
-	
-		href = "https://sysadmin.info.pl/"
-
-		
-
-	
-
-	
-
-		target = "_blank"
-		rel = "nofollow noopener noreferrer"
-
-		>
-	
-	<span>
-		sysadmin
-	</span>
-
-</a>
- - All rights reserved</copyright>
-    <lastBuildDate>Wed, 06 Dec 2023 13:40:00 +0000</lastBuildDate>
-    <sy:updatePeriod>daily</sy:updatePeriod>
-    <sy:updateFrequency>1</sy:updateFrequency>
-    
-        <atom:link href="https://sysadmin.info.pl/pl/categories/general/index.xml" rel="self" type="application/rss+xml" />
-    
-
-      
-      <item>
-        <title>Żeglowanie przez Fale Zmian: Podróż przez Świat Technologii Informacyjnych od 2002 do 2023</title>
-        <link>https://sysadmin.info.pl/pl/blog/zeglowanie-przez-fale-zmian-podroz-przez-swiat-technologii-informacyjnych-od-2002-do-2023/</link>
-        <pubDate>Wed, 06 Dec 2023 13:40:00 +0000</pubDate>
-        
-        <atom:modified>Wed, 06 Dec 2023 13:40:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/zeglowanie-przez-fale-zmian-podroz-przez-swiat-technologii-informacyjnych-od-2002-do-2023/</guid>
-        <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/I_2VNm9-07c&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Dzień dobry wszystkim. Nazywam się Adrian i od 2002 roku poruszam się w dynamicznym świecie IT, obecnie pracując jako specjalista ds. zapewnienia jakości w Fujitsu. Moja podróż jednak zaczęła się na początku lat 90., od Commodore 64, którego używałem do programowania w języku Basic, aby zmienić go w syntezator, co zapoczątkowało moją dożywotnią pasję do IT i bezpieczeństwa systemów.&lt;/p&gt;
-&lt;p&gt;W 2002 roku krajobraz IT był zupełnie inny. IRC i Netscape Navigator były naszymi bramami do cyfrowego świata, a strony internetowe były mieszanką jaskrawych kolorów i prostych układów. To była era masywnych monitorów i internetu dial-up, gdzie Linux zaczynał się wyłaniać jako solidna alternatywa dla głównych systemów operacyjnych.&lt;/p&gt;
-&lt;p&gt;Rozwijając moje umiejętności w Linuxie, świat był świadkiem transformacyjnych zmian. Pojawienie się smartfonów i nadejście mediów społecznościowych zrewolucjonizowały sposób, w jaki komunikujemy się i uzyskujemy informacje. Cloud computing pojawił się, przekształcając przechowywanie danych i usługi, podczas gdy Linux umocnił swoją obecność na serwerach, a później w infrastrukturze chmury.&lt;/p&gt;
-&lt;p&gt;Około połowy lat 2000, cyberbezpieczeństwo stało się kluczowe, gdy zagrożenia cyfrowe ewoluowały. Moje zainteresowanie bezpieczeństwem systemów pogłębiało się, odzwierciedlając zwrot branży w kierunku solidnych protokołów i praktyk bezpieczeństwa.&lt;/p&gt;
-&lt;p&gt;Lata 2010 przyniosły wzrost znaczenia Big Data i AI, przekształcając sposób, w jaki przetwarzamy informacje i podejmujemy decyzje. Kubernetes i Docker zrewolucjonizowały wdrażanie oprogramowania, idealnie wpisując się w moją pracę w dziale zapewnienia jakości i badaniach i rozwoju.&lt;/p&gt;
-&lt;p&gt;Wchodząc w lata 2020, praca zdalna stała się normą, stymulowana przez wydarzenia globalne. Ta zmiana wymagała bezpieczniejszej, skalowalniejszej i bardziej elastycznej infrastruktury IT – wyzwania, które technologie Linux i cloud były gotowe spełnić.&lt;/p&gt;
-&lt;p&gt;Patrząc w przyszłość, stoimy na progu nowych granic, takich jak obliczenia kwantowe i dalszy rozwój AI. Krajobraz IT nadal ewoluuje w zawrotnym tempie, a ja dzielęc się swoją wiedzą poprzez tutoriale i zaangażowanie społecznościowe, pozostaję tak samo pasjonatem nauki i adaptacji.&lt;/p&gt;
-&lt;p&gt;Podsumowując, czy to zagłębianie się w science fiction, eksplorowanie kosmosu poprzez astronomię, czy delektowanie się filiżanką brazylijskiej kawy Yellow Bourbon, moja podróż w IT jest przeplatana ciekawością i nieustannym dążeniem do wiedzy.&lt;/p&gt;
-&lt;p&gt;Patrząc w przyszłość, przyjmijmy ciągłą naukę i adaptację, której wymaga ciągle ewoluujący świat IT. Dziękuję, że dołączyliście do mnie w tej podróży przez czas, technologię i transformację. Wasze zaangażowanie i pasja do branży czynią naszą wspólną podróż jeszcze bardziej wzbogacającą.&lt;/p&gt;
-&lt;p&gt;Bardzo dziękuję za wasz czas i uwagę. Życzę wam wszystkim cudownego dnia lub nocy, pełnego inspiracji i ciągłej ciekawości. Pozostańcie pasjonatami, pozostańcie ciekawi!&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/zeglowanie.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>general</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Witaj na blogu Sysadmin</title>
-        <link>https://sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</link>
-        <pubDate>Sun, 19 Mar 2023 22:08:59 +0000</pubDate>
-        
-        <atom:modified>Sun, 19 Mar 2023 22:08:59 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</guid>
-        <description>&lt;p&gt;Cześć,&lt;/p&gt;
-&lt;p&gt;To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy to dużo, czy mało? Dla mnie zmieniło się bardzo dużo, zdążyłem bowiem przejść na trzecią linię w Fujitsu i przepracować ponad rok w zespole Linux a potem przeszedłem do działu Research and Development, gdzie obecnie pracuję jako Quality Assurance, jednak w zasadzie wciąż moja praca związana jest z systemem Linux, tyle tylko, że obecnie pracuję z SLES i open SUSE. W domu mam obecnie Raspberry Pi 4b rev 1.4 z 8 GB RAM i dyskiem SSD 120 GB, na którym jest zainstalowany Debian 11, Home Assistant Supervised i parę innych rzeczy oraz Fujitsu Esprimo Q920 z 16 GB RAM i dyskiem SSD o pojemności 512 GB, na którym mam Proxmox z maszynami wirtualnymi takimi jak wielonodowy klaster Wazuh chociażby, czy Portainer, którego używam do szybkiego stawiania kontenerów Docker. Zdążyłem przejść przez instalację systemu na wykupionych kilku VPS. Postawiłem serwer poczty na Postfix oraz Dovecot, Dovecot Sieve, Postgrey, SpamAssassin, ClamAV itd. Instalowałem też Apache i Nginx, które potem zabezpieczałem, tak zwany hardening. Poznałem OpenvSwitch, Qemu KVM, Proxmox, ESXi, Zabbix, Zephyr Enterprise, Jenkins, Selenium Grid, Confluence, Jira i wiele innych narzędzi i rozwiązań. Przeszedłem przez zarządzanie starymi maszynami takimi jak Solaris, SCO_SV, stare CentOS i Red Hat (wersje 4, 5, 6, 7). Nauczyłem się wielu rzeczy i wciąż uczę się. Nie stoję w miejscu. Rozwijam Stack technologiczny. Uczę się AWS i tego jak konfigurować środowiska, które są już bardziej zaawansowane pod kątem bezpieczeństwa. Nie programuję, mimo, że napisanie kodu w Java, Python, Bash, C nie stanowi dla mnie problemu. Po prostu programowanie nie jest moją pasją. Moją pasją jest Linux i szeroko pojęte bezpieczeństwo z nim związane. OSINT, mimo, że znam, też nie jest czymś, co robię, bo nie jest to dla mnie wyzwanie i nie jest moją rolą poszukiwanie ludzi przez Internet. Jeśli ktoś ma większą wiedzę ode mnie, lecz nie szanuje mnie, nie jest kulturalny i zasłania się chorobą, z czym osobiście się spotkałem ponadto wykazuje elementarne braki w czytaniu że zrozumieniem, jest dinozaurem i wciska początkującym SELinux czy AppArmor, ten nie ma tu czego szukać. Netykiety powinien był taki człowiek nauczyć się na samym początku, bo to podstawa w Internecie. Szanujmy się wzajemnie, bo to droga do profesjonalizmu. Do tego umiejętność panowania nad własnymi emocjami, a także cytat mistrza Yoda &amp;ldquo;Do or do not, there is no try&amp;rdquo; - to droga do sukcesu.&lt;/p&gt;
-&lt;p&gt;Stary wpis z września 2019:&lt;/p&gt;
-&lt;p&gt;Blog ten poświęcony zostanie zagadnieniom z zakresu administracji serwerami Linux. Skupiłem się na popularnych dystrybucjach takich jak Debian 9.8.0, CentOS 7.6, Fedora 29. Oczywiście nie poprzestanę na tym, ponieważ mam jeszcze na Virtual Box instancję RHEL (Red Hat Enterprise Linux) 7.7.&lt;/p&gt;
-&lt;p&gt;Opiszę rozwiązania, które wdrożyłem u siebie na trzech laptopach, które pełnią rolę serwerów w domu w celach nauki własnej. Dodatkowo wykupiłem sobie VPS, na którym skonfigurowałem sobie środowisko do hostowania tej właśnie strony. Zamierzam też dokupić w przyszłości kolejny VPS i przenieść instalację serwera poczty oraz Samba na jedną maszynę. Docelowo chcę wyłączyć dwa pozostałe laptopy (serwer poczty oraz Samba), schować je do szuflady i mieć wszystko w sieci.&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>general</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Polityka prywatności</title>
-        <link>https://sysadmin.info.pl/pl/privacy/</link>
-        <pubDate>Sat, 21 Sep 2019 19:24:59 +0000</pubDate>
-        
-        <atom:modified>Sat, 21 Sep 2019 19:24:59 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/privacy/</guid>
-        <description>&lt;h4 id=&#34;polityka-prywatności&#34;&gt;Polityka prywatności&lt;/h4&gt;
-&lt;p&gt;Portal sysadmin.info.pl nie przetwarza, nie udostępnia ani nie wykorzystuje w celach marketingowych danych przekazywanych przez Użytkowników portalu. Możecie być pewni że w przyszłości także nie będziemy przetwarzać, udostępniać ani wykorzystywać waszych danych w jakichkolwiek innych celach, niż zwykłe zbieranie statystyk.&lt;/p&gt;
-&lt;p&gt;Portal sysadmin.info.pl nie ponosi odpowiedzialności za treści i opinie wyrażane przez użytkowników w komentarzach lub opisach. Są one wyłącznie własnością użytkowników, od których pochodzą.&lt;/p&gt;
-&lt;h4 id=&#34;hugo-a-ogólne-rozporządzenie-o-ochronie-danych-osobowych-gdpr&#34;&gt;Hugo a ogólne rozporządzenie o ochronie danych osobowych (GDPR)&lt;/h4&gt;
-&lt;p&gt;Strona sysadmin.info.pl jest generowana w generatorze statycznym Hugo.&lt;/p&gt;
-&lt;p&gt;Więcej informacji tutaj: &lt;a
-
-	
-	
-		href = &#34;https://gohugo.io/about/hugo-and-gdpr/&#34;
-
-		
-
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		https://gohugo.io/about/hugo-and-gdpr/
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;Poniżej znajdują się wszystkie ustawienia prywatności oraz ich domyślna wartość. Ustawienia te zostały umieszczone w pliku config.toml strony sysadmin.info.pl&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[privacy]
-  [privacy.disqus]
-    disable = true
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    disable = true
-    respectDoNotTrack = true
-    useSessionStorage = true
-  [privacy.instagram]
-    disable = true
-    simple = true
-  [privacy.twitter]
-    disable = true
-    enableDNT = true
-    simple = true
-  [privacy.vimeo]
-    disable = true
-    enableDNT = true
-    simple = true
-  [privacy.youtube]
-    disable = false
-    privacyEnhanced = false
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;adresy-e-mail&#34;&gt;Adresy E-mail&lt;/h4&gt;
-&lt;p&gt;Adresy E-mail podawane przez Użytkowników przy dodawaniu komentarzy, oraz rejestracji na forum lub portalu, będzie używany jedynie w celu przypomnienia hasła Użytkownika, oraz wysłania Newsletter’a – jeśli Użytkownik wyraził taką chęć. Adresy E-mail Użytkowników nie są i nie będą nigdzie publikowane, przetwarzane, sprzedawane, udostępniane za opłatą – w związku z czym nie musicie się obawiać dodawania do żadnych list mailingowych, otrzymywania sponsorowanych maili reklamowych, i wszelkiego innego niechcianego spamu.&lt;/p&gt;
-&lt;h4 id=&#34;gromadzenie-danych-nie-osobowych&#34;&gt;Gromadzenie danych nie-osobowych&lt;/h4&gt;
-&lt;p&gt;Podczas użytkowania portalu sysadmin.info.pl, zbierane są dane nie-osobowe które przeglądarki udostępniają, czyli:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;nazwa i wersja przeglądarki internetowej&lt;/li&gt;
-&lt;li&gt;ustawienia języka&lt;/li&gt;
-&lt;li&gt;strona odsyłająca&lt;/li&gt;
-&lt;li&gt;data i godzina wysłania żądania do serwera&lt;/li&gt;
-&lt;li&gt;IP z którego zostało wysłane żądanie&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Adresy IP zbierane przez portal nie mają na celu identyfikacji naszych użytkowników, ani nie są nigdzie ujawniane. Jednakże przy dodawania komentarzy niezgodnych z netykietą, śmiecenia w komentarzach bądź na forum, przewidujemy możliwość zablokowania użytkowania portalu z danego adresu IP, lub w wypadku bardzo nachalnych graczy, nawet z całej puli IP.&lt;/p&gt;
-&lt;h4 id=&#34;gromadzenie-danych-osobowych&#34;&gt;Gromadzenie danych osobowych&lt;/h4&gt;
-&lt;p&gt;Podczas wypełniania formularza kontaktowego na portalu sysadmin.info.pl lub na jego forum, wymagamy podania przynajmniej adresu E-mail. Podawanie pozostałych danych w profilach, takich jak imię, nazwisko, adres strony internetowej, miejscowość, zawód, zainteresowania, AIM, Jabber, Google Talk – nie jest obowiązkowe, i tylko od Użytkownika zależy czy chce je podać i udostępnić innym.&lt;/p&gt;
-&lt;h4 id=&#34;pliki-cookies&#34;&gt;Pliki Cookies&lt;/h4&gt;
-&lt;p&gt;Na portalu sysadmin.info.pl używane są pliki cookies, tzw. ciasteczka – są to małe pliki tekstowe używane do zapisywania pewnych informacji na komputerze Użytkownika. Nie są one niebezpieczne dla Użytkownika ani jego komputera, nie są w nich przechowywane żadne dane osobowe, ich głównym zadaniem jest przetrzymywanie informacji, do których potem strona może się odnieść. Na naszym portalu ciasteczka mają następujące funkcje:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;przechowywania informacji/preferencji Użytkownika dodającego komentarz – w momencie dodania komentarza na komputerze Użytkownika jest zapisywany plik cookie, który przez niespełna rok przechowuje dane z nickiem, adresem email i stroną internetową Użytkownika – dzięki czemu nie trzeba tych danych wpisywać za każdym razem gdy chce się dodać następny komentarz.&lt;/li&gt;
-&lt;li&gt;przechowywania informacji o Użytkownikach zarejestrowanych/zalogowanych na portalu lub forum – przeglądarka może zapisać plik cookie zawierający login Użytkownika, podwójnie shashowane hasło, oraz klucz autoryzacji, dzięki czemu przy następnej wizycie, użytkownika nie będzie musiał ponownie wpisywać loginu oraz hasła, albo nawet jeśli sesja jeszcze nie wygasła, to nie będzie musiał się ponownie logować – tylko od razu będzie zalogowany na portalu lub forum.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Pliki cookies w nie umożliwiają identyfikacji Użytkowników odwiedzającej witrynę, i nie są w nich zapisywane żadne informacje, które mogły by taką identyfikację umożliwić. Zgodnie z art. 173 Ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne (Dz. U. Nr 171, poz. 1800) zapisywanie plików tekstowych na dysku komputera Użytkownika witryny jest dozwolone o ile Użytkownik zostanie o tym poinformowany. Warunkiem działania plików cookies jest ich akceptacja przez przeglądarkę oraz nieusuwanie ich z dysku komputera. Jeżeli Użytkownik nie chce udostępnić plików cookies, powinien taką opcję wyłączyć w przeglądarce nim odwiedzi nasz portal. Nieudostępnienie plików cookies przez przeglądarkę, albo ich skasowanie, możne powodować znaczne utrudnienia lub może nawet całkowicie uniemożliwiać korzystanie z naszego portalu oraz forum – za co nie ponosimy odpowiedzialności. Dlatego zalecamy mieć włączoną obsługę plików cookies.&lt;/p&gt;
-&lt;h4 id=&#34;prawa-autorskie&#34;&gt;Prawa autorskie&lt;/h4&gt;
-&lt;p&gt;Portal sysadmin.info.pl zawiera artykuły i poradniki napisane przez użytkowników wchodzących w skład Redakcji. Wszystkie treści zawarte na stronach portalu są przedmiotem praw autorskich przysługujących ich twórcy i podlegają ochronie zgodnie z prawem autorskim. Zabrania się kopiowania i udostępniania materiałów z portalu bez zgody od ich autora i zgody od administratora portalu.&lt;/p&gt;
-&lt;p&gt;Wszelkie materiały zawarte w serwisie portalu sysadmin.info.pl są bezpłatne. Użytkownicy oraz Redakcja portalu nie odpowiadają za jakiekolwiek szkody wynikłe z ich korzystania. Portal sysadmin.info.pl zastrzega sobie możliwość edycji i usuwania wpisów lub komentarzy oraz blokowania użytkowników, którzy naruszają regulamin Portalu, oraz zasady netykiety i powszechnie przyjęte normy kulturalnego zachowania.&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>general</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>general on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title><link>https://sysadmin.info.pl/pl/categories/general/</link><description>Recent content in general on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description><generator>Hugo -- gohugo.io</generator><language>pl</language><copyright>©2024,<a href="https://sysadmin.info.pl/" target="_blank" rel="nofollow noopener noreferrer"><span>
+sysadmin</span></a>
+- All rights reserved</copyright><lastBuildDate>Wed, 06 Dec 2023 13:40:00 +0000</lastBuildDate><sy:updatePeriod>daily</sy:updatePeriod><sy:updateFrequency>1</sy:updateFrequency><atom:link href="https://sysadmin.info.pl/pl/categories/general/index.xml" rel="self" type="application/rss+xml"/><item><title>Żeglowanie przez Fale Zmian: Podróż przez Świat Technologii Informacyjnych od 2002 do 2023</title><link>https://sysadmin.info.pl/pl/blog/zeglowanie-przez-fale-zmian-podroz-przez-swiat-technologii-informacyjnych-od-2002-do-2023/</link><pubDate>Wed, 06 Dec 2023 13:40:00 +0000</pubDate><atom:modified>Wed, 06 Dec 2023 13:40:00 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/zeglowanie-przez-fale-zmian-podroz-przez-swiat-technologii-informacyjnych-od-2002-do-2023/</guid><description>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/I_2VNm9-07c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;p>Dzień dobry wszystkim. Nazywam się Adrian i od 2002 roku poruszam się w dynamicznym świecie IT, obecnie pracując jako specjalista ds. zapewnienia jakości w Fujitsu. Moja podróż jednak zaczęła się na początku lat 90., od Commodore 64, którego używałem do programowania w języku Basic, aby zmienić go w syntezator, co zapoczątkowało moją dożywotnią pasję do IT i bezpieczeństwa systemów.&lt;/p>
+&lt;p>W 2002 roku krajobraz IT był zupełnie inny. IRC i Netscape Navigator były naszymi bramami do cyfrowego świata, a strony internetowe były mieszanką jaskrawych kolorów i prostych układów. To była era masywnych monitorów i internetu dial-up, gdzie Linux zaczynał się wyłaniać jako solidna alternatywa dla głównych systemów operacyjnych.&lt;/p>
+&lt;p>Rozwijając moje umiejętności w Linuxie, świat był świadkiem transformacyjnych zmian. Pojawienie się smartfonów i nadejście mediów społecznościowych zrewolucjonizowały sposób, w jaki komunikujemy się i uzyskujemy informacje. Cloud computing pojawił się, przekształcając przechowywanie danych i usługi, podczas gdy Linux umocnił swoją obecność na serwerach, a później w infrastrukturze chmury.&lt;/p>
+&lt;p>Około połowy lat 2000, cyberbezpieczeństwo stało się kluczowe, gdy zagrożenia cyfrowe ewoluowały. Moje zainteresowanie bezpieczeństwem systemów pogłębiało się, odzwierciedlając zwrot branży w kierunku solidnych protokołów i praktyk bezpieczeństwa.&lt;/p>
+&lt;p>Lata 2010 przyniosły wzrost znaczenia Big Data i AI, przekształcając sposób, w jaki przetwarzamy informacje i podejmujemy decyzje. Kubernetes i Docker zrewolucjonizowały wdrażanie oprogramowania, idealnie wpisując się w moją pracę w dziale zapewnienia jakości i badaniach i rozwoju.&lt;/p>
+&lt;p>Wchodząc w lata 2020, praca zdalna stała się normą, stymulowana przez wydarzenia globalne. Ta zmiana wymagała bezpieczniejszej, skalowalniejszej i bardziej elastycznej infrastruktury IT – wyzwania, które technologie Linux i cloud były gotowe spełnić.&lt;/p>
+&lt;p>Patrząc w przyszłość, stoimy na progu nowych granic, takich jak obliczenia kwantowe i dalszy rozwój AI. Krajobraz IT nadal ewoluuje w zawrotnym tempie, a ja dzielęc się swoją wiedzą poprzez tutoriale i zaangażowanie społecznościowe, pozostaję tak samo pasjonatem nauki i adaptacji.&lt;/p>
+&lt;p>Podsumowując, czy to zagłębianie się w science fiction, eksplorowanie kosmosu poprzez astronomię, czy delektowanie się filiżanką brazylijskiej kawy Yellow Bourbon, moja podróż w IT jest przeplatana ciekawością i nieustannym dążeniem do wiedzy.&lt;/p>
+&lt;p>Patrząc w przyszłość, przyjmijmy ciągłą naukę i adaptację, której wymaga ciągle ewoluujący świat IT. Dziękuję, że dołączyliście do mnie w tej podróży przez czas, technologię i transformację. Wasze zaangażowanie i pasja do branży czynią naszą wspólną podróż jeszcze bardziej wzbogacającą.&lt;/p>
+&lt;p>Bardzo dziękuję za wasz czas i uwagę. Życzę wam wszystkim cudownego dnia lub nocy, pełnego inspiracji i ciągłej ciekawości. Pozostańcie pasjonatami, pozostańcie ciekawi!&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2023-thumbs/zeglowanie.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>general</category></item><item><title>Witaj na blogu Sysadmin</title><link>https://sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</link><pubDate>Sun, 19 Mar 2023 22:08:59 +0000</pubDate><atom:modified>Sun, 19 Mar 2023 22:08:59 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/witaj-na-blogu-sysadmin/</guid><description>&lt;p>Cześć,&lt;/p>
+&lt;p>To, co poniżej to już historia. Od tamtego momentu minęły ponad 3 lata. Czy to dużo, czy mało? Dla mnie zmieniło się bardzo dużo, zdążyłem bowiem przejść na trzecią linię w Fujitsu i przepracować ponad rok w zespole Linux a potem przeszedłem do działu Research and Development, gdzie obecnie pracuję jako Quality Assurance, jednak w zasadzie wciąż moja praca związana jest z systemem Linux, tyle tylko, że obecnie pracuję z SLES i open SUSE. W domu mam obecnie Raspberry Pi 4b rev 1.4 z 8 GB RAM i dyskiem SSD 120 GB, na którym jest zainstalowany Debian 11, Home Assistant Supervised i parę innych rzeczy oraz Fujitsu Esprimo Q920 z 16 GB RAM i dyskiem SSD o pojemności 512 GB, na którym mam Proxmox z maszynami wirtualnymi takimi jak wielonodowy klaster Wazuh chociażby, czy Portainer, którego używam do szybkiego stawiania kontenerów Docker. Zdążyłem przejść przez instalację systemu na wykupionych kilku VPS. Postawiłem serwer poczty na Postfix oraz Dovecot, Dovecot Sieve, Postgrey, SpamAssassin, ClamAV itd. Instalowałem też Apache i Nginx, które potem zabezpieczałem, tak zwany hardening. Poznałem OpenvSwitch, Qemu KVM, Proxmox, ESXi, Zabbix, Zephyr Enterprise, Jenkins, Selenium Grid, Confluence, Jira i wiele innych narzędzi i rozwiązań. Przeszedłem przez zarządzanie starymi maszynami takimi jak Solaris, SCO_SV, stare CentOS i Red Hat (wersje 4, 5, 6, 7). Nauczyłem się wielu rzeczy i wciąż uczę się. Nie stoję w miejscu. Rozwijam Stack technologiczny. Uczę się AWS i tego jak konfigurować środowiska, które są już bardziej zaawansowane pod kątem bezpieczeństwa. Nie programuję, mimo, że napisanie kodu w Java, Python, Bash, C nie stanowi dla mnie problemu. Po prostu programowanie nie jest moją pasją. Moją pasją jest Linux i szeroko pojęte bezpieczeństwo z nim związane. OSINT, mimo, że znam, też nie jest czymś, co robię, bo nie jest to dla mnie wyzwanie i nie jest moją rolą poszukiwanie ludzi przez Internet. Jeśli ktoś ma większą wiedzę ode mnie, lecz nie szanuje mnie, nie jest kulturalny i zasłania się chorobą, z czym osobiście się spotkałem ponadto wykazuje elementarne braki w czytaniu że zrozumieniem, jest dinozaurem i wciska początkującym SELinux czy AppArmor, ten nie ma tu czego szukać. Netykiety powinien był taki człowiek nauczyć się na samym początku, bo to podstawa w Internecie. Szanujmy się wzajemnie, bo to droga do profesjonalizmu. Do tego umiejętność panowania nad własnymi emocjami, a także cytat mistrza Yoda &amp;ldquo;Do or do not, there is no try&amp;rdquo; - to droga do sukcesu.&lt;/p>
+&lt;p>Stary wpis z września 2019:&lt;/p>
+&lt;p>Blog ten poświęcony zostanie zagadnieniom z zakresu administracji serwerami Linux. Skupiłem się na popularnych dystrybucjach takich jak Debian 9.8.0, CentOS 7.6, Fedora 29. Oczywiście nie poprzestanę na tym, ponieważ mam jeszcze na Virtual Box instancję RHEL (Red Hat Enterprise Linux) 7.7.&lt;/p>
+&lt;p>Opiszę rozwiązania, które wdrożyłem u siebie na trzech laptopach, które pełnią rolę serwerów w domu w celach nauki własnej. Dodatkowo wykupiłem sobie VPS, na którym skonfigurowałem sobie środowisko do hostowania tej właśnie strony. Zamierzam też dokupić w przyszłości kolejny VPS i przenieść instalację serwera poczty oraz Samba na jedną maszynę. Docelowo chcę wyłączyć dwa pozostałe laptopy (serwer poczty oraz Samba), schować je do szuflady i mieć wszystko w sieci.&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>general</category></item><item><title>Polityka prywatności</title><link>https://sysadmin.info.pl/pl/privacy/</link><pubDate>Sat, 21 Sep 2019 19:24:59 +0000</pubDate><atom:modified>Sat, 21 Sep 2019 19:24:59 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/privacy/</guid><description>&lt;h4 id="polityka-prywatności">Polityka prywatności&lt;/h4>
+&lt;p>Portal sysadmin.info.pl nie przetwarza, nie udostępnia ani nie wykorzystuje w celach marketingowych danych przekazywanych przez Użytkowników portalu. Możecie być pewni że w przyszłości także nie będziemy przetwarzać, udostępniać ani wykorzystywać waszych danych w jakichkolwiek innych celach, niż zwykłe zbieranie statystyk.&lt;/p>
+&lt;p>Portal sysadmin.info.pl nie ponosi odpowiedzialności za treści i opinie wyrażane przez użytkowników w komentarzach lub opisach. Są one wyłącznie własnością użytkowników, od których pochodzą.&lt;/p>
+&lt;h4 id="hugo-a-ogólne-rozporządzenie-o-ochronie-danych-osobowych-gdpr">Hugo a ogólne rozporządzenie o ochronie danych osobowych (GDPR)&lt;/h4>
+&lt;p>Strona sysadmin.info.pl jest generowana w generatorze statycznym Hugo.&lt;/p>
+&lt;p>Więcej informacji tutaj: &lt;a
+href = "https://gohugo.io/about/hugo-and-gdpr/"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+https://gohugo.io/about/hugo-and-gdpr/
+&lt;/span>
+&lt;/a>
+&lt;/p>
+&lt;p>Poniżej znajdują się wszystkie ustawienia prywatności oraz ich domyślna wartość. Ustawienia te zostały umieszczone w pliku config.toml strony sysadmin.info.pl&lt;/p>
+&lt;pre tabindex="0">&lt;code>[privacy]
+[privacy.disqus]
+disable = true
+[privacy.googleAnalytics]
+anonymizeIP = true
+disable = true
+respectDoNotTrack = true
+useSessionStorage = true
+[privacy.instagram]
+disable = true
+simple = true
+[privacy.twitter]
+disable = true
+enableDNT = true
+simple = true
+[privacy.vimeo]
+disable = true
+enableDNT = true
+simple = true
+[privacy.youtube]
+disable = false
+privacyEnhanced = false
+&lt;/code>&lt;/pre>&lt;h4 id="adresy-e-mail">Adresy E-mail&lt;/h4>
+&lt;p>Adresy E-mail podawane przez Użytkowników przy dodawaniu komentarzy, oraz rejestracji na forum lub portalu, będzie używany jedynie w celu przypomnienia hasła Użytkownika, oraz wysłania Newsletter’a – jeśli Użytkownik wyraził taką chęć. Adresy E-mail Użytkowników nie są i nie będą nigdzie publikowane, przetwarzane, sprzedawane, udostępniane za opłatą – w związku z czym nie musicie się obawiać dodawania do żadnych list mailingowych, otrzymywania sponsorowanych maili reklamowych, i wszelkiego innego niechcianego spamu.&lt;/p>
+&lt;h4 id="gromadzenie-danych-nie-osobowych">Gromadzenie danych nie-osobowych&lt;/h4>
+&lt;p>Podczas użytkowania portalu sysadmin.info.pl, zbierane są dane nie-osobowe które przeglądarki udostępniają, czyli:&lt;/p>
+&lt;ul>
+&lt;li>nazwa i wersja przeglądarki internetowej&lt;/li>
+&lt;li>ustawienia języka&lt;/li>
+&lt;li>strona odsyłająca&lt;/li>
+&lt;li>data i godzina wysłania żądania do serwera&lt;/li>
+&lt;li>IP z którego zostało wysłane żądanie&lt;/li>
+&lt;/ul>
+&lt;p>Adresy IP zbierane przez portal nie mają na celu identyfikacji naszych użytkowników, ani nie są nigdzie ujawniane. Jednakże przy dodawania komentarzy niezgodnych z netykietą, śmiecenia w komentarzach bądź na forum, przewidujemy możliwość zablokowania użytkowania portalu z danego adresu IP, lub w wypadku bardzo nachalnych graczy, nawet z całej puli IP.&lt;/p>
+&lt;h4 id="gromadzenie-danych-osobowych">Gromadzenie danych osobowych&lt;/h4>
+&lt;p>Podczas wypełniania formularza kontaktowego na portalu sysadmin.info.pl lub na jego forum, wymagamy podania przynajmniej adresu E-mail. Podawanie pozostałych danych w profilach, takich jak imię, nazwisko, adres strony internetowej, miejscowość, zawód, zainteresowania, AIM, Jabber, Google Talk – nie jest obowiązkowe, i tylko od Użytkownika zależy czy chce je podać i udostępnić innym.&lt;/p>
+&lt;h4 id="pliki-cookies">Pliki Cookies&lt;/h4>
+&lt;p>Na portalu sysadmin.info.pl używane są pliki cookies, tzw. ciasteczka – są to małe pliki tekstowe używane do zapisywania pewnych informacji na komputerze Użytkownika. Nie są one niebezpieczne dla Użytkownika ani jego komputera, nie są w nich przechowywane żadne dane osobowe, ich głównym zadaniem jest przetrzymywanie informacji, do których potem strona może się odnieść. Na naszym portalu ciasteczka mają następujące funkcje:&lt;/p>
+&lt;ul>
+&lt;li>przechowywania informacji/preferencji Użytkownika dodającego komentarz – w momencie dodania komentarza na komputerze Użytkownika jest zapisywany plik cookie, który przez niespełna rok przechowuje dane z nickiem, adresem email i stroną internetową Użytkownika – dzięki czemu nie trzeba tych danych wpisywać za każdym razem gdy chce się dodać następny komentarz.&lt;/li>
+&lt;li>przechowywania informacji o Użytkownikach zarejestrowanych/zalogowanych na portalu lub forum – przeglądarka może zapisać plik cookie zawierający login Użytkownika, podwójnie shashowane hasło, oraz klucz autoryzacji, dzięki czemu przy następnej wizycie, użytkownika nie będzie musiał ponownie wpisywać loginu oraz hasła, albo nawet jeśli sesja jeszcze nie wygasła, to nie będzie musiał się ponownie logować – tylko od razu będzie zalogowany na portalu lub forum.&lt;/li>
+&lt;/ul>
+&lt;p>Pliki cookies w nie umożliwiają identyfikacji Użytkowników odwiedzającej witrynę, i nie są w nich zapisywane żadne informacje, które mogły by taką identyfikację umożliwić. Zgodnie z art. 173 Ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne (Dz. U. Nr 171, poz. 1800) zapisywanie plików tekstowych na dysku komputera Użytkownika witryny jest dozwolone o ile Użytkownik zostanie o tym poinformowany. Warunkiem działania plików cookies jest ich akceptacja przez przeglądarkę oraz nieusuwanie ich z dysku komputera. Jeżeli Użytkownik nie chce udostępnić plików cookies, powinien taką opcję wyłączyć w przeglądarce nim odwiedzi nasz portal. Nieudostępnienie plików cookies przez przeglądarkę, albo ich skasowanie, możne powodować znaczne utrudnienia lub może nawet całkowicie uniemożliwiać korzystanie z naszego portalu oraz forum – za co nie ponosimy odpowiedzialności. Dlatego zalecamy mieć włączoną obsługę plików cookies.&lt;/p>
+&lt;h4 id="prawa-autorskie">Prawa autorskie&lt;/h4>
+&lt;p>Portal sysadmin.info.pl zawiera artykuły i poradniki napisane przez użytkowników wchodzących w skład Redakcji. Wszystkie treści zawarte na stronach portalu są przedmiotem praw autorskich przysługujących ich twórcy i podlegają ochronie zgodnie z prawem autorskim. Zabrania się kopiowania i udostępniania materiałów z portalu bez zgody od ich autora i zgody od administratora portalu.&lt;/p>
+&lt;p>Wszelkie materiały zawarte w serwisie portalu sysadmin.info.pl są bezpłatne. Użytkownicy oraz Redakcja portalu nie odpowiadają za jakiekolwiek szkody wynikłe z ich korzystania. Portal sysadmin.info.pl zastrzega sobie możliwość edycji i usuwania wpisów lub komentarzy oraz blokowania użytkowników, którzy naruszają regulamin Portalu, oraz zasady netykiety i powszechnie przyjęte normy kulturalnego zachowania.&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>general</category></item></channel></rss>

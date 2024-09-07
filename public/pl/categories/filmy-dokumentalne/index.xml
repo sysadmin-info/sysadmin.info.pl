@@ -1,310 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
-  <channel>
-    <title>Filmy dokumentalne on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
-    <link>https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/</link>
-    <description>Recent content in Filmy dokumentalne on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pl</language>
-    <copyright>©2024, <a
-
-	
-	
-		href = "https://sysadmin.info.pl/"
-
-		
-
-	
-
-	
-
-		target = "_blank"
-		rel = "nofollow noopener noreferrer"
-
-		>
-	
-	<span>
-		sysadmin
-	</span>
-
-</a>
- - All rights reserved</copyright>
-    <lastBuildDate>Thu, 06 Jul 2023 08:30:00 +0000</lastBuildDate>
-    <sy:updatePeriod>daily</sy:updatePeriod>
-    <sy:updateFrequency>1</sy:updateFrequency>
-    
-        <atom:link href="https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/index.xml" rel="self" type="application/rss+xml" />
-    
-
-      
-      <item>
-        <title>Kod wart miliardy dolarów</title>
-        <link>https://sysadmin.info.pl/pl/blog/kod-wart-miliardy-dolarow/</link>
-        <pubDate>Thu, 06 Jul 2023 08:30:00 +0000</pubDate>
-        
-        <atom:modified>Thu, 06 Jul 2023 08:30:00 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/kod-wart-miliardy-dolarow/</guid>
-        <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/E9Sei2-NjeE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;figcaption&gt;Kod wart miliardy dolarów&lt;/figcaption&gt;
-&lt;p&gt;Dwóch niemieckich pionierów komputerowych idzie do sądu w walce z pozornie niezwyciężonym przeciwnikiem, aby zostać uznanym za wynalazcę algorytmu Google Earth. Serial oświetla zarówno scenę hakerską w zjednoczonym Berlinie w latach 90-tych, jak i idealistyczny świat wczesnej Doliny Krzemowej oraz surową rzeczywistość wielomilionowego procesu.&lt;/p&gt;
-&lt;p&gt;Źródło: &lt;a href=&#34;https://www.netflix.com/pl/title/81074012&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Watch at Netflix&lt;/a&gt;&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/the-billion-dollar-code.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>Filmy dokumentalne</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Agenci chaosu</title>
-        <link>https://sysadmin.info.pl/pl/blog/agenci-chaosu/</link>
-        <pubDate>Mon, 21 Mar 2022 11:34:34 +0000</pubDate>
-        
-        <atom:modified>Mon, 21 Mar 2022 11:34:34 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/agenci-chaosu/</guid>
-        <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/M-OA7H8DoJM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;figcaption&gt;Agenci chaosu - zwiastun&lt;/figcaption&gt;
-&lt;p&gt;Wbrew pozorom nie jest to dokument o rosyjskiej ingerencji w wybory prezydenckie w USA w 2016 roku. Nazwałbym go odkryciem kart, ukazaniem prawdy o rosyjskiej inwazji i przyczynach wojny na Ukrainie najpierw w 2014 a potem w 2022. Warto zwrócić uwagę na działania farmy rosyjskich trolli - IRA (Internet Research Agency), dla których Ukraina była testowym polem bitwy w cyberprzestrzeni. Ukazano mniej i bardziej wyrafinowane metody stosowane przez Internet Research Agency.&lt;/p&gt;
-&lt;p&gt;Source: &lt;a href=&#34;https://www.hbomax.com/pl/pl/series/urn:hbo:series:GX1vL2wnwfavDcwEAAAMS&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Oglądaj na HBO MAX&lt;/a&gt;&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/agents-of-chaos.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>Filmy dokumentalne</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Idealna broń – film dokumentalny</title>
-        <link>https://sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</link>
-        <pubDate>Sat, 14 Nov 2020 17:25:29 +0000</pubDate>
-        
-        <atom:modified>Sat, 14 Nov 2020 17:25:29 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</guid>
-        <description>&lt;p&gt;Dokument oparty na bestsellerowej książce Davida E. Sangera, korespondenta ds. bezpieczeństwa narodowego New York Timesa, bada wzrost znaczenia cyberkonfliktów jako sposobu, w jaki współcześnie narody konkurują między sobą i wzajemnie się sabotują. W miarę wzrostu niepokojów związanych z wpływem cyberataków na wybory w USA w 2020, film przedstawia wywiady z czołowymi urzędnikami wojskowymi, wywiadowczymi i politykami. Nie brakuje w nim też relacji z “frontów” toczących się obecnie cyberwojen. Reżyserem dokumentu HBO jest John Maggio (serial dokumentalny Amerykańskie doświadczenia).&lt;/p&gt;
-&lt;p&gt;Źródło: &lt;a href=&#34;https://www.hbomax.com/pl/pl/feature/urn:hbo:feature:GX2pSUgq6241IugEAAACT&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Oglądaj na HBO Max&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;
-
-
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Filmy dokumentalne on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title><link>https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/</link><description>Recent content in Filmy dokumentalne on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description><generator>Hugo -- gohugo.io</generator><language>pl</language><copyright>©2024,<a href="https://sysadmin.info.pl/" target="_blank" rel="nofollow noopener noreferrer"><span>
+sysadmin</span></a>
+- All rights reserved</copyright><lastBuildDate>Thu, 06 Jul 2023 08:30:00 +0000</lastBuildDate><sy:updatePeriod>daily</sy:updatePeriod><sy:updateFrequency>1</sy:updateFrequency><atom:link href="https://sysadmin.info.pl/pl/categories/filmy-dokumentalne/index.xml" rel="self" type="application/rss+xml"/><item><title>Kod wart miliardy dolarów</title><link>https://sysadmin.info.pl/pl/blog/kod-wart-miliardy-dolarow/</link><pubDate>Thu, 06 Jul 2023 08:30:00 +0000</pubDate><atom:modified>Thu, 06 Jul 2023 08:30:00 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/kod-wart-miliardy-dolarow/</guid><description>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/E9Sei2-NjeE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;figcaption>Kod wart miliardy dolarów&lt;/figcaption>
+&lt;p>Dwóch niemieckich pionierów komputerowych idzie do sądu w walce z pozornie niezwyciężonym przeciwnikiem, aby zostać uznanym za wynalazcę algorytmu Google Earth. Serial oświetla zarówno scenę hakerską w zjednoczonym Berlinie w latach 90-tych, jak i idealistyczny świat wczesnej Doliny Krzemowej oraz surową rzeczywistość wielomilionowego procesu.&lt;/p>
+&lt;p>Źródło: &lt;a href="https://www.netflix.com/pl/title/81074012" target="_blank" rel="noreferrer noopener">Watch at Netflix&lt;/a>&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2023-thumbs/the-billion-dollar-code.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>Filmy dokumentalne</category></item><item><title>Agenci chaosu</title><link>https://sysadmin.info.pl/pl/blog/agenci-chaosu/</link><pubDate>Mon, 21 Mar 2022 11:34:34 +0000</pubDate><atom:modified>Mon, 21 Mar 2022 11:34:34 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/agenci-chaosu/</guid><description>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/M-OA7H8DoJM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;figcaption>Agenci chaosu - zwiastun&lt;/figcaption>
+&lt;p>Wbrew pozorom nie jest to dokument o rosyjskiej ingerencji w wybory prezydenckie w USA w 2016 roku. Nazwałbym go odkryciem kart, ukazaniem prawdy o rosyjskiej inwazji i przyczynach wojny na Ukrainie najpierw w 2014 a potem w 2022. Warto zwrócić uwagę na działania farmy rosyjskich trolli - IRA (Internet Research Agency), dla których Ukraina była testowym polem bitwy w cyberprzestrzeni. Ukazano mniej i bardziej wyrafinowane metody stosowane przez Internet Research Agency.&lt;/p>
+&lt;p>Source: &lt;a href="https://www.hbomax.com/pl/pl/series/urn:hbo:series:GX1vL2wnwfavDcwEAAAMS" target="_blank" rel="noreferrer noopener">Oglądaj na HBO MAX&lt;/a>&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2022-thumbs/agents-of-chaos.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>Filmy dokumentalne</category></item><item><title>Idealna broń – film dokumentalny</title><link>https://sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</link><pubDate>Sat, 14 Nov 2020 17:25:29 +0000</pubDate><atom:modified>Sat, 14 Nov 2020 17:25:29 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/idealna-bron-film-dokumentalny/</guid><description>&lt;p>Dokument oparty na bestsellerowej książce Davida E. Sangera, korespondenta ds. bezpieczeństwa narodowego New York Timesa, bada wzrost znaczenia cyberkonfliktów jako sposobu, w jaki współcześnie narody konkurują między sobą i wzajemnie się sabotują. W miarę wzrostu niepokojów związanych z wpływem cyberataków na wybory w USA w 2020, film przedstawia wywiady z czołowymi urzędnikami wojskowymi, wywiadowczymi i politykami. Nie brakuje w nim też relacji z “frontów” toczących się obecnie cyberwojen. Reżyserem dokumentu HBO jest John Maggio (serial dokumentalny Amerykańskie doświadczenia).&lt;/p>
+&lt;p>Źródło: &lt;a href="https://www.hbomax.com/pl/pl/feature/urn:hbo:feature:GX2pSUgq6241IugEAAACT" target="_blank" rel="noreferrer noopener">Oglądaj na HBO Max&lt;/a>&lt;/p>
+&lt;p>
 &lt;img
-  src=&#34;https://sysadmin.info.pl/images/2020/idealna-bron.webp&#34;
-  alt=&#34;Idealna broń – film dokumentalny&#34;
-  loading=&#34;lazy&#34;
-  decoding=&#34;async&#34;
-  width=&#34;499&#34;
-  height=&#34;734&#34;
-/&gt;
-&lt;/p&gt;
-&lt;figcaption&gt;Idealna broń – film dokumentalny&lt;/figcaption&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>Filmy dokumentalne</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Kevin Mitnick mówi o bezpieczeństwie w IT</title>
-        <link>https://sysadmin.info.pl/pl/blog/kevin-mitnick-mowi-o-bezpieczenstwie-w-it/</link>
-        <pubDate>Tue, 05 Nov 2019 21:48:12 +0000</pubDate>
-        
-        <atom:modified>Tue, 05 Nov 2019 21:48:12 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/kevin-mitnick-mowi-o-bezpieczenstwie-w-it/</guid>
-        <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/iFGve5MUUnE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;figcaption&gt;Kevin Mitnick mówi o bezpieczeństwie w IT&lt;/figcaption&gt;</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/kevin-mitnick.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>Filmy dokumentalne</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Umysł stojący za Linuksem - Linus Torvalds - TED</title>
-        <link>https://sysadmin.info.pl/pl/blog/umysl-stojacy-za-linuksem-linus-torvalds-ted/</link>
-        <pubDate>Tue, 05 Nov 2019 19:47:08 +0000</pubDate>
-        
-        <atom:modified>Tue, 05 Nov 2019 19:47:08 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/umysl-stojacy-za-linuksem-linus-torvalds-ted/</guid>
-        <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/o8NPllzkFhE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;figcaption&gt;Umysł stojący za Linuksem - Linus Torvalds - TED&lt;/figcaption&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linus-torvalds.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>Filmy dokumentalne</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Dzieci sieci – uzależnieni od Internetu – Dokument Lektor PL</title>
-        <link>https://sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</link>
-        <pubDate>Sun, 03 Nov 2019 09:39:45 +0000</pubDate>
-        
-        <atom:modified>Sun, 03 Nov 2019 09:39:45 +0000</atom:modified>
-        <guid>https://sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</guid>
-        <description>
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/jqctG3NnDa0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;figcaption&gt;China&amp;#8217;s Web Junkies: Internet Addiction Documentary&lt;/figcaption&gt;
-&lt;p&gt;Źródło: &lt;a href=&#34;https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; aria-label=&#34;https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html&#34;&gt;&lt;a
-
-	
-	
-		href = &#34;https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html&#34;
-
-		
-
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Polska wersja: &lt;a href=&#34;https://www.cda.pl/video/32674549b&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a
-
-	
-	
-		href = &#34;https://www.cda.pl/video/32674549b&#34;
-
-		
-
-	
-
-	
-
-		target = &#34;_blank&#34;
-		rel = &#34;nofollow noopener noreferrer&#34;
-
-		&gt;
-	
-	&lt;span&gt;
-		https://www.cda.pl/video/32674549b
-	&lt;/span&gt;
-
-&lt;/a&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-        
-        <dc:creator>sysadmin</dc:creator>
-        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/china-web-junkies.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>Filmy dokumentalne</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-
-    
-  </channel>
-</rss>
+src="https://sysadmin.info.pl/images/2020/idealna-bron.webp"
+alt="Idealna broń – film dokumentalny"
+loading="lazy"
+decoding="async"
+width="499"
+height="734"
+/>
+&lt;/p>
+&lt;figcaption>Idealna broń – film dokumentalny&lt;/figcaption></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>Filmy dokumentalne</category></item><item><title>Kevin Mitnick mówi o bezpieczeństwie w IT</title><link>https://sysadmin.info.pl/pl/blog/kevin-mitnick-mowi-o-bezpieczenstwie-w-it/</link><pubDate>Tue, 05 Nov 2019 21:48:12 +0000</pubDate><atom:modified>Tue, 05 Nov 2019 21:48:12 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/kevin-mitnick-mowi-o-bezpieczenstwie-w-it/</guid><description>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/iFGve5MUUnE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;figcaption>Kevin Mitnick mówi o bezpieczeństwie w IT&lt;/figcaption></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2019-thumbs/kevin-mitnick.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>Filmy dokumentalne</category></item><item><title>Umysł stojący za Linuksem - Linus Torvalds - TED</title><link>https://sysadmin.info.pl/pl/blog/umysl-stojacy-za-linuksem-linus-torvalds-ted/</link><pubDate>Tue, 05 Nov 2019 19:47:08 +0000</pubDate><atom:modified>Tue, 05 Nov 2019 19:47:08 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/umysl-stojacy-za-linuksem-linus-torvalds-ted/</guid><description>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/o8NPllzkFhE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;figcaption>Umysł stojący za Linuksem - Linus Torvalds - TED&lt;/figcaption></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2019-thumbs/linus-torvalds.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>Filmy dokumentalne</category></item><item><title>Dzieci sieci – uzależnieni od Internetu – Dokument Lektor PL</title><link>https://sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</link><pubDate>Sun, 03 Nov 2019 09:39:45 +0000</pubDate><atom:modified>Sun, 03 Nov 2019 09:39:45 +0000</atom:modified><guid>https://sysadmin.info.pl/pl/blog/dzieci-sieci-uzaleznieni-od-internetu-dokument-lektor-pl/</guid><description>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/jqctG3NnDa0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;figcaption>China&amp;#8217;s Web Junkies: Internet Addiction Documentary&lt;/figcaption>
+&lt;p>Źródło: &lt;a href="https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html" target="_blank" rel="noreferrer noopener" aria-label="https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html">&lt;a
+href = "https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html
+&lt;/span>
+&lt;/a>
+&lt;/a>&lt;/p>
+&lt;p>Polska wersja: &lt;a href="https://www.cda.pl/video/32674549b" target="_blank" rel="noreferrer noopener">&lt;a
+href = "https://www.cda.pl/video/32674549b"
+target = "_blank"
+rel = "nofollow noopener noreferrer"
+>
+&lt;span>
+https://www.cda.pl/video/32674549b
+&lt;/span>
+&lt;/a>
+&lt;/a>&lt;/p></description><dc:creator>sysadmin</dc:creator><media:content url="https://sysadmin.info.pl/images/2019-thumbs/china-web-junkies.webp" medium="image"><media:title type="html">featured image</media:title></media:content><category>Filmy dokumentalne</category></item></channel></rss>
