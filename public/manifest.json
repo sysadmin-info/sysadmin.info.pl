@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "default_locale": "en",
   "description": "Hugo blog theme with rich features",
-  "start_url": "https:/sysadmin.info.pl",
+  "start_url": "https://sysadmin.info.pl",
   "icons": [
     {
       "src": "favicon/android-icon-36x36.png",

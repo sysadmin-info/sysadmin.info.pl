@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Qemu KVM on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/categories/qemu-kvm/</link>
+    <description>Recent content in Qemu KVM on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Tue, 25 Oct 2022 11:39:32 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/categories/qemu-kvm/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Jak prawidłowo zainstalować maszynę wirtualną w QEMU KVM</title>
+        <link>https://sysadmin.info.pl/pl/blog/jak-prawidlowo-zainstalowac-maszyn%C4%99-wirtualna-w-qemu-kvm/</link>
+        <pubDate>Tue, 25 Oct 2022 11:39:32 +0000</pubDate>
+        
+        <atom:modified>Tue, 25 Oct 2022 11:39:32 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/jak-prawidlowo-zainstalowac-maszyn%C4%99-wirtualna-w-qemu-kvm/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ZYafBlfFfcQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;W tym filmie wyjaśniłem, jak prawidłowo zainstalować wirtualną maszynę QEMU KVM. Przedstawiłem dwie metody instalacji i szczegółowo opisałem, jak to zrobić.&lt;/figcaption&gt;
+&lt;p&gt;preallocation=metadata – alokuje przestrzeń wymaganą przez metadane, ale nie alokuje przestrzeni na dane. Jest to najszybszy sposób przydzielania, ale najwolniejszy dla zapisów gościa. Przeczytaj artykuł: &lt;a href=&#34;https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbDJJQVBNajRia2VFUVdsRTJVX1hCbU5TaUtBd3xBQ3Jtc0tsMjEtLUFxXzVLRFlnNU9XX2l3dFNHcnUzN3JkdVBpQnE0bWVOWTcyUEpMcElsZTBUODVtVzZJNEowWmdfdmptVE83NWt1TDJLV2ZwNERTRzVLal93SEVtcjQtY21EQ1V4YkdIMkE3WUNBaU1lVm8tdw&amp;q=https%3A%2F%2Fwww.jamescoyle.net%2Fhow-to%2F1810-qcow2-disk-images-and-performance&amp;v=ZYafBlfFfcQ&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.jamescoyle.net/how-to/181&amp;amp;#8230;&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.jamescoyle.net/how-to/181&amp;amp;#8230;
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;model=virtio virtualport_type=openvswitch wyjaśniono tutaj: &lt;a href=&#34;https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbmF6Y2VQOVlXQWFHVTNrMGxNNDAwcXFCN3lBQXxBQ3Jtc0ttR2RyQ3BlTE50Tm5BbDViVEhBQVdLM2IzVUJieHR0VzJYMElDNEo2Q1UydVgxUlVEeEkwdUxKTWdEOE9JR0huc2I0WG9ITXgxeU9BMjg3eldYYW00SXhPSm44SDZSbmpSQ28yVUg1V2QwdW5wMS1SQQ&amp;q=https%3A%2F%2Fwww.mankier.com%2F1%2Fvirt-install%23Networking_Options&amp;v=ZYafBlfFfcQ&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.mankier.com/1/virt-instal&amp;amp;#8230;&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.mankier.com/1/virt-instal&amp;amp;#8230;
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;/p&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/vm-in-qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Jak naprawić konfigurację sieci maszyny wirtualnej QEMU KVM za pomocą pliku xml</title>
+        <link>https://sysadmin.info.pl/pl/blog/jak-naprawic-konfiguracje-sieci-maszyny-wirtualnej-qemu-kvm-za-pomoca-pliku-xml/</link>
+        <pubDate>Sat, 22 Oct 2022 11:36:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 22 Oct 2022 11:36:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/jak-naprawic-konfiguracje-sieci-maszyny-wirtualnej-qemu-kvm-za-pomoca-pliku-xml/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/KZH8zKsPPuc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;W tym wideo wyjaśniłem problem związany z konfiguracją sieciową QEMU KVM i typem bezpośrednim oraz zaproponowałem rozwiązanie poprzez edycję konfiguracji w pliku xml&lt;/figcaption&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-fix.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Problem z typem direct w konfiguracji sieci QEMU KVM wyjaśniony</title>
+        <link>https://sysadmin.info.pl/pl/blog/problem-z-typem-direct-w-konfiguracji-sieci-qemu-kvm-wyjasniony/</link>
+        <pubDate>Sat, 22 Oct 2022 11:31:00 +0000</pubDate>
+        
+        <atom:modified>Sat, 22 Oct 2022 11:31:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/problem-z-typem-direct-w-konfiguracji-sieci-qemu-kvm-wyjasniony/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/cjgOVvfKOik&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;W tym wideo wyjaśniłem problem związany z konfiguracją sieci QEMU KVM i typem direct.&lt;/figcaption&gt;
+&lt;p&gt;Instrukcja dla polecenia virt-install:&lt;br /&gt;
+&lt;a
+
+	
+	
+		href = &#34;https://www.mankier.com/1/virt-install#Networking_Options&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.mankier.com/1/virt-install#Networking_Options
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/p&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm-network-config-explained.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Jak zainstalować QEMU KVM i skonfigurować maszynę wirtualną w openSUSE 15.4</title>
+        <link>https://sysadmin.info.pl/pl/blog/jak-zainstalowac-qemu-kvm-i-skonfigurowac-maszyn%C4%99-wirtualna-w-opensuse-15-4/</link>
+        <pubDate>Mon, 17 Oct 2022 11:33:00 +0000</pubDate>
+        
+        <atom:modified>Mon, 17 Oct 2022 11:33:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/jak-zainstalowac-qemu-kvm-i-skonfigurowac-maszyn%C4%99-wirtualna-w-opensuse-15-4/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/fTzmy6F5Ltw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;Jak zainstalować QEMU KVM i skonfigurować maszynę wirtualną w openSUSE 15.4&lt;/figcaption&gt;</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/qemu-kvm.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>OpenvSwitch on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/categories/openvswitch/</link>
+    <description>Recent content in OpenvSwitch on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Sat, 15 Oct 2022 14:36:56 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/categories/openvswitch/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Jak skonfigurować i uruchomić OpenvSwitch w Debian 11</title>
+        <link>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-i-uruchomic-openvswitch-w-debian-11/</link>
+        <pubDate>Sat, 15 Oct 2022 14:36:56 +0000</pubDate>
+        
+        <atom:modified>Sat, 15 Oct 2022 14:36:56 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-i-uruchomic-openvswitch-w-debian-11/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ogFsgKaRk-8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;Wideo wyjaśnia, jak prawidłowo zainstalować openvswitch w Debian 11 i skonfigurować go zgodnie z dobrą praktyką. Ujawniam informacje, co powoduje nieprzyjemne zachowanie OpenvSwitch.&lt;/figcaption&gt;
+&lt;p&gt;Skrypt, który zrobi wszystko za ciebie: &lt;a href=&#34;https://github.com/sysadmin-info/openvswitch/blob/main/ovs-debian.sh&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://github.com/sysadmin-info/openvswitch/blob/main/ovs-debian.sh&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://github.com/sysadmin-info/openvswitch/blob/main/ovs-debian.sh
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pobierz go na serwer, wykonaj chmod +x ovs-debian.sh i uruchom ./ovs-debian.sh&lt;/p&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch-debian.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Jak skonfigurować i uruchomić OpenvSwitch w openSUSE 15.4</title>
+        <link>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-i-uruchomic-openvswitch-w-opensuse-15-4/</link>
+        <pubDate>Thu, 13 Oct 2022 11:00:08 +0000</pubDate>
+        
+        <atom:modified>Thu, 13 Oct 2022 11:00:08 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/jak-skonfigurowac-i-uruchomic-openvswitch-w-opensuse-15-4/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/3kh1AvI0otA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;Wideo wyjaśnia, jak prawidłowo zainstalować openvswitch w openSUSE 15.4 i skonfigurować go zgodnie z dobrą praktyką. Ujawniam informacje, co powoduje nieprzyjemne zachowanie OpenvSwitch.&lt;/figcaption&gt;
+&lt;p&gt;Skrypt, który zrobi wszystko za ciebie: &lt;a href=&#34;https://github.com/sysadmin-info/openvswitch/blob/main/ovs-suse.sh&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://github.com/sysadmin-info/openvswitch/blob/main/ovs-suse.sh&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://github.com/sysadmin-info/openvswitch/blob/main/ovs-suse.sh
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pobierz go na serwer, wykonaj chmod +x ovs-suse.sh i uruchom ./ovs-suse.sh&lt;/p&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/openvswitch.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>OpenvSwitch</category>
+            
+          
+        
+        
+          
+            
+              <category>Qemu KVM</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

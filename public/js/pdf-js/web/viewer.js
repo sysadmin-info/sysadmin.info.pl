@@ -8,7 +8,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http:/www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,7 +20,7 @@
  * JavaScript code in this page
  */
 
-/******/ (() => { / webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
@@ -1549,7 +1549,7 @@ const PDFViewerApplication = {
 };
 exports.PDFViewerApplication = PDFViewerApplication;
 {
-  const HOSTED_VIEWER_ORIGINS = ["null", "http:/mozilla.github.io", "https:/mozilla.github.io"];
+  const HOSTED_VIEWER_ORIGINS = ["null", "http://mozilla.github.io", "https://mozilla.github.io"];
   var validateFileURL = function (file) {
     if (!file) {
       return;
@@ -5935,7 +5935,7 @@ class PDFHistory {
     let newUrl;
     if (this._updateUrl && destination?.hash) {
       const baseUrl = document.location.href.split("#")[0];
-      if (!baseUrl.startsWith("file:/")) {
+      if (!baseUrl.startsWith("file://")) {
         newUrl = `${baseUrl}#${destination.hash}`;
       }
     }
@@ -12546,7 +12546,7 @@ function download(blobUrl, filename) {
 class DownloadManager {
   #openBlobUrls = new WeakMap();
   downloadUrl(url, filename) {
-    if (!(0, _pdfjsLib.createValidAbsoluteUrl)(url, "http:/example.com")) {
+    if (!(0, _pdfjsLib.createValidAbsoluteUrl)(url, "http://example.com")) {
       console.error(`downloadUrl - not a valid URL: ${url}`);
       return;
     }
@@ -13702,33 +13702,33 @@ function getXfaHtmlForPrinting(printContainer, pdfDocument) {
 /***/ })
 /******/ 	]);
 /************************************************************************/
-/******/ 	/ The module cache
+/******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
 /******/ 	
-/******/ 	/ The require function
+/******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-/******/ 		/ Check if module is in cache
+/******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
-/******/ 		/ Create a new module (and put it into the cache)
+/******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			/ no module.id needed
-/******/ 			/ no module.loaded needed
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
-/******/ 		/ Execute the module function
+/******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
-/******/ 		/ Return the exports of the module
+/******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-/ This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 var exports = __webpack_exports__;
 
@@ -13909,4 +13909,4 @@ if (document.readyState === "interactive" || document.readyState === "complete")
 
 /******/ })()
 ;
-/# sourceMappingURL=viewer.js.map
+//# sourceMappingURL=viewer.js.map

@@ -13,6 +13,9 @@
   <script defer src="{{ $fuse.RelPermalink }}"></script>
 {{ end }}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script defer src="{{ "/js/search.js" | relURL }}"></script>
+
 {{ $enquire := resources.Get "js/enquire.min.js" | resources.Fingerprint }}
 <script src="{{ $enquire.RelPermalink }}"></script>
 {{ $lazysizes := resources.Get "js/lazysizes.min.js" | resources.Fingerprint }}

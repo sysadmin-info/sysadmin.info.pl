@@ -1,54 +1,104 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
-  xmlns:atom="http:/www.w3.org/2005/Atom" 
-  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http:/search.yahoo.com/mrss/">
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Documentaries on Sysadmin - Linux administration, security and hardening</title>
-    <link>https:/sysadmin.info.pl/en/categories/documentaries/</link>
+    <link>https://sysadmin.info.pl/en/categories/documentaries/</link>
     <description>Recent content in Documentaries on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
-    <lastBuildDate>Mon, 21 Mar 2022 11:36:01 +0000</lastBuildDate>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Thu, 06 Jul 2023 08:20:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
     
-        <atom:link href="https:/sysadmin.info.pl/en/categories/documentaries/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sysadmin.info.pl/en/categories/documentaries/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
+        <title>The Billion Dollar Code</title>
+        <link>https://sysadmin.info.pl/en/blog/the-billion-dollar-code/</link>
+        <pubDate>Thu, 06 Jul 2023 08:20:00 +0000</pubDate>
+        
+        <atom:modified>Thu, 06 Jul 2023 08:20:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/the-billion-dollar-code/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/iDvPvqImb-4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;The Billion Dollar Code&lt;/figcaption&gt;
+&lt;p&gt;Two German computer pioneers who go to court in the fight against an apparently invincible opponent in order to be recognized as the inventor of the Google Earth algorithm. The series illuminates both the hacker scene in post-reunification Berlin in the 90s, as well as the idealistic world of early Silicon Valley and the harsh reality of a multi-million dollar process.&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://www.netflix.com/title/81074012&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Watch at Netflix&lt;/a&gt;&lt;/p&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/the-billion-dollar-code.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Documentaries</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Agents of chaos</title>
-        <link>https:/sysadmin.info.pl/en/blog/agents-of-chaos/</link>
+        <link>https://sysadmin.info.pl/en/blog/agents-of-chaos/</link>
         <pubDate>Mon, 21 Mar 2022 11:36:01 +0000</pubDate>
         
         <atom:modified>Mon, 21 Mar 2022 11:36:01 +0000</atom:modified>
-        <guid>https:/sysadmin.info.pl/en/blog/agents-of-chaos/</guid>
-        <description>Agents of chaos - trailerDespite appearances, this is not a documentary about Russian interference in the 2016 US presidential election. I would call it a revealing of the cards, showing the truth about the Russian invasion and the reasons for the war in Ukraine first in 2014 and then in 2022. It is worth noting the activities of the Russian troll farm - the IRA (Internet Research Agency), for which Ukraine was a test battlefield in cyberspace.</description>
+        <guid>https://sysadmin.info.pl/en/blog/agents-of-chaos/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/M-OA7H8DoJM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;Agents of chaos - trailer&lt;/figcaption&gt;
+&lt;p&gt;Despite appearances, this is not a documentary about Russian interference in the 2016 US presidential election. I would call it a revealing of the cards, showing the truth about the Russian invasion and the reasons for the war in Ukraine first in 2014 and then in 2022. It is worth noting the activities of the Russian troll farm - the IRA (Internet Research Agency), for which Ukraine was a test battlefield in cyberspace. Less and more sophisticated methods used by the Internet Research Agency were shown.&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://www.hbo.com/agents-of-chaos&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Watch at HBO MAX&lt;/a&gt;&lt;/p&gt;
+</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https:/sysadmin.info.pl/images/2022-thumbs/agents-of-chaos.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://sysadmin.info.pl/images/2022-thumbs/agents-of-chaos.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-        
-          
-            
-              <category>Agents of chaos</category>
-            
-          
-            
-              <category>national security</category>
-            
-          
-            
-              <category>cyberconflicts</category>
-            
-          
-            
-              <category>cyberattacks</category>
-            
-          
         
         
           
@@ -66,36 +116,56 @@
       
       <item>
         <title>The perfect weapon</title>
-        <link>https:/sysadmin.info.pl/en/blog/the-perfect-weapon/</link>
+        <link>https://sysadmin.info.pl/en/blog/the-perfect-weapon/</link>
         <pubDate>Sat, 14 Nov 2020 17:29:44 +0000</pubDate>
         
         <atom:modified>Sat, 14 Nov 2020 17:29:44 +0000</atom:modified>
-        <guid>https:/sysadmin.info.pl/en/blog/the-perfect-weapon/</guid>
-        <description>Based on a best-selling book by New York Times national security correspondent David E. Sanger, The Perfect Weapon explores the rise of cyber conflict as the primary way nations now compete with and sabotage one another.
-Directed by Emmy-winning filmmaker John Maggio (Panic: The Untold Story of the 2008 Financial Crisis) and featuring interviews with top military, intelligence, and political officials on the frontlines of cyberterrorism, the documentary brings to light the combatants and innocent victims caught in the crosshairs of a hidden war that has been going on for decades — a war that America started, but has no idea how to finish.</description>
+        <guid>https://sysadmin.info.pl/en/blog/the-perfect-weapon/</guid>
+        <description>&lt;p&gt;Based on a best-selling book by &lt;em&gt;New York Times&lt;/em&gt; national security correspondent David E. Sanger, &lt;em&gt;The Perfect Weapon&lt;/em&gt; explores the rise of cyber conflict as the primary way nations now compete with and sabotage one another.&lt;/p&gt;
+&lt;p&gt;Directed by Emmy-winning filmmaker John Maggio (&lt;em&gt;&lt;a href=&#34;https://www.hbo.com/vice/special-reports/panic-the-untold-story-of-the-2008-financial-crisis&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;Panic: The Untold Story of the 2008 Financial Crisis&lt;/a&gt;&lt;/em&gt;) and featuring interviews with top military, intelligence, and political officials on the frontlines of cyberterrorism, the documentary brings to light the combatants and innocent victims caught in the crosshairs of a hidden war that has been going on for decades — a war that America started, but has no idea how to finish.&lt;/p&gt;
+&lt;p&gt;Traveling from the deserts of Iran and Las Vegas to the back alleys of Beijing and Moscow, the film chronicles America’s pursuit of enemies who have plotted against its institutions, its economy, and its democracy. A never-before-seen look inside the secret world of spies, hackers, and scammers in the lead-up to the 2020 U.S. elections, for which fear of cyberattacks has mounted to an all-time high, &lt;em&gt;The Perfect Weapon&lt;/em&gt; is a timely reflection on the ultimate price — and potential „victors” — of this high-stakes conflict.&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://www.hbo.com/movies/the-perfect-weapon&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.hbo.com/movies/the-perfect-weapon&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.hbo.com/movies/the-perfect-weapon
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+&lt;img
+  src=&#34;https://sysadmin.info.pl/images/2020/perfect-weapon.webp&#34;
+  alt=&#34;Perfect weapon - documentary movie&#34;
+  loading=&#34;lazy&#34;
+  decoding=&#34;async&#34;
+  width=&#34;999&#34;
+  height=&#34;1467&#34;
+/&gt;
+&lt;/p&gt;
+&lt;figcaption&gt;Perfect weapon - documentary movie&lt;/figcaption&gt;
+</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https:/sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://sysadmin.info.pl/images/2020-thumbs/perfect-weapon.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-        
-          
-            
-              <category>perfect weapon</category>
-            
-          
-            
-              <category>national security</category>
-            
-          
-            
-              <category>cyberconflicts</category>
-            
-          
-            
-              <category>cyberattacks</category>
-            
-          
         
         
           
@@ -113,27 +183,22 @@ Directed by Emmy-winning filmmaker John Maggio (Panic: The Untold Story of the 2
       
       <item>
         <title>Kevin Mitnick talks about security in IT</title>
-        <link>https:/sysadmin.info.pl/en/blog/kevin-mitnick-talks-about-security-in-it/</link>
+        <link>https://sysadmin.info.pl/en/blog/kevin-mitnick-talks-about-security-in-it/</link>
         <pubDate>Tue, 05 Nov 2019 21:48:12 +0000</pubDate>
         
         <atom:modified>Tue, 05 Nov 2019 21:48:12 +0000</atom:modified>
-        <guid>https:/sysadmin.info.pl/en/blog/kevin-mitnick-talks-about-security-in-it/</guid>
-        <description> Kevin Mitnick talks about security in IT</description>
+        <guid>https://sysadmin.info.pl/en/blog/kevin-mitnick-talks-about-security-in-it/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/iFGve5MUUnE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;Kevin Mitnick talks about security in IT&lt;/figcaption&gt;</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/kevin-mitnick.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/kevin-mitnick.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-        
-          
-            
-              <category>Kevin Mitnick</category>
-            
-          
-            
-              <category>security</category>
-            
-          
         
         
           
@@ -151,23 +216,23 @@ Directed by Emmy-winning filmmaker John Maggio (Panic: The Untold Story of the 2
       
       <item>
         <title>The mind behind Linux – Linus Torvalds – TED</title>
-        <link>https:/sysadmin.info.pl/en/blog/the-mind-behind-linux-linus-torvalds-ted/</link>
+        <link>https://sysadmin.info.pl/en/blog/the-mind-behind-linux-linus-torvalds-ted/</link>
         <pubDate>Tue, 05 Nov 2019 19:47:08 +0000</pubDate>
         
         <atom:modified>Tue, 05 Nov 2019 19:47:08 +0000</atom:modified>
-        <guid>https:/sysadmin.info.pl/en/blog/the-mind-behind-linux-linus-torvalds-ted/</guid>
-        <description> The mind behind Linux – Linus Torvalds – TED</description>
+        <guid>https://sysadmin.info.pl/en/blog/the-mind-behind-linux-linus-torvalds-ted/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/o8NPllzkFhE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;The mind behind Linux – Linus Torvalds – TED&lt;/figcaption&gt;
+</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/linus-torvalds.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/linus-torvalds.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-        
-          
-            
-              <category>Linus Torvalds</category>
-            
-          
         
         
           
@@ -185,23 +250,46 @@ Directed by Emmy-winning filmmaker John Maggio (Panic: The Untold Story of the 2
       
       <item>
         <title>China’s Web Junkies: Internet Addiction Documentary</title>
-        <link>https:/sysadmin.info.pl/en/blog/chinas-web-junkies-internet-addiction-documentary/</link>
+        <link>https://sysadmin.info.pl/en/blog/chinas-web-junkies-internet-addiction-documentary/</link>
         <pubDate>Sun, 03 Nov 2019 09:43:35 +0000</pubDate>
         
         <atom:modified>Sun, 03 Nov 2019 09:43:35 +0000</atom:modified>
-        <guid>https:/sysadmin.info.pl/en/blog/chinas-web-junkies-internet-addiction-documentary/</guid>
-        <description>China&amp;#8217;s Web Junkies: Internet Addiction DocumentarySource: https:/www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html</description>
+        <guid>https://sysadmin.info.pl/en/blog/chinas-web-junkies-internet-addiction-documentary/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/jqctG3NnDa0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figcaption&gt;China&amp;#8217;s Web Junkies: Internet Addiction Documentary&lt;/figcaption&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34; aria-label=&#34;https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.nytimes.com/2014/01/20/opinion/chinas-web-junkies.html
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;/p&gt;
+</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/china-web-junkies.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/china-web-junkies.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-        
-          
-            
-              <category>Internet Addiction</category>
-            
-          
         
         
           

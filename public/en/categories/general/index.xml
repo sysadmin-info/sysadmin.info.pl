@@ -1,43 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" 
-  xmlns:content="http:/purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http:/purl.org/dc/elements/1.1/" 
-  xmlns:atom="http:/www.w3.org/2005/Atom" 
-  xmlns:sy="http:/purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http:/search.yahoo.com/mrss/">
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>general on Sysadmin - Linux administration, security and hardening</title>
-    <link>https:/sysadmin.info.pl/en/categories/general/</link>
+    <link>https://sysadmin.info.pl/en/categories/general/</link>
     <description>Recent content in general on Sysadmin - Linux administration, security and hardening</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>©2023, <a href="https:/sysadmin.info.pl/">sysadmin</a> - All rights reserved</copyright>
-    <lastBuildDate>Sun, 19 Mar 2023 22:05:03 +0000</lastBuildDate>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Wed, 06 Dec 2023 13:40:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
     
-        <atom:link href="https:/sysadmin.info.pl/en/categories/general/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sysadmin.info.pl/en/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
+        <title>Navigating Waves of Change: A Journey Through IT from 2002 to 2023</title>
+        <link>https://sysadmin.info.pl/en/blog/navigating-waves-of-change-a-journey-through-it-from-2002-to-2023/</link>
+        <pubDate>Wed, 06 Dec 2023 13:40:00 +0000</pubDate>
+        
+        <atom:modified>Wed, 06 Dec 2023 13:40:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/blog/navigating-waves-of-change-a-journey-through-it-from-2002-to-2023/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/75QJqIuq_E0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Good day, everyone. I&amp;rsquo;m Adrian, and I&amp;rsquo;ve been navigating the dynamic world of IT since 2002, currently serving as a Quality Assurance Specialist at Fujitsu. My journey, however, began in the early 1990s with a Commodore 64, using Basic to turn it into a synthesizer, sparking my lifelong passion for IT and system security.&lt;/p&gt;
+&lt;p&gt;In 2002, the IT landscape was drastically different. IRC and Netscape Navigator were our gateways to the digital world, and websites were a mix of bright colors and simple layouts. This was the era of bulky monitors and dial-up internet, where Linux was emerging as a robust alternative to mainstream operating systems.&lt;/p&gt;
+&lt;p&gt;As I honed my skills in Linux, the world witnessed transformative changes. The launch of smartphones and the advent of social media revolutionized how we communicate and access information. Cloud computing emerged, reshaping data storage and services, while Linux solidified its presence in servers and later, in cloud infrastructure.&lt;/p&gt;
+&lt;p&gt;Around the mid-2000s, cybersecurity became paramount as digital threats evolved. My interest in system security deepened, mirroring the industry&amp;rsquo;s pivot towards robust security protocols and practices.&lt;/p&gt;
+&lt;p&gt;The 2010s saw the rise of Big Data and AI, transforming how we process information and make decisions. Kubernetes and Docker revolutionized software deployment, aligning perfectly with my work in Quality Assurance and Research &amp;amp; Development.&lt;/p&gt;
+&lt;p&gt;As we stepped into the 2020s, remote work became the norm, catalyzed by global events. This shift demanded more secure, scalable, and flexible IT infrastructures – a challenge that Linux and cloud technologies were ready to meet.&lt;/p&gt;
+&lt;p&gt;Looking ahead, we stand at the cusp of new frontiers like quantum computing and further advancements in AI. The IT landscape continues to evolve at a breathtaking pace, and as I share my knowledge through tutorials and community engagement, I remain as passionate as ever about learning and adapting.&lt;/p&gt;
+&lt;p&gt;In closing, whether it&amp;rsquo;s delving into science fiction, exploring the cosmos through astronomy, or savoring a cup of Brazilian Yellow Bourbon coffee, my journey in IT is interwoven with curiosity and a relentless pursuit of knowledge.&lt;/p&gt;
+&lt;p&gt;As we look towards the future, let&amp;rsquo;s embrace the continuous learning and adaptability that the ever-evolving world of IT demands. Thank you for joining me on this journey through time, technology, and transformation.&lt;/p&gt;
+&lt;p&gt;In closing, whether it&amp;rsquo;s delving into science fiction, exploring the cosmos through astronomy, or savoring a cup of Brazilian Yellow Bourbon coffee, my journey in IT is interwoven with curiosity and a relentless pursuit of knowledge.&lt;/p&gt;
+&lt;p&gt;As we look towards the future, let&amp;rsquo;s embrace the continuous learning and adaptability that the ever-evolving world of IT demands. Thank you for joining me on this journey through time, technology, and transformation. Your engagement and passion for the field make our shared journey all the more enriching.&lt;/p&gt;
+&lt;p&gt;Thank you very much for your time and attention. I wish you all a wonderful day or night, filled with inspiration and continued curiosity. Stay passionate, stay curious!&lt;/p&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/navigating.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>general</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Welcome to the Sysadmin blog</title>
-        <link>https:/sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</link>
+        <link>https://sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</link>
         <pubDate>Sun, 19 Mar 2023 22:05:03 +0000</pubDate>
         
         <atom:modified>Sun, 19 Mar 2023 22:05:03 +0000</atom:modified>
-        <guid>https:/sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</guid>
-        <description>Hi,
-What follows is history. More than 3 years have passed since then. Is that a lot or a little? For me it has changed a lot, as I managed to move to the third line at Fujitsu and worked more than a year in the Linux team and then moved to Research and Development, where I now work as Quality Assurance, but basically my work is still related to Linux, only that I now work with SLES and open SUSE.</description>
+        <guid>https://sysadmin.info.pl/en/blog/welcome-to-the-sysadmin-blog/</guid>
+        <description>&lt;p&gt;Hi,&lt;/p&gt;
+&lt;p&gt;What follows is history. More than 3 years have passed since then. Is that a lot or a little? For me it has changed a lot, as I managed to move to the third line at Fujitsu and worked more than a year in the Linux team and then moved to Research and Development, where I now work as Quality Assurance, but basically my work is still related to Linux, only that I now work with SLES and open SUSE. At home, I currently have a Raspberry Pi 4b rev 1.4 with 8 GB RAM and a 120 GB SSD, on which Debian 11, Home Assistant Supervised and a couple of other things are installed, and a Fujitsu Esprimo Q920 with 16 GB RAM and a 512 GB SSD, on which I have Proxmox with virtual machines such as a multi-node Wazuh cluster though, and Portainer, which I use to quickly put up Docker containers. I&amp;rsquo;ve managed to get through installing the system on several VPS I&amp;rsquo;ve purchased. I&amp;rsquo;ve set up a mail server on Postfix as well as Dovecot, Dovecot Sieve, Postgrey, SpamAssassin, ClamAV, etc. I also installed Apache and Nginx, which I then secured, so called hardening. I learned about OpenvSwitch, Qemu KVM, Proxmox, ESXi, Zabbix, Zephyr Enterprise, Jenkins, Selenium Grid, Confluence, Jira and many other tools and solutions. I have gone through the management of old machines such as Solaris, SCO_SV, old CentOS and Red Hat (versions 4, 5, 6, 7). I&amp;rsquo;ve learned a lot of things and I&amp;rsquo;m still learning. I am not standing still. I&amp;rsquo;m developing the Technology Stack. I&amp;rsquo;m learning AWS and how to configure environments that are already more advanced in terms of security. I don&amp;rsquo;t program, although writing code in Java, Python, Bash, C is not a problem for me. It&amp;rsquo;s just that programming is not my passion. My passion is Linux and the extensive security associated with it. OSINT, although I know it, is not something I do either, because it&amp;rsquo;s not a challenge for me and it&amp;rsquo;s not my role to seek people out over the Internet. If someone has more knowledge than me, but does not respect me, is not cultured and hides behind an illness, which I have personally encountered, in addition, shows elementary deficiencies in reading with understanding, is a dinosaur and presses SELinux or AppArmor to beginners, this person has nothing to look for here. Netiquette such a person should have learned at the very beginning, because it is the basis of the Internet. Let&amp;rsquo;s respect each other, because this is the way to professionalism. Plus the ability to control one&amp;rsquo;s own emotions, and the quote of Master Yoda &amp;ldquo;Do or do not, there is no try&amp;rdquo; - is the road to success.&lt;/p&gt;
+&lt;p&gt;Old post from September 2019:&lt;/p&gt;
+&lt;p&gt;This blog will focus on Linux server administration. I will focus on popular distributions such as Debian 9.8.0, CentOS 7.6, Fedora 29. Of course, I won&amp;rsquo;t stop there, as I still have a RHEL (Red Hat Enterprise Linux) 7.7 instance on the Virtual Box.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll describe the solutions I&amp;rsquo;ve implemented at home on three laptops that act as servers at home for self-study purposes. In addition, I bought myself a VPS, on which I set up an environment for myself to host this very site. I also intend to buy another VPS in the future and move the installation of the mail server and Samba to one machine. Ultimately, I want to shut down the other two laptops (mail server and Samba), hide them in a drawer and have everything online.&lt;/p&gt;
+</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/sysadmin-logo.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
-        
-          
-            
-              <category>sysadmin</category>
-            
-          
         
         
           
@@ -55,22 +122,94 @@ What follows is history. More than 3 years have passed since then. Is that a lot
       
       <item>
         <title>Privacy policy</title>
-        <link>https:/sysadmin.info.pl/en/privacy/</link>
-        <pubDate>Thu, 07 Nov 2019 08:13:36 +0000</pubDate>
+        <link>https://sysadmin.info.pl/en/privacy/</link>
+        <pubDate>Sat, 21 Sep 2019 19:24:59 +0000</pubDate>
         
-        <atom:modified>Thu, 07 Nov 2019 08:13:36 +0000</atom:modified>
-        <guid>https:/sysadmin.info.pl/en/privacy/</guid>
-        <description>Privacy Policy The sysadmin.info.pl portal does not process, share or use for marketing purposes the data provided by the Users of the portal. You can be sure that in the future we will not process, share or use your data for any other purposes than the simple collection of statistics.
-The sysadmin.info.pl portal is not responsible for the content and opinions expressed by users in comments or descriptions. They are exclusively the property of the users from whom they originate.</description>
+        <atom:modified>Sat, 21 Sep 2019 19:24:59 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/en/privacy/</guid>
+        <description>&lt;h4 id=&#34;privacy-policy&#34;&gt;Privacy Policy&lt;/h4&gt;
+&lt;p&gt;The sysadmin.info.pl portal does not process, share or use for marketing purposes the data provided by the Users of the portal. You can be sure that in the future we will not process, share or use your data for any other purposes than the simple collection of statistics.&lt;/p&gt;
+&lt;p&gt;The sysadmin.info.pl portal is not responsible for the content and opinions expressed by users in comments or descriptions. They are exclusively the property of the users from whom they originate.&lt;/p&gt;
+&lt;h4 id=&#34;hugo-and-the-general-data-protection-regulation-gdpr&#34;&gt;Hugo and the General Data Protection Regulation (GDPR)&lt;/h4&gt;
+&lt;p&gt;The sysadmin.info.pl website is generated in Hugo static generator.&lt;/p&gt;
+&lt;p&gt;More information here: &lt;a
+
+	
+	
+		href = &#34;https://gohugo.io/about/hugo-and-gdpr/&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://gohugo.io/about/hugo-and-gdpr/
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Below are all privacy settings and their default value. These settings have been put in sysadmin.info.pl site config.toml&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = true
+    simple = true
+  [privacy.twitter]
+    disable = true
+    enableDNT = true
+    simple = true
+  [privacy.vimeo]
+    disable = true
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = false
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;e-mail-addresses&#34;&gt;E-mail addresses&lt;/h4&gt;
+&lt;p&gt;E-mail addresses provided by Users when adding comments, and registering on the forum or portal, will be used only to remind the User’s password, and to send the Newsletter – if the User expressed such a desire. Email addresses of Users are not and will not be published, processed, sold, made available for a fee – therefore, you do not have to worry about adding to any mailing lists, receiving sponsored advertising emails, or any other unwanted spam.&lt;/p&gt;
+&lt;h4 id=&#34;collection-of-non-personal-data&#34;&gt;Collection of non-personal data&lt;/h4&gt;
+&lt;p&gt;When using the sysadmin.info.pl portal, non-personal data is collected which browsers make available, i.e. the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;name and version of the web browser&lt;/li&gt;
+&lt;li&gt;Language settings&lt;/li&gt;
+&lt;li&gt;reference page&lt;/li&gt;
+&lt;li&gt;date and time of sending the request to the server&lt;/li&gt;
+&lt;li&gt;IP from which the request was sent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The IP addresses collected by the portal are not intended to identify our users and are not disclosed anywhere. However, when posting comments that are inconsistent with the netiquette, rubbish in comments or forums, we provide for the possibility to block the use of the portal from a given IP address, or in the case of very intrusive players, even from the entire IP pool.&lt;/p&gt;
+&lt;h4 id=&#34;collection-of-personal-data&#34;&gt;Collection of personal data&lt;/h4&gt;
+&lt;p&gt;When registering on the sysadmin.info.pl portal or its forum, we require at least your e-mail address. Giving other data in profiles, such as name, surname, website address, town, profession, interests, AIM, Jabber, Google Talk – is not obligatory, and it is up to the user to provide it and share it with others.&lt;/p&gt;
+&lt;h4 id=&#34;cookies&#34;&gt;Cookies&lt;/h4&gt;
+&lt;p&gt;The sysadmin.info.pl portal uses cookies – small text files used to store certain information on the User’s computer. They are not dangerous for the User or his computer, there are no personal data stored in them, their main task is to store information to which the site can then refer. On our portal, cookies have the following functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;storage of information/preferences of the commenting User – when a comment is added to the User’s computer, a cookie is stored on the User’s computer, which for less than a year stores data with the User’s nickname, email address and website – so that the data does not need to be entered each time the next comment is added.&lt;/li&gt;
+&lt;li&gt;storage of information about Users registered/logged in the portal or forum – the browser may store a cookie containing the User’s login, double-ash password and authorization key, so that the next time the user visits the website, he will not have to re-enter the login and password, or even if the session has not expired, he will not have to log in again – he will only be logged in immediately to the portal or forum.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cookies do not identify you as a visitor to this website and do not store any information that could enable you to do so. In accordance with Article 173 of the Act of 16 July 2004 Telecommunications Law (Journal of Laws No. 171, item 1800), saving text files on the User’s computer is allowed if the User is informed about it. The condition for cookies to work is their acceptance by the browser and not deleting them from the computer. If the User does not want to share cookies, he should disable this option in his browser before he visits our portal. Failure to make cookies available by the browser, or their deletion, may cause significant difficulties or may even completely prevent the use of our portal and forums – for which we are not responsible. Therefore, we recommend that you enable cookies.&lt;/p&gt;
+&lt;h4 id=&#34;copyright&#34;&gt;Copyright&lt;/h4&gt;
+&lt;p&gt;The sysadmin.info.pl portal contains articles and manuals written by the users of the Editorial Office. All the contents of the portal are subject to copyright of their creators and are protected under copyright law. It is forbidden to copy and share materials from the portal without the consent of their author and the consent of the administrator of the portal.&lt;/p&gt;
+&lt;p&gt;All materials contained in the portal portal sysadmin.info.pl are free of charge. Users and the Editorial Staff of the portal shall not be liable for any damages resulting from their use. The sysadmin.info.pl portal reserves the right to edit and delete entries or to remove entries from the portal.&lt;/p&gt;
+</description>
         
         <dc:creator>sysadmin</dc:creator>
-        <media:content url="https:/sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://sysadmin.info.pl/images/2019-thumbs/privacy.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
           
-            
-              <category>privacy</category>
             
           
         

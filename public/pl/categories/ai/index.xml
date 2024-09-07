@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>AI on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</title>
+    <link>https://sysadmin.info.pl/pl/categories/ai/</link>
+    <description>Recent content in AI on Sysadmin - Administracja serwerami opartymi o dystrybucje Linux.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pl</language>
+    <copyright>©2024, <a
+
+	
+	
+		href = "https://sysadmin.info.pl/"
+
+		
+
+	
+
+	
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		>
+	
+	<span>
+		sysadmin
+	</span>
+
+</a>
+ - All rights reserved</copyright>
+    <lastBuildDate>Wed, 14 Jun 2023 22:00:00 +0000</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    
+        <atom:link href="https://sysadmin.info.pl/pl/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Dlaczego AGI nie zostanie zrealizowane? Osobliwość nie jest bliska. Czy nasz mózg wykorzystuje obliczenia kwantowe?</title>
+        <link>https://sysadmin.info.pl/pl/blog/osobliwosc/</link>
+        <pubDate>Wed, 14 Jun 2023 22:00:00 +0000</pubDate>
+        
+        <atom:modified>Wed, 14 Jun 2023 22:00:00 +0000</atom:modified>
+        <guid>https://sysadmin.info.pl/pl/blog/osobliwosc/</guid>
+        <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/R0MCCdU9rlE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Linki do artykułów znajdują się na dole.&lt;/p&gt;
+&lt;p&gt;Postęp w tej dziedzinie jest głęboko związany z sposobami, w jakie nasze mózgi przyswajają i przetwarzają nowe informacje oraz z kreatywnością badaczy w wymyślaniu nowych teorii. Zdobycie wszechstronnego naukowego zrozumienia ludzkiej kognicji jest jednym z najtrudniejszych problemów, jakie istnieją. Nie posiadając naukowo głębokiego zrozumienia kognicji, nie możemy stworzyć oprogramowania, które mogłoby zapoczątkować Osobliwość. Jesteśmy dopiero w &amp;ldquo;przedszkolu&amp;rdquo; AI. Pomysły, koncepcje z lat 50./60. (np. perceptron) i ich rozwój w postaci sieci neuronowych przynoszą dziś korzyści tylko jako pochodna mocy obliczeniowej (sprzętu) i nowych koncepcji oprogramowania (np. transformatory i uwaga). Funkcje kognitywne AI to wyzwanie, bez lepszego zrozumienia ludzkiego mózgu i jego funkcjonowania, jest to wyzwanie na dziesięciolecia.&lt;/p&gt;
+&lt;p&gt;Tezy bez dowodów to tylko tezy. Kwantowa fizyka oraz ludzki mózg i świadomość to bardzo interesujące i skomplikowane tematy, które wciąż budzą wiele pytań i kontrowersji. Niektórzy naukowcy podejrzewają, że procesy kwantowe, w tym splątanie kwantowe, mogą pomóc nam wyjaśnić ogromną moc mózgu i jego zdolność do generowania świadomości. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; Inni są sceptyczni lub odrzucają tę możliwość, uważając, że fizyka kwantowa nie ma zastosowania do skali i temperatury mózgu.&lt;/p&gt;
+&lt;p&gt;Splątanie kwantowe to zjawisko, w którym dwie lub więcej cząstek kwantowych (np. elektronów) są tak połączone, że ich stany są od siebie zależne, nawet jeśli są od siebie daleko. &lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Oznacza to, że zmiana stanu jednej cząstki natychmiast wpływa na stan drugiej cząstki, bez żadnej fizycznej komunikacji między nimi.&lt;/p&gt;
+&lt;p&gt;Niektórzy naukowcy, tacy jak Roger Penrose i Stuart Hameroff, zaproponowali teorię, według której splątanie kwantowe zachodzi w mikrotubulach, które są strukturami znajdującymi się w komórkach nerwowych (neuronach) w mózgu. &lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; Według tej teorii, splątanie kwantowe umożliwia koordynowanie działania neuronów na poziomie kwantowym, co prowadzi do świadomości.&lt;br /&gt;
+Jednak teoria ta jest bardzo krytykowana i nie ma bezpośrednich dowodów eksperymentalnych na jej poparcie. &lt;sup id=&#34;fnref2:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; Niektóre z głównych problemów z tą teorią to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Trudność w utrzymaniu stanu kwantowego&lt;/strong&gt;: Stan kwantowy jest bardzo delikatny&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;i łatwo jest zakłócany przez środowisko (takie jak ciepło czy hałas). Aby utrzymać stan kwantowy, potrzebuje on izolacji od środowiska i schłodzenia do bardzo niskiej temperatury. Jednak mózg jest bardzo gorącym i skomplikowanym systemem, który nie sprzyja izolacji i schładzaniu stanu kwantowego. &lt;sup id=&#34;fnref3:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Brak specyficzności mikrotubul&lt;/strong&gt;: Mikrotubule są powszechne w wielu typach komórek, nie tylko w neuronach. Gdyby mikrotubule miały być odpowiedzialne za świadomość, oznaczałoby to, że każda komórka w ciele byłaby świadoma, co jest mało prawdopodobne. &lt;sup id=&#34;fnref4:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Brak mechanizmu splątania&lt;/strong&gt;: Nie wiadomo, jak dokładnie splątanie kwantowe powstawałoby i utrzymywałoby się w mikrotubulach. Nie wiadomo również, jak splątanie wpłynęłoby na funkcjonowanie neuronów i mózgu jako całości. Nie ma matematycznego ani fizycznego modelu opisującego ten proces. &lt;sup id=&#34;fnref5:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;br /&gt;
+Niedawno badacze z Trinity College Dublin wykorzystali technikę opracowaną do testowania istnienia grawitacji kwantowej do badania ludzkiego mózgu i jego działania. &lt;sup id=&#34;fnref2:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Wykorzystali rezonans magnetyczny (MRI) do pomiaru spinów protonów w &amp;ldquo;wodzie mózgowej&amp;rdquo;, która naturalnie gromadzi się jako płyn w naszych mózgach. Odkryli, że spiny protonów były ze sobą splątane, co sugeruje, że w mózgu mogą zachodzić procesy kwantowe.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Artykuł opisuje badania z Trinity College Dublin, które sugerują, że nasze mózgi mogą wykorzystywać obliczenia kwantowe. Naukowcy wykorzystali podejście pierwotnie opracowane do potwierdzenia istnienia grawitacji kwantowej do badania działania ludzkiego mózgu. Zaobserwowane funkcje mózgu były związane z wydajnością krótkotrwałej pamięci i świadomą świadomością, co prowadzi do sugestii, że procesy kwantowe mogą odgrywać rolę w kognitywnych i świadomych funkcjach mózgu&lt;/p&gt;
+&lt;p&gt;Dr Christian Kerskens, główny fizyk z Trinity College Institute of Neuroscience (TCIN), wyjaśnił, że ich podejście polegało na wykorzystaniu znanych systemów kwantowych (w tym przypadku spinów protonowych w &amp;ldquo;wodzie mózgowej&amp;rdquo;) do oddziaływania z nieznanym systemem. Teoria była taka, że jeśli znane systemy zostałyby splątane, to nieznany system również byłby systemem kwantowym&lt;/p&gt;
+&lt;p&gt;Badacze odkryli sygnały MRI, które przypominały potencjały wywołane tętnem serca, formę sygnału EEG, które zwykle nie są wykrywalne za pomocą MRI. Uważają, że te sygnały były obserwowalne dzięki splątaniu spinów jądrowych protonów w mózgu, wskazując, że odpowiadające im procesy mózgowe mogą być kwantowe&lt;/p&gt;
+&lt;p&gt;Te kwantowe procesy mózgowe mogą potencjalnie wyjaśnić, dlaczego ludzie wciąż przewyższają superkomputery w niektórych obszarach, takich jak radzenie sobie z nieoczekiwanymi sytuacjami, podejmowanie decyzji i uczenie się nowych rzeczy. Badacze sugerują, że ich praca może rzucić światło na złożoności biologii i świadomości, które są trudne do naukowego zrozumienia.&lt;/p&gt;
+&lt;p&gt;Artykuły:&lt;/p&gt;
+&lt;p&gt;🤖 Dlaczego ogólna sztuczna inteligencja nie zostanie zrealizowana&lt;br /&gt;
+&lt;a href=&#34;https://www.nature.com/articles/s41599-020-0494-4&#34; target=&#34;_blank&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.nature.com/articles/s41599-020-0494-4&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.nature.com/articles/s41599-020-0494-4
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;br /&gt;
+🤖 Paul Allen: Osobliwość nie jest bliska&lt;br /&gt;
+&lt;a href=&#34;https://www.technologyreview.com/2011/10/12/190773/paul-allen-the-Osobliwość-isnt-near/&#34; target=&#34;_blank&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.technologyreview.com/2011/10/12/190773/paul-allen-the-Osobliwo&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.technologyreview.com/2011/10/12/190773/paul-allen-the-Osobliwo
+	&lt;/span&gt;
+
+&lt;/a&gt;
+ść-isnt-near/&lt;/a&gt;&lt;br /&gt;
+🤖 Osobliwość jest tu, znowu&lt;br /&gt;
+&lt;a href=&#34;https://www.axios.com/2023/06/12/Osobliwość-ai-silicon-valley&#34; target=&#34;_blank&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.axios.com/2023/06/12/Osobliwo&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.axios.com/2023/06/12/Osobliwo
+	&lt;/span&gt;
+
+&lt;/a&gt;
+ść-ai-silicon-valley&lt;/a&gt;&lt;br /&gt;
+🤖 Nowe badania sugerują, że nasze mózgi używają obliczeń kwantowych&lt;br /&gt;
+&lt;a href=&#34;https://phys.org/news/2022-10-brains-quantum.html&#34; target=&#34;_blank&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://phys.org/news/2022-10-brains-quantum.html&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://phys.org/news/2022-10-brains-quantum.html
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;br /&gt;
+🤖 ChatGPT rozpoczął wyścig AI, teraz regulatorzy starają się nadążyć&lt;br /&gt;
+&lt;a href=&#34;https://asia.nikkei.com/Spotlight/The-Big-Story/ChatGPT-unleashed-an-AI-race-now-regulators-are-struggling-to-hold-on&#34; target=&#34;_blank&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://asia.nikkei.com/Spotlight/The-Big-Story/ChatGPT-unleashed-an-AI-race-now-regulators-are-struggling-to-hold-on&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://asia.nikkei.com/Spotlight/The-Big-Story/ChatGPT-unleashed-an-AI-race-now-regulators-are-struggling-to-hold-on
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;br /&gt;
+🤖 Czy świadomość jest ograniczona przez fizykę kwantową?&lt;br /&gt;
+&lt;a href=&#34;https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out&#34; target=&#34;_blank&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://www.sciencealert.com/is-consciousness-bound-by-quantum-physics-we-re-getting-closer-to-finding-out
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;br /&gt;
+🤖 Czy świadomość można wyjaśnić za pomocą fizyki kwantowej?&lt;br /&gt;
+&lt;a href=&#34;https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582&#34; target=&#34;_blank&#34;&gt;&lt;a
+
+	
+	
+		href = &#34;https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://theconversation.com/can-consciousness-be-explained-by-quantum-physics-my-research-takes-us-a-step-closer-to-finding-out-164582
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Przypisy:&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Świadomość może polegać na splątaniu kwantowym - Big Think. &lt;a
+
+	
+	
+		href = &#34;https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://bigthink.com/hard-science/brain-consciousness-quantum-entanglement/
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Nowe badania sugerują, że nasze mózgi używają obliczeń kwantowych - Phys.org. &lt;a
+
+	
+	
+		href = &#34;https://phys.org/news/2022-10-brains-quantum.html&#34;
+
+		
+
+	
+
+	
+
+		target = &#34;_blank&#34;
+		rel = &#34;nofollow noopener noreferrer&#34;
+
+		&gt;
+	
+	&lt;span&gt;
+		https://phys.org/news/2022-10-brains-quantum.html
+	&lt;/span&gt;
+
+&lt;/a&gt;
+&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref3:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref4:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref5:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        
+        <dc:creator>sysadmin</dc:creator>
+        <media:content url="https://sysadmin.info.pl/images/2023-thumbs/singularity.webp" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>AI</category>
+            
+          
+        
+        
+          
+            
+              <category>AI</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

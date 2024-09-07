@@ -8,7 +8,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http:/www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,7 +30,7 @@
 	else
 		root["pdfjs-dist/build/pdf.worker"] = root.pdfjsWorker = factory();
 })(globalThis, () => {
-return /******/ (() => { / webpackBootstrap
+return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
@@ -1048,7 +1048,7 @@ function createValidAbsoluteUrl(url, baseUrl = null, options = null) {
       if (options.addDefaultProtocol && url.startsWith("www.")) {
         const dots = url.match(/\./g);
         if (dots && dots.length >= 2) {
-          url = `http:/${url}`;
+          url = `http://${url}`;
         }
       }
       if (options.tryConvertEncoding) {
@@ -51479,7 +51479,7 @@ class FileSpec {
   get filename() {
     if (!this._filename && this.root) {
       const filename = pickPlatformItem(this.root) || "unnamed";
-      this._filename = (0, _util.stringToPDFString)(filename).replace(/\\\\/g, "\\").replace(/\\\/g, "/").replace(/\\/g, "/");
+      this._filename = (0, _util.stringToPDFString)(filename).replace(/\\\\/g, "\\").replace(/\\\//g, "/").replace(/\\/g, "/");
     }
     return this._filename;
   }
@@ -53349,63 +53349,63 @@ exports.$buildXFAObject = $buildXFAObject;
 const NamespaceIds = {
   config: {
     id: 0,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xci/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xci/")
   },
   connectionSet: {
     id: 1,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xfa-connection-set/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xfa-connection-set/")
   },
   datasets: {
     id: 2,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xfa-data/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xfa-data/")
   },
   form: {
     id: 3,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xfa-form/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xfa-form/")
   },
   localeSet: {
     id: 4,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xfa-locale-set/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xfa-locale-set/")
   },
   pdf: {
     id: 5,
-    check: ns => ns === "http:/ns.adobe.com/xdp/pdf/"
+    check: ns => ns === "http://ns.adobe.com/xdp/pdf/"
   },
   signature: {
     id: 6,
-    check: ns => ns === "http:/www.w3.org/2000/09/xmldsig#"
+    check: ns => ns === "http://www.w3.org/2000/09/xmldsig#"
   },
   sourceSet: {
     id: 7,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xfa-source-set/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xfa-source-set/")
   },
   stylesheet: {
     id: 8,
-    check: ns => ns === "http:/www.w3.org/1999/XSL/Transform"
+    check: ns => ns === "http://www.w3.org/1999/XSL/Transform"
   },
   template: {
     id: 9,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xfa-template/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xfa-template/")
   },
   xdc: {
     id: 10,
-    check: ns => ns.startsWith("http:/www.xfa.org/schema/xdc/")
+    check: ns => ns.startsWith("http://www.xfa.org/schema/xdc/")
   },
   xdp: {
     id: 11,
-    check: ns => ns === "http:/ns.adobe.com/xdp/"
+    check: ns => ns === "http://ns.adobe.com/xdp/"
   },
   xfdf: {
     id: 12,
-    check: ns => ns === "http:/ns.adobe.com/xfdf/"
+    check: ns => ns === "http://ns.adobe.com/xfdf/"
   },
   xhtml: {
     id: 13,
-    check: ns => ns === "http:/www.w3.org/1999/xhtml"
+    check: ns => ns === "http://www.w3.org/1999/xhtml"
   },
   xmpmeta: {
     id: 14,
-    check: ns => ns === "http:/ns.adobe.com/xmpmeta/"
+    check: ns => ns === "http://ns.adobe.com/xmpmeta/"
   }
 };
 exports.NamespaceIds = NamespaceIds;
@@ -54136,7 +54136,7 @@ var _fonts = __w_pdfjs_require__(83);
 var _core_utils = __w_pdfjs_require__(3);
 var _som = __w_pdfjs_require__(78);
 const TEMPLATE_NS_ID = _namespaces.NamespaceIds.template.id;
-const SVG_NS = "http:/www.w3.org/2000/svg";
+const SVG_NS = "http://www.w3.org/2000/svg";
 const MAX_ATTEMPTS_FOR_LRTB_LAYOUT = 2;
 const MAX_EMPTY_PAGES = 3;
 const DEFAULT_TAB_INDEX = 5000;
@@ -60269,7 +60269,7 @@ class DataHandler {
         stack.push([-1, nodes]);
       }
     }
-    const buf = [`<xfa:datasets xmlns:xfa="http:/www.xfa.org/schema/xfa-data/1.0/">`];
+    const buf = [`<xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">`];
     if (this.dataset) {
       for (const child of this.dataset[_xfa_object.$getChildren]()) {
         if (child[_xfa_object.$nodeName] !== "data") {
@@ -64440,34 +64440,34 @@ class PDFWorkerStreamRangeReader {
 /***/ })
 /******/ 	]);
 /************************************************************************/
-/******/ 	/ The module cache
+/******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
 /******/ 	
-/******/ 	/ The require function
+/******/ 	// The require function
 /******/ 	function __w_pdfjs_require__(moduleId) {
-/******/ 		/ Check if module is in cache
+/******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
-/******/ 		/ Create a new module (and put it into the cache)
+/******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			/ no module.id needed
-/******/ 			/ no module.loaded needed
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
-/******/ 		/ Execute the module function
+/******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __w_pdfjs_require__);
 /******/ 	
-/******/ 		/ Return the exports of the module
+/******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
-/******/ 		/ define getter functions for harmony exports
+/******/ 		// define getter functions for harmony exports
 /******/ 		__w_pdfjs_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__w_pdfjs_require__.o(definition, key) && !__w_pdfjs_require__.o(exports, key)) {
@@ -64484,7 +64484,7 @@ class PDFWorkerStreamRangeReader {
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
-/******/ 		/ define __esModule on exports
+/******/ 		// define __esModule on exports
 /******/ 		__w_pdfjs_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
@@ -64495,7 +64495,7 @@ class PDFWorkerStreamRangeReader {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-/ This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 var exports = __webpack_exports__;
 
@@ -64518,4 +64518,4 @@ const pdfjsBuild = 'af6414988';
 /******/ })()
 ;
 });
-/# sourceMappingURL=pdf.worker.js.map
+//# sourceMappingURL=pdf.worker.js.map
