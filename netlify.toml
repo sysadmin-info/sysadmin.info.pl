@@ -12,7 +12,7 @@
       X-Frame-Options = "DENY"
       X-XSS-Protection = "1; mode=block"
       Access-Control-Allow-Origin = "https://sysadmin.info.pl"
-      Content-Security-Policy = "base-uri 'self';  default-src 'self';  style-src 'report-sample' 'self' 'unsafe-inline' https://fonts.googleapis.com/; script-src 'report-sample' 'self' https://sysadmin.info.pl 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' 'sha256-o1wxtetquxyOuJoFaUFEb0G0Vilqh4QVpQfBavWBvM0=' 'sha256-o1wxtetquxyOuJoFaUFEb0G0Vilqh4QVpQfBavWBvM0=' 'sha256-0aYDHNJCU98aIpr7QTA1FPm/Ha6TVIkdowTUu2cx2Ks=' 'sha256-CJG5mNzuoX9Ni31/WJHwCg3Va2kMDT6/rUluZKAT3Z4=' 'sha256-DlH8gL38moP9pEFraWXEsuqZAagYARXD039CiDWKO+Y=' 'sha256-OeT4ggVXi2CIkxbO7xvGvBDKJ07xU8v+JVkm+OEkLPY=' 'sha256-XMzadgEgVSzUhb+Efa0YPeW7TiGXe4PVrZs5CANJquE='; script-src-elem 'self' 'unsafe-inline' https://utteranc.es/ https://www.google.com https://www.gstatic.com/ https://asciinema.org; img-src 'self' https://buycoffee.to https://*.buymeacoffee.com/ data:; font-src 'self' data:; manifest-src 'self'; object-src 'none'; connect-src 'self'; frame-src https://utteranc.es/ https://www.youtube.com/ https://www.google.com/ https://asciinema.org; child-src https://youtube.com;"
+      Content-Security-Policy = "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval'; img-src 'self' https://buycoffee.to data:; font-src 'self' data:; connect-src 'self'; frame-src https://utteranc.es https://www.youtube.com https://asciinema.org; child-src https://youtube.com"
 [[headers]]
   for = "/img/*"
   [headers.values]
