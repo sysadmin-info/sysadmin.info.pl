@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
+<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
 
-<script defer src="/js/search.min.09b8862398053c24bcf32ef3a4e2b4442f81688bd1b284059839801f143ac747.js"></script>
+<script defer src="/js/search.min.ea90090b1a0feb6d9fa76023619e64fc2155d6d31e4dac9046e5d6464062c235.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="SELinux polityka bezpieczeństwa">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.111.3">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1791,12 +1791,12 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">policycoreutils</span><span class="p">-</span><span class="nx">python</span><span class="m">-2</span>.<span class="m">5-17</span>.<span class="m">1</span>.<span class="nx">el7</span>.<span class="nx">x86_64</span> : <span class="nx">SELinux</span> <span class="nx">policy</span> <span class="nx">core</span> <span class="nx">python</span>
-</span></span><span class="line"><span class="cl">                                           : <span class="nx">utilities</span>
-</span></span><span class="line"><span class="cl"><span class="nx">Repo</span>        : <span class="nx">base</span>
-</span></span><span class="line"><span class="cl"><span class="nx">Matched</span> <span class="nx">from</span>:
-</span></span><span class="line"><span class="cl"><span class="nx">Filename</span>    : <span class="sr">/usr/</span><span class="nx">bin</span>/<span class="nx">audit2allow</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">policycoreutils</span><span class="p">-</span><span class="nx">python</span><span class="m">-2</span>.<span class="m">5-17</span>.<span class="m">1</span>.<span class="nx">el7</span>.<span class="nx">x86_64</span> : <span class="nx">SELinux</span> <span class="nx">policy</span> <span class="nx">core</span> <span class="nx">python</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>                                           : <span class="nx">utilities</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Repo</span>        : <span class="nx">base</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Matched</span> <span class="nx">from</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Filename</span>    : <span class="sr">/usr/</span><span class="nx">bin</span>/<span class="nx">audit2allow</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Należy zainstalować pakiet policycoreutils-python (i zależności):</p>
 <div class="highlight"><div class="chroma">
@@ -1835,13 +1835,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">scontext</span><span class="p">=</span><span class="nx">system_u</span>:<span class="nx">system_r</span>:<span class="nx">nagios_t</span>:<span class="nx">s0</span>
-</span></span><span class="line"><span class="cl"><span class="nx">tcontext</span><span class="p">=</span><span class="nx">system_u</span>:<span class="nx">system_r</span>:<span class="nx">nagios_t</span>:<span class="nx">s0</span>
-</span></span><span class="line"><span class="cl">...
-</span></span><span class="line"><span class="cl"><span class="nx">Was</span> <span class="nx">caused</span> <span class="nx">by</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">Missing</span> <span class="nx">type</span> <span class="nx">enforcement</span> <span class="p">(</span><span class="nx">TE</span><span class="p">)</span> <span class="nx">allow</span> <span class="nx">rule</span>.
-</span></span><span class="line"><span class="cl">  <span class="nx">You</span> <span class="nx">can</span> <span class="nx">use</span> <span class="nx">audit2allow</span> <span class="nx">to</span> <span class="nx">generate</span> <span class="nx">a</span> <span class="nx">loadable</span> <span class="nx">module</span> <span class="nx">to</span> <span class="nx">allow</span> <span class="nx">this</span> <span class="nx">access</span>.
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">scontext</span><span class="p">=</span><span class="nx">system_u</span>:<span class="nx">system_r</span>:<span class="nx">nagios_t</span>:<span class="nx">s0</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">tcontext</span><span class="p">=</span><span class="nx">system_u</span>:<span class="nx">system_r</span>:<span class="nx">nagios_t</span>:<span class="nx">s0</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>...<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Was</span> <span class="nx">caused</span> <span class="nx">by</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">Missing</span> <span class="nx">type</span> <span class="nx">enforcement</span> <span class="p">(</span><span class="nx">TE</span><span class="p">)</span> <span class="nx">allow</span> <span class="nx">rule</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">You</span> <span class="nx">can</span> <span class="nx">use</span> <span class="nx">audit2allow</span> <span class="nx">to</span> <span class="nx">generate</span> <span class="nx">a</span> <span class="nx">loadable</span> <span class="nx">module</span> <span class="nx">to</span> <span class="nx">allow</span> <span class="nx">this</span> <span class="nx">access</span>.<span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Mała podpowiedź odnośnie pierwszych dwóch linii:</p>
 <div class="highlight"><div class="chroma">
@@ -1851,10 +1851,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">  * <span class="nx">scontext</span> <span class="p">=</span> <span class="nx">Source</span> <span class="nx">Context</span> <span class="p">(</span><span class="nx">kontekst</span> <span class="nx">źródłowy</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  * <span class="nx">tcontext</span> <span class="p">=</span> <span class="nx">Target</span> <span class="nx">Context</span> <span class="p">(</span><span class="nx">kontekst</span> <span class="nx">docelowy</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  * \<span class="nx">_u</span>:\<span class="nx">_r</span>:<span class="nx">_t</span>:<span class="nx">s</span># <span class="p">=</span> <span class="nx">user</span>:<span class="nx">role</span>:<span class="nx">type</span>:<span class="nx">security</span> <span class="nx">level</span> <span class="p">(</span><span class="nx">użytkownik</span><span class="p">,</span> <span class="nx">rola</span><span class="p">,</span> <span class="nx">typ</span><span class="p">,</span> <span class="nx">poziom</span> <span class="nx">zabezpieczeń</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">  * <span class="nx">scontext</span> <span class="p">=</span> <span class="nx">Source</span> <span class="nx">Context</span> <span class="p">(</span><span class="nx">kontekst</span> <span class="nx">źródłowy</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  * <span class="nx">tcontext</span> <span class="p">=</span> <span class="nx">Target</span> <span class="nx">Context</span> <span class="p">(</span><span class="nx">kontekst</span> <span class="nx">docelowy</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  * \<span class="nx">_u</span>:\<span class="nx">_r</span>:<span class="nx">_t</span>:<span class="nx">s</span># <span class="p">=</span> <span class="nx">user</span>:<span class="nx">role</span>:<span class="nx">type</span>:<span class="nx">security</span> <span class="nx">level</span> <span class="p">(</span><span class="nx">użytkownik</span><span class="p">,</span> <span class="nx">rola</span><span class="p">,</span> <span class="nx">typ</span><span class="p">,</span> <span class="nx">poziom</span> <span class="nx">zabezpieczeń</span><span class="p">)</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Kontekst źródłowy i docelowy są identyczne, więc wydaje mi się, że polecenie powinno być dopuszczone do działania. Ale spróbujmy audit2allow i zobaczmy, co nam powie:</p>
 <div class="highlight"><div class="chroma">
@@ -1872,10 +1872,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">=============</span> <span class="nx">nagios_t</span> <span class="p">==============</span>
-</span></span><span class="line"><span class="cl"><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">initrc_var_run_t</span>:<span class="nx">file</span> { <span class="nx">lock</span> <span class="nx">open</span> <span class="nx">read</span> <span class="nx">write</span> };
-</span></span><span class="line"><span class="cl"><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">self</span>:<span class="nx">capability</span> <span class="nx">chown</span>;
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">=============</span> <span class="nx">nagios_t</span> <span class="p">==============</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">initrc_var_run_t</span>:<span class="nx">file</span> { <span class="nx">lock</span> <span class="nx">open</span> <span class="nx">read</span> <span class="nx">write</span> };<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">self</span>:<span class="nx">capability</span> <span class="nx">chown</span>;<span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Nie jest dla mnie jasne, na co zezwala pierwsza zasada: czy pozwala na dostęp typu nagios (nagios_t) do wszystkich plików initrc_var_run_t? Jeśli tak, to prawdopodobnie poziom uprawnień jest zbyt duży. Jak ostrzega strona man:</p>
 <blockquote>
@@ -1922,19 +1922,19 @@ changes recommended by this utility.</p>
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">module</span> <span class="nx">local</span> <span class="m">1</span>.<span class="m">0</span>;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">require</span> {
-</span></span><span class="line"><span class="cl">        <span class="nx">type</span> <span class="nx">nagios_t</span>;
-</span></span><span class="line"><span class="cl">        <span class="nx">type</span> <span class="nx">initrc_var_run_t</span>;
-</span></span><span class="line"><span class="cl">        <span class="nx">class</span> <span class="nx">capability</span> <span class="nx">chown</span>;
-</span></span><span class="line"><span class="cl">        <span class="nx">class</span> <span class="nx">file</span> { <span class="nx">lock</span> <span class="nx">open</span> <span class="nx">read</span> <span class="nx">write</span> };
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="p">=============</span> <span class="nx">nagios_t</span> <span class="p">==============</span>
-</span></span><span class="line"><span class="cl"><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">initrc_var_run_t</span>:<span class="nx">file</span> { <span class="nx">lock</span> <span class="nx">open</span> <span class="nx">read</span> <span class="nx">write</span> };
-</span></span><span class="line"><span class="cl"><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">self</span>:<span class="nx">capability</span> <span class="nx">chown</span>;
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">module</span> <span class="nx">local</span> <span class="m">1</span>.<span class="m">0</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">require</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">type</span> <span class="nx">nagios_t</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">type</span> <span class="nx">initrc_var_run_t</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">class</span> <span class="nx">capability</span> <span class="nx">chown</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">class</span> <span class="nx">file</span> { <span class="nx">lock</span> <span class="nx">open</span> <span class="nx">read</span> <span class="nx">write</span> };<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="p">=============</span> <span class="nx">nagios_t</span> <span class="p">==============</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">initrc_var_run_t</span>:<span class="nx">file</span> { <span class="nx">lock</span> <span class="nx">open</span> <span class="nx">read</span> <span class="nx">write</span> };<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">allow</span> <span class="nx">nagios_t</span> <span class="nx">self</span>:<span class="nx">capability</span> <span class="nx">chown</span>;<span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Następnie strona man mówi o:</p>
 <blockquote>
@@ -3480,7 +3480,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
 
 

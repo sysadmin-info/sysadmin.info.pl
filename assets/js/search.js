@@ -18,7 +18,7 @@
   fetch(`${langPrefix}/index.json`)
     .then(response => response.json())
     .then(data => {
-      console.log('Fetched index data:', data); // Log fetched data for debugging
+      console.log('Fetched index data'); // Log fetched data for debugging
 
       // Initialize Lunr.js with the fetched data
       var idx = lunr(function () {
@@ -103,7 +103,7 @@
         });
       }
 
-      // New function for handling search results rendering in main content
+      // Function for handling search results rendering in main content area
       function renderSearchHighlightResultsMain() {
         const resultsContainer = document.querySelector('.search-result__body');
 
@@ -121,9 +121,42 @@
           return;
         }
 
-        // Continue with existing logic once we've ensured the elements exist
-        console.log('Rendering search results for main content area');
-        // Your existing logic for rendering the results goes here
+        // Clear the results container
+        resultsContainer.innerHTML = '';
+
+        // Fetch the results again
+        const query = sidebarSearchInput.value.trim();  // Use sidebar input as the query source
+        const results = idx.search(query);
+
+        if (results.length === 0) {
+          resultsContainer.innerHTML = '<p>No results found</p>';
+          return;
+        }
+
+        const ul = document.createElement('ul');
+        results.forEach(result => {
+          const page = data.find(p => p.url === result.ref);
+
+          if (!page || !page.url || !page.title || !page.content) {
+            console.error('Page not found or missing fields for result:', {
+              result,
+              page,  
+              query: query  
+            });
+            return;
+          }
+
+          const li = document.createElement('li');
+          li.classList.add('search-result__item');
+          
+          li.innerHTML = `
+            <a class="search-result__item--title" href="${page.url}">${page.title}</a>
+            <div class="search-result__item--desc">${page.content.substring(0, 200)}</div>`;
+          
+          ul.appendChild(li);
+        });
+
+        resultsContainer.appendChild(ul);
       }
 
       // Example usage or invocation of the function if needed
@@ -135,4 +168,3 @@
     })
     .catch(err => console.error('Error loading index.json:', err));
 })();
-

@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
+<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
 
-<script defer src="/js/search.min.09b8862398053c24bcf32ef3a4e2b4442f81688bd1b284059839801f143ac747.js"></script>
+<script defer src="/js/search.min.ea90090b1a0feb6d9fa76023619e64fc2155d6d31e4dac9046e5d6464062c235.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="Working with vim and YAML files in Kubernetes">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.111.3">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1806,13 +1806,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">expandtab</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">number</span> <span class="nx">ruler</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">autoindent</span> <span class="nx">smartindent</span>
-</span></span><span class="line"><span class="cl"><span class="k">syntax</span> <span class="nx">enable</span>
-</span></span><span class="line"><span class="cl"><span class="k">filetype</span> <span class="nx">plugin</span> <span class="nx">indent</span> <span class="nx">on</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">expandtab</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">number</span> <span class="nx">ruler</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">autoindent</span> <span class="nx">smartindent</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">filetype</span> <span class="nx">plugin</span> <span class="nx">indent</span> <span class="nx">on</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="explanation-of-settings-in-vimrc">Explanation of settings in .vimrc</h4>
 <h5 id="vim-set-tab-to-n-spaces">Vim Set Tab to N Spaces</h5>
@@ -1874,10 +1874,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">expandtab</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34; Or the short form</span>
-</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="k">set</span> <span class="nx">et</span> <span class="nx">sw</span><span class="p">=</span><span class="m">2</span> <span class="nx">ts</span><span class="p">=</span><span class="m">2</span> <span class="nx">sts</span><span class="p">=</span><span class="m">2</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">set</span> <span class="nx">expandtab</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; Or the short form</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">set</span> <span class="nx">et</span> <span class="nx">sw</span><span class="p">=</span><span class="m">2</span> <span class="nx">ts</span><span class="p">=</span><span class="m">2</span> <span class="nx">sts</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Alternatively, you can add the following to your.vimrc file, which is immediately sourced when Vim loads:</p>
 <div class="highlight"><div class="chroma">
@@ -1888,11 +1888,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">expandtab</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">set</span> <span class="nx">expandtab</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">2</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><div class="notices success" data-title="Note">
   The amount of spaces that will be added when the tab key is pressed in the instances above has always been 2. That can be changed to 4, 8, or anything else you like.
@@ -1908,11 +1908,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="c">&#34; If tabstop=4 then replace all tabs with 4 spaces</span>
-</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nx">retab</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34; Set tabstop=2 and then replace all tabs with 2 spaces</span>
-</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nx">retab</span> <span class="m">2</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="c">&#34; If tabstop=4 then replace all tabs with 4 spaces</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">retab</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; Set tabstop=2 and then replace all tabs with 2 spaces</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">retab</span> <span class="m">2</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>In essence, <code>autoindent</code> instructs vim to carry over the indentation from the current line to the following one. This is done by pressing enter in insert mode or O or o in normal mode.</p>
 <p>When modifying code, <code>smartindent</code> responds to the syntax and style (particularly for C). You must also turn on autoindent while it is turned on.</p>
@@ -3426,7 +3426,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
 
 

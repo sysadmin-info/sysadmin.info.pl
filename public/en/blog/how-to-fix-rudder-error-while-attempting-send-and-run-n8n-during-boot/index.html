@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
+<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
 
-<script defer src="/js/search.min.09b8862398053c24bcf32ef3a4e2b4442f81688bd1b284059839801f143ac747.js"></script>
+<script defer src="/js/search.min.ea90090b1a0feb6d9fa76023619e64fc2155d6d31e4dac9046e5d6464062c235.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="How to fix Rudder error while attempting send and run n8n during boot">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.111.3">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1796,10 +1796,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">N8N_DIAGNOSTICS_ENABLED</span><span class="p">=</span><span class="nx">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">N8N_VERSION_NOTIFICATIONS_ENABLED</span><span class="p">=</span><span class="nx">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">N8N_TEMPLATES_ENABLED</span><span class="p">=</span><span class="nx">false</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">N8N_DIAGNOSTICS_ENABLED</span><span class="p">=</span><span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">N8N_VERSION_NOTIFICATIONS_ENABLED</span><span class="p">=</span><span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">N8N_TEMPLATES_ENABLED</span><span class="p">=</span><span class="nx">false</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Save and exit.</p>
 <p>Restart n8n</p>
@@ -1852,18 +1852,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Start</span> <span class="nx">n8n</span> <span class="nx">in</span> <span class="nx">a</span> <span class="nx">detached</span> <span class="nx">screen</span> <span class="nx">session</span>
-</span></span><span class="line"><span class="cl"><span class="nx">screen</span> <span class="p">-</span><span class="nx">dmS</span> <span class="nx">n8n</span> <span class="nx">bash</span> <span class="p">-</span><span class="nx">c</span> <span class="s2">&#34;npx n8n&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Wait</span> <span class="nx">for</span> <span class="nx">a</span> <span class="nx">bit</span> <span class="nx">to</span> <span class="nx">ensure</span> <span class="nx">n8n</span> <span class="nx">is</span> <span class="nx">up</span> <span class="nx">and</span> <span class="nx">running</span>
-</span></span><span class="line"><span class="cl"><span class="nx">sleep</span> <span class="m">10</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Use</span> <span class="nx">xdotool</span> <span class="nx">commands</span> <span class="nx">within</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">screen</span> <span class="nx">session</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">Assuming</span> <span class="nx">xdotool</span> <span class="nx">commands</span> <span class="nx">are</span> <span class="nx">meant</span> <span class="nx">to</span> <span class="nx">interact</span> <span class="nx">with</span> <span class="nx">n8n</span>
-</span></span><span class="line"><span class="cl"><span class="nx">screen</span> <span class="p">-</span><span class="nx">S</span> <span class="nx">n8n</span> <span class="p">-</span><span class="nx">X</span> <span class="nx">stuff</span> $<span class="s1">&#39;xdotool key ctrl+a\nxdotool key ctrl+d\nexit\n&#39;</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Start</span> <span class="nx">n8n</span> <span class="nx">in</span> <span class="nx">a</span> <span class="nx">detached</span> <span class="nx">screen</span> <span class="nx">session</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">screen</span> <span class="p">-</span><span class="nx">dmS</span> <span class="nx">n8n</span> <span class="nx">bash</span> <span class="p">-</span><span class="nx">c</span> <span class="s2">&#34;npx n8n&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Wait</span> <span class="nx">for</span> <span class="nx">a</span> <span class="nx">bit</span> <span class="nx">to</span> <span class="nx">ensure</span> <span class="nx">n8n</span> <span class="nx">is</span> <span class="nx">up</span> <span class="nx">and</span> <span class="nx">running</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">sleep</span> <span class="m">10</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Use</span> <span class="nx">xdotool</span> <span class="nx">commands</span> <span class="nx">within</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">screen</span> <span class="nx">session</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Assuming</span> <span class="nx">xdotool</span> <span class="nx">commands</span> <span class="nx">are</span> <span class="nx">meant</span> <span class="nx">to</span> <span class="nx">interact</span> <span class="nx">with</span> <span class="nx">n8n</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">screen</span> <span class="p">-</span><span class="nx">S</span> <span class="nx">n8n</span> <span class="p">-</span><span class="nx">X</span> <span class="nx">stuff</span> $<span class="s1">&#39;xdotool key ctrl+a\nxdotool key ctrl+d\nexit\n&#39;</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Save and exit.</p>
 <h5 id="install-xdotool">Install xdotool</h5>
@@ -1899,8 +1899,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">@<span class="nx">reboot</span> <span class="sr">/home/</span>$<span class="nx">USER</span>/<span class="nx">start</span><span class="p">-</span><span class="nx">n8n</span>.<span class="nx">sh</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">@<span class="nx">reboot</span> <span class="sr">/home/</span>$<span class="nx">USER</span>/<span class="nx">start</span><span class="p">-</span><span class="nx">n8n</span>.<span class="nx">sh</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Save and exit.</p>
 <h5 id="run-the-script">Run the script</h5>
@@ -3326,7 +3326,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
 
 

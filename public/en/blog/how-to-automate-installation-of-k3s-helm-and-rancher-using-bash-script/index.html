@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
+<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
 
-<script defer src="/js/search.min.09b8862398053c24bcf32ef3a4e2b4442f81688bd1b284059839801f143ac747.js"></script>
+<script defer src="/js/search.min.ea90090b1a0feb6d9fa76023619e64fc2155d6d31e4dac9046e5d6464062c235.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="How to automate installation of K3S, Helm and Rancher using Bash script">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.111.3">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1870,52 +1870,52 @@
 </span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">check</span> <span class="nx">for</span> <span class="nx">file</span> <span class="nx">existence</span> <span class="nx">and</span> <span class="k">execute</span> <span class="nx">it</span>
-</span></span><span class="line"><span class="cl"><span class="nx">execute_if_exists</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">file_path</span><span class="p">=</span><span class="s2">&#34;$1&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">description</span><span class="p">=</span><span class="s2">&#34;$2&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;$file_path&#34;</span> ]; <span class="nx">then</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">echo</span> <span class="s2">&#34;Executing ${description}...&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">sh</span> <span class="s2">&#34;$file_path&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">echo</span> <span class="s2">&#34;${description} does not exist in ${file_path%/*}.&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">fi</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">configure</span> <span class="nx">iptables</span>
-</span></span><span class="line"><span class="cl"><span class="nx">configure_iptables</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">    <span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Check</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">is</span> <span class="nx">root</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;You are not the root user.&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">exit</span> <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;You are the root user.&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Executions</span>
-</span></span><span class="line"><span class="cl"><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> <span class="s2">&#34;k3s-killall.sh&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-uninstall.sh&#34;</span> <span class="s2">&#34;k3s-uninstall.sh&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Check</span> <span class="nx">and</span> <span class="nx">remove</span> <span class="nx">helm</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/helm&#34;</span> ]; <span class="nx">then</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Removing helm...&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">rm</span> <span class="p">-</span><span class="nx">f</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">helm</span>
-</span></span><span class="line"><span class="cl"><span class="k">else</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Helm does not exist in /usr/local/bin.&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Configure</span> <span class="nx">iptables</span>
-</span></span><span class="line"><span class="cl"><span class="nx">configure_iptables</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">check</span> <span class="nx">for</span> <span class="nx">file</span> <span class="nx">existence</span> <span class="nx">and</span> <span class="nx">execute</span> <span class="nx">it</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_if_exists</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">file_path</span><span class="p">=</span><span class="s2">&#34;$1&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">description</span><span class="p">=</span><span class="s2">&#34;$2&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;$file_path&#34;</span> ]; <span class="nx">then</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">echo</span> <span class="s2">&#34;Executing ${description}...&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">sh</span> <span class="s2">&#34;$file_path&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="k">else</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">echo</span> <span class="s2">&#34;${description} does not exist in ${file_path%/*}.&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">fi</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">configure</span> <span class="nx">iptables</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">configure_iptables</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Check</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">is</span> <span class="nx">root</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;You are not the root user.&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">exit</span> <span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;You are the root user.&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Executions</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> <span class="s2">&#34;k3s-killall.sh&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-uninstall.sh&#34;</span> <span class="s2">&#34;k3s-uninstall.sh&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Check</span> <span class="nx">and</span> <span class="nx">remove</span> <span class="nx">helm</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/helm&#34;</span> ]; <span class="nx">then</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Removing helm...&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">rm</span> <span class="p">-</span><span class="nx">f</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">helm</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">else</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Helm does not exist in /usr/local/bin.&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Configure</span> <span class="nx">iptables</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">configure_iptables</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Bash script for worker nodes:</li>
@@ -1961,44 +1961,44 @@
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">check</span> <span class="nx">for</span> <span class="nx">file</span> <span class="nx">existence</span> <span class="nx">and</span> <span class="k">execute</span> <span class="nx">it</span>
-</span></span><span class="line"><span class="cl"><span class="nx">execute_if_exists</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">file_path</span><span class="p">=</span><span class="s2">&#34;$1&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">description</span><span class="p">=</span><span class="s2">&#34;$2&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;$file_path&#34;</span> ]; <span class="nx">then</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">echo</span> <span class="s2">&#34;Executing ${description}...&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">sh</span> <span class="s2">&#34;$file_path&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">echo</span> <span class="s2">&#34;${description} does not exist in ${file_path%/*}.&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">fi</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">configure</span> <span class="nx">iptables</span>
-</span></span><span class="line"><span class="cl"><span class="nx">configure_iptables</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">    <span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Check</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">is</span> <span class="nx">root</span>
-</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;You are not the root user.&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">exit</span> <span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;You are the root user.&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Executions</span>
-</span></span><span class="line"><span class="cl"><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> <span class="s2">&#34;k3s-killall.sh&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-agent-uninstall.sh&#34;</span> <span class="s2">&#34;k3s-agent-uninstall.sh&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Configure</span> <span class="nx">iptables</span>
-</span></span><span class="line"><span class="cl"><span class="nx">configure_iptables</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">check</span> <span class="nx">for</span> <span class="nx">file</span> <span class="nx">existence</span> <span class="nx">and</span> <span class="nx">execute</span> <span class="nx">it</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_if_exists</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">file_path</span><span class="p">=</span><span class="s2">&#34;$1&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">description</span><span class="p">=</span><span class="s2">&#34;$2&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;$file_path&#34;</span> ]; <span class="nx">then</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">echo</span> <span class="s2">&#34;Executing ${description}...&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">sh</span> <span class="s2">&#34;$file_path&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="k">else</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">echo</span> <span class="s2">&#34;${description} does not exist in ${file_path%/*}.&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">fi</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">configure</span> <span class="nx">iptables</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">configure_iptables</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Check</span> <span class="k">if</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">is</span> <span class="nx">root</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;You are not the root user.&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">exit</span> <span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;You are the root user.&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Executions</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> <span class="s2">&#34;k3s-killall.sh&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_if_exists</span> <span class="s2">&#34;/usr/local/bin/k3s-agent-uninstall.sh&#34;</span> <span class="s2">&#34;k3s-agent-uninstall.sh&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Configure</span> <span class="nx">iptables</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">configure_iptables</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="add-cgroup-entries-into-the-cmdlinetxt-on-each-nodes-that-is-running-on-arm-processor">Add cgroup entries into the cmdline.txt on each nodes that is running on ARM processor.</h4>
 <div class="highlight"><div class="chroma">
@@ -2416,352 +2416,352 @@
 </span><span class="lnt">345
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">log</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s2">&#34;[$(date +&#39;%Y-%m-%d %H:%M:%S&#39;)]: $*&#34;</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">display</span> <span class="nx">spinner</span>
-</span></span><span class="line"><span class="cl"><span class="nx">display_spinner</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">local</span> <span class="nx">pid</span><span class="p">=</span>$<span class="m">1</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span><span class="s1">&#39;-\|/&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">log</span> <span class="s2">&#34;Loading...&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">while</span> [ <span class="s2">&#34;$(ps a | awk &#39;{print $1}&#39; | grep $pid)&#34;</span> ]; <span class="nx">do</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">temp</span><span class="p">=</span>${<span class="nx">spin</span>#?}
-</span></span><span class="line"><span class="cl">    <span class="nx">printf</span> <span class="s2">&#34;\r [%c]&#34;</span> <span class="s2">&#34;$spin&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span>$<span class="nx">temp</span>${<span class="nx">spin</span>%<span class="s2">&#34;$temp&#34;</span>}
-</span></span><span class="line"><span class="cl">    <span class="nx">sleep</span> <span class="m">0</span>.<span class="m">1</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">done</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">printf</span> <span class="s2">&#34;\r&#34;</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">execute_command</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">local</span> <span class="nx">cmd</span><span class="p">=</span><span class="s2">&#34;$*&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">log</span> <span class="s2">&#34;Executing: $cmd&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">bash</span> <span class="p">-</span><span class="nx">c</span> <span class="s2">&#34;$cmd&#34;</span> &amp;
-</span></span><span class="line"><span class="cl">  <span class="nx">display_spinner</span> $<span class="p">!</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">error_exit</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">log</span> <span class="s2">&#34;$1&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">exit</span> <span class="m">1</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">install_k3s</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">execute_command</span> <span class="s2">&#34;curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=\&#34;v1.26.9+k3s1\&#34; INSTALL_K3S_EXEC=\&#34;--disable traefik\&#34; K3S_KUBECONFIG_MODE=\&#34;644\&#34; sh -s -&#34;</span> <span class="p">||</span> <span class="nx">error_exit</span> <span class="s2">&#34;Failed to install k3s&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">execute_command</span> <span class="s2">&#34;systemctl -q is-active k3s.service&#34;</span> <span class="p">||</span> <span class="nx">error_exit</span> <span class="s2">&#34;k3s service not active. Exiting...&#34;</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">setup_bash_autocomplete</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s2">&#34;source &lt;(kubectl completion bash)&#34;</span> <span class="p">&gt;&gt;</span> <span class="p">~</span>/.<span class="nx">bashrc</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">~</span>/.<span class="nx">bashrc</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">setup_environment</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">cat</span> <span class="p">&lt;&lt;</span> <span class="nx">EOF</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">tee</span> <span class="sr">/etc/</span><span class="nx">environment</span>
-</span></span><span class="line"><span class="cl"><span class="nx">KUBECONFIG</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">rancher</span><span class="sr">/k3s/</span><span class="nx">k3s</span>.<span class="nx">yaml</span>
-</span></span><span class="line"><span class="cl"><span class="nx">EOF</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">cat</span> <span class="sr">/etc/</span><span class="nx">environment</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="sr">/etc/</span><span class="nx">environment</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">install_nginx</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="nx">apply</span> <span class="p">-</span><span class="nx">f</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">raw</span>.<span class="nx">githubusercontent</span>.<span class="nx">com</span><span class="sr">/kubernetes/</span><span class="nx">ingress</span><span class="p">-</span><span class="nx">nginx</span><span class="sr">/master/</span><span class="nx">deploy</span><span class="sr">/static/</span><span class="nx">provider</span><span class="sr">/baremetal/</span><span class="nx">deploy</span>.<span class="nx">yaml</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">patch_nginx</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">cat</span> <span class="p">&gt;</span> <span class="nx">ingress</span>.<span class="nx">yaml</span> <span class="p">&lt;&lt;</span><span class="nx">EOF</span>
-</span></span><span class="line"><span class="cl"><span class="nx">spec</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">template</span>:
-</span></span><span class="line"><span class="cl">    <span class="nx">spec</span>:
-</span></span><span class="line"><span class="cl">      <span class="nx">hostNetwork</span>: <span class="nx">true</span>
-</span></span><span class="line"><span class="cl"><span class="nx">EOF</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="nx">patch</span> <span class="nx">deployment</span> <span class="nx">ingress</span><span class="p">-</span><span class="nx">nginx</span><span class="p">-</span><span class="nx">controller</span> <span class="p">-</span><span class="nx">n</span> <span class="nx">ingress</span><span class="p">-</span><span class="nx">nginx</span> <span class="p">--</span><span class="nx">patch</span> <span class="s2">&#34;$(cat ingress.yaml)&#34;</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">perform_cluster_check</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="nx">cluster</span><span class="p">-</span><span class="nx">info</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">nodes</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="nx">describe</span> <span class="nx">nodes</span> <span class="nx">rancher</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">pods</span> <span class="p">-</span><span class="nx">A</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">svc</span> <span class="p">-</span><span class="nx">A</span> <span class="p">-</span><span class="nx">o</span> <span class="nx">wide</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">install_git_helm</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">git</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">curl</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">raw</span>.<span class="nx">githubusercontent</span>.<span class="nx">com</span><span class="sr">/helm/</span><span class="nx">helm</span><span class="sr">/main/</span><span class="nx">scripts</span>/<span class="nx">get</span><span class="p">-</span><span class="nx">helm</span><span class="m">-3</span> <span class="p">|</span> <span class="nx">bash</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">helm_autocomplete</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s2">&#34;source &lt;(helm completion bash)&#34;</span> <span class="p">&gt;&gt;</span> <span class="p">~</span>/.<span class="nx">bashrc</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">source</span> <span class="p">~</span>/.<span class="nx">bashrc</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">add_rancher_repo</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">helm</span> <span class="nx">repo</span> <span class="nx">add</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">stable</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">releases</span>.<span class="nx">rancher</span>.<span class="nx">com</span><span class="sr">/server-charts/</span><span class="nx">stable</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">helm</span> <span class="nx">repo</span> <span class="nx">update</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">generate_certs</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">openssl</span> <span class="nx">genrsa</span> <span class="p">-</span><span class="nx">out</span> <span class="nx">rancher</span>.<span class="nx">key</span> <span class="m">2048</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s1">&#39;This part is interactive. Provide proper values.&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">openssl</span> <span class="nx">req</span> <span class="p">-</span><span class="nx">new</span> <span class="p">-</span><span class="nx">key</span> <span class="nx">rancher</span>.<span class="nx">key</span> <span class="p">-</span><span class="nx">out</span> <span class="nx">rancher</span>.<span class="nx">csr</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">openssl</span> <span class="nx">x509</span> <span class="p">-</span><span class="nx">req</span> <span class="p">-</span><span class="nx">days</span> <span class="m">365</span> <span class="p">-</span><span class="nx">in</span> <span class="nx">rancher</span>.<span class="nx">csr</span> <span class="p">-</span><span class="nx">signkey</span> <span class="nx">rancher</span>.<span class="nx">key</span> <span class="p">-</span><span class="nx">out</span> <span class="nx">rancher</span>.<span class="nx">crt</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">generate_secret</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">kubectl</span> <span class="p">-</span><span class="nx">n</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span> <span class="nx">create</span> <span class="nx">secret</span> <span class="nx">tls</span> <span class="nx">tls</span><span class="p">-</span><span class="nx">rancher</span><span class="p">-</span><span class="nx">ingress</span> \
-</span></span><span class="line"><span class="cl">  <span class="p">--</span><span class="nx">cert</span><span class="p">=</span><span class="sr">/home/</span><span class="nx">adrian</span>/<span class="nx">rancher</span>.<span class="nx">crt</span> \
-</span></span><span class="line"><span class="cl">  <span class="p">--</span><span class="nx">key</span><span class="p">=</span><span class="sr">/home/</span><span class="nx">adrian</span>/<span class="nx">rancher</span>.<span class="nx">key</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">generate_values</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="nx">cat</span> <span class="p">&gt;</span> <span class="nx">values</span>.<span class="nx">yaml</span> <span class="p">&lt;&lt;</span><span class="nx">EOF</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">Additional</span> <span class="nx">Trusted</span> <span class="nx">CAs</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">Enable</span> <span class="nx">this</span> <span class="nx">flag</span> <span class="nx">and</span> <span class="nx">add</span> <span class="nx">your</span> <span class="nx">CA</span> <span class="nx">certs</span> <span class="nx">as</span> <span class="nx">a</span> <span class="nx">secret</span> <span class="nx">named</span> <span class="nx">tls</span><span class="p">-</span><span class="nx">ca</span><span class="p">-</span><span class="nx">additional</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">namespace</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">See</span> <span class="nx">README</span>.<span class="nx">md</span> <span class="nx">for</span> <span class="nx">details</span>.
-</span></span><span class="line"><span class="cl"><span class="nx">additionalTrustedCAs</span>: <span class="nx">false</span>
-</span></span><span class="line"><span class="cl"><span class="nx">antiAffinity</span>: <span class="nx">preferred</span>
-</span></span><span class="line"><span class="cl"><span class="nx">topologyKey</span>: <span class="nx">kubernetes</span>.<span class="nx">io</span>/<span class="nx">hostname</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Audit</span> <span class="nx">Logs</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">rancher</span>.<span class="nx">com</span><span class="sr">/docs/</span><span class="nx">rancher</span><span class="sr">/v2.x/</span><span class="nx">en</span><span class="sr">/installation/</span><span class="nx">api</span><span class="p">-</span><span class="nx">auditing</span>/
-</span></span><span class="line"><span class="cl"># <span class="nx">The</span> <span class="nx">audit</span> <span class="nx">log</span> <span class="nx">is</span> <span class="nx">piped</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">console</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">audit</span><span class="p">-</span><span class="nx">log</span> <span class="nx">container</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">rancher</span> <span class="nx">pod</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">https</span>:<span class="sr">//</span><span class="nx">rancher</span>.<span class="nx">com</span><span class="sr">/docs/</span><span class="nx">rancher</span><span class="sr">/v2.x/</span><span class="nx">en</span><span class="sr">/installation/</span><span class="nx">api</span><span class="p">-</span><span class="nx">auditing</span>/
-</span></span><span class="line"><span class="cl"># <span class="nx">destination</span> <span class="nx">stream</span> <span class="nx">to</span> <span class="nx">sidecar</span> <span class="nx">container</span> <span class="nx">console</span> <span class="nx">or</span> <span class="nx">hostPath</span> <span class="nx">volume</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">level</span>: <span class="nx">Verbosity</span> <span class="nx">of</span> <span class="nx">logs</span><span class="p">,</span> <span class="m">0</span> <span class="nx">to</span> <span class="m">3</span>. <span class="m">0</span> <span class="nx">is</span> <span class="nx">off</span> <span class="m">3</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">lot</span>.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">auditLog</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">destination</span>: <span class="nx">sidecar</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">hostPath</span>: <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/rancher/</span><span class="nx">audit</span>/
-</span></span><span class="line"><span class="cl">  <span class="nx">level</span>: <span class="m">0</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">maxAge</span>: <span class="m">1</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">maxBackup</span>: <span class="m">1</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">maxSize</span>: <span class="m">100</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  # <span class="nx">Image</span> <span class="nx">for</span> <span class="nx">collecting</span> <span class="nx">rancher</span> <span class="nx">audit</span> <span class="nx">logs</span>.
-</span></span><span class="line"><span class="cl">  # <span class="nx">Important</span>: <span class="nx">update</span> <span class="nx">pkg</span><span class="sr">/image/</span><span class="nx">export</span>/<span class="nx">resolve</span>.<span class="nx">go</span> <span class="nx">when</span> <span class="nx">this</span> <span class="nx">default</span> <span class="nx">image</span> <span class="nx">is</span> <span class="nx">changed</span><span class="p">,</span> <span class="nx">so</span> <span class="nx">that</span> <span class="nx">it</span>&#39;<span class="nx">s</span> <span class="nx">reflected</span> <span class="nx">accordingly</span> <span class="nx">in</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">images</span>.<span class="nx">txt</span> <span class="nx">generated</span> <span class="nx">for</span> <span class="nx">air</span><span class="p">-</span><span class="nx">gapped</span> <span class="nx">setups</span>.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">image</span>:
-</span></span><span class="line"><span class="cl">    <span class="nx">repository</span>: <span class="s2">&#34;rancher/mirrored-bci-micro&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">tag</span>: <span class="m">15</span>.<span class="m">4</span>.<span class="m">14</span>.<span class="m">3</span>
-</span></span><span class="line"><span class="cl">    # <span class="nx">Override</span> <span class="nx">imagePullPolicy</span> <span class="nx">image</span>
-</span></span><span class="line"><span class="cl">    # <span class="nx">options</span>: <span class="nx">Always</span><span class="p">,</span> <span class="nx">Never</span><span class="p">,</span> <span class="nx">IfNotPresent</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">pullPolicy</span>: <span class="s2">&#34;IfNotPresent&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">As</span> <span class="nx">of</span> <span class="nx">Rancher</span> <span class="nx">v2</span>.<span class="m">5</span>.<span class="m">0</span> <span class="nx">this</span> <span class="nx">flag</span> <span class="nx">is</span> <span class="nx">deprecated</span> <span class="nx">and</span> <span class="nx">must</span> <span class="nx">be</span> <span class="k">set</span> <span class="nx">to</span> <span class="s1">&#39;true&#39;</span> <span class="nx">in</span> <span class="nx">order</span> <span class="nx">for</span> <span class="nx">Rancher</span> <span class="nx">to</span> <span class="nx">start</span>
-</span></span><span class="line"><span class="cl"><span class="nx">addLocal</span>: <span class="s2">&#34;true&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Add</span> <span class="nx">debug</span> <span class="nx">flag</span> <span class="nx">to</span> <span class="nx">Rancher</span> <span class="nx">server</span>
-</span></span><span class="line"><span class="cl"><span class="nx">debug</span>: <span class="nx">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">When</span> <span class="nx">starting</span> <span class="nx">Rancher</span> <span class="nx">for</span> <span class="nx">the</span> <span class="nx">first</span> <span class="nx">time</span><span class="p">,</span> <span class="nx">bootstrap</span> <span class="nx">the</span> <span class="nx">admin</span> <span class="nx">as</span> <span class="nx">restricted</span><span class="p">-</span><span class="nx">admin</span>
-</span></span><span class="line"><span class="cl"><span class="nx">restrictedAdmin</span>: <span class="nx">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Extra</span> <span class="nx">environment</span> <span class="nx">variables</span> <span class="nx">passed</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">rancher</span> <span class="nx">pods</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">extraEnv</span>:
-</span></span><span class="line"><span class="cl"># <span class="p">-</span> <span class="nx">name</span>: <span class="nx">CATTLE_TLS_MIN_VERSION</span>
-</span></span><span class="line"><span class="cl">#   <span class="nx">value</span>: <span class="s2">&#34;1.0&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Fully</span> <span class="nx">qualified</span> <span class="nx">name</span> <span class="nx">to</span> <span class="nx">reach</span> <span class="nx">your</span> <span class="nx">Rancher</span> <span class="nx">server</span>
-</span></span><span class="line"><span class="cl"><span class="nx">hostname</span>: <span class="nx">rancher</span>.<span class="nx">local</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">## <span class="nx">Optional</span> <span class="nx">array</span> <span class="nx">of</span> <span class="nx">imagePullSecrets</span> <span class="nx">containing</span> <span class="nx">private</span> <span class="nx">registry</span> <span class="nx">credentials</span>
-</span></span><span class="line"><span class="cl">## <span class="nx">Ref</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">kubernetes</span>.<span class="nx">io</span><span class="sr">/docs/</span><span class="nx">tasks</span><span class="sr">/configure-pod-container/</span><span class="nx">pull</span><span class="p">-</span><span class="nx">image</span><span class="p">-</span><span class="nx">private</span><span class="p">-</span><span class="nx">registry</span>/
-</span></span><span class="line"><span class="cl"><span class="nx">imagePullSecrets</span>: []
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="p">-</span> <span class="nx">name</span>: <span class="nx">secretName</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### <span class="nx">ingress</span> ###
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Readme</span> <span class="nx">for</span> <span class="nx">details</span> <span class="nx">and</span> <span class="nx">instruction</span> <span class="nx">on</span> <span class="nx">adding</span> <span class="nx">tls</span> <span class="nx">secrets</span>.
-</span></span><span class="line"><span class="cl"><span class="nx">ingress</span>:
-</span></span><span class="line"><span class="cl">  # <span class="nx">If</span> <span class="k">set</span> <span class="nx">to</span> <span class="nx">false</span><span class="p">,</span> <span class="nx">ingress</span> <span class="nx">will</span> <span class="nx">not</span> <span class="nx">be</span> <span class="nx">created</span>
-</span></span><span class="line"><span class="cl">  # <span class="nx">Defaults</span> <span class="nx">to</span> <span class="nx">true</span>
-</span></span><span class="line"><span class="cl">  # <span class="nx">options</span>: <span class="nx">true</span><span class="p">,</span> <span class="nx">false</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">enabled</span>: <span class="nx">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">includeDefaultExtraAnnotations</span>: <span class="nx">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">extraAnnotations</span>: {}
-</span></span><span class="line"><span class="cl">  <span class="nx">ingressClassName</span>: <span class="s2">&#34;nginx&#34;</span>
-</span></span><span class="line"><span class="cl">  # <span class="nx">backend</span> <span class="nx">port</span> <span class="nx">number</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">servicePort</span>: <span class="m">80</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  # <span class="nx">configurationSnippet</span> <span class="p">-</span> <span class="nx">Add</span> <span class="nx">additional</span> <span class="nx">Nginx</span> <span class="nx">configuration</span>. <span class="nx">This</span> <span class="nx">example</span> <span class="nx">statically</span> <span class="nx">sets</span> <span class="nx">a</span> <span class="nx">header</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">ingress</span>.
-</span></span><span class="line"><span class="cl">  # <span class="nx">configurationSnippet</span>: <span class="p">|</span>
-</span></span><span class="line"><span class="cl">  #   <span class="nx">more_set_input_headers</span> <span class="s2">&#34;X-Forwarded-Host: {{ .Values.hostname }}&#34;</span>;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">tls</span>:
-</span></span><span class="line"><span class="cl">    # <span class="nx">options</span>: <span class="nx">rancher</span><span class="p">,</span> <span class="nx">letsEncrypt</span><span class="p">,</span> <span class="nx">secret</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">source</span>: <span class="nx">secret</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">secretName</span>: <span class="nx">tls</span><span class="p">-</span><span class="nx">rancher</span><span class="p">-</span><span class="nx">ingress</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### <span class="nx">service</span> ###
-</span></span><span class="line"><span class="cl"># <span class="nx">Override</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">NodePort</span> <span class="nx">or</span> <span class="nx">LoadBalancer</span> <span class="nx">service</span> <span class="nx">type</span> <span class="p">-</span> <span class="nx">default</span> <span class="nx">is</span> <span class="nx">ClusterIP</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">service</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">type</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">annotations</span>: {}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### <span class="nx">LetsEncrypt</span> <span class="nx">config</span> ###
-</span></span><span class="line"><span class="cl"># <span class="nx">ProTip</span>: <span class="nx">The</span> <span class="nx">production</span> <span class="nx">environment</span> <span class="nx">only</span> <span class="nx">allows</span> <span class="nx">you</span> <span class="nx">to</span> <span class="nx">register</span> <span class="nx">a</span> <span class="nx">name</span> <span class="m">5</span> <span class="nx">times</span> <span class="nx">a</span> <span class="nx">week</span>.
-</span></span><span class="line"><span class="cl">#         <span class="nx">Use</span> <span class="nx">staging</span> <span class="nx">until</span> <span class="nx">you</span> <span class="nx">have</span> <span class="nx">your</span> <span class="nx">config</span> <span class="nx">right</span>.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">letsEncrypt</span>:
-</span></span><span class="line"><span class="cl">  # <span class="nx">email</span>: <span class="nx">none</span>@<span class="nx">example</span>.<span class="nx">com</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">environment</span>: <span class="nx">production</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ingress</span>:
-</span></span><span class="line"><span class="cl">    # <span class="nx">options</span>: <span class="nx">traefik</span><span class="p">,</span> <span class="nx">nginx</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">class</span>: <span class="s2">&#34;nginx&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">If</span> <span class="nx">you</span> <span class="nx">are</span> <span class="nx">using</span> <span class="nx">certs</span> <span class="nx">signed</span> <span class="nx">by</span> <span class="nx">a</span> <span class="nx">private</span> <span class="nx">CA</span> <span class="k">set</span> <span class="nx">to</span> <span class="s1">&#39;true&#39;</span> <span class="nx">and</span> <span class="k">set</span> <span class="nx">the</span> <span class="s1">&#39;tls-ca&#39;</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">in</span> <span class="nx">the</span> <span class="s1">&#39;rancher-system&#39;</span> <span class="nx">namespace</span>. <span class="nx">See</span> <span class="nx">the</span> <span class="nx">README</span>.<span class="nx">md</span> <span class="nx">for</span> <span class="nx">details</span>
-</span></span><span class="line"><span class="cl"><span class="nx">privateCA</span>: <span class="nx">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">http</span>[<span class="nx">s</span>] <span class="nx">proxy</span> <span class="nx">server</span> <span class="nx">passed</span> <span class="nx">into</span> <span class="nx">rancher</span> <span class="nx">server</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">proxy</span>: <span class="nx">http</span>:<span class="sr">//</span><span class="nx">example</span>.<span class="nx">local</span>:<span class="m">1080</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">comma</span> <span class="nx">separated</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">domains</span> <span class="nx">or</span> <span class="nx">ip</span> <span class="nx">addresses</span> <span class="nx">that</span> <span class="nx">will</span> <span class="nx">not</span> <span class="nx">use</span> <span class="nx">the</span> <span class="nx">proxy</span>
-</span></span><span class="line"><span class="cl"><span class="nx">noProxy</span>: <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">0</span><span class="sr">/8,10.42.0.0/</span><span class="m">16</span><span class="p">,</span><span class="m">10</span>.<span class="m">43</span>.<span class="m">0</span>.<span class="m">0</span><span class="sr">/16,192.168.0.1/</span><span class="m">24</span><span class="p">,</span><span class="m">10</span>.<span class="m">10</span>.<span class="m">0</span>.<span class="m">0</span>/<span class="m">24</span><span class="p">,</span><span class="nx">rancher</span>.<span class="nx">local</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Override</span> <span class="nx">rancher</span> <span class="nx">image</span> <span class="nx">location</span> <span class="nx">for</span> <span class="nx">Air</span> <span class="nx">Gap</span> <span class="nx">installs</span>
-</span></span><span class="line"><span class="cl"><span class="nx">rancherImage</span>: <span class="nx">rancher</span>/<span class="nx">rancher</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">rancher</span><span class="sr">/rancher image tag. https://hub.docker.com/</span><span class="nx">r</span><span class="sr">/rancher/</span><span class="nx">rancher</span><span class="sr">/tags/</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">Defaults</span> <span class="nx">to</span> .<span class="nx">Chart</span>.<span class="nx">appVersion</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">rancherImageTag</span>: <span class="nx">v2</span>.<span class="m">0</span>.<span class="m">7</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Override</span> <span class="nx">imagePullPolicy</span> <span class="nx">for</span> <span class="nx">rancher</span> <span class="nx">server</span> <span class="nx">images</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">options</span>: <span class="nx">Always</span><span class="p">,</span> <span class="nx">Never</span><span class="p">,</span> <span class="nx">IfNotPresent</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">Defaults</span> <span class="nx">to</span> <span class="nx">IfNotPresent</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">rancherImagePullPolicy</span>: <span class="p">&lt;</span><span class="nx">pullPolicy</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Number</span> <span class="nx">of</span> <span class="nx">Rancher</span> <span class="nx">server</span> <span class="nx">replicas</span>. <span class="nx">Setting</span> <span class="nx">to</span> <span class="nx">negative</span> <span class="nx">number</span> <span class="nx">will</span> <span class="nx">dynamically</span> <span class="nx">between</span> <span class="m">0</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">replicas</span><span class="p">)</span> <span class="nx">based</span> <span class="nx">on</span> <span class="nx">available</span> <span class="nx">nodes</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">of</span> <span class="nx">available</span> <span class="nx">nodes</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">cluster</span>
-</span></span><span class="line"><span class="cl"><span class="nx">replicas</span>: <span class="m">3</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Set</span> <span class="nx">priorityClassName</span> <span class="nx">to</span> <span class="nx">avoid</span> <span class="nx">eviction</span>
-</span></span><span class="line"><span class="cl"><span class="nx">priorityClassName</span>: <span class="nx">rancher</span><span class="p">-</span><span class="nx">critical</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Set</span> <span class="nx">pod</span> <span class="nx">resource</span> <span class="nx">requests</span>/<span class="nx">limits</span> <span class="nx">for</span> <span class="nx">Rancher</span>.
-</span></span><span class="line"><span class="cl"><span class="nx">resources</span>: {}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#
-</span></span><span class="line"><span class="cl"># <span class="nx">tls</span>
-</span></span><span class="line"><span class="cl">#   <span class="nx">Where</span> <span class="nx">to</span> <span class="nx">offload</span> <span class="nx">the</span> <span class="nx">TLS</span>/<span class="nx">SSL</span> <span class="nx">encryption</span>
-</span></span><span class="line"><span class="cl"># <span class="p">-</span> <span class="nx">ingress</span> <span class="p">(</span><span class="nx">default</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"># <span class="p">-</span> <span class="nx">external</span>
-</span></span><span class="line"><span class="cl"><span class="nx">tls</span>: <span class="nx">ingress</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">systemDefaultRegistry</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Set</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">the</span> <span class="nx">packaged</span> <span class="nx">system</span> <span class="nx">charts</span>
-</span></span><span class="line"><span class="cl"><span class="nx">useBundledSystemChart</span>: <span class="nx">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Certmanager</span> <span class="nx">version</span> <span class="nx">compatibility</span>
-</span></span><span class="line"><span class="cl"><span class="nx">certmanager</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">version</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Rancher</span> <span class="nx">custom</span> <span class="nx">logos</span> <span class="nx">persistence</span>
-</span></span><span class="line"><span class="cl"><span class="nx">customLogos</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">enabled</span>: <span class="nx">false</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">volumeSubpaths</span>:
-</span></span><span class="line"><span class="cl">    <span class="nx">emberUi</span>: <span class="s2">&#34;ember&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">vueUi</span>: <span class="s2">&#34;vue&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  ## <span class="nx">Volume</span> <span class="nx">kind</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">for</span> <span class="nx">persistence</span>: <span class="nx">persistentVolumeClaim</span><span class="p">,</span> <span class="nx">configMap</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">volumeKind</span>: <span class="nx">persistentVolumeClaim</span>
-</span></span><span class="line"><span class="cl">  ## <span class="nx">Use</span> <span class="nx">an</span> <span class="nx">existing</span> <span class="nx">volume</span>. <span class="nx">Custom</span> <span class="nx">logos</span> <span class="nx">should</span> <span class="nx">be</span> <span class="nx">copied</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">volume</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">user</span>
-</span></span><span class="line"><span class="cl">  # <span class="nx">volumeName</span>: <span class="nx">custom</span><span class="p">-</span><span class="nx">logos</span>
-</span></span><span class="line"><span class="cl">  ## <span class="nx">Just</span> <span class="nx">for</span> <span class="nx">volumeKind</span>: <span class="nx">persistentVolumeClaim</span>
-</span></span><span class="line"><span class="cl">  ## <span class="nx">To</span> <span class="nx">disables</span> <span class="nx">dynamic</span> <span class="nx">provisioning</span><span class="p">,</span> <span class="k">set</span> <span class="nx">storageClass</span>: <span class="s2">&#34;&#34;</span> <span class="nx">or</span> <span class="nx">storageClass</span>: <span class="s2">&#34;-&#34;</span>
-</span></span><span class="line"><span class="cl">  # <span class="nx">storageClass</span>: <span class="s2">&#34;-&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">accessMode</span>: <span class="nx">ReadWriteOnce</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">size</span>: <span class="m">1</span>Gi
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Rancher</span> <span class="nx">post</span><span class="p">-</span><span class="nx">delete</span> <span class="nx">hook</span>
-</span></span><span class="line"><span class="cl"><span class="nx">postDelete</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">enabled</span>: <span class="nx">true</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">image</span>:
-</span></span><span class="line"><span class="cl">    <span class="nx">repository</span>: <span class="nx">rancher</span>/<span class="nx">shell</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">tag</span>: <span class="nx">v0</span>.<span class="m">1</span>.<span class="m">20</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">namespaceList</span>:
-</span></span><span class="line"><span class="cl">    <span class="p">-</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">fleet</span><span class="p">-</span><span class="nx">system</span>
-</span></span><span class="line"><span class="cl">    <span class="p">-</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span>
-</span></span><span class="line"><span class="cl">    <span class="p">-</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">operator</span><span class="p">-</span><span class="nx">system</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  # <span class="nx">Number</span> <span class="nx">of</span> <span class="nx">seconds</span> <span class="nx">to</span> <span class="nx">wait</span> <span class="nx">for</span> <span class="nx">an</span> <span class="nx">app</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">uninstalled</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">timeout</span>: <span class="m">120</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  # <span class="nx">by</span> <span class="nx">default</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">job</span> <span class="nx">will</span> <span class="nx">fail</span> <span class="k">if</span> <span class="nx">it</span> <span class="nx">fail</span> <span class="nx">to</span> <span class="nx">uninstall</span> <span class="nx">any</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">apps</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">ignoreTimeoutError</span>: <span class="nx">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Set</span> <span class="nx">a</span> <span class="nx">bootstrap</span> <span class="nx">password</span>. <span class="nx">If</span> <span class="nx">leave</span> <span class="nx">empty</span><span class="p">,</span> <span class="nx">a</span> <span class="nx">random</span> <span class="nx">password</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">generated</span>.
-</span></span><span class="line"><span class="cl"><span class="nx">bootstrapPassword</span>: <span class="s2">&#34;test1234&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">livenessProbe</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">initialDelaySeconds</span>: <span class="m">60</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">periodSeconds</span>: <span class="m">30</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">readinessProbe</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">initialDelaySeconds</span>: <span class="m">5</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">periodSeconds</span>: <span class="m">30</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">global</span>:
-</span></span><span class="line"><span class="cl">  <span class="nx">cattle</span>:
-</span></span><span class="line"><span class="cl">    <span class="nx">psp</span>:
-</span></span><span class="line"><span class="cl">      # <span class="nx">will</span> <span class="nx">default</span> <span class="nx">to</span> <span class="nx">true</span> <span class="nx">on</span> <span class="m">1</span>.<span class="m">24</span> <span class="nx">and</span> <span class="nx">below</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">false</span> <span class="nx">for</span> <span class="m">1</span>.<span class="m">25</span> <span class="nx">and</span> <span class="nx">above</span>
-</span></span><span class="line"><span class="cl">      # <span class="nx">can</span> <span class="nx">be</span> <span class="nx">changed</span> <span class="nx">manually</span> <span class="nx">to</span> <span class="nx">true</span> <span class="nx">or</span> <span class="nx">false</span> <span class="nx">to</span> <span class="nx">bypass</span> <span class="nx">version</span> <span class="nx">checks</span> <span class="nx">and</span> <span class="nx">force</span> <span class="nx">that</span> <span class="nx">option</span>
-</span></span><span class="line"><span class="cl">      <span class="nx">enabled</span>: <span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">EOF</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">main</span><span class="p">()</span> {
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="nx">install_k3s</span>; <span class="nx">then</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s1">&#39;k3s is running...&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">setup_bash_autocomplete</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">setup_environment</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">install_nginx</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">patch_nginx</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">perform_cluster_check</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">install_git_helm</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">helm_autocomplete</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">add_rancher_repo</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">generate_certs</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">generate_values</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">kubectl</span> <span class="nx">create</span> <span class="nx">namespace</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">generate_secret</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">export</span> <span class="nx">KUBECONFIG</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">rancher</span><span class="sr">/k3s/</span><span class="nx">k3s</span>.<span class="nx">yaml</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s1">&#39;Wait 30 seconds...&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">sleep</span> <span class="m">30</span> &amp; # <span class="nx">Background</span> <span class="nx">sleep</span> <span class="nx">command</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">display_spinner</span> $<span class="p">!</span> # <span class="nx">Pass</span> <span class="nx">the</span> <span class="nx">PID</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">background</span> <span class="nx">command</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">helm</span> <span class="nx">install</span> <span class="nx">rancher</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">stable</span>/<span class="nx">rancher</span> <span class="p">--</span><span class="nx">namespace</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span> <span class="p">-</span><span class="nx">f</span> <span class="nx">values</span>.<span class="nx">yaml</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s1">&#39;Wait 120 seconds...&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">sleep</span> <span class="m">120</span> &amp; # <span class="nx">Background</span> <span class="nx">sleep</span> <span class="nx">command</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">display_spinner</span> $<span class="p">!</span> # <span class="nx">Pass</span> <span class="nx">the</span> <span class="nx">PID</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">background</span> <span class="nx">command</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">pods</span> <span class="p">-</span><span class="nx">A</span>
-</span></span><span class="line"><span class="cl">  <span class="k">else</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Failed to install k3s. Exiting...&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">fi</span>
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">main</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">log</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s2">&#34;[$(date +&#39;%Y-%m-%d %H:%M:%S&#39;)]: $*&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">display</span> <span class="nx">spinner</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">display_spinner</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">local</span> <span class="nx">pid</span><span class="p">=</span>$<span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span><span class="s1">&#39;-\|/&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">log</span> <span class="s2">&#34;Loading...&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">while</span> [ <span class="s2">&#34;$(ps a | awk &#39;{print $1}&#39; | grep $pid)&#34;</span> ]; <span class="nx">do</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">temp</span><span class="p">=</span>${<span class="nx">spin</span>#?}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">printf</span> <span class="s2">&#34;\r [%c]&#34;</span> <span class="s2">&#34;$spin&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span>$<span class="nx">temp</span>${<span class="nx">spin</span>%<span class="s2">&#34;$temp&#34;</span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sleep</span> <span class="m">0</span>.<span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">done</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">printf</span> <span class="s2">&#34;\r&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_command</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">local</span> <span class="nx">cmd</span><span class="p">=</span><span class="s2">&#34;$*&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">log</span> <span class="s2">&#34;Executing: $cmd&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">bash</span> <span class="p">-</span><span class="nx">c</span> <span class="s2">&#34;$cmd&#34;</span> &amp;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">display_spinner</span> $<span class="p">!</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">error_exit</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">log</span> <span class="s2">&#34;$1&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">exit</span> <span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">install_k3s</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">execute_command</span> <span class="s2">&#34;curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=\&#34;v1.26.9+k3s1\&#34; INSTALL_K3S_EXEC=\&#34;--disable traefik\&#34; K3S_KUBECONFIG_MODE=\&#34;644\&#34; sh -s -&#34;</span> <span class="p">||</span> <span class="nx">error_exit</span> <span class="s2">&#34;Failed to install k3s&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">execute_command</span> <span class="s2">&#34;systemctl -q is-active k3s.service&#34;</span> <span class="p">||</span> <span class="nx">error_exit</span> <span class="s2">&#34;k3s service not active. Exiting...&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">setup_bash_autocomplete</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s2">&#34;source &lt;(kubectl completion bash)&#34;</span> <span class="p">&gt;&gt;</span> <span class="p">~</span>/.<span class="nx">bashrc</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">source</span> <span class="p">~</span>/.<span class="nx">bashrc</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">setup_environment</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">cat</span> <span class="p">&lt;&lt;</span> <span class="nx">EOF</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">tee</span> <span class="sr">/etc/</span><span class="nx">environment</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">KUBECONFIG</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">rancher</span><span class="sr">/k3s/</span><span class="nx">k3s</span>.<span class="nx">yaml</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">EOF</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">cat</span> <span class="sr">/etc/</span><span class="nx">environment</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">source</span> <span class="sr">/etc/</span><span class="nx">environment</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">install_nginx</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="nx">apply</span> <span class="p">-</span><span class="nx">f</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">raw</span>.<span class="nx">githubusercontent</span>.<span class="nx">com</span><span class="sr">/kubernetes/</span><span class="nx">ingress</span><span class="p">-</span><span class="nx">nginx</span><span class="sr">/master/</span><span class="nx">deploy</span><span class="sr">/static/</span><span class="nx">provider</span><span class="sr">/baremetal/</span><span class="nx">deploy</span>.<span class="nx">yaml</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">patch_nginx</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">cat</span> <span class="p">&gt;</span> <span class="nx">ingress</span>.<span class="nx">yaml</span> <span class="p">&lt;&lt;</span><span class="nx">EOF</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">spec</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">template</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">spec</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">hostNetwork</span>: <span class="nx">true</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">EOF</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="nx">patch</span> <span class="nx">deployment</span> <span class="nx">ingress</span><span class="p">-</span><span class="nx">nginx</span><span class="p">-</span><span class="nx">controller</span> <span class="p">-</span><span class="nx">n</span> <span class="nx">ingress</span><span class="p">-</span><span class="nx">nginx</span> <span class="p">--</span><span class="nx">patch</span> <span class="s2">&#34;$(cat ingress.yaml)&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">perform_cluster_check</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="nx">cluster</span><span class="p">-</span><span class="nx">info</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">nodes</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="nx">describe</span> <span class="nx">nodes</span> <span class="nx">rancher</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">pods</span> <span class="p">-</span><span class="nx">A</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">svc</span> <span class="p">-</span><span class="nx">A</span> <span class="p">-</span><span class="nx">o</span> <span class="nx">wide</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">install_git_helm</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">git</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">curl</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">raw</span>.<span class="nx">githubusercontent</span>.<span class="nx">com</span><span class="sr">/helm/</span><span class="nx">helm</span><span class="sr">/main/</span><span class="nx">scripts</span>/<span class="nx">get</span><span class="p">-</span><span class="nx">helm</span><span class="m">-3</span> <span class="p">|</span> <span class="nx">bash</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">helm_autocomplete</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s2">&#34;source &lt;(helm completion bash)&#34;</span> <span class="p">&gt;&gt;</span> <span class="p">~</span>/.<span class="nx">bashrc</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">source</span> <span class="p">~</span>/.<span class="nx">bashrc</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">add_rancher_repo</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">helm</span> <span class="nx">repo</span> <span class="nx">add</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">stable</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">releases</span>.<span class="nx">rancher</span>.<span class="nx">com</span><span class="sr">/server-charts/</span><span class="nx">stable</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">helm</span> <span class="nx">repo</span> <span class="nx">update</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">generate_certs</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">openssl</span> <span class="nx">genrsa</span> <span class="p">-</span><span class="nx">out</span> <span class="nx">rancher</span>.<span class="nx">key</span> <span class="m">2048</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s1">&#39;This part is interactive. Provide proper values.&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">openssl</span> <span class="nx">req</span> <span class="p">-</span><span class="nx">new</span> <span class="p">-</span><span class="nx">key</span> <span class="nx">rancher</span>.<span class="nx">key</span> <span class="p">-</span><span class="nx">out</span> <span class="nx">rancher</span>.<span class="nx">csr</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">openssl</span> <span class="nx">x509</span> <span class="p">-</span><span class="nx">req</span> <span class="p">-</span><span class="nx">days</span> <span class="m">365</span> <span class="p">-</span><span class="nx">in</span> <span class="nx">rancher</span>.<span class="nx">csr</span> <span class="p">-</span><span class="nx">signkey</span> <span class="nx">rancher</span>.<span class="nx">key</span> <span class="p">-</span><span class="nx">out</span> <span class="nx">rancher</span>.<span class="nx">crt</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">generate_secret</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">kubectl</span> <span class="p">-</span><span class="nx">n</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span> <span class="nx">create</span> <span class="nx">secret</span> <span class="nx">tls</span> <span class="nx">tls</span><span class="p">-</span><span class="nx">rancher</span><span class="p">-</span><span class="nx">ingress</span> \<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="p">--</span><span class="nx">cert</span><span class="p">=</span><span class="sr">/home/</span><span class="nx">adrian</span>/<span class="nx">rancher</span>.<span class="nx">crt</span> \<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="p">--</span><span class="nx">key</span><span class="p">=</span><span class="sr">/home/</span><span class="nx">adrian</span>/<span class="nx">rancher</span>.<span class="nx">key</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">generate_values</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">cat</span> <span class="p">&gt;</span> <span class="nx">values</span>.<span class="nx">yaml</span> <span class="p">&lt;&lt;</span><span class="nx">EOF</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Additional</span> <span class="nx">Trusted</span> <span class="nx">CAs</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Enable</span> <span class="nx">this</span> <span class="nx">flag</span> <span class="nx">and</span> <span class="nx">add</span> <span class="nx">your</span> <span class="nx">CA</span> <span class="nx">certs</span> <span class="nx">as</span> <span class="nx">a</span> <span class="nx">secret</span> <span class="nx">named</span> <span class="nx">tls</span><span class="p">-</span><span class="nx">ca</span><span class="p">-</span><span class="nx">additional</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">namespace</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">See</span> <span class="nx">README</span>.<span class="nx">md</span> <span class="nx">for</span> <span class="nx">details</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">additionalTrustedCAs</span>: <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">antiAffinity</span>: <span class="nx">preferred</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">topologyKey</span>: <span class="nx">kubernetes</span>.<span class="nx">io</span>/<span class="nx">hostname</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Audit</span> <span class="nx">Logs</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">rancher</span>.<span class="nx">com</span><span class="sr">/docs/</span><span class="nx">rancher</span><span class="sr">/v2.x/</span><span class="nx">en</span><span class="sr">/installation/</span><span class="nx">api</span><span class="p">-</span><span class="nx">auditing</span>/<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">The</span> <span class="nx">audit</span> <span class="nx">log</span> <span class="nx">is</span> <span class="nx">piped</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">console</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">audit</span><span class="p">-</span><span class="nx">log</span> <span class="nx">container</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">rancher</span> <span class="nx">pod</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">https</span>:<span class="sr">//</span><span class="nx">rancher</span>.<span class="nx">com</span><span class="sr">/docs/</span><span class="nx">rancher</span><span class="sr">/v2.x/</span><span class="nx">en</span><span class="sr">/installation/</span><span class="nx">api</span><span class="p">-</span><span class="nx">auditing</span>/<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">destination</span> <span class="nx">stream</span> <span class="nx">to</span> <span class="nx">sidecar</span> <span class="nx">container</span> <span class="nx">console</span> <span class="nx">or</span> <span class="nx">hostPath</span> <span class="nx">volume</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">level</span>: <span class="nx">Verbosity</span> <span class="nx">of</span> <span class="nx">logs</span><span class="p">,</span> <span class="m">0</span> <span class="nx">to</span> <span class="m">3</span>. <span class="m">0</span> <span class="nx">is</span> <span class="nx">off</span> <span class="m">3</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">lot</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">auditLog</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">destination</span>: <span class="nx">sidecar</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">hostPath</span>: <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/rancher/</span><span class="nx">audit</span>/<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">level</span>: <span class="m">0</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">maxAge</span>: <span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">maxBackup</span>: <span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">maxSize</span>: <span class="m">100</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">Image</span> <span class="nx">for</span> <span class="nx">collecting</span> <span class="nx">rancher</span> <span class="nx">audit</span> <span class="nx">logs</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">Important</span>: <span class="nx">update</span> <span class="nx">pkg</span><span class="sr">/image/</span><span class="nx">export</span>/<span class="nx">resolve</span>.<span class="nx">go</span> <span class="nx">when</span> <span class="nx">this</span> <span class="nx">default</span> <span class="nx">image</span> <span class="nx">is</span> <span class="nx">changed</span><span class="p">,</span> <span class="nx">so</span> <span class="nx">that</span> <span class="nx">it</span>&#39;<span class="nx">s</span> <span class="nx">reflected</span> <span class="nx">accordingly</span> <span class="nx">in</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">images</span>.<span class="nx">txt</span> <span class="nx">generated</span> <span class="nx">for</span> <span class="nx">air</span><span class="p">-</span><span class="nx">gapped</span> <span class="nx">setups</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">image</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">repository</span>: <span class="s2">&#34;rancher/mirrored-bci-micro&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">tag</span>: <span class="m">15</span>.<span class="m">4</span>.<span class="m">14</span>.<span class="m">3</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">Override</span> <span class="nx">imagePullPolicy</span> <span class="nx">image</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">options</span>: <span class="nx">Always</span><span class="p">,</span> <span class="nx">Never</span><span class="p">,</span> <span class="nx">IfNotPresent</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">pullPolicy</span>: <span class="s2">&#34;IfNotPresent&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">As</span> <span class="nx">of</span> <span class="nx">Rancher</span> <span class="nx">v2</span>.<span class="m">5</span>.<span class="m">0</span> <span class="nx">this</span> <span class="nx">flag</span> <span class="nx">is</span> <span class="nx">deprecated</span> <span class="nx">and</span> <span class="nx">must</span> <span class="nx">be</span> <span class="nx">set</span> <span class="nx">to</span> <span class="s1">&#39;true&#39;</span> <span class="nx">in</span> <span class="nx">order</span> <span class="nx">for</span> <span class="nx">Rancher</span> <span class="nx">to</span> <span class="nx">start</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">addLocal</span>: <span class="s2">&#34;true&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Add</span> <span class="nx">debug</span> <span class="nx">flag</span> <span class="nx">to</span> <span class="nx">Rancher</span> <span class="nx">server</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">debug</span>: <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">When</span> <span class="nx">starting</span> <span class="nx">Rancher</span> <span class="nx">for</span> <span class="nx">the</span> <span class="nx">first</span> <span class="nx">time</span><span class="p">,</span> <span class="nx">bootstrap</span> <span class="nx">the</span> <span class="nx">admin</span> <span class="nx">as</span> <span class="nx">restricted</span><span class="p">-</span><span class="nx">admin</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">restrictedAdmin</span>: <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Extra</span> <span class="nx">environment</span> <span class="nx">variables</span> <span class="nx">passed</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">rancher</span> <span class="nx">pods</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">extraEnv</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="p">-</span> <span class="nx">name</span>: <span class="nx">CATTLE_TLS_MIN_VERSION</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#   <span class="nx">value</span>: <span class="s2">&#34;1.0&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Fully</span> <span class="nx">qualified</span> <span class="nx">name</span> <span class="nx">to</span> <span class="nx">reach</span> <span class="nx">your</span> <span class="nx">Rancher</span> <span class="nx">server</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">hostname</span>: <span class="nx">rancher</span>.<span class="nx">local</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>## <span class="nx">Optional</span> <span class="nx">array</span> <span class="nx">of</span> <span class="nx">imagePullSecrets</span> <span class="nx">containing</span> <span class="nx">private</span> <span class="nx">registry</span> <span class="nx">credentials</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>## <span class="nx">Ref</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">kubernetes</span>.<span class="nx">io</span><span class="sr">/docs/</span><span class="nx">tasks</span><span class="sr">/configure-pod-container/</span><span class="nx">pull</span><span class="p">-</span><span class="nx">image</span><span class="p">-</span><span class="nx">private</span><span class="p">-</span><span class="nx">registry</span>/<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">imagePullSecrets</span>: []<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="p">-</span> <span class="nx">name</span>: <span class="nx">secretName</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>### <span class="nx">ingress</span> ###<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Readme</span> <span class="nx">for</span> <span class="nx">details</span> <span class="nx">and</span> <span class="nx">instruction</span> <span class="nx">on</span> <span class="nx">adding</span> <span class="nx">tls</span> <span class="nx">secrets</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ingress</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">If</span> <span class="nx">set</span> <span class="nx">to</span> <span class="nx">false</span><span class="p">,</span> <span class="nx">ingress</span> <span class="nx">will</span> <span class="nx">not</span> <span class="nx">be</span> <span class="nx">created</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">Defaults</span> <span class="nx">to</span> <span class="nx">true</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">options</span>: <span class="nx">true</span><span class="p">,</span> <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">enabled</span>: <span class="nx">true</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">includeDefaultExtraAnnotations</span>: <span class="nx">true</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">extraAnnotations</span>: {}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">ingressClassName</span>: <span class="s2">&#34;nginx&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">backend</span> <span class="nx">port</span> <span class="nx">number</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">servicePort</span>: <span class="m">80</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">configurationSnippet</span> <span class="p">-</span> <span class="nx">Add</span> <span class="nx">additional</span> <span class="nx">Nginx</span> <span class="nx">configuration</span>. <span class="nx">This</span> <span class="nx">example</span> <span class="nx">statically</span> <span class="nx">sets</span> <span class="nx">a</span> <span class="nx">header</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">ingress</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">configurationSnippet</span>: <span class="p">|</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  #   <span class="nx">more_set_input_headers</span> <span class="s2">&#34;X-Forwarded-Host: {{ .Values.hostname }}&#34;</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">tls</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">options</span>: <span class="nx">rancher</span><span class="p">,</span> <span class="nx">letsEncrypt</span><span class="p">,</span> <span class="nx">secret</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">source</span>: <span class="nx">secret</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">secretName</span>: <span class="nx">tls</span><span class="p">-</span><span class="nx">rancher</span><span class="p">-</span><span class="nx">ingress</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>### <span class="nx">service</span> ###<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Override</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">NodePort</span> <span class="nx">or</span> <span class="nx">LoadBalancer</span> <span class="nx">service</span> <span class="nx">type</span> <span class="p">-</span> <span class="nx">default</span> <span class="nx">is</span> <span class="nx">ClusterIP</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">service</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">type</span>: <span class="s2">&#34;&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">annotations</span>: {}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>### <span class="nx">LetsEncrypt</span> <span class="nx">config</span> ###<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">ProTip</span>: <span class="nx">The</span> <span class="nx">production</span> <span class="nx">environment</span> <span class="nx">only</span> <span class="nx">allows</span> <span class="nx">you</span> <span class="nx">to</span> <span class="nx">register</span> <span class="nx">a</span> <span class="nx">name</span> <span class="m">5</span> <span class="nx">times</span> <span class="nx">a</span> <span class="nx">week</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#         <span class="nx">Use</span> <span class="nx">staging</span> <span class="nx">until</span> <span class="nx">you</span> <span class="nx">have</span> <span class="nx">your</span> <span class="nx">config</span> <span class="nx">right</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">letsEncrypt</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">email</span>: <span class="nx">none</span>@<span class="nx">example</span>.<span class="nx">com</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">environment</span>: <span class="nx">production</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">ingress</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">options</span>: <span class="nx">traefik</span><span class="p">,</span> <span class="nx">nginx</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">class</span>: <span class="s2">&#34;nginx&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">If</span> <span class="nx">you</span> <span class="nx">are</span> <span class="nx">using</span> <span class="nx">certs</span> <span class="nx">signed</span> <span class="nx">by</span> <span class="nx">a</span> <span class="nx">private</span> <span class="nx">CA</span> <span class="nx">set</span> <span class="nx">to</span> <span class="s1">&#39;true&#39;</span> <span class="nx">and</span> <span class="nx">set</span> <span class="nx">the</span> <span class="s1">&#39;tls-ca&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">in</span> <span class="nx">the</span> <span class="s1">&#39;rancher-system&#39;</span> <span class="nx">namespace</span>. <span class="nx">See</span> <span class="nx">the</span> <span class="nx">README</span>.<span class="nx">md</span> <span class="nx">for</span> <span class="nx">details</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">privateCA</span>: <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">http</span>[<span class="nx">s</span>] <span class="nx">proxy</span> <span class="nx">server</span> <span class="nx">passed</span> <span class="nx">into</span> <span class="nx">rancher</span> <span class="nx">server</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">proxy</span>: <span class="nx">http</span>:<span class="sr">//</span><span class="nx">example</span>.<span class="nx">local</span>:<span class="m">1080</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">comma</span> <span class="nx">separated</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">domains</span> <span class="nx">or</span> <span class="nx">ip</span> <span class="nx">addresses</span> <span class="nx">that</span> <span class="nx">will</span> <span class="nx">not</span> <span class="nx">use</span> <span class="nx">the</span> <span class="nx">proxy</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">noProxy</span>: <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">0</span><span class="sr">/8,10.42.0.0/</span><span class="m">16</span><span class="p">,</span><span class="m">10</span>.<span class="m">43</span>.<span class="m">0</span>.<span class="m">0</span><span class="sr">/16,192.168.0.1/</span><span class="m">24</span><span class="p">,</span><span class="m">10</span>.<span class="m">10</span>.<span class="m">0</span>.<span class="m">0</span>/<span class="m">24</span><span class="p">,</span><span class="nx">rancher</span>.<span class="nx">local</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Override</span> <span class="nx">rancher</span> <span class="nx">image</span> <span class="nx">location</span> <span class="nx">for</span> <span class="nx">Air</span> <span class="nx">Gap</span> <span class="nx">installs</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">rancherImage</span>: <span class="nx">rancher</span>/<span class="nx">rancher</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">rancher</span><span class="sr">/rancher image tag. https://hub.docker.com/</span><span class="nx">r</span><span class="sr">/rancher/</span><span class="nx">rancher</span><span class="sr">/tags/</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Defaults</span> <span class="nx">to</span> .<span class="nx">Chart</span>.<span class="nx">appVersion</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">rancherImageTag</span>: <span class="nx">v2</span>.<span class="m">0</span>.<span class="m">7</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Override</span> <span class="nx">imagePullPolicy</span> <span class="nx">for</span> <span class="nx">rancher</span> <span class="nx">server</span> <span class="nx">images</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">options</span>: <span class="nx">Always</span><span class="p">,</span> <span class="nx">Never</span><span class="p">,</span> <span class="nx">IfNotPresent</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Defaults</span> <span class="nx">to</span> <span class="nx">IfNotPresent</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">rancherImagePullPolicy</span>: <span class="p">&lt;</span><span class="nx">pullPolicy</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Number</span> <span class="nx">of</span> <span class="nx">Rancher</span> <span class="nx">server</span> <span class="nx">replicas</span>. <span class="nx">Setting</span> <span class="nx">to</span> <span class="nx">negative</span> <span class="nx">number</span> <span class="nx">will</span> <span class="nx">dynamically</span> <span class="nx">between</span> <span class="m">0</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">replicas</span><span class="p">)</span> <span class="nx">based</span> <span class="nx">on</span> <span class="nx">available</span> <span class="nx">nodes</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">of</span> <span class="nx">available</span> <span class="nx">nodes</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">cluster</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">replicas</span>: <span class="m">3</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Set</span> <span class="nx">priorityClassName</span> <span class="nx">to</span> <span class="nx">avoid</span> <span class="nx">eviction</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">priorityClassName</span>: <span class="nx">rancher</span><span class="p">-</span><span class="nx">critical</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Set</span> <span class="nx">pod</span> <span class="nx">resource</span> <span class="nx">requests</span>/<span class="nx">limits</span> <span class="nx">for</span> <span class="nx">Rancher</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">resources</span>: {}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">tls</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#   <span class="nx">Where</span> <span class="nx">to</span> <span class="nx">offload</span> <span class="nx">the</span> <span class="nx">TLS</span>/<span class="nx">SSL</span> <span class="nx">encryption</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="p">-</span> <span class="nx">ingress</span> <span class="p">(</span><span class="nx">default</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="p">-</span> <span class="nx">external</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">tls</span>: <span class="nx">ingress</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">systemDefaultRegistry</span>: <span class="s2">&#34;&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Set</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">the</span> <span class="nx">packaged</span> <span class="nx">system</span> <span class="nx">charts</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">useBundledSystemChart</span>: <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Certmanager</span> <span class="nx">version</span> <span class="nx">compatibility</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">certmanager</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">version</span>: <span class="s2">&#34;&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Rancher</span> <span class="nx">custom</span> <span class="nx">logos</span> <span class="nx">persistence</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">customLogos</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">enabled</span>: <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">volumeSubpaths</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">emberUi</span>: <span class="s2">&#34;ember&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">vueUi</span>: <span class="s2">&#34;vue&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ## <span class="nx">Volume</span> <span class="nx">kind</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">for</span> <span class="nx">persistence</span>: <span class="nx">persistentVolumeClaim</span><span class="p">,</span> <span class="nx">configMap</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">volumeKind</span>: <span class="nx">persistentVolumeClaim</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ## <span class="nx">Use</span> <span class="nx">an</span> <span class="nx">existing</span> <span class="nx">volume</span>. <span class="nx">Custom</span> <span class="nx">logos</span> <span class="nx">should</span> <span class="nx">be</span> <span class="nx">copied</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">volume</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">user</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">volumeName</span>: <span class="nx">custom</span><span class="p">-</span><span class="nx">logos</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ## <span class="nx">Just</span> <span class="nx">for</span> <span class="nx">volumeKind</span>: <span class="nx">persistentVolumeClaim</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  ## <span class="nx">To</span> <span class="nx">disables</span> <span class="nx">dynamic</span> <span class="nx">provisioning</span><span class="p">,</span> <span class="nx">set</span> <span class="nx">storageClass</span>: <span class="s2">&#34;&#34;</span> <span class="nx">or</span> <span class="nx">storageClass</span>: <span class="s2">&#34;-&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">storageClass</span>: <span class="s2">&#34;-&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">accessMode</span>: <span class="nx">ReadWriteOnce</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">size</span>: <span class="m">1</span>Gi<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Rancher</span> <span class="nx">post</span><span class="p">-</span><span class="nx">delete</span> <span class="nx">hook</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">postDelete</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">enabled</span>: <span class="nx">true</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">image</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">repository</span>: <span class="nx">rancher</span>/<span class="nx">shell</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">tag</span>: <span class="nx">v0</span>.<span class="m">1</span>.<span class="m">20</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">namespaceList</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">-</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">fleet</span><span class="p">-</span><span class="nx">system</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">-</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">-</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">operator</span><span class="p">-</span><span class="nx">system</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">Number</span> <span class="nx">of</span> <span class="nx">seconds</span> <span class="nx">to</span> <span class="nx">wait</span> <span class="nx">for</span> <span class="nx">an</span> <span class="nx">app</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">uninstalled</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">timeout</span>: <span class="m">120</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  # <span class="nx">by</span> <span class="nx">default</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">job</span> <span class="nx">will</span> <span class="nx">fail</span> <span class="k">if</span> <span class="nx">it</span> <span class="nx">fail</span> <span class="nx">to</span> <span class="nx">uninstall</span> <span class="nx">any</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">apps</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">ignoreTimeoutError</span>: <span class="nx">false</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Set</span> <span class="nx">a</span> <span class="nx">bootstrap</span> <span class="nx">password</span>. <span class="nx">If</span> <span class="nx">leave</span> <span class="nx">empty</span><span class="p">,</span> <span class="nx">a</span> <span class="nx">random</span> <span class="nx">password</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">generated</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">bootstrapPassword</span>: <span class="s2">&#34;test1234&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">livenessProbe</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">initialDelaySeconds</span>: <span class="m">60</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">periodSeconds</span>: <span class="m">30</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">readinessProbe</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">initialDelaySeconds</span>: <span class="m">5</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">periodSeconds</span>: <span class="m">30</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">global</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">cattle</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">psp</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      # <span class="nx">will</span> <span class="nx">default</span> <span class="nx">to</span> <span class="nx">true</span> <span class="nx">on</span> <span class="m">1</span>.<span class="m">24</span> <span class="nx">and</span> <span class="nx">below</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">false</span> <span class="nx">for</span> <span class="m">1</span>.<span class="m">25</span> <span class="nx">and</span> <span class="nx">above</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      # <span class="nx">can</span> <span class="nx">be</span> <span class="nx">changed</span> <span class="nx">manually</span> <span class="nx">to</span> <span class="nx">true</span> <span class="nx">or</span> <span class="nx">false</span> <span class="nx">to</span> <span class="nx">bypass</span> <span class="nx">version</span> <span class="nx">checks</span> <span class="nx">and</span> <span class="nx">force</span> <span class="nx">that</span> <span class="nx">option</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">enabled</span>: <span class="s2">&#34;&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">EOF</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">main</span><span class="p">()</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> <span class="nx">install_k3s</span>; <span class="nx">then</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s1">&#39;k3s is running...&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">setup_bash_autocomplete</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">setup_environment</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">install_nginx</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">patch_nginx</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">perform_cluster_check</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">install_git_helm</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">helm_autocomplete</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">add_rancher_repo</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">generate_certs</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">generate_values</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">kubectl</span> <span class="nx">create</span> <span class="nx">namespace</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">generate_secret</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">export</span> <span class="nx">KUBECONFIG</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">rancher</span><span class="sr">/k3s/</span><span class="nx">k3s</span>.<span class="nx">yaml</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s1">&#39;Wait 30 seconds...&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sleep</span> <span class="m">30</span> &amp; # <span class="nx">Background</span> <span class="nx">sleep</span> <span class="nx">command</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">display_spinner</span> $<span class="p">!</span> # <span class="nx">Pass</span> <span class="nx">the</span> <span class="nx">PID</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">background</span> <span class="nx">command</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">helm</span> <span class="nx">install</span> <span class="nx">rancher</span> <span class="nx">rancher</span><span class="p">-</span><span class="nx">stable</span>/<span class="nx">rancher</span> <span class="p">--</span><span class="nx">namespace</span> <span class="nx">cattle</span><span class="p">-</span><span class="nx">system</span> <span class="p">-</span><span class="nx">f</span> <span class="nx">values</span>.<span class="nx">yaml</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s1">&#39;Wait 120 seconds...&#39;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sleep</span> <span class="m">120</span> &amp; # <span class="nx">Background</span> <span class="nx">sleep</span> <span class="nx">command</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">display_spinner</span> $<span class="p">!</span> # <span class="nx">Pass</span> <span class="nx">the</span> <span class="nx">PID</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">last</span> <span class="nx">background</span> <span class="nx">command</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">kubectl</span> <span class="nx">get</span> <span class="nx">pods</span> <span class="p">-</span><span class="nx">A</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">else</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Failed to install k3s. Exiting...&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">fi</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">main</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="make-the-script-executable">Make the script executable</h4>
 <div class="highlight"><div class="chroma">
@@ -4315,7 +4315,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
 
 

@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
+<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
 
-<script defer src="/js/search.min.09b8862398053c24bcf32ef3a4e2b4442f81688bd1b284059839801f143ac747.js"></script>
+<script defer src="/js/search.min.ea90090b1a0feb6d9fa76023619e64fc2155d6d31e4dac9046e5d6464062c235.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="If you have any kind of server connected to the Internet, you are no doubt aware that no matter how small or unimportant it might seem, it is frequently probed, tested or subject to various attempts at abuse.">
   
 
-<meta name="generator" content="Hugo 0.122.0">
+<meta name="generator" content="Hugo 0.111.3">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1899,89 +1899,89 @@
 </span><span class="lnt">82
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exec</span> <span class="m">3</span><span class="p">&gt;</span>&amp;<span class="m">1</span> <span class="m">4</span><span class="p">&gt;</span>&amp;<span class="m">2</span>
-</span></span><span class="line"><span class="cl"><span class="nx">trap</span> <span class="s1">&#39;exec 2&gt;&amp;4 1&gt;&amp;3&#39;</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span>
-</span></span><span class="line"><span class="cl"><span class="nx">exec</span> <span class="m">1</span><span class="p">&gt;</span><span class="nx">log</span>.<span class="nx">out</span> <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span>
-</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="p">-</span><span class="nx">x</span>
-</span></span><span class="line"><span class="cl"># <span class="nx">Everything</span> <span class="nx">below</span> <span class="nx">will</span> <span class="nx">go</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">file</span> <span class="s1">&#39;log.out&#39;</span>:
-</span></span><span class="line"><span class="cl"><span class="nx">source</span> <span class="nx">pid</span>.<span class="nx">sh</span>
-</span></span><span class="line"><span class="cl"><span class="nx">IP_TMP</span><span class="p">=</span><span class="sr">/tmp/</span><span class="nx">ip</span>.<span class="nx">tmp</span>
-</span></span><span class="line"><span class="cl"><span class="nx">IP_BLOCKLIST</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span>
-</span></span><span class="line"><span class="cl"><span class="nx">IP_BLOCKLIST_TMP</span><span class="p">=</span><span class="sr">/tmp/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">tmp</span>
-</span></span><span class="line"><span class="cl"><span class="nx">IP_BLOCKLIST_CUSTOM</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span><span class="p">-</span><span class="nx">custom</span>.<span class="nx">conf</span> # <span class="nx">optional</span>
-</span></span><span class="line"><span class="cl"><span class="nx">BLACKLISTS</span><span class="p">=(</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://www.projecthoneypot.org/list_of_ips.php?t=d&amp;rss=1&#34; # Project Honey Pot Directory of Dictionary Attacker IPs</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=1.1.1.1&#34; # TOR Exit Nodes</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://www.maxmind.com/en/anonymous_proxies&#34; # MaxMind GeoIP Anonymous Proxies</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://www.maxmind.com/en/high-risk-ip-sample-list&#34; # MaxMind High Risk Sample List</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://danger.rulez.sk/projects/bruteforceblocker/blist.php&#34; # BruteForceBlocker IP List</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://rules.emergingthreats.net/blockrules/compromised-ips.txt&#34; # Emerging Threats - Russian Business Networks List</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://www.spamhaus.org/drop/drop.lasso&#34; # Spamhaus Don&#39;t Route Or Peer List (DROP)</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://cinsscore.com/list/ci-badguys.txt&#34; # C.I. Army Malicious IP List</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://www.autoshun.org/files/shunlist.csv&#34; # Autoshun Shun List</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://lists.blocklist.de/lists/all.txt&#34; # blocklist.de fail2ban reporting service</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://fx.vc-mp.eu/shared/iplist.txt&#34; # ferex badlist</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://feodotracker.abuse.ch/downloads/ipblocklist_aggressive.txt&#34; # FEODO tracker</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://reputation.alienvault.com/reputation.generic&#34; # ALIENVAULT REPUTATION</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://www.darklist.de/raw.php&#34; # DARKLIST DE</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-dommasterlist-high.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-dommasterlist.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-ipmasterlist-high.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-ipmasterlist.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-masterlist.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/dga-feed.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://www.binarydefense.com/banlist.txt&#34; # Binary Defense Systems</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt&#34; # https://github.com/stamparm/ipsum</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://sblam.com/blacklist.txt&#34; # SBLAM</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://blocklist.greensnow.co/greensnow.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://www.malwaredomainlist.com/hostslist/ip.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&#34;https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nx">for</span> <span class="nx">i</span> <span class="nx">in</span> <span class="s2">&#34;${BLOCKLISTS[@]}&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">do</span>
-</span></span><span class="line"><span class="cl"><span class="nx">curl</span> <span class="s2">&#34;$i&#34;</span> <span class="p">&gt;</span> $<span class="nx">IP_TMP</span>
-</span></span><span class="line"><span class="cl"><span class="nx">grep</span> <span class="p">-</span><span class="nx">Po</span> <span class="s1">&#39;(?:\d{1,3}.){3}\d{1,3}(?:/\d{1,2})?&#39;</span> $<span class="nx">IP_TMP</span> <span class="p">&gt;&gt;</span> $<span class="nx">IP_BLOCKLIST_TMP</span>
-</span></span><span class="line"><span class="cl"><span class="nx">done</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">Get</span> <span class="nx">the</span> <span class="nx">iblocklist</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">wget</span> <span class="p">-</span><span class="nx">qO</span><span class="p">-</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">list</span>.<span class="nx">iblocklist</span>.<span class="nx">com</span>/?<span class="nx">list</span><span class="p">=</span><span class="nx">erqajhwrxiuvjxqrrwfj</span>&amp;<span class="nx">fileformat</span><span class="p">=</span><span class="nx">p2p</span>&amp;<span class="nx">archiveformat</span><span class="p">=</span><span class="nx">gz</span> <span class="p">&gt;</span> $<span class="nx">_input</span> <span class="p">||</span> { <span class="nx">echo</span> <span class="s2">&#34;$0: Unable to download ip list.&#34;</span>; <span class="nx">exit</span> <span class="m">1</span>; }
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">Consolidate</span> <span class="nx">iblocklist</span> <span class="nx">into</span> <span class="nx">master</span> <span class="nx">list</span>
-</span></span><span class="line"><span class="cl"><span class="nx">cat</span> $<span class="nx">_input</span> <span class="p">&gt;&gt;</span> $<span class="nx">IP_BLOCKLIST_TMP</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">Consolidate</span> <span class="nx">the</span> <span class="nx">shodan</span>.<span class="nx">io</span> <span class="nx">IP</span> <span class="nx">addresses</span> <span class="nx">database</span>
-</span></span><span class="line"><span class="cl"><span class="nx">cat</span> <span class="sr">/opt/</span><span class="nx">blocklist</span>/<span class="nx">shodan</span>.<span class="nx">txt</span> <span class="p">&gt;&gt;</span> $<span class="nx">IP_BLOCKLIST_TMP</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">Sort</span> <span class="nx">the</span> <span class="nx">list</span>
-</span></span><span class="line"><span class="cl"><span class="nx">sort</span> $<span class="nx">IP_BLOCKLIST_TMP</span> <span class="p">-</span><span class="nx">n</span> <span class="p">|</span> <span class="nx">uniq</span> <span class="p">&gt;</span> $<span class="nx">IP_BLOCKLIST</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">Remove</span> <span class="nx">temporary</span> <span class="nx">list</span>
-</span></span><span class="line"><span class="cl"><span class="nx">rm</span> $<span class="nx">IP_BLOCKLIST_TMP</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">count</span> <span class="nx">how</span> <span class="nx">many</span> <span class="nx">IP</span> <span class="nx">addresses</span> <span class="nx">are</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">list</span>
-</span></span><span class="line"><span class="cl"><span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span> $<span class="nx">IP_BLOCKLIST</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">Flush</span> <span class="nx">the</span> <span class="nx">ipset</span>
-</span></span><span class="line"><span class="cl"><span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ipset</span> <span class="nx">flush</span> <span class="nx">blocklist</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">#<span class="nx">Add</span> <span class="nx">IP</span> <span class="nx">addresses</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">ipset</span>
-</span></span><span class="line"><span class="cl"><span class="nx">grep</span> <span class="p">-</span><span class="nx">v</span> <span class="s2">&#34;^#|^$&#34;</span> $<span class="nx">IP_BLOCKLIST</span> <span class="p">|</span> <span class="nx">while</span> <span class="nx">IFS</span><span class="p">=</span> <span class="nx">read</span> <span class="p">-</span><span class="nx">r</span> <span class="nx">ip</span>;
-</span></span><span class="line"><span class="cl"><span class="nx">do</span>
-</span></span><span class="line"><span class="cl">    <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ipset</span> <span class="nx">add</span> <span class="nx">blocklist</span> $<span class="nx">ip</span>;
-</span></span><span class="line"><span class="cl"><span class="nx">done</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">### <span class="nx">Section</span> <span class="nx">for</span> <span class="nx">firewalld</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">delete</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">permanent</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">new</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">type</span><span class="p">=</span><span class="nx">hash</span>:<span class="nx">net</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">family</span><span class="p">=</span><span class="nx">inet</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">hashsize</span><span class="p">=</span><span class="m">1048576</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">maxelem</span><span class="p">=</span><span class="m">1048576</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">entries</span><span class="p">-</span><span class="nx">from</span><span class="p">-</span><span class="nx">file</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">reload</span>
-</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;Firewalld ipset list entries:&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">get</span><span class="p">-</span><span class="nx">entries</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span>
-</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;ipset list entries:&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">cat</span> <span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">exec</span> <span class="m">3</span><span class="p">&gt;</span>&amp;<span class="m">1</span> <span class="m">4</span><span class="p">&gt;</span>&amp;<span class="m">2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">trap</span> <span class="s1">&#39;exec 2&gt;&amp;4 1&gt;&amp;3&#39;</span> <span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">exec</span> <span class="m">1</span><span class="p">&gt;</span><span class="nx">log</span>.<span class="nx">out</span> <span class="m">2</span><span class="p">&gt;</span>&amp;<span class="m">1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">set</span> <span class="p">-</span><span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Everything</span> <span class="nx">below</span> <span class="nx">will</span> <span class="nx">go</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">file</span> <span class="s1">&#39;log.out&#39;</span>:<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">source</span> <span class="nx">pid</span>.<span class="nx">sh</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">IP_TMP</span><span class="p">=</span><span class="sr">/tmp/</span><span class="nx">ip</span>.<span class="nx">tmp</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">IP_BLOCKLIST</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">IP_BLOCKLIST_TMP</span><span class="p">=</span><span class="sr">/tmp/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">tmp</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">IP_BLOCKLIST_CUSTOM</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span><span class="p">-</span><span class="nx">custom</span>.<span class="nx">conf</span> # <span class="nx">optional</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">BLACKLISTS</span><span class="p">=(</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://www.projecthoneypot.org/list_of_ips.php?t=d&amp;rss=1&#34; # Project Honey Pot Directory of Dictionary Attacker IPs</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=1.1.1.1&#34; # TOR Exit Nodes</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://www.maxmind.com/en/anonymous_proxies&#34; # MaxMind GeoIP Anonymous Proxies</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://www.maxmind.com/en/high-risk-ip-sample-list&#34; # MaxMind High Risk Sample List</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://danger.rulez.sk/projects/bruteforceblocker/blist.php&#34; # BruteForceBlocker IP List</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://rules.emergingthreats.net/blockrules/compromised-ips.txt&#34; # Emerging Threats - Russian Business Networks List</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://www.spamhaus.org/drop/drop.lasso&#34; # Spamhaus Don&#39;t Route Or Peer List (DROP)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://cinsscore.com/list/ci-badguys.txt&#34; # C.I. Army Malicious IP List</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://www.autoshun.org/files/shunlist.csv&#34; # Autoshun Shun List</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://lists.blocklist.de/lists/all.txt&#34; # blocklist.de fail2ban reporting service</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://fx.vc-mp.eu/shared/iplist.txt&#34; # ferex badlist</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://feodotracker.abuse.ch/downloads/ipblocklist_aggressive.txt&#34; # FEODO tracker</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://reputation.alienvault.com/reputation.generic&#34; # ALIENVAULT REPUTATION</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://www.darklist.de/raw.php&#34; # DARKLIST DE</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-dommasterlist-high.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-dommasterlist.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-ipmasterlist-high.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-ipmasterlist.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/c2-masterlist.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://osint.bambenekconsulting.com/feeds/dga-feed.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://www.binarydefense.com/banlist.txt&#34; # Binary Defense Systems</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt&#34; # https://github.com/stamparm/ipsum</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://sblam.com/blacklist.txt&#34; # SBLAM</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://blocklist.greensnow.co/greensnow.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;http://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://www.malwaredomainlist.com/hostslist/ip.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34;https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">for</span> <span class="nx">i</span> <span class="nx">in</span> <span class="s2">&#34;${BLOCKLISTS[@]}&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">do</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">curl</span> <span class="s2">&#34;$i&#34;</span> <span class="p">&gt;</span> $<span class="nx">IP_TMP</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">grep</span> <span class="p">-</span><span class="nx">Po</span> <span class="s1">&#39;(?:\d{1,3}.){3}\d{1,3}(?:/\d{1,2})?&#39;</span> $<span class="nx">IP_TMP</span> <span class="p">&gt;&gt;</span> $<span class="nx">IP_BLOCKLIST_TMP</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">done</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">Get</span> <span class="nx">the</span> <span class="nx">iblocklist</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">wget</span> <span class="p">-</span><span class="nx">qO</span><span class="p">-</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">list</span>.<span class="nx">iblocklist</span>.<span class="nx">com</span>/?<span class="nx">list</span><span class="p">=</span><span class="nx">erqajhwrxiuvjxqrrwfj</span>&amp;<span class="nx">fileformat</span><span class="p">=</span><span class="nx">p2p</span>&amp;<span class="nx">archiveformat</span><span class="p">=</span><span class="nx">gz</span> <span class="p">&gt;</span> $<span class="nx">_input</span> <span class="p">||</span> { <span class="nx">echo</span> <span class="s2">&#34;$0: Unable to download ip list.&#34;</span>; <span class="nx">exit</span> <span class="m">1</span>; }<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">Consolidate</span> <span class="nx">iblocklist</span> <span class="nx">into</span> <span class="nx">master</span> <span class="nx">list</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">cat</span> $<span class="nx">_input</span> <span class="p">&gt;&gt;</span> $<span class="nx">IP_BLOCKLIST_TMP</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">Consolidate</span> <span class="nx">the</span> <span class="nx">shodan</span>.<span class="nx">io</span> <span class="nx">IP</span> <span class="nx">addresses</span> <span class="nx">database</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">cat</span> <span class="sr">/opt/</span><span class="nx">blocklist</span>/<span class="nx">shodan</span>.<span class="nx">txt</span> <span class="p">&gt;&gt;</span> $<span class="nx">IP_BLOCKLIST_TMP</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">Sort</span> <span class="nx">the</span> <span class="nx">list</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">sort</span> $<span class="nx">IP_BLOCKLIST_TMP</span> <span class="p">-</span><span class="nx">n</span> <span class="p">|</span> <span class="nx">uniq</span> <span class="p">&gt;</span> $<span class="nx">IP_BLOCKLIST</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">Remove</span> <span class="nx">temporary</span> <span class="nx">list</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">rm</span> $<span class="nx">IP_BLOCKLIST_TMP</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">count</span> <span class="nx">how</span> <span class="nx">many</span> <span class="nx">IP</span> <span class="nx">addresses</span> <span class="nx">are</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">list</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span> $<span class="nx">IP_BLOCKLIST</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">Flush</span> <span class="nx">the</span> <span class="nx">ipset</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ipset</span> <span class="nx">flush</span> <span class="nx">blocklist</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">Add</span> <span class="nx">IP</span> <span class="nx">addresses</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">ipset</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">grep</span> <span class="p">-</span><span class="nx">v</span> <span class="s2">&#34;^#|^$&#34;</span> $<span class="nx">IP_BLOCKLIST</span> <span class="p">|</span> <span class="nx">while</span> <span class="nx">IFS</span><span class="p">=</span> <span class="nx">read</span> <span class="p">-</span><span class="nx">r</span> <span class="nx">ip</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">do</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ipset</span> <span class="nx">add</span> <span class="nx">blocklist</span> $<span class="nx">ip</span>;<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">done</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>### <span class="nx">Section</span> <span class="nx">for</span> <span class="nx">firewalld</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">delete</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">permanent</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">new</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">type</span><span class="p">=</span><span class="nx">hash</span>:<span class="nx">net</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">family</span><span class="p">=</span><span class="nx">inet</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">hashsize</span><span class="p">=</span><span class="m">1048576</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">maxelem</span><span class="p">=</span><span class="m">1048576</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">entries</span><span class="p">-</span><span class="nx">from</span><span class="p">-</span><span class="nx">file</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">reload</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;Firewalld ipset list entries:&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">get</span><span class="p">-</span><span class="nx">entries</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;ipset list entries:&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">cat</span> <span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="bash-script-explanation">Bash script Explanation</h3>
 <div class="highlight"><div class="chroma">
@@ -2103,23 +2103,23 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="m">93</span>.<span class="m">120</span>.<span class="m">27</span>.<span class="m">62</span>
-</span></span><span class="line"><span class="cl"><span class="m">85</span>.<span class="m">25</span>.<span class="m">43</span>.<span class="m">94</span>
-</span></span><span class="line"><span class="cl"><span class="m">85</span>.<span class="m">25</span>.<span class="m">103</span>.<span class="m">50</span>
-</span></span><span class="line"><span class="cl"><span class="m">82</span>.<span class="m">221</span>.<span class="m">105</span>.<span class="m">7</span>
-</span></span><span class="line"><span class="cl"><span class="m">82</span>.<span class="m">221</span>.<span class="m">105</span>.<span class="m">6</span>
-</span></span><span class="line"><span class="cl"><span class="m">71</span>.<span class="m">6</span>.<span class="m">167</span>.<span class="m">142</span>
-</span></span><span class="line"><span class="cl"><span class="m">71</span>.<span class="m">6</span>.<span class="m">165</span>.<span class="m">200</span>
-</span></span><span class="line"><span class="cl"><span class="m">71</span>.<span class="m">6</span>.<span class="m">135</span>.<span class="m">131</span>
-</span></span><span class="line"><span class="cl"><span class="m">66</span>.<span class="m">240</span>.<span class="m">236</span>.<span class="m">119</span>
-</span></span><span class="line"><span class="cl"><span class="m">66</span>.<span class="m">240</span>.<span class="m">192</span>.<span class="m">138</span>
-</span></span><span class="line"><span class="cl"><span class="m">198</span>.<span class="m">20</span>.<span class="m">99</span>.<span class="m">130</span>
-</span></span><span class="line"><span class="cl"><span class="m">198</span>.<span class="m">20</span>.<span class="m">70</span>.<span class="m">114</span>
-</span></span><span class="line"><span class="cl"><span class="m">198</span>.<span class="m">20</span>.<span class="m">69</span>.<span class="m">98</span>
-</span></span><span class="line"><span class="cl"><span class="m">198</span>.<span class="m">20</span>.<span class="m">69</span>.<span class="m">74</span>
-</span></span><span class="line"><span class="cl"><span class="m">188</span>.<span class="m">138</span>.<span class="m">9</span>.<span class="m">50</span>
-</span></span><span class="line"><span class="cl"><span class="m">185</span>.<span class="m">142</span>.<span class="m">236</span>.<span class="m">34</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="m">93</span>.<span class="m">120</span>.<span class="m">27</span>.<span class="m">62</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">85</span>.<span class="m">25</span>.<span class="m">43</span>.<span class="m">94</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">85</span>.<span class="m">25</span>.<span class="m">103</span>.<span class="m">50</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">82</span>.<span class="m">221</span>.<span class="m">105</span>.<span class="m">7</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">82</span>.<span class="m">221</span>.<span class="m">105</span>.<span class="m">6</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">71</span>.<span class="m">6</span>.<span class="m">167</span>.<span class="m">142</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">71</span>.<span class="m">6</span>.<span class="m">165</span>.<span class="m">200</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">71</span>.<span class="m">6</span>.<span class="m">135</span>.<span class="m">131</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">66</span>.<span class="m">240</span>.<span class="m">236</span>.<span class="m">119</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">66</span>.<span class="m">240</span>.<span class="m">192</span>.<span class="m">138</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">198</span>.<span class="m">20</span>.<span class="m">99</span>.<span class="m">130</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">198</span>.<span class="m">20</span>.<span class="m">70</span>.<span class="m">114</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">198</span>.<span class="m">20</span>.<span class="m">69</span>.<span class="m">98</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">198</span>.<span class="m">20</span>.<span class="m">69</span>.<span class="m">74</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">188</span>.<span class="m">138</span>.<span class="m">9</span>.<span class="m">50</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">185</span>.<span class="m">142</span>.<span class="m">236</span>.<span class="m">34</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Please note that the instructions that follow, are written for CentOS 7 but they should translate to other distributions as well, since we are only using the command line.</p>
 <h3 id="adding-the-script-to-the-crontab">Adding the script to the crontab.</h3>
@@ -2241,13 +2241,13 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Sep <span class="m">23</span> 17:57:49 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c:de:ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>45.129.33.17 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">40</span> <span class="nv">TOS</span><span class="o">=</span>0x00 <span class="nv">PREC</span><span class="o">=</span>0x00 <span class="nv">TTL</span><span class="o">=</span><span class="m">244</span> <span class="nv">ID</span><span class="o">=</span><span class="m">61513</span> <span class="nv">PROTO</span><span class="o">=</span>TCP <span class="nv">SPT</span><span class="o">=</span><span class="m">49899</span> <span class="nv">DPT</span><span class="o">=</span><span class="m">458</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Sep <span class="m">23</span> 17:57:49 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c🇩🇪ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>45.129.33.17 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">40</span> <span class="nv">TOS</span><span class="o">=</span>0x00 <span class="nv">PREC</span><span class="o">=</span>0x00 <span class="nv">TTL</span><span class="o">=</span><span class="m">244</span> <span class="nv">ID</span><span class="o">=</span><span class="m">61513</span> <span class="nv">PROTO</span><span class="o">=</span>TCP <span class="nv">SPT</span><span class="o">=</span><span class="m">49899</span> <span class="nv">DPT</span><span class="o">=</span><span class="m">458</span>
 </span></span><span class="line"><span class="cl"><span class="m">23</span> <span class="nv">WINDOW</span><span class="o">=</span><span class="m">1024</span> <span class="nv">RES</span><span class="o">=</span>0x00 SYN <span class="nv">URGP</span><span class="o">=</span><span class="m">0</span>
-</span></span><span class="line"><span class="cl">Sep <span class="m">23</span> 17:58:36 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c:de:ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>89.248.172.140 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">40</span> <span class="nv">TOS</span><span class="o">=</span>0x00 <span class="nv">PREC</span><span class="o">=</span>0x00 <span class="nv">TTL</span><span class="o">=</span><span class="m">244</span> <span class="nv">ID</span><span class="o">=</span><span class="m">43698</span> <span class="nv">PROTO</span><span class="o">=</span>TCP <span class="nv">SPT</span><span class="o">=</span><span class="m">49466</span> <span class="nv">DPT</span><span class="o">=</span><span class="m">3</span>
+</span></span><span class="line"><span class="cl">Sep <span class="m">23</span> 17:58:36 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c🇩🇪ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>89.248.172.140 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">40</span> <span class="nv">TOS</span><span class="o">=</span>0x00 <span class="nv">PREC</span><span class="o">=</span>0x00 <span class="nv">TTL</span><span class="o">=</span><span class="m">244</span> <span class="nv">ID</span><span class="o">=</span><span class="m">43698</span> <span class="nv">PROTO</span><span class="o">=</span>TCP <span class="nv">SPT</span><span class="o">=</span><span class="m">49466</span> <span class="nv">DPT</span><span class="o">=</span><span class="m">3</span>
 </span></span><span class="line"><span class="cl"><span class="m">309</span> <span class="nv">WINDOW</span><span class="o">=</span><span class="m">1024</span> <span class="nv">RES</span><span class="o">=</span>0x00 SYN <span class="nv">URGP</span><span class="o">=</span><span class="m">0</span>
-</span></span><span class="line"><span class="cl">Sep <span class="m">23</span> 17:59:39 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c:de:ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>45.143.221.8 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">414</span> <span class="nv">TOS</span><span class="o">=</span>0x08 <span class="nv">PREC</span><span class="o">=</span>0x20 <span class="nv">TTL</span><span class="o">=</span><span class="m">52</span> <span class="nv">ID</span><span class="o">=</span><span class="m">40147</span> DF <span class="nv">PROTO</span><span class="o">=</span>UDP <span class="nv">SPT</span><span class="o">=</span><span class="m">57989</span> <span class="nv">DPT</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl">Sep <span class="m">23</span> 17:59:39 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c🇩🇪ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>45.143.221.8 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">414</span> <span class="nv">TOS</span><span class="o">=</span>0x08 <span class="nv">PREC</span><span class="o">=</span>0x20 <span class="nv">TTL</span><span class="o">=</span><span class="m">52</span> <span class="nv">ID</span><span class="o">=</span><span class="m">40147</span> DF <span class="nv">PROTO</span><span class="o">=</span>UDP <span class="nv">SPT</span><span class="o">=</span><span class="m">57989</span> <span class="nv">DPT</span><span class="o">=</span>
 </span></span><span class="line"><span class="cl"><span class="m">5060</span> <span class="nv">LEN</span><span class="o">=</span><span class="m">394</span>
-</span></span><span class="line"><span class="cl">Sep <span class="m">23</span> 17:59:46 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c:de:ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>87.251.74.6 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">40</span> <span class="nv">TOS</span><span class="o">=</span>0x00 <span class="nv">PREC</span><span class="o">=</span>0x00 <span class="nv">TTL</span><span class="o">=</span><span class="m">243</span> <span class="nv">ID</span><span class="o">=</span><span class="m">62775</span> <span class="nv">PROTO</span><span class="o">=</span>TCP <span class="nv">SPT</span><span class="o">=</span><span class="m">46103</span> <span class="nv">DPT</span><span class="o">=</span><span class="m">9091</span>
+</span></span><span class="line"><span class="cl">Sep <span class="m">23</span> 17:59:46 mail kernel: IP Blocked: <span class="nv">IN</span><span class="o">=</span>eth0 <span class="nv">OUT</span><span class="o">=</span> <span class="nv">MAC</span><span class="o">=</span>52:54:00:24:58:7e:4c:5e:0c🇩🇪ac:d4:08:00 <span class="nv">SRC</span><span class="o">=</span>87.251.74.6 <span class="nv">DST</span><span class="o">=</span>192.166.218.231 <span class="nv">LEN</span><span class="o">=</span><span class="m">40</span> <span class="nv">TOS</span><span class="o">=</span>0x00 <span class="nv">PREC</span><span class="o">=</span>0x00 <span class="nv">TTL</span><span class="o">=</span><span class="m">243</span> <span class="nv">ID</span><span class="o">=</span><span class="m">62775</span> <span class="nv">PROTO</span><span class="o">=</span>TCP <span class="nv">SPT</span><span class="o">=</span><span class="m">46103</span> <span class="nv">DPT</span><span class="o">=</span><span class="m">9091</span>
 </span></span><span class="line"><span class="cl"><span class="nv">WINDOW</span><span class="o">=</span><span class="m">1024</span> <span class="nv">RES</span><span class="o">=</span>0x00 SYN <span class="nv">URGP</span><span class="o">=</span><span class="m">0</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -2337,18 +2337,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">Unit</span>]
-</span></span><span class="line"><span class="cl"><span class="nx">Description</span><span class="p">=</span><span class="nx">ipset_blocklist</span>
-</span></span><span class="line"><span class="cl"><span class="nx">Before</span><span class="p">=</span><span class="nx">firewalld</span>.<span class="nx">service</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[<span class="nx">Service</span>]
-</span></span><span class="line"><span class="cl"><span class="nx">Type</span><span class="p">=</span><span class="nx">oneshot</span>
-</span></span><span class="line"><span class="cl"><span class="nx">RemainAfterExit</span><span class="p">=</span><span class="nx">yes</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ExecStart</span><span class="p">=</span><span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">ipset</span>.<span class="nx">sh</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[<span class="nx">Install</span>]
-</span></span><span class="line"><span class="cl"><span class="nx">WantedBy</span><span class="p">=</span><span class="nx">basic</span>.<span class="nx">target</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">Unit</span>]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Description</span><span class="p">=</span><span class="nx">ipset_blocklist</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Before</span><span class="p">=</span><span class="nx">firewalld</span>.<span class="nx">service</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">Service</span>]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Type</span><span class="p">=</span><span class="nx">oneshot</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">RemainAfterExit</span><span class="p">=</span><span class="nx">yes</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ExecStart</span><span class="p">=</span><span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">ipset</span>.<span class="nx">sh</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">Install</span>]<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">WantedBy</span><span class="p">=</span><span class="nx">basic</span>.<span class="nx">target</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Reload the systemd process to consider newly created sample.service OR every time when sample.service gets modified.</p>
 <div class="highlight"><div class="chroma">
@@ -2392,17 +2392,17 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">The</span> <span class="nx">primary</span> <span class="nx">network</span> <span class="nx">interface</span>
-</span></span><span class="line"><span class="cl"><span class="nx">auto</span> <span class="nx">eth0</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">iface</span> <span class="nx">eth0</span> <span class="nx">inet</span> <span class="nx">static</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">address</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">netmask</span> <span class="m">255</span>.<span class="m">255</span>.<span class="m">255</span>.<span class="m">0</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">network</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">A</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">broadcast</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">Z</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">gateway</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">Y</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">dns</span><span class="p">-</span><span class="nx">nameservers</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">Y</span> <span class="m">8</span>.<span class="m">8</span>.<span class="m">8</span>.<span class="m">8</span> <span class="m">8</span>.<span class="m">8</span>.<span class="m">4</span>.<span class="m">4</span> 
-</span></span><span class="line"><span class="cl"><span class="nx">post</span><span class="p">-</span><span class="nx">up</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">ipset</span>.<span class="nx">sh</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">The</span> <span class="nx">primary</span> <span class="nx">network</span> <span class="nx">interface</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">auto</span> <span class="nx">eth0</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iface</span> <span class="nx">eth0</span> <span class="nx">inet</span> <span class="nx">static</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">address</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">netmask</span> <span class="m">255</span>.<span class="m">255</span>.<span class="m">255</span>.<span class="m">0</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">network</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">A</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">broadcast</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">Z</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">gateway</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">Y</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">dns</span><span class="p">-</span><span class="nx">nameservers</span> <span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">X</span>.<span class="nx">Y</span> <span class="m">8</span>.<span class="m">8</span>.<span class="m">8</span>.<span class="m">8</span> <span class="m">8</span>.<span class="m">8</span>.<span class="m">4</span>.<span class="m">4</span> <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">post</span><span class="p">-</span><span class="nx">up</span> <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">ipset</span>.<span class="nx">sh</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>As soon as the primary interface (in many cases eth0) is up, the ipset is created and populated by running the /usr/local/bin/ipset.sh script. By the time iptables is initialized, the ipset is available and filled so malicious hosts are blocked nearly immediately. After doing this, our blocklist will survive a reboot, ensuring we always have its protection.</p>
 <h3 id="firewalld-ipset">firewalld ipset</h3>
@@ -2419,15 +2419,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">delete</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">permanent</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">new</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">type</span><span class="p">=</span><span class="nx">hash</span>:<span class="nx">net</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">family</span><span class="p">=</span><span class="nx">inet</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">hashsize</span><span class="p">=</span><span class="m">1048576</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">maxelem</span><span class="p">=</span><span class="m">1048576</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">direct</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">rule</span> <span class="nx">ipv4</span> <span class="nx">filter</span> <span class="nx">INPUT</span> <span class="m">3</span> <span class="p">-</span><span class="nx">m</span> <span class="k">set</span> <span class="p">--</span><span class="nx">match</span><span class="p">-</span><span class="k">set</span> <span class="nx">blocklist</span> <span class="nx">src</span> <span class="p">-</span><span class="nx">j</span> <span class="nx">LOG</span> <span class="p">--</span><span class="nx">log</span><span class="p">-</span><span class="nx">prefix</span> <span class="s2">&#34;IP Blocked: &#34;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">direct</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">rule</span> <span class="nx">ipv4</span> <span class="nx">filter</span> <span class="nx">INPUT</span> <span class="m">3</span> <span class="p">-</span><span class="nx">m</span> <span class="k">set</span> <span class="p">--</span><span class="nx">match</span><span class="p">-</span><span class="k">set</span> <span class="nx">blocklist</span> <span class="nx">src</span> <span class="p">-</span><span class="nx">j</span> <span class="nx">DROP</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">entries</span><span class="p">-</span><span class="nx">from</span><span class="p">-</span><span class="nx">file</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">reload</span>
-</span></span><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">get</span><span class="p">-</span><span class="nx">entries</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span>
-</span></span><span class="line"><span class="cl"><span class="nx">ipset</span> <span class="nx">list</span> <span class="nx">blocklist</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">delete</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">permanent</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">new</span><span class="p">-</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">type</span><span class="p">=</span><span class="nx">hash</span>:<span class="nx">net</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">family</span><span class="p">=</span><span class="nx">inet</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">hashsize</span><span class="p">=</span><span class="m">1048576</span> <span class="p">--</span><span class="nx">option</span><span class="p">=</span><span class="nx">maxelem</span><span class="p">=</span><span class="m">1048576</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">direct</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">rule</span> <span class="nx">ipv4</span> <span class="nx">filter</span> <span class="nx">INPUT</span> <span class="m">3</span> <span class="p">-</span><span class="nx">m</span> <span class="nx">set</span> <span class="p">--</span><span class="nx">match</span><span class="p">-</span><span class="nx">set</span> <span class="nx">blocklist</span> <span class="nx">src</span> <span class="p">-</span><span class="nx">j</span> <span class="nx">LOG</span> <span class="p">--</span><span class="nx">log</span><span class="p">-</span><span class="nx">prefix</span> <span class="s2">&#34;IP Blocked: &#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">direct</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">rule</span> <span class="nx">ipv4</span> <span class="nx">filter</span> <span class="nx">INPUT</span> <span class="m">3</span> <span class="p">-</span><span class="nx">m</span> <span class="nx">set</span> <span class="p">--</span><span class="nx">match</span><span class="p">-</span><span class="nx">set</span> <span class="nx">blocklist</span> <span class="nx">src</span> <span class="p">-</span><span class="nx">j</span> <span class="nx">DROP</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">add</span><span class="p">-</span><span class="nx">entries</span><span class="p">-</span><span class="nx">from</span><span class="p">-</span><span class="nx">file</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">ip</span><span class="p">-</span><span class="nx">blocklist</span>.<span class="nx">conf</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">reload</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">firewall</span><span class="p">-</span><span class="nx">cmd</span> <span class="p">--</span><span class="nx">permanent</span> <span class="p">--</span><span class="nx">ipset</span><span class="p">=</span><span class="nx">blocklist</span> <span class="p">--</span><span class="nx">get</span><span class="p">-</span><span class="nx">entries</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ipset</span> <span class="nx">list</span> <span class="nx">blocklist</span> <span class="p">|</span> <span class="nx">wc</span> <span class="p">-</span><span class="nx">l</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>First line deletes the existing ipset. Second adds it with proper hash size and maximum elements (IP addresses) which can be added to the opset. Third adds two rules for logging and dropping bad IP addresses. The fifth rules loads bad IPS from the local file created by the script. Then it reloads the firewalld to apply new ipset settings. The penultimate line counts all IPs in the firewalld ipset and the last line counts IPs in the the ipset.</p>
 <p>To enable logging dropped connections you need to perform this command.</p>
@@ -2508,10 +2508,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">msg</span><span class="p">,</span><span class="nx">contains</span><span class="p">,</span><span class="s2">&#34;_DROP&#34;</span> <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">dropped_log</span>
-</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nx">msg</span><span class="p">,</span><span class="nx">contains</span><span class="p">,</span><span class="s2">&#34;_REJECT&#34;</span> <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">rejected_log</span>
-</span></span><span class="line"><span class="cl">&amp; <span class="nx">stop</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">msg</span><span class="p">,</span><span class="nx">contains</span><span class="p">,</span><span class="s2">&#34;_DROP&#34;</span> <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">dropped_log</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">msg</span><span class="p">,</span><span class="nx">contains</span><span class="p">,</span><span class="s2">&#34;_REJECT&#34;</span> <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">rejected_log</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>&amp; <span class="nx">stop</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>I saved the file and exited. Then I decided to create a logrotate for these logs.</p>
 <div class="highlight"><div class="chroma">
@@ -2544,24 +2544,24 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">dropped_log</span> {
-</span></span><span class="line"><span class="cl"><span class="nx">daily</span>
-</span></span><span class="line"><span class="cl"><span class="nx">create</span> <span class="m">0644</span> <span class="nx">root</span> <span class="nx">root</span>
-</span></span><span class="line"><span class="cl"><span class="nx">rotate</span> <span class="m">5</span>
-</span></span><span class="line"><span class="cl"><span class="nx">size</span><span class="p">=</span><span class="m">10</span>M
-</span></span><span class="line"><span class="cl"><span class="nx">compress</span>
-</span></span><span class="line"><span class="cl"><span class="nx">delaycompress</span>
-</span></span><span class="line"><span class="cl"><span class="nx">dateext</span>
-</span></span><span class="line"><span class="cl"><span class="nx">dateformat</span> <span class="p">-</span>%<span class="nx">d</span>%<span class="nx">m</span>%<span class="nx">Y</span>
-</span></span><span class="line"><span class="cl"><span class="nx">notifempty</span>
-</span></span><span class="line"><span class="cl"><span class="nx">postrotate</span>
-</span></span><span class="line"><span class="cl"><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">rsyslog</span>
-</span></span><span class="line"><span class="cl"><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">auditd</span>
-</span></span><span class="line"><span class="cl"><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">firewalld</span>
-</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;A rotation of firewalld-dropped_log just took place.&#34;</span> <span class="p">|</span> <span class="nx">mail</span> <span class="nx">mail</span>@<span class="nx">example</span>.<span class="nx">com</span>
-</span></span><span class="line"><span class="cl"><span class="nx">endscript</span>
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">dropped_log</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">daily</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">create</span> <span class="m">0644</span> <span class="nx">root</span> <span class="nx">root</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">rotate</span> <span class="m">5</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">size</span><span class="p">=</span><span class="m">10</span>M<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">compress</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">delaycompress</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">dateext</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">dateformat</span> <span class="p">-</span>%<span class="nx">d</span>%<span class="nx">m</span>%<span class="nx">Y</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">notifempty</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">postrotate</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">rsyslog</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">auditd</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">firewalld</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;A rotation of firewalld-dropped_log just took place.&#34;</span> <span class="p">|</span> <span class="nx">mail</span> <span class="nx">mail</span>@<span class="nx">example</span>.<span class="nx">com</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">endscript</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Then I did the same for rejected.</p>
 <div class="highlight"><div class="chroma">
@@ -2594,24 +2594,24 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">rejected_log</span> {
-</span></span><span class="line"><span class="cl"><span class="nx">daily</span>
-</span></span><span class="line"><span class="cl"><span class="nx">create</span> <span class="m">0644</span> <span class="nx">root</span> <span class="nx">root</span>
-</span></span><span class="line"><span class="cl"><span class="nx">rotate</span> <span class="m">5</span>
-</span></span><span class="line"><span class="cl"><span class="nx">size</span><span class="p">=</span><span class="m">10</span>M
-</span></span><span class="line"><span class="cl"><span class="nx">compress</span>
-</span></span><span class="line"><span class="cl"><span class="nx">delaycompress</span>
-</span></span><span class="line"><span class="cl"><span class="nx">dateext</span>
-</span></span><span class="line"><span class="cl"><span class="nx">dateformat</span> <span class="p">-</span>%<span class="nx">d</span>%<span class="nx">m</span>%<span class="nx">Y</span>
-</span></span><span class="line"><span class="cl"><span class="nx">notifempty</span>
-</span></span><span class="line"><span class="cl"><span class="nx">postrotate</span>
-</span></span><span class="line"><span class="cl"><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">rsyslog</span>
-</span></span><span class="line"><span class="cl"><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">auditd</span>
-</span></span><span class="line"><span class="cl"><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">firewalld</span>
-</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;A rotation of firewalld-rejected_log just took place.&#34;</span> <span class="p">|</span> <span class="nx">mail</span> <span class="nx">mail</span>@<span class="nx">example</span>.<span class="nx">com</span>
-</span></span><span class="line"><span class="cl"><span class="nx">endscript</span>
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">firewalld</span><span class="p">-</span><span class="nx">rejected_log</span> {<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">daily</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">create</span> <span class="m">0644</span> <span class="nx">root</span> <span class="nx">root</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">rotate</span> <span class="m">5</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">size</span><span class="p">=</span><span class="m">10</span>M<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">compress</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">delaycompress</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">dateext</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">dateformat</span> <span class="p">-</span>%<span class="nx">d</span>%<span class="nx">m</span>%<span class="nx">Y</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">notifempty</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">postrotate</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">rsyslog</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">auditd</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">systemctl</span> <span class="nx">restart</span> <span class="nx">firewalld</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;A rotation of firewalld-rejected_log just took place.&#34;</span> <span class="p">|</span> <span class="nx">mail</span> <span class="nx">mail</span>@<span class="nx">example</span>.<span class="nx">com</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">endscript</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Great this is what I wanted, but still messages was messy, so I decided to edit rsyslog.conf and change it this way according to the solution from this website: <a href="https://serverfault.com/questions/557885/remove-iptables-log-from-kern-log-syslog-messages" target="_blank" rel="noreferrer noopener"><a
 
@@ -2660,18 +2660,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">###### <span class="nx">RULES</span> ######
-</span></span><span class="line"><span class="cl">$ <span class="nx">Log</span> <span class="nx">all</span> <span class="nx">kernel</span> <span class="nx">messages</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">console</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">Logging</span> <span class="nx">much</span> <span class="k">else</span> <span class="nx">clutters</span> <span class="nx">up</span> <span class="nx">the</span> <span class="nx">screen</span>.
-</span></span><span class="line"><span class="cl">#<span class="nx">kern</span>.*                                               <span class="sr">/dev/</span><span class="nx">console</span>
-</span></span><span class="line"><span class="cl"><span class="nx">kern</span>.*;<span class="nx">kern</span>.<span class="p">!</span><span class="nx">info</span>;<span class="nx">kern</span>.<span class="p">!</span><span class="nx">warning</span>                       <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">kern</span>
-</span></span><span class="line"><span class="cl"><span class="nx">kern</span>.<span class="nx">info</span>                                             <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">kern</span><span class="p">-</span><span class="nx">info_log</span>
-</span></span><span class="line"><span class="cl"><span class="nx">kern</span>.<span class="nx">warning</span>                                          <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">kern</span><span class="p">-</span><span class="nx">warnings_log</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># <span class="nx">Log</span> <span class="nx">anything</span> <span class="p">(</span><span class="nx">except</span> <span class="nx">mail</span><span class="p">)</span> <span class="nx">of</span> <span class="nx">level</span> <span class="nx">info</span> <span class="nx">or</span> <span class="nx">higher</span>.
-</span></span><span class="line"><span class="cl"># <span class="nx">Don</span>&#39;<span class="nx">t</span> <span class="nx">log</span> <span class="nx">private</span> <span class="nx">authentication</span> <span class="nx">messages</span><span class="p">!</span>
-</span></span><span class="line"><span class="cl">*.<span class="nx">info</span>;<span class="nx">mail</span>.<span class="nx">none</span>;<span class="nx">authpriv</span>.<span class="nx">none</span>;<span class="nx">cron</span>.<span class="nx">none</span>;<span class="nx">local2</span>.<span class="nx">none</span>  <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">messages</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">###### <span class="nx">RULES</span> ######<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>$ <span class="nx">Log</span> <span class="nx">all</span> <span class="nx">kernel</span> <span class="nx">messages</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">console</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Logging</span> <span class="nx">much</span> <span class="k">else</span> <span class="nx">clutters</span> <span class="nx">up</span> <span class="nx">the</span> <span class="nx">screen</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">kern</span>.*                                               <span class="sr">/dev/</span><span class="nx">console</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">kern</span>.*;<span class="nx">kern</span>.<span class="p">!</span><span class="nx">info</span>;<span class="nx">kern</span>.<span class="p">!</span><span class="nx">warning</span>                       <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">kern</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">kern</span>.<span class="nx">info</span>                                             <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">kern</span><span class="p">-</span><span class="nx">info_log</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">kern</span>.<span class="nx">warning</span>                                          <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">kern</span><span class="p">-</span><span class="nx">warnings_log</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Log</span> <span class="nx">anything</span> <span class="p">(</span><span class="nx">except</span> <span class="nx">mail</span><span class="p">)</span> <span class="nx">of</span> <span class="nx">level</span> <span class="nx">info</span> <span class="nx">or</span> <span class="nx">higher</span>.<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Don</span>&#39;<span class="nx">t</span> <span class="nx">log</span> <span class="nx">private</span> <span class="nx">authentication</span> <span class="nx">messages</span><span class="p">!</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>*.<span class="nx">info</span>;<span class="nx">mail</span>.<span class="nx">none</span>;<span class="nx">authpriv</span>.<span class="nx">none</span>;<span class="nx">cron</span>.<span class="nx">none</span>;<span class="nx">local2</span>.<span class="nx">none</span>  <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">messages</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Leave everything below as it is.</p>
 <p>After that edit the below file:</p>
@@ -2689,8 +2689,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">args</span> <span class="p">=</span> <span class="nx">LOG_INFO</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">args</span> <span class="p">=</span> <span class="nx">LOG_INFO</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>After that restart auditd and rsyslog with the below commands:</p>
 <div class="highlight"><div class="chroma">
@@ -2783,16 +2783,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">                     <span class="nx">CUR</span>  <span class="nx">DEF</span>  <span class="nx">MIN</span>  <span class="nx">BTDEF</span>
-</span></span><span class="line"><span class="cl"><span class="m">0</span> <span class="p">-</span> <span class="nx">emergency</span>        <span class="nx">x</span>              <span class="nx">x</span>                        
-</span></span><span class="line"><span class="cl"><span class="m">1</span> <span class="p">-</span> <span class="nx">alert</span>            <span class="nx">x</span>         <span class="nx">x</span>    <span class="nx">x</span>
-</span></span><span class="line"><span class="cl"><span class="m">2</span> <span class="p">-</span> <span class="nx">critical</span>         <span class="nx">x</span>              <span class="nx">x</span>
-</span></span><span class="line"><span class="cl"><span class="m">3</span> <span class="p">-</span> <span class="nx">error</span>            <span class="nx">x</span>              <span class="nx">x</span>
-</span></span><span class="line"><span class="cl"><span class="m">4</span> <span class="p">-</span> <span class="nx">warning</span>          <span class="nx">x</span>    <span class="nx">x</span>         <span class="nx">x</span>
-</span></span><span class="line"><span class="cl"><span class="m">5</span> <span class="p">-</span> <span class="nx">notice</span>           <span class="nx">x</span>              <span class="nx">x</span>
-</span></span><span class="line"><span class="cl"><span class="m">6</span> <span class="p">-</span> <span class="nx">informational</span>    <span class="nx">V</span>              <span class="nx">V</span>
-</span></span><span class="line"><span class="cl"><span class="m">7</span> <span class="p">-</span> <span class="nx">debug</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">                     <span class="nx">CUR</span>  <span class="nx">DEF</span>  <span class="nx">MIN</span>  <span class="nx">BTDEF</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">0</span> <span class="p">-</span> <span class="nx">emergency</span>        <span class="nx">x</span>              <span class="nx">x</span>                        <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">1</span> <span class="p">-</span> <span class="nx">alert</span>            <span class="nx">x</span>         <span class="nx">x</span>    <span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">2</span> <span class="p">-</span> <span class="nx">critical</span>         <span class="nx">x</span>              <span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">3</span> <span class="p">-</span> <span class="nx">error</span>            <span class="nx">x</span>              <span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">4</span> <span class="p">-</span> <span class="nx">warning</span>          <span class="nx">x</span>    <span class="nx">x</span>         <span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">5</span> <span class="p">-</span> <span class="nx">notice</span>           <span class="nx">x</span>              <span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">6</span> <span class="p">-</span> <span class="nx">informational</span>    <span class="nx">V</span>              <span class="nx">V</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">7</span> <span class="p">-</span> <span class="nx">debug</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>This is too noisy, I just want critical and up (no errors). Unlabeled messages should be regarded as warning, so DEF is good:</p>
 <div class="highlight"><div class="chroma">
@@ -2808,16 +2808,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">                     <span class="nx">CUR</span>  <span class="nx">DEF</span>  <span class="nx">MIN</span>  <span class="nx">BTDEF</span>
-</span></span><span class="line"><span class="cl"><span class="m">0</span> <span class="p">-</span> <span class="nx">emergency</span>        <span class="nx">x</span>              <span class="nx">x</span>                        
-</span></span><span class="line"><span class="cl"><span class="m">1</span> <span class="p">-</span> <span class="nx">alert</span>            <span class="nx">x</span>         <span class="nx">x</span>    <span class="nx">x</span>
-</span></span><span class="line"><span class="cl"><span class="m">2</span> <span class="p">-</span> <span class="nx">critical</span>         <span class="nx">x</span>              <span class="nx">x</span>
-</span></span><span class="line"><span class="cl"><span class="m">3</span> <span class="p">-</span> <span class="nx">error</span>            <span class="nx">V</span>              <span class="nx">V</span>
-</span></span><span class="line"><span class="cl"><span class="m">4</span> <span class="p">-</span> <span class="nx">warning</span>               <span class="nx">x</span>         
-</span></span><span class="line"><span class="cl"><span class="m">5</span> <span class="p">-</span> <span class="nx">notice</span>                           
-</span></span><span class="line"><span class="cl"><span class="m">6</span> <span class="p">-</span> <span class="nx">informational</span>                   
-</span></span><span class="line"><span class="cl"><span class="m">7</span> <span class="p">-</span> <span class="nx">debug</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">                     <span class="nx">CUR</span>  <span class="nx">DEF</span>  <span class="nx">MIN</span>  <span class="nx">BTDEF</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">0</span> <span class="p">-</span> <span class="nx">emergency</span>        <span class="nx">x</span>              <span class="nx">x</span>                        <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">1</span> <span class="p">-</span> <span class="nx">alert</span>            <span class="nx">x</span>         <span class="nx">x</span>    <span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">2</span> <span class="p">-</span> <span class="nx">critical</span>         <span class="nx">x</span>              <span class="nx">x</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">3</span> <span class="p">-</span> <span class="nx">error</span>            <span class="nx">V</span>              <span class="nx">V</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">4</span> <span class="p">-</span> <span class="nx">warning</span>               <span class="nx">x</span>         <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">5</span> <span class="p">-</span> <span class="nx">notice</span>                           <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">6</span> <span class="p">-</span> <span class="nx">informational</span>                   <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="m">7</span> <span class="p">-</span> <span class="nx">debug</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Set to: 3 4 1 3 and problem solved. Now when I use multitail to watch logs I see everything as it should be.</p>
 <p>The last thing I had to do was to whitelist Google’s IP addresses, because e-mails from Gmail was rejected because the above solution blocked IP addresses. I did it this way.</p>
@@ -4534,7 +4534,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
 
 
