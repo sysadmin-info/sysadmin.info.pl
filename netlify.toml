@@ -11,8 +11,8 @@
     [headers.values]
       X-Frame-Options = "DENY"
       X-XSS-Protection = "1; mode=block"
-      Access-Control-Allow-Origin = "*"
-      Content-Security-Policy = "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' https://cdnjs.cloudflare.com https://utteranc.es https://www.google-analytics.com https://www.youtube.com 'unsafe-inline' 'unsafe-eval'; img-src 'self' https://buycoffee.to https://*.doubleclick.net https://cdn.buymeacoffee.com https://i.ytimg.com https://static.doubleclick.net https://googleads.g.doubleclick.net data:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://googleads.g.doubleclick.net; frame-src https://utteranc.es https://www.youtube.com https://asciinema.org https://googleads.g.doubleclick.net; child-src https://youtube.com; media-src 'self'; object-src 'none';"
+      Access-Control-Allow-Origin = "https://sysadmin.info.pl"
+      Content-Security-Policy = "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/; script-src 'self' https://cdnjs.cloudflare.com https://utteranc.es 'unsafe-inline' 'unsafe-eval'; img-src 'self' https://buycoffee.to https://*.doubleclick.net https://cdn.buymeacoffee.com data:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-src https://utteranc.es https://www.youtube.com https://asciinema.org https://www.google.com; child-src https://youtube.com; media-src 'self'; frame-ancestors 'self'; block-all-mixed-content; upgrade-insecure-requests; form-action 'self'; report-uri https://sysadmin.info.pl/report-uri;"
       Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
