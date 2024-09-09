@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
+<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
 
-<script defer src="/js/search.min.85bcdf408f73f31e80cc8b7b66496e5cb15b64dbdf66982dba7d6bdbfee541bd.js"></script>
+<script defer src="/js/search.min.4332326a90d17b9a28a559862f8d0526a464ad3584d871ff90f57d2820d4bd76.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="How to install n8n and run it during boot thanks systemd unit">
   
 
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.122.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1946,160 +1946,160 @@
 </span><span class="lnt">153
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">log</span><span class="p">()</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s2">&#34;[$(date +&#39;%Y-%m-%d %H:%M:%S&#39;)]: $*&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">display</span> <span class="nx">spinner</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">display_spinner</span><span class="p">()</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">local</span> <span class="nx">pid</span><span class="p">=</span>$<span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span><span class="s1">&#39;-\|/&#39;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">log</span> <span class="s2">&#34;Loading...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">while</span> [ <span class="s2">&#34;$(ps a | awk &#39;{print $1}&#39; | grep $pid)&#34;</span> ]; <span class="nx">do</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">temp</span><span class="p">=</span>${<span class="nx">spin</span>#?}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">printf</span> <span class="s2">&#34;\r [%c]&#34;</span> <span class="s2">&#34;$spin&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span>$<span class="nx">temp</span>${<span class="nx">spin</span>%<span class="s2">&#34;$temp&#34;</span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sleep</span> <span class="m">0</span>.<span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">done</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">printf</span> <span class="s2">&#34;\r&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">row</span><span class="p">=</span><span class="m">2</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">col</span><span class="p">=</span><span class="m">2</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">countdown</span><span class="p">()</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">msg</span><span class="p">=</span><span class="s2">&#34;Wait 30 seconds for n8n ${1}...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">clear</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">tput</span> <span class="nx">cup</span> $<span class="nx">row</span> $<span class="nx">col</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">echo</span> <span class="p">-</span><span class="nx">n</span> <span class="s2">&#34;$msg&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">l</span><span class="p">=</span>${#<span class="nx">msg</span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">l</span><span class="p">=</span>$<span class="p">((</span> <span class="nx">l</span><span class="p">+</span>$<span class="nx">col</span> <span class="p">))</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">for</span> <span class="nx">i</span> <span class="nx">in</span> {<span class="m">30</span>..<span class="m">1</span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">do</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                <span class="nx">tput</span> <span class="nx">cup</span> $<span class="nx">row</span> $<span class="nx">l</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                <span class="nx">echo</span> <span class="p">-</span><span class="nx">n</span> <span class="s2">&#34;$i&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                <span class="nx">sleep</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">done</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">execute_command</span><span class="p">()</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">local</span> <span class="nx">cmd</span><span class="p">=</span><span class="s2">&#34;$*&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">log</span> <span class="s2">&#34;Executing: $cmd&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">bash</span> <span class="p">-</span><span class="nx">c</span> <span class="s2">&#34;$cmd&#34;</span> &amp;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">display_spinner</span> $<span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">error_exit</span><span class="p">()</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">log</span> <span class="s2">&#34;$1&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">exit</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">check_root</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s2">&#34;This quick installer script requires root privileges.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s2">&#34;Checking...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> [[ $<span class="p">(</span><span class="sr">/usr/</span><span class="nx">bin</span>/<span class="nx">id</span> <span class="p">-</span><span class="nx">u</span><span class="p">)</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]]; <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">echo</span> <span class="s2">&#34;Not running as root&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">exit</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">echo</span> <span class="s2">&#34;Installation continues&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SUDO</span><span class="p">=</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">!=</span> <span class="s2">&#34;0&#34;</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="k">if</span> [ <span class="p">-</span><span class="nx">e</span> <span class="sr">/usr/</span><span class="nx">bin</span><span class="sr">/sudo -o -e /</span><span class="nx">bin</span>/<span class="nx">sudo</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                <span class="nx">SUDO</span><span class="p">=</span><span class="nx">sudo</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                <span class="nx">echo</span> <span class="s2">&#34;*** This quick installer script requires root privileges.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                <span class="nx">exit</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">update_upgrade</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s1">&#39;updating system&#39;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">update</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">upgrade</span> <span class="p">-</span><span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">check_packages</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">build</span><span class="p">-</span><span class="nx">essential</span><span class="p">)</span> ]]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;build-essential already installed&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">build</span><span class="p">-</span><span class="nx">essential</span> <span class="p">-</span><span class="nx">y</span> <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">python3</span><span class="p">)</span> ]]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;python3 already installed&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">python3</span> <span class="p">-</span><span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">nodejs</span><span class="p">)</span> ]]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;nodejs already installed&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">nodejs</span> <span class="p">-</span><span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">npm</span><span class="p">)</span> ]]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;npm already installed&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">npm</span> <span class="p">-</span><span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">install_n8n</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">execute_command</span> <span class="s2">&#34;echo &#39;install n8n globally&#39;&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">n8n</span> <span class="p">-</span><span class="nx">g</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">adding_systemd_entry</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s1">&#39;adding systemd entry&#39;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">cat</span> <span class="p">&gt;</span> <span class="sr">/etc/</span><span class="nx">systemd</span><span class="sr">/system/</span><span class="nx">n8n</span>.<span class="nx">service</span> <span class="p">&lt;&lt;</span><span class="nx">EOF</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">Unit</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Description</span><span class="p">=</span><span class="nx">n8n</span> <span class="p">-</span> <span class="nx">Easily</span> <span class="nx">automate</span> <span class="nx">tasks</span> <span class="nx">across</span> <span class="nx">different</span> <span class="nx">services</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">After</span><span class="p">=</span><span class="nx">network</span>.<span class="nx">target</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">Service</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Type</span><span class="p">=</span><span class="nx">simple</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">User</span><span class="p">=</span><span class="nx">adrian</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ExecStart</span><span class="p">=</span><span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">n8n</span> <span class="nx">start</span> <span class="p">--</span><span class="nx">tunnel</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Restart</span><span class="p">=</span><span class="nx">on</span><span class="p">-</span><span class="nx">failure</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">Install</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">WantedBy</span><span class="p">=</span><span class="nx">multi</span><span class="p">-</span><span class="nx">user</span>.<span class="nx">target</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Alias</span><span class="p">=</span><span class="nx">n8n</span>.<span class="nx">service</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">EOF</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">n8n_service</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">echo</span> <span class="s1">&#39;reloading, enabling on boot and starting n8n&#39;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">daemon</span><span class="p">-</span><span class="nx">reload</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">enable</span> <span class="nx">n8n</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">start</span> <span class="nx">n8n</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">n8n_status</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">systemctl</span> <span class="nx">status</span> <span class="nx">n8n</span>.<span class="nx">service</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">main</span><span class="p">()</span>{<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">check_root</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">update_upgrade</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">check_packages</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">install_n8n</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">adding_systemd_entry</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">n8n_service</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">countdown</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">n8n_status</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">main</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span> <span class="p">-</span><span class="nx">e</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">log</span><span class="p">()</span> {
+</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s2">&#34;[$(date +&#39;%Y-%m-%d %H:%M:%S&#39;)]: $*&#34;</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Function</span> <span class="nx">to</span> <span class="nx">display</span> <span class="nx">spinner</span>
+</span></span><span class="line"><span class="cl"><span class="nx">display_spinner</span><span class="p">()</span> {
+</span></span><span class="line"><span class="cl">  <span class="nx">local</span> <span class="nx">pid</span><span class="p">=</span>$<span class="m">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span><span class="s1">&#39;-\|/&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span> <span class="s2">&#34;Loading...&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">while</span> [ <span class="s2">&#34;$(ps a | awk &#39;{print $1}&#39; | grep $pid)&#34;</span> ]; <span class="nx">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">temp</span><span class="p">=</span>${<span class="nx">spin</span>#?}
+</span></span><span class="line"><span class="cl">    <span class="nx">printf</span> <span class="s2">&#34;\r [%c]&#34;</span> <span class="s2">&#34;$spin&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">spin</span><span class="p">=</span>$<span class="nx">temp</span>${<span class="nx">spin</span>%<span class="s2">&#34;$temp&#34;</span>}
+</span></span><span class="line"><span class="cl">    <span class="nx">sleep</span> <span class="m">0</span>.<span class="m">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">done</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">printf</span> <span class="s2">&#34;\r&#34;</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">row</span><span class="p">=</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="nx">col</span><span class="p">=</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">countdown</span><span class="p">()</span> {
+</span></span><span class="line"><span class="cl">        <span class="nx">msg</span><span class="p">=</span><span class="s2">&#34;Wait 30 seconds for n8n ${1}...&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">clear</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tput</span> <span class="nx">cup</span> $<span class="nx">row</span> $<span class="nx">col</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">echo</span> <span class="p">-</span><span class="nx">n</span> <span class="s2">&#34;$msg&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">l</span><span class="p">=</span>${#<span class="nx">msg</span>}
+</span></span><span class="line"><span class="cl">        <span class="nx">l</span><span class="p">=</span>$<span class="p">((</span> <span class="nx">l</span><span class="p">+</span>$<span class="nx">col</span> <span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">for</span> <span class="nx">i</span> <span class="nx">in</span> {<span class="m">30</span>..<span class="m">1</span>}
+</span></span><span class="line"><span class="cl">        <span class="nx">do</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">tput</span> <span class="nx">cup</span> $<span class="nx">row</span> $<span class="nx">l</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">echo</span> <span class="p">-</span><span class="nx">n</span> <span class="s2">&#34;$i&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">sleep</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">done</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">execute_command</span><span class="p">()</span> {
+</span></span><span class="line"><span class="cl">  <span class="nx">local</span> <span class="nx">cmd</span><span class="p">=</span><span class="s2">&#34;$*&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span> <span class="s2">&#34;Executing: $cmd&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">bash</span> <span class="p">-</span><span class="nx">c</span> <span class="s2">&#34;$cmd&#34;</span> &amp;
+</span></span><span class="line"><span class="cl">  <span class="nx">display_spinner</span> $<span class="p">!</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">error_exit</span><span class="p">()</span> {
+</span></span><span class="line"><span class="cl">  <span class="nx">log</span> <span class="s2">&#34;$1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">check_root</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s2">&#34;This quick installer script requires root privileges.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s2">&#34;Checking...&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> [[ $<span class="p">(</span><span class="sr">/usr/</span><span class="nx">bin</span>/<span class="nx">id</span> <span class="p">-</span><span class="nx">u</span><span class="p">)</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]]; 
+</span></span><span class="line"><span class="cl">    <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">echo</span> <span class="s2">&#34;Not running as root&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">echo</span> <span class="s2">&#34;Installation continues&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">SUDO</span><span class="p">=</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">!=</span> <span class="s2">&#34;0&#34;</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> [ <span class="p">-</span><span class="nx">e</span> <span class="sr">/usr/</span><span class="nx">bin</span><span class="sr">/sudo -o -e /</span><span class="nx">bin</span>/<span class="nx">sudo</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">SUDO</span><span class="p">=</span><span class="nx">sudo</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">echo</span> <span class="s2">&#34;*** This quick installer script requires root privileges.&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">update_upgrade</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s1">&#39;updating system&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">update</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">upgrade</span> <span class="p">-</span><span class="nx">y</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">check_packages</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">build</span><span class="p">-</span><span class="nx">essential</span><span class="p">)</span> ]]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;build-essential already installed&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">build</span><span class="p">-</span><span class="nx">essential</span> <span class="p">-</span><span class="nx">y</span> 
+</span></span><span class="line"><span class="cl">  <span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">python3</span><span class="p">)</span> ]]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;python3 already installed&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">python3</span> <span class="p">-</span><span class="nx">y</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">nodejs</span><span class="p">)</span> ]]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;nodejs already installed&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">nodejs</span> <span class="p">-</span><span class="nx">y</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> [[ $<span class="p">(</span><span class="nx">command</span> <span class="p">-</span><span class="nx">v</span> <span class="nx">npm</span><span class="p">)</span> ]]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;npm already installed&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">sudo</span> <span class="nx">apt</span> <span class="nx">install</span> <span class="nx">npm</span> <span class="p">-</span><span class="nx">y</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">install_n8n</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="nx">execute_command</span> <span class="s2">&#34;echo &#39;install n8n globally&#39;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">n8n</span> <span class="p">-</span><span class="nx">g</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">adding_systemd_entry</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s1">&#39;adding systemd entry&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">cat</span> <span class="p">&gt;</span> <span class="sr">/etc/</span><span class="nx">systemd</span><span class="sr">/system/</span><span class="nx">n8n</span>.<span class="nx">service</span> <span class="p">&lt;&lt;</span><span class="nx">EOF</span>
+</span></span><span class="line"><span class="cl">[<span class="nx">Unit</span>]
+</span></span><span class="line"><span class="cl"><span class="nx">Description</span><span class="p">=</span><span class="nx">n8n</span> <span class="p">-</span> <span class="nx">Easily</span> <span class="nx">automate</span> <span class="nx">tasks</span> <span class="nx">across</span> <span class="nx">different</span> <span class="nx">services</span>.
+</span></span><span class="line"><span class="cl"><span class="nx">After</span><span class="p">=</span><span class="nx">network</span>.<span class="nx">target</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[<span class="nx">Service</span>]
+</span></span><span class="line"><span class="cl"><span class="nx">Type</span><span class="p">=</span><span class="nx">simple</span>
+</span></span><span class="line"><span class="cl"><span class="nx">User</span><span class="p">=</span><span class="nx">adrian</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ExecStart</span><span class="p">=</span><span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">n8n</span> <span class="nx">start</span> <span class="p">--</span><span class="nx">tunnel</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Restart</span><span class="p">=</span><span class="nx">on</span><span class="p">-</span><span class="nx">failure</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[<span class="nx">Install</span>]
+</span></span><span class="line"><span class="cl"><span class="nx">WantedBy</span><span class="p">=</span><span class="nx">multi</span><span class="p">-</span><span class="nx">user</span>.<span class="nx">target</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Alias</span><span class="p">=</span><span class="nx">n8n</span>.<span class="nx">service</span>
+</span></span><span class="line"><span class="cl"><span class="nx">EOF</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">n8n_service</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="nx">echo</span> <span class="s1">&#39;reloading, enabling on boot and starting n8n&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">daemon</span><span class="p">-</span><span class="nx">reload</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">enable</span> <span class="nx">n8n</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">sudo</span> <span class="nx">systemctl</span> <span class="nx">start</span> <span class="nx">n8n</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">n8n_status</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="nx">systemctl</span> <span class="nx">status</span> <span class="nx">n8n</span>.<span class="nx">service</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">main</span><span class="p">()</span>{
+</span></span><span class="line"><span class="cl">  <span class="nx">check_root</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">update_upgrade</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">check_packages</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">install_n8n</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">adding_systemd_entry</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">n8n_service</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">countdown</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">n8n_status</span>
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">main</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="3">
 <li>
@@ -3549,7 +3549,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 
