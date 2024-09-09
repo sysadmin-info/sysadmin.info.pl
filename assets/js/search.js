@@ -18,7 +18,7 @@
   fetch(`${langPrefix}/index.json`)
     .then(response => response.json())
     .then(data => {
-      console.log('Fetched index data'); // Log fetched data for debugging
+      //console.log('Fetched index data'); // Log fetched data for debugging
 
       // Initialize Lunr.js with the fetched data
       var idx = lunr(function () {
