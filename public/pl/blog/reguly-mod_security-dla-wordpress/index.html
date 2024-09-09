@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
+<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
 
-<script defer src="/js/search.min.52721ab680ec52fb5295efeb2599098398ca2bb5b2bb35821933dc1c5b2317c6.js"></script>
+<script defer src="/js/search.min.9282b97f1bf5a28c33252389978371282573919368849e8e9f65f40cb7cbd818.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="Reguły  mod_security dla WordPress">
   
 
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.122.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1812,26 +1812,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">Wed</span> <span class="nx">Oct</span> <span class="m">23</span> <span class="m">06</span>:<span class="m">01</span>:<span class="m">58</span>.<span class="m">888373</span> <span class="m">2019</span>] [:<span class="nx">error</span>] [<span class="nx">pid</span> <span class="m">29603</span>] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">client</span> <span class="m">162</span>.<span class="m">158</span>.<span class="m">102</span>.<span class="m">200</span>:<span class="m">59466</span>] [<span class="nx">client</span> <span class="m">111</span>.<span class="m">111</span>.<span class="m">111</span>.<span class="m">100</span>] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ModSecurity</span>: <span class="nx">Access</span> <span class="nx">denied</span> <span class="nx">with</span> <span class="nx">code</span> <span class="m">403</span> <span class="p">(</span><span class="nx">phase</span> <span class="m">2</span><span class="p">)</span>. <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Pattern</span> <span class="nx">match</span> <span class="c">&#34;([\\~\\!\\@\\#\\$\\\%\\^\\&amp;\\\\(\\)\\-\\+\\</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">=</span>\\{\\}\\[\\]\\<span class="p">|</span>\\:\\;\&#34;\\&#39;\\\<span class="nx">xc2</span>\<span class="nx">xb4</span>\\\<span class="nx">xe2</span>\<span class="nx">x80</span>\<span class="nx">x99</span>\\\<span class="nx">xe2</span>\<span class="nx">x80</span>\<span class="nx">x98</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>\\`\\<span class="p">&lt;</span>\\<span class="p">&gt;</span>].?<span class="p">)</span>{<span class="m">4</span><span class="p">,</span>}&#34; <span class="nx">at</span> <span class="nx">ARGS</span>:<span class="nx">plugin</span>. <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">file</span> <span class="c">&#34;/etc/httpd/modsecurity.d/activated_rules/</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">modsecurity_crs_41_sql_injection_attacks</span>.<span class="nx">conf</span>&#34;] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">line</span> <span class="s2">&#34;159&#34;</span>] [<span class="nx">id</span> <span class="s2">&#34;981173&#34;</span>] [<span class="nx">rev</span> <span class="s2">&#34;2&#34;</span>] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">msg</span> <span class="c">&#34;Restricted SQL Character Anomaly Detection Alert</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">-</span> <span class="nx">Total</span> # <span class="nx">of</span> <span class="nx">special</span> <span class="nx">characters</span> <span class="nx">exceeded</span>&#34;] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">data</span> <span class="c">&#34;Matched Data: - found within ARGS:plugin: </span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">wp</span><span class="p">-</span><span class="nx">fail2ban</span><span class="p">-</span><span class="nx">addon</span><span class="p">-</span><span class="nx">gravity</span><span class="p">-</span><span class="nx">forms</span>&#34;] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">ver</span> <span class="s2">&#34;OWASP_CRS/2.2.9&#34;</span>] [<span class="nx">maturity</span> <span class="s2">&#34;9&#34;</span>] [<span class="nx">accuracy</span> <span class="s2">&#34;8&#34;</span>] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">tag</span> <span class="s2">&#34;OWASP_CRS/WEB_ATTACK/SQL_INJECTION&#34;</span>] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">hostname</span> <span class="s2">&#34;example.com&#34;</span>] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">uri</span> <span class="s2">&#34;/wp-admin/plugin-install.php&#34;</span>] <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">unique_id</span> <span class="s2">&#34;Xa-QtpgasGvRM2@D2yl0FAAAAAU&#34;</span>]<span class="p">,</span> <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">referer</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">example</span>.<span class="nx">com</span><span class="sr">/wp-admin/</span><span class="nx">admin</span>.<span class="nx">php</span>?<span class="nx">page</span><span class="p">=</span><span class="nx">wp</span><span class="p">-</span><span class="nx">fail2ban</span><span class="p">-</span><span class="nx">addons</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">Wed</span> <span class="nx">Oct</span> <span class="m">23</span> <span class="m">06</span>:<span class="m">01</span>:<span class="m">58</span>.<span class="m">888373</span> <span class="m">2019</span>] [:<span class="nx">error</span>] [<span class="nx">pid</span> <span class="m">29603</span>] 
+</span></span><span class="line"><span class="cl">[<span class="nx">client</span> <span class="m">162</span>.<span class="m">158</span>.<span class="m">102</span>.<span class="m">200</span>:<span class="m">59466</span>] [<span class="nx">client</span> <span class="m">111</span>.<span class="m">111</span>.<span class="m">111</span>.<span class="m">100</span>] 
+</span></span><span class="line"><span class="cl"><span class="nx">ModSecurity</span>: <span class="nx">Access</span> <span class="nx">denied</span> <span class="nx">with</span> <span class="nx">code</span> <span class="m">403</span> <span class="p">(</span><span class="nx">phase</span> <span class="m">2</span><span class="p">)</span>. 
+</span></span><span class="line"><span class="cl"><span class="nx">Pattern</span> <span class="nx">match</span> <span class="c">&#34;([\\~\\!\\@\\#\\$\\\%\\^\\&amp;\\\\(\\)\\-\\+\\</span>
+</span></span><span class="line"><span class="cl"><span class="p">=</span>\\{\\}\\[\\]\\<span class="p">|</span>\\:\\;\&#34;\\&#39;\\\<span class="nx">xc2</span>\<span class="nx">xb4</span>\\\<span class="nx">xe2</span>\<span class="nx">x80</span>\<span class="nx">x99</span>\\\<span class="nx">xe2</span>\<span class="nx">x80</span>\<span class="nx">x98</span>
+</span></span><span class="line"><span class="cl">\\`\\<span class="p">&lt;</span>\\<span class="p">&gt;</span>].?<span class="p">)</span>{<span class="m">4</span><span class="p">,</span>}&#34; <span class="nx">at</span> <span class="nx">ARGS</span>:<span class="nx">plugin</span>. 
+</span></span><span class="line"><span class="cl">[<span class="nx">file</span> <span class="c">&#34;/etc/httpd/modsecurity.d/activated_rules/</span>
+</span></span><span class="line"><span class="cl"><span class="nx">modsecurity_crs_41_sql_injection_attacks</span>.<span class="nx">conf</span>&#34;] 
+</span></span><span class="line"><span class="cl">[<span class="nx">line</span> <span class="s2">&#34;159&#34;</span>] [<span class="nx">id</span> <span class="s2">&#34;981173&#34;</span>] [<span class="nx">rev</span> <span class="s2">&#34;2&#34;</span>] 
+</span></span><span class="line"><span class="cl">[<span class="nx">msg</span> <span class="c">&#34;Restricted SQL Character Anomaly Detection Alert</span>
+</span></span><span class="line"><span class="cl"><span class="p">-</span> <span class="nx">Total</span> # <span class="nx">of</span> <span class="nx">special</span> <span class="nx">characters</span> <span class="nx">exceeded</span>&#34;] 
+</span></span><span class="line"><span class="cl">[<span class="nx">data</span> <span class="c">&#34;Matched Data: - found within ARGS:plugin: </span>
+</span></span><span class="line"><span class="cl"><span class="nx">wp</span><span class="p">-</span><span class="nx">fail2ban</span><span class="p">-</span><span class="nx">addon</span><span class="p">-</span><span class="nx">gravity</span><span class="p">-</span><span class="nx">forms</span>&#34;] 
+</span></span><span class="line"><span class="cl">[<span class="nx">ver</span> <span class="s2">&#34;OWASP_CRS/2.2.9&#34;</span>] [<span class="nx">maturity</span> <span class="s2">&#34;9&#34;</span>] [<span class="nx">accuracy</span> <span class="s2">&#34;8&#34;</span>] 
+</span></span><span class="line"><span class="cl">[<span class="nx">tag</span> <span class="s2">&#34;OWASP_CRS/WEB_ATTACK/SQL_INJECTION&#34;</span>] 
+</span></span><span class="line"><span class="cl">[<span class="nx">hostname</span> <span class="s2">&#34;example.com&#34;</span>] 
+</span></span><span class="line"><span class="cl">[<span class="nx">uri</span> <span class="s2">&#34;/wp-admin/plugin-install.php&#34;</span>] 
+</span></span><span class="line"><span class="cl">[<span class="nx">unique_id</span> <span class="s2">&#34;Xa-QtpgasGvRM2@D2yl0FAAAAAU&#34;</span>]<span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">referer</span>: <span class="nx">https</span>:<span class="sr">//</span><span class="nx">example</span>.<span class="nx">com</span><span class="sr">/wp-admin/</span><span class="nx">admin</span>.<span class="nx">php</span>?<span class="nx">page</span><span class="p">=</span><span class="nx">wp</span><span class="p">-</span><span class="nx">fail2ban</span><span class="p">-</span><span class="nx">addons</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>No i co dalej? Dość prosto. Spójrz na numer id wewnątrz nawiasów kwadratowych. Edytujesz plik (jeśli go nie ma, to stwórz poleceniem touch /etc/httpd/conf.d/whitelist.conf).</p>
 <div class="highlight"><div class="chroma">
@@ -1850,10 +1850,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/plugin-install.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveByID</span> <span class="m">981173</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/plugin-install.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveByID</span> <span class="m">981173</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Prawda, że proste?</p>
 <p>Poniżej gotowiec wykonany przeze mnie, który działa. Więcej błędów ze strony mod_security nie mam w logach.</p>
@@ -2005,151 +2005,151 @@
 </span><span class="lnt">144
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/logowanie&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SecRuleRemoveById</span> <span class="m">950109</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">locationmatch</span> <span class="s2">&#34;/wp-comments-post.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300013</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300016</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300017</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">locationmatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/edit-comments.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">2000149</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/plugin-install.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveByID</span> <span class="m">981173</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/post.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300013</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span> <span class="m">981173</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/admin-ajax.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span> <span class="m">981173</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/page.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/options.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/theme-editor.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">340151</span> <span class="m">1234234</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-includes/&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span> <span class="m">960012</span> <span class="m">950006</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/themes/&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">340151</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">950006</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/sociable/&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span> <span class="m">960012</span> <span class="m">950006</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/wp-recaptcha/&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">340151</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/fancybox-for-wordpress/&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span> <span class="m">960012</span> <span class="m">950006</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-includes/js/tinymce/plugins/spellchecker/rpc.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">960012</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/themes/YOURTHEMEFOLDER/thumb.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="m">340151</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-cron.php&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SecRuleRemoveById</span> <span class="m">960015</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/feed&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SecRuleRemoveById</span> <span class="m">960015</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/category/feed&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SecRuleRemoveById</span> <span class="m">960015</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/logowanie&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SecRuleRemoveById</span> <span class="m">950109</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">locationmatch</span> <span class="s2">&#34;/wp-comments-post.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300013</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300016</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300017</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">locationmatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/edit-comments.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">2000149</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/plugin-install.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveByID</span> <span class="m">981173</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/post.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300013</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span> <span class="m">981173</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/admin-ajax.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span> <span class="m">981173</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/page.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/options.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-admin/theme-editor.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">300015</span> <span class="m">340151</span> <span class="m">1234234</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-includes/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span> <span class="m">960012</span> <span class="m">950006</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/themes/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">340151</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">950006</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/sociable/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span> <span class="m">960012</span> <span class="m">950006</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/wp-recaptcha/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">340151</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/plugins/fancybox-for-wordpress/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span> <span class="m">960012</span> <span class="m">950006</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-includes/js/tinymce/plugins/spellchecker/rpc.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">960010</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">960012</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-content/themes/YOURTHEMEFOLDER/thumb.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="m">340151</span> <span class="m">340153</span> <span class="m">1234234</span> <span class="m">300015</span> <span class="m">300016</span> <span class="m">300017</span> <span class="m">950907</span> <span class="m">950005</span> <span class="m">950006</span> <span class="m">960008</span> <span class="m">960011</span> <span class="m">960904</span> <span class="m">959006</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-17</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-20</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-21</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-30</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">SecRuleRemoveById</span> <span class="nx">phpids</span><span class="m">-61</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/wp-cron.php&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SecRuleRemoveById</span> <span class="m">960015</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/feed&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SecRuleRemoveById</span> <span class="m">960015</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">LocationMatch</span> <span class="s2">&#34;/category/feed&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SecRuleRemoveById</span> <span class="m">960015</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">LocationMatch</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Na koniec restart apache.</p>
 <div class="highlight"><div class="chroma">
@@ -3559,7 +3559,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

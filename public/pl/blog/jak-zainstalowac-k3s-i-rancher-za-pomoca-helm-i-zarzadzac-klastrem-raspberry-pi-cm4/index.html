@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
+<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
 
-<script defer src="/js/search.min.52721ab680ec52fb5295efeb2599098398ca2bb5b2bb35821933dc1c5b2317c6.js"></script>
+<script defer src="/js/search.min.9282b97f1bf5a28c33252389978371282573919368849e8e9f65f40cb7cbd818.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="Jak zainstalować K3S i Rancher za pomocą Helm i zarządzać klastrem Raspberry Pi CM4">
   
 
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.122.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1855,40 +1855,40 @@
 </span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">użytkownik</span> <span class="nx">jest</span> <span class="nx">rootem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Nie jesteś użytkownikiem root.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">exit</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;Jesteś użytkownikiem root.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-killall.sh...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;k3s-killall.sh nie istnieje w /usr/local/bin.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-uninstall.sh&#34;</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-uninstall.sh...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;k3s-uninstall.sh nie istnieje w /usr/local/bin.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">apt</span> <span class="nx">install</span> <span class="nx">iptables</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">reboot</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">użytkownik</span> <span class="nx">jest</span> <span class="nx">rootem</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Nie jesteś użytkownikiem root.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;Jesteś użytkownikiem root.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-killall.sh...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;k3s-killall.sh nie istnieje w /usr/local/bin.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-uninstall.sh&#34;</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-uninstall.sh...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;k3s-uninstall.sh nie istnieje w /usr/local/bin.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">apt</span> <span class="nx">install</span> <span class="nx">iptables</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span>
+</span></span><span class="line"><span class="cl"><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span>
+</span></span><span class="line"><span class="cl"><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span>
+</span></span><span class="line"><span class="cl"><span class="nx">reboot</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Skrypt Bash dla węzłów roboczych:</li>
@@ -1930,40 +1930,40 @@
 </span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">użytkownik</span> <span class="nx">jest</span> <span class="nx">rootem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Nie jesteś użytkownikiem root.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">exit</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;Jesteś użytkownikiem root.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-killall.sh...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;k3s-killall.sh nie istnieje w /usr/local/bin.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">agent</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-agent-uninstall.sh&#34;</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-agent-uninstall.sh...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">agent</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;k3s-agent-uninstall.sh nie istnieje w /usr/local/bin.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">apt</span> <span class="nx">install</span> <span class="nx">iptables</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">reboot</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">użytkownik</span> <span class="nx">jest</span> <span class="nx">rootem</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Nie jesteś użytkownikiem root.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;Jesteś użytkownikiem root.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-killall.sh&#34;</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-killall.sh...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;k3s-killall.sh nie istnieje w /usr/local/bin.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">k3s</span><span class="p">-</span><span class="nx">agent</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/k3s-agent-uninstall.sh&#34;</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję k3s-agent-uninstall.sh...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">k3s</span><span class="p">-</span><span class="nx">agent</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;k3s-agent-uninstall.sh nie istnieje w /usr/local/bin.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">apt</span> <span class="nx">install</span> <span class="nx">iptables</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span>
+</span></span><span class="line"><span class="cl"><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span>
+</span></span><span class="line"><span class="cl"><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span>
+</span></span><span class="line"><span class="cl"><span class="nx">reboot</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>Skrypt Bash dla Ranchera:</li>
@@ -2007,42 +2007,42 @@
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">użytkownik</span> <span class="nx">jest</span> <span class="nx">rootem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Nie jesteś użytkownikiem root.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">exit</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">echo</span> <span class="s2">&#34;Jesteś użytkownikiem root.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">rancherd</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/rancherd-killall.sh&#34;</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję rancherd-killall.sh...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    /<span class="nx">usr</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/local/</span><span class="nx">bin</span>/<span class="nx">rancherd</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;rancherd-killall.sh nie istnieje w /usr/local/bin.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">rancherd</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/rancherd-uninstall.sh&#34;</span> ]; <span class="nx">then</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję rancherd-uninstall.sh...&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">rancherd</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">else</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">echo</span> <span class="s2">&#34;rancherd-uninstall.sh nie istnieje w /usr/local/bin.&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fi</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">apt</span> <span class="nx">install</span> <span class="nx">iptables</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="nx">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">reboot</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/bin/</span><span class="nx">bash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">użytkownik</span> <span class="nx">jest</span> <span class="nx">rootem</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="s2">&#34;$UID&#34;</span> <span class="p">-</span><span class="nx">ne</span> <span class="m">0</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Nie jesteś użytkownikiem root.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">echo</span> <span class="s2">&#34;Jesteś użytkownikiem root.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">rancherd</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/rancherd-killall.sh&#34;</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję rancherd-killall.sh...&#34;</span>
+</span></span><span class="line"><span class="cl">    /<span class="nx">usr</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="sr">/local/</span><span class="nx">bin</span>/<span class="nx">rancherd</span><span class="p">-</span><span class="nx">killall</span>.<span class="nx">sh</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;rancherd-killall.sh nie istnieje w /usr/local/bin.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Sprawdź</span><span class="p">,</span> <span class="nx">czy</span> <span class="nx">rancherd</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span> <span class="nx">istnieje</span> <span class="nx">w</span> <span class="sr">/usr/</span><span class="nx">local</span>/<span class="nx">bin</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> [ <span class="p">-</span><span class="nx">f</span> <span class="s2">&#34;/usr/local/bin/rancherd-uninstall.sh&#34;</span> ]; <span class="nx">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;Wykonuję rancherd-uninstall.sh...&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="sr">/usr/</span><span class="nx">local</span><span class="sr">/bin/</span><span class="nx">rancherd</span><span class="p">-</span><span class="nx">uninstall</span>.<span class="nx">sh</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">echo</span> <span class="s2">&#34;rancherd-uninstall.sh nie istnieje w /usr/local/bin.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">apt</span> <span class="nx">install</span> <span class="nx">iptables</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span><span class="p">-</span><span class="nx">save</span> <span class="p">|</span> <span class="nx">awk</span> <span class="s1">&#39;/^[*]/ { print $1 } /COMMIT/ { print $0; }&#39;</span> <span class="p">|</span> <span class="nx">sudo</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">restore</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span> <span class="p">-</span><span class="nx">S</span>
+</span></span><span class="line"><span class="cl"><span class="nx">iptables</span> <span class="p">-</span><span class="nx">F</span>
+</span></span><span class="line"><span class="cl"><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">iptables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">iptables</span><span class="p">-</span><span class="nx">legacy</span>
+</span></span><span class="line"><span class="cl"><span class="nx">update</span><span class="p">-</span><span class="nx">alternatives</span> <span class="p">--</span><span class="k">set</span> <span class="nx">ip6tables</span> <span class="sr">/usr/</span><span class="nx">sbin</span>/<span class="nx">ip6tables</span><span class="p">-</span><span class="nx">legacy</span>
+</span></span><span class="line"><span class="cl"><span class="nx">reboot</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="dodaj-wpisy-cgroup-do-pliku-cmdlinetxt-na-każdym-węźle-działającym-na-procesorze-arm">Dodaj wpisy cgroup do pliku cmdline.txt na każdym węźle działającym na procesorze ARM.</h4>
 <div class="highlight"><div class="chroma">
@@ -2123,8 +2123,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">KUBECONFIG</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">rancher</span><span class="sr">/k3s/</span><span class="nx">k3s</span>.<span class="nx">yaml</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">KUBECONFIG</span><span class="p">=</span><span class="sr">/etc/</span><span class="nx">rancher</span><span class="sr">/k3s/</span><span class="nx">k3s</span>.<span class="nx">yaml</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -4326,7 +4326,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

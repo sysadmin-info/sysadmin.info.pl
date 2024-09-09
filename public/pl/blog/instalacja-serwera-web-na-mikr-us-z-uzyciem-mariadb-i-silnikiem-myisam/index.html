@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
+<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
 
-<script defer src="/js/search.min.52721ab680ec52fb5295efeb2599098398ca2bb5b2bb35821933dc1c5b2317c6.js"></script>
+<script defer src="/js/search.min.9282b97f1bf5a28c33252389978371282573919368849e8e9f65f40cb7cbd818.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="Instalacja serwera web na mikr.us z użyciem MariaDB i silnikiem MyISAM">
   
 
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.122.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -2086,8 +2086,8 @@ W pierwszej kolejności należy dla bezpieczeństwa zmienić hasło root, poniew
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">AllowGroups</span> <span class="nx">grupassh</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">AllowGroups</span> <span class="nx">grupassh</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2599,28 +2599,28 @@ W pierwszej kolejności należy dla bezpieczeństwa zmienić hasło root, poniew
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">VirtualHost</span> *:<span class="m">80</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">ServerName</span> <span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">ServerAlias</span> <span class="nx">www</span>.<span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">DocumentRoot</span> <span class="sr">/var/</span><span class="nx">www</span><span class="sr">/html/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">public_html</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">ErrorLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">error</span>.<span class="nx">log</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">CustomLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="nx">combined</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   #<span class="nx">ErrorLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/apache2/</span><span class="nx">error</span>.<span class="nx">log</span> # <span class="nx">Debian</span>/<span class="nx">Ubuntu</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   #<span class="nx">CustomLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/apache2/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="nx">combined</span> # <span class="nx">Debian</span>/<span class="nx">Ubuntu</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">DirectoryIndex</span> <span class="nx">index</span>.<span class="nx">php</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">LogLevel</span> <span class="nx">info</span> <span class="nx">warn</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="p">&lt;</span><span class="nx">FilesMatch</span> <span class="s2">&#34;^\.ht&#34;</span><span class="p">&gt;</span>     <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>       <span class="nx">Require</span> <span class="nx">all</span> <span class="nx">denied</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="p">&lt;</span>/<span class="nx">FilesMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="p">&lt;</span><span class="nx">files</span> <span class="nx">readme</span>.<span class="nx">html</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>       <span class="nx">order</span> <span class="nx">allow</span><span class="p">,</span><span class="nx">deny</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>       <span class="nx">deny</span> <span class="nx">from</span> <span class="nx">all</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="p">&lt;</span>/<span class="nx">files</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">VirtualHost</span><span class="p">&gt;</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">VirtualHost</span> *:<span class="m">80</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">ServerName</span> <span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">ServerAlias</span> <span class="nx">www</span>.<span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">DocumentRoot</span> <span class="sr">/var/</span><span class="nx">www</span><span class="sr">/html/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">public_html</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">ErrorLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">error</span>.<span class="nx">log</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">CustomLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="nx">combined</span>
+</span></span><span class="line"><span class="cl">   #<span class="nx">ErrorLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/apache2/</span><span class="nx">error</span>.<span class="nx">log</span> # <span class="nx">Debian</span>/<span class="nx">Ubuntu</span>
+</span></span><span class="line"><span class="cl">   #<span class="nx">CustomLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/apache2/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="nx">combined</span> # <span class="nx">Debian</span>/<span class="nx">Ubuntu</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">DirectoryIndex</span> <span class="nx">index</span>.<span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="nx">LogLevel</span> <span class="nx">info</span> <span class="nx">warn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nx">FilesMatch</span> <span class="s2">&#34;^\.ht&#34;</span><span class="p">&gt;</span>     
+</span></span><span class="line"><span class="cl">       <span class="nx">Require</span> <span class="nx">all</span> <span class="nx">denied</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span>/<span class="nx">FilesMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nx">files</span> <span class="nx">readme</span>.<span class="nx">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">order</span> <span class="nx">allow</span><span class="p">,</span><span class="nx">deny</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">deny</span> <span class="nx">from</span> <span class="nx">all</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span>/<span class="nx">files</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">VirtualHost</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Dla Debian/Apache musimy jeszcze włączyć stronę</p>
 <div class="highlight"><div class="chroma">
@@ -2886,18 +2886,18 @@ W pierwszej kolejności należy dla bezpieczeństwa zmienić hasło root, poniew
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/** The name of the database for WordPress */</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;wordpress&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/** MySQL database username */</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_USER&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/** MySQL database password */</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span><span class="p">,</span> <span class="s1">&#39;haslo_użytkownika_bazy_danych&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/** MySQL hostname */</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="sr">/** The name of the database for WordPress */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;wordpress&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="sr">/** MySQL database username */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_USER&#39;</span><span class="p">,</span> <span class="s1">&#39;user&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="sr">/** MySQL database password */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_PASSWORD&#39;</span><span class="p">,</span> <span class="s1">&#39;haslo_użytkownika_bazy_danych&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="sr">/** MySQL hostname */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;DB_HOST&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">)</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Dodaj klucze bezpieczeństwa, aby zabezpieczyć wp-admin.<br />
 Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" rel="noreferrer noopener" aria-label="Generatora kluczy bezpieczeństwa WordPress (otwiera się na nowej zakładce)">Generatora kluczy bezpieczeństwa WordPress</a>, aby utworzyć losowe, skomplikowane hashe, których WordPress użyje do zaszyfrowania danych logowania. Skopiuj wynik i zastąp odpowiednią sekcję w pliku wp-config.php:</p>
@@ -2923,25 +2923,25 @@ Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" r
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">/**#@<span class="p">+</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> * <span class="nx">Authentication</span> <span class="nx">Unique</span> <span class="nx">Keys</span> <span class="nx">and</span> <span class="nx">Salts</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> *<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> * <span class="nx">Change</span> <span class="nx">these</span> <span class="nx">to</span> <span class="nx">different</span> <span class="nx">unique</span> <span class="nx">phrases</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> * <span class="nx">You</span> <span class="nx">can</span> <span class="nx">generate</span> <span class="nx">these</span> <span class="nx">using</span> <span class="nx">the</span> {@<span class="nx">link</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">api</span>.<span class="nx">wordpress</span>.<span class="nx">org</span><span class="sr">/secret-key/</span><span class="m">1</span>.<span class="m">1</span><span class="sr">/salt/</span> <span class="nx">WordPress</span>.<span class="nx">org</span> <span class="nx">secret</span><span class="p">-</span><span class="nx">key</span> <span class="nx">service</span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> * <span class="nx">You</span> <span class="nx">can</span> <span class="nx">change</span> <span class="nx">these</span> <span class="nx">at</span> <span class="nx">any</span> <span class="nx">point</span> <span class="nx">in</span> <span class="nx">time</span> <span class="nx">to</span> <span class="nx">invalidate</span> <span class="nx">all</span> <span class="nx">existing</span> <span class="nx">cookies</span>. <span class="nx">This</span> <span class="nx">will</span> <span class="nx">force</span> <span class="nx">all</span> <span class="nx">users</span> <span class="nx">to</span> <span class="nx">have</span> <span class="nx">to</span> <span class="nx">log</span> <span class="nx">in</span> <span class="nx">again</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> *<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> * @<span class="nx">since</span> <span class="m">2</span>.<span class="m">6</span>.<span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> */<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;AUTH_KEY&#39;</span><span class="p">,</span>         <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;SECURE_AUTH_KEY&#39;</span><span class="p">,</span>  <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;LOGGED_IN_KEY&#39;</span><span class="p">,</span>    <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;NONCE_KEY&#39;</span><span class="p">,</span>        <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;AUTH_SALT&#39;</span><span class="p">,</span>        <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;SECURE_AUTH_SALT&#39;</span><span class="p">,</span> <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;LOGGED_IN_SALT&#39;</span><span class="p">,</span>   <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;NONCE_SALT&#39;</span><span class="p">,</span>       <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sr">/**#@-*/</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">/**#@<span class="p">+</span>
+</span></span><span class="line"><span class="cl"> * <span class="nx">Authentication</span> <span class="nx">Unique</span> <span class="nx">Keys</span> <span class="nx">and</span> <span class="nx">Salts</span>.
+</span></span><span class="line"><span class="cl"> *
+</span></span><span class="line"><span class="cl"> * <span class="nx">Change</span> <span class="nx">these</span> <span class="nx">to</span> <span class="nx">different</span> <span class="nx">unique</span> <span class="nx">phrases</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"> * <span class="nx">You</span> <span class="nx">can</span> <span class="nx">generate</span> <span class="nx">these</span> <span class="nx">using</span> <span class="nx">the</span> {@<span class="nx">link</span> <span class="nx">https</span>:<span class="sr">//</span><span class="nx">api</span>.<span class="nx">wordpress</span>.<span class="nx">org</span><span class="sr">/secret-key/</span><span class="m">1</span>.<span class="m">1</span><span class="sr">/salt/</span> <span class="nx">WordPress</span>.<span class="nx">org</span> <span class="nx">secret</span><span class="p">-</span><span class="nx">key</span> <span class="nx">service</span>}
+</span></span><span class="line"><span class="cl"> * <span class="nx">You</span> <span class="nx">can</span> <span class="nx">change</span> <span class="nx">these</span> <span class="nx">at</span> <span class="nx">any</span> <span class="nx">point</span> <span class="nx">in</span> <span class="nx">time</span> <span class="nx">to</span> <span class="nx">invalidate</span> <span class="nx">all</span> <span class="nx">existing</span> <span class="nx">cookies</span>. <span class="nx">This</span> <span class="nx">will</span> <span class="nx">force</span> <span class="nx">all</span> <span class="nx">users</span> <span class="nx">to</span> <span class="nx">have</span> <span class="nx">to</span> <span class="nx">log</span> <span class="nx">in</span> <span class="nx">again</span>.
+</span></span><span class="line"><span class="cl"> *
+</span></span><span class="line"><span class="cl"> * @<span class="nx">since</span> <span class="m">2</span>.<span class="m">6</span>.<span class="m">0</span>
+</span></span><span class="line"><span class="cl"> */
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;AUTH_KEY&#39;</span><span class="p">,</span>         <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;SECURE_AUTH_KEY&#39;</span><span class="p">,</span>  <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;LOGGED_IN_KEY&#39;</span><span class="p">,</span>    <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;NONCE_KEY&#39;</span><span class="p">,</span>        <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;AUTH_SALT&#39;</span><span class="p">,</span>        <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;SECURE_AUTH_SALT&#39;</span><span class="p">,</span> <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;LOGGED_IN_SALT&#39;</span><span class="p">,</span>   <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;NONCE_SALT&#39;</span><span class="p">,</span>       <span class="s1">&#39;put your unique phrase here&#39;</span><span class="p">)</span>;
+</span></span><span class="line"><span class="cl"><span class="sr">/**#@-*/</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="instalacja-i-konfiguracja-maria-db-104-w-centos-76">Instalacja i konfiguracja Maria DB 10.4 w CentOS 7.6.</h3>
 <div class="highlight"><div class="chroma">
@@ -3032,50 +3032,50 @@ Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" r
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">NOTE</span>: <span class="nx">RUNNING</span> <span class="nx">ALL</span> <span class="nx">PARTS</span> <span class="nx">OF</span> <span class="nx">THIS</span> <span class="nx">SCRIPT</span> <span class="nx">IS</span> <span class="nx">RECOMMENDED</span> <span class="nx">FOR</span> <span class="nx">ALL</span> <span class="nx">MariaDB</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">SERVERS</span> <span class="nx">IN</span> <span class="nx">PRODUCTION</span> <span class="nx">USE</span><span class="p">!</span>  <span class="nx">PLEASE</span> <span class="nx">READ</span> <span class="nx">EACH</span> <span class="nx">STEP</span> <span class="nx">CAREFULLY</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">In</span> <span class="nx">order</span> <span class="nx">to</span> <span class="nx">log</span> <span class="nx">into</span> <span class="nx">MariaDB</span> <span class="nx">to</span> <span class="nx">secure</span> <span class="nx">it</span><span class="p">,</span> <span class="nx">we</span>&#39;<span class="nx">ll</span> <span class="nx">need</span> <span class="nx">the</span> <span class="nx">current</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">password</span> <span class="nx">for</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">user</span>.  <span class="nx">If</span> <span class="nx">you</span>&#39;<span class="nx">ve</span> <span class="nx">just</span> <span class="nx">installed</span> <span class="nx">MariaDB</span><span class="p">,</span> <span class="nx">and</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">you</span> <span class="nx">haven</span>&#39;<span class="nx">t</span> <span class="nx">set</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">password</span> <span class="nx">yet</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">password</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">blank</span><span class="p">,</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="nx">so</span> <span class="nx">you</span> <span class="nx">should</span> <span class="nx">just</span> <span class="nx">press</span> <span class="nx">enter</span> <span class="nx">here</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>      <span class="p">&lt;</span><span class="nx">strong</span><span class="p">&gt;</span><span class="nx">Enter</span> <span class="nx">current</span> <span class="nx">password</span> <span class="nx">for</span> <span class="nx">root</span> <span class="p">(</span><span class="nx">enter</span> <span class="nx">for</span> <span class="nx">none</span><span class="p">)</span>: <span class="p">&lt;</span>/<span class="nx">strong</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">OK</span><span class="p">,</span> <span class="nx">successfully</span> <span class="nx">used</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">moving</span> <span class="nx">on</span>…<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Setting</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">password</span> <span class="nx">ensures</span> <span class="nx">that</span> <span class="nx">nobody</span> <span class="nx">can</span> <span class="nx">log</span> <span class="nx">into</span> <span class="nx">the</span> <span class="nx">MariaDB</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">root</span> <span class="nx">user</span> <span class="nx">without</span> <span class="nx">the</span> <span class="nx">proper</span> <span class="nx">authorisation</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="p">&lt;</span><span class="nx">strong</span><span class="p">&gt;</span><span class="nx">Set</span> <span class="nx">root</span> <span class="nx">password</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">New</span> <span class="nx">password</span>: <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Re</span><span class="p">-</span><span class="nx">enter</span> <span class="nx">new</span> <span class="nx">password</span>: <span class="p">&lt;</span>/<span class="nx">strong</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Password</span> <span class="nx">updated</span> <span class="nx">successfully</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Reloading</span> <span class="nx">privilege</span> <span class="nx">tables</span>..<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  … <span class="nx">Success</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">By</span> <span class="nx">default</span><span class="p">,</span> <span class="nx">a</span> <span class="nx">MariaDB</span> <span class="nx">installation</span> <span class="nx">has</span> <span class="nx">an</span> <span class="nx">anonymous</span> <span class="nx">user</span><span class="p">,</span> <span class="nx">allowing</span> <span class="nx">anyone</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">to</span> <span class="nx">log</span> <span class="nx">into</span> <span class="nx">MariaDB</span> <span class="nx">without</span> <span class="nx">having</span> <span class="nx">to</span> <span class="nx">have</span> <span class="nx">a</span> <span class="nx">user</span> <span class="nx">account</span> <span class="nx">created</span> <span class="nx">for</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">them</span>.  <span class="nx">This</span> <span class="nx">is</span> <span class="nx">intended</span> <span class="nx">only</span> <span class="nx">for</span> <span class="nx">testing</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">to</span> <span class="nx">make</span> <span class="nx">the</span> <span class="nx">installation</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">go</span> <span class="nx">a</span> <span class="nx">bit</span> <span class="nx">smoother</span>.  <span class="nx">You</span> <span class="nx">should</span> <span class="nx">remove</span> <span class="nx">them</span> <span class="nx">before</span> <span class="nx">moving</span> <span class="nx">into</span> <span class="nx">a</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">production</span> <span class="nx">environment</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Remove</span> <span class="nx">anonymous</span> <span class="nx">users</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  … <span class="nx">Success</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Normally</span><span class="p">,</span> <span class="nx">root</span> <span class="nx">should</span> <span class="nx">only</span> <span class="nx">be</span> <span class="nx">allowed</span> <span class="nx">to</span> <span class="nx">connect</span> <span class="nx">from</span> <span class="s1">&#39;localhost&#39;</span>.  <span class="nx">This</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">ensures</span> <span class="nx">that</span> <span class="nx">someone</span> <span class="nx">cannot</span> <span class="nx">guess</span> <span class="nx">at</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">password</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">network</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Disallow</span> <span class="nx">root</span> <span class="nx">login</span> <span class="nx">remotely</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  … <span class="nx">Success</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">By</span> <span class="nx">default</span><span class="p">,</span> <span class="nx">MariaDB</span> <span class="nx">comes</span> <span class="nx">with</span> <span class="nx">a</span> <span class="nx">database</span> <span class="nx">named</span> <span class="s1">&#39;test&#39;</span> <span class="nx">that</span> <span class="nx">anyone</span> <span class="nx">can</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">access</span>.  <span class="nx">This</span> <span class="nx">is</span> <span class="nx">also</span> <span class="nx">intended</span> <span class="nx">only</span> <span class="nx">for</span> <span class="nx">testing</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">should</span> <span class="nx">be</span> <span class="nx">removed</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">before</span> <span class="nx">moving</span> <span class="nx">into</span> <span class="nx">a</span> <span class="nx">production</span> <span class="nx">environment</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Remove</span> <span class="nx">test</span> <span class="nx">database</span> <span class="nx">and</span> <span class="nx">access</span> <span class="nx">to</span> <span class="nx">it</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Dropping</span> <span class="nx">test</span> <span class="nx">database</span>…<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> … <span class="nx">Success</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Removing</span> <span class="nx">privileges</span> <span class="nx">on</span> <span class="nx">test</span> <span class="nx">database</span>…<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> … <span class="nx">Success</span><span class="p">!</span> <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Reloading</span> <span class="nx">the</span> <span class="nx">privilege</span> <span class="nx">tables</span> <span class="nx">will</span> <span class="nx">ensure</span> <span class="nx">that</span> <span class="nx">all</span> <span class="nx">changes</span> <span class="nx">made</span> <span class="nx">so</span> <span class="nx">far</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">will</span> <span class="nx">take</span> <span class="nx">effect</span> <span class="nx">immediately</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Reload</span> <span class="nx">privilege</span> <span class="nx">tables</span> <span class="nx">now</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  … <span class="nx">Success</span><span class="p">!</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Cleaning</span> <span class="nx">up</span>…<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">All</span> <span class="nx">done</span><span class="p">!</span>  <span class="nx">If</span> <span class="nx">you</span>&#39;<span class="nx">ve</span> <span class="nx">completed</span> <span class="nx">all</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">above</span> <span class="nx">steps</span><span class="p">,</span> <span class="nx">your</span> <span class="nx">MariaDB</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">installation</span> <span class="nx">should</span> <span class="nx">now</span> <span class="nx">be</span> <span class="nx">secure</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Thanks</span> <span class="nx">for</span> <span class="nx">using</span> <span class="nx">MariaDB</span><span class="p">!</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">NOTE</span>: <span class="nx">RUNNING</span> <span class="nx">ALL</span> <span class="nx">PARTS</span> <span class="nx">OF</span> <span class="nx">THIS</span> <span class="nx">SCRIPT</span> <span class="nx">IS</span> <span class="nx">RECOMMENDED</span> <span class="nx">FOR</span> <span class="nx">ALL</span> <span class="nx">MariaDB</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">SERVERS</span> <span class="nx">IN</span> <span class="nx">PRODUCTION</span> <span class="nx">USE</span><span class="p">!</span>  <span class="nx">PLEASE</span> <span class="nx">READ</span> <span class="nx">EACH</span> <span class="nx">STEP</span> <span class="nx">CAREFULLY</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">In</span> <span class="nx">order</span> <span class="nx">to</span> <span class="nx">log</span> <span class="nx">into</span> <span class="nx">MariaDB</span> <span class="nx">to</span> <span class="nx">secure</span> <span class="nx">it</span><span class="p">,</span> <span class="nx">we</span>&#39;<span class="nx">ll</span> <span class="nx">need</span> <span class="nx">the</span> <span class="nx">current</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">password</span> <span class="nx">for</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">user</span>.  <span class="nx">If</span> <span class="nx">you</span>&#39;<span class="nx">ve</span> <span class="nx">just</span> <span class="nx">installed</span> <span class="nx">MariaDB</span><span class="p">,</span> <span class="nx">and</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">you</span> <span class="nx">haven</span>&#39;<span class="nx">t</span> <span class="k">set</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">password</span> <span class="nx">yet</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">password</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">blank</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">so</span> <span class="nx">you</span> <span class="nx">should</span> <span class="nx">just</span> <span class="nx">press</span> <span class="nx">enter</span> <span class="nx">here</span>.
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nx">strong</span><span class="p">&gt;</span><span class="nx">Enter</span> <span class="nx">current</span> <span class="nx">password</span> <span class="nx">for</span> <span class="nx">root</span> <span class="p">(</span><span class="nx">enter</span> <span class="nx">for</span> <span class="nx">none</span><span class="p">)</span>: <span class="p">&lt;</span>/<span class="nx">strong</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">OK</span><span class="p">,</span> <span class="nx">successfully</span> <span class="nx">used</span> <span class="nx">password</span><span class="p">,</span> <span class="nx">moving</span> <span class="nx">on</span>…
+</span></span><span class="line"><span class="cl"> <span class="nx">Setting</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">password</span> <span class="nx">ensures</span> <span class="nx">that</span> <span class="nx">nobody</span> <span class="nx">can</span> <span class="nx">log</span> <span class="nx">into</span> <span class="nx">the</span> <span class="nx">MariaDB</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">root</span> <span class="nx">user</span> <span class="nx">without</span> <span class="nx">the</span> <span class="nx">proper</span> <span class="nx">authorisation</span>.
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nx">strong</span><span class="p">&gt;</span><span class="nx">Set</span> <span class="nx">root</span> <span class="nx">password</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">New</span> <span class="nx">password</span>: 
+</span></span><span class="line"><span class="cl"> <span class="nx">Re</span><span class="p">-</span><span class="nx">enter</span> <span class="nx">new</span> <span class="nx">password</span>: <span class="p">&lt;</span>/<span class="nx">strong</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Password</span> <span class="nx">updated</span> <span class="nx">successfully</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Reloading</span> <span class="nx">privilege</span> <span class="nx">tables</span>..
+</span></span><span class="line"><span class="cl">  … <span class="nx">Success</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">By</span> <span class="nx">default</span><span class="p">,</span> <span class="nx">a</span> <span class="nx">MariaDB</span> <span class="nx">installation</span> <span class="nx">has</span> <span class="nx">an</span> <span class="nx">anonymous</span> <span class="nx">user</span><span class="p">,</span> <span class="nx">allowing</span> <span class="nx">anyone</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">to</span> <span class="nx">log</span> <span class="nx">into</span> <span class="nx">MariaDB</span> <span class="nx">without</span> <span class="nx">having</span> <span class="nx">to</span> <span class="nx">have</span> <span class="nx">a</span> <span class="nx">user</span> <span class="nx">account</span> <span class="nx">created</span> <span class="nx">for</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">them</span>.  <span class="nx">This</span> <span class="nx">is</span> <span class="nx">intended</span> <span class="nx">only</span> <span class="nx">for</span> <span class="nx">testing</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">to</span> <span class="nx">make</span> <span class="nx">the</span> <span class="nx">installation</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">go</span> <span class="nx">a</span> <span class="nx">bit</span> <span class="nx">smoother</span>.  <span class="nx">You</span> <span class="nx">should</span> <span class="nx">remove</span> <span class="nx">them</span> <span class="nx">before</span> <span class="nx">moving</span> <span class="nx">into</span> <span class="nx">a</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">production</span> <span class="nx">environment</span>.
+</span></span><span class="line"><span class="cl"> <span class="nx">Remove</span> <span class="nx">anonymous</span> <span class="nx">users</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span>
+</span></span><span class="line"><span class="cl">  … <span class="nx">Success</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Normally</span><span class="p">,</span> <span class="nx">root</span> <span class="nx">should</span> <span class="nx">only</span> <span class="nx">be</span> <span class="nx">allowed</span> <span class="nx">to</span> <span class="nx">connect</span> <span class="nx">from</span> <span class="s1">&#39;localhost&#39;</span>.  <span class="nx">This</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">ensures</span> <span class="nx">that</span> <span class="nx">someone</span> <span class="nx">cannot</span> <span class="nx">guess</span> <span class="nx">at</span> <span class="nx">the</span> <span class="nx">root</span> <span class="nx">password</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">network</span>.
+</span></span><span class="line"><span class="cl"> <span class="nx">Disallow</span> <span class="nx">root</span> <span class="nx">login</span> <span class="nx">remotely</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span>
+</span></span><span class="line"><span class="cl">  … <span class="nx">Success</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">By</span> <span class="nx">default</span><span class="p">,</span> <span class="nx">MariaDB</span> <span class="nx">comes</span> <span class="nx">with</span> <span class="nx">a</span> <span class="nx">database</span> <span class="nx">named</span> <span class="s1">&#39;test&#39;</span> <span class="nx">that</span> <span class="nx">anyone</span> <span class="nx">can</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">access</span>.  <span class="nx">This</span> <span class="nx">is</span> <span class="nx">also</span> <span class="nx">intended</span> <span class="nx">only</span> <span class="nx">for</span> <span class="nx">testing</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">should</span> <span class="nx">be</span> <span class="nx">removed</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">before</span> <span class="nx">moving</span> <span class="nx">into</span> <span class="nx">a</span> <span class="nx">production</span> <span class="nx">environment</span>.
+</span></span><span class="line"><span class="cl"> <span class="nx">Remove</span> <span class="nx">test</span> <span class="nx">database</span> <span class="nx">and</span> <span class="nx">access</span> <span class="nx">to</span> <span class="nx">it</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Dropping</span> <span class="nx">test</span> <span class="nx">database</span>…
+</span></span><span class="line"><span class="cl"> … <span class="nx">Success</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Removing</span> <span class="nx">privileges</span> <span class="nx">on</span> <span class="nx">test</span> <span class="nx">database</span>…
+</span></span><span class="line"><span class="cl"> … <span class="nx">Success</span><span class="p">!</span> 
+</span></span><span class="line"><span class="cl"> <span class="nx">Reloading</span> <span class="nx">the</span> <span class="nx">privilege</span> <span class="nx">tables</span> <span class="nx">will</span> <span class="nx">ensure</span> <span class="nx">that</span> <span class="nx">all</span> <span class="nx">changes</span> <span class="nx">made</span> <span class="nx">so</span> <span class="nx">far</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">will</span> <span class="nx">take</span> <span class="nx">effect</span> <span class="nx">immediately</span>.
+</span></span><span class="line"><span class="cl"> <span class="nx">Reload</span> <span class="nx">privilege</span> <span class="nx">tables</span> <span class="nx">now</span>? [<span class="nx">Y</span>/<span class="nx">n</span>] <span class="nx">y</span>
+</span></span><span class="line"><span class="cl">  … <span class="nx">Success</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Cleaning</span> <span class="nx">up</span>…
+</span></span><span class="line"><span class="cl"> <span class="nx">All</span> <span class="nx">done</span><span class="p">!</span>  <span class="nx">If</span> <span class="nx">you</span>&#39;<span class="nx">ve</span> <span class="nx">completed</span> <span class="nx">all</span> <span class="nx">of</span> <span class="nx">the</span> <span class="nx">above</span> <span class="nx">steps</span><span class="p">,</span> <span class="nx">your</span> <span class="nx">MariaDB</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">installation</span> <span class="nx">should</span> <span class="nx">now</span> <span class="nx">be</span> <span class="nx">secure</span>.
+</span></span><span class="line"><span class="cl"> <span class="nx">Thanks</span> <span class="nx">for</span> <span class="nx">using</span> <span class="nx">MariaDB</span><span class="p">!</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -3366,55 +3366,55 @@ Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" r
 </span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">IfModule</span> <span class="nx">mod_ssl</span>.<span class="nx">c</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">SSLStaplingCache</span> <span class="nx">shmcb</span>:<span class="sr">/run/</span><span class="nx">httpd</span>/<span class="nx">ssl_stapling</span><span class="p">(</span><span class="m">32768</span><span class="p">)</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>  <span class="p">&lt;</span><span class="nx">VirtualHost</span> *:<span class="m">443</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">Header</span> <span class="nx">always</span> <span class="nx">set</span> <span class="nx">Strict</span><span class="p">-</span><span class="nx">Transport</span><span class="p">-</span><span class="nx">Security</span> <span class="s2">&#34;max-age=15768000&#34;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">SSLEngine</span> <span class="nx">on</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">ServerName</span> <span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">ServerAlias</span> <span class="nx">www</span>.<span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">DocumentRoot</span> <span class="sr">/var/</span><span class="nx">www</span><span class="sr">/html/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">public_html</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">LogLevel</span> <span class="nx">debug</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">ErrorLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">error</span>.<span class="nx">log</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>   <span class="nx">CustomLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="nx">combined</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">&lt;</span><span class="nx">Directory</span> <span class="sr">/var/</span><span class="nx">www</span><span class="sr">/html/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">public_html</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>     <span class="nx">Options</span> <span class="nx">Indexes</span> <span class="nx">FollowSymLinks</span> <span class="nx">Includes</span> <span class="nx">IncludesNOEXEC</span> <span class="nx">SymLinksIfOwnerMatch</span>                     <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>     <span class="nx">AllowOverride</span> <span class="nx">All</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>     <span class="nx">Require</span> <span class="nx">all</span> <span class="nx">granted</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>     <span class="nx">DirectoryIndex</span> <span class="nx">index</span>.<span class="nx">php</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>     <span class="nx">RewriteEngine</span> <span class="nx">On</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">&lt;</span>/<span class="nx">Directory</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">Include</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span>/<span class="nx">options</span><span class="p">-</span><span class="nx">ssl</span><span class="p">-</span><span class="nx">apache</span>.<span class="nx">conf</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLUseStapling</span> <span class="nx">on</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLProtocol</span> <span class="nx">all</span> <span class="p">-</span><span class="nx">SSLv3</span> <span class="p">-</span><span class="nx">TLSv1</span> <span class="p">-</span><span class="nx">TLSv1</span>.<span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLCipherSuite</span> <span class="nx">HIGH</span>:<span class="p">!</span><span class="nx">aNULL</span>:<span class="p">!</span><span class="nx">MD5</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLCipherSuite</span> <span class="nx">ECDHE</span><span class="p">-</span><span class="nx">ECDSA</span><span class="p">-</span><span class="nx">AES256</span><span class="p">-</span><span class="nx">GCM</span><span class="p">-</span><span class="nx">SHA384</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">RSA</span><span class="p">-</span><span class="nx">AES256</span><span class="p">-</span><span class="nx">GCM</span><span class="p">-</span><span class="nx">SHA384</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">ECDSA</span><span class="p">-</span><span class="nx">CHACHA20</span><span class="p">-</span><span class="nx">POLY1305</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">RSA</span><span class="p">-</span><span class="nx">CHACHA20</span><span class="p">-</span><span class="nx">POLY1305</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">ECDSA</span><span class="p">-</span><span class="nx">AES128</span><span class="p">-</span><span class="nx">GCM</span><span class="p">-</span><span class="nx">SHA256</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">RSA</span><span class="p">-</span><span class="nx">AE</span>$<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLHonorCipherOrder</span> <span class="nx">on</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLCompression</span> <span class="nx">off</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLSessionTickets</span> <span class="nx">off</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">&lt;</span><span class="nx">FilesMatch</span> <span class="s2">&#34;^\.ht&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>       <span class="nx">Require</span> <span class="nx">all</span> <span class="nx">denied</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">&lt;</span>/<span class="nx">FilesMatch</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">&lt;</span><span class="nx">files</span> <span class="nx">readme</span>.<span class="nx">html</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>       <span class="nx">order</span> <span class="nx">allow</span><span class="p">,</span><span class="nx">deny</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>       <span class="nx">deny</span> <span class="nx">from</span> <span class="nx">all</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="p">&lt;</span>/<span class="nx">files</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLCertificateFile</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span><span class="sr">/live/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">cert</span>.<span class="nx">pem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLCertificateKeyFile</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span><span class="sr">/live/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">privkey</span>.<span class="nx">pem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">SSLCertificateChainFile</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span><span class="sr">/live/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">chain</span>.<span class="nx">pem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="p">&lt;</span>/<span class="nx">VirtualHost</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">IfModule</span><span class="p">&gt;</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">IfModule</span> <span class="nx">mod_ssl</span>.<span class="nx">c</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">SSLStaplingCache</span> <span class="nx">shmcb</span>:<span class="sr">/run/</span><span class="nx">httpd</span>/<span class="nx">ssl_stapling</span><span class="p">(</span><span class="m">32768</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nx">VirtualHost</span> *:<span class="m">443</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">Header</span> <span class="nx">always</span> <span class="k">set</span> <span class="nx">Strict</span><span class="p">-</span><span class="nx">Transport</span><span class="p">-</span><span class="nx">Security</span> <span class="s2">&#34;max-age=15768000&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">SSLEngine</span> <span class="nx">on</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">ServerName</span> <span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">ServerAlias</span> <span class="nx">www</span>.<span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">DocumentRoot</span> <span class="sr">/var/</span><span class="nx">www</span><span class="sr">/html/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">public_html</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">LogLevel</span> <span class="nx">debug</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">ErrorLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">error</span>.<span class="nx">log</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">CustomLog</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="nx">combined</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nx">Directory</span> <span class="sr">/var/</span><span class="nx">www</span><span class="sr">/html/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">public_html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">Options</span> <span class="nx">Indexes</span> <span class="nx">FollowSymLinks</span> <span class="nx">Includes</span> <span class="nx">IncludesNOEXEC</span> <span class="nx">SymLinksIfOwnerMatch</span>                     
+</span></span><span class="line"><span class="cl">     <span class="nx">AllowOverride</span> <span class="nx">All</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">Require</span> <span class="nx">all</span> <span class="nx">granted</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">DirectoryIndex</span> <span class="nx">index</span>.<span class="nx">php</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">RewriteEngine</span> <span class="nx">On</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span>/<span class="nx">Directory</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Include</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span>/<span class="nx">options</span><span class="p">-</span><span class="nx">ssl</span><span class="p">-</span><span class="nx">apache</span>.<span class="nx">conf</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLUseStapling</span> <span class="nx">on</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLProtocol</span> <span class="nx">all</span> <span class="p">-</span><span class="nx">SSLv3</span> <span class="p">-</span><span class="nx">TLSv1</span> <span class="p">-</span><span class="nx">TLSv1</span>.<span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLCipherSuite</span> <span class="nx">HIGH</span>:<span class="p">!</span><span class="nx">aNULL</span>:<span class="p">!</span><span class="nx">MD5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLCipherSuite</span> <span class="nx">ECDHE</span><span class="p">-</span><span class="nx">ECDSA</span><span class="p">-</span><span class="nx">AES256</span><span class="p">-</span><span class="nx">GCM</span><span class="p">-</span><span class="nx">SHA384</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">RSA</span><span class="p">-</span><span class="nx">AES256</span><span class="p">-</span><span class="nx">GCM</span><span class="p">-</span><span class="nx">SHA384</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">ECDSA</span><span class="p">-</span><span class="nx">CHACHA20</span><span class="p">-</span><span class="nx">POLY1305</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">RSA</span><span class="p">-</span><span class="nx">CHACHA20</span><span class="p">-</span><span class="nx">POLY1305</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">ECDSA</span><span class="p">-</span><span class="nx">AES128</span><span class="p">-</span><span class="nx">GCM</span><span class="p">-</span><span class="nx">SHA256</span>:<span class="nx">ECDHE</span><span class="p">-</span><span class="nx">RSA</span><span class="p">-</span><span class="nx">AE</span>$
+</span></span><span class="line"><span class="cl"><span class="nx">SSLHonorCipherOrder</span> <span class="nx">on</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLCompression</span> <span class="nx">off</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLSessionTickets</span> <span class="nx">off</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nx">FilesMatch</span> <span class="s2">&#34;^\.ht&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">Require</span> <span class="nx">all</span> <span class="nx">denied</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span>/<span class="nx">FilesMatch</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nx">files</span> <span class="nx">readme</span>.<span class="nx">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">order</span> <span class="nx">allow</span><span class="p">,</span><span class="nx">deny</span>
+</span></span><span class="line"><span class="cl">       <span class="nx">deny</span> <span class="nx">from</span> <span class="nx">all</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span>/<span class="nx">files</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">SSLCertificateFile</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span><span class="sr">/live/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">cert</span>.<span class="nx">pem</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLCertificateKeyFile</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span><span class="sr">/live/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">privkey</span>.<span class="nx">pem</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SSLCertificateChainFile</span> <span class="sr">/etc/</span><span class="nx">letsencrypt</span><span class="sr">/live/</span><span class="nx">strona</span>.<span class="nx">com</span>.<span class="nx">pl</span>/<span class="nx">chain</span>.<span class="nx">pem</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span>/<span class="nx">VirtualHost</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">IfModule</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="konfiguracja-silnika-myisam-w-mariadb-zamiast-innodb">Konfiguracja silnika MyISAM w MariaDB zamiast InnoDB.</h3>
 
-<div id="14a8252659f7cdd4" class="tab">
+<div id="bc721854aced8413" class="tab">
   <div class="tab__links">
     
       <button class="tab__link" aria-label="Tab link">CentOS</button>
@@ -3477,44 +3477,44 @@ Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" r
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">This</span> <span class="nx">group</span> <span class="nx">is</span> <span class="nx">read</span> <span class="nx">both</span> <span class="nx">both</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">client</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">server</span> <span class="nx">use</span> <span class="nx">it</span> <span class="nx">for</span> <span class="nx">options</span> <span class="nx">that</span> <span class="nx">affect</span> <span class="nx">everything</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> [<span class="nx">mysqld</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">MyISAM</span> <span class="nx">Settings</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">skip</span><span class="p">-</span><span class="nx">innodb</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">default</span><span class="p">-</span><span class="nx">storage</span><span class="p">-</span><span class="nx">engine</span>           <span class="p">=</span> <span class="nx">MyISAM</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">MyISAM</span> <span class="nx">Settings</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">query_cache_limit</span>               <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span> <span class="p">-</span> <span class="nx">Option</span> <span class="nx">supported</span> <span class="nx">up</span> <span class="nx">to</span> <span class="nx">MySQL</span> <span class="nx">v5</span>.<span class="m">7</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">query_cache_size</span>                <span class="p">=</span> <span class="m">4</span>M   # <span class="nx">UPD</span> <span class="p">-</span> <span class="nx">Option</span> <span class="nx">supported</span> <span class="nx">up</span> <span class="nx">to</span> <span class="nx">MySQL</span> <span class="nx">v5</span>.<span class="m">7</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">query_cache_type</span>                <span class="p">=</span> <span class="m">1</span>     # <span class="nx">Option</span> <span class="nx">supported</span> <span class="nx">up</span> <span class="nx">to</span> <span class="nx">MySQL</span> <span class="nx">v5</span>.<span class="m">7</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">key_buffer_size</span>                 <span class="p">=</span> <span class="m">4</span>M   # <span class="nx">UPD</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">low_priority_updates</span>            <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">concurrent_insert</span>               <span class="p">=</span> <span class="m">2</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Connection</span> <span class="nx">Settings</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">max_connections</span>                 <span class="p">=</span> <span class="m">10</span>   # <span class="nx">UPD</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">back_log</span>                        <span class="p">=</span> <span class="m">512</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">thread_cache_size</span>               <span class="p">=</span> <span class="m">100</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">thread_stack</span>                    <span class="p">=</span> <span class="m">192</span>K<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">interactive_timeout</span>             <span class="p">=</span> <span class="m">20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">wait_timeout</span>                    <span class="p">=</span> <span class="m">20</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Buffer</span> <span class="nx">Settings</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">join_buffer_size</span>                <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">read_buffer_size</span>                <span class="p">=</span> <span class="m">3</span>M    # <span class="nx">UPD</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">read_rnd_buffer_size</span>            <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">sort_buffer_size</span>                <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">table_definition_cache</span>          <span class="p">=</span> <span class="m">400</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">table_open_cache</span>                <span class="p">=</span> <span class="m">58</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">open_files_limit</span>                <span class="p">=</span> <span class="m">116</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">max_heap_table_size</span>             <span class="p">=</span> <span class="m">64</span>M<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">tmp_table_size</span>                  <span class="p">=</span> <span class="m">64</span>M<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Search</span> <span class="nx">Settings</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">ft_min_word_len</span>                 <span class="p">=</span> <span class="m">3</span>     # <span class="nx">Minimum</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">words</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">indexed</span> <span class="nx">for</span> <span class="nx">search</span> <span class="nx">results</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">Default</span> <span class="nx">settings</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> [<span class="nx">client</span><span class="p">-</span><span class="nx">server</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> [<span class="nx">mysqld_safe</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="nx">log</span><span class="p">-</span><span class="nx">error</span><span class="p">=</span><span class="sr">/var/</span><span class="nx">log</span><span class="sr">/mariadb/</span><span class="nx">error</span>.<span class="nx">log</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> # <span class="nx">include</span> <span class="nx">all</span> <span class="nx">files</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">config</span> <span class="nx">directory</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span> <span class="p">!</span><span class="nx">includedir</span> <span class="sr">/etc/</span><span class="nx">my</span>.<span class="nx">cnf</span>.<span class="nx">d</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">This</span> <span class="nx">group</span> <span class="nx">is</span> <span class="nx">read</span> <span class="nx">both</span> <span class="nx">both</span> <span class="nx">by</span> <span class="nx">the</span> <span class="nx">client</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">server</span> <span class="nx">use</span> <span class="nx">it</span> <span class="nx">for</span> <span class="nx">options</span> <span class="nx">that</span> <span class="nx">affect</span> <span class="nx">everything</span>
+</span></span><span class="line"><span class="cl"> [<span class="nx">mysqld</span>]
+</span></span><span class="line"><span class="cl"> <span class="nx">MyISAM</span> <span class="nx">Settings</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">skip</span><span class="p">-</span><span class="nx">innodb</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">default</span><span class="p">-</span><span class="nx">storage</span><span class="p">-</span><span class="nx">engine</span>           <span class="p">=</span> <span class="nx">MyISAM</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">MyISAM</span> <span class="nx">Settings</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">query_cache_limit</span>               <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span> <span class="p">-</span> <span class="nx">Option</span> <span class="nx">supported</span> <span class="nx">up</span> <span class="nx">to</span> <span class="nx">MySQL</span> <span class="nx">v5</span>.<span class="m">7</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">query_cache_size</span>                <span class="p">=</span> <span class="m">4</span>M   # <span class="nx">UPD</span> <span class="p">-</span> <span class="nx">Option</span> <span class="nx">supported</span> <span class="nx">up</span> <span class="nx">to</span> <span class="nx">MySQL</span> <span class="nx">v5</span>.<span class="m">7</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">query_cache_type</span>                <span class="p">=</span> <span class="m">1</span>     # <span class="nx">Option</span> <span class="nx">supported</span> <span class="nx">up</span> <span class="nx">to</span> <span class="nx">MySQL</span> <span class="nx">v5</span>.<span class="m">7</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">key_buffer_size</span>                 <span class="p">=</span> <span class="m">4</span>M   # <span class="nx">UPD</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">low_priority_updates</span>            <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">concurrent_insert</span>               <span class="p">=</span> <span class="m">2</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Connection</span> <span class="nx">Settings</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">max_connections</span>                 <span class="p">=</span> <span class="m">10</span>   # <span class="nx">UPD</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">back_log</span>                        <span class="p">=</span> <span class="m">512</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">thread_cache_size</span>               <span class="p">=</span> <span class="m">100</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">thread_stack</span>                    <span class="p">=</span> <span class="m">192</span>K
+</span></span><span class="line"><span class="cl"> <span class="nx">interactive_timeout</span>             <span class="p">=</span> <span class="m">20</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">wait_timeout</span>                    <span class="p">=</span> <span class="m">20</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Buffer</span> <span class="nx">Settings</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">join_buffer_size</span>                <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">read_buffer_size</span>                <span class="p">=</span> <span class="m">3</span>M    # <span class="nx">UPD</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">read_rnd_buffer_size</span>            <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">sort_buffer_size</span>                <span class="p">=</span> <span class="m">4</span>M    # <span class="nx">UPD</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">table_definition_cache</span>          <span class="p">=</span> <span class="m">400</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">table_open_cache</span>                <span class="p">=</span> <span class="m">58</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">open_files_limit</span>                <span class="p">=</span> <span class="m">116</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">max_heap_table_size</span>             <span class="p">=</span> <span class="m">64</span>M
+</span></span><span class="line"><span class="cl"> <span class="nx">tmp_table_size</span>                  <span class="p">=</span> <span class="m">64</span>M
+</span></span><span class="line"><span class="cl"> <span class="nx">Search</span> <span class="nx">Settings</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">ft_min_word_len</span>                 <span class="p">=</span> <span class="m">3</span>     # <span class="nx">Minimum</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">words</span> <span class="nx">to</span> <span class="nx">be</span> <span class="nx">indexed</span> <span class="nx">for</span> <span class="nx">search</span> <span class="nx">results</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">Default</span> <span class="nx">settings</span>
+</span></span><span class="line"><span class="cl"> [<span class="nx">client</span><span class="p">-</span><span class="nx">server</span>]
+</span></span><span class="line"><span class="cl"> [<span class="nx">mysqld_safe</span>]
+</span></span><span class="line"><span class="cl"> <span class="nx">log</span><span class="p">-</span><span class="nx">error</span><span class="p">=</span><span class="sr">/var/</span><span class="nx">log</span><span class="sr">/mariadb/</span><span class="nx">error</span>.<span class="nx">log</span>
+</span></span><span class="line"><span class="cl"> # <span class="nx">include</span> <span class="nx">all</span> <span class="nx">files</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">config</span> <span class="nx">directory</span>
+</span></span><span class="line"><span class="cl"> <span class="p">!</span><span class="nx">includedir</span> <span class="sr">/etc/</span><span class="nx">my</span>.<span class="nx">cnf</span>.<span class="nx">d</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Zapisać zmiany, zrestartować httpd oraz mariadb</p>
 <div class="highlight"><div class="chroma">
@@ -3573,7 +3573,7 @@ Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" r
 <script>
   'use strict';
 
-  var containerId = JSON.parse("\"14a8252659f7cdd4\"");
+  var containerId = JSON.parse("\"bc721854aced8413\"");
   var containerElem = document.getElementById(containerId);
   var tabLinks = null;
   var tabContents = null;
@@ -3910,18 +3910,18 @@ Użyj <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank" r
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">HostnameLookups</span> <span class="nx">Off</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">MaxKeepAliveRequests</span> <span class="m">500</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">KeepAliveTimeout</span> <span class="m">5</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">KeepAlive</span> <span class="nx">Off</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">IfModule</span> <span class="nx">prefork</span>.<span class="nx">c</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">StartServers</span>        <span class="m">2</span>    <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">MinSpareServers</span>     <span class="m">2</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">MaxSpareServers</span>     <span class="m">2</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">MaxClients</span>          <span class="m">50</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">MaxRequestsPerChild</span> <span class="m">100</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">IfModule</span><span class="p">&gt;</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">HostnameLookups</span> <span class="nx">Off</span>
+</span></span><span class="line"><span class="cl"><span class="nx">MaxKeepAliveRequests</span> <span class="m">500</span>
+</span></span><span class="line"><span class="cl"><span class="nx">KeepAliveTimeout</span> <span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">KeepAlive</span> <span class="nx">Off</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">IfModule</span> <span class="nx">prefork</span>.<span class="nx">c</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">StartServers</span>        <span class="m">2</span>    
+</span></span><span class="line"><span class="cl">    <span class="nx">MinSpareServers</span>     <span class="m">2</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">MaxSpareServers</span>     <span class="m">2</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">MaxClients</span>          <span class="m">50</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">MaxRequestsPerChild</span> <span class="m">100</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">IfModule</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Zapisz plik i wyjdź z edycji.</p>
 <h3 id="instalacja-i-konfiguracja-iptables">Instalacja i konfiguracja iptables</h3>
@@ -5556,7 +5556,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

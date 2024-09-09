@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
+<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
 
-<script defer src="/js/search.min.52721ab680ec52fb5295efeb2599098398ca2bb5b2bb35821933dc1c5b2317c6.js"></script>
+<script defer src="/js/search.min.9282b97f1bf5a28c33252389978371282573919368849e8e9f65f40cb7cbd818.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="Treść tego artykułu pozwoli ci łatwo skonfigurować swoją własną stronę na Dark Web, zwanej również Dark Net.">
   
 
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.122.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1891,12 +1891,12 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">Log</span> <span class="nx">notice</span> <span class="nx">file</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/tor/</span><span class="nx">log</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">RunAsDaemon</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">DataDirectory</span> <span class="sr">/var/</span><span class="nx">lib</span>/<span class="nx">tor</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">HiddenServiceDir</span> <span class="sr">/var/</span><span class="nx">lib</span><span class="sr">/tor/</span><span class="nx">hidden_service</span>/<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">HiddenServicePort</span> <span class="m">80</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">Log</span> <span class="nx">notice</span> <span class="nx">file</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/tor/</span><span class="nx">log</span>
+</span></span><span class="line"><span class="cl"><span class="nx">RunAsDaemon</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">DataDirectory</span> <span class="sr">/var/</span><span class="nx">lib</span>/<span class="nx">tor</span>
+</span></span><span class="line"><span class="cl"><span class="nx">HiddenServiceDir</span> <span class="sr">/var/</span><span class="nx">lib</span><span class="sr">/tor/</span><span class="nx">hidden_service</span>/
+</span></span><span class="line"><span class="cl"><span class="nx">HiddenServicePort</span> <span class="m">80</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="zapisz-i-wyjdź">Zapisz i wyjdź</h5>
 <h5 id="uruchom-aktywuj-podczas-rozruchu-i-sprawdź-status-obu-usług">Uruchom, aktywuj podczas rozruchu i sprawdź status obu usług</h5>
@@ -1974,18 +1974,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span> <span class="nx">PUBLIC</span> <span class="s2">&#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;</span> <span class="s2">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">html</span> <span class="nx">xmlns</span><span class="p">=</span><span class="s2">&#34;http://www.w3.org/1999/xhtml&#34;</span> <span class="nx">xml</span>:<span class="nx">lang</span><span class="p">=</span><span class="s2">&#34;pl&#34;</span> <span class="nx">lang</span><span class="p">=</span><span class="s2">&#34;pl&#34;</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">head</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="p">-</span><span class="nx">equiv</span><span class="p">=</span><span class="s2">&#34;Content-Type&#34;</span> <span class="nx">content</span><span class="p">=</span><span class="s2">&#34;text/html; charset=utf-8&#34;</span> /<span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">title</span><span class="p">&gt;</span><span class="nx">Witaj</span> <span class="nx">na</span> <span class="nx">Dark</span> <span class="nx">Web</span><span class="p">&lt;</span>/<span class="nx">title</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">head</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">body</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;</span><span class="nx">Witaj</span> <span class="nx">świecie</span><span class="p">!&lt;</span>/<span class="nx">p</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">body</span><span class="p">&gt;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span>/<span class="nx">html</span><span class="p">&gt;</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span> <span class="nx">PUBLIC</span> <span class="s2">&#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34;</span> <span class="s2">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">html</span> <span class="nx">xmlns</span><span class="p">=</span><span class="s2">&#34;http://www.w3.org/1999/xhtml&#34;</span> <span class="nx">xml</span>:<span class="nx">lang</span><span class="p">=</span><span class="s2">&#34;pl&#34;</span> <span class="nx">lang</span><span class="p">=</span><span class="s2">&#34;pl&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">meta</span> <span class="nx">http</span><span class="p">-</span><span class="nx">equiv</span><span class="p">=</span><span class="s2">&#34;Content-Type&#34;</span> <span class="nx">content</span><span class="p">=</span><span class="s2">&#34;text/html; charset=utf-8&#34;</span> /<span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">title</span><span class="p">&gt;</span><span class="nx">Witaj</span> <span class="nx">na</span> <span class="nx">Dark</span> <span class="nx">Web</span><span class="p">&lt;</span>/<span class="nx">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;</span><span class="nx">Witaj</span> <span class="nx">świecie</span><span class="p">!&lt;</span>/<span class="nx">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span>/<span class="nx">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="zapisz-i-wyjdź-1">Zapisz i wyjdź</h5>
 <p>*** Zabezpiecz nginx - bardzo podstawowa konfiguracja ***</p>
@@ -2004,8 +2004,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">server_tokens</span> <span class="nx">off</span>;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">server_tokens</span> <span class="nx">off</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="dodaj-w-sekcji-bloku-serwera-1">Dodaj w sekcji bloku serwera</h5>
 <div class="highlight"><div class="chroma">
@@ -2013,8 +2013,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">listen</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span> <span class="nx">default_server</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">listen</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span> <span class="nx">default_server</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="zakomentuj">Zakomentuj:</h5>
 <div class="highlight"><div class="chroma">
@@ -2023,9 +2023,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">listen</span>       <span class="m">80</span> <span class="nx">default_server</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">listen</span>       [::]:<span class="m">80</span> <span class="nx">default_server</span>;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">listen</span>       <span class="m">80</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">listen</span>       [::]:<span class="m">80</span> <span class="nx">default_server</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="zabroń-przeglądania-katalogu">Zabroń przeglądania katalogu</h5>
 <h5 id="dodaj-autoindex-off-w-ten-sposób">Dodaj &ldquo;autoindex off;&rdquo; w ten sposób:</h5>
@@ -2036,10 +2036,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">location</span> / {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                <span class="nx">autoindex</span> <span class="nx">off</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        }<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">location</span> / {
+</span></span><span class="line"><span class="cl">                <span class="nx">autoindex</span> <span class="nx">off</span>;
+</span></span><span class="line"><span class="cl">        }
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="przetestuj-konfigurację">Przetestuj konfigurację</h5>
 <div class="highlight"><div class="chroma">
@@ -2141,74 +2141,74 @@
 </span><span class="lnt">67
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">Unikaj</span> <span class="nx">ataku</span> <span class="nx">typu</span> <span class="nx">smurf</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">icmp_echo_ignore_broadcasts</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Włącz</span> <span class="nx">ochronę</span> <span class="nx">przed</span> <span class="nx">błędnymi</span> <span class="nx">komunikatami</span> <span class="nx">ICMP</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">icmp_ignore_bogus_error_responses</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Włącz</span> <span class="nx">syncookies</span> <span class="nx">w</span> <span class="nx">celu</span> <span class="nx">ochrony</span> <span class="nx">przed</span> <span class="nx">atakiem</span> <span class="nx">SYN</span> <span class="nx">flood</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_syncookies</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Włącz</span> <span class="nx">i</span> <span class="nx">loguj</span> <span class="nx">pakietów</span> <span class="nx">z</span> <span class="nx">fałszywymi</span> <span class="nx">źródłami</span><span class="p">,</span> <span class="nx">ze</span> <span class="nx">źródłowym</span> <span class="nx">trasowaniem</span> <span class="nx">i</span> <span class="nx">przekierowaniem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">log_martians</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">log_martians</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Brak</span> <span class="nx">pakietów</span> <span class="nx">ze</span> <span class="nx">źródłowym</span> <span class="nx">trasowaniem</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">accept_source_route</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_source_route</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Włącz</span> <span class="nx">filtrowanie</span> <span class="nx">trasy</span> <span class="nx">wstecznej</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">rp_filter</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">rp_filter</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Upewnij</span> <span class="nx">się</span><span class="p">,</span> <span class="nx">że</span> <span class="nx">nikt</span> <span class="nx">nie</span> <span class="nx">może</span> <span class="nx">zmieniać</span> <span class="nx">tablic</span> <span class="nx">routingu</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">accept_redirects</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_redirects</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">secure_redirects</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">secure_redirects</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Nie</span> <span class="nx">działa</span> <span class="nx">jako</span> <span class="nx">router</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">ip_forward</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">send_redirects</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">send_redirects</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Włącz</span> <span class="nx">execshild</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">kernel</span>.<span class="nx">exec</span><span class="p">-</span><span class="nx">shield</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">kernel</span>.<span class="nx">randomize_va_space</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Dostosuj</span> <span class="nx">IPv6</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">router_solicitations</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_ra_rtr_pref</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_ra_pinfo</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_ra_defrtr</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">autoconf</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">dad_transmits</span> <span class="p">=</span> <span class="m">0</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">max_addresses</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Optymalizacja</span> <span class="nx">dla</span> <span class="nx">użycia</span> <span class="nx">portów</span> <span class="nx">w</span> <span class="nx">LBs</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Zwiększ</span> <span class="nx">limit</span> <span class="nx">deskryptorów</span> <span class="nx">plików</span> <span class="nx">systemowych</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">fs</span>.<span class="nx">file</span><span class="p">-</span><span class="nx">max</span> <span class="p">=</span> <span class="m">65535</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Pozwól</span> <span class="nx">na</span> <span class="nx">więcej</span> <span class="nx">PID</span> <span class="p">(</span><span class="nx">aby</span> <span class="nx">zredukować</span> <span class="nx">problemy</span> <span class="nx">z</span> <span class="nx">przepełnieniem</span><span class="p">)</span>; <span class="nx">może</span> <span class="nx">uszkodzić</span> <span class="nx">niektóre</span> <span class="nx">programy</span> <span class="m">32768</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">kernel</span>.<span class="nx">pid_max</span> <span class="p">=</span> <span class="m">65536</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Zwiększ</span> <span class="nx">limity</span> <span class="nx">portów</span> <span class="nx">IP</span> <span class="nx">systemu</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">ip_local_port_range</span> <span class="p">=</span> <span class="m">2000</span> <span class="m">65000</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Zwiększ</span> <span class="nx">maksymalny</span> <span class="nx">rozmiar</span> <span class="nx">bufora</span> <span class="nx">TCP</span> <span class="nx">ustawiany</span> <span class="nx">za</span> <span class="nx">pomocą</span> <span class="nx">setsockopt</span><span class="p">()</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_rmem</span> <span class="p">=</span> <span class="m">4096</span> <span class="m">87380</span> <span class="m">8388608</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_wmem</span> <span class="p">=</span> <span class="m">4096</span> <span class="m">87380</span> <span class="m">8388608</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Zwiększ</span> <span class="nx">maksymalne</span> <span class="nx">rozmiary</span> <span class="nx">bufora</span> <span class="nx">TCP</span> <span class="nx">podczas</span> <span class="nx">autotuningowania</span> <span class="nx">Linux</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">min</span><span class="p">,</span> <span class="nx">domyślny</span> <span class="nx">i</span> <span class="nx">maksymalny</span> <span class="nx">liczba</span> <span class="nx">bajtów</span> <span class="nx">do</span> <span class="nx">użycia</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Ustaw</span> <span class="nx">maksymalną</span> <span class="nx">wartość</span> <span class="nx">na</span> <span class="nx">co</span> <span class="nx">najmniej</span> <span class="m">4</span> <span class="nx">MB</span> <span class="nx">lub</span> <span class="nx">wyższą</span><span class="p">,</span> <span class="nx">jeśli</span> <span class="nx">używasz</span> <span class="nx">bardzo</span> <span class="nx">dużych</span> <span class="nx">ścieżek</span> <span class="nx">BDP</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Okna</span> <span class="nx">TCP</span> <span class="nx">itp</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">core</span>.<span class="nx">rmem_max</span> <span class="p">=</span> <span class="m">8388608</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">core</span>.<span class="nx">wmem_max</span> <span class="p">=</span> <span class="m">8388608</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">core</span>.<span class="nx">netdev_max_backlog</span> <span class="p">=</span> <span class="m">5000</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_window_scaling</span> <span class="p">=</span> <span class="m">1</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">Unikaj</span> <span class="nx">ataku</span> <span class="nx">typu</span> <span class="nx">smurf</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">icmp_echo_ignore_broadcasts</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Włącz</span> <span class="nx">ochronę</span> <span class="nx">przed</span> <span class="nx">błędnymi</span> <span class="nx">komunikatami</span> <span class="nx">ICMP</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">icmp_ignore_bogus_error_responses</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Włącz</span> <span class="nx">syncookies</span> <span class="nx">w</span> <span class="nx">celu</span> <span class="nx">ochrony</span> <span class="nx">przed</span> <span class="nx">atakiem</span> <span class="nx">SYN</span> <span class="nx">flood</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_syncookies</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Włącz</span> <span class="nx">i</span> <span class="nx">loguj</span> <span class="nx">pakietów</span> <span class="nx">z</span> <span class="nx">fałszywymi</span> <span class="nx">źródłami</span><span class="p">,</span> <span class="nx">ze</span> <span class="nx">źródłowym</span> <span class="nx">trasowaniem</span> <span class="nx">i</span> <span class="nx">przekierowaniem</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">log_martians</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">log_martians</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Brak</span> <span class="nx">pakietów</span> <span class="nx">ze</span> <span class="nx">źródłowym</span> <span class="nx">trasowaniem</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">accept_source_route</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_source_route</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Włącz</span> <span class="nx">filtrowanie</span> <span class="nx">trasy</span> <span class="nx">wstecznej</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">rp_filter</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">rp_filter</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Upewnij</span> <span class="nx">się</span><span class="p">,</span> <span class="nx">że</span> <span class="nx">nikt</span> <span class="nx">nie</span> <span class="nx">może</span> <span class="nx">zmieniać</span> <span class="nx">tablic</span> <span class="nx">routingu</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">accept_redirects</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_redirects</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">secure_redirects</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">secure_redirects</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Nie</span> <span class="nx">działa</span> <span class="nx">jako</span> <span class="nx">router</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">ip_forward</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">all</span>.<span class="nx">send_redirects</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">send_redirects</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Włącz</span> <span class="nx">execshild</span>
+</span></span><span class="line"><span class="cl"><span class="nx">kernel</span>.<span class="nx">exec</span><span class="p">-</span><span class="nx">shield</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nx">kernel</span>.<span class="nx">randomize_va_space</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Dostosuj</span> <span class="nx">IPv6</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">router_solicitations</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_ra_rtr_pref</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_ra_pinfo</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">accept_ra_defrtr</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">autoconf</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">dad_transmits</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv6</span>.<span class="nx">conf</span>.<span class="nx">default</span>.<span class="nx">max_addresses</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Optymalizacja</span> <span class="nx">dla</span> <span class="nx">użycia</span> <span class="nx">portów</span> <span class="nx">w</span> <span class="nx">LBs</span>
+</span></span><span class="line"><span class="cl"># <span class="nx">Zwiększ</span> <span class="nx">limit</span> <span class="nx">deskryptorów</span> <span class="nx">plików</span> <span class="nx">systemowych</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span>.<span class="nx">file</span><span class="p">-</span><span class="nx">max</span> <span class="p">=</span> <span class="m">65535</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Pozwól</span> <span class="nx">na</span> <span class="nx">więcej</span> <span class="nx">PID</span> <span class="p">(</span><span class="nx">aby</span> <span class="nx">zredukować</span> <span class="nx">problemy</span> <span class="nx">z</span> <span class="nx">przepełnieniem</span><span class="p">)</span>; <span class="nx">może</span> <span class="nx">uszkodzić</span> <span class="nx">niektóre</span> <span class="nx">programy</span> <span class="m">32768</span>
+</span></span><span class="line"><span class="cl"><span class="nx">kernel</span>.<span class="nx">pid_max</span> <span class="p">=</span> <span class="m">65536</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Zwiększ</span> <span class="nx">limity</span> <span class="nx">portów</span> <span class="nx">IP</span> <span class="nx">systemu</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">ip_local_port_range</span> <span class="p">=</span> <span class="m">2000</span> <span class="m">65000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Zwiększ</span> <span class="nx">maksymalny</span> <span class="nx">rozmiar</span> <span class="nx">bufora</span> <span class="nx">TCP</span> <span class="nx">ustawiany</span> <span class="nx">za</span> <span class="nx">pomocą</span> <span class="nx">setsockopt</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_rmem</span> <span class="p">=</span> <span class="m">4096</span> <span class="m">87380</span> <span class="m">8388608</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_wmem</span> <span class="p">=</span> <span class="m">4096</span> <span class="m">87380</span> <span class="m">8388608</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Zwiększ</span> <span class="nx">maksymalne</span> <span class="nx">rozmiary</span> <span class="nx">bufora</span> <span class="nx">TCP</span> <span class="nx">podczas</span> <span class="nx">autotuningowania</span> <span class="nx">Linux</span>
+</span></span><span class="line"><span class="cl"># <span class="nx">min</span><span class="p">,</span> <span class="nx">domyślny</span> <span class="nx">i</span> <span class="nx">maksymalny</span> <span class="nx">liczba</span> <span class="nx">bajtów</span> <span class="nx">do</span> <span class="nx">użycia</span>
+</span></span><span class="line"><span class="cl"># <span class="nx">Ustaw</span> <span class="nx">maksymalną</span> <span class="nx">wartość</span> <span class="nx">na</span> <span class="nx">co</span> <span class="nx">najmniej</span> <span class="m">4</span> <span class="nx">MB</span> <span class="nx">lub</span> <span class="nx">wyższą</span><span class="p">,</span> <span class="nx">jeśli</span> <span class="nx">używasz</span> <span class="nx">bardzo</span> <span class="nx">dużych</span> <span class="nx">ścieżek</span> <span class="nx">BDP</span>
+</span></span><span class="line"><span class="cl"># <span class="nx">Okna</span> <span class="nx">TCP</span> <span class="nx">itp</span>.
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">core</span>.<span class="nx">rmem_max</span> <span class="p">=</span> <span class="m">8388608</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">core</span>.<span class="nx">wmem_max</span> <span class="p">=</span> <span class="m">8388608</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">core</span>.<span class="nx">netdev_max_backlog</span> <span class="p">=</span> <span class="m">5000</span>
+</span></span><span class="line"><span class="cl"><span class="nx">net</span>.<span class="nx">ipv4</span>.<span class="nx">tcp_window_scaling</span> <span class="p">=</span> <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="kontrola-ataków-typu-przepełnienie-bufora">Kontrola ataków typu przepełnienie bufora</h2>
 <p>Edytuj plik nginx.conf i ustaw ograniczenia rozmiaru bufora dla wszystkich klientów.</p>
@@ -2229,11 +2229,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">client_body_buffer_size</span>  <span class="m">1</span>K;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">client_header_buffer_size</span> <span class="m">1</span>k;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">client_max_body_size</span> <span class="m">1</span>k;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">large_client_header_buffers</span> <span class="m">2</span> <span class="m">1</span>k;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">client_body_buffer_size</span>  <span class="m">1</span>K;
+</span></span><span class="line"><span class="cl"><span class="nx">client_header_buffer_size</span> <span class="m">1</span>k;
+</span></span><span class="line"><span class="cl"><span class="nx">client_max_body_size</span> <span class="m">1</span>k;
+</span></span><span class="line"><span class="cl"><span class="nx">large_client_header_buffers</span> <span class="m">2</span> <span class="m">1</span>k;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="wyłącz-niepożądane-metody-http">Wyłącz niepożądane metody HTTP</h2>
 <p>Sugeruję, aby wyłączyć metody HTTP, które nie zostaną użyte i które nie są wymagane na serwerze WWW. Jeśli dodasz poniższy warunek w bloku location pliku konfiguracyjnego wirtualnego hosta nginx, serwer będzie akceptować tylko metody GET, HEAD i POST, a odrzuci metody takie jak DELETE i TRACE.</p>
@@ -2244,10 +2244,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">location</span> / {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">limit_except</span> <span class="nx">GET</span> <span class="nx">HEAD</span> <span class="nx">POST</span> { <span class="nx">deny</span> <span class="nx">all</span>; }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">location</span> / {
+</span></span><span class="line"><span class="cl">    <span class="nx">limit_except</span> <span class="nx">GET</span> <span class="nx">HEAD</span> <span class="nx">POST</span> { <span class="nx">deny</span> <span class="nx">all</span>; }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Innym podejściem jest dodanie następującego warunku do sekcji serwera (lub bloku serwera). Można to uznać za bardziej uniwersalne, ale <a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noreferrer noopener"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">b</mark></a><a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/" target="_blank" rel="noreferrer noopener nofollow"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">ądź ostrożny z instrukcjami warunkowymi w kontekście lokalizacji.</mark></a></p>
 <div class="highlight"><div class="chroma">
@@ -2256,9 +2256,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span>$<span class="nx">request_method</span> <span class="p">!~</span> ^<span class="p">(</span><span class="nx">GET</span><span class="p">|</span><span class="nx">HEAD</span><span class="p">|</span><span class="nx">POST</span><span class="p">)</span>$ <span class="p">)</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">return</span> <span class="m">444</span>; }<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span>$<span class="nx">request_method</span> <span class="p">!~</span> ^<span class="p">(</span><span class="nx">GET</span><span class="p">|</span><span class="nx">HEAD</span><span class="p">|</span><span class="nx">POST</span><span class="p">)</span>$ <span class="p">)</span> {
+</span></span><span class="line"><span class="cl">    <span class="nx">return</span> <span class="m">444</span>; }
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="konfiguracja-nginx-w-celu-uwzględnienia-nagłówków-zabezpieczeń">Konfiguracja Nginx w celu uwzględnienia nagłówków zabezpieczeń</h2>
 <p>Aby dodatkowo zabezpieczyć swój serwer WWW nginx, możesz dodać kilka różnych nagłówków HTTP w bloku http.</p>
@@ -2270,8 +2270,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">Frame</span><span class="p">-</span><span class="nx">Options</span> <span class="s2">&#34;SAMEORIGIN&#34;</span>;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">Frame</span><span class="p">-</span><span class="nx">Options</span> <span class="s2">&#34;SAMEORIGIN&#34;</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="strict-transport-security">Strict-Transport-Security</h4>
 <p>HTTP Strict Transport Security (HSTS) to metoda używana przez strony internetowe do deklaracji, że powinny być dostępne tylko za pomocą bezpiecznego połączenia (HTTPS). Jeśli witryna deklaruje politykę HSTS, przeglądarka musi odrzucić wszystkie połączenia HTTP i uniemożliwić użytkownikom akceptowanie niezabezpieczonych certyfikatów SSL. Aby dodać nagłówek HSTS do swojego serwera nginx, możesz dodać następującą dyrektywę do sekcji serwera:</p>
@@ -2280,8 +2280,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">Strict</span><span class="p">-</span><span class="nx">Transport</span><span class="p">-</span><span class="nx">Security</span> <span class="s2">&#34;max-age=31536000; includeSubdomains; preload&#34;</span>;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">Strict</span><span class="p">-</span><span class="nx">Transport</span><span class="p">-</span><span class="nx">Security</span> <span class="s2">&#34;max-age=31536000; includeSubdomains; preload&#34;</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="csp-i-x-xss-protection">CSP i X-XSS-Protection</h4>
 <p>Polityka zabezpieczeń zawartości (CSP) chroni twój serwer WWW przed pewnymi rodzajami ataków, w tym atakami typu Cross-site Scripting (XSS) i atakami na wstrzykiwanie danych. Możesz wdrożyć CSP, dodając następujący przykład nagłówka Content-Security-Policy (zauważ, że rzeczywisty nagłówek powinien być skonfigurowany zgodnie z twoimi unikalnymi wymaganiami):</p>
@@ -2290,8 +2290,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">Content</span><span class="p">-</span><span class="nx">Security</span><span class="p">-</span><span class="nx">Policy</span> <span class="s2">&#34;default-src &#39;self&#39; http: https: data: blob: &#39;unsafe-inline&#39;&#34;</span> <span class="nx">always</span>;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">Content</span><span class="p">-</span><span class="nx">Security</span><span class="p">-</span><span class="nx">Policy</span> <span class="s2">&#34;default-src &#39;self&#39; http: https: data: blob: &#39;unsafe-inline&#39;&#34;</span> <span class="nx">always</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Nagłówek HTTP X-XSS-Protection jest obsługiwany przez przeglądarki Internet Explorer i Safari i nie jest konieczny dla nowoczesnych przeglądarek, jeśli masz silną politykę zabezpieczeń zawartości (CSP). Jednakże, aby pomóc w zapobieganiu atakom XSS w przypadku starszych przeglądarek (które jeszcze nie obsługują CSP), możesz dodać nagłówek X-XSS Protection do sekcji serwera:</p>
 <div class="highlight"><div class="chroma">
@@ -2299,8 +2299,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">XSS</span><span class="p">-</span><span class="nx">Protection</span> <span class="s2">&#34;1; mode=block&#34;</span>;<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">XSS</span><span class="p">-</span><span class="nx">Protection</span> <span class="s2">&#34;1; mode=block&#34;</span>;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Oto pełna konfiguracja serwera nginx po dokonanych zmianach:</p>
 <div class="highlight"><div class="chroma">
@@ -2412,112 +2412,112 @@
 </span><span class="lnt">105
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">Więcej</span> <span class="nx">informacji</span> <span class="nx">na</span> <span class="nx">temat</span> <span class="nx">konfiguracji</span> <span class="nx">znajdziesz</span> <span class="nx">pod</span> <span class="nx">adresem</span>:<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>#   * <span class="nx">Oficjalna</span> <span class="nx">dokumentacja</span> <span class="nx">w</span> <span class="nx">języku</span> <span class="nx">angielskim</span>: <span class="nx">http</span>:<span class="sr">//</span><span class="nx">nginx</span>.<span class="nx">org</span><span class="sr">/en/</span><span class="nx">docs</span>/<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>#   * <span class="nx">Oficjalna</span> <span class="nx">dokumentacja</span> <span class="nx">w</span> <span class="nx">języku</span> <span class="nx">rosyjskim</span>: <span class="nx">http</span>:<span class="sr">//</span><span class="nx">nginx</span>.<span class="nx">org</span><span class="sr">/ru/</span><span class="nx">docs</span>/<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">user</span> <span class="nx">nginx</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">worker_processes</span> <span class="nx">auto</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">error_log</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">error</span>.<span class="nx">log</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">pid</span> <span class="sr">/run/</span><span class="nx">nginx</span>.<span class="nx">pid</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">Ładuj</span> <span class="nx">dynamiczne</span> <span class="nx">moduły</span>. <span class="nx">Zobacz</span> <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/doc/</span><span class="nx">nginx</span>/<span class="nx">README</span>.<span class="nx">dynamic</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">include</span> <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/nginx/</span><span class="nx">modules</span>/*.<span class="nx">conf</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">events</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">worker_connections</span> <span class="m">1024</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">http</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">log_format</span>  <span class="nx">main</span>  <span class="s1">&#39;$remote_addr - $remote_user [$time_local] &#34;$request&#34; &#39;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                      <span class="s1">&#39;$status $body_bytes_sent &#34;$http_referer&#34; &#39;</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>                      <span class="s1">&#39;&#34;$http_user_agent&#34; &#34;$http_x_forwarded_for&#34;&#39;</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">access_log</span>  <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">access</span>.<span class="nx">log</span>  <span class="nx">main</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">sendfile</span>            <span class="nx">on</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">tcp_nopush</span>          <span class="nx">on</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">tcp_nodelay</span>         <span class="nx">on</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">keepalive_timeout</span>   <span class="m">65</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">types_hash_max_size</span> <span class="m">2048</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">include</span>             <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">mime</span>.<span class="nx">types</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">default_type</span>        <span class="nx">application</span>/<span class="nx">octet</span><span class="p">-</span><span class="nx">stream</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">Ładuj</span> <span class="nx">pliki</span> <span class="nx">konfiguracyjne</span> <span class="nx">modułów</span> <span class="nx">z</span> <span class="nx">katalogu</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">conf</span>.<span class="nx">d</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">Zobacz</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">nginx</span>.<span class="nx">org</span><span class="sr">/en/</span><span class="nx">docs</span>/<span class="nx">ngx_core_module</span>.<span class="nx">html</span>#<span class="nx">include</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">dla</span> <span class="nx">więcej</span> <span class="nx">informacji</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">include</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/conf.d/</span>*.<span class="nx">conf</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="nx">server</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        # <span class="nx">Dodatkowe</span> <span class="nx">ustawienia</span> <span class="nx">ze</span> <span class="nx">względów</span> <span class="nx">bezpieczeństwa</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">server_tokens</span> <span class="nx">off</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">Frame</span><span class="p">-</span><span class="nx">Options</span> <span class="s2">&#34;SAMEORIGIN&#34;</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">XSS</span><span class="p">-</span><span class="nx">Protection</span> <span class="s2">&#34;1; mode=block&#34;</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">add_header</span> <span class="nx">Content</span><span class="p">-</span><span class="nx">Security</span><span class="p">-</span><span class="nx">Policy</span> <span class="s2">&#34;default-src &#39;self&#39; http: https: data: blob: &#39;unsafe-inline&#39;&#34;</span> <span class="nx">always</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">add_header</span> <span class="nx">Strict</span><span class="p">-</span><span class="nx">Transport</span><span class="p">-</span><span class="nx">Security</span> <span class="s2">&#34;max-age=31536000; includeSubdomains; preload&#34;</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">client_body_buffer_size</span> <span class="m">1</span>k;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">client_header_buffer_size</span> <span class="m">1</span>k;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">client_max_body_size</span> <span class="m">1</span>k;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        # <span class="nx">Nasłuchuj</span> <span class="nx">na</span> <span class="nx">porcie</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span> <span class="nx">jako</span> <span class="nx">domyślny</span> <span class="nx">serwer</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">listen</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span> <span class="nx">default_server</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        # <span class="nx">Twój</span> <span class="nx">adres</span> <span class="nx">onion</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">server_name</span>  <span class="nx">q</span>.......<span class="nx">sga</span>.<span class="nx">onion</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">root</span>         <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/nginx/</span><span class="nx">html</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        # <span class="nx">Ładuj</span> <span class="nx">pliki</span> <span class="nx">konfiguracyjne</span> <span class="nx">dla</span> <span class="nx">domyślnego</span> <span class="nx">bloku</span> <span class="nx">serwera</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">include</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/default.d/</span>*.<span class="nx">conf</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">location</span> / {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>            <span class="nx">autoindex</span> <span class="nx">off</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>            <span class="nx">limit_except</span> <span class="nx">GET</span> <span class="nx">HEAD</span> <span class="nx">POST</span> { <span class="nx">deny</span> <span class="nx">all</span>; }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>            <span class="nx">proxy_http_version</span> <span class="m">1</span>.<span class="m">1</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>            <span class="nx">proxy_set_header</span>   <span class="s2">&#34;Connection&#34;</span> <span class="s2">&#34;&#34;</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">error_page</span> <span class="m">404</span> /<span class="m">404</span>.<span class="nx">html</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">location</span> <span class="p">=</span> /<span class="m">40</span>x.<span class="nx">html</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">error_page</span> <span class="m">500</span> <span class="m">502</span> <span class="m">503</span> <span class="m">504</span> /<span class="m">50</span>x.<span class="nx">html</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        <span class="nx">location</span> <span class="p">=</span> /<span class="m">50</span>x.<span class="nx">html</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>        }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    # <span class="nx">Ustawienia</span> <span class="nx">dla</span> <span class="nx">serwera</span> <span class="nx">z</span> <span class="nx">obsługą</span> <span class="nx">TLS</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #    <span class="nx">server</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">listen</span>       <span class="m">443</span> <span class="nx">ssl</span> <span class="nx">http2</span> <span class="nx">default_server</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">listen</span>       [::]:<span class="m">443</span> <span class="nx">ssl</span> <span class="nx">http2</span> <span class="nx">default_server</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">server_name</span>  <span class="nx">_</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">root</span>         <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/nginx/</span><span class="nx">html</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">ssl_certificate</span> <span class="s2">&#34;/etc/pki/nginx/server.crt&#34;</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">ssl_certificate_key</span> <span class="s2">&#34;/etc/pki/nginx/private/server.key&#34;</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">ssl_session_cache</span> <span class="nx">shared</span>:<span class="nx">SSL</span>:<span class="m">1</span>m;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">ssl_session_timeout</span>  <span class="m">10</span>m;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">ssl_ciphers</span> <span class="nx">PROFILE</span><span class="p">=</span><span class="nx">SYSTEM</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">ssl_prefer_server_ciphers</span> <span class="nx">on</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        # <span class="nx">Ładuj</span> <span class="nx">pliki</span> <span class="nx">konfiguracyjne</span> <span class="nx">dla</span> <span class="nx">domyślnego</span> <span class="nx">bloku</span> <span class="nx">serwera</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">include</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/default.d/</span>*.<span class="nx">conf</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">location</span> / {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">error_page</span> <span class="m">404</span> /<span class="m">404</span>.<span class="nx">html</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">location</span> <span class="p">=</span> /<span class="m">40</span>x.<span class="nx">html</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">error_page</span> <span class="m">500</span> <span class="m">502</span> <span class="m">503</span> <span class="m">504</span> /<span class="m">50</span>x.<span class="nx">html</span>;<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        <span class="nx">location</span> <span class="p">=</span> /<span class="m">50</span>x.<span class="nx">html</span> {<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #        }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>    #    }<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>}<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"># <span class="nx">Więcej</span> <span class="nx">informacji</span> <span class="nx">na</span> <span class="nx">temat</span> <span class="nx">konfiguracji</span> <span class="nx">znajdziesz</span> <span class="nx">pod</span> <span class="nx">adresem</span>:
+</span></span><span class="line"><span class="cl">#   * <span class="nx">Oficjalna</span> <span class="nx">dokumentacja</span> <span class="nx">w</span> <span class="nx">języku</span> <span class="nx">angielskim</span>: <span class="nx">http</span>:<span class="sr">//</span><span class="nx">nginx</span>.<span class="nx">org</span><span class="sr">/en/</span><span class="nx">docs</span>/
+</span></span><span class="line"><span class="cl">#   * <span class="nx">Oficjalna</span> <span class="nx">dokumentacja</span> <span class="nx">w</span> <span class="nx">języku</span> <span class="nx">rosyjskim</span>: <span class="nx">http</span>:<span class="sr">//</span><span class="nx">nginx</span>.<span class="nx">org</span><span class="sr">/ru/</span><span class="nx">docs</span>/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">user</span> <span class="nx">nginx</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">worker_processes</span> <span class="nx">auto</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">error_log</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">error</span>.<span class="nx">log</span>;
+</span></span><span class="line"><span class="cl"><span class="nx">pid</span> <span class="sr">/run/</span><span class="nx">nginx</span>.<span class="nx">pid</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># <span class="nx">Ładuj</span> <span class="nx">dynamiczne</span> <span class="nx">moduły</span>. <span class="nx">Zobacz</span> <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/doc/</span><span class="nx">nginx</span>/<span class="nx">README</span>.<span class="nx">dynamic</span>.
+</span></span><span class="line"><span class="cl"><span class="nx">include</span> <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/nginx/</span><span class="nx">modules</span>/*.<span class="nx">conf</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">events</span> {
+</span></span><span class="line"><span class="cl">    <span class="nx">worker_connections</span> <span class="m">1024</span>;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">http</span> {
+</span></span><span class="line"><span class="cl">    <span class="nx">log_format</span>  <span class="nx">main</span>  <span class="s1">&#39;$remote_addr - $remote_user [$time_local] &#34;$request&#34; &#39;</span>
+</span></span><span class="line"><span class="cl">                      <span class="s1">&#39;$status $body_bytes_sent &#34;$http_referer&#34; &#39;</span>
+</span></span><span class="line"><span class="cl">                      <span class="s1">&#39;&#34;$http_user_agent&#34; &#34;$http_x_forwarded_for&#34;&#39;</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">access_log</span>  <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/nginx/</span><span class="nx">access</span>.<span class="nx">log</span>  <span class="nx">main</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">sendfile</span>            <span class="nx">on</span>;
+</span></span><span class="line"><span class="cl">    <span class="nx">tcp_nopush</span>          <span class="nx">on</span>;
+</span></span><span class="line"><span class="cl">    <span class="nx">tcp_nodelay</span>         <span class="nx">on</span>;
+</span></span><span class="line"><span class="cl">    <span class="nx">keepalive_timeout</span>   <span class="m">65</span>;
+</span></span><span class="line"><span class="cl">    <span class="nx">types_hash_max_size</span> <span class="m">2048</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">include</span>             <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">mime</span>.<span class="nx">types</span>;
+</span></span><span class="line"><span class="cl">    <span class="nx">default_type</span>        <span class="nx">application</span>/<span class="nx">octet</span><span class="p">-</span><span class="nx">stream</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # <span class="nx">Ładuj</span> <span class="nx">pliki</span> <span class="nx">konfiguracyjne</span> <span class="nx">modułów</span> <span class="nx">z</span> <span class="nx">katalogu</span> <span class="sr">/etc/</span><span class="nx">nginx</span>/<span class="nx">conf</span>.<span class="nx">d</span>.
+</span></span><span class="line"><span class="cl">    # <span class="nx">Zobacz</span> <span class="nx">http</span>:<span class="sr">//</span><span class="nx">nginx</span>.<span class="nx">org</span><span class="sr">/en/</span><span class="nx">docs</span>/<span class="nx">ngx_core_module</span>.<span class="nx">html</span>#<span class="nx">include</span>
+</span></span><span class="line"><span class="cl">    # <span class="nx">dla</span> <span class="nx">więcej</span> <span class="nx">informacji</span>.
+</span></span><span class="line"><span class="cl">    <span class="nx">include</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/conf.d/</span>*.<span class="nx">conf</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">server</span> {
+</span></span><span class="line"><span class="cl">        # <span class="nx">Dodatkowe</span> <span class="nx">ustawienia</span> <span class="nx">ze</span> <span class="nx">względów</span> <span class="nx">bezpieczeństwa</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">server_tokens</span> <span class="nx">off</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">Frame</span><span class="p">-</span><span class="nx">Options</span> <span class="s2">&#34;SAMEORIGIN&#34;</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">add_header</span> <span class="nx">X</span><span class="p">-</span><span class="nx">XSS</span><span class="p">-</span><span class="nx">Protection</span> <span class="s2">&#34;1; mode=block&#34;</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">add_header</span> <span class="nx">Content</span><span class="p">-</span><span class="nx">Security</span><span class="p">-</span><span class="nx">Policy</span> <span class="s2">&#34;default-src &#39;self&#39; http: https: data: blob: &#39;unsafe-inline&#39;&#34;</span> <span class="nx">always</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">add_header</span> <span class="nx">Strict</span><span class="p">-</span><span class="nx">Transport</span><span class="p">-</span><span class="nx">Security</span> <span class="s2">&#34;max-age=31536000; includeSubdomains; preload&#34;</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">client_body_buffer_size</span> <span class="m">1</span>k;
+</span></span><span class="line"><span class="cl">        <span class="nx">client_header_buffer_size</span> <span class="m">1</span>k;
+</span></span><span class="line"><span class="cl">        <span class="nx">client_max_body_size</span> <span class="m">1</span>k;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # <span class="nx">Nasłuchuj</span> <span class="nx">na</span> <span class="nx">porcie</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span> <span class="nx">jako</span> <span class="nx">domyślny</span> <span class="nx">serwer</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">listen</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>:<span class="m">80</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # <span class="nx">Twój</span> <span class="nx">adres</span> <span class="nx">onion</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">server_name</span>  <span class="nx">q</span>.......<span class="nx">sga</span>.<span class="nx">onion</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">root</span>         <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/nginx/</span><span class="nx">html</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # <span class="nx">Ładuj</span> <span class="nx">pliki</span> <span class="nx">konfiguracyjne</span> <span class="nx">dla</span> <span class="nx">domyślnego</span> <span class="nx">bloku</span> <span class="nx">serwera</span>.
+</span></span><span class="line"><span class="cl">        <span class="nx">include</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/default.d/</span>*.<span class="nx">conf</span>;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">location</span> / {
+</span></span><span class="line"><span class="cl">            <span class="nx">autoindex</span> <span class="nx">off</span>;
+</span></span><span class="line"><span class="cl">            <span class="nx">limit_except</span> <span class="nx">GET</span> <span class="nx">HEAD</span> <span class="nx">POST</span> { <span class="nx">deny</span> <span class="nx">all</span>; }
+</span></span><span class="line"><span class="cl">            <span class="nx">proxy_http_version</span> <span class="m">1</span>.<span class="m">1</span>;
+</span></span><span class="line"><span class="cl">            <span class="nx">proxy_set_header</span>   <span class="s2">&#34;Connection&#34;</span> <span class="s2">&#34;&#34;</span>;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">error_page</span> <span class="m">404</span> /<span class="m">404</span>.<span class="nx">html</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">location</span> <span class="p">=</span> /<span class="m">40</span>x.<span class="nx">html</span> {
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">error_page</span> <span class="m">500</span> <span class="m">502</span> <span class="m">503</span> <span class="m">504</span> /<span class="m">50</span>x.<span class="nx">html</span>;
+</span></span><span class="line"><span class="cl">        <span class="nx">location</span> <span class="p">=</span> /<span class="m">50</span>x.<span class="nx">html</span> {
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # <span class="nx">Ustawienia</span> <span class="nx">dla</span> <span class="nx">serwera</span> <span class="nx">z</span> <span class="nx">obsługą</span> <span class="nx">TLS</span>.
+</span></span><span class="line"><span class="cl">    #
+</span></span><span class="line"><span class="cl">    #    <span class="nx">server</span> {
+</span></span><span class="line"><span class="cl">    #        <span class="nx">listen</span>       <span class="m">443</span> <span class="nx">ssl</span> <span class="nx">http2</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">listen</span>       [::]:<span class="m">443</span> <span class="nx">ssl</span> <span class="nx">http2</span> <span class="nx">default_server</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">server_name</span>  <span class="nx">_</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">root</span>         <span class="sr">/usr/</span><span class="nx">share</span><span class="sr">/nginx/</span><span class="nx">html</span>;
+</span></span><span class="line"><span class="cl">    #
+</span></span><span class="line"><span class="cl">    #        <span class="nx">ssl_certificate</span> <span class="s2">&#34;/etc/pki/nginx/server.crt&#34;</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">ssl_certificate_key</span> <span class="s2">&#34;/etc/pki/nginx/private/server.key&#34;</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">ssl_session_cache</span> <span class="nx">shared</span>:<span class="nx">SSL</span>:<span class="m">1</span>m;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">ssl_session_timeout</span>  <span class="m">10</span>m;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">ssl_ciphers</span> <span class="nx">PROFILE</span><span class="p">=</span><span class="nx">SYSTEM</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">ssl_prefer_server_ciphers</span> <span class="nx">on</span>;
+</span></span><span class="line"><span class="cl">    #
+</span></span><span class="line"><span class="cl">    #        # <span class="nx">Ładuj</span> <span class="nx">pliki</span> <span class="nx">konfiguracyjne</span> <span class="nx">dla</span> <span class="nx">domyślnego</span> <span class="nx">bloku</span> <span class="nx">serwera</span>.
+</span></span><span class="line"><span class="cl">    #        <span class="nx">include</span> <span class="sr">/etc/</span><span class="nx">nginx</span><span class="sr">/default.d/</span>*.<span class="nx">conf</span>;
+</span></span><span class="line"><span class="cl">    #
+</span></span><span class="line"><span class="cl">    #        <span class="nx">location</span> / {
+</span></span><span class="line"><span class="cl">    #        }
+</span></span><span class="line"><span class="cl">    #
+</span></span><span class="line"><span class="cl">    #        <span class="nx">error_page</span> <span class="m">404</span> /<span class="m">404</span>.<span class="nx">html</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">location</span> <span class="p">=</span> /<span class="m">40</span>x.<span class="nx">html</span> {
+</span></span><span class="line"><span class="cl">    #        }
+</span></span><span class="line"><span class="cl">    #
+</span></span><span class="line"><span class="cl">    #        <span class="nx">error_page</span> <span class="m">500</span> <span class="m">502</span> <span class="m">503</span> <span class="m">504</span> /<span class="m">50</span>x.<span class="nx">html</span>;
+</span></span><span class="line"><span class="cl">    #        <span class="nx">location</span> <span class="p">=</span> /<span class="m">50</span>x.<span class="nx">html</span> {
+</span></span><span class="line"><span class="cl">    #        }
+</span></span><span class="line"><span class="cl">    #    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="sprawdź-dzienniki-naciśnij-ctrlc-aby-zakończyć-tail">Sprawdź dzienniki (naciśnij Ctrl+C, aby zakończyć tail)</h3>
 <div class="highlight"><div class="chroma">
@@ -2615,8 +2615,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/usr/</span><span class="nx">bin</span>/<span class="nx">python3</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="p">!</span><span class="sr">/usr/</span><span class="nx">bin</span>/<span class="nx">python3</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Naciśnij Esc, następnie wpisz :x i naciśnij Enter.</p>
 <p>Następnie edytuj crontab za pomocą polecenia (otworzy się w domyślnym edytorze tekstu, w moim przypadku jest to Vim, ponieważ nie używam Nano):</p>
@@ -4090,7 +4090,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 

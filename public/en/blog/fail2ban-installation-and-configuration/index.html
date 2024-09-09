@@ -13,9 +13,9 @@
   <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
-<script defer src="/js/lunr.min.min.6dc0c7bc7a13c92261ef6f59bba5307627e4462f38049adc2673b0872f8f5435.js"></script>
+<script defer src="/js/lunr.min.min.ef75ac3838411faabd39c9c90de0c5380bc8251b9555469279e707817dde1f21.js"></script>
 
-<script defer src="/js/search.min.52721ab680ec52fb5295efeb2599098398ca2bb5b2bb35821933dc1c5b2317c6.js"></script>
+<script defer src="/js/search.min.9282b97f1bf5a28c33252389978371282573919368849e8e9f65f40cb7cbd818.js"></script>
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
@@ -1368,7 +1368,7 @@
     <meta property="twitter:description" content="fail2ban – installation and configuration">
   
 
-<meta name="generator" content="Hugo 0.111.3">
+<meta name="generator" content="Hugo 0.122.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1892,14 +1892,14 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">DEFAULT</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ignoreip</span> <span class="p">=</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>/<span class="m">8</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ignorecommand</span> <span class="p">=</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">bantime</span> <span class="p">=</span> <span class="m">600</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">findtime</span> <span class="p">=</span> <span class="m">600</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">maxretry</span> <span class="p">=</span> <span class="m">5</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">backend</span> <span class="p">=</span> <span class="nx">systemd</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">DEFAULT</span>]
+</span></span><span class="line"><span class="cl"><span class="nx">ignoreip</span> <span class="p">=</span> <span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>/<span class="m">8</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ignorecommand</span> <span class="p">=</span>
+</span></span><span class="line"><span class="cl"><span class="nx">bantime</span> <span class="p">=</span> <span class="m">600</span>
+</span></span><span class="line"><span class="cl"><span class="nx">findtime</span> <span class="p">=</span> <span class="m">600</span>
+</span></span><span class="line"><span class="cl"><span class="nx">maxretry</span> <span class="p">=</span> <span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="nx">backend</span> <span class="p">=</span> <span class="nx">systemd</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>IgnoreIP is used to set a list of IP addresses that will not be banned. The list of IP addresses should be given with a space separator. This parameter is used to set a personal IP address (if there is access to the server from a fixed IP address).</li>
@@ -1931,16 +1931,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">sshd</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">enabled</span> <span class="p">=</span> <span class="nx">true</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">port</span> <span class="p">=</span> <span class="nx">ssh</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">action</span>  <span class="p">=</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">allports</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span># <span class="nx">logpath</span> <span class="p">=</span> <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">secure</span> # <span class="nx">manual</span> <span class="nx">path</span> <span class="nx">setting</span> <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">logpath</span> <span class="p">=</span> %<span class="p">(</span><span class="nx">sshd_log</span><span class="p">)</span><span class="nx">s</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">findtime</span> <span class="p">=</span> <span class="m">600</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">maxretry</span> <span class="p">=</span> <span class="m">3</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">bantime</span> <span class="p">=</span> <span class="m">86400</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">sshd</span>]
+</span></span><span class="line"><span class="cl"><span class="nx">enabled</span> <span class="p">=</span> <span class="nx">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">port</span> <span class="p">=</span> <span class="nx">ssh</span>
+</span></span><span class="line"><span class="cl"><span class="nx">action</span>  <span class="p">=</span> <span class="nx">iptables</span><span class="p">-</span><span class="nx">allports</span>
+</span></span><span class="line"><span class="cl"># <span class="nx">logpath</span> <span class="p">=</span> <span class="sr">/var/</span><span class="nx">log</span>/<span class="nx">secure</span> # <span class="nx">manual</span> <span class="nx">path</span> <span class="nx">setting</span> 
+</span></span><span class="line"><span class="cl"><span class="nx">logpath</span> <span class="p">=</span> %<span class="p">(</span><span class="nx">sshd_log</span><span class="p">)</span><span class="nx">s</span>
+</span></span><span class="line"><span class="cl"><span class="nx">findtime</span> <span class="p">=</span> <span class="m">600</span>
+</span></span><span class="line"><span class="cl"><span class="nx">maxretry</span> <span class="p">=</span> <span class="m">3</span>
+</span></span><span class="line"><span class="cl"><span class="nx">bantime</span> <span class="p">=</span> <span class="m">86400</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>In case you are using iptables , action set as below:</p>
 <div class="highlight"><div class="chroma">
@@ -2103,11 +2103,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="nx">Fail2Ban</span> <span class="nx">filter</span> <span class="nx">for</span> <span class="nx">WordPress</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>[<span class="nx">Definition</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">failregex</span> <span class="p">=</span>  <span class="p">-</span> <span class="p">-</span> [<span class="p">(</span>\<span class="nx">d</span>{<span class="m">2</span>}<span class="p">)</span><span class="sr">/\w{3}/</span>\<span class="nx">d</span>{<span class="m">4</span>}:\<span class="m">1</span>:\<span class="m">1</span>:\<span class="m">1</span> <span class="p">-</span>\<span class="nx">d</span>{<span class="m">4</span>}] <span class="s2">&#34;POST /wp-login.php HTTP/1.1&#34;</span> <span class="m">200</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">ignoreregex</span> <span class="p">=</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">#<span class="nx">Fail2Ban</span> <span class="nx">filter</span> <span class="nx">for</span> <span class="nx">WordPress</span>
+</span></span><span class="line"><span class="cl">[<span class="nx">Definition</span>]
+</span></span><span class="line"><span class="cl"><span class="nx">failregex</span> <span class="p">=</span>  <span class="p">-</span> <span class="p">-</span> [<span class="p">(</span>\<span class="nx">d</span>{<span class="m">2</span>}<span class="p">)</span><span class="sr">/\w{3}/</span>\<span class="nx">d</span>{<span class="m">4</span>}:\<span class="m">1</span>:\<span class="m">1</span>:\<span class="m">1</span> <span class="p">-</span>\<span class="nx">d</span>{<span class="m">4</span>}] <span class="s2">&#34;POST /wp-login.php HTTP/1.1&#34;</span> <span class="m">200</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ignoreregex</span> <span class="p">=</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Save and close the file.</p>
 <ol start="3">
@@ -2134,16 +2134,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">wordpress</span>]<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">enabled</span> <span class="p">=</span> <span class="nx">true</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">filter</span> <span class="p">=</span> <span class="nx">wordpress</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">logpath</span> <span class="p">=</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">access_log</span> <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">CentOS</span> <span class="p">-</span> <span class="nx">Pay</span> <span class="nx">attention</span> <span class="k">if</span> <span class="nx">it</span> <span class="nx">is</span> <span class="nx">_</span> <span class="nx">or</span> . <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">In</span> <span class="nx">the</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">httpd</span><span class="sr">/conf/</span><span class="nx">httpd</span>.<span class="nx">conf</span> <span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">you</span> <span class="nx">have</span> <span class="nx">information</span> <span class="nx">about</span> <span class="nx">where</span> <span class="nx">the</span> <span class="nx">log</span> <span class="nx">is</span> <span class="nx">stored</span>.<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span>#<span class="nx">logpath</span> <span class="p">=</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/apache2/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="sr">//</span> <span class="nx">Ubuntu</span>/<span class="nx">Debian</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">port</span> <span class="p">=</span> <span class="m">80</span><span class="p">,</span><span class="m">443</span><span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl">[<span class="nx">wordpress</span>]
+</span></span><span class="line"><span class="cl"><span class="nx">enabled</span> <span class="p">=</span> <span class="nx">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">filter</span> <span class="p">=</span> <span class="nx">wordpress</span>
+</span></span><span class="line"><span class="cl"><span class="nx">logpath</span> <span class="p">=</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/httpd/</span><span class="nx">access_log</span> 
+</span></span><span class="line"><span class="cl">#<span class="nx">CentOS</span> <span class="p">-</span> <span class="nx">Pay</span> <span class="nx">attention</span> <span class="k">if</span> <span class="nx">it</span> <span class="nx">is</span> <span class="nx">_</span> <span class="nx">or</span> . 
+</span></span><span class="line"><span class="cl">#<span class="nx">In</span> <span class="nx">the</span> <span class="nx">file</span> <span class="sr">/etc/</span><span class="nx">httpd</span><span class="sr">/conf/</span><span class="nx">httpd</span>.<span class="nx">conf</span> 
+</span></span><span class="line"><span class="cl">#<span class="nx">you</span> <span class="nx">have</span> <span class="nx">information</span> <span class="nx">about</span> <span class="nx">where</span> <span class="nx">the</span> <span class="nx">log</span> <span class="nx">is</span> <span class="nx">stored</span>.
+</span></span><span class="line"><span class="cl">#<span class="nx">logpath</span> <span class="p">=</span> <span class="sr">/var/</span><span class="nx">log</span><span class="sr">/apache2/</span><span class="nx">access</span>.<span class="nx">log</span> <span class="sr">//</span> <span class="nx">Ubuntu</span>/<span class="nx">Debian</span>
+</span></span><span class="line"><span class="cl"><span class="nx">port</span> <span class="p">=</span> <span class="m">80</span><span class="p">,</span><span class="m">443</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>If you want to ban bots, just add the action, ban time and number of attempts, as in the case of the sshd jail described above.</p>
 <p>The default ban and email action will be used for this purpose. Other actions can be defined by adding an action = line.<br />
@@ -3581,7 +3581,7 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    // =================================================================
+    
 
 
 
