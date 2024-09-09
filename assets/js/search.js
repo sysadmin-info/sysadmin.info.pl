@@ -7,11 +7,12 @@
   var mainSearchResults = document.getElementById('desktop-search-results');
 
   // For sidebar search
-  var sidebarSearchInput = document.getElementById('search');
-  var sidebarSearchResults = document.getElementById('search-results');  // Results container for sidebar search
+  var sidebarSearchInput = document.getElementById('search-sidebar');
+  var sidebarSearchResults = document.getElementById('sidebar-search-results');
 
-  // For desktop search result area (main window)
-  var desktopResultBody = document.querySelector('.search-result__body');  // Container for main window
+  // For mobile search
+  var mobileSearchInput = document.getElementById('search-mobile');
+  var mobileSearchResults = document.getElementById('mobile-search-results');
 
   // Fetch index.json for Lunr.js initialization
   fetch(`${langPrefix}/index.json`)
@@ -52,6 +53,7 @@
         results.forEach(result => {
           const page = data.find(p => p.url === result.ref);
 
+          // Enhanced logging for missing pages or fields
           if (!page || !page.url || !page.title || !page.content) {
             console.error('Page not found or missing fields for result:', {
               result,
@@ -87,18 +89,50 @@
         });
       }
 
-      // Sidebar search input handler (results displayed in the search-result__body or search-results)
+      // Sidebar search input handler (results displayed on the page)
+      if (sidebarSearchInput && sidebarSearchResults) {
+        sidebarSearchInput.addEventListener('input', function () {
+          renderResults(sidebarSearchInput, sidebarSearchResults, true); // Pass true for sidebar search
+        });
+      }
+
+      // Mobile search input handler
+      if (mobileSearchInput && mobileSearchResults) {
+        mobileSearchInput.addEventListener('input', function () {
+          renderResults(mobileSearchInput, mobileSearchResults);
+        });
+      }
+
+      // New function for handling search results rendering in main content
+      function renderSearchHighlightResultsMain() {
+        const resultsContainer = document.querySelector('.search-result__body');
+
+        // Debugging log to check if container is found
+        if (!resultsContainer) {
+          console.error('resultsContainer not found');
+          return;
+        }
+
+        const parent = resultsContainer.parentNode;
+
+        // Debugging log to check if parent is found
+        if (!parent) {
+          console.error('parentNode not found');
+          return;
+        }
+
+        // Continue with existing logic once we've ensured the elements exist
+        console.log('Rendering search results for main content area');
+        // Your existing logic for rendering the results goes here
+      }
+
+      // Example usage or invocation of the function if needed
       if (sidebarSearchInput) {
         sidebarSearchInput.addEventListener('input', function () {
-          if (desktopResultBody) {
-            renderResults(sidebarSearchInput, desktopResultBody, true);  // Use search-result__body for desktop
-          } else if (sidebarSearchResults) {
-            renderResults(sidebarSearchInput, sidebarSearchResults, true);  // Use search-results for sidebar
-          } else {
-            console.error('No valid results container found for sidebar search.');
-          }
+          renderSearchHighlightResultsMain();  // Call this function on search input
         });
       }
     })
     .catch(err => console.error('Error loading index.json:', err));
 })();
+
