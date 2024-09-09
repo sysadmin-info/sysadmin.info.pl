@@ -8,10 +8,10 @@
 
   // For sidebar search
   var sidebarSearchInput = document.getElementById('search');
-  var sidebarSearchResults = document.getElementById('search-results');  // Original results container for sidebar search
+  var sidebarSearchResults = document.getElementById('search-results');  // Results container for sidebar search
 
-  // For desktop search result area
-  var desktopResultBody = document.querySelector('.search-result__body');  // Container used for rendering results in main window
+  // For desktop search result area (main window)
+  var desktopResultBody = document.querySelector('.search-result__body');  // Container for main window
 
   // Fetch index.json for Lunr.js initialization
   fetch(`${langPrefix}/index.json`)
@@ -73,7 +73,7 @@
         });
 
         resultsContainer.appendChild(ul);
-        
+
         // Apply additional styling for sidebar results
         if (isSidebar) {
           resultsContainer.classList.add('search-result__body');
@@ -94,6 +94,8 @@
             renderResults(sidebarSearchInput, desktopResultBody, true);  // Use search-result__body for desktop
           } else if (sidebarSearchResults) {
             renderResults(sidebarSearchInput, sidebarSearchResults, true);  // Use search-results for sidebar
+          } else {
+            console.error('No valid results container found for sidebar search.');
           }
         });
       }
