@@ -84,14 +84,14 @@ Cały sprzęt można zobaczyć tutaj: [https://kit.co/sysadmin-info](https://kit
 
 ##### Komputery & single board
 
-|   Nazwa           |  Model                                                                         |
-| ----------------- | ------------------------------------------------------------------------------ |
-| Raspberry Pi Compute Module 4-8GB RAM 32GB eMMC (CM4108032) | []() |
-| Raspberry Pi CM4 IO board | []() |
-| Raspberry Pi 4 Model B 8GB | []() |
-| Raspberry Pi 4 Model B 8GB | []() |
-| Fujitsu Q920 Esprimo core i5 16 GB RAM 512 GB SSD + 128 GB SSD | []() |
-| Fujitsu Q958 Esprimo core i5 32 GB RAM 256 GB SSD | []() |
-| Laptop Dell Inspiron 5767 17,3 " Intel Core i7, 16 GB RAM, 1TB SSD Samsung Evo 870 | []() |
-| SAMSUNG Galaxy Tab A7 Lite 8.7" 32GB WiFi Android Tablet | []() |
-| Synology DS723+ | []() |
+| Nazwa | Model | Ilość sztuk |
+|---|---|---|
+| Komputer SBC  | [Raspberry Pi Compute Module 4-8GB RAM 32GB eMMC (CM4108032)](https://kamami.pl/moduly/581844-cm4108032-raspberry-pi-compute-module-4-15ghz-8gb-ram-32gb-emmc-wifibluetooth.html)  | 1 szt. |
+| Komputer SBC | [Raspberry Pi CM4 IO board](https://kamami.pl/plytki-bazowe-i-akcesoria/581810-cm4io-board.html)  | 1 szt.  |
+| Komputer SBC | [Raspberry Pi 4 Model B 8GB](https://kamami.pl/raspberry-pi-4-model-b/579161-raspberry-pi-4-model-b-z-8gb-ram-dual-band-wifi-bluetooth-50-15ghz-5056561800356.html)  | 2 szt.  |
+| Komputer SBC  | [Raspberry Pi 5 Cortex A76 8GB](https://kamami.pl/raspberry-pi-5/1187962-raspberry-pi-5-8gb-ram-24ghz-wifi-dualband-bluetooth-pcie-20-2x-csidsi-2x-usb-30-2x-4kp60-microhdmi-5056561803326.html)  | 1 szt.  |
+| Mini PC | [Fujitsu Q920 Esprimo core i5 16 GB RAM 512 GB SSD + 128 GB SSD](https://sp.ts.fujitsu.com/dmsp/Publications/public/ds-ESPRIMO-Q920.pdf)  | 1 szt.  |
+| Mini PC | [Fujitsu Q958 Esprimo core i5 32 GB RAM 256 GB SSD](https://sp.ts.fujitsu.com/dmsp/Publications/public/ds-ESPRIMO-Q958.pdf)  |  1 szt. |
+| Laptop | [Dell Inspiron 5767 17,3 " Intel Core i7, 16 GB RAM, 1TB SSD Samsung Evo 870](https://www.x-kom.pl/p/337437-laptop-17-i-wieksze-dell-inspiron-5767-i7-7500u-16gb-2561000-win10-r7-fhd.html)  | 1 szt.  |
+| Tablet | [SAMSUNG Galaxy Tab A7 Lite 8.7" 32GB WiFi Android Tablet](https://www.mediaexpert.pl/komputery-i-tablety/tablety-i-e-booki/tablety/tablet-samsung-a7-lite-wi-fi-8-7-3gb-32gb-sm-t220nzaaeue-szary)  | 1 szt.  |
+| NAS  | [Synology DS723+](https://sklepsynology.pl/dysk-sieciowy-synology-ds723-p-1100.html)  | 1 szt. |

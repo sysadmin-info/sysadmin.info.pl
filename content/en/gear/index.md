@@ -85,14 +85,14 @@ All the gear you can see here: [https://kit.co/sysadmin-info](https://kit.co/sys
 
 ##### Computers & single board
 
-|   Name            |  Model                                                                         |
-| ----------------- | ------------------------------------------------------------------------------ |
-| Raspberry Pi Compute Module 4-8GB RAM 32GB eMMC (CM4108032) | []() |
-| Raspberry Pi CM4 IO board | []() |
-| Raspberry Pi 4 Model B 8GB | []() |
-| Raspberry Pi 4 Model B 8GB | []() |
-| Fujitsu Q920 Esprimo core i5 16 GB RAM 512 GB SSD + 128 GB SSD | []() |
-| Fujitsu Q958 Esprimo core i5 32 GB RAM 256 GB SSD | []() |
-| Laptop Dell Inspiron 5767 17,3 " Intel Core i7, 16 GB RAM, 1TB SSD Samsung Evo 870 | []() |
-| SAMSUNG Galaxy Tab A7 Lite 8.7" 32GB WiFi Android Tablet | []() |
-| Synology DS723+ | []() |
+| Name | Model | Number of units |
+|---|---|---|
+| Computer SBC | [Raspberry Pi Compute Module 4-8GB RAM 32GB eMMC (CM4108032)](https://a.co/d/7hh4mem)  | 1 pc. |
+| Computer SBC | [Raspberry Pi CM4 IO board](https://a.co/d/2eMtW48)  | 1 pc.  |
+| Computer SBC | [Raspberry Pi 4 Model B 8GB](https://a.co/d/hHbI7rt)  | 2 pcs.  |
+| Computer SBC | [Raspberry Pi 5 Cortex A76 8GB](https://a.co/d/8cJ9uCB)  | 1 pc.  |
+| Mini PC | [Fujitsu Q920 Esprimo core i5 16 GB RAM 512 GB SSD + 128 GB SSD](https://sp.ts.fujitsu.com/dmsp/Publications/public/ds-ESPRIMO-Q920.pdf)  | 1 pc.  |
+| Mini PC | [Fujitsu Q958 Esprimo core i5 32 GB RAM 256 GB SSD](https://sp.ts.fujitsu.com/dmsp/Publications/public/ds-ESPRIMO-Q958.pdf)  |  1 pc. |
+| Laptop | [Dell Inspiron 5767 17,3 " Intel Core i7, 16 GB RAM, 1TB SSD Samsung Evo 870]()  | 1 pc.  |
+| Tablet | [SAMSUNG Galaxy Tab A7 Lite 8.7" 32GB WiFi Android Tablet](https://a.co/d/bmPDl57)  | 1 pc.  |
+| NAS  | [Synology DS723+](https://a.co/d/8gtIe3f)  | 1 pc. |
