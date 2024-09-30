@@ -11,9 +11,9 @@ authorEmoji: 🐧
 pinned: false
 asciinema: true
 series:
-- security
+- Ansible
 categories:
-- security
+- Ansible
 image: images/2024-thumbs/disabling_the_cups-browsed_service.webp
 ---
 
