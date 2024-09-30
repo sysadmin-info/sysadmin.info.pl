@@ -27,7 +27,7 @@ Ansible playbooks are written in YAML, a simple and readable format. You don’t
 
 Ansible uses YAML syntax for writing playbooks, and YAML is highly dependent on indentation. In YAML, indentation organizes the hierarchy of your tasks or variables, which means you cannot use tabs—only spaces. The most common indentation rule is 2 spaces per level (or sometimes 4 spaces, but consistency is key).
 
-### Example of Indentation
+Example: of Indentation
 
 ```yaml
 tasks:              # This is the top-level key
@@ -55,7 +55,7 @@ If you mix tabs and spaces or miss an indentation, Ansible will throw an error. 
 - Hyphens are used to create lists in YAML. For example, in Ansible, the tasks list is defined with hyphens.
 - Each task or item in a list is preceded by a hyphen.
 
-### Example
+Example:
 
 ```yaml
 tasks:
@@ -76,7 +76,7 @@ In this example, the list contains two tasks, both starting with a hyphen.
 - Keys in YAML are like variable names or field names.
 - Values are the data or information associated with the key.
 
-### Example
+Example:
 
 ```yaml
 name: nginx
@@ -92,7 +92,7 @@ Here:
 
 Ansible playbooks support variables to avoid hardcoding values. You use curly brackets (`{{ }}`) to reference variables within a playbook.
 
-### Example of Variables
+Example: of Variables
 
 ```yaml
 vars:
@@ -117,7 +117,7 @@ In this case:
 
 Variables allow you to reuse values and keep your playbooks dynamic. For example, if you want to install multiple packages, you can define them as variables rather than repeating the values multiple times.
 
-### Example
+Example:
 
 ```yaml
 vars:
@@ -148,7 +148,7 @@ Loops in Ansible allow you to repeat the same task multiple times with different
 
 Let’s build a complete example of a basic playbook that installs packages and ensures a service is running.
 
-### Example
+Example:
 
 ```yaml
 ---
@@ -188,7 +188,7 @@ When starting with YAML and Ansible, there are a few common mistakes you should 
 
 YAML requires proper indentation. A simple misalignment can cause errors.
 
-#### Example of Bad Indentation
+Example: of Bad Indentation
 
 ```yaml
 tasks:
@@ -201,7 +201,7 @@ tasks:
 
 Forgetting colons between keys and values can break the playbook.
 
-#### Example
+Example:
 
 ```yaml
 name nginx   # This is wrong. It should be `name: nginx`
