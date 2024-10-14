@@ -2,7 +2,7 @@
 title: Fundamentals of Ansible playbooks
 date: 2024-09-30T10:00:00+00:00
 description: Fundamentals of Ansible playbooks
-draft: true
+draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
