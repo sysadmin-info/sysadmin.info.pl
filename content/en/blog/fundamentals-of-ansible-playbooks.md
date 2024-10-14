@@ -225,3 +225,7 @@ Key Points:
 - Be mindful of common pitfalls like indentation errors and missing colons.
 
 Feel free to experiment and build your own playbooks! Ansible is a powerful tool once you get comfortable with its structure.
+
+#### Walkthrough video
+
+{{<youtube mf-cpMnOBPQ>}}

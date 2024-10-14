@@ -225,3 +225,7 @@ Kluczowe Punkty:
 - Zwracaj uwagę na powszechne błędy, takie jak błędy wcięcia i brakujące dwukropki.
 
 Śmiało eksperymentuj i twórz swoje własne playbooki! Ansible to potężne narzędzie, gdy tylko poczujesz się komfortowo z jego strukturą.
+
+#### Film instruktażowy
+
+{{<youtube mf-cpMnOBPQ>}}
