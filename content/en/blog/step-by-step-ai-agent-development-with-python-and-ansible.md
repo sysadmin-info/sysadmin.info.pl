@@ -20,7 +20,7 @@ image: images/2024-thumbs/aiagent01.webp
 
 #### Walkthrough video
 
-{{<youtube 3oUQWPH8q_A>}}
+{{<youtube tC8MPmHNeUE>}}
 
 
 ### Part 1: Discussion of Steps  
