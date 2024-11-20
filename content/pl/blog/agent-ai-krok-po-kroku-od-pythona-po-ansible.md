@@ -2,7 +2,7 @@
 title: Agent AI krok po kroku - od Pythona po Ansible   
 date: 2024-11-19T16:00:00+00:00  
 description: Agent AI krok po kroku - od Pythona po Ansible  
-draft: true  
+draft: false  
 hideToc: false  
 enableToc: true  
 enableTocContent: false  
