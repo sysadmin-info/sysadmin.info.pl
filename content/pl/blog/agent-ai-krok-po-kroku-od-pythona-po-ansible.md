@@ -53,7 +53,12 @@ Projekt AI Dev Agent to aplikacja umożliwiająca interakcję z modelem AI w cel
 
 #### Instalacja
 
-1. Sklonuj repozytorium.
+1. Sklonuj repozytorium. 
+
+```bash
+git clone https://github.com/sysadmin-info/ai-agent.git
+```
+
 2. Utwórz środowisko wirtualne
 3. Zainstaluj zależności
 4. Uruchom serwer
@@ -1584,6 +1589,9 @@ Po utworzeniu całej struktury i dodaniu pełnych kodów plików w odpowiednich 
 ```bash
 zip -r ansible_project.zip ansible_project/
 ```
+
+Pobierz plik zip:
+{{< button href="../../../../files/ansible_project.zip" >}}kliknij{{< /button >}}
 
 ### Podsumowanie
 

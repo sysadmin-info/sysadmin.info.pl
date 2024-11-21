@@ -22,7 +22,6 @@ image: images/2024-thumbs/aiagent01.webp
 
 {{<youtube tC8MPmHNeUE>}}
 
-
 ### Part 1: Discussion of Steps  
 
 1. Creating Documentation in Markdown  
@@ -54,10 +53,15 @@ The AI Dev Agent project is an application that allows interaction with an AI mo
 
 #### Installation  
 
-1. Clone the repository.  
-2. Create a virtual environment  
-3. Install dependencies  
-4. Start the server  
+1. Clone the repository.
+
+```bash
+git clone https://github.com/sysadmin-info/ai-agent.git
+```
+
+2. Create a virtual environment
+3. Install dependencies
+4. Start the server
 
 ```bash  
 python index.py  
@@ -1606,6 +1610,9 @@ Once you've created the full structure and added the complete code files in the 
 ```bash
 zip -r ansible_project.zip ansible_project/
 ```
+
+Download zip file:
+{{< button href="../../../../files/ansible_project.zip" >}}click{{< /button >}}
 
 ### Summary
 
