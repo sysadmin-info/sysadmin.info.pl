@@ -20,7 +20,7 @@ image: images/2024-thumbs/aiagent01.webp
 
 #### Film instruktażowy
 
-{{<youtube tC8MPmHNeUE>}}
+{{<youtube 4y2H2qk8C2g>}}
 
 ### Część 1: Omówienie kroków
 
