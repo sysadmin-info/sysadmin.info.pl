@@ -1,0 +1,40 @@
+.about-photo {
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin-right: 10px !important;
+}
+.whoami__image {
+	box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+}
+.summary-classic .title{
+	font-size: 1rem;
+}
+.summary-classic__text{
+	font-size: 0.8rem;
+}
+.sidebar-recent__a{
+	font-size: 0.8rem;
+}
+.single__title{
+	font-size: 1.5rem !important;
+}
+.sidebar-recent__title {
+    font-size: 0.8rem !important;
+}
+.taxo{
+	margin: 1.5rem 0 !important;
+	padding: 0.5rem 0 !important;
+}
+#asciicast-iframe-587002{
+	width: 100% !important;
+	height: 380px !important;
+}
+#asciicast-iframe-587324{
+	width: 100% !important;
+	height: 320px !important;
+}
+#asciicast-iframe-574590{
+	width: 100% !important;
+	height: 380px !important;
+}

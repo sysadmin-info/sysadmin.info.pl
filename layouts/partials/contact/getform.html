@@ -1,0 +1,26 @@
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<form action="https://getform.io/f/{{ with .Params.getformToken }}{{ . }}{{ end }}" method="POST" class="contact__form">
+  <div class="contact__input--container">
+    <div class="contact__input--wrapper">
+      <label class="contact__label">
+        {{ i18n "contact-name" }}
+      </label>
+      <input type="text" name="name" class="contact__input" aria-label="{{ i18n "contact-name" }}">
+    </div>
+    <div class="contact__input--wrapper">
+      <label class="contact__label">
+        {{ i18n "contact-email" }}
+      </label>
+      <input type="email" name="email" class="contact__input" aria-label="{{ i18n "contact-email" }}">
+      <input type="hidden" name="_gotcha" style="display:none !important">
+    </div>
+  </div>
+	  <div class="contact__message--wrapper">
+		  <label class="contact__label">
+			  {{ i18n "contact-message" }}
+		  </label>
+		  <textarea name="message" class="contact__message" aria-label="{{ i18n "contact-message" }}"></textarea>
+	  </div>
+	  <div class="g-recaptcha" data-sitekey="6LcgWx0lAAAAAFhG-DWa7xxSHzmGtldro1E__Wsk"></div>
+  <input type="submit" value="{{ i18n "contact-send" }}" class="contact__send">
+</form>

@@ -1,0 +1,29 @@
+[[main]]
+  identifier = "about"
+  name = "O mnie"
+  url = "about"
+  weight = 1
+
+[[main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "blog"
+  weight = 2
+
+[[main]]
+  identifier = "sprzęt"
+  name = "Sprzęt"
+  url = "gear"
+  weight = 3
+
+[[main]]
+  identifier = "archive"
+  name = "Archiwum"
+  url = "archive"
+  weight = 4
+
+[[main]]
+  identifier = "privacy"
+  name = "Polityka prywatności"
+  url = "privacy"
+  weight = 5
