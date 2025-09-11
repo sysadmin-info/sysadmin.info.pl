@@ -1,0 +1,230 @@
+logoText = "Sysadmin"
+logoType = "short" # long, short
+description = "Administration, security and hardening of Linux"
+custom_css = ["css/custom.css"]
+custom_js = []
+useFaviconGenerator = true # https://www.favicon-generator.org/
+meta_image = "https://sysadmin.info.pl/images/header/sysadmin.jpg"
+themecolor = ""
+
+themeOptions = ["light", "dark"]
+notAllowedTypesInHome = ["privacy", "contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeSidebar = ["privacy", "about", "archive", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+
+viewportSize = "normal" # widest, wider, wide, normal, narrow
+enableUiAnimation = true
+hideSingleContentsWhenJSDisabled = false
+enablePinnedPosts = true
+minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
+
+# appbar
+enableAppbarSearchIcon = true
+enableAppbarLangIcon = true
+
+# header
+homeHeaderType = "img" # text, img, slide, typewriter
+hideHomeHeaderWhenMobile = false
+
+# menu
+showMobileMenuTerms = ["tags", "categories", "series"]
+
+# search
+enableSearch = true
+enableSearchHighlight = true
+searchResultPosition = "main" # side, main
+searchContent = true # include content to search index
+searchDistance = 100 # fuse option
+searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
+
+# body
+enableBreadcrumb = false
+enableGoToTop = true
+enableWhoami = true
+summaryShape = "classic" # card, classic, compact
+archiveGroupByDate = "2019" # "2019-01": group by month, "2019": group by year
+archivePaginate = 13
+paginateWindow = 1
+talksPaginate = 5
+talksGroupByDate = "2006"
+pubPaginate = 20
+writtenTimeIcon = "📅"
+modifiedTimeIcon = "📝"
+readingTimeIcon = "☕"
+authorIcon = "✍️"
+pagePvIcon = "👀"
+pinIcon = "📌"
+tagIcon = "🏷️"
+publicationIcon = "📚"
+typeIcon = "🎯"
+
+# whoami
+myname = ""
+email = ""
+whoami = ""
+bioImageUrl = ""
+useGravatar = false
+location = ""
+organization = ""
+link = ""
+
+# sidebar
+enableBio = true
+enableBioImage = true
+enableSidebar = true
+enableSidebarTags = true
+enableSidebarSeries = true
+enableSidebarCategories = true
+enableHomeSidebarTitles = true
+enableListSidebarTitles = true
+enableToc = true
+hideToc = false
+tocFolding = true
+tocPosition = "inner" # inner, outer
+enableTocSwitch = true
+itemsPerCategory = 5
+sidebarPosition = "right"
+tocLevels = ["h2", "h3", "h4"]
+enableSidebarPostsByOrder = false
+
+# footer
+showPoweredBy = false
+showFeedLinks = true
+showSocialLinks = true
+enableLangChange = true
+enableThemeChange = true
+
+# service
+googleTagManager = "" # GTM-XXXXXX
+baiduAnalytics = ""
+enableBusuanzi = false
+busuanziSiteUV = true
+busuanziSitePV = true
+busuanziPagePV = true
+
+# rss
+updatePeriod = "daily" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
+updateFrequency = "1"
+fullContents = false
+
+# comment
+enableComment = true
+disqus_shortname = ""
+commento = false
+
+[telegram]
+  enable = false
+  siteId = ""
+  dataLimit = 5
+
+[gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+  owner = ""              # Your GitHub ID
+  repo = ""               # The repo to store comments
+  clientId = ""           # Your client ID
+  clientSecret = ""       # Your client secret
+
+[utterances]       # https://utteranc.es/
+  owner = "sysadmin-info"              # Your GitHub ID
+  repo = "sysadmin.info.pl"               # The repo to store comments
+
+[gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
+  owner = ""              # Your GitHub ID
+  repo = ""               # The repo to store comments
+  clientId = ""           # Your client ID
+  clientSecret = ""       # Your client secret
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+[valine]
+  enable = false
+  appId = '你的appId'
+  appKey = '你的appKey'
+  notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+  verify = false # Verification code
+  avatar = 'mm' 
+  placeholder = '说点什么吧...'
+  visitor = false
+
+[changyan]
+  changyanAppid = ""        # Changyan app id             # 畅言
+  changyanAppkey = ""       # Changyan app key
+
+[livere]
+  livereUID = ""            # LiveRe UID                  # 来必力
+
+# Isso: https://posativ.org/isso/
+[isso]
+  enable = false
+  scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
+  dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
+
+[socialOptions]
+  bluesky = ""
+  email = ""
+  phone = ""
+  facebook = ""
+  twitter = ""
+  github = "https://github.com/sysadmin-info"
+  stack-overflow = "https://stackoverflow.com/users/7220438/sysadmin"
+  instagram = ""
+  google-plus = ""
+  youtube = "https://www.youtube.com/@sysadmin-info"
+  medium = ""
+  tumblr = ""
+  linkedin = ""
+  pinterest = ""
+  stack-exchange = "https://stackexchange.com/users/2291922/sysadmin"
+  telegram = ""
+  steam = ""
+  weibo = ""
+  douban = ""
+  csdn = ""
+  gitlab = ""
+  mastodon = ""
+  jianshu = ""
+  zhihu = ""
+  signal = ""
+  whatsapp = ""
+  matrix = ""
+  xmpp = ""
+  dev-to = ""
+  gitea = ""
+  google-scholar = ""
+  threads = ""
+
+[donationOptions]
+  enable = true
+  alipay = "" 
+  wechat = ""
+  paypal = ""
+  patreon = ""
+  bitcoin = ""
+  buymeacoffee = "https://www.buymeacoffee.com/sysadmininfo"
+  buycoffee = "https://buycoffee.to/sysadmin"
+
+# possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "pocket", "feedly", "hatena", "pinterest", "delicious", "google"]
+[[share]]
+  name = "facebook"
+[[share]]
+  name = "twitter"
+[[share]]
+  name = "reddit"
+[[share]]
+  name = "linkedin"
+[[share]]
+  name = "tumblr"
+[[share]]
+  name = "pocket"
+[[share]]
+  name = "feedly"
+[[share]]
+  name = "pinterest"  
+
+[[footerLinks]]
+  name = ""
+  link = ""
+[[footerLinks]]
+  name = ""
+  link = ""

@@ -1,0 +1,92 @@
+{{ if $.Param "enableSidebar" }}
+
+<ul class="sidebar">
+    {{ partial "search/site-search" . }}
+
+{{ if $.Param "enableBio" }}
+<section class="bio" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
+  {{ if ($.Param "enableBioImage" | default true) }}
+  <div class="bio__photo-wrapper">
+    {{ $src := "" }}
+    {{ if site.Params.useGravatar }}
+      {{ $src = printf "https://s.gravatar.com/avatar/%s?s=200" (md5 ($.Param "email")) }}
+      <img src="{{ $src }}" alt="{{ if $.Param "myname" }}{{ $.Param "myname" }}{{ else }}Avatar{{ end }}" class="bio__photo" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}"/>
+    {{ end }}
+  </div>
+  {{ end }}
+  <hr class="hr-slash bio-hr"/>
+  <div class="bio__name">
+    {{ $.Param "myname" }}
+  </div>
+  <div class="bio__desc">
+    {{ $.Param "whoami" }}
+  </div>
+
+  {{ if $.Param "organization" }}
+  <div class="bio__info">
+    <div class="bio__info--icon">
+      {{ partial "svgs/etc/people.svg" (dict "width" 20 "height" 20) }}
+    </div>
+    {{ $.Param "organization" }}
+  </div>
+  {{ end }}
+
+  {{ if $.Param "location" }}
+  <div class="bio__info">
+    <div class="bio__info--icon">
+      {{ partial "svgs/etc/location.svg" (dict "width" 20 "height" 20) }}
+    </div>
+    {{ $.Param "location" }}
+  </div>
+  {{ end }}
+
+  {{ if $.Param "email" }}
+  <div class="bio__info">
+    <div class="bio__info--icon">
+      {{ partial "svgs/social/email.svg" (dict "width" 20 "height" 20) }}
+    </div>
+    <a href="mailto:{{ $.Param "email" }}">{{ $.Param "email" }}</a>
+  </div>
+  {{ end }}
+
+  {{ if $.Param "link" }}
+  <div class="bio__info">
+    <div class="bio__info--icon">
+      {{ partial "svgs/etc/link.svg" (dict "width" 20 "height" 20) }}
+    </div>
+    <a href="{{ $.Param "link" }}" target="_blank" rel="noreferrer">{{ $.Param "link" }}</a>
+  </div>
+  {{ end }}
+  <div class="bio__social">
+    {{ range $name, $path := $.Param "socialOptions" }}
+      {{ if (and $path (ne $name "email")) }}
+      <a href="{{ $path | safeURL }}" target="_blank" rel="noreferrer" title="{{ $name }}" aria-label="{{ $name }}">
+        {{ partial (print "svgs/social/" $name ".svg") (dict "width" 25 "height" 25) }}
+      </a>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+<hr class="hr-fade sidebar-hr"/>
+{{ end }}
+
+    {{ partial "body/donation" . }}
+    {{ partial "sidebar/custom-list" . }}
+    {{ partial "sidebar/list/posts-by-order" . }}
+    
+    {{ if and ($.Param "itemsPerCategory") ($.Param "enableListSidebarTitles") }}
+        {{ range first ($.Param "itemsPerCategory") .Pages }}
+        <li class="sidebar-recent">
+            <a href="{{ .RelPermalink }}" class="sidebar-recent__title p1">{{ .Title }}</a>
+        </li>
+        {{ end }}
+        <hr class="hr-fade sidebar-hr" />
+    {{ end }}
+</ul>
+<div class="taxo-root">
+{{ partial "taxonomy/taxonomy-categories" . }}
+{{ partial "taxonomy/taxonomy-series" . }}
+{{ partial "taxonomy/taxonomy-tags" . }}
+</div>
+
+{{ end }}

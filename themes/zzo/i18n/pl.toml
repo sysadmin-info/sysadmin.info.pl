@@ -1,0 +1,122 @@
+[search-placeholder]
+other = "Szukaj"
+
+[summary-dateformat]
+other = "2006-01-02"
+
+[reading-time]
+other = "min czytania"
+
+[tags]
+other = "Tagi"
+
+[categories]
+other = "Kategorie"
+
+[series]
+other = "Serie"
+
+[archive-dateformat]
+other = "2006-01-02"
+
+[talks-dateformat]
+other = "2006-01-02"
+
+[single-dateformat]
+other = "2006-01-02"
+
+[pub-dateformat]
+other = "2006-01-02"
+
+[resume-dateformat]
+other = "2006-01-02"
+
+[single-related]
+other = "Zobacz także"
+
+[single-writtenBy]
+other = "UTWORZONE PRZEZ"
+
+[toc-label]
+other = "Co jest na tej stronie"
+
+[counter-site-pv]
+other = "Całkowita liczba odwiedzin"
+
+[counter-site-uv]
+other = "Całkowita liczba odwiedzających"
+
+[counter-page-pv]
+other = "odsłony"
+
+[donate-message]
+other = "Wesprzyj autora"
+
+[share-message]
+other = "Podziel się"
+
+[contact-name]
+other = "Imię"
+
+[contact-email]
+other = "Email"
+
+[contact-tel]
+other = "Telefon"
+
+[contact-file]
+other = "Plik"
+
+[contact-message]
+other = "Wiadomość"
+
+[contact-send]
+other = "Wyślij"
+
+[contact-browse]
+other = "Przeglądaj"
+
+[tooltip-home]
+other = "Strona główna"
+
+[tooltip-written]
+other = "Napisane o godz."
+
+[tooltip-modified]
+other = "Zmodyfikowane o godz."
+
+[tooltip-reading-time]
+other = "Przeczytasz w ciągu"
+
+[showcase-overview]
+other = "Przegląd"
+
+[showcase-pinned]
+other = "Przypięte"
+
+[nojs-message]
+other = "Ta strona wygląda najlepiej z włączoną obsługą JavaScript"
+
+[posts-by-order]
+other = "NAJLEPSZE WPISY"
+
+[skin-dark]
+other = "ciemny"
+
+[skin-light]
+other = "jasny"
+
+[skin-hacker]
+other = "hacker"
+
+[skin-solarized]
+other = "solarized"
+
+[skin-kimbie]
+other = "kimbie"
+
+[no-contents]
+other = "Brak danych do pokazania"
+
+[copyright]
+other = "Wszelkie prawa zastrzeżone"
