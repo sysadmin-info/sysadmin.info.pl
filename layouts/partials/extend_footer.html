@@ -1,0 +1,15 @@
+<script src="/js/hamburger.js"></script>
+{{- if and .IsPage (ne .Type "page") .Site.Params.comments -}}
+<div class="comments-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+  <h3 style="margin-bottom: 1.5rem;">Comments</h3>
+  {{- if .Site.Params.utterances.repo -}}
+  <script src="https://utteranc.es/client.js"
+          repo="{{ .Site.Params.utterances.repo }}"
+          issue-term="{{ .Site.Params.utterances.issueTerm | default "pathname" }}"
+          theme="{{ .Site.Params.utterances.theme | default "preferred-color-scheme" }}"
+          crossorigin="anonymous"
+          async>
+  </script>
+  {{- end -}}
+</div>
+{{- end -}}

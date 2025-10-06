@@ -1,0 +1,31 @@
+# IDE
+.vscode/settings.json
+.vscode/extensions.json
+.idea/
+
+# Hugo build artifacts
+public/
+resources/
+.hugo_build.lock
+
+# Backup directories
+*.backup/
+*backup/
+*.old
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+.cache/

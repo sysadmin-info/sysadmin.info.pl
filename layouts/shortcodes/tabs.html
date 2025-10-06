@@ -1,0 +1,69 @@
+{{ $id := substr (md5 .Inner) 0 16 }}
+<div id="{{ $id }}" class="tab">
+  <div class="tab__links">
+    {{ range $index, $name := .Params }}
+      <button class="tab__link" data-index="{{ $index }}">{{ $name }}</button>
+    {{ end }}
+  </div>
+  <div class="tab__content-wrapper">
+    {{ .Inner }}
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  
+  var containerId = '{{ $id }}';
+  var container = document.getElementById(containerId);
+  
+  if (!container) return;
+  
+  var buttons = container.querySelectorAll('.tab__link');
+  var wrapper = container.querySelector('.tab__content-wrapper');
+  
+  if (!wrapper) return;
+  
+  var contents = wrapper.querySelectorAll('.tab__content');
+  
+  if (contents.length === 0) return;
+  
+  // Ukryj wszystkie, pokaż pierwszy
+  for (var i = 0; i < contents.length; i++) {
+    contents[i].style.display = 'none';
+  }
+  
+  if (contents[0]) {
+    contents[0].style.display = 'block';
+    contents[0].classList.add('active');
+  }
+  
+  if (buttons[0]) {
+    buttons[0].classList.add('active');
+  }
+  
+  // Event listenery
+  buttons.forEach(function(button, index) {
+    button.addEventListener('click', function() {
+      // Ukryj wszystkie
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+        contents[i].classList.remove('active');
+      }
+      
+      // Dezaktywuj wszystkie przyciski
+      buttons.forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+      
+      // Pokaż kliknięty tab
+      if (contents[index]) {
+        contents[index].style.display = 'block';
+        contents[index].classList.add('active');
+      }
+      
+      button.classList.add('active');
+    });
+  });
+})();
+</script>

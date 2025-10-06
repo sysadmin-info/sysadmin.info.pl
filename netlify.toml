@@ -1,0 +1,31 @@
+[build]
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.147.9"
+  NODE_VERSION = "22.16.0"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+      Access-Control-Allow-Origin = "https://sysadmin.info.pl"
+      Content-Security-Policy = "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/; script-src 'self' https://cdnjs.cloudflare.com https://utteranc.es https://googleads.g.doubleclick.net 'unsafe-inline' 'unsafe-eval'; img-src 'self' https://buycoffee.to https://cdn.buymeacoffee.com https://i.ytimg.com data:; font-src 'self' data:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google-analytics.com; frame-src https://utteranc.es https://www.youtube.com https://asciinema.org https://www.google.com; child-src https://youtube.com; media-src 'self'; frame-ancestors 'self'; block-all-mixed-content; upgrade-insecure-requests; form-action 'self';"
+      Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"

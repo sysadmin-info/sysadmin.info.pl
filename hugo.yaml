@@ -1,0 +1,258 @@
+baseURL: "https://sysadmin.info.pl/"
+title: "SYSADMIN"
+theme: "PaperMod"
+
+pagination:
+  pagerSize: 10
+
+enableInlineShortcodes: true
+enableEmoji: true
+enableGitInfo: false
+timeout: 10000
+rssLimit: 100
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: true
+buildExpired: false
+
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: true
+hasCJKLanguage: false
+summaryLength: 70
+
+languages:
+  en:
+    copyright: '&copy; [sysadmin](https://sysadmin.info.pl/) - All rights reserved | [Privacy Policy](/en/privacy/)'
+    languageName: "🇬🇧 English"  # Poprawione emoji
+    languageCode: "en-US"
+    weight: 1
+    contentDir: content/en
+    
+    menu:
+      main:
+        - identifier: blog
+          name: Blog
+          url: /blog/
+          weight: 1
+        - identifier: gear
+          name: Gear
+          url: /gear/
+          weight: 2
+        - identifier: about
+          name: About
+          url: /about/
+          weight: 3
+        - identifier: archive
+          name: Archive
+          url: /en/archive
+          weight: 4
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 5
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 6
+        - identifier: series
+          name: Series
+          url: /series/
+          weight: 7
+    
+    params:
+      languagedir: "ltr"
+      homeInfoParams:
+        Title: "👋 Welcome to SYSADMIN"  # Poprawione emoji
+        Content: >
+          Practical guides and articles for Linux system administrators,
+          DevOps and automation. Find proven solutions and step-by-step
+          instructions here.
+      socialIcons:
+        - name: youtube
+          url: "https://www.youtube.com/@sysadmin-info"
+        - name: github
+          url: "https://github.com/sysadmin-info"
+        - name: rss
+          url: "/en/index.xml"
+      cover:
+        hidden: false
+        hiddenInList: false  # false = pokaż miniaturki na liście
+        hiddenInSingle: true
+        responsiveImages: true
+        linkFullImages: false
+      list:
+        showCover: true     # wzmocnić: wymusza miniatury na listach (w tym taxonomie)
+        view: list          # zamiast siatki/kart
+        cardView: false          
+
+  pl:
+    copyright: '&copy; [sysadmin](https://sysadmin.info.pl/) - Wszelkie prawa zastrzeżone | [Polityka prywatności](/pl/privacy/)'
+    languageName: "🇵🇱 Polski"  # Poprawione emoji
+    languageCode: "pl-PL"
+    weight: 2
+    contentDir: content/pl
+    
+    menu:
+      main:
+        - identifier: blog
+          name: Blog
+          url: /blog/
+          weight: 1
+        - identifier: gear
+          name: Sprzęt
+          url: /gear/
+          weight: 2
+        - identifier: about
+          name: O mnie
+          url: /about/
+          weight: 3
+        - identifier: archive
+          name: Archiwum
+          url: /pl/archive
+          weight: 4
+        - identifier: search
+          name: Szukaj
+          url: /search/
+          weight: 5
+        - identifier: categories
+          name: Kategorie
+          url: /categories/
+          weight: 6
+        - identifier: series
+          name: Serie
+          url: /series/
+          weight: 7
+    
+    params:
+      languagedir: "ltr"
+      homeInfoParams:
+        Title: "👋 Witaj na SYSADMIN"  # Poprawione emoji
+        Content: >
+          Praktyczne poradniki i artykuły dla administratorów systemów Linux,
+          DevOps i automatyzacji. Tutaj znajdziesz sprawdzone rozwiązania
+          i krok po kroku instrukcje.
+      socialIcons:
+        - name: youtube
+          url: "https://www.youtube.com/@sysadmin-info"
+        - name: github
+          url: "https://github.com/sysadmin-info"
+        - name: rss
+          url: "/pl/index.xml"
+      cover:
+        hidden: false
+        hiddenInList: false  # false = pokaż miniaturki na liście
+        hiddenInSingle: true
+        responsiveImages: true
+        linkFullImages: false
+      list:
+        showCover: true     # wzmocnić: wymusza miniatury na listach (w tym taxonomie)
+        view: list          # zamiast siatki/kart
+        cardView: false
+
+params:
+  env: production
+  description: "Blog o administracji systemami Linux, DevOps i automatyzacji"
+  keywords: [Linux, DevOps, Ansible, Docker, Kubernetes, sysadmin, automation]
+  author: "sysadmin.info.pl"
+  
+  mainSections:  # Dodane - określa które sekcje pokazywać na home
+    - blog
+  
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  utterances:
+    repo: "sysadmin-info/sysadmin.info.pl"  # Twoje repo GitHub
+    issueTerm: "pathname"  # lub "title", "url"
+    theme: "github-dark"   # lub "github-light", "preferred-color-scheme"
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    disableHLJS: false
+    disableFingerprinting: false
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+    
+
+
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: false
+    style: monokai
+    tabWidth: 4
+
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    anonymizeIP: true
+    disable: true
+    respectDoNotTrack: true
+    useSessionStorage: true
+  instagram:
+    disable: true
+    simple: true
+  x:
+    disable: true
+    enableDNT: true
+    simple: true
+  vimeo:
+    disable: true
+    enableDNT: true
+    simple: true
+  youtube:
+    disable: false
+    privacyEnhanced: false
+
+permalinks:
+  blog: /blog/:slug/
+  
+taxonomies:
+  category: categories
+  series: series
+
+ignoreErrors: 
+  - "error-output-taxonomy"
