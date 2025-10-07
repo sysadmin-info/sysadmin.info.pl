@@ -248,7 +248,7 @@ privacy:
     privacyEnhanced: false
 
 permalinks:
-  blog: /blog/:slug/
+  blog: /blog/:filename/
   
 taxonomies:
   category: categories
