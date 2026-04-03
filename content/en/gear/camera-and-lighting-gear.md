@@ -6,11 +6,11 @@ description: "Camera, lighting, and studio accessories used in the current desk 
 ## Current gear
 
 ### Logitech Logi Brio
-Current webcam replacing the old Razer Kiyo.
+Current webcam replacing the old Razer Kiyo.  
 Product page: https://www.logitech.com/en-gb/shop/p/brio-stream-4k-hd-webcam.960-001718
 
 ### NEEWER GL25B
-Current lighting used instead of the old softbox kit.
+Current lighting used instead of the old softbox kit.  
 Product page: https://neewer.com/products/neewer-gl25b-12-9-streaming-key-light-66603057
 
 ### Xiaomi Mi Computer Monitor Light Bar

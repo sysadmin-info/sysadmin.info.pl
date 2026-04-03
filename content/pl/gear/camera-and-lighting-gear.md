@@ -6,11 +6,11 @@ description: "Kamera, światło i akcesoria studyjne używane w aktualnym setupi
 ## Aktualnie używane
 
 ### Logitech Logi Brio
-Aktualna kamera internetowa zamiast starej Razer Kiyo.
+Aktualna kamera internetowa zamiast starej Razer Kiyo.  
 Strona produktu: https://www.logitech.com/pl-pl/products/webcams/brio-4k-hdr-webcam.html
 
 ### NEEWER GL25B
-Aktualne światło używane zamiast starego zestawu softboxów.
+Aktualne światło używane zamiast starego zestawu softboxów.  
 Strona produktu: https://eu.neewer.com/products/neewer-gl25b-12-9-streaming-key-light-66603057
 
 ### Xiaomi Mi Computer Monitor Light Bar
