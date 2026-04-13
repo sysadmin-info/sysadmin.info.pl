@@ -166,3 +166,116 @@ Po zainstalowaniu Arduino IDE i podłączeniu ESP32, kolejne kroki to:
 #### Film instruktażowy
 
 {{<youtube jmiKZUIE_EM>}}
+
+
+#### Przywracanie działania uszkodzonego ESP32 (np. Ulanzi TC001)
+
+Czasami proces flashowania kończy się błędem i urządzenie przestaje odpowiadać (brak WiFi, brak obrazu, niewidoczne dla web flashera). W takiej sytuacji trzeba wymusić tryb bootloadera w ESP32 i wgrać firmware ręcznie.
+
+
+---
+
+Kiedy urządzenie jest „uceglone”?
+
+brak reakcji po włączeniu
+
+brak sieci WiFi
+
+web flasher nie wykrywa urządzenia
+
+esptool zwraca błędy połączenia
+
+
+
+---
+
+Krok 1 – Rozbierz urządzenie
+
+Niektóre urządzenia (np. Ulanzi TC001) wymagają otwarcia obudowy, aby uzyskać dostęp do płytki.
+
+Szukaj pinów lub padów oznaczonych jako:
+
+GPIO0 (lub IO0)
+
+GND
+
+
+
+---
+
+Krok 2 – Wymuś tryb bootowania
+
+Aby wejść w tryb bootloadera:
+
+1. Zewrzyj GPIO0 do GND (np. pęsetą lub przewodem)
+
+
+2. Trzymając zwarcie, podłącz zasilanie USB
+
+
+3. Po sekundzie rozłącz zwarcie
+
+
+
+Warto zauważyć, że ten krok jest wymagany przy odzyskiwaniu urządzenia. Bez niego flashowanie się nie powiedzie.
+
+
+---
+
+Krok 3 – Zidentyfikuj port szeregowy
+
+ls /dev/ttyUSB*
+#### lub
+dmesg | grep tty
+
+
+---
+
+Krok 4 – Wgraj firmware przy użyciu esptool
+
+Przykładowe polecenie:
+
+sudo esptool.py --chip esp32 \
+  --port /dev/ttyUSB0 \
+  --baud 921600 \
+  write_flash -z \
+  0x1000 bootloader.bin \
+  0x8000 partitions.bin \
+  0xe000 boot_app0.bin \
+  0x10000 firmware.bin
+
+Upewnij się, że używasz właściwych plików binarnych i offsetów dla swojego urządzenia.
+
+
+---
+
+Rozwiązywanie problemów
+
+Failed to connect
+→ urządzenie nie jest w trybie boot (GPIO0 nie zostało poprawnie zwarte)
+
+brak /dev/ttyUSB0
+→ niewłaściwy kabel USB (tylko do ładowania)
+
+flashowanie kończy się sukcesem, ale urządzenie nie startuje
+→ nieprawidłowy firmware lub błędne offsety
+
+
+
+---
+
+Krok 5 – Restart
+
+odłącz USB
+
+podłącz ponownie (bez zwarcia GPIO0)
+
+
+Urządzenie powinno się uruchomić i ponownie udostępnić WiFi lub interfejs webowy.
+
+
+---
+
+Podsumowując
+
+Przywrócenie działania „uceglonego” ESP32 zazwyczaj nie oznacza uszkodzenia sprzętu. W większości przypadków wystarczy uzyskać dostęp do GPIO0, wymusić tryb bootowania i ponownie wgrać firmware przy użyciu esptool.
