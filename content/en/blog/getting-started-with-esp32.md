@@ -166,3 +166,115 @@ After installing Arduino IDE and connecting ESP32, the next steps are:
 #### Walkthrough video
 
 {{<youtube jmiKZUIE_EM>}}
+
+Recovering a Bricked ESP32 Device (e.g. Ulanzi TC001)
+
+Sometimes flashing fails and the device becomes unresponsive (no WiFi, no display, not detected by web flasher). In this case, you need to force the ESP32 into bootloader mode and reflash it manually.
+
+
+---
+
+When is a device “bricked”?
+
+no reaction after power on
+
+no WiFi network
+
+web flasher cannot detect it
+
+esptool returns connection errors
+
+
+
+---
+
+Step 1 – Disassemble the device
+
+Some devices (like Ulanzi TC001) require opening the case to access the board.
+
+Look for pins or pads labeled:
+
+GPIO0 (or IO0)
+
+GND
+
+
+
+---
+
+Step 2 – Force boot mode
+
+To enter bootloader mode:
+
+1. Short GPIO0 to GND (use tweezers or a wire)
+
+
+2. While shorted, connect USB power
+
+
+3. Release the short after a second
+
+
+
+It’s important to note that this step is required for recovery. Without it, flashing will fail.
+
+
+---
+
+Step 3 – Identify the serial port
+
+ls /dev/ttyUSB*
+# or
+dmesg | grep tty
+
+
+---
+
+Step 4 – Flash firmware using esptool
+
+Example command:
+
+sudo esptool.py --chip esp32 \
+  --port /dev/ttyUSB0 \
+  --baud 921600 \
+  write_flash -z \
+  0x1000 bootloader.bin \
+  0x8000 partitions.bin \
+  0xe000 boot_app0.bin \
+  0x10000 firmware.bin
+
+Make sure you use correct binary files and offsets for your device.
+
+
+---
+
+Troubleshooting
+
+Failed to connect
+→ device is not in boot mode (GPIO0 not shorted correctly)
+
+no /dev/ttyUSB0
+→ wrong USB cable (charging only)
+
+flashing succeeds but device does not boot
+→ wrong firmware or incorrect offsets
+
+
+
+---
+
+Step 5 – Reboot
+
+disconnect USB
+
+reconnect normally (without GPIO0 short)
+
+
+The device should now boot and expose its WiFi or UI again.
+
+
+---
+
+In conclusion
+
+Recovering a bricked ESP32 device is usually not a hardware failure. In most cases, you need to access GPIO0, force boot mode, and reflash the firmware using esptool.
