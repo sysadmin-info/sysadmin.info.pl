@@ -167,7 +167,9 @@ After installing Arduino IDE and connecting ESP32, the next steps are:
 
 {{<youtube jmiKZUIE_EM>}}
 
-Recovering a Bricked ESP32 Device (e.g. Ulanzi TC001)
+
+
+#### Recovering a Bricked ESP32 Device (e.g. Ulanzi TC001)
 
 Sometimes flashing fails and the device becomes unresponsive (no WiFi, no display, not detected by web flasher). In this case, you need to force the ESP32 into bootloader mode and reflash it manually.
 
@@ -224,7 +226,7 @@ It’s important to note that this step is required for recovery. Without it, fl
 Step 3 – Identify the serial port
 
 ls /dev/ttyUSB*
-# or
+#### or
 dmesg | grep tty
 
 
