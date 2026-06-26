@@ -2,18 +2,24 @@
   Custom JSON-LD override (Organization-as-publisher model).
   Single @graph per page, cross-referenced via @id.
   Overrides themes/PaperMod/layouts/partials/templates/schema_json.html
-  Nodes: Organization (shared) + WebSite (per language).
-  BlogPosting / BreadcrumbList / WebPage added in next step.
+
+  Nodes:
+    - Organization (shared, every page)
+    - WebSite (per language, every page)
+    - WebPage + BlogPosting + BreadcrumbList (single blog posts only)
 
   Two gotchas baked in:
   1. Access schema params via (index $s "key"), NOT $s.key
-     (dotted .name collides with reserved method, corrupts output).
+     (dotted .name collides with a reserved method, corrupts output).
   2. jsonify output MUST be piped through safeJS, else Go template
      re-escapes JSON inside <script type="application/ld+json">.
 */ -}}
+
 {{- $org := "https://sysadmin.info.pl/#organization" -}}
 {{- $website := printf "%s#website" site.Home.Permalink -}}
 {{- $s := site.Params.schema -}}
+
+{{- /* ---- Organization (shared) ---- */ -}}
 {{- $orgNode := dict
   "@type" "Organization"
   "@id" $org
@@ -26,6 +32,8 @@
   "sameAs" (index $s "sameAs" | default slice)
   "knowsAbout" (index $s "knowsAbout" | default slice)
 -}}
+
+{{- /* ---- WebSite (per language) ---- */ -}}
 {{- $websiteNode := dict
   "@type" "WebSite"
   "@id" $website
@@ -35,7 +43,91 @@
   "inLanguage" site.Language.LanguageCode
   "publisher" (dict "@id" $org)
 -}}
+
 {{- $graph := slice $orgNode $websiteNode -}}
+
+{{- /* ---- Single blog post: add WebPage + BlogPosting + BreadcrumbList ---- */ -}}
+{{- if .IsPage -}}
+  {{- $webpageID := printf "%s#webpage" .Permalink -}}
+  {{- $articleID := printf "%s#article" .Permalink -}}
+  {{- $breadcrumbID := printf "%s#breadcrumb" .Permalink -}}
+
+  {{- /* keywords: categories + series (this site has no tags) */ -}}
+  {{- $keywords := slice -}}
+  {{- with .Params.categories }}{{ $keywords = $keywords | append . }}{{ end -}}
+  {{- with .Params.series }}{{ $keywords = $keywords | append . }}{{ end -}}
+  {{- if eq (len $keywords) 0 }}{{ $keywords = site.Params.keywords | default slice }}{{ end -}}
+  {{- $keywords = $keywords | uniq -}}
+
+  {{- /* image: post cover (relative to page) with fallback to org logo */ -}}
+  {{- $img := absURL (index $s "logo" | default "/favicon.ico") -}}
+  {{- with .Params.cover -}}
+    {{- with .image -}}
+      {{- $img = absURL . -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $webpageNode := dict
+    "@type" "WebPage"
+    "@id" $webpageID
+    "url" .Permalink
+    "name" (.Title | plainify)
+    "isPartOf" (dict "@id" $website)
+    "inLanguage" site.Language.LanguageCode
+    "breadcrumb" (dict "@id" $breadcrumbID)
+  -}}
+
+  {{- $articleNode := dict
+    "@type" "BlogPosting"
+    "@id" $articleID
+    "headline" (.Title | plainify)
+    "description" (cond (ne .Description "") .Description (.Summary | plainify))
+    "datePublished" (.PublishDate.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "inLanguage" site.Language.LanguageCode
+    "keywords" $keywords
+    "image" $img
+    "wordCount" .WordCount
+    "author" (dict "@id" $org)
+    "publisher" (dict "@id" $org)
+    "mainEntityOfPage" (dict "@id" $webpageID)
+    "isPartOf" (dict "@id" $website)
+  -}}
+
+  {{- /* BreadcrumbList: Home > Section > Post */ -}}
+  {{- $items := slice -}}
+  {{- $items = $items | append (dict
+    "@type" "ListItem"
+    "position" 1
+    "name" (i18n "home" | default "Home")
+    "item" site.Home.Permalink
+  ) -}}
+  {{- with .CurrentSection -}}
+    {{- if .Title -}}
+      {{- $items = $items | append (dict
+        "@type" "ListItem"
+        "position" 2
+        "name" (.Title | plainify)
+        "item" .Permalink
+      ) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $items = $items | append (dict
+    "@type" "ListItem"
+    "position" (add (len $items) 1)
+    "name" (.Title | plainify)
+    "item" .Permalink
+  ) -}}
+
+  {{- $breadcrumbNode := dict
+    "@type" "BreadcrumbList"
+    "@id" $breadcrumbID
+    "itemListElement" $items
+  -}}
+
+  {{- $graph = $graph | append $webpageNode $articleNode $breadcrumbNode -}}
+{{- end -}}
+
 {{- $root := dict "@context" "https://schema.org" "@graph" $graph -}}
 <script type="application/ld+json">
 {{ $root | jsonify | safeJS }}
