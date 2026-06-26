@@ -47,7 +47,7 @@
 {{- $graph := slice $orgNode $websiteNode -}}
 
 {{- /* ---- Single blog post: add WebPage + BlogPosting + BreadcrumbList ---- */ -}}
-{{- if .IsPage -}}
+{{- if and .IsPage (eq .Section "blog") -}}
   {{- $webpageID := printf "%s#webpage" .Permalink -}}
   {{- $articleID := printf "%s#article" .Permalink -}}
   {{- $breadcrumbID := printf "%s#breadcrumb" .Permalink -}}
