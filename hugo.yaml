@@ -7,7 +7,7 @@ pagination:
 
 enableInlineShortcodes: true
 enableEmoji: true
-enableGitInfo: false
+enableGitInfo: true
 timeout: 10000
 rssLimit: 100
 enableRobotsTXT: true
@@ -150,6 +150,19 @@ languages:
         cardView: false
 
 params:
+  schema:
+    publisherType: Organization
+    name: "SYSADMIN"
+    logo: "/logo-512.png"
+    sameAs:
+      - "https://github.com/sysadmin-info"
+      - "https://www.youtube.com/@sysadmin-info"
+    knowsAbout:
+      - "Ansible"
+      - "GitLab CI/CD"
+      - "Proxmox VE"
+      - "Security engineering"
+      - "Enterprise Linux"
   env: production
   description: "Blog o administracji systemami Linux, DevOps i automatyzacji"
   keywords: [Linux, DevOps, Ansible, Docker, Kubernetes, sysadmin, automation]

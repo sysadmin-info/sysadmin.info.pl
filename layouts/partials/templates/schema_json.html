@@ -1,0 +1,42 @@
+{{- /*
+  Custom JSON-LD override (Organization-as-publisher model).
+  Single @graph per page, cross-referenced via @id.
+  Overrides themes/PaperMod/layouts/partials/templates/schema_json.html
+  Nodes: Organization (shared) + WebSite (per language).
+  BlogPosting / BreadcrumbList / WebPage added in next step.
+
+  Two gotchas baked in:
+  1. Access schema params via (index $s "key"), NOT $s.key
+     (dotted .name collides with reserved method, corrupts output).
+  2. jsonify output MUST be piped through safeJS, else Go template
+     re-escapes JSON inside <script type="application/ld+json">.
+*/ -}}
+{{- $org := "https://sysadmin.info.pl/#organization" -}}
+{{- $website := printf "%s#website" site.Home.Permalink -}}
+{{- $s := site.Params.schema -}}
+{{- $orgNode := dict
+  "@type" "Organization"
+  "@id" $org
+  "name" (index $s "name" | default site.Title)
+  "url" (absURL "/")
+  "logo" (dict
+    "@type" "ImageObject"
+    "url" (absURL (index $s "logo" | default "/favicon.ico"))
+  )
+  "sameAs" (index $s "sameAs" | default slice)
+  "knowsAbout" (index $s "knowsAbout" | default slice)
+-}}
+{{- $websiteNode := dict
+  "@type" "WebSite"
+  "@id" $website
+  "url" site.Home.Permalink
+  "name" site.Title
+  "description" (site.Params.description | plainify)
+  "inLanguage" site.Language.LanguageCode
+  "publisher" (dict "@id" $org)
+-}}
+{{- $graph := slice $orgNode $websiteNode -}}
+{{- $root := dict "@context" "https://schema.org" "@graph" $graph -}}
+<script type="application/ld+json">
+{{ $root | jsonify | safeJS }}
+</script>
