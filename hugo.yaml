@@ -23,8 +23,8 @@ summaryLength: 70
 languages:
   en:
     copyright: '&copy; [sysadmin](https://sysadmin.info.pl/) - All rights reserved | [Privacy Policy](/en/privacy/)'
-    languageName: "🇬🇧 English"  # Poprawione emoji
-    languageCode: "en-US"
+    label: "🇬🇧 English"  # Poprawione emoji
+    locale: "en-US"
     weight: 1
     contentDir: content/en
     
@@ -87,8 +87,8 @@ languages:
 
   pl:
     copyright: '&copy; [sysadmin](https://sysadmin.info.pl/) - Wszelkie prawa zastrzeżone | [Polityka prywatności](/pl/privacy/)'
-    languageName: "🇵🇱 Polski"  # Poprawione emoji
-    languageCode: "pl-PL"
+    label: "🇵🇱 Polski"  # Poprawione emoji
+    locale: "pl-PL"
     weight: 2
     contentDir: content/pl
     
